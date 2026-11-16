@@ -1,4 +1,13 @@
-# MycoTrack
+<p align="center">
+  <img src="docs/images/banner.png" alt="MycoTrack" width="720" />
+</p>
+
+<h1 align="center">MycoTrack</h1>
+
+<p align="center">
+  <b>English</b> · <a href="README.ca.md">Català</a><br/>
+  📥 <a href="install.md"><b>Install guide</b></a> — get the APK on any Android 8.0+ phone, no store needed
+</p>
 
 MycoTrack is a native Android application to record, browse and analyse mushroom foraging
 trips in the forest. It works as a GPS route recorder with a full-screen map, geotagged
@@ -8,6 +17,32 @@ playback, and data and image export.
 Everything is stored locally on the device. The application does **not** use the Google Maps
 SDK, does not require a Google Play Services dependency and does not need any API key,
 account or subscription.
+
+## Install
+
+Want to try it? The app is distributed from this repository: download a signed APK from the
+[latest release](https://github.com/elricdog/MycoTrack/releases) and install it on any
+Android 8.0+ phone or tablet, even without Google Play Services. Step-by-step instructions
+(permissions, choosing the right APK, sideloading, updates and troubleshooting) are in
+**[install.md](install.md)** — available in [English](install.md) and [Català](install.ca.md).
+
+## Screenshots
+
+| **Map & recording** — full-screen map with your live position, the route being drawn and the real-time statistics panel; *Hold to end* finishes a trip. | **Elevation profile** — altitude against distance, synchronised with the map: tap the chart to move the marker, the photo dots sit on the route. |
+|---|---|
+| <img src="docs/screenshots/en/01-map-recording.png" width="300" alt="Map and recording"> | <img src="docs/screenshots/en/02-trip-profile.png" width="300" alt="Elevation profile"> |
+
+| **Layers** — switch between OpenStreetMap, the ICGC topographic map, the orthophoto and the hybrid view, add offline areas and enable the habitat overlays (slope orientation, tree types, soil). | **History** — every recorded trip with distance, duration, elevation and photo counts; search, filter and give each trip its own route colour. |
+| <img src="docs/screenshots/en/03-layers.png" width="300" alt="Layers"> | <img src="docs/screenshots/en/04-history.png" width="300" alt="History"> |
+
+| **Trip review** — map with the recorded route, elevation profile, full statistics, notes and animated playback; export or load the route back on the main map. | **Outing analysis** — time moving vs stopped, pace, farthest point, loop detection, finds per hour and per altitude, daylight left and your personal ranking. |
+| <img src="docs/screenshots/en/05-trip-review.png" width="300" alt="Trip review"> | <img src="docs/screenshots/en/06-trip-analysis.png" width="300" alt="Outing analysis"> |
+
+| **Gallery** — all geotagged waypoints as photo tiles (or category-coloured tiles when they have no photo); show one on the map, delete, share or export it with its location. | **Mushroom guide** — offline encyclopedia of popular mushrooms of Catalonia: search, *In season now* filter and per-species details. |
+| <img src="docs/screenshots/en/07-gallery.png" width="300" alt="Gallery"> | <img src="docs/screenshots/en/08-mushrooms.png" width="300" alt="Mushroom guide"> |
+
+| **Species detail** — cooking, habitat, season calendar, dangerous look-alikes, photo galleries and a *Where can I find it?* habitat search that paints the likely areas around you on the map. | **Settings** — language, theme, units, sounds and alerts, offline map manager, GPS and sensor diagnostics and permissions. |
+| <img src="docs/screenshots/en/09-mushroom-detail.png" width="300" alt="Species detail"> | <img src="docs/screenshots/en/10-settings.png" width="300" alt="Settings"> |
 
 ---
 
