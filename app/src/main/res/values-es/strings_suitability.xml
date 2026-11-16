@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Zonas probables de una especie (capa de hábitat de probabilidad). -->
+    <string name="suitability_find_button">¿Dónde puedo encontrarla?</string>
+    <string name="suitability_find_description">Muestra en el mapa las zonas a tu alrededor donde el hábitat es más favorable para esta especie.</string>
+    <string name="suitability_dialog_title">Buscar zonas probables</string>
+    <string name="suitability_dialog_text">El mapa destacará dónde es más probable encontrar %1$s alrededor del punto elegido, según los árboles dominantes, el suelo y la orientación de las laderas.</string>
+    <string name="suitability_dialog_radius">Radio de búsqueda</string>
+    <string name="suitability_radius_value">%1$s km</string>
+    <string name="suitability_out_of_season">%1$s no está de temporada este mes: es poco probable que la encuentres ahora.</string>
+    <string name="suitability_dialog_disclaimer">Solo es orientativo. Necesita conexión a internet. Los círculos grandes se calculan de forma aproximada; acércate para ver más detalle.</string>
+    <string name="suitability_dialog_confirm">Mostrar en el mapa</string>
+    <string name="suitability_no_position">Todavía no se conoce tu posición. Abre el mapa, espera al GPS y vuelve a intentarlo.</string>
+    <string name="suitability_layer_title">Zonas probables</string>
+    <string name="suitability_layer_description">%1$s, %2$s alrededor del punto elegido</string>
+    <string name="suitability_layer_no_species">Elige una seta en el apartado Setas y toca «¿Dónde puedo encontrarla?».</string>
+    <string name="suitability_legend_title">Zonas probables</string>
+    <string name="suitability_legend_radius">Radio: %1$s</string>
+    <string name="suitability_legend_low">Baja</string>
+    <string name="suitability_legend_high">Alta probabilidad</string>
+    <string name="suitability_legend_clear">Quitar</string>
+    <string name="suitability_legend_show">Mostrar las zonas probables</string>
+    <string name="suitability_legend_note">Solo orientativo: combina los árboles (MFE25), el suelo (IGME 1:1.000.000) y la orientación. Acércate para ver más detalle.</string>
+    <string name="suitability_dialog_center">Buscar alrededor de</string>
+    <string name="suitability_center_position">Mi posición</string>
+    <string name="suitability_center_map">Centro del mapa</string>
+    <string name="suitability_center_map_hint">El lugar donde está centrado ahora el mapa principal. Mueve antes el mapa para buscar en otra zona.</string>
+    <string name="suitability_no_map_center">Todavía no se ha mostrado el mapa. Ábrelo, muévelo a la zona donde quieres buscar y vuelve a intentarlo.</string>
+</resources>

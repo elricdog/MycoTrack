@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Language -->
+    <string name="settings_language">Idioma</string>
+    <string name="language_system">Idioma del sistema</string>
+
+    <!-- Theme -->
+    <string name="theme_system">Sistema</string>
+    <string name="theme_light">Claro</string>
+    <string name="theme_dark">Oscuro</string>
+
+    <!-- Waypoint categories -->
+    <string name="category_mushroom_found">Seta encontrada</string>
+    <string name="category_mushroom_area">Zona de setas</string>
+    <string name="category_interesting_mushroom">Seta interesante</string>
+    <string name="category_promising_area">Zona prometedora</string>
+    <string name="category_parking">Aparcamiento</string>
+    <string name="category_point_of_interest">Punto de interés</string>
+    <string name="category_other">Otros</string>
+
+    <!-- Map layers -->
+    <string name="layer_osm_street">Mapa de calles</string>
+    <string name="layer_osm_street_description">OpenStreetMap</string>
+    <string name="layer_icgc_topo">Topográfico</string>
+    <string name="layer_icgc_topo_description">Topográfico del ICGC</string>
+    <string name="layer_icgc_ortho">Ortofoto</string>
+    <string name="layer_icgc_ortho_description">Fotografía aérea del ICGC</string>
+    <string name="layer_icgc_hybrid">Híbrido</string>
+    <string name="layer_icgc_hybrid_description">Ortofoto del ICGC + etiquetas</string>
+    <string name="layer_terrain">Relieve y sombreado</string>
+    <string name="layer_terrain_description">Modelo de elevaciones con sombreado</string>
+    <string name="layer_offline">Mapas sin conexión</string>
+    <string name="layer_offline_description">Zonas MBTiles descargadas</string>
+
+    <!-- Export formats -->
+    <string name="export_format_gpx">Track GPX</string>
+    <string name="export_format_csv">Puntos en CSV</string>
+    <string name="export_format_zip">Paquete completo (ZIP)</string>
+    <string name="export_format_map">Imagen del mapa (PNG)</string>
+    <string name="export_format_elevation">Perfil de elevación (PNG)</string>
+    <string name="export_format_report">Informe visual (PNG)</string>
+
+    <!-- Permissions -->
+    <string name="perm_foreground_location_title">Ubicación mientras se usa la app</string>
+    <string name="perm_foreground_location_purpose">Muestra tu posición en el mapa y graba la ruta de tu salida.</string>
+    <string name="perm_foreground_location_rationale">MycoTrack necesita tu ubicación para dibujar la ruta que recorres. El GPS se lee directamente del dispositivo, sin Google Play Services, y nunca se envía nada.</string>
+    <string name="perm_foreground_location_consequence">Sin este permiso el mapa no puede mostrar tu posición y no se puede grabar ninguna ruta.</string>
+    <string name="perm_notifications_title">Notificaciones</string>
+    <string name="perm_notifications_purpose">Muestra la notificación de grabación mientras se graba una salida.</string>
+    <string name="perm_notifications_rationale">Android exige una notificación visible para el servicio que sigue grabando tu ruta. Muestra el tiempo transcurrido y la distancia, y permite detener la grabación sin volver a abrir la aplicación.</string>
+    <string name="perm_notifications_consequence">Sin notificaciones, el sistema detiene el servicio de grabación en cuanto la aplicación pasa a segundo plano.</string>
+    <string name="perm_background_location_title">Ubicación en segundo plano</string>
+    <string name="perm_background_location_purpose">Sigue grabando tu ruta con la pantalla apagada o con otra app abierta.</string>
+    <string name="perm_background_location_rationale">Las salidas a buscar setas duran horas y el teléfono suele ir en el bolsillo con la pantalla apagada. Este permiso es lo que permite seguir grabando la ruta en esa situación, con el mismo servicio que muestra la notificación.</string>
+    <string name="perm_background_location_consequence">Sin este permiso la ruta solo se graba mientras MycoTrack está visible en la pantalla.</string>
+    <string name="perm_camera_title">Cámara</string>
+    <string name="perm_camera_purpose">Toma las fotografías geolocalizadas de las setas que encuentras.</string>
+    <string name="perm_camera_rationale">Las fotografías se guardan en el dispositivo con las coordenadas, la altitud y la hora de la toma, para que puedas volver a encontrar el lugar más adelante.</string>
+    <string name="perm_camera_consequence">Sin este permiso puedes seguir añadiendo puntos a mano, pero no puedes hacer fotografías desde la aplicación.</string>
+
+    <!-- Bundled offline areas -->
+    <string name="offline_bundled_catalonia_ortho">Ortofoto de Cataluña</string>
+    <string name="offline_bundled_catalonia_topo">Topográfico de Cataluña</string>
+</resources>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="diag_title">GPS y sensores</string>
+    <string name="diag_back">Atrás</string>
+    <string name="diag_copy_report">Copiar informe</string>
+    <string name="diag_report_copied">Informe copiado al portapapeles</string>
+    <string name="diag_report_header">MycoTrack – Informe del GPS y los sensores</string>
+    <string name="diag_report_generated">Generado: %1$s</string>
+    <string name="diag_settings_entry">Diagnóstico del GPS y los sensores</string>
+    <string name="diag_settings_entry_hint">Comprueba la señal del GPS, los satélites y los sensores de este teléfono.</string>
+
+    <!-- Quality -->
+    <string name="diag_gps_quality">Señal GPS</string>
+    <string name="diag_quality_disabled">GPS desactivado</string>
+    <string name="diag_quality_searching">Buscando…</string>
+    <string name="diag_quality_poor">Mala</string>
+    <string name="diag_quality_fair">Aceptable</string>
+    <string name="diag_quality_good">Buena</string>
+    <string name="diag_quality_excellent">Excelente</string>
+    <string name="diag_chip_off">Off</string>
+    <string name="diag_chip_cd">Señal GPS: %1$s, %2$s. Abrir el diagnóstico del GPS</string>
+    <string name="diag_quality_explain_disabled">La ubicación está desactivada y MycoTrack no puede grabar la ruta.</string>
+    <string name="diag_quality_explain_searching">Esperando una posición de los satélites.</string>
+    <string name="diag_quality_explain_poor">La posición puede tener un error de más de 25 m y la ruta se verá irregular.</string>
+    <string name="diag_quality_explain_fair">Se puede grabar, pero la posición puede tener un error de 10–25 m.</string>
+    <string name="diag_quality_explain_good">Buena señal: la posición tiene una precisión de unos 10 m.</string>
+    <string name="diag_quality_explain_excellent">Señal excelente: la posición tiene una precisión de pocos metros.</string>
+    <string name="diag_tips_disabled">Activa la ubicación en los ajustes del sistema.</string>
+    <string name="diag_tips_searching">Sal al aire libre, lejos de edificios y de arbolado denso, y espera 1–2 minutos a la primera posición. Mantén el teléfono quieto con el cielo despejado a la vista.</string>
+    <string name="diag_tips_poor">Ve a un espacio abierto, lejos de edificios altos, cortados y bosque denso, y no tapes la parte superior del teléfono con la mano.</string>
+    <string name="diag_tip_no_permission">MycoTrack no tiene permiso para usar la ubicación.</string>
+    <string name="diag_tip_approximate">Solo se permite la ubicación aproximada: concede la ubicación precisa para grabar rutas y ver los satélites.</string>
+    <string name="diag_tip_gps_provider_off">El GPS está desactivado: solo está disponible la ubicación aproximada de la red.</string>
+    <string name="diag_action_location_settings">Ajustes de ubicación</string>
+    <string name="diag_action_permissions">Permisos</string>
+
+    <!-- Sections -->
+    <string name="diag_section_summary">Resumen</string>
+    <string name="diag_section_fix">Posición</string>
+    <string name="diag_section_satellites">Satélites</string>
+    <string name="diag_section_compass">Brújula e inclinómetro</string>
+    <string name="diag_section_motion">Sensores de movimiento</string>
+    <string name="diag_section_environment">Barómetro y entorno</string>
+    <string name="diag_section_sensors">Sensores</string>
+    <string name="diag_section_device">Dispositivo</string>
+
+    <string name="diag_stat_accuracy">Precisión</string>
+    <string name="diag_stat_satellites">Satélites</string>
+    <string name="diag_stat_age">Antigüedad</string>
+
+    <!-- Location fix -->
+    <string name="diag_on">Activado</string>
+    <string name="diag_off">Desactivado</string>
+    <string name="diag_unknown">Desconocido</string>
+    <string name="diag_location_services">Servicios de ubicación</string>
+    <string name="diag_gps_provider">Proveedor GPS</string>
+    <string name="diag_network_provider">Proveedor de red</string>
+    <string name="diag_permission">Permiso de ubicación</string>
+    <string name="diag_permission_precise">Precisa</string>
+    <string name="diag_permission_approximate">Solo aproximada</string>
+    <string name="diag_permission_none">No concedido</string>
+    <string name="diag_background_permission">Ubicación en segundo plano</string>
+    <string name="diag_background_granted">Permitida siempre</string>
+    <string name="diag_background_denied">No permitida</string>
+    <string name="diag_gnss_hardware">Hardware GNSS</string>
+    <string name="diag_gnss_year">Año del hardware GNSS</string>
+    <string name="diag_ttff">Tiempo hasta la primera posición</string>
+    <string name="diag_no_fix">Todavía no se ha recibido ninguna posición.</string>
+    <string name="diag_provider">Proveedor</string>
+    <string name="diag_latitude">Latitud</string>
+    <string name="diag_longitude">Longitud</string>
+    <string name="diag_accuracy">Precisión horizontal</string>
+    <string name="diag_altitude">Altitud (elipsoide)</string>
+    <string name="diag_altitude_msl">Altitud sobre el nivel del mar</string>
+    <string name="diag_speed">Velocidad</string>
+    <string name="diag_bearing">Rumbo</string>
+    <string name="diag_fix_time">Hora de la posición</string>
+    <string name="diag_fix_time_value">%1$s (hace %2$s)</string>
+    <string name="diag_fixes_received">Posiciones recibidas</string>
+    <string name="diag_update_interval">Intervalo medio de actualización</string>
+
+    <!-- Satellites -->
+    <string name="diag_sats_visible_used">Visibles / usados</string>
+    <string name="diag_avg_cn0">C/N0 medio (4 más fuertes)</string>
+    <string name="diag_constellation_row">%1$s (usados / visibles)</string>
+    <string name="diag_sky_plot">Mapa del cielo</string>
+    <string name="diag_sky_plot_cd">Mapa del cielo con %1$d satélites</string>
+    <string name="diag_legend_used">Centro: en la vertical; anillo exterior: horizonte. Los puntos rellenos se usan para la posición.</string>
+    <string name="diag_signal_chart">Intensidad de la señal (C/N0, dB-Hz)</string>
+    <string name="diag_cn0_hint">Por debajo de 20 dB-Hz la señal es débil; por encima de 40 dB-Hz es fuerte. Las barras atenuadas no se usan para la posición.</string>
+    <string name="diag_no_satellites">Todavía no hay datos de los satélites. Solo se informa de ellos mientras el GPS está activo: sal al aire libre y espera un minuto.</string>
+    <string name="diag_col_system">Sistema</string>
+    <string name="diag_col_id">ID</string>
+    <string name="diag_col_cn0">C/N0</string>
+    <string name="diag_col_elevation">Elev.</string>
+    <string name="diag_col_azimuth">Azim.</string>
+    <string name="diag_col_used">Usado</string>
+
+    <!-- Compass and inclinometer -->
+    <string name="diag_heading">Orientación</string>
+    <string name="diag_heading_hint">Dirección de la parte superior de la pantalla respecto al norte magnético. La inclinación frontal y lateral es 0° con el teléfono en plano.</string>
+    <string name="diag_pitch">Inclinación frontal</string>
+    <string name="diag_roll">Inclinación lateral</string>
+    <string name="diag_bubble_cd">Nivel de burbuja</string>
+    <string name="diag_magnetic_field">Campo magnético</string>
+    <string name="diag_mag_accuracy">Precisión de la brújula</string>
+    <string name="diag_accuracy_unreliable">No fiable</string>
+    <string name="diag_accuracy_low">Baja</string>
+    <string name="diag_accuracy_medium">Media</string>
+    <string name="diag_accuracy_high">Alta</string>
+    <string name="diag_calibrate_hint">Hay que calibrar la brújula: mueve el teléfono dibujando un 8 varias veces, lejos de objetos metálicos, imanes y coches.</string>
+    <string name="diag_mag_out_of_range">El campo magnético (%1$s) está fuera del rango normal de la Tierra (25–65 µT): puede haber metal o imanes cerca.</string>
+    <string name="diag_compass_unavailable">Este teléfono no tiene brújula.</string>
+
+    <!-- Sensors -->
+    <string name="diag_sensor_accelerometer">Acelerómetro</string>
+    <string name="diag_sensor_gravity">Gravedad</string>
+    <string name="diag_sensor_linear_acceleration">Aceleración lineal</string>
+    <string name="diag_sensor_gyroscope">Giroscopio</string>
+    <string name="diag_sensor_magnetometer">Magnetómetro</string>
+    <string name="diag_sensor_rotation_vector">Vector de rotación</string>
+    <string name="diag_sensor_pressure">Barómetro</string>
+    <string name="diag_sensor_light">Luz</string>
+    <string name="diag_sensor_temperature">Temperatura ambiente</string>
+    <string name="diag_sensor_humidity">Humedad relativa</string>
+    <string name="diag_sensor_not_available">No disponible en este dispositivo</string>
+    <string name="diag_sensor_waiting">Esperando datos…</string>
+    <string name="diag_sensor_specs">Rango %1$s · resolución %2$s · %3$s mA · retardo mín. %4$s µs</string>
+    <string name="diag_baro_altitude">Altitud barométrica</string>
+    <string name="diag_baro_altitude_hint">Estimada con la atmósfera estándar (1013,25 hPa), por lo que cambia con el tiempo meteorológico.</string>
+
+    <!-- Device -->
+    <string name="diag_android_version">Versión de Android</string>
+    <string name="diag_device_model">Modelo</string>
+    <string name="diag_battery">Batería</string>
+    <string name="diag_battery_value">%1$d %%</string>
+    <string name="diag_battery_value_charging">%1$d %% · cargando</string>
+    <string name="diag_battery_temperature">Temperatura de la batería</string>
+    <string name="diag_power_save">Ahorro de batería</string>
+    <string name="diag_power_save_warning">El ahorro de batería está activado: el GPS puede ralentizarse o detenerse con la pantalla apagada.</string>
+    <string name="diag_location_power_save">Ubicación con ahorro de batería</string>
+    <string name="diag_lps_no_change">Sin cambios</string>
+    <string name="diag_lps_gps_disabled">GPS desactivado con la pantalla apagada</string>
+    <string name="diag_lps_all_disabled">Ubicación desactivada con la pantalla apagada</string>
+    <string name="diag_lps_foreground_only">Solo para las aplicaciones en uso</string>
+    <string name="diag_lps_throttle">Reducida con la pantalla apagada</string>
+    <string name="diag_lps_warning">Con el ahorro de batería activado, este teléfono limita el GPS con la pantalla apagada y las rutas pueden tener huecos. Desactiva el ahorro de batería mientras grabas.</string>
+    <string name="diag_battery_optimization">Optimización de batería</string>
+    <string name="diag_battery_opt_unrestricted">Sin restricciones</string>
+    <string name="diag_battery_opt_optimized">Optimizada</string>
+</resources>

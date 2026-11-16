@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Route focus button -->
+    <string name="maproute_focus_button">Go to route</string>
+    <string name="maproute_focus_my_position">Back to your position</string>
+
+    <!-- Long press on the map -->
+    <string name="maproute_point_title">Selected point</string>
+    <string name="maproute_distance_from_you">%1$s from you</string>
+    <string name="maproute_create_waypoint">Create a waypoint here</string>
+    <string name="maproute_go_there">Go there</string>
+    <string name="maproute_go_there_hint">Walking directions in Google Maps</string>
+    <string name="maproute_copy_coordinates">Copy coordinates</string>
+    <string name="maproute_coordinates">Coordinates</string>
+    <string name="maproute_coordinates_copied">Coordinates copied</string>
+    <string name="maproute_no_maps_app">No app can open the directions</string>
+    <string name="maproute_pick_trip">Which trip does it belong to?</string>
+    <string name="maproute_pick_trip_hint">A waypoint always belongs to a trip. The routes shown on the map come first.</string>
+    <string name="maproute_on_map">On the map</string>
+    <string name="maproute_no_trips">There are no trips yet. Record one first.</string>
+    <string name="maproute_recording_trip">It will be added to the trip being recorded.</string>
+    <string name="maproute_trip_label">Trip: %1$s</string>
+    <string name="maproute_save_waypoint">Save waypoint</string>
+    <string name="maproute_waypoint_saved">Waypoint saved in “%1$s”</string>
+    <string name="maproute_back">Back</string>
+</resources>

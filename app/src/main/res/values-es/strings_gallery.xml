@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Gallery: deletion, waypoints without photo and "Show on map" -->
+    <string name="galmap_show_on_map">Ver en el mapa</string>
+    <string name="galmap_long_press_hint">Mantén pulsado un elemento para seleccionar varios.</string>
+    <string name="galmap_no_photo">Punto sin foto</string>
+    <string name="galmap_delete_selected">Eliminar los puntos seleccionados</string>
+    <string name="galmap_delete_title">¿Eliminar este punto?</string>
+    <string name="galmap_delete_message_photo">El punto y su foto se eliminarán definitivamente.</string>
+    <string name="galmap_delete_message_no_photo">El punto se eliminará definitivamente.</string>
+    <plurals name="galmap_delete_selected_title">
+        <item quantity="one">¿Eliminar %1$d punto y su foto?</item>
+        <item quantity="many">¿Eliminar %1$d puntos y sus fotos?</item>
+        <item quantity="other">¿Eliminar %1$d puntos y sus fotos?</item>
+    </plurals>
+    <string name="galmap_delete_selected_message">Esta acción no se puede deshacer.</string>
+    <plurals name="galmap_deleted">
+        <item quantity="one">%1$d punto eliminado</item>
+        <item quantity="many">%1$d puntos eliminados</item>
+        <item quantity="other">%1$d puntos eliminados</item>
+    </plurals>
+
+    <!-- History: route colours -->
+    <string name="tripcolor_title">Color de la ruta</string>
+    <string name="tripcolor_change">Cambiar el color de la ruta</string>
+    <string name="tripcolor_automatic">Automático</string>
+    <string name="tripcolor_automatic_hint">El color depende del orden de las rutas superpuestas en el mapa.</string>
+    <string name="tripcolor_auto_badge">A</string>
+    <string name="tripcolor_red">Rojo</string>
+    <string name="tripcolor_orange">Naranja</string>
+    <string name="tripcolor_yellow">Amarillo</string>
+    <string name="tripcolor_magenta">Magenta</string>
+    <string name="tripcolor_pink">Rosa</string>
+    <string name="tripcolor_purple">Morado</string>
+    <string name="tripcolor_blue">Azul</string>
+    <string name="tripcolor_navy">Azul marino</string>
+    <string name="tripcolor_cyan">Cian</string>
+    <string name="tripcolor_brown">Marrón</string>
+    <string name="tripcolor_black">Negro</string>
+    <string name="tripcolor_white">Blanco</string>
+</resources>

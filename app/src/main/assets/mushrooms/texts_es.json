@@ -1,0 +1,240 @@
+{
+  "rovello": {
+    "commonName": "Níscalo (rovellón)",
+    "culinary": "Es una de las setas más populares de Cataluña. Tiene la carne firme y algo granulosa, de sabor suave y agradable. Es buenísimo a la brasa con ajo, perejil y aceite, y también con butifarra, en arroces y en guisos. Puede teñir la orina de color rojizo después de comerlo, pero es inofensivo.",
+    "habitat": "Crece bajo pinos (pino carrasco, resinero, silvestre y piñonero), tanto en suelos ácidos como calizos, desde la costa hasta la montaña. Búsquelo en claros herbosos y taludes musgosos de los pinares, a menudo cerca de los caminos. Son zonas típicas el Solsonès, el Berguedà, el Montseny y buena parte de los pinares del Prepirineo.",
+    "season": "Otoño, sobre todo de septiembre a diciembre, tras las primeras lluvias después del verano. Los años cálidos puede durar hasta el inicio del invierno en la costa.",
+    "lookAlikes": "El rasgo clave es la leche de color naranja zanahoria que se vuelve verde lentamente; rechace cualquier Lactarius de leche blanca. Lactarius torminosus, con el margen enrollado, peludo y rosado, y leche blanca y acre, es tóxico y provoca gastroenteritis graves. Lactarius chrysorrheus, que sale bajo encinas y robles, tiene la leche blanca que se vuelve amarilla y también es indigesto."
+  },
+  "pinetell": {
+    "commonName": "Níscalo de sangre",
+    "culinary": "Muchos aficionados lo consideran incluso mejor que el níscalo: su carne es más firme y aromática. Se cocina de la misma manera, a la brasa con ajo y perejil o salteado, y aguanta bien en guisos y conservas. Siempre debe comerse cocinado.",
+    "habitat": "Es típico de los pinares mediterráneos, sobre todo de pino carrasco y pino piñonero en suelos calizos, desde zonas bajas hasta media montaña. Es frecuente en las comarcas interiores y del sur de Cataluña (Bages, Anoia, Priorat, Garraf) y más escaso en suelos ácidos.",
+    "season": "Otoño, de septiembre a diciembre, normalmente algo antes que el níscalo en las mismas zonas.",
+    "lookAlikes": "Se reconoce por su leche de color rojo vino, que apenas cambia al aire, y por el sombrero gris anaranjado con tonos vinosos. Como con todos los Lactarius, descarte cualquier ejemplar de leche blanca, como Lactarius torminosus, tóxico, que tiene el margen peludo y una leche blanca muy acre."
+  },
+  "cep": {
+    "commonName": "Boleto (hongo calabaza)",
+    "culinary": "Es un comestible de primera, de carne blanca y firme y sabor a avellana que se intensifica al secarlo. Los ejemplares jóvenes pueden comerse crudos en láminas finas; es excelente salteado, a la plancha, en arroces, en salsas y en crema. Los viejos, con los poros blandos y verdosos, conviene secarlos o descartarlos.",
+    "habitat": "Forma micorrizas con muchos árboles: haya, castaño, robles, abetos y pinos, sobre todo en suelos ácidos. En Cataluña es más abundante en media y alta montaña, como en el Pirineo, el Montseny, las Guilleries y el Montnegre.",
+    "season": "De finales de verano a otoño, sobre todo de agosto a noviembre. Sale tras lluvias cálidas; algunos años también aparecen ejemplares tempranos en junio.",
+    "lookAlikes": "El boleto amargo (Tylopilus felleus) tiene los poros rosados y un retículo oscuro en el pie; no es peligroso, pero es amarguísimo. Evite cualquier boleto con poros rojos o naranjas o cuya carne se vuelva azul al cortarla, como el boleto de Satanás (Rubroboletus satanas), que es tóxico. El boleto comestible tiene los poros de blancos a amarillo verdosos, un retículo claro en la parte alta del pie y la carne blanca, que no cambia de color."
+  },
+  "cep_estiu": {
+    "commonName": "Boleto reticulado / Boleto negro",
+    "culinary": "Es tan bueno como Boletus edulis, con un sabor algo más dulce y la carne muy firme, especialmente el boleto negro (Boletus aereus). Se usa de la misma manera: crudo si es joven y sano, salteado, a la plancha, en arroces o seco. Los ejemplares de verano suelen tener larvas, así que revíselos antes de cocinarlos.",
+    "habitat": "Crece en bosques de frondosas: robles, encinas, alcornoques, castaños y hayas. El boleto reticulado (Boletus reticulatus) prefiere los bosques caducifolios de media montaña, mientras que el boleto negro abunda en encinares y alcornocales cálidos, como las Gavarres, el Montseny y el Montnegre.",
+    "season": "Es el boleto más temprano: de junio a octubre, después de las tormentas de verano.",
+    "lookAlikes": "Las reglas son las mismas que para Boletus edulis: rechace los boletos con poros rojos o naranjas, con carne que azulea o de sabor amargo; el boleto de Satanás (Rubroboletus satanas), de poros rojos, es tóxico. El boleto amargo (Tylopilus felleus) tiene los poros rosados y un retículo oscuro en el pie. El boleto reticulado tiene el sombrero seco, mate y pardo claro, y un retículo que cubre casi todo el pie; el boleto negro tiene el sombrero pardo muy oscuro."
+  },
+  "rossinyol": {
+    "commonName": "Rebozuelo",
+    "culinary": "Se aprecia mucho por su olor afrutado, que recuerda al albaricoque, y por su sabor ligeramente picante. Tiene la carne firme y algo elástica. Es ideal salteado (primero en una sartén sin aceite para que suelte el agua), con huevos revueltos, arroz, pasta o carne. No se seca bien; es mejor congelarlo una vez cocinado.",
+    "habitat": "Crece tanto en bosques de frondosas como de coníferas (roble, haya, castaño, pino, abeto), normalmente en suelos ácidos y musgosos. En Cataluña es común en el Montseny, las Guilleries, el Montnegre, el Pirineo y el Prepirineo.",
+    "season": "De junio a noviembre; es una de las setas que salen con las tormentas de verano y continúa durante el otoño.",
+    "lookAlikes": "El rebozuelo tiene pliegues gruesos y bifurcados que bajan por el pie, no láminas verdaderas, y es de color amarillo yema de huevo. La seta del olivo (Omphalotus olearius) es tóxica: es naranja, tiene láminas finas verdaderas y crece en grupos sobre tocones o raíces de olivos y encinas. El falso rebozuelo (Hygrophoropsis aurantiaca) es naranja, tiene láminas finas y bifurcadas y es de mala calidad."
+  },
+  "camagroc": {
+    "commonName": "Angula de monte",
+    "culinary": "Es una seta muy aromática y muy valorada en la cocina catalana. Es delgada y algo crujiente, con un agradable olor afrutado. Se usa en arroces, canelones, salsas y guisos, y se seca muy bien sin perder el aroma.",
+    "habitat": "Crece en grupos numerosos entre el musgo de pinares húmedos y bosques mixtos, a menudo cerca de arroyos y en suelos calizos. Es típica de la media montaña, como el Solsonès, el Berguedà, el Ripollès y el Prepirineo.",
+    "season": "Final de otoño e invierno, de octubre a enero; resiste las primeras heladas.",
+    "lookAlikes": "No tiene láminas verdaderas: la parte inferior es casi lisa o ligeramente arrugada, de color rosado anaranjado, y el pie es amarillo anaranjado y hueco. Tiene parientes comestibles parecidos, como Craterellus tubaeformis. Descarte cualquier seta pequeña y parda con láminas verdaderas, porque cerca pueden crecer especies tóxicas (por ejemplo, algunos Cortinarius)."
+  },
+  "trompeta_morts": {
+    "commonName": "Trompeta de los muertos",
+    "culinary": "Es una seta excelente y muy aromática, de carne fina y algo elástica. Se cocina en salsas, arroces, tortillas y con carne. Se seca muy bien y puede molerse para obtener un polvo que sirve de condimento.",
+    "habitat": "Crece en grupos en bosques de frondosas, sobre todo hayedos, robledales, castañares y avellanos, en suelos ricos y húmedos cubiertos de hojarasca. Es común en el Montseny, la Garrotxa, las Guilleries y los hayedos del Pirineo.",
+    "season": "Otoño, sobre todo de septiembre a diciembre.",
+    "lookAlikes": "Tiene forma de trompeta hueca, abierta hasta la base, de color gris oscuro a negro, y la cara externa lisa o algo arrugada, nunca con láminas. Si se comprueban estos rasgos no tiene confusiones peligrosas, pero descarte cualquier seta oscura con láminas verdaderas o con el pie macizo. Algunas helvelas oscuras (Helvella lacunosa), con el sombrero en forma de silla irregular y el pie surcado y lleno de cámaras, son tóxicas en crudo y no deben recogerse."
+  },
+  "ou_de_reig": {
+    "commonName": "Oronja (amanita de los césares)",
+    "culinary": "Es una de las setas más apreciadas desde la época romana. Tiene un sabor delicado y ligeramente dulce y la carne tierna. Los ejemplares adultos bien identificados pueden comerse crudos en carpaccio o ensalada, y también son excelentes hechos ligeramente a la plancha.",
+    "habitat": "Es una especie termófila que crece en claros soleados de alcornocales, encinares, robledales y castañares, en suelos ácidos. En Cataluña se encuentra en zonas como las Gavarres, el Montseny, el Montnegre y el Alt Empordà.",
+    "season": "De julio a octubre, sobre todo después de tormentas cálidas de verano.",
+    "lookAlikes": "Una confusión puede ser mortal. La matamoscas (Amanita muscaria) tiene el sombrero rojo con verrugas blancas (que la lluvia puede eliminar), las láminas y el pie blancos; la oronja tiene las láminas amarillas, el pie y el anillo amarillos y una volva blanca grande en forma de saco. En estado de huevo cerrado puede confundirse con la oronja verde (Amanita phalloides), que es mortal: no recoja nunca huevos, y si corta uno por la mitad, debe mostrar el sombrero naranja y el tejido amarillo en el interior."
+  },
+  "llenega_negra": {
+    "commonName": "Llanega negra",
+    "culinary": "Es un buen comestible, de sabor suave y carne blanda y jugosa. Hay que quitarle la piel viscosa del sombrero y limpiarla bien. Se cocina a la brasa, en guisos con carne o patatas y en arroces.",
+    "habitat": "Crece bajo pinos, sobre todo pino laricio y pino carrasco, en suelos calizos. Es típica de las comarcas interiores de Cataluña y del Prepirineo, y a menudo sale en grupos cerca de los troncos.",
+    "season": "Final de otoño e invierno, de octubre a enero, a menudo después de las primeras olas de frío.",
+    "lookAlikes": "Tiene el sombrero muy viscoso de color gris pardo oscuro, las láminas gruesas, espaciadas, blancas y decurrentes, y el pie viscoso. Algunos Cortinarius viscosos, algunos tóxicos, pueden parecerse, pero sus láminas se vuelven de color herrumbre y tienen un velo en forma de telaraña. Otras llanegas comestibles (como Hygrophorus hypothejus) tienen las láminas amarillentas."
+  },
+  "moixerno": {
+    "commonName": "Seta de San Jorge (perrechico)",
+    "culinary": "Es una de las setas más valoradas y caras de Cataluña. Tiene la carne blanca y firme, con un intenso olor a harina fresca. Es perfecta en tortilla, con huevos revueltos, con nata o con carne. Se suele usar en poca cantidad porque su sabor es muy intenso.",
+    "habitat": "Crece formando corros o hileras en prados y pastos de montaña, bordes de bosque y cerca de espinos albares y endrinos, sobre todo en suelos calizos. Es típica del Pirineo y el Prepirineo (Cerdanya, Ripollès, Berguedà, Pallars).",
+    "season": "Primavera, de abril a junio; tradicionalmente se asocia a San Jorge (23 de abril).",
+    "lookAlikes": "Hay confusiones muy peligrosas. Inocybe erubescens, que sale en el mismo hábitat y época, tiene el sombrero fibroso que enrojece y las láminas gris pardas; puede ser mortal. El entoloma lívido (Entoloma sinuatum) es tóxico: tiene las láminas amarillentas y después rosadas y suele salir en verano y otoño. La seta de San Jorge tiene el sombrero blanco o crema, las láminas blancas y apretadas, la esporada blanca y olor a harina."
+  },
+  "cama_sec": {
+    "commonName": "Senderuela",
+    "culinary": "Es una seta pequeña pero muy aromática, con un ligero sabor a almendra. Solo se comen los sombreros, porque los pies son duros. Es excelente en salsas, arroces y guisos, y se seca muy bien.",
+    "habitat": "Crece formando corros en prados, pastos, claros herbosos y bordes de caminos, a menudo en suelos calizos. Es común en los prados del Pirineo, el Prepirineo y la Cataluña central.",
+    "season": "Dos brotes: en primavera (de abril a junio) y en otoño (de septiembre a noviembre), después de las lluvias.",
+    "lookAlikes": "Puede confundirse peligrosamente con pequeños Clitocybe blancos (Clitocybe dealbata, C. rivulosa), que contienen muscarina y pueden crecer en los mismos corros. Los Clitocybe tienen las láminas apretadas que bajan por el pie y el sombrero blanco y harinoso. La senderuela tiene el sombrero acampanado de color crema rojizo con un mamelón central, las láminas muy separadas y el pie duro y elástico, que se puede retorcer sin romperse."
+  },
+  "fredolic": {
+    "commonName": "Negrilla",
+    "culinary": "Es un comestible tradicional en Cataluña, de sabor suave y carne blanda. Se cocina en guisos, arroces, tortillas y con carne. Por prudencia, conviene comerla en cantidades moderadas.",
+    "habitat": "Crece en grupos bajo pinos, a menudo en suelos calizos, desde zonas bajas hasta media montaña. Es común en toda la Cataluña interior, el Prepirineo y el Pirineo.",
+    "season": "Final de otoño e invierno, de octubre a enero; puede salir incluso después de las heladas.",
+    "lookAlikes": "Tricholoma pardinum es tóxico y provoca gastroenteritis graves: es más grande y carnoso, con el sombrero claro cubierto de escamas oscuras y olor a harina. Tricholoma virgatum tiene el sombrero puntiagudo y un sabor amargo y picante, y es tóxico. La negrilla es pequeña, con el sombrero gris y afieltrado, las láminas blanco grisáceas y sin anillo; descarte cualquier ejemplar con olor fuerte o sabor amargo."
+  },
+  "murgola": {
+    "commonName": "Colmenilla (morilla)",
+    "culinary": "Es una seta de gourmet con un sabor único. Es TÓXICA CRUDA y siempre debe cocinarse bien; las colmenillas secas deben hidratarse y luego cocinarse. Es excelente con salsas de nata, rellena y con carne. Límpiela con cuidado, porque en sus alvéolos se esconden arena e insectos.",
+    "habitat": "Crece en riberas de ríos y bosques de fresnos, olmos y chopos, en huertos, jardines y zonas quemadas, sobre todo en suelos calizos. Se encuentra en el Pirineo, el Prepirineo y a lo largo de los ríos del interior.",
+    "season": "Primavera, de marzo a mayo.",
+    "lookAlikes": "La falsa colmenilla (Gyromitra esculenta) puede ser mortal: tiene el sombrero en forma de cerebro, con pliegues irregulares en lugar de alvéolos, y por dentro está dividida en cámaras. La colmenilla verdadera tiene el sombrero con alvéolos como un panal, unido al pie por la base, y es completamente hueca de arriba abajo cuando se corta a lo largo."
+  },
+  "apagallums": {
+    "commonName": "Parasol (galamperna)",
+    "culinary": "Es un comestible excelente, de sabor delicado que recuerda a la avellana. Solo se come el sombrero, porque el pie es fibroso. Es buenísimo rebozado, empanado o a la plancha con ajo y perejil.",
+    "habitat": "Crece en claros y bordes de bosque, prados, matorrales y bordes de caminos, en robledales, castañares y pinares. Es común desde zonas bajas hasta la montaña en toda Cataluña.",
+    "season": "De finales de verano a otoño, sobre todo de agosto a noviembre.",
+    "lookAlikes": "Las lepiotas pequeñas (Lepiota brunneoincarnata, L. helveola y afines) contienen amatoxinas mortales: no recoja nunca ejemplares con el sombrero de menos de 10 cm. El parasol tiene el pie con un dibujo como de piel de serpiente, un anillo doble que se puede deslizar por el pie y no tiene volva. Chlorophyllum rhacodes enrojece al cortarlo y puede causar trastornos digestivos."
+  },
+  "girgola": {
+    "commonName": "Seta de ostra (gírgola)",
+    "culinary": "Es un buen comestible, de carne firme y sabor suave, y también se cultiva mucho. Es buenísima a la plancha con ajo y perejil, salteada o en guisos. Los ejemplares silvestres deben recogerse jóvenes, porque los viejos se vuelven duros.",
+    "habitat": "Crece en grupos imbricados sobre troncos muertos o debilitados de frondosas, sobre todo chopos, hayas, sauces y olmos. Se encuentra en bosques de ribera y hayedos de toda Cataluña.",
+    "season": "Final de otoño e invierno, de octubre a marzo; a menudo sale después de las primeras olas de frío.",
+    "lookAlikes": "La seta del olivo (Omphalotus olearius) es tóxica: es de color naranja vivo y crece sobre raíces y tocones de olivos y encinas. Evite las setas blancas y finas en forma de concha sobre madera de coníferas (Pleurocybella porrigens), que se han relacionado con intoxicaciones graves. La seta de ostra tiene el sombrero de gris pardo a azulado, las láminas blancas que bajan hasta un pie corto y lateral, y crece sobre madera de frondosas."
+  },
+  "cep_pi": {
+    "commonName": "Boleto pinícola / Hongo de pino",
+    "culinary": "Comestible excelente, considerado por muchos el más sabroso de los boletos, con la carne blanca, firme y perfumada. Se cocina como el Boletus edulis: crudo en láminas cuando es joven, a la plancha, salteado, en arroces, en salsas o seco.",
+    "habitat": "Vive sobre todo en los pinares de pino silvestre y pino negro de montaña, y también con abetos, hayas y castaños, en suelos ácidos. En Cataluña es típico del Pirineo y el Prepirineo (Cerdanya, Ripollès, Berguedà, Solsonès) y del Montseny.",
+    "season": "Tiene una salida a finales de primavera (mayo y junio) en la montaña y otra en otoño, de septiembre a noviembre.",
+    "lookAlikes": "Se distingue por el sombrero de color pardo rojizo o caoba, el pie grueso con un retículo claro y los poros de blancos a amarillo verdoso; la carne es blanca y no cambia de color. El boleto amargo (Tylopilus felleus) tiene los poros rosados y un retículo oscuro en el pie y es amarguísimo. Evite cualquier boleto con poros rojos o naranjas o con carne que azulea, como el boleto de Satanás (Rubroboletus satanas), tóxico."
+  },
+  "carlet": {
+    "commonName": "Carbonera",
+    "culinary": "Es una de las rúsulas más sabrosas y buscadas. Tiene la carne blanca, firme y de sabor suave, que no se deshace al cocinarla. Es excelente a la plancha o a la brasa con ajo y perejil, salteada, en tortillas y en guisos de carne o de patatas.",
+    "habitat": "Crece en bosques de frondosas, sobre todo hayedos, castañares, alcornocales, encinares y robledales, y a veces en bosques mixtos con pinos. Prefiere los suelos ácidos y frescos, desde tierra baja hasta media montaña: Montseny, Guilleries, Montnegre, Gavarres y el Pirineo.",
+    "season": "De finales de primavera a otoño, sobre todo de junio a noviembre, tras lluvias abundantes.",
+    "lookAlikes": "El sombrero es muy variable (lila, azulado, verde o gris), pero las láminas son blancas, flexibles y grasas al tacto: no se rompen como las de otras rúsulas al pasar el dedo. Las rúsulas verdes pueden confundirse con la oronja verde (Amanita phalloides), MORTAL: compruebe siempre que no haya anillo en el pie ni volva en forma de saco en la base, y arranque la seta entera. Descarte las rúsulas de sabor acre o picante, como Russula emetica, que causan trastornos digestivos."
+  },
+  "escarlet": {
+    "commonName": "Higróforo escarlata",
+    "culinary": "Buen comestible, de carne blanca, firme y consistente, que absorbe bien los sabores. Conviene quitarle la cutícula, que puede ser algo amarga, y muchos aficionados lo escaldan brevemente antes de cocinarlo. Es muy bueno en guisos con carne, en arroces y en conserva. Siempre debe comerse cocinado.",
+    "habitat": "Crece en grupos numerosos, a menudo en hileras o corros, en encinares, robledales y hayedos, preferentemente en suelos calizos o neutros, desde zonas bajas hasta media montaña. Es más frecuente en las comarcas interiores de Cataluña y en Mallorca.",
+    "season": "Otoño y principios de invierno, sobre todo de octubre a diciembre; es una seta tardía que aguanta bien el frío.",
+    "lookAlikes": "Tiene el sombrero carnoso y algo viscoso, con manchas y escamas de color vinoso o púrpura sobre fondo blanquecino, láminas blancas que se manchan de rojo vinoso, un pie blanco y robusto manchado de vino, y no tiene leche. Las rúsulas de sombrero rojo también tienen láminas blancas, pero son quebradizas como la tiza; las de sabor acre, como Russula emetica, son tóxicas. Entoloma sinuatum, tóxico, sale en los mismos bosques en otoño: tiene el sombrero gris crema y las láminas amarillentas que se vuelven rosadas. No lo confunda con la carbonera (Russula cyanoxantha), una rúsula comestible, ni con Hygrophorus erubescens, de coníferas y amargo."
+  },
+  "llora_verda": {
+    "commonName": "Rúsula verde / Seta de cura",
+    "culinary": "Para muchos es la mejor de las rúsulas: carne blanca, firme y con un sabor suave que recuerda a la avellana. Se puede hacer a la brasa o a la plancha, salteada o en guisos. En Italia y el sur de Francia se come incluso cruda cuando es joven, pero es más prudente cocinarla.",
+    "habitat": "Vive en bosques de frondosas luminosos y claros: alcornocales, encinares, castañares, robledales y hayedos, sobre suelos ácidos. Es más frecuente en las comarcas silíceas del nordeste de Cataluña (Montseny, Montnegre, Gavarres, Guilleries).",
+    "season": "De verano a otoño, de junio a octubre, a menudo ya con las primeras tormentas de verano.",
+    "lookAlikes": "Se reconoce por el sombrero verde grisáceo que se agrieta en pequeñas placas o escamas, como un mosaico, y por las láminas y el pie blancos. El riesgo grave es la oronja verde (Amanita phalloides), MORTAL, que tiene el sombrero verde pero liso, anillo en el pie y volva en la base: arranque siempre la seta entera y compruébelo. Otras rúsulas verdes de sombrero liso, como Russula aeruginea, son comestibles pero peores; descarte cualquier rúsula de sabor acre."
+  },
+  "llora_vesca": {
+    "commonName": "Rúsula comestible",
+    "culinary": "Rúsula de sabor suave y agradable, con la carne blanca y firme. Es un buen comestible salteada, a la plancha, en tortilla o en guisos, y combina bien con otras setas.",
+    "habitat": "Vive en bosques de frondosas y mixtos de suelos ácidos: hayedos, castañares, robledales, alcornocales y encinares húmedos, y a veces con pinos. Es común en la mitad norte de Cataluña.",
+    "season": "De verano a otoño, de junio a octubre.",
+    "lookAlikes": "Tiene el sombrero rosado, vinoso o pardo rojizo, y la cutícula retirada en el margen, de modo que se ve un borde de carne blanca (como si enseñara los dientes). La carne se vuelve rosa salmón con sulfato de hierro. El peligro principal son las rúsulas rojas picantes, como Russula emetica, tóxicas: pruebe un trocito crudo sin tragarlo y descártela si pica. Compruebe también que no tenga anillo ni volva."
+  },
+  "pebras": {
+    "commonName": "Rúsula blanca",
+    "culinary": "Es una rúsula blanca y robusta de carne firme pero de sabor algo picante y amargo, sobre todo en las láminas. Se considera un comestible de poca calidad: se come a la brasa o en guisos tras escaldarla, y en las comarcas de Lleida y Tarragona es tradicional hacerla a la lata.",
+    "habitat": "Sale medio enterrada, levantando la hojarasca, bajo encinas, robles y hayas y también en pinares de pino carrasco y pino silvestre. Tolera bien los suelos calizos y es común en toda Cataluña, de la costa a la montaña.",
+    "season": "De finales de verano a otoño, de agosto a diciembre.",
+    "lookAlikes": "A pesar del nombre popular catalán, el pebràs (Russula delica) es una rúsula y no tiene leche. No lo confunda con el pebrazo lechoso (Lactarius piperatus) ni con Lactarius vellereus, muy parecidos pero que sueltan una leche blanca muy picante al romperse; son indigestos. Los ejemplares jóvenes y blancos podrían confundirse con amanitas blancas MORTALES (Amanita verna, Amanita virosa): compruebe que no haya anillo ni volva. Russula chloroides, con una franja azulada en lo alto del pie, es equivalente."
+  },
+  "llenega_blanca": {
+    "commonName": "Llanega blanca / Higróforo marfil",
+    "culinary": "Seta de carne blanca, tierna y de sabor suave, muy apreciada en Cataluña como la llanega negra. Antes de cocinarla hay que quitarle la capa viscosa del sombrero y del pie. Es buena salteada, en tortillas, en arroces y en guisos, y se conserva bien en aceite o vinagre.",
+    "habitat": "En Cataluña la llanega blanca más buscada es Hygrophorus gliocyclus, que sale en los pinares de pino carrasco, laricio y silvestre, sobre todo en suelos calizos. La especie vecina Hygrophorus eburneus, el higróforo marfil, crece en hayedos y robledales.",
+    "season": "Otoño avanzado, de octubre a diciembre, a menudo con las primeras heladas.",
+    "lookAlikes": "Es toda blanca y muy viscosa en tiempo húmedo, con láminas espaciadas y algo decurrentes. Compruebe que no tenga volva en la base: las amanitas blancas (Amanita verna, Amanita virosa) son MORTALES. Los Clitocybe blancos (Clitocybe dealbata, Clitocybe rivulosa), pequeños y no viscosos, que salen en prados y claros, son tóxicos y producen síndrome muscarínico. Hygrophorus cossus, de olor desagradable, no es bueno."
+  },
+  "fredolic_gros": {
+    "commonName": "Capuchina / Tricoloma portentoso",
+    "culinary": "Buen comestible, de carne blanca, firme y con un sabor suave y algo harinoso. Es bueno salteado, en guisos, en arroces y con carne, y aguanta bien la cocción.",
+    "habitat": "Vive en los pinares de montaña, sobre todo de pino silvestre y laricio, y también con abetos, en suelos ácidos o calizos con musgo. En Cataluña es más frecuente en el Prepirineo y el Pirineo.",
+    "season": "Otoño avanzado, de octubre a diciembre, a menudo tras las primeras heladas.",
+    "lookAlikes": "Tiene el sombrero gris oscuro con fibras radiales negras y reflejos violáceos o amarillos, y las láminas y el pie blancos con tonos amarillentos. Puede confundirse con el tricoloma atigrado (Tricholoma pardinum), TÓXICO, de sombrero con escamas grises y fuerte olor a harina, y con Tricholoma sejunctum y Tricholoma virgatum, amargos o picantes. La seta de los caballeros (Tricholoma equestre), toda amarilla, está prohibida porque puede causar intoxicaciones graves."
+  },
+  "cama_perdiu": {
+    "commonName": "Pata de perdiz",
+    "culinary": "Buen comestible, de carne firme de color naranja salmón. Es bueno en guisos, arroces y salsas, y también en conserva. Al cocinarse se oscurece, casi violáceo, y puede teñir el resto del plato; es mejor quitarle la cutícula del sombrero, que es viscosa.",
+    "habitat": "Forma micorrizas con pinos de dos acículas, sobre todo pino silvestre, laricio, carrasco y piñonero, y suele salir junto a los boletos del género Suillus, de los que es parásito. Tolera suelos ácidos y calizos y es común en los pinares de toda Cataluña.",
+    "season": "Otoño, de septiembre a diciembre.",
+    "lookAlikes": "El sombrero es de pardo anaranjado a vinoso, con un mamelón central, las láminas decurrentes, espaciadas y ocres que se vuelven negras con las esporas, y el pie anaranjado con la base amarilla. No lo confunda con los Cortinarius de color herrumbre (como Cortinarius orellanus), MORTALES para el riñón: tienen una cortina como una telaraña bajo el sombrero, láminas de color óxido y no viven ligados a los Suillus. Gomphidius glutinosus, gris y muy viscoso, también es comestible."
+  },
+  "molleric": {
+    "commonName": "Boleto granulado",
+    "culinary": "Comestible de calidad media, blando y de sabor suave. Hay que quitarle siempre la cutícula viscosa del sombrero, que es laxante, y también los tubos si están blandos. Es mejor joven, salteado, en guisos o en conserva, y mezclado con otras setas.",
+    "habitat": "Sale en grupos numerosos en los pinares, sobre todo de pino carrasco, piñonero, laricio, silvestre y negral, en suelos calizos o ácidos. Es una de las setas más comunes de los pinares catalanes, de la costa a la montaña.",
+    "season": "Puede salir a finales de primavera y sobre todo en otoño, de septiembre a diciembre.",
+    "lookAlikes": "Tiene el sombrero pardo anaranjado y viscoso, los poros amarillos que sueltan gotitas lechosas de joven y el pie sin anillo, con granulaciones en la parte alta. Suillus luteus, con anillo, y Suillus collinitus, con la base del pie rosada, también son comestibles mediocres. Descarte los boletos con poros rojos o naranjas o con carne que azulea intensamente, como el boleto de Satanás (Rubroboletus satanas), tóxico."
+  },
+  "llengua_bou": {
+    "commonName": "Lengua de vaca / Gamuza",
+    "culinary": "Buen comestible, de carne firme, blanca y de sabor suave algo afrutado. Los ejemplares jóvenes son excelentes salteados, en guisos de carne, en arroces o en conserva; a los viejos conviene quitarles los aguijones, que pueden amargar, y escaldarlos antes de cocinarlos.",
+    "habitat": "Crece en todo tipo de bosques, de frondosas y de coníferas: hayedos, castañares, encinares, robledales, abetales y pinares, en suelos ácidos o calizos, a menudo en grupos o corros entre el musgo de las umbrías.",
+    "season": "Otoño, de septiembre a diciembre, y en la costa hasta el invierno.",
+    "lookAlikes": "Es fácil de reconocer y no tiene confusiones peligrosas: bajo el sombrero, de color crema a anaranjado, no tiene láminas ni poros sino AGUIJONES cortos y frágiles. Hydnum rufescens, más pequeño y anaranjado, es igualmente comestible. Otras setas con aguijones, como Sarcodon e Hydnellum, son duras, amargas o leñosas, pero no gravemente tóxicas."
+  },
+  "pimpinella_morada": {
+    "commonName": "Pie azul",
+    "culinary": "Buen comestible de carne tierna, perfumada y algo dulce. Hay que comerla SIEMPRE BIEN COCINADA, porque cruda es tóxica. Es buena salteada, en guisos de carne, en arroces y en salsas; algunas personas la encuentran indigesta y conviene no abusar.",
+    "habitat": "Crece en la hojarasca y en la pinocha de todo tipo de bosques, de frondosas y de coníferas, y también en márgenes, jardines y montones de compost. Prefiere los suelos ricos en humus, a menudo calizos, y es común en toda Cataluña.",
+    "season": "Otoño avanzado e inicio del invierno, de octubre a enero, incluso tras las primeras heladas.",
+    "lookAlikes": "Tiene el sombrero, las láminas y el pie de color lila o violeta, el olor perfumado y la esporada rosada. Puede confundirse con Cortinarius violáceos (como Cortinarius traganus o Cortinarius camphoratus), algunos tóxicos, que tienen una cortina como una telaraña bajo el sombrero, esporada de color herrumbre y a menudo olor desagradable. Lepista sordida, más pequeña, también es comestible."
+  },
+  "peu_de_rata": {
+    "commonName": "Pie de rata / Clavaria coliflor",
+    "culinary": "Comestible mediocre y delicado. Solo se comen los ejemplares jóvenes y firmes, bien cocinados, en cantidades pequeñas y quitando las puntas, que suelen ser amargas. Incluso las especies comestibles son LAXANTES para muchas personas y pueden provocar diarreas. Se hacen en guisos, en tortilla o escaldados y salteados.",
+    "habitat": "Salen en el suelo en bosques húmedos de montaña: Ramaria botrytis sobre todo en hayedos y bosques mixtos con abetos, y Ramaria aurea en hayedos, abetales, castañares y robledales, en general en suelos ácidos. Son más frecuentes en el Pirineo, el Montseny y las Guilleries.",
+    "season": "De finales de verano a otoño, de agosto a noviembre.",
+    "lookAlikes": "ATENCIÓN: los pies de rata son muy difíciles de identificar; hay decenas de especies de Ramaria y muchas solo se distinguen con microscopio. La Ramaria formosa, de color rosa anaranjado con las puntas amarillas y carne amarga, es TÓXICA y provoca gastroenteritis fuertes; Ramaria pallida y otras también son laxantes. Ramaria botrytis tiene un tronco grueso y blanco, ramas blanquecinas y las puntas rosadas o violáceas; Ramaria aurea es toda amarillo dorado. Si no está totalmente seguro, no las recoja. No las dé a niños."
+  },
+  "camperol": {
+    "commonName": "Champiñón silvestre / Seta de campo",
+    "culinary": "Es el pariente silvestre del champiñón de cultivo, pero mucho más sabroso. La carne es blanca y tierna, con agradable olor a seta. Es buenísimo a la plancha con ajo y perejil, salteado, en tortillas, en salsas e incluso crudo en ensaladas cuando es muy joven y limpio.",
+    "habitat": "No depende de los árboles: sale en prados, pastos y campos abonados con estiércol, a menudo en corros, donde pastan vacas, caballos u ovejas. Es común en prados de media montaña y en los prados alpinos del Pirineo, y también en márgenes herbosos de tierra baja.",
+    "season": "Tras lluvias cálidas: a finales de primavera y sobre todo en otoño, de septiembre a noviembre.",
+    "lookAlikes": "Las láminas son libres, de color rosa vivo en los ejemplares jóvenes y marrón chocolate en los viejos, y el pie tiene un anillo fino. Las amanitas blancas MORTALES (Amanita phalloides, verna y virosa) tienen las láminas siempre BLANCAS y volva en la base: no recoja nunca setas blancas con láminas blancas. El champiñón amarilleante (Agaricus xanthodermus), tóxico, se mancha de amarillo intenso al frotarlo, sobre todo en la base del pie, y huele a tinta o a fenol."
+  },
+  "bola_de_neu": {
+    "commonName": "Bola de nieve / Champiñón anisado",
+    "culinary": "Champiñón grande y carnoso con un olor a anís o almendra amarga muy característico. Es un comestible excelente, a la plancha, salteado, relleno o en salsas. Los ejemplares grandes deben revisarse porque a menudo tienen gusanos.",
+    "habitat": "Agaricus arvensis sale en prados, pastos y claros, a menudo en corros, y su pariente Agaricus silvicola crece dentro del bosque, en pinares de pino silvestre, abetales y hayedos. Ambos son más frecuentes en media y alta montaña.",
+    "season": "De finales de primavera a otoño, sobre todo de septiembre a noviembre.",
+    "lookAlikes": "Se reconoce por el sombrero blanco que amarillea lentamente, el olor a anís, las láminas de gris rosado a negro chocolate y el anillo grande y doble en forma de rueda dentada. El champiñón amarilleante (Agaricus xanthodermus), tóxico, amarillea de golpe y con fuerza en la base del pie y huele a tinta. Las amanitas blancas MORTALES (Amanita phalloides, verna, virosa) tienen las láminas BLANCAS y volva: no recoja nunca ejemplares cerrados, en forma de huevo, sin ver las láminas."
+  },
+  "bolet_tinta": {
+    "commonName": "Barbuda / Matacandil",
+    "culinary": "Buen comestible de carne blanca, tierna y de sabor delicado, solo mientras las láminas son totalmente BLANCAS. Se hace salteado, en tortilla, en cremas o rebozado, y hay que cocinarlo el mismo día de la recogida, porque en pocas horas se deshace en un líquido negro como la tinta.",
+    "habitat": "No depende de los árboles: sale en prados, céspedes, márgenes de caminos y campos, terrenos removidos y lugares ricos en nitrógeno, a menudo en grupos. Evite los que salen junto a carreteras o en zonas contaminadas, porque acumulan metales pesados.",
+    "season": "Sobre todo en primavera y en otoño tras las lluvias, pero puede salir de primavera a finales de otoño.",
+    "lookAlikes": "Es muy característico: sombrero alto y cilíndrico, blanco y cubierto de escamas, con un anillo móvil en el pie, que de viejo se abre y se deshace en tinta negra. El coprino entintado (Coprinopsis atramentaria), de sombrero gris y liso, es TÓXICO si se toma alcohol hasta tres días antes o después de comerlo (efecto antabús). No lo confunda en estado de botón con amanitas blancas, que tienen volva."
+  },
+  "girgola_panical": {
+    "commonName": "Seta de cardo",
+    "culinary": "Comestible excelente, de carne blanca, firme y sabrosa, considerada la mejor de las setas de ostra. Es buenísima a la brasa o a la plancha con ajo y perejil, en arroces y con carne. También se cultiva y se vende en los mercados.",
+    "habitat": "No depende de los árboles: es parásita de las raíces muertas del cardo corredor (Eryngium campestre), que crece en eriales, pastos secos, barbechos y márgenes de cultivos, sobre todo en suelos calizos. Es típica de las tierras de Lleida (Segarra, Urgell, Noguera), el Anoia y el Empordà.",
+    "season": "Sobre todo en otoño, de octubre a diciembre, y algunos años también en primavera.",
+    "lookAlikes": "El sombrero es pardo grisáceo, las láminas blancas o crema y muy decurrentes, y el pie a menudo excéntrico; siempre sale junto a matas de cardo corredor. Los Clitocybe blancos o grisáceos que salen en prados (Clitocybe dealbata, Clitocybe rivulosa) son tóxicos: no tienen el pie excéntrico ni salen ligados al cardo. La seta del olivo (Omphalotus olearius), naranja y en grupos sobre tocones, es tóxica."
+  },
+  "pollancro": {
+    "commonName": "Seta de chopo / Pholiota del chopo",
+    "culinary": "Comestible muy bueno, de carne firme y aromática con un ligero sabor a avellana; el pie es fibroso y es mejor desecharlo. Es excelente salteado, en arroces, en canelones y en guisos. Se cultiva con facilidad y se puede encontrar en los mercados.",
+    "habitat": "Crece en grupos apretados sobre troncos y tocones, vivos o muertos, de chopos y álamos, y también de sauces, olmos y otros árboles de ribera. Es común en los bosques de ribera y en las choperas de los valles del Segre, el Ter, la Tordera y el Ebro.",
+    "season": "Sale de primavera a otoño, sobre todo en primavera (de marzo a junio) y en otoño (de septiembre a noviembre).",
+    "lookAlikes": "Tiene el sombrero pardo claro a crema, las láminas de crema a marrón tabaco y un anillo membranoso en el pie. Cualquier seta parda que sale en grupos sobre madera debe identificarse con mucho cuidado: la galerina marginada (Galerina marginata), MORTAL, es pequeña, con anillo y sale sobre madera, sobre todo de coníferas; el hifoloma de láminas verdes (Hypholoma fasciculare), con las láminas amarillo verdosas y sabor amargo, es tóxico. Las armilarias (Armillaria) tienen escamas en el sombrero y requieren cocción."
+  },
+  "fetge_bou": {
+    "commonName": "Hígado de buey / Lengua de buey",
+    "culinary": "Comestible curioso, de carne roja, fibrosa y jugosa, que parece carne cruda y suelta un jugo rojo. Tiene un sabor ácido por la abundancia de taninos. Los ejemplares jóvenes se pueden comer crudos en láminas finas en ensalada o marinados; cocinado, es mejor escaldarlo y luego saltearlo o guisarlo, porque la acidez disminuye.",
+    "habitat": "No crece en el suelo sino en la base de troncos vivos o tocones de castaños y robles, y más raramente de encinas y alcornoques. Es relativamente frecuente en los castañares del Montseny, las Guilleries y el Montnegre.",
+    "season": "De finales de verano a otoño, de agosto a noviembre.",
+    "lookAlikes": "Es inconfundible: forma una lengua o un hígado carnoso rojo sobre la madera, con la cara inferior llena de tubos pequeños, blanquecinos o rosados, separados entre sí. El políporo azufrado (Laetiporus sulphureus), de color amarillo anaranjado, también crece en árboles y es comestible bien cocinada solo cuando es joven; algunos políporos de madera son duros pero no peligrosos."
+  }
+}

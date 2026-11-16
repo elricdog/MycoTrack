@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Route focus button -->
+    <string name="maproute_focus_button">Ir a la ruta</string>
+    <string name="maproute_focus_my_position">Volviendo a tu posición</string>
+
+    <!-- Long press on the map -->
+    <string name="maproute_point_title">Punto seleccionado</string>
+    <string name="maproute_distance_from_you">A %1$s de ti</string>
+    <string name="maproute_create_waypoint">Crear un punto aquí</string>
+    <string name="maproute_go_there">Ir aquí</string>
+    <string name="maproute_go_there_hint">Indicaciones a pie en Google Maps</string>
+    <string name="maproute_copy_coordinates">Copiar coordenadas</string>
+    <string name="maproute_coordinates">Coordenadas</string>
+    <string name="maproute_coordinates_copied">Coordenadas copiadas</string>
+    <string name="maproute_no_maps_app">Ninguna aplicación puede abrir las indicaciones</string>
+    <string name="maproute_pick_trip">¿A qué salida pertenece?</string>
+    <string name="maproute_pick_trip_hint">Un punto siempre pertenece a una salida. Primero se muestran las rutas que hay en el mapa.</string>
+    <string name="maproute_on_map">En el mapa</string>
+    <string name="maproute_no_trips">Todavía no hay ninguna salida. Primero tienes que grabar una.</string>
+    <string name="maproute_recording_trip">Se añadirá a la salida que se está grabando.</string>
+    <string name="maproute_trip_label">Salida: %1$s</string>
+    <string name="maproute_save_waypoint">Guardar el punto</string>
+    <string name="maproute_waypoint_saved">Punto guardado en «%1$s»</string>
+    <string name="maproute_back">Atrás</string>
+</resources>

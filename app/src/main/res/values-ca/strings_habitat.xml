@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Capes d'hàbitat del mapa (orientació dels vessants, espècies d'arbres i sòl). -->
+    <string name="habitat_section_title">Capes d\'hàbitat</string>
+    <string name="habitat_section_description">Es dibuixen damunt de qualsevol mapa base. Necessiten connexió a internet: sense connexió, simplement no es mostren. Trieu les classes que voleu veure a la llegenda d\'hàbitat.</string>
+    <string name="habitat_aspect_title">Orientació dels vessants</string>
+    <string name="habitat_aspect_description">Les obagues (vessants orientats al nord, ratllat blau) són més ombrívoles i humides, normalment millors per als bolets; les solanes (orientades al sud, ratllat taronja) són més assolellades i seques. Es dibuixa amb ratlles perquè es continuïn veient les capes de sota. Es calcula a partir de dades d\'elevació.</string>
+    <string name="habitat_trees_title">Tipus d\'arbres</string>
+    <string name="habitat_trees_description">Espècie d\'arbre dominant de cada bosc, segons el Mapa Forestal d\'Espanya (MITECO). Visible a partir del nivell de zoom 7.</string>
+    <string name="habitat_soil_title">Sòl (substrat)</string>
+    <string name="habitat_soil_description">Roca mare àcida (silícia) o bàsica (calcària), segons el mapa litològic de l\'IGME. Molts bolets prefereixen un dels dos substrats: els rossinyols i molts ceps creixen en sòls àcids, mentre que d\'altres, com alguns pinetells o les múrgoles, prefereixen la calcària. Orientació aproximada a escala 1:1.000.000.</string>
+
+    <string name="habitat_legend_title">Llegenda d\'hàbitat</string>
+    <string name="habitat_legend_expand">Mostra la llegenda</string>
+    <string name="habitat_legend_collapse">Amaga la llegenda</string>
+    <string name="habitat_legend_aspect">Orientació</string>
+    <string name="habitat_legend_trees">Tipus d\'arbres</string>
+    <string name="habitat_legend_soil">Sòl (substrat)</string>
+    <string name="habitat_legend_all">Tots</string>
+    <string name="habitat_legend_none">Cap</string>
+    <string name="habitat_legend_expand_section">Mostra: %1$s</string>
+    <string name="habitat_legend_collapse_section">Amaga: %1$s</string>
+    <string name="habitat_trees_source">Mapa Forestal de España © MITECO (CC BY 4.0)</string>
+    <string name="habitat_soil_source">Mapa litológico de España 1:1.000.000 © IGME-CSIC (CC BY 4.0)</string>
+    <string name="habitat_soil_mapping">El granit, el gneis, la pissarra, la quarsita i el gres donen sòls àcids; la calcària, la dolomia, la marga i el guix en donen de bàsics. Les sèries mixtes, els dipòsits fluvials i les roques volcàniques es mostren com a altres.</string>
+
+    <string name="habitat_aspect_north">Obaga (nord)</string>
+    <string name="habitat_aspect_neutral">Est / oest</string>
+    <string name="habitat_aspect_south">Solana (sud)</string>
+
+    <string name="habitat_tree_holm_oak">Alzinar</string>
+    <string name="habitat_tree_cork_oak">Sureda</string>
+    <string name="habitat_tree_downy_oak">Roureda de roure martinenc</string>
+    <string name="habitat_tree_portuguese_oak">Roureda de roure valencià</string>
+    <string name="habitat_tree_sessile_oak">Roureda de roure de fulla gran o pènol</string>
+    <string name="habitat_tree_pyrenean_oak">Rebollar (roure reboll)</string>
+    <string name="habitat_tree_beech">Fageda</string>
+    <string name="habitat_tree_chestnut">Castanyeda</string>
+    <string name="habitat_tree_birch">Bedollar</string>
+    <string name="habitat_tree_strawberry_tree">Arbocer (arboç)</string>
+    <string name="habitat_tree_wild_olive">Ullastrar</string>
+    <string name="habitat_tree_mixed_broadleaf">Bosc mixt de planifolis</string>
+    <string name="habitat_tree_scots_pine">Pineda de pi roig</string>
+    <string name="habitat_tree_mountain_pine">Pineda de pi negre</string>
+    <string name="habitat_tree_black_pine">Pinassar (pinassa)</string>
+    <string name="habitat_tree_aleppo_pine">Pineda de pi blanc</string>
+    <string name="habitat_tree_stone_pine">Pineda de pi pinyer</string>
+    <string name="habitat_tree_maritime_pine">Pineda de pi pinastre</string>
+    <string name="habitat_tree_fir_other_conifers">Avetosa i altres coníferes</string>
+    <string name="habitat_tree_mixed_conifers">Bosc mixt de coníferes</string>
+    <string name="habitat_tree_mixed_conifer_broadleaf">Bosc mixt de coníferes i planifolis</string>
+    <string name="habitat_tree_riparian">Bosc de ribera</string>
+    <string name="habitat_tree_other_broadleaf">Altres planifolis (freixe, avellaner…)</string>
+    <string name="habitat_tree_junipers">Savinars i ginebrars</string>
+    <string name="habitat_tree_plantations">Plantacions productives (pollancre…)</string>
+    <string name="habitat_tree_native_non_native">Arbres autòctons barrejats amb al·lòctons</string>
+    <string name="habitat_tree_non_native">Arbres al·lòctons (coníferes plantades, robínia…)</string>
+
+    <string name="habitat_soil_group_acid">Àcid / silici</string>
+    <string name="habitat_soil_group_basic">Bàsic / calcari</string>
+    <string name="habitat_soil_group_other">Mixt o altres</string>
+    <string name="habitat_soil_granitoids">Granit i granodiorita</string>
+    <string name="habitat_soil_two_mica_granites">Granit de dues miques</string>
+    <string name="habitat_soil_felsic_plutonic">Roques plutòniques fèlsiques</string>
+    <string name="habitat_soil_gneiss">Gneis</string>
+    <string name="habitat_soil_migmatites">Migmatites i granitoides indiferenciats</string>
+    <string name="habitat_soil_slates_greywackes">Pissarres, grauvaques i quarsites</string>
+    <string name="habitat_soil_quartzites_slates">Quarsites, pissarres i gresos (amb una mica de calcària)</string>
+    <string name="habitat_soil_felsic_volcanic">Roques volcàniques fèlsiques</string>
+    <string name="habitat_soil_limestones_dolomites">Calcàries, dolomies i margues</string>
+    <string name="habitat_soil_dolomites_marls">Dolomies, calcàries i margues</string>
+    <string name="habitat_soil_calcarenites_marls">Calcarenites, margues i argiles</string>
+    <string name="habitat_soil_basin_evaporites">Gresos, argiles, calcàries i evaporites</string>
+    <string name="habitat_soil_triassic_gypsum">Gresos, calcàries, guixos i argiles versicolors</string>
+    <string name="habitat_soil_sandstones_slates_limestones">Gresos, pissarres i calcàries</string>
+    <string name="habitat_soil_coal_series">Conglomerats, gresos, pissarres i calcàries amb carbó</string>
+    <string name="habitat_soil_schists_marbles">Micaesquistos, fil·lites i marbres</string>
+    <string name="habitat_soil_conglomerates_mudstones">Conglomerats, gresos i lutites</string>
+    <string name="habitat_soil_alluvium">Graves, sorres i llims (dipòsits fluvials)</string>
+    <string name="habitat_soil_volcaniclastic">Roques volcàniques i volcanoclàstiques</string>
+    <string name="habitat_soil_mafic_volcanic">Roques volcàniques màfiques (basalt)</string>
+    <string name="habitat_soil_mixed_volcanic">Roques volcàniques màfiques i fèlsiques</string>
+    <string name="habitat_soil_mixed_plutonic">Roques plutòniques màfiques i fèlsiques</string>
+    <string name="habitat_soil_ultramafic">Serpentinites, peridotites i roques ultrabàsiques</string>
+</resources>

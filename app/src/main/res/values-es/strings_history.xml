@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- History -->
+    <string name="history_no_match">Ninguna salida coincide con los filtros</string>
+    <string name="history_no_match_hint">Prueba a cambiar el término de búsqueda o a borrar los filtros.</string>
+    <string name="history_delete_trip_message">La ruta, las fotografías y las notas de «%1$s» se eliminarán para siempre.</string>
+    <plurals name="history_photo_count">
+        <item quantity="one">%1$d foto</item>
+        <item quantity="other">%1$d fotos</item>
+        <item quantity="many">%1$d fotos</item>
+    </plurals>
+    <plurals name="history_waypoint_count">
+        <item quantity="one">%1$d punto</item>
+        <item quantity="other">%1$d puntos</item>
+        <item quantity="many">%1$d puntos</item>
+    </plurals>
+    <string name="history_filter_min_distance">Distancia mínima: %1$d m</string>
+    <string name="history_filter_min_duration">Duración mínima: %1$d min</string>
+    <string name="history_filter_min_gain">Desnivel positivo mínimo: %1$d m</string>
+    <string name="history_filter_only_photos">Solo salidas con fotos</string>
+    <string name="history_apply">Aplicar</string>
+
+    <!-- Trip detail -->
+    <string name="trip_detail_default_title">Salida</string>
+    <string name="trip_detail_back">Volver a la lista de salidas</string>
+    <string name="trip_detail_export_title">Exportar la salida</string>
+    <string name="trip_detail_tab_map">Mapa</string>
+    <string name="trip_detail_tab_profile">Perfil</string>
+    <string name="trip_detail_tab_statistics">Estadísticas</string>
+    <string name="trip_detail_tab_timeline">Cronología</string>
+    <string name="trip_detail_share_chooser">Compartir la salida</string>
+    <string name="trip_detail_preparing_file">Preparando el archivo para compartir.</string>
+    <string name="trip_detail_delete_message">La ruta, las fotografías y las notas se eliminarán para siempre.</string>
+    <string name="trip_detail_selected">Seleccionada</string>
+    <string name="trip_detail_min">Mín.</string>
+    <string name="trip_detail_max">Máx.</string>
+    <string name="trip_detail_average_speed">Velocidad media</string>
+    <string name="trip_detail_points">Puntos GPS</string>
+    <string name="trip_detail_no_notes">Todavía no hay notas.</string>
+    <string name="trip_detail_no_waypoints">Esta salida no tiene ningún punto.</string>
+
+    <!-- Playback -->
+    <string name="playback_play">Reproducir</string>
+    <string name="playback_pause">Pausar</string>
+    <string name="playback_position">Punto %1$d / %2$d</string>
+
+    <!-- Gallery -->
+    <string name="gallery_action_share">Compartir las fotos</string>
+    <string name="gallery_action_share_description">Enviar las fotografías a otra aplicación.</string>
+    <string name="gallery_action_save">Guardar en la galería del dispositivo</string>
+    <string name="gallery_action_save_description">Copiarlas a Pictures/%1$s, con sus datos GPS.</string>
+    <string name="gallery_action_zip">Paquete (ZIP)</string>
+    <string name="gallery_action_zip_description">Fotografías y sus ubicaciones en GeoJSON y CSV.</string>
+    <plurals name="gallery_photos_saved">
+        <item quantity="one">Se ha guardado %1$d de %2$d foto en Pictures/%3$s</item>
+        <item quantity="other">Se han guardado %1$d de %2$d fotos en Pictures/%3$s</item>
+        <item quantity="many">Se han guardado %1$d de %2$d fotos en Pictures/%3$s</item>
+    </plurals>
+    <string name="gallery_storage_permission_required">Se necesita el permiso de almacenamiento para guardar las fotos en esta versión de Android.</string>
+    <string name="gallery_clear_selection">Borrar la selección</string>
+    <plurals name="gallery_selected_count">
+        <item quantity="one">%1$d seleccionada</item>
+        <item quantity="other">%1$d seleccionadas</item>
+        <item quantity="many">%1$d seleccionadas</item>
+    </plurals>
+    <string name="gallery_select_all">Seleccionar todo</string>
+    <string name="gallery_export_selected">Exportar las fotos seleccionadas</string>
+    <string name="gallery_filter_all">Todas</string>
+    <string name="gallery_export_photos">Exportar las fotos</string>
+    <string name="gallery_selected">Seleccionada</string>
+    <plurals name="gallery_export_title">
+        <item quantity="one">Exportar %1$d foto</item>
+        <item quantity="other">Exportar %1$d fotos</item>
+        <item quantity="many">Exportar %1$d fotos</item>
+    </plurals>
+    <string name="gallery_preparing_photos">Preparando las fotografías.</string>
+    <string name="gallery_save_changes">Guardar los cambios</string>
+
+    <!-- Export messages -->
+    <string name="export_msg_exporting">Exportando…</string>
+    <string name="export_msg_close">Cerrar</string>
+    <string name="export_msg_generic_error">No se ha podido completar la exportación (%1$s).</string>
+    <string name="export_msg_map_not_rendered">No se ha podido generar el mapa.</string>
+    <string name="export_msg_map_render_error">No se ha podido generar el mapa: %1$s</string>
+    <string name="export_msg_no_offline_area">Todavía no hay ninguna área sin conexión disponible. Espera a que se preparen los mapas sin conexión o selecciona otra capa antes de exportar la imagen.</string>
+    <string name="export_msg_not_enough_points">Esta salida no tiene suficientes puntos GPS para dibujar el mapa.</string>
+    <string name="export_msg_nothing_to_share">No hay nada que compartir.</string>
+    <string name="export_msg_photos_unavailable">Las fotografías seleccionadas no están disponibles en el dispositivo.</string>
+
+    <!-- Visual report and elevation image -->
+    <string name="report_no_elevation_data">No hay datos de elevación</string>
+    <string name="report_min_value">Mín. %1$d m</string>
+    <string name="report_max_value">Máx. %1$d m</string>
+    <string name="report_distance">Distancia</string>
+    <string name="report_duration">Duración</string>
+    <string name="report_elevation_gain">Desnivel positivo</string>
+    <string name="report_elevation_loss">Desnivel negativo</string>
+    <string name="report_max_altitude">Altitud máxima</string>
+    <string name="report_min_altitude">Altitud mínima</string>
+    <string name="report_average_speed">Velocidad media</string>
+    <string name="report_photos">Fotos</string>
+</resources>

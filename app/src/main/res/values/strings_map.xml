@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Optional map buttons (settings list and accessibility) -->
+    <string name="map_button_layers">Map layers</string>
+    <string name="map_button_photo_bubbles">Show or hide photo bubbles</string>
+    <string name="map_button_view">Map / elevation view</string>
+    <string name="map_button_zoom_level">Camera zoom level indicator</string>
+    <string name="map_button_gps_status">GPS signal quality</string>
+    <string name="map_button_habitat_legend">Habitat layer legend</string>
+    <string name="map_button_stats">Show or hide statistics</string>
+
+    <!-- Map controls -->
+    <string name="map_zoom_in">Zoom in</string>
+    <string name="map_zoom_out">Zoom out</string>
+    <string name="map_zoom_default">Default zoom</string>
+    <string name="map_zoom_default_long_press">Default zoom (long press to store the current zoom as default)</string>
+    <string name="map_zoom_fit">Show the whole route</string>
+    <string name="map_zoom_default_set">Default zoom set to %1$d</string>
+    <string name="map_no_route_yet">There is no route to show yet</string>
+    <string name="map_control_routes">Routes</string>
+    <string name="map_control_centre">Centre</string>
+    <string name="map_control_view">View</string>
+    <string name="map_show_photo_bubbles">Show photo bubbles</string>
+    <string name="map_hide_photo_bubbles">Hide photo bubbles</string>
+    <string name="map_show_statistics">Show statistics</string>
+    <string name="map_hide_statistics">Hide statistics</string>
+    <string name="map_stat_time">Time</string>
+    <string name="map_selected_altitude">%1$s · %2$s alt</string>
+    <string name="map_selected">Selected</string>
+    <string name="map_direction">Direction</string>
+    <string name="map_along_route">Along the route</string>
+    <string name="map_altitude_difference">Altitude difference</string>
+    <string name="map_close">Close</string>
+
+    <!-- Recording dialogs -->
+    <string name="recording_hold_to_finish">Hold to end</string>
+    <string name="recording_hold_to_finish_countdown">Keep holding… %1$d s</string>
+    <string name="recording_hold_to_finish_hint">Hold the button for 3 seconds to end the trip</string>
+    <string name="recording_ui_recover_title">Recover the interrupted trip?</string>
+    <string name="recording_ui_recover_message">\"%1$s\" was still recording when the application was closed. You can continue it or discard it.</string>
+    <string name="recording_ui_resume">Resume</string>
+    <string name="recording_ui_discard">Discard</string>
+
+    <!-- Waypoint sheet -->
+    <string name="waypoint_title">Waypoint</string>
+    <string name="waypoint_photo_description">Photograph</string>
+
+    <!-- Default trip name; the argument is the start date and time -->
+    <string name="trip_default_name">Trip %1$s</string>
+
+    <!-- Compass points, clockwise from north in steps of 22.5° -->
+    <string-array name="format_compass_points">
+        <item>N</item>
+        <item>NNE</item>
+        <item>NE</item>
+        <item>ENE</item>
+        <item>E</item>
+        <item>ESE</item>
+        <item>SE</item>
+        <item>SSE</item>
+        <item>S</item>
+        <item>SSW</item>
+        <item>SW</item>
+        <item>WSW</item>
+        <item>W</item>
+        <item>WNW</item>
+        <item>NW</item>
+        <item>NNW</item>
+    </string-array>
+
+    <!-- Overlaid previous trips and proximity alarm -->
+    <string name="map_overlay_hint">They are drawn with moving dashes and their name on top of the current trip. Their colour can be changed in the history.</string>
+    <string name="map_overlay_hide_all">Hide all</string>
+    <plurals name="map_overlay_waypoints">
+        <item quantity="one">%1$d waypoint</item>
+        <item quantity="other">%1$d waypoints</item>
+    </plurals>
+    <string name="map_proximity_alarm">Proximity alarm</string>
+    <string name="map_proximity_alarm_hint">Sounds when you are within %1$d m of a waypoint of the trips shown</string>
+    <string name="map_proximity_show">Show</string>
+    <string name="proximity_channel_name">Proximity alerts</string>
+    <string name="proximity_channel_description">Warns when you reach a waypoint of a previous trip shown on the map</string>
+    <string name="proximity_notification_title">Waypoint of a previous trip nearby</string>
+    <string name="proximity_notification_text" translatable="false">%1$s · %2$s · %3$s</string>
+</resources>

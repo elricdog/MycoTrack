@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="diag_title">GPS and sensors</string>
+    <string name="diag_back">Back</string>
+    <string name="diag_copy_report">Copy report</string>
+    <string name="diag_report_copied">Report copied to the clipboard</string>
+    <string name="diag_report_header">MycoTrack – GPS and sensors report</string>
+    <string name="diag_report_generated">Generated: %1$s</string>
+    <string name="diag_settings_entry">GPS and sensors diagnostics</string>
+    <string name="diag_settings_entry_hint">Check the GPS signal, the satellites and the sensors of this phone.</string>
+
+    <!-- Quality -->
+    <string name="diag_gps_quality">GPS signal</string>
+    <string name="diag_quality_disabled">GPS off</string>
+    <string name="diag_quality_searching">Searching…</string>
+    <string name="diag_quality_poor">Poor</string>
+    <string name="diag_quality_fair">Fair</string>
+    <string name="diag_quality_good">Good</string>
+    <string name="diag_quality_excellent">Excellent</string>
+    <string name="diag_chip_off">Off</string>
+    <string name="diag_chip_cd">GPS signal: %1$s, %2$s. Open the GPS diagnostics</string>
+    <string name="diag_quality_explain_disabled">Location is turned off, so MycoTrack cannot record your route.</string>
+    <string name="diag_quality_explain_searching">Waiting for a position from the satellites.</string>
+    <string name="diag_quality_explain_poor">The position may be off by more than 25 m, so the route will look jagged.</string>
+    <string name="diag_quality_explain_fair">Usable for recording, but the position may be off by 10–25 m.</string>
+    <string name="diag_quality_explain_good">Good signal: the position is accurate to about 10 m.</string>
+    <string name="diag_quality_explain_excellent">Excellent signal: the position is accurate to a few metres.</string>
+    <string name="diag_tips_disabled">Turn on location in the system settings.</string>
+    <string name="diag_tips_searching">Go outdoors, away from buildings and dense tree cover, and wait 1–2 minutes for the first fix. Keep the phone still with a clear view of the sky.</string>
+    <string name="diag_tips_poor">Move to an open area, away from tall buildings, cliffs and dense forest, and do not cover the top of the phone with your hand.</string>
+    <string name="diag_tip_no_permission">MycoTrack is not allowed to use the location.</string>
+    <string name="diag_tip_approximate">Only the approximate location is allowed: grant the precise location to record routes and see the satellites.</string>
+    <string name="diag_tip_gps_provider_off">The GPS is off: only the approximate network location is available.</string>
+    <string name="diag_action_location_settings">Location settings</string>
+    <string name="diag_action_permissions">Permissions</string>
+
+    <!-- Sections -->
+    <string name="diag_section_summary">Summary</string>
+    <string name="diag_section_fix">Location fix</string>
+    <string name="diag_section_satellites">Satellites</string>
+    <string name="diag_section_compass">Compass and inclinometer</string>
+    <string name="diag_section_motion">Motion sensors</string>
+    <string name="diag_section_environment">Barometer and environment</string>
+    <string name="diag_section_sensors">Sensors</string>
+    <string name="diag_section_device">Device</string>
+
+    <string name="diag_stat_accuracy">Accuracy</string>
+    <string name="diag_stat_satellites">Satellites</string>
+    <string name="diag_stat_age">Fix age</string>
+
+    <!-- Location fix -->
+    <string name="diag_on">On</string>
+    <string name="diag_off">Off</string>
+    <string name="diag_unknown">Unknown</string>
+    <string name="diag_location_services">Location services</string>
+    <string name="diag_gps_provider">GPS provider</string>
+    <string name="diag_network_provider">Network provider</string>
+    <string name="diag_permission">Location permission</string>
+    <string name="diag_permission_precise">Precise</string>
+    <string name="diag_permission_approximate">Approximate only</string>
+    <string name="diag_permission_none">Not granted</string>
+    <string name="diag_background_permission">Background location</string>
+    <string name="diag_background_granted">Allowed all the time</string>
+    <string name="diag_background_denied">Not allowed</string>
+    <string name="diag_gnss_hardware">GNSS hardware</string>
+    <string name="diag_gnss_year">GNSS hardware year</string>
+    <string name="diag_ttff">Time to first fix</string>
+    <string name="diag_no_fix">No position received yet.</string>
+    <string name="diag_provider">Provider</string>
+    <string name="diag_latitude">Latitude</string>
+    <string name="diag_longitude">Longitude</string>
+    <string name="diag_accuracy">Horizontal accuracy</string>
+    <string name="diag_altitude">Altitude (ellipsoid)</string>
+    <string name="diag_altitude_msl">Altitude above sea level</string>
+    <string name="diag_speed">Speed</string>
+    <string name="diag_bearing">Bearing</string>
+    <string name="diag_fix_time">Fix time</string>
+    <string name="diag_fix_time_value">%1$s (%2$s ago)</string>
+    <string name="diag_fixes_received">Fixes received</string>
+    <string name="diag_update_interval">Average update interval</string>
+
+    <!-- Satellites -->
+    <string name="diag_sats_visible_used">Visible / used</string>
+    <string name="diag_avg_cn0">Average C/N0 (4 strongest)</string>
+    <string name="diag_constellation_row">%1$s (used / visible)</string>
+    <string name="diag_sky_plot">Sky plot</string>
+    <string name="diag_sky_plot_cd">Sky plot of %1$d satellites</string>
+    <string name="diag_legend_used">Centre: overhead; outer ring: horizon. Filled dots are used in the fix.</string>
+    <string name="diag_signal_chart">Signal strength (C/N0, dB-Hz)</string>
+    <string name="diag_cn0_hint">Below 20 dB-Hz the signal is weak; above 40 dB-Hz it is strong. Faded bars are not used in the fix.</string>
+    <string name="diag_no_satellites">No satellite data yet. Satellites are only reported while the GPS is active: go outdoors and wait a minute.</string>
+    <string name="diag_col_system">System</string>
+    <string name="diag_col_id">ID</string>
+    <string name="diag_col_cn0">C/N0</string>
+    <string name="diag_col_elevation">Elev.</string>
+    <string name="diag_col_azimuth">Azim.</string>
+    <string name="diag_col_used">Used</string>
+
+    <!-- Compass and inclinometer -->
+    <string name="diag_heading">Heading</string>
+    <string name="diag_heading_hint">Direction of the top of the screen, relative to magnetic north. Pitch / roll are 0° with the phone lying flat.</string>
+    <string name="diag_pitch">Pitch</string>
+    <string name="diag_roll">Roll</string>
+    <string name="diag_bubble_cd">Bubble level</string>
+    <string name="diag_magnetic_field">Magnetic field</string>
+    <string name="diag_mag_accuracy">Compass accuracy</string>
+    <string name="diag_accuracy_unreliable">Unreliable</string>
+    <string name="diag_accuracy_low">Low</string>
+    <string name="diag_accuracy_medium">Medium</string>
+    <string name="diag_accuracy_high">High</string>
+    <string name="diag_calibrate_hint">The compass needs calibrating: move the phone in a figure 8 a few times, away from metal objects, magnets and cars.</string>
+    <string name="diag_mag_out_of_range">The magnetic field (%1$s) is outside the normal range of the Earth (25–65 µT): there may be metal or magnets nearby.</string>
+    <string name="diag_compass_unavailable">This phone has no compass.</string>
+
+    <!-- Sensors -->
+    <string name="diag_sensor_accelerometer">Accelerometer</string>
+    <string name="diag_sensor_gravity">Gravity</string>
+    <string name="diag_sensor_linear_acceleration">Linear acceleration</string>
+    <string name="diag_sensor_gyroscope">Gyroscope</string>
+    <string name="diag_sensor_magnetometer">Magnetometer</string>
+    <string name="diag_sensor_rotation_vector">Rotation vector</string>
+    <string name="diag_sensor_pressure">Barometer</string>
+    <string name="diag_sensor_light">Light</string>
+    <string name="diag_sensor_temperature">Ambient temperature</string>
+    <string name="diag_sensor_humidity">Relative humidity</string>
+    <string name="diag_sensor_not_available">Not available on this device</string>
+    <string name="diag_sensor_waiting">Waiting for data…</string>
+    <string name="diag_sensor_specs">Range %1$s · resolution %2$s · %3$s mA · min. delay %4$s µs</string>
+    <string name="diag_baro_altitude">Barometric altitude</string>
+    <string name="diag_baro_altitude_hint">Estimated with the standard atmosphere (1013.25 hPa), so it changes with the weather.</string>
+
+    <!-- Device -->
+    <string name="diag_android_version">Android version</string>
+    <string name="diag_device_model">Model</string>
+    <string name="diag_battery">Battery</string>
+    <string name="diag_battery_value">%1$d %%</string>
+    <string name="diag_battery_value_charging">%1$d %% · charging</string>
+    <string name="diag_battery_temperature">Battery temperature</string>
+    <string name="diag_power_save">Battery Saver</string>
+    <string name="diag_power_save_warning">Battery Saver is on: the GPS may be slowed down or stopped with the screen off.</string>
+    <string name="diag_location_power_save">Location with Battery Saver</string>
+    <string name="diag_lps_no_change">No change</string>
+    <string name="diag_lps_gps_disabled">GPS off with the screen off</string>
+    <string name="diag_lps_all_disabled">Location off with the screen off</string>
+    <string name="diag_lps_foreground_only">Only for apps in use</string>
+    <string name="diag_lps_throttle">Reduced with the screen off</string>
+    <string name="diag_lps_warning">When Battery Saver is on, this phone limits the GPS with the screen off and recorded routes may have gaps. Turn Battery Saver off while recording.</string>
+    <string name="diag_battery_optimization">Battery optimisation</string>
+    <string name="diag_battery_opt_unrestricted">Unrestricted</string>
+    <string name="diag_battery_opt_optimized">Optimised</string>
+</resources>

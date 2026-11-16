@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="guide_photos_more">More photos</string>
+    <string name="guide_photos_open">Open the photo</string>
+    <string name="guide_photos_toxic">Toxic</string>
+    <string name="guide_photos_not_edible">Not edible</string>
+    <string name="guide_photos_close">Close</string>
+    <string name="guide_photos_counter">%1$d / %2$d</string>
+    <string name="guide_photos_share">Share the photo</string>
+    <string name="guide_photos_save">Save to the device</string>
+    <string name="guide_photos_saved">Photo saved in Pictures/%1$s</string>
+    <string name="guide_photos_action_error">The photo could not be shared or saved.</string>
+    <string name="guide_photos_source">Source</string>
+    <string name="guide_photos_licence">Licence</string>
+    <string name="guide_habitat_chart_title">Preferred trees and soils</string>
+    <string name="guide_habitat_chart_expanded">Expanded</string>
+    <string name="guide_habitat_chart_collapsed">Collapsed</string>
+    <string name="guide_habitat_chart_trees">Tree type</string>
+    <string name="guide_habitat_chart_soil">Soil type</string>
+    <string name="guide_habitat_chart_aspect">Slope orientation</string>
+    <string name="guide_habitat_chart_note">Affinity of the species for each habitat (100% = preferred). The same values score the likely areas on the map.</string>
+    <string name="guide_habitat_open_ground">Open ground (no forest)</string>
+    <string name="guide_habitat_bar_description">%1$s: %2$d%%</string>
+</resources>

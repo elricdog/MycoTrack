@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- History -->
+    <string name="history_no_match">No trip matches the filters</string>
+    <string name="history_no_match_hint">Try to change the search term or to clear the filters.</string>
+    <string name="history_delete_trip_message">The route, the photographs and the notes of \"%1$s\" will be removed permanently.</string>
+    <plurals name="history_photo_count">
+        <item quantity="one">%1$d photo</item>
+        <item quantity="other">%1$d photos</item>
+    </plurals>
+    <plurals name="history_waypoint_count">
+        <item quantity="one">%1$d waypoint</item>
+        <item quantity="other">%1$d waypoints</item>
+    </plurals>
+    <string name="history_filter_min_distance">Minimum distance: %1$d m</string>
+    <string name="history_filter_min_duration">Minimum duration: %1$d min</string>
+    <string name="history_filter_min_gain">Minimum gain: %1$d m</string>
+    <string name="history_filter_only_photos">Only trips with photos</string>
+    <string name="history_apply">Apply</string>
+
+    <!-- Trip detail -->
+    <string name="trip_detail_default_title">Trip</string>
+    <string name="trip_detail_back">Back to the list of trips</string>
+    <string name="trip_detail_export_title">Export trip</string>
+    <string name="trip_detail_tab_map">Map</string>
+    <string name="trip_detail_tab_profile">Profile</string>
+    <string name="trip_detail_tab_statistics">Statistics</string>
+    <string name="trip_detail_tab_timeline">Timeline</string>
+    <string name="trip_detail_share_chooser">Share trip</string>
+    <string name="trip_detail_preparing_file">Preparing the file to share.</string>
+    <string name="trip_detail_delete_message">The route, the photographs and the notes will be removed permanently.</string>
+    <string name="trip_detail_selected">Selected</string>
+    <string name="trip_detail_min">Min</string>
+    <string name="trip_detail_max">Max</string>
+    <string name="trip_detail_average_speed">Average speed</string>
+    <string name="trip_detail_points">Points</string>
+    <string name="trip_detail_no_notes">No notes yet.</string>
+    <string name="trip_detail_no_waypoints">No waypoints in this trip.</string>
+
+    <!-- Playback -->
+    <string name="playback_play">Play</string>
+    <string name="playback_pause">Pause</string>
+    <string name="playback_position">Point %1$d / %2$d</string>
+
+    <!-- Gallery -->
+    <string name="gallery_action_share">Share photos</string>
+    <string name="gallery_action_share_description">Send the photographs to another application.</string>
+    <string name="gallery_action_save">Save to device gallery</string>
+    <string name="gallery_action_save_description">Copy them to Pictures/%1$s, with their GPS data.</string>
+    <string name="gallery_action_zip">Package (ZIP)</string>
+    <string name="gallery_action_zip_description">Photographs plus their locations as GeoJSON and CSV.</string>
+    <plurals name="gallery_photos_saved">
+        <item quantity="one">%1$d of %2$d photo saved to Pictures/%3$s</item>
+        <item quantity="other">%1$d of %2$d photos saved to Pictures/%3$s</item>
+    </plurals>
+    <string name="gallery_storage_permission_required">The storage permission is required to save the photos on this Android version.</string>
+    <string name="gallery_clear_selection">Clear selection</string>
+    <plurals name="gallery_selected_count">
+        <item quantity="one">%1$d selected</item>
+        <item quantity="other">%1$d selected</item>
+    </plurals>
+    <string name="gallery_select_all">Select all</string>
+    <string name="gallery_export_selected">Export selected photos</string>
+    <string name="gallery_filter_all">All</string>
+    <string name="gallery_export_photos">Export photos</string>
+    <string name="gallery_selected">Selected</string>
+    <plurals name="gallery_export_title">
+        <item quantity="one">Export %1$d photo</item>
+        <item quantity="other">Export %1$d photos</item>
+    </plurals>
+    <string name="gallery_preparing_photos">Preparing the photographs.</string>
+    <string name="gallery_save_changes">Save changes</string>
+
+    <!-- Export messages -->
+    <string name="export_msg_exporting">Exporting…</string>
+    <string name="export_msg_close">Close</string>
+    <string name="export_msg_generic_error">The export could not be completed (%1$s).</string>
+    <string name="export_msg_map_not_rendered">The map could not be rendered.</string>
+    <string name="export_msg_map_render_error">The map could not be rendered: %1$s</string>
+    <string name="export_msg_no_offline_area">No offline area is available yet. Wait for the offline maps to be prepared or select another layer before exporting the image.</string>
+    <string name="export_msg_not_enough_points">This trip has not enough GPS points to draw the map.</string>
+    <string name="export_msg_nothing_to_share">There is nothing to share.</string>
+    <string name="export_msg_photos_unavailable">The selected photographs are not available on the device.</string>
+
+    <!-- Visual report and elevation image -->
+    <string name="report_no_elevation_data">No elevation data</string>
+    <string name="report_min_value">Min %1$d m</string>
+    <string name="report_max_value">Max %1$d m</string>
+    <string name="report_distance">Distance</string>
+    <string name="report_duration">Duration</string>
+    <string name="report_elevation_gain">Elevation gain</string>
+    <string name="report_elevation_loss">Elevation loss</string>
+    <string name="report_max_altitude">Max altitude</string>
+    <string name="report_min_altitude">Min altitude</string>
+    <string name="report_average_speed">Average speed</string>
+    <string name="report_photos">Photos</string>
+</resources>

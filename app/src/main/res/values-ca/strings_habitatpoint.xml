@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Valors d'hàbitat en un punt del mapa premut llargament. -->
+    <string name="habitatpoint_title">Hàbitat en aquest punt</string>
+    <string name="habitatpoint_aspect_label">Orientació</string>
+    <string name="habitatpoint_trees_label">Arbres</string>
+    <string name="habitatpoint_soil_label">Sòl</string>
+    <string name="habitatpoint_suitability_label">Zones probables · %1$s</string>
+    <string name="habitatpoint_aspect_north">Obaga (nord)</string>
+    <string name="habitatpoint_aspect_south">Solana (sud)</string>
+    <string name="habitatpoint_aspect_neutral">Est / oest</string>
+    <string name="habitatpoint_aspect_flat">Pla</string>
+    <string name="habitatpoint_aspect_detail">Orientat a %1$s (%2$d°) · pendent %3$d%% (%4$d°) · %5$s</string>
+    <string name="habitatpoint_flat_detail">Pendent %1$d%% (%2$d°) · %3$s</string>
+    <string name="habitatpoint_no_forest">Sense bosc cartografiat</string>
+    <string name="habitatpoint_unknown_formation">Bosc no identificat</string>
+    <string name="habitatpoint_species_share">%1$s %2$d%%</string>
+    <string name="habitatpoint_canopy">cobertura de capçades %1$d%%</string>
+    <string name="habitatpoint_outside_map">Fora del mapa litològic</string>
+    <string name="habitatpoint_suitability_value">%1$d%% · %2$s</string>
+    <string name="habitatpoint_level_low">Baixa</string>
+    <string name="habitatpoint_level_medium">Mitjana</string>
+    <string name="habitatpoint_level_high">Alta</string>
+    <string name="habitatpoint_loading">Carregant…</string>
+    <string name="habitatpoint_unavailable">No disponible (sense connexió?)</string>
+</resources>

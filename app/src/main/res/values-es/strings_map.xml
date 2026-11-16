@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Optional map buttons (settings list and accessibility) -->
+    <string name="map_button_layers">Capas del mapa</string>
+    <string name="map_button_photo_bubbles">Mostrar u ocultar las burbujas de fotos</string>
+    <string name="map_button_view">Vista de mapa / elevación</string>
+    <string name="map_button_zoom_level">Indicador del nivel de zoom de la cámara</string>
+    <string name="map_button_gps_status">Calidad de la señal GPS</string>
+    <string name="map_button_habitat_legend">Leyenda de las capas de hábitat</string>
+    <string name="map_button_stats">Mostrar u ocultar las estadísticas</string>
+
+    <!-- Map controls -->
+    <string name="map_zoom_in">Acercar</string>
+    <string name="map_zoom_out">Alejar</string>
+    <string name="map_zoom_default">Zoom predeterminado</string>
+    <string name="map_zoom_default_long_press">Zoom predeterminado (mantén pulsado para guardar el zoom actual como predeterminado)</string>
+    <string name="map_zoom_fit">Mostrar toda la ruta</string>
+    <string name="map_zoom_default_set">Zoom predeterminado establecido en %1$d</string>
+    <string name="map_no_route_yet">Todavía no hay ninguna ruta que mostrar</string>
+    <string name="map_control_routes">Rutas</string>
+    <string name="map_control_centre">Centrar</string>
+    <string name="map_control_view">Vista</string>
+    <string name="map_show_photo_bubbles">Mostrar las burbujas de fotos</string>
+    <string name="map_hide_photo_bubbles">Ocultar las burbujas de fotos</string>
+    <string name="map_show_statistics">Mostrar las estadísticas</string>
+    <string name="map_hide_statistics">Ocultar las estadísticas</string>
+    <string name="map_stat_time">Tiempo</string>
+    <string name="map_selected_altitude">%1$s · alt. %2$s</string>
+    <string name="map_selected">Seleccionado</string>
+    <string name="map_direction">Dirección</string>
+    <string name="map_along_route">Por la ruta</string>
+    <string name="map_altitude_difference">Diferencia de altitud</string>
+    <string name="map_close">Cerrar</string>
+
+    <!-- Recording dialogs -->
+    <string name="recording_hold_to_finish">Mantén pulsado para terminar</string>
+    <string name="recording_hold_to_finish_countdown">Sigue pulsando… %1$d s</string>
+    <string name="recording_hold_to_finish_hint">Mantén pulsado el botón 3 segundos para terminar la salida</string>
+    <string name="recording_ui_recover_title">¿Recuperar la salida interrumpida?</string>
+    <string name="recording_ui_recover_message">«%1$s» aún se estaba grabando cuando se cerró la aplicación. Puedes continuarla o descartarla.</string>
+    <string name="recording_ui_resume">Reanudar</string>
+    <string name="recording_ui_discard">Descartar</string>
+
+    <!-- Waypoint sheet -->
+    <string name="waypoint_title">Punto</string>
+    <string name="waypoint_photo_description">Fotografía</string>
+
+    <!-- Default trip name; the argument is the start date and time -->
+    <string name="trip_default_name">Salida %1$s</string>
+
+    <!-- Compass points, clockwise from north in steps of 22.5° -->
+    <string-array name="format_compass_points">
+        <item>N</item>
+        <item>NNE</item>
+        <item>NE</item>
+        <item>ENE</item>
+        <item>E</item>
+        <item>ESE</item>
+        <item>SE</item>
+        <item>SSE</item>
+        <item>S</item>
+        <item>SSO</item>
+        <item>SO</item>
+        <item>OSO</item>
+        <item>O</item>
+        <item>ONO</item>
+        <item>NO</item>
+        <item>NNO</item>
+    </string-array>
+
+    <!-- Overlaid previous trips and proximity alarm -->
+    <string name="map_overlay_hint">Se dibujan con una trama en movimiento y su nombre sobre la salida actual. El color se puede cambiar en el historial.</string>
+    <string name="map_overlay_hide_all">Ocultar todas</string>
+    <plurals name="map_overlay_waypoints">
+        <item quantity="one">%1$d punto</item>
+        <item quantity="many">%1$d puntos</item>
+        <item quantity="other">%1$d puntos</item>
+    </plurals>
+    <string name="map_proximity_alarm">Alarma de proximidad</string>
+    <string name="map_proximity_alarm_hint">Suena cuando estás a menos de %1$d m de un punto de las salidas mostradas</string>
+    <string name="map_proximity_show">Mostrar</string>
+    <string name="proximity_channel_name">Avisos de proximidad</string>
+    <string name="proximity_channel_description">Avisa cuando llegas a un punto de una salida anterior mostrada en el mapa</string>
+    <string name="proximity_notification_title">Punto de una salida anterior cerca</string>
+</resources>

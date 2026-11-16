@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Route focus button -->
+    <string name="maproute_focus_button">Ves a la ruta</string>
+    <string name="maproute_focus_my_position">De tornada a la teva posició</string>
+
+    <!-- Long press on the map -->
+    <string name="maproute_point_title">Punt seleccionat</string>
+    <string name="maproute_distance_from_you">A %1$s de tu</string>
+    <string name="maproute_create_waypoint">Crea un punt aquí</string>
+    <string name="maproute_go_there">Ves-hi</string>
+    <string name="maproute_go_there_hint">Indicacions a peu a Google Maps</string>
+    <string name="maproute_copy_coordinates">Copia les coordenades</string>
+    <string name="maproute_coordinates">Coordenades</string>
+    <string name="maproute_coordinates_copied">S\'han copiat les coordenades</string>
+    <string name="maproute_no_maps_app">Cap aplicació no pot obrir les indicacions</string>
+    <string name="maproute_pick_trip">A quina sortida pertany?</string>
+    <string name="maproute_pick_trip_hint">Un punt sempre pertany a una sortida. Primer es mostren les rutes que hi ha al mapa.</string>
+    <string name="maproute_on_map">Al mapa</string>
+    <string name="maproute_no_trips">Encara no hi ha cap sortida. Primer n\'has d\'enregistrar una.</string>
+    <string name="maproute_recording_trip">S\'afegirà a la sortida que s\'està enregistrant.</string>
+    <string name="maproute_trip_label">Sortida: %1$s</string>
+    <string name="maproute_save_waypoint">Desa el punt</string>
+    <string name="maproute_waypoint_saved">S\'ha desat el punt a «%1$s»</string>
+    <string name="maproute_back">Enrere</string>
+</resources>

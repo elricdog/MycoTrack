@@ -1,0 +1,240 @@
+{
+  "rovello": {
+    "commonName": "Rovelló",
+    "culinary": "És un dels bolets més populars de Catalunya. Té la carn ferma i una mica granulosa, de gust suau i agradable. És boníssim a la brasa amb all, julivert i oli, i també amb botifarra, en arrossos i en guisats. Pot tenyir l'orina de color vermellós després de menjar-ne, però és inofensiu.",
+    "habitat": "Creix sota pins (pi blanc, pinastre, pi roig i pi pinyer), tant en sòls àcids com calcaris, des de la costa fins a la muntanya. Busqueu-lo a les clarianes herboses i als marges molsosos de les pinedes, sovint a prop dels camins. Són zones típiques el Solsonès, el Berguedà, el Montseny i bona part de les pinedes del Prepirineu.",
+    "season": "Tardor, sobretot de setembre a desembre, després de les primeres pluges que segueixen l'estiu. Els anys càlids pot durar fins a l'inici de l'hivern a la costa.",
+    "lookAlikes": "El tret clau és la llet de color taronja pastanaga que es torna verda lentament; rebutgeu qualsevol Lactarius de llet blanca. El cabrit (Lactarius torminosus), amb el marge enrotllat, pelut i rosat, i llet blanca i coent, és tòxic i provoca gastroenteritis greus. Lactarius chrysorrheus, que surt sota alzines i roures, té la llet blanca que es torna groga i també és indigest."
+  },
+  "pinetell": {
+    "commonName": "Pinetell",
+    "culinary": "Molts boletaires el consideren encara millor que el rovelló: té la carn més ferma i aromàtica. Es cuina de la mateixa manera, a la brasa amb all i julivert o saltat, i aguanta bé en guisats i conserves. Sempre s'ha de menjar cuit.",
+    "habitat": "És típic de les pinedes mediterrànies, sobretot de pi blanc i pi pinyer en sòls calcaris, des de terra baixa fins a mitja muntanya. És freqüent a les comarques interiors i del sud de Catalunya (Bages, Anoia, Priorat, Garraf) i més escàs en sòls àcids.",
+    "season": "Tardor, de setembre a desembre, normalment una mica abans que el rovelló a les mateixes zones.",
+    "lookAlikes": "Es reconeix per la llet de color vermell vinós, que gairebé no canvia a l'aire, i pel barret gris ataronjat amb tons vinosos. Com amb tots els Lactarius, descarteu qualsevol exemplar de llet blanca, com el cabrit (Lactarius torminosus), tòxic, que té el marge pelut i una llet blanca molt coent."
+  },
+  "cep": {
+    "commonName": "Cep",
+    "culinary": "És un comestible de primera, de carn blanca i ferma i gust d'avellana que s'intensifica quan s'asseca. Els exemplars joves es poden menjar crus a làmines fines; és excel·lent saltat, a la planxa, en arrossos, en salses i amb crema. Els vells, amb els porus tous i verdosos, és millor assecar-los o descartar-los.",
+    "habitat": "Fa micorizes amb molts arbres: faig, castanyer, roures, avets i pins, sobretot en sòls àcids. A Catalunya és més abundant a mitja i alta muntanya, com al Pirineu, el Montseny, les Guilleries i el Montnegre.",
+    "season": "De finals d'estiu a la tardor, sobretot d'agost a novembre. Surt després de pluges càlides; alguns anys també n'hi ha de primerencs al juny.",
+    "lookAlikes": "El bolet amarg (Tylopilus felleus) té els porus rosats i un reticle fosc al peu; no és perillós, però és amarguíssim. Eviteu qualsevol bolet amb porus vermells o taronges o amb carn que blaveja en tallar-la, com el mataparent (Rubroboletus satanas), que és tòxic. El cep té els porus de blancs a groc verdosos, un reticle clar a la part alta del peu i la carn blanca, que no canvia de color."
+  },
+  "cep_estiu": {
+    "commonName": "Cep d'estiu / Cep negre",
+    "culinary": "És tan bo com el cep, amb un gust una mica més dolç i la carn molt ferma, especialment el cep negre (Boletus aereus). Es fa servir de la mateixa manera: cru si és jove i sa, saltat, a la planxa, en arrossos o assecat. Els exemplars d'estiu sovint tenen cucs, així que reviseu-los abans de cuinar-los.",
+    "habitat": "Creix en boscos de planifolis: roures, alzines, suros, castanyers i faigs. El cep d'estiu (Boletus reticulatus) prefereix els boscos caducifolis de mitja muntanya, mentre que el cep negre abunda a les alzinars i les suredes càlides, com les Gavarres, el Montseny i el Montnegre.",
+    "season": "És el cep més primerenc: de juny a octubre, després de les tempestes d'estiu.",
+    "lookAlikes": "Les regles són les mateixes que per al cep: rebutgeu els bolets amb porus vermells o taronges, amb carn que blaveja o de gust amarg; el mataparent (Rubroboletus satanas), de porus vermells, és tòxic. El bolet amarg (Tylopilus felleus) té els porus rosats i un reticle fosc al peu. El cep d'estiu té el barret sec, mat i bru clar, i un reticle que cobreix gairebé tot el peu; el cep negre té el barret bru molt fosc."
+  },
+  "rossinyol": {
+    "commonName": "Rossinyol",
+    "culinary": "S'aprecia molt per la seva olor afruitada, que recorda l'albercoc, i pel gust lleugerament picant. Té la carn ferma i una mica elàstica. És ideal saltat (primer en una paella sense oli perquè deixi anar l'aigua), amb ous remenats, arròs, pasta o carn. No s'asseca bé; és millor congelar-lo un cop cuit.",
+    "habitat": "Creix tant en boscos de planifolis com de coníferes (roure, faig, castanyer, pi, avet), normalment en sòls àcids i molsosos. A Catalunya és comú al Montseny, les Guilleries, el Montnegre, el Pirineu i el Prepirineu.",
+    "season": "De juny a novembre; és un dels bolets que surten amb les tempestes d'estiu i continua durant la tardor.",
+    "lookAlikes": "El rossinyol té plecs gruixuts i bifurcats que baixen pel peu, no pas làmines veritables, i és de color groc rovell d'ou. La gírgola d'olivera (Omphalotus olearius) és tòxica: és taronja, té làmines primes de veritat i creix en grups sobre soques o arrels d'oliveres i alzines. El fals rossinyol (Hygrophoropsis aurantiaca) és taronja, té làmines primes i bifurcades i és de mala qualitat."
+  },
+  "camagroc": {
+    "commonName": "Camagroc",
+    "culinary": "És un bolet molt aromàtic i molt valorat a la cuina catalana. És prim i una mica cruixent, amb una olor afruitada agradable. Es fa servir en arrossos, canelons, salses i guisats, i s'asseca molt bé sense perdre l'aroma.",
+    "habitat": "Creix en grups nombrosos entre la molsa de pinedes humides i boscos mixtos, sovint a prop de rierols i en sòls calcaris. És típic de la mitja muntanya, com el Solsonès, el Berguedà, el Ripollès i el Prepirineu.",
+    "season": "Final de tardor i hivern, d'octubre a gener; aguanta les primeres glaçades.",
+    "lookAlikes": "No té làmines veritables: la part inferior és gairebé llisa o lleugerament arrugada, de color rosat ataronjat, i el peu és groc ataronjat i buit. Té parents comestibles semblants, com Craterellus tubaeformis. Descarteu qualsevol bolet petit i bru amb làmines de veritat, perquè a prop hi poden créixer espècies tòxiques (per exemple, alguns Cortinarius)."
+  },
+  "trompeta_morts": {
+    "commonName": "Trompeta dels morts",
+    "culinary": "És un bolet excel·lent i molt aromàtic, de carn prima i una mica elàstica. Es cuina en salses, arrossos, truites i amb carn. S'asseca molt bé i es pot moldre per fer-ne una pols que serveix de condiment.",
+    "habitat": "Creix en grups en boscos de planifolis, sobretot fagedes, rouredes, castanyedes i avellanoses, en sòls rics i humits coberts de fullaraca. És comuna al Montseny, la Garrotxa, les Guilleries i les fagedes del Pirineu.",
+    "season": "Tardor, sobretot de setembre a desembre.",
+    "lookAlikes": "Té forma de trompeta buida, oberta fins a la base, de color gris fosc a negre, i la cara externa llisa o una mica arrugada, mai amb làmines. Si es comproven aquests trets no té confusions perilloses, però descarteu qualsevol bolet fosc amb làmines veritables o amb el peu ple. Algunes helvel·les fosques (Helvella lacunosa), amb el barret en forma de sella irregular i el peu solcat i ple de cambres, són tòxiques en cru i no s'han de collir."
+  },
+  "ou_de_reig": {
+    "commonName": "Ou de reig",
+    "culinary": "És un dels bolets més preuats des de l'època romana. Té un gust delicat i lleugerament dolç i la carn tendra. Els exemplars adults ben identificats es poden menjar crus en carpaccio o amanida, i també són excel·lents fets lleugerament a la planxa.",
+    "habitat": "És una espècie termòfila que creix en clarianes assolellades de suredes, alzinars, rouredes i castanyedes, en sòls àcids. A Catalunya es troba en zones com les Gavarres, el Montseny, el Montnegre i l'Alt Empordà.",
+    "season": "De juliol a octubre, sobretot després de tempestes càlides d'estiu.",
+    "lookAlikes": "Una confusió pot ser mortal. El reig bord (Amanita muscaria) té el barret vermell amb berrugues blanques (que la pluja pot fer desaparèixer), les làmines i el peu blancs; l'ou de reig té les làmines grogues, el peu i l'anell grocs i una volva blanca gran en forma de sac. En estat d'ou tancat es pot confondre amb la farinera borda (Amanita phalloides), que és mortal: no culliu mai ous, i si en talleu un per la meitat, ha de mostrar el barret taronja i el teixit groc a dins."
+  },
+  "llenega_negra": {
+    "commonName": "Llenega negra",
+    "culinary": "És un bon comestible, de gust suau i carn tova i sucosa. Cal treure-li la pell viscosa del barret i netejar-la bé. Es cuina a la brasa, en guisats amb carn o patates i en arrossos.",
+    "habitat": "Creix sota pins, sobretot pinassa i pi blanc, en sòls calcaris. És típica de les comarques interiors de Catalunya i del Prepirineu, i sovint surt en grups a prop dels troncs.",
+    "season": "Final de tardor i hivern, d'octubre a gener, sovint després de les primeres onades de fred.",
+    "lookAlikes": "Té el barret molt viscós de color gris bru fosc, les làmines gruixudes, espaiades, blanques i decurrents, i el peu viscós. Alguns Cortinarius viscosos, alguns de tòxics, s'hi poden assemblar, però les seves làmines es tornen de color rovell i tenen un vel en forma de teranyina. Altres llenegues comestibles (com Hygrophorus hypothejus) tenen les làmines groguenques."
+  },
+  "moixerno": {
+    "commonName": "Moixernó",
+    "culinary": "És un dels bolets més valorats i cars de Catalunya. Té la carn blanca i ferma, amb una olor intensa de farina fresca. És perfecte en truita, amb ous remenats, amb crema o amb carn. Se'n sol posar poca quantitat perquè té un gust molt intens.",
+    "habitat": "Creix formant rotllanes o fileres en prats i pastures de muntanya, vores de bosc i a prop d'arços i aranyoners, sobretot en sòls calcaris. És típic del Pirineu i el Prepirineu (Cerdanya, Ripollès, Berguedà, Pallars).",
+    "season": "Primavera, d'abril a juny; tradicionalment s'associa a Sant Jordi (23 d'abril).",
+    "lookAlikes": "Hi ha confusions molt perilloses. Inocybe erubescens, que surt al mateix hàbitat i època, té el barret fibrós que envermelleix i les làmines gris brunes; pot ser mortal. L'entoloma lívid (Entoloma sinuatum) és tòxic: té les làmines groguenques i després rosades i sol sortir a l'estiu i la tardor. El moixernó té el barret blanc o crema, les làmines blanques i atapeïdes, l'esporada blanca i olor de farina."
+  },
+  "cama_sec": {
+    "commonName": "Cama-sec",
+    "culinary": "És un bolet petit però molt aromàtic, amb un lleuger gust d'ametlla. Només se'n mengen els barrets, perquè els peus són durs. És excel·lent en salses, arrossos i guisats, i s'asseca molt bé.",
+    "habitat": "Creix formant rotllanes en prats, pastures, clarianes herboses i marges de camins, sovint en sòls calcaris. És comú als prats del Pirineu, el Prepirineu i la Catalunya central.",
+    "season": "Dues tongades: a la primavera (d'abril a juny) i a la tardor (de setembre a novembre), després de pluges.",
+    "lookAlikes": "Es pot confondre perillosament amb petits Clitocybe blancs (Clitocybe dealbata, C. rivulosa), que contenen muscarina i poden créixer a les mateixes rotllanes. Els Clitocybe tenen les làmines atapeïdes que baixen pel peu i el barret blanc i farinós. El cama-sec té el barret acampanat de color camussa amb un mugró central, les làmines molt separades i el peu dur i elàstic, que es pot retorçar sense trencar-se."
+  },
+  "fredolic": {
+    "commonName": "Fredolic",
+    "culinary": "És un comestible tradicional a Catalunya, de gust suau i carn tova. Es cuina en guisats, arrossos, truites i amb carn. Per prudència, se n'ha de menjar en quantitats moderades.",
+    "habitat": "Creix en grups sota pins, sovint en sòls calcaris, des de terra baixa fins a mitja muntanya. És comú a tota la Catalunya interior, el Prepirineu i el Pirineu.",
+    "season": "Final de tardor i hivern, d'octubre a gener; pot sortir fins i tot després de les glaçades, d'aquí el seu nom.",
+    "lookAlikes": "El fredolic bord (Tricholoma pardinum) és tòxic i provoca gastroenteritis greus: és més gros i carnós, amb el barret clar cobert d'esquames fosques i olor de farina. Tricholoma virgatum té el barret punxegut i gust amarg i picant, i és tòxic. El fredolic és petit, amb el barret gris i feltrat, les làmines blanc grisoses i sense anell; descarteu qualsevol exemplar amb olor forta o gust amarg."
+  },
+  "murgola": {
+    "commonName": "Múrgola",
+    "culinary": "És un bolet de gurmet amb un gust únic. És TÒXICA CRUA i sempre s'ha de coure bé; les múrgoles seques s'han d'hidratar i després coure. És excel·lent amb salses de crema, farcida i amb carn. Netegeu-la amb cura, perquè als alvèols s'hi amaguen sorra i insectes.",
+    "habitat": "Creix a les ribes de rius i en boscos de freixes, oms i pollancres, en horts, jardins i zones cremades, sobretot en sòls calcaris. Es troba al Pirineu, al Prepirineu i al llarg dels rius de l'interior.",
+    "season": "Primavera, de març a maig.",
+    "lookAlikes": "La bonetera (Gyromitra esculenta) pot ser mortal: té el barret en forma de cervell, amb plecs irregulars en lloc d'alvèols, i per dins està dividida en cambres. La múrgola veritable té el barret amb alvèols com una bresca, unit al peu per la base, i és completament buida de dalt a baix quan es talla longitudinalment."
+  },
+  "apagallums": {
+    "commonName": "Apagallums",
+    "culinary": "És un comestible excel·lent, de gust delicat que recorda l'avellana. Només se'n menja el barret, perquè el peu és fibrós. És boníssim arrebossat o a la planxa amb all i julivert.",
+    "habitat": "Creix en clarianes i vores de bosc, prats, brolles i marges de camins, en rouredes, castanyedes i pinedes. És comú des de terra baixa fins a la muntanya a tot Catalunya.",
+    "season": "De finals d'estiu a la tardor, sobretot d'agost a novembre.",
+    "lookAlikes": "Les lepiotes petites (Lepiota brunneoincarnata, L. helveola i afins) contenen amatoxines mortals: no culliu mai exemplars amb el barret de menys de 10 cm. L'apagallums té el peu amb un dibuix com de pell de serp, un anell doble que es pot fer córrer pel peu i no té volva. Chlorophyllum rhacodes envermelleix en tallar-lo i pot causar trastorns digestius."
+  },
+  "girgola": {
+    "commonName": "Gírgola",
+    "culinary": "És un bon comestible, de carn ferma i gust suau, i també es cultiva molt. És boníssima a la planxa amb all i julivert, saltada o en guisats. Els exemplars silvestres s'han de collir joves, perquè els vells es tornen durs.",
+    "habitat": "Creix en grups imbricats sobre troncs morts o debilitats de planifolis, sobretot pollancres, faigs, salzes i oms. Es troba en boscos de ribera i fagedes de tot Catalunya.",
+    "season": "Final de tardor i hivern, d'octubre a març; sovint surt després de les primeres onades de fred.",
+    "lookAlikes": "La gírgola d'olivera (Omphalotus olearius) és tòxica: és de color taronja viu i creix sobre arrels i soques d'oliveres i alzines. Eviteu els bolets blancs i prims en forma de petxina sobre fusta de coníferes (Pleurocybella porrigens), que s'han relacionat amb intoxicacions greus. La gírgola té el barret de gris bru a blavós, les làmines blanques que baixen fins a un peu curt i lateral, i creix sobre fusta de planifolis."
+  },
+  "cep_pi": {
+    "commonName": "Cep de pi / Cep rogenc",
+    "culinary": "Comestible excel·lent, considerat per molts el més gustós dels ceps, amb la carn blanca, ferma i perfumada. Es cuina com el cep: cru a làmines quan és jove, a la planxa, saltat, en arrossos, en salses o assecat.",
+    "habitat": "Viu sobretot a les pinedes de pi roig i de pi negre de muntanya, i també amb avets, faigs i castanyers, en sòls àcids. A Catalunya és típic del Pirineu i el Prepirineu (Cerdanya, Ripollès, Berguedà, Solsonès) i del Montseny.",
+    "season": "Té una sortida a final de primavera (maig i juny) a la muntanya i una altra a la tardor, de setembre a novembre.",
+    "lookAlikes": "Es distingeix pel barret de color bru vermellós o caoba, el peu gruixut amb un reticle clar i els porus de blancs a groc verdós; la carn és blanca i no canvia de color. El bolet amarg (Tylopilus felleus) té els porus rosats i un reticle fosc al peu i és amarguíssim. Eviteu qualsevol bolet amb porus vermells o taronges o amb carn que blaveja, com el mataparent (Rubroboletus satanas), tòxic."
+  },
+  "carlet": {
+    "commonName": "Carlet / Llora morada",
+    "culinary": "És una de les rússules més bones i més buscades. Té la carn blanca, ferma i de gust suau, que no es desfà en coure-la. És excel·lent a la planxa o a la brasa amb all i julivert, saltada, en truites i en guisats de carn o de patates.",
+    "habitat": "Creix en boscos de planifolis, sobretot fagedes, castanyedes, suredes, alzinars i rouredes, i de vegades en boscos mixtos amb pins. Prefereix els sòls àcids i frescos, des de terra baixa fins a mitja muntanya: Montseny, Guilleries, Montnegre, Gavarres i el Pirineu.",
+    "season": "De finals de primavera a la tardor, sobretot de juny a novembre, després de pluges abundants.",
+    "lookAlikes": "El barret és molt variable (lila, blavós, verd o gris), però les làmines són blanques, flexibles i grasses al tacte: no es trenquen com les de les altres rússules si s'hi passa el dit. Les rússules verdes es poden confondre amb la farinera borda (Amanita phalloides), MORTAL: comproveu sempre que no hi hagi anell al peu ni volva en forma de sac a la base, i arrenqueu el bolet sencer. Rebutgeu les rússules de gust coent o picant, com Russula emetica, que causen trastorns digestius."
+  },
+  "escarlet": {
+    "commonName": "Escarlet / Carlet vermell",
+    "culinary": "Bon comestible, de carn blanca, ferma i consistent, que absorbeix bé els gustos. Convé treure-li la cutícula, que pot ser una mica amargant, i molts boletaires l'escalden breument abans de cuinar-lo. És molt bo en guisats amb carn, en arrossos i en conserva. Sempre s'ha de menjar cuit.",
+    "habitat": "Creix en grups nombrosos, sovint en rengleres o cercles, als alzinars, rouredes i fagedes, preferentment en sòls calcaris o neutres, des de terra baixa fins a la muntanya mitjana. És més freqüent a les comarques interiors de Catalunya i a Mallorca.",
+    "season": "Tardor i principi d'hivern, sobretot d'octubre a desembre; és un bolet tardà que aguanta bé el fred.",
+    "lookAlikes": "Té el barret carnós i una mica viscós, amb taques i escates de color vinós o porpra sobre fons blanquinós, làmines blanques que es taquen de vermell vinós, una cama blanca i robusta tacada de vi, i no fa llet. Les rússules de barret vermell també tenen làmines blanques, però són trencadisses com el guix; les de gust coent, com Russula emetica, són tòxiques. L'Entoloma sinuatum, tòxic, surt als mateixos boscos a la tardor: té el barret gris crema i les làmines grogoses que es tornen rosades. No el confongueu amb el carlet o llora morada (Russula cyanoxantha), una rússula comestible, ni amb Hygrophorus erubescens, de coníferes i amargant."
+  },
+  "llora_verda": {
+    "commonName": "Llora verda",
+    "culinary": "Per a molts és la millor de les rússules: carn blanca, ferma i amb un gust suau que recorda l'avellana. Es pot fer a la brasa o a la planxa, saltada o en guisats. A Itàlia i al sud de França es menja fins i tot crua quan és jove, però és més prudent cuinar-la.",
+    "habitat": "Viu en boscos de planifolis lluminosos i clarianes: suredes, alzinars, castanyedes, rouredes i fagedes, sobre sòls àcids. És més freqüent a les comarques silícies del nord-est (Montseny, Montnegre, Gavarres, Guilleries).",
+    "season": "D'estiu a la tardor, de juny a octubre, sovint ja amb les primeres tempestes d'estiu.",
+    "lookAlikes": "Es reconeix pel barret verd grisenc que es clivella en petites plaques o escates, com un mosaic, i per les làmines i el peu blancs. El risc greu és la farinera borda (Amanita phalloides), MORTAL, que té el barret verd però llis, anell al peu i volva a la base: arrenqueu sempre el bolet sencer i comproveu-ho. Altres rússules verdes de barret llis, com Russula aeruginea, són comestibles però menys bones; descarteu qualsevol rússula de gust coent."
+  },
+  "llora_vesca": {
+    "commonName": "Llora / Puagre",
+    "culinary": "Rússula de gust suau i agradable, amb la carn blanca i ferma. És un bon comestible saltat, a la planxa, en truita o en guisats, i combina bé amb altres bolets.",
+    "habitat": "Viu en boscos de planifolis i mixtos de sòls àcids: fagedes, castanyedes, rouredes, suredes i alzinars humits, i de vegades amb pins. És comuna a la meitat nord de Catalunya.",
+    "season": "D'estiu a la tardor, de juny a octubre.",
+    "lookAlikes": "Té el barret rosat, vinós o bru rogenc, i la cutícula retirada al marge, de manera que es veu una vora de carn blanca (com si ensenyés les dents). La carn es torna rosa salmó amb sulfat de ferro. El perill principal són les rússules vermelles coents, com Russula emetica, tòxiques: tasteu un bocinet cru sense empassar-lo i rebutgeu-la si pica. Comproveu també que no tingui anell ni volva."
+  },
+  "pebras": {
+    "commonName": "Pebràs / Pebrassa",
+    "culinary": "És una rússula blanca i robusta de carn ferma però de gust una mica coent i amargant, sobretot a les làmines. Es considera un comestible de poca qualitat: es menja a la brasa o en guisats després d'escaldar-la, i a les comarques de Lleida i Tarragona és tradicional fer-la a la llauna.",
+    "habitat": "Surt mig enterrada, aixecant la fullaraca, sota alzines, roures i faigs i també en pinedes de pi blanc i pi roig. Tolera bé els sòls calcaris i és comuna arreu de Catalunya, de la costa a la muntanya.",
+    "season": "De finals d'estiu a la tardor, d'agost a desembre.",
+    "lookAlikes": "Malgrat el nom popular, el pebràs (Russula delica) és una rússula i no té llet. No el confongueu amb el pebràs lleter (Lactarius piperatus) ni amb Lactarius vellereus, molt semblants però que deixen anar llet blanca molt coent quan es trenquen; són indigestos. Els exemplars joves i blancs es podrien confondre amb amanites blanques MORTALS (Amanita verna, Amanita virosa): comproveu que no hi hagi anell ni volva. Russula chloroides, amb una franja blavosa a dalt del peu, és equivalent."
+  },
+  "llenega_blanca": {
+    "commonName": "Llenega blanca",
+    "culinary": "Bolet de carn blanca, tendra i de gust suau, molt apreciat a Catalunya com la llenega negra. Abans de cuinar-la cal treure-li la capa enganxosa del barret i del peu. És bona saltada, en truites, en arrossos i en guisats, i es conserva bé en oli o vinagre.",
+    "habitat": "A Catalunya la llenega blanca més buscada és Hygrophorus gliocyclus, que surt a les pinedes de pi blanc, pinassa i pi roig, sobretot en sòls calcaris. L'espècie veïna Hygrophorus eburneus, també anomenada llenega o mocosa blanca, creix a les fagedes i rouredes.",
+    "season": "Tardor avançada, d'octubre a desembre, sovint amb les primeres glaçades.",
+    "lookAlikes": "És tota blanca i molt viscosa quan és humida, amb les làmines espaiades i una mica decurrents. Comproveu que no tingui volva a la base: les amanites blanques (Amanita verna, Amanita virosa) són MORTALS. Les Clitocybe blanques (Clitocybe dealbata, Clitocybe rivulosa), petites i no viscoses, que surten en prats i clarianes, són tòxiques i provoquen síndrome muscarínica. Hygrophorus cossus, d'olor desagradable, no és bo."
+  },
+  "fredolic_gros": {
+    "commonName": "Fredolic gros",
+    "culinary": "Bon comestible, de carn blanca, ferma i amb un gust suau i una mica farinós. És bo saltat, en guisats, en arrossos i amb carn, i aguanta bé la cocció.",
+    "habitat": "Viu a les pinedes de muntanya, sobretot de pi roig i pinassa, i també amb avets, en sòls àcids o calcaris amb molsa. A Catalunya és més freqüent al Prepirineu i el Pirineu.",
+    "season": "Tardor avançada, d'octubre a desembre, sovint després de les primeres gelades.",
+    "lookAlikes": "Té el barret gris fosc amb fibres radials negres i reflexos violacis o grocs, i les làmines i el peu blancs amb tons groguencs. Es pot confondre amb el tricoloma atigrat (Tricholoma pardinum), TÒXIC, de barret amb esquames grises i olor de farina forta, i amb Tricholoma sejunctum i Tricholoma virgatum, amargs o coents. El verderol (Tricholoma equestre), tot groc, està prohibit perquè pot causar intoxicacions greus."
+  },
+  "cama_perdiu": {
+    "commonName": "Cama de perdiu / Bec de perdiu",
+    "culinary": "Bon comestible, de carn ferma de color taronja salmó. És bo en guisats, arrossos i salses, i també en conserva. En coure's es torna fosc, gairebé violaci, i pot tenyir la resta del plat; és millor treure-li la cutícula del barret, que és viscosa.",
+    "habitat": "Fa micorizes amb pins de dues fulles, sobretot pi roig, pinassa, pi blanc i pi pinyer, i sol sortir al costat del molleric (Suillus), del qual és paràsit. Tolera sòls àcids i calcaris i és comú a les pinedes de tot Catalunya.",
+    "season": "Tardor, de setembre a desembre.",
+    "lookAlikes": "El barret és de bru ataronjat a vinós, amb un mugró central, les làmines decurrents, espaiades i ocres que es tornen negres amb les espores, i el peu ataronjat amb la base groga. No el confongueu amb els Cortinarius de color rovell (com Cortinarius orellanus), MORTALS per al ronyó: tenen una cortina com una teranyina sota el barret, les làmines de color rovell i no viuen lligats als mollerics. Gomphidius glutinosus, gris i molt viscós, és també comestible."
+  },
+  "molleric": {
+    "commonName": "Molleric",
+    "culinary": "Comestible de qualitat mitjana, tou i de gust suau. Cal treure-li sempre la cutícula enganxosa del barret, que és laxant, i també els tubs si són tous. És millor jove, saltat, en guisats o en conserva, i barrejat amb altres bolets.",
+    "habitat": "Surt en grups nombrosos a les pinedes, sobretot de pi blanc, pi pinyer, pinassa, pi roig i pinastre, en sòls calcaris o àcids. És un dels bolets més comuns de les pinedes catalanes, de la costa a la muntanya.",
+    "season": "Pot sortir a final de primavera i sobretot a la tardor, de setembre a desembre.",
+    "lookAlikes": "Té el barret bru ataronjat i viscós, els porus grocs que deixen anar gotetes lletoses de jove i el peu sense anell, amb granulacions a la part alta. El molleric de calceta (Suillus luteus), amb anell, i el molleric rosat (Suillus collinitus), amb la base del peu rosada, són també comestibles mediocres. Rebutgeu els bolets amb porus vermells o taronges o amb carn que blaveja intensament, com el mataparent (Rubroboletus satanas), tòxic."
+  },
+  "llengua_bou": {
+    "commonName": "Llengua de bou / Picornell",
+    "culinary": "Bon comestible, de carn ferma, blanca i d'un gust suau una mica afruitat. Els exemplars joves són excel·lents saltats, en guisats de carn, en arrossos o en conserva; als vells convé treure'ls les agulles, que poden amargar, i escaldar-los abans de cuinar-los.",
+    "habitat": "Creix en tota mena de boscos, de planifolis i de coníferes: fagedes, castanyedes, alzinars, rouredes, avetoses i pinedes, en sòls àcids o calcaris, sovint en grups o rotllanes entre la molsa de les obagues.",
+    "season": "Tardor, de setembre a desembre, i a la costa fins a l'hivern.",
+    "lookAlikes": "És fàcil de reconèixer i no té confusions perilloses: sota el barret, de color crema a ataronjat, no té làmines ni porus sinó AGULLES curtes i fràgils. Hydnum rufescens, més petit i ataronjat, és igualment comestible. Altres bolets amb agulles, com Sarcodon i Hydnellum, són durs, amargs o llenyosos, però no greument tòxics."
+  },
+  "pimpinella_morada": {
+    "commonName": "Pimpinella morada / Moixernó blau",
+    "culinary": "Bon comestible de carn tendra, perfumada i una mica dolça. Cal menjar-la SEMPRE BEN CUITA, perquè crua és tòxica. És bona saltada, en guisats de carn, en arrossos i en salses; alguns la troben indigesta i convé no abusar-ne.",
+    "habitat": "Creix entre la fullaraca i les fulles de pi caigudes de tota mena de boscos, de planifolis i de coníferes, i també en marges, jardins i munts de compost. Prefereix els sòls rics en humus, sovint calcaris, i és comuna arreu de Catalunya.",
+    "season": "Tardor avançada i inici de l'hivern, d'octubre a gener, fins i tot després de les primeres gelades.",
+    "lookAlikes": "Té el barret, les làmines i el peu de color lila o violeta, l'olor perfumada i l'esporada rosada. Es pot confondre amb Cortinarius violacis (com Cortinarius traganus o Cortinarius camphoratus), alguns tòxics, que tenen una cortina com una teranyina sota el barret, l'esporada de color rovell i sovint olor desagradable. Lepista sordida, més petita, també és comestible."
+  },
+  "peu_de_rata": {
+    "commonName": "Peu de rata",
+    "culinary": "Comestible mediocre i delicat. Només es mengen els exemplars joves i ferms, ben cuits, en quantitats petites i traient-ne les puntes, que solen ser amargues. Fins i tot les espècies comestibles són LAXANTS per a moltes persones i poden provocar diarrees. Es fan en guisats, en truita o escaldats i saltats.",
+    "habitat": "Surten a terra en boscos humits de muntanya: Ramaria botrytis sobretot a les fagedes i boscos mixtos amb avets, i Ramaria aurea en fagedes, avetoses, castanyedes i rouredes, en general en sòls àcids. Són més freqüents al Pirineu, el Montseny i les Guilleries.",
+    "season": "De finals d'estiu a la tardor, d'agost a novembre.",
+    "lookAlikes": "ATENCIÓ: els peus de rata són molt difícils d'identificar; hi ha desenes d'espècies de Ramaria i moltes només es distingeixen amb microscopi. El peu de rata bord (Ramaria formosa), de color rosa ataronjat amb les puntes grogues i carn amarga, és TÒXIC i provoca gastroenteritis fortes; Ramaria pallida i altres també són laxants. Ramaria botrytis té un tronc gruixut i blanc, branques blanquinoses i les puntes rosades o violàcies; Ramaria aurea és tota groc daurat. Si no esteu del tot segurs, no els cullu. No els doneu a infants."
+  },
+  "camperol": {
+    "commonName": "Camperol / Xampinyó silvestre",
+    "culinary": "És el parent silvestre del xampinyó de cultiu, però molt més gustós. La carn és blanca i tendra, amb olor agradable de bolet. És boníssim a la planxa amb all i julivert, saltat, en truites, en salses i fins i tot cru en amanides quan és molt jove i net.",
+    "habitat": "No depèn dels arbres: surt en prats, pastures i camps adobats amb fems, sovint en rotllanes, on pasturen vaques, cavalls o ovelles. És comú en prats de mitja muntanya i als prats alpins del Pirineu, i també en marges herbosos de terra baixa.",
+    "season": "Després de pluges càlides: a final de primavera i sobretot a la tardor, de setembre a novembre.",
+    "lookAlikes": "Les làmines són lliures, de color rosa viu en els exemplars joves i marró xocolata en els vells, i el peu té un anell fi. Les amanites blanques MORTALS (Amanita phalloides, verna i virosa) tenen les làmines sempre BLANQUES i volva a la base: no colliu mai bolets blancs amb làmines blanques. El xampinyó groguejant (Agaricus xanthodermus), tòxic, es taca de groc intens en fregar-lo, sobretot a la base del peu, i fa olor de tinta o de fenol."
+  },
+  "bola_de_neu": {
+    "commonName": "Bola de neu / Rubiol anisat",
+    "culinary": "Xampinyó gran i carnós amb una olor d'anís o d'ametlla amarga molt característica. És un comestible excel·lent, a la planxa, saltat, farcit o en salses. Els exemplars grans s'han de revisar perquè sovint tenen cucs.",
+    "habitat": "Agaricus arvensis surt en prats, pastures i clarianes, sovint en rotllanes, i el seu parent Agaricus silvicola creix dins el bosc, a les pinedes de pi roig, avetoses i fagedes. Tots dos són més freqüents a mitja i alta muntanya.",
+    "season": "De finals de primavera a la tardor, sobretot de setembre a novembre.",
+    "lookAlikes": "Es reconeix pel barret blanc que grogueja lentament, l'olor d'anís, les làmines de gris rosat a negre xocolata i l'anell gran i doble en forma de roda dentada. El xampinyó groguejant (Agaricus xanthodermus), tòxic, grogueja de cop i amb força a la base del peu i fa olor de tinta. Les amanites blanques MORTALS (Amanita phalloides, verna, virosa) tenen les làmines BLANQUES i volva: no colliu mai exemplars tancats, en forma d'ou, sense veure'n les làmines."
+  },
+  "bolet_tinta": {
+    "commonName": "Bolet de tinta",
+    "culinary": "Bon comestible de carn blanca, tendra i de gust delicat, només mentre les làmines són totalment BLANQUES. Es fa saltat, en truita, en cremes o arrebossat, i s'ha de cuinar el mateix dia de collir-lo, perquè en poques hores es desfà en un líquid negre com la tinta.",
+    "habitat": "No depèn dels arbres: surt en prats, gespes, marges de camins i camps, terrenys remoguts i llocs rics en nitrogen, sovint en grups. Eviteu els que surten a la vora de carreteres o en zones contaminades, perquè acumulen metalls pesants.",
+    "season": "Sobretot a la primavera i a la tardor després de pluges, però pot sortir de primavera a finals de tardor.",
+    "lookAlikes": "És molt característic: barret alt i cilíndric, blanc i cobert d'escates, amb un anell mòbil al peu, que de vell s'obre i es desfà en tinta negra. El bolet de tinta gris (Coprinopsis atramentaria), de barret gris i llis, és TÒXIC si es pren alcohol fins a tres dies abans o després de menjar-lo (efecte antabús). No el confongueu en estat de botó amb amanites blanques, que tenen volva."
+  },
+  "girgola_panical": {
+    "commonName": "Gírgola de panical",
+    "culinary": "Comestible excel·lent, de carn blanca, ferma i saborosa, considerada la millor de les gírgoles. És boníssima a la brasa o a la planxa amb all i julivert, en arrossos i amb carn. També es cultiva i es ven als mercats.",
+    "habitat": "No depèn dels arbres: és parasita de les arrels mortes del panical (Eryngium campestre), un card que creix en ermots, pastures seques, guarets i marges de conreus, sobretot en sòls calcaris. És típica de les terres de Lleida (Segarra, Urgell, Noguera), l'Anoia i l'Empordà.",
+    "season": "Sobretot a la tardor, d'octubre a desembre, i alguns anys també a la primavera.",
+    "lookAlikes": "El barret és bru grisenc, les làmines blanques o crema i molt decurrents, i el peu sovint excèntric; sempre surt al costat de mates de panical. Les Clitocybe blanques o grisenques que surten en prats (Clitocybe dealbata, Clitocybe rivulosa) són tòxiques: no tenen el peu excèntric ni surten lligades al panical. La gírgola d'olivera (Omphalotus olearius), taronja i en grups sobre soques, és tòxica."
+  },
+  "pollancro": {
+    "commonName": "Pollancró",
+    "culinary": "Comestible molt bo, de carn ferma i aromàtica amb un lleuger gust d'avellana; el peu és fibrós i és millor descartar-lo. És excel·lent saltat, en arrossos, en canelons i en guisats. Es cultiva amb facilitat i es pot trobar als mercats.",
+    "habitat": "Creix en grups atapeïts sobre troncs i soques, vius o morts, de pollancres i àlbers, i també de salzes, oms i altres arbres de ribera. És comú als boscos de ribera i a les plantacions de pollancres de les valls del Segre, el Ter, la Tordera i l'Ebre.",
+    "season": "Surt de primavera a tardor, sobretot a la primavera (de març a juny) i a la tardor (de setembre a novembre).",
+    "lookAlikes": "Té el barret bru clar a crema, les làmines de crema a marró tabac i un anell membranós al peu. Qualsevol bolet bru que surt en grups sobre fusta s'ha d'identificar amb molta cura: la galerina marginada (Galerina marginata), MORTAL, és petita, amb anell i surt sobre fusta, sobretot de coníferes; el bolet de pi (Hypholoma fasciculare), amb les làmines groc verdoses i gust amarg, és tòxic. Les armil·làries (Armillaria) tenen esquames al barret i requereixen cocció."
+  },
+  "fetge_bou": {
+    "commonName": "Fetge de bou / Fetge de vaca",
+    "culinary": "Comestible curiós, de carn vermella, fibrosa i sucosa, que sembla carn crua i deixa anar un suc vermell. Té un gust àcid per l'abundància de tanins. Els exemplars joves es poden menjar crus a làmines fines en amanida o marinats; cuit, és millor escaldat i després saltat o guisat, perquè l'acidesa disminueix.",
+    "habitat": "No creix a terra sinó a la base de troncs vius o soques de castanyers i roures, i més rarament d'alzines i sureres. És relativament freqüent a les castanyedes del Montseny, les Guilleries i el Montnegre.",
+    "season": "De finals d'estiu a la tardor, d'agost a novembre.",
+    "lookAlikes": "És inconfusible: forma una llengua o un fetge carnós vermell sobre la fusta, amb la cara inferior plena de tubs petits, blanquinosos o rosats, separats entre ells. Laetiporus sulphureus, de color groc taronja, també creix en arbres i és comestible ben cuit només quan és jove; alguns poliporus de fusta són durs però no perillosos."
+  }
+}

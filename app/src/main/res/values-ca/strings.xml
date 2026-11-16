@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Navigation -->
+    <string name="nav_map">Mapa</string>
+    <string name="nav_history">Historial</string>
+    <string name="nav_gallery">Galeria</string>
+    <string name="nav_settings">Ajustos</string>
+
+    <!-- Recording -->
+    <string name="start_recording">INICI</string>
+    <string name="stop_recording">FI</string>
+    <string name="recording_notification_title">MycoTrack està enregistrant</string>
+    <string name="recording_notification_waiting">Esperant el senyal GPS…</string>
+    <string name="recording_notification_stop">Atura</string>
+    <string name="recording_channel_name">Enregistrament de sortides</string>
+    <string name="recording_channel_description">Mostra l\'enregistrament en curs de la sortida actual</string>
+
+    <!-- Map -->
+    <string name="map_layer">Capa del mapa</string>
+    <string name="map_layers">Capes</string>
+    <string name="overlay_routes">Rutes anteriors</string>
+    <string name="follow_position">Segueix la meva posició</string>
+    <string name="elevation_profile">Perfil d\'elevació</string>
+    <string name="take_photo">Fes una foto</string>
+    <string name="add_waypoint">Afegeix un punt</string>
+
+    <!-- Statistics -->
+    <string name="stat_distance">Distància</string>
+    <string name="stat_duration">Durada</string>
+    <string name="stat_speed">Velocitat</string>
+    <string name="stat_max_speed">Velocitat màx.</string>
+    <string name="stat_altitude">Altitud</string>
+    <string name="stat_gain">Desnivell +</string>
+    <string name="stat_loss">Desnivell −</string>
+    <string name="stat_moving_time">En moviment</string>
+    <string name="stat_stationary_time">Aturat</string>
+    <string name="stat_photos">Fotos</string>
+    <string name="stat_waypoints">Punts</string>
+
+    <!-- History -->
+    <string name="history_empty">Encara no hi ha cap sortida</string>
+    <string name="history_empty_hint">Prem INICI al mapa per enregistrar la primera sortida.</string>
+    <string name="search_trips">Cerca per nom o notes</string>
+    <string name="trip_notes">Notes</string>
+    <string name="trip_name">Nom de la sortida</string>
+    <string name="save">Desa</string>
+    <string name="cancel">Cancel·la</string>
+    <string name="delete">Suprimeix</string>
+    <string name="edit">Edita</string>
+    <string name="rename">Canvia el nom</string>
+    <string name="filters">Filtres</string>
+    <string name="delete_trip_title">Vols suprimir aquesta sortida?</string>
+
+    <!-- Gallery -->
+    <string name="gallery_empty">Encara no hi ha fotografies</string>
+    <string name="gallery_empty_hint">Les fotografies fetes durant una sortida apareixen aquí.</string>
+    <string name="description">Descripció</string>
+    <string name="category">Categoria</string>
+
+    <!-- Settings -->
+    <string name="gps_settings">GPS</string>
+    <string name="appearance">Aparença</string>
+    <string name="offline_maps">Mapes fora de línia</string>
+    <string name="download_area">Descarrega una zona</string>
+    <string name="delete_area">Suprimeix la zona</string>
+    <string name="permissions">Permisos</string>
+    <string name="grant">Concedeix</string>
+    <string name="export">Exporta</string>
+
+    <!-- Export -->
+    <string name="export_share">Comparteix</string>
+    <string name="export_failed">L\'exportació ha fallat</string>
+</resources>

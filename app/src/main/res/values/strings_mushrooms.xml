@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_mushrooms">Mushrooms</string>
+    <string name="mushroom_guide_title">Edible mushroom guide</string>
+    <string name="mushroom_guide_search">Search by name</string>
+    <string name="mushroom_guide_in_season">In season now</string>
+    <string name="mushroom_guide_disclaimer_title">Never eat a mushroom you are not sure about</string>
+    <string name="mushroom_guide_disclaimer">Only eat a wild mushroom if an expert has identified it with complete certainty. This guide is only orientative and is no substitute for an expert: some deadly species look very similar to edible ones.</string>
+    <string name="mushroom_guide_no_match">No mushrooms found</string>
+    <string name="mushroom_guide_no_match_hint">Try another name or turn off the season filter.</string>
+    <string name="mushroom_guide_not_found">This species is not in the guide.</string>
+    <string name="mushroom_guide_back">Back</string>
+    <string name="mushroom_guide_section_culinary">Culinary</string>
+    <string name="mushroom_guide_section_habitat">Habitat</string>
+    <string name="mushroom_guide_section_season">Season</string>
+    <string name="mushroom_guide_section_look_alikes">Dangerous look-alikes</string>
+    <string name="mushroom_guide_edibility">Edibility</string>
+    <string name="mushroom_guide_edibility_description">Edibility: %1$d out of 5</string>
+    <string name="mushroom_guide_photo_credit">Photo: %1$s · %2$s</string>
+    <string name="mushroom_guide_photo_credit_hint">Open the photo source</string>
+    <string name="mushroom_guide_month_initials">J,F,M,A,M,J,J,A,S,O,N,D</string>
+    <string name="mushroom_guide_season_description">Season: %1$s</string>
+</resources>

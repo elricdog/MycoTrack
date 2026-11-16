@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Gallery: deletion, waypoints without photo and "Show on map" -->
+    <string name="galmap_show_on_map">Show on map</string>
+    <string name="galmap_long_press_hint">Long press an item to select several of them.</string>
+    <string name="galmap_no_photo">Waypoint without photo</string>
+    <string name="galmap_delete_selected">Delete selected waypoints</string>
+    <string name="galmap_delete_title">Delete this waypoint?</string>
+    <string name="galmap_delete_message_photo">The waypoint and its photo will be deleted permanently.</string>
+    <string name="galmap_delete_message_no_photo">The waypoint will be deleted permanently.</string>
+    <plurals name="galmap_delete_selected_title">
+        <item quantity="one">Delete %1$d waypoint and its photo?</item>
+        <item quantity="other">Delete %1$d waypoints and their photos?</item>
+    </plurals>
+    <string name="galmap_delete_selected_message">This cannot be undone.</string>
+    <plurals name="galmap_deleted">
+        <item quantity="one">%1$d waypoint deleted</item>
+        <item quantity="other">%1$d waypoints deleted</item>
+    </plurals>
+
+    <!-- History: route colours -->
+    <string name="tripcolor_title">Route colour</string>
+    <string name="tripcolor_change">Change the route colour</string>
+    <string name="tripcolor_automatic">Automatic</string>
+    <string name="tripcolor_automatic_hint">The colour depends on the order of the routes overlaid on the map.</string>
+    <string name="tripcolor_auto_badge">A</string>
+    <string name="tripcolor_red">Red</string>
+    <string name="tripcolor_orange">Orange</string>
+    <string name="tripcolor_yellow">Yellow</string>
+    <string name="tripcolor_magenta">Magenta</string>
+    <string name="tripcolor_pink">Pink</string>
+    <string name="tripcolor_purple">Purple</string>
+    <string name="tripcolor_blue">Blue</string>
+    <string name="tripcolor_navy">Navy blue</string>
+    <string name="tripcolor_cyan">Cyan</string>
+    <string name="tripcolor_brown">Brown</string>
+    <string name="tripcolor_black">Black</string>
+    <string name="tripcolor_white">White</string>
+</resources>

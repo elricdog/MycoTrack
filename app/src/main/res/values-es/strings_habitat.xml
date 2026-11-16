@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Capas de hábitat del mapa (orientación de las laderas, especies de árboles y suelo). -->
+    <string name="habitat_section_title">Capas de hábitat</string>
+    <string name="habitat_section_description">Se dibujan sobre cualquier mapa base. Necesitan conexión a internet: sin conexión, simplemente no se muestran. Elige las clases que quieres ver en la leyenda de hábitat.</string>
+    <string name="habitat_aspect_title">Orientación de las laderas</string>
+    <string name="habitat_aspect_description">Las umbrías (laderas orientadas al norte, rayado azul) son más sombrías y húmedas, normalmente mejores para las setas; las solanas (orientadas al sur, rayado naranja) son más soleadas y secas. Se dibuja con rayas para que se sigan viendo las capas de debajo. Se calcula a partir de datos de elevación.</string>
+    <string name="habitat_trees_title">Tipos de árboles</string>
+    <string name="habitat_trees_description">Especie de árbol dominante de cada bosque, según el Mapa Forestal de España (MITECO). Visible a partir del nivel de zoom 7.</string>
+    <string name="habitat_soil_title">Suelo (sustrato)</string>
+    <string name="habitat_soil_description">Roca madre ácida (silícea) o básica (caliza), según el mapa litológico del IGME. Muchas setas prefieren uno de los dos sustratos: los rebozuelos y muchos boletos crecen en suelos ácidos, mientras que otras, como algunos níscalos o las colmenillas, prefieren la caliza. Orientación aproximada a escala 1:1.000.000.</string>
+
+    <string name="habitat_legend_title">Leyenda de hábitat</string>
+    <string name="habitat_legend_expand">Mostrar la leyenda</string>
+    <string name="habitat_legend_collapse">Ocultar la leyenda</string>
+    <string name="habitat_legend_aspect">Orientación</string>
+    <string name="habitat_legend_trees">Tipos de árboles</string>
+    <string name="habitat_legend_soil">Suelo (sustrato)</string>
+    <string name="habitat_legend_all">Todos</string>
+    <string name="habitat_legend_none">Ninguno</string>
+    <string name="habitat_legend_expand_section">Mostrar: %1$s</string>
+    <string name="habitat_legend_collapse_section">Ocultar: %1$s</string>
+    <string name="habitat_trees_source">Mapa Forestal de España © MITECO (CC BY 4.0)</string>
+    <string name="habitat_soil_source">Mapa litológico de España 1:1.000.000 © IGME-CSIC (CC BY 4.0)</string>
+    <string name="habitat_soil_mapping">El granito, el gneis, la pizarra, la cuarcita y la arenisca dan suelos ácidos; la caliza, la dolomía, la marga y el yeso los dan básicos. Las series mixtas, los depósitos fluviales y las rocas volcánicas se muestran como otros.</string>
+
+    <string name="habitat_aspect_north">Umbría (norte)</string>
+    <string name="habitat_aspect_neutral">Este / oeste</string>
+    <string name="habitat_aspect_south">Solana (sur)</string>
+
+    <string name="habitat_tree_holm_oak">Encinar</string>
+    <string name="habitat_tree_cork_oak">Alcornocal</string>
+    <string name="habitat_tree_downy_oak">Robledal de roble pubescente</string>
+    <string name="habitat_tree_portuguese_oak">Quejigar</string>
+    <string name="habitat_tree_sessile_oak">Robledal de roble albar o carballo</string>
+    <string name="habitat_tree_pyrenean_oak">Melojar (rebollo)</string>
+    <string name="habitat_tree_beech">Hayedo</string>
+    <string name="habitat_tree_chestnut">Castañar</string>
+    <string name="habitat_tree_birch">Abedular</string>
+    <string name="habitat_tree_strawberry_tree">Madroñal</string>
+    <string name="habitat_tree_wild_olive">Acebuchal</string>
+    <string name="habitat_tree_mixed_broadleaf">Bosque mixto de frondosas</string>
+    <string name="habitat_tree_scots_pine">Pinar de pino silvestre</string>
+    <string name="habitat_tree_mountain_pine">Pinar de pino negro</string>
+    <string name="habitat_tree_black_pine">Pinar de pino laricio (salgareño)</string>
+    <string name="habitat_tree_aleppo_pine">Pinar de pino carrasco</string>
+    <string name="habitat_tree_stone_pine">Pinar de pino piñonero</string>
+    <string name="habitat_tree_maritime_pine">Pinar de pino resinero</string>
+    <string name="habitat_tree_fir_other_conifers">Abetal y otras coníferas</string>
+    <string name="habitat_tree_mixed_conifers">Mezcla de coníferas</string>
+    <string name="habitat_tree_mixed_conifer_broadleaf">Mezcla de coníferas y frondosas</string>
+    <string name="habitat_tree_riparian">Bosque de ribera</string>
+    <string name="habitat_tree_other_broadleaf">Otras frondosas (fresno, avellano…)</string>
+    <string name="habitat_tree_junipers">Sabinares y enebrales</string>
+    <string name="habitat_tree_plantations">Repoblaciones productoras (chopo…)</string>
+    <string name="habitat_tree_native_non_native">Autóctonas mezcladas con alóctonas</string>
+    <string name="habitat_tree_non_native">Árboles alóctonos (coníferas plantadas, robinia…)</string>
+
+    <string name="habitat_soil_group_acid">Ácido / silíceo</string>
+    <string name="habitat_soil_group_basic">Básico / calizo</string>
+    <string name="habitat_soil_group_other">Mixto u otros</string>
+    <string name="habitat_soil_granitoids">Granito y granodiorita</string>
+    <string name="habitat_soil_two_mica_granites">Granito de dos micas</string>
+    <string name="habitat_soil_felsic_plutonic">Rocas plutónicas félsicas</string>
+    <string name="habitat_soil_gneiss">Gneis</string>
+    <string name="habitat_soil_migmatites">Migmatitas y granitoides indiferenciados</string>
+    <string name="habitat_soil_slates_greywackes">Pizarras, grauvacas y cuarcitas</string>
+    <string name="habitat_soil_quartzites_slates">Cuarcitas, pizarras y areniscas (con algo de caliza)</string>
+    <string name="habitat_soil_felsic_volcanic">Rocas volcánicas félsicas</string>
+    <string name="habitat_soil_limestones_dolomites">Calizas, dolomías y margas</string>
+    <string name="habitat_soil_dolomites_marls">Dolomías, calizas y margas</string>
+    <string name="habitat_soil_calcarenites_marls">Calcarenitas, margas y arcillas</string>
+    <string name="habitat_soil_basin_evaporites">Areniscas, arcillas, calizas y evaporitas</string>
+    <string name="habitat_soil_triassic_gypsum">Areniscas, calizas, yesos y arcillas versicolores</string>
+    <string name="habitat_soil_sandstones_slates_limestones">Areniscas, pizarras y calizas</string>
+    <string name="habitat_soil_coal_series">Conglomerados, areniscas, pizarras y calizas con carbón</string>
+    <string name="habitat_soil_schists_marbles">Micaesquistos, filitas y mármoles</string>
+    <string name="habitat_soil_conglomerates_mudstones">Conglomerados, areniscas y lutitas</string>
+    <string name="habitat_soil_alluvium">Gravas, arenas y limos (depósitos fluviales)</string>
+    <string name="habitat_soil_volcaniclastic">Rocas volcánicas y volcanoclásticas</string>
+    <string name="habitat_soil_mafic_volcanic">Rocas volcánicas máficas (basalto)</string>
+    <string name="habitat_soil_mixed_volcanic">Rocas volcánicas máficas y félsicas</string>
+    <string name="habitat_soil_mixed_plutonic">Rocas plutónicas máficas y félsicas</string>
+    <string name="habitat_soil_ultramafic">Serpentinitas, peridotitas y rocas ultrabásicas</string>
+</resources>

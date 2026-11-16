@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- History -->
+    <string name="history_no_match">Cap sortida no coincideix amb els filtres</string>
+    <string name="history_no_match_hint">Prova de canviar el terme de cerca o d\'esborrar els filtres.</string>
+    <string name="history_delete_trip_message">La ruta, les fotografies i les notes de «%1$s» s\'eliminaran per sempre.</string>
+    <plurals name="history_photo_count">
+        <item quantity="one">%1$d foto</item>
+        <item quantity="other">%1$d fotos</item>
+        <item quantity="many">%1$d fotos</item>
+    </plurals>
+    <plurals name="history_waypoint_count">
+        <item quantity="one">%1$d punt</item>
+        <item quantity="other">%1$d punts</item>
+        <item quantity="many">%1$d punts</item>
+    </plurals>
+    <string name="history_filter_min_distance">Distància mínima: %1$d m</string>
+    <string name="history_filter_min_duration">Durada mínima: %1$d min</string>
+    <string name="history_filter_min_gain">Desnivell positiu mínim: %1$d m</string>
+    <string name="history_filter_only_photos">Només sortides amb fotos</string>
+    <string name="history_apply">Aplica</string>
+
+    <!-- Trip detail -->
+    <string name="trip_detail_default_title">Sortida</string>
+    <string name="trip_detail_back">Torna a la llista de sortides</string>
+    <string name="trip_detail_export_title">Exporta la sortida</string>
+    <string name="trip_detail_tab_map">Mapa</string>
+    <string name="trip_detail_tab_profile">Perfil</string>
+    <string name="trip_detail_tab_statistics">Estadístiques</string>
+    <string name="trip_detail_tab_timeline">Cronologia</string>
+    <string name="trip_detail_share_chooser">Comparteix la sortida</string>
+    <string name="trip_detail_preparing_file">S\'està preparant el fitxer per compartir.</string>
+    <string name="trip_detail_delete_message">La ruta, les fotografies i les notes s\'eliminaran per sempre.</string>
+    <string name="trip_detail_selected">Seleccionada</string>
+    <string name="trip_detail_min">Mín.</string>
+    <string name="trip_detail_max">Màx.</string>
+    <string name="trip_detail_average_speed">Velocitat mitjana</string>
+    <string name="trip_detail_points">Punts GPS</string>
+    <string name="trip_detail_no_notes">Encara no hi ha notes.</string>
+    <string name="trip_detail_no_waypoints">Aquesta sortida no té cap punt.</string>
+
+    <!-- Playback -->
+    <string name="playback_play">Reprodueix</string>
+    <string name="playback_pause">Pausa</string>
+    <string name="playback_position">Punt %1$d / %2$d</string>
+
+    <!-- Gallery -->
+    <string name="gallery_action_share">Comparteix les fotos</string>
+    <string name="gallery_action_share_description">Envia les fotografies a una altra aplicació.</string>
+    <string name="gallery_action_save">Desa a la galeria del dispositiu</string>
+    <string name="gallery_action_save_description">Les copia a Pictures/%1$s, amb les dades GPS.</string>
+    <string name="gallery_action_zip">Paquet (ZIP)</string>
+    <string name="gallery_action_zip_description">Fotografies i les seves ubicacions en GeoJSON i CSV.</string>
+    <plurals name="gallery_photos_saved">
+        <item quantity="one">S\'ha desat %1$d de %2$d foto a Pictures/%3$s</item>
+        <item quantity="other">S\'han desat %1$d de %2$d fotos a Pictures/%3$s</item>
+        <item quantity="many">S\'han desat %1$d de %2$d fotos a Pictures/%3$s</item>
+    </plurals>
+    <string name="gallery_storage_permission_required">Cal el permís d\'emmagatzematge per desar les fotos en aquesta versió d\'Android.</string>
+    <string name="gallery_clear_selection">Esborra la selecció</string>
+    <plurals name="gallery_selected_count">
+        <item quantity="one">%1$d seleccionada</item>
+        <item quantity="other">%1$d seleccionades</item>
+        <item quantity="many">%1$d seleccionades</item>
+    </plurals>
+    <string name="gallery_select_all">Selecciona-ho tot</string>
+    <string name="gallery_export_selected">Exporta les fotos seleccionades</string>
+    <string name="gallery_filter_all">Totes</string>
+    <string name="gallery_export_photos">Exporta les fotos</string>
+    <string name="gallery_selected">Seleccionada</string>
+    <plurals name="gallery_export_title">
+        <item quantity="one">Exporta %1$d foto</item>
+        <item quantity="other">Exporta %1$d fotos</item>
+        <item quantity="many">Exporta %1$d fotos</item>
+    </plurals>
+    <string name="gallery_preparing_photos">S\'estan preparant les fotografies.</string>
+    <string name="gallery_save_changes">Desa els canvis</string>
+
+    <!-- Export messages -->
+    <string name="export_msg_exporting">S\'està exportant…</string>
+    <string name="export_msg_close">Tanca</string>
+    <string name="export_msg_generic_error">No s\'ha pogut completar l\'exportació (%1$s).</string>
+    <string name="export_msg_map_not_rendered">No s\'ha pogut generar el mapa.</string>
+    <string name="export_msg_map_render_error">No s\'ha pogut generar el mapa: %1$s</string>
+    <string name="export_msg_no_offline_area">Encara no hi ha cap àrea fora de línia disponible. Espera que es preparin els mapes fora de línia o selecciona una altra capa abans d\'exportar la imatge.</string>
+    <string name="export_msg_not_enough_points">Aquesta sortida no té prou punts GPS per dibuixar el mapa.</string>
+    <string name="export_msg_nothing_to_share">No hi ha res per compartir.</string>
+    <string name="export_msg_photos_unavailable">Les fotografies seleccionades no estan disponibles al dispositiu.</string>
+
+    <!-- Visual report and elevation image -->
+    <string name="report_no_elevation_data">No hi ha dades d\'elevació</string>
+    <string name="report_min_value">Mín. %1$d m</string>
+    <string name="report_max_value">Màx. %1$d m</string>
+    <string name="report_distance">Distància</string>
+    <string name="report_duration">Durada</string>
+    <string name="report_elevation_gain">Desnivell positiu</string>
+    <string name="report_elevation_loss">Desnivell negatiu</string>
+    <string name="report_max_altitude">Altitud màxima</string>
+    <string name="report_min_altitude">Altitud mínima</string>
+    <string name="report_average_speed">Velocitat mitjana</string>
+    <string name="report_photos">Fotos</string>
+</resources>

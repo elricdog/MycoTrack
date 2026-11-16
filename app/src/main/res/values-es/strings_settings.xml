@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Settings: GPS -->
+    <string name="settings_gps_interval">Intervalo entre     puntos del recorrido: %1$d s</string>
+        <string name="settings_gps_interval_hint">El GPS se lee cada segundo y se suaviza; este intervalo solo determina cada cuánto se guarda un punto en el recorrido.</string>
+    <string name="settings_max_accuracy_value">Precisión máxima: %1$d m</string>
+    <string name="settings_max_jump_value">Salto máximo: %1$d m</string>
+    <string name="settings_keep_screen_on">Mantener la pantalla encendida durante la grabación</string>
+
+    <!-- Settings: map -->
+    <string name="settings_default_zoom">Nivel de zoom predeterminado: %1$d</string>
+    <string name="settings_default_zoom_hint">Los valores más altos muestran más detalle. También puedes mantener pulsado el botón de zoom predeterminado del mapa para guardar el nivel de zoom actual.</string>
+    <string name="settings_map_buttons">Botones del mapa</string>
+    <string name="settings_map_widgets">Widgets del mapa</string>
+    <string name="settings_map_widgets_hint">Los indicadores de estado que se muestran sobre el mapa, junto a los controles.</string>
+    <string name="settings_map_buttons_hint">Elige los botones que se muestran en la pantalla del mapa. INICIO y FIN siempre están visibles.</string>
+
+    <!-- Settings: offline maps -->
+    <string name="settings_download">Descargar</string>
+    <plurals name="settings_download_progress">
+        <item quantity="one">%1$d / %2$d tesela</item>
+        <item quantity="other">%1$d / %2$d teselas</item>
+        <item quantity="many">%1$d / %2$d teselas</item>
+    </plurals>
+    <string name="settings_download_failed">La descarga ha fallado: %1$s</string>
+    <string name="settings_offline_empty_title">No hay ninguna zona sin conexión disponible</string>
+    <string name="settings_offline_empty_hint">Se están preparando los mapas de Cataluña incluidos en la aplicación. También puedes descargar una zona alrededor de la posición actual.</string>
+    <string name="settings_offline_included">Incluida</string>
+    <plurals name="settings_offline_area_details">
+        <item quantity="one">%1$d tesela · %2$d MB · zoom %3$d-%4$d</item>
+        <item quantity="other">%1$d teselas · %2$d MB · zoom %3$d-%4$d</item>
+        <item quantity="many">%1$d teselas · %2$d MB · zoom %3$d-%4$d</item>
+    </plurals>
+    <string name="settings_offline_in_use">En uso</string>
+    <string name="settings_offline_use">Usar</string>
+
+    <!-- Settings: download dialog -->
+    <string name="settings_download_default_name">Zona sin conexión</string>
+    <string name="settings_download_name">Nombre</string>
+    <string name="settings_download_layer">Capa</string>
+    <string name="settings_download_centre">Centro</string>
+    <string name="settings_download_latitude">Latitud</string>
+    <string name="settings_download_longitude">Longitud</string>
+    <string name="settings_download_radius">Radio: %1$d km</string>
+    <string name="settings_download_zoom">Zoom %1$d – %2$d</string>
+    <string name="settings_download_hint">La zona se guarda en el dispositivo y sigue disponible sin cobertura. El número de teselas crece rápidamente con el nivel de zoom.</string>
+
+    <!-- Settings: permissions -->
+    <string name="settings_permissions_intro">MycoTrack explica cada permiso antes de pedirlo. El centro de permisos muestra el estado actual de cada uno y enlaza con los ajustes del sistema cuando un permiso se ha denegado de forma permanente.</string>
+    <string name="settings_open_permission_centre">Abrir el centro de permisos</string>
+
+    <!-- Settings: about -->
+    <string name="settings_about">Acerca de</string>
+    <string name="settings_version">Versión %1$s</string>
+    <string name="settings_about_description">MycoTrack graba las salidas para buscar setas completamente en el dispositivo. No se necesita ninguna cuenta, ninguna suscripción ni ningún servicio de mapas comercial: los mapas provienen de OpenStreetMap y del Institut Cartogràfic i Geològic de Catalunya (ICGC).</string>
+    <string name="settings_about_licences">Los mapas sin conexión de Cataluña incluidos en la aplicación los publica el ICGC con la licencia Creative Commons Reconocimiento 4.0. El mapa de calles es © colaboradores de OpenStreetMap, también con licencia Creative Commons Reconocimiento.</string>
+
+    <!-- Permission centre -->
+    <string name="permissions_granted">Concedido</string>
+    <string name="permissions_intro">MycoTrack lo guarda todo en este dispositivo. Estos permisos solo se usan para grabar tu ruta y hacer las fotografías de tus hallazgos.</string>
+    <string name="permissions_grant_missing">Conceder los permisos que faltan</string>
+    <string name="permissions_all_granted">Ya está concedido todo lo necesario para grabar una salida.</string>
+    <string name="permissions_start_recording">Iniciar la grabación</string>
+    <string name="permissions_back_to_map">Volver al mapa</string>
+    <string name="permissions_required">Necesario para grabar</string>
+    <string name="permissions_optional">Opcional</string>
+    <string name="permissions_open_settings">Abrir ajustes</string>
+    <string name="permissions_continue">Continuar</string>
+    <string name="permissions_not_now">Ahora no</string>
+    <string name="permissions_needed_title">Se necesitan permisos</string>
+    <string name="permissions_needed_message">MycoTrack no puede grabar tu ruta hasta que se concedan los siguientes permisos:</string>
+    <string name="permissions_needed_privacy">Tus salidas nunca se suben a ningún servidor: todo se queda en este dispositivo. Puedes cambiar de opinión más adelante en los ajustes.</string>
+    <string name="permissions_grant_all">Conceder permisos</string>
+
+    <!-- Camera -->
+    <string name="camera_error_start">No se ha podido iniciar la cámara.</string>
+    <string name="camera_error_capture">No se ha podido hacer la foto.</string>
+
+    <!-- Elevation profile -->
+    <string name="elevation_not_enough_data">Todavía no hay suficientes datos de elevación</string>
+</resources>

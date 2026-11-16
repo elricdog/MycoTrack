@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Optional map buttons (settings list and accessibility) -->
+    <string name="map_button_layers">Capes del mapa</string>
+    <string name="map_button_photo_bubbles">Mostra o amaga les bombolles de fotos</string>
+    <string name="map_button_view">Vista de mapa / elevació</string>
+    <string name="map_button_zoom_level">Indicador del nivell de zoom de la càmera</string>
+    <string name="map_button_gps_status">Qualitat del senyal GPS</string>
+    <string name="map_button_habitat_legend">Llegenda de les capes d\'hàbitat</string>
+    <string name="map_button_stats">Mostra o amaga les estadístiques</string>
+
+    <!-- Map controls -->
+    <string name="map_zoom_in">Apropa</string>
+    <string name="map_zoom_out">Allunya</string>
+    <string name="map_zoom_default">Zoom per defecte</string>
+    <string name="map_zoom_default_long_press">Zoom per defecte (mantén premut per desar el zoom actual com a predeterminat)</string>
+    <string name="map_zoom_fit">Mostra tota la ruta</string>
+    <string name="map_zoom_default_set">S\'ha establert el zoom per defecte a %1$d</string>
+    <string name="map_no_route_yet">Encara no hi ha cap ruta per mostrar</string>
+    <string name="map_control_routes">Rutes</string>
+    <string name="map_control_centre">Centra</string>
+    <string name="map_control_view">Vista</string>
+    <string name="map_show_photo_bubbles">Mostra les bombolles de fotos</string>
+    <string name="map_hide_photo_bubbles">Amaga les bombolles de fotos</string>
+    <string name="map_show_statistics">Mostra les estadístiques</string>
+    <string name="map_hide_statistics">Amaga les estadístiques</string>
+    <string name="map_stat_time">Temps</string>
+    <string name="map_selected_altitude">%1$s · alt. %2$s</string>
+    <string name="map_selected">Seleccionat</string>
+    <string name="map_direction">Direcció</string>
+    <string name="map_along_route">Seguint la ruta</string>
+    <string name="map_altitude_difference">Diferència d\'altitud</string>
+    <string name="map_close">Tanca</string>
+
+    <!-- Recording dialogs -->
+    <string name="recording_hold_to_finish">Mantén premut per acabar</string>
+    <string name="recording_hold_to_finish_countdown">Continua prement… %1$d s</string>
+    <string name="recording_hold_to_finish_hint">Mantén premut el botó 3 segons per acabar la sortida</string>
+    <string name="recording_ui_recover_title">Vols recuperar la sortida interrompuda?</string>
+    <string name="recording_ui_recover_message">«%1$s» encara s\'estava enregistrant quan es va tancar l\'aplicació. Pots continuar-la o descartar-la.</string>
+    <string name="recording_ui_resume">Reprèn</string>
+    <string name="recording_ui_discard">Descarta</string>
+
+    <!-- Waypoint sheet -->
+    <string name="waypoint_title">Punt</string>
+    <string name="waypoint_photo_description">Fotografia</string>
+
+    <!-- Default trip name; the argument is the start date and time -->
+    <string name="trip_default_name">Sortida %1$s</string>
+
+    <!-- Compass points, clockwise from north in steps of 22.5° -->
+    <string-array name="format_compass_points">
+        <item>N</item>
+        <item>NNE</item>
+        <item>NE</item>
+        <item>ENE</item>
+        <item>E</item>
+        <item>ESE</item>
+        <item>SE</item>
+        <item>SSE</item>
+        <item>S</item>
+        <item>SSO</item>
+        <item>SO</item>
+        <item>OSO</item>
+        <item>O</item>
+        <item>ONO</item>
+        <item>NO</item>
+        <item>NNO</item>
+    </string-array>
+
+    <!-- Overlaid previous trips and proximity alarm -->
+    <string name="map_overlay_hint">Es dibuixen amb una trama en moviment i el seu nom sobre la sortida actual. El color es pot canviar a l\'historial.</string>
+    <string name="map_overlay_hide_all">Amaga-les totes</string>
+    <plurals name="map_overlay_waypoints">
+        <item quantity="one">%1$d punt</item>
+        <item quantity="many">%1$d punts</item>
+        <item quantity="other">%1$d punts</item>
+    </plurals>
+    <string name="map_proximity_alarm">Alarma de proximitat</string>
+    <string name="map_proximity_alarm_hint">Sona quan ets a menys de %1$d m d\'un punt de les sortides mostrades</string>
+    <string name="map_proximity_show">Mostra</string>
+    <string name="proximity_channel_name">Avisos de proximitat</string>
+    <string name="proximity_channel_description">Avisa quan arribes a un punt d\'una sortida anterior mostrada al mapa</string>
+    <string name="proximity_notification_title">Punt d\'una sortida anterior a prop</string>
+</resources>

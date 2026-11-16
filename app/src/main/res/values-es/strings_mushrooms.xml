@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_mushrooms">Setas</string>
+    <string name="mushroom_guide_title">Guía de setas comestibles</string>
+    <string name="mushroom_guide_search">Buscar por nombre</string>
+    <string name="mushroom_guide_in_season">De temporada</string>
+    <string name="mushroom_guide_disclaimer_title">No coma nunca una seta si no está seguro</string>
+    <string name="mushroom_guide_disclaimer">Coma una seta silvestre solo si un experto la ha identificado con total seguridad. Esta guía es solo orientativa y no sustituye a un experto: algunas especies mortales se parecen mucho a las comestibles.</string>
+    <string name="mushroom_guide_no_match">No se ha encontrado ninguna seta</string>
+    <string name="mushroom_guide_no_match_hint">Pruebe otro nombre o desactive el filtro de temporada.</string>
+    <string name="mushroom_guide_not_found">Esta especie no está en la guía.</string>
+    <string name="mushroom_guide_back">Atrás</string>
+    <string name="mushroom_guide_section_culinary">En la cocina</string>
+    <string name="mushroom_guide_section_habitat">Hábitat</string>
+    <string name="mushroom_guide_section_season">Temporada</string>
+    <string name="mushroom_guide_section_look_alikes">Confusiones peligrosas</string>
+    <string name="mushroom_guide_edibility">Comestibilidad</string>
+    <string name="mushroom_guide_edibility_description">Comestibilidad: %1$d de 5</string>
+    <string name="mushroom_guide_photo_credit">Foto: %1$s · %2$s</string>
+    <string name="mushroom_guide_photo_credit_hint">Abrir el origen de la foto</string>
+    <string name="mushroom_guide_month_initials">E,F,M,A,M,J,J,A,S,O,N,D</string>
+    <string name="mushroom_guide_season_description">Temporada: %1$s</string>
+</resources>

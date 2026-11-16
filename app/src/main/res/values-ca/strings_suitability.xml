@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Zones probables d'una espècie (capa d'hàbitat de probabilitat). -->
+    <string name="suitability_find_button">On en puc trobar?</string>
+    <string name="suitability_find_description">Mostra al mapa les zones del teu voltant on l\'hàbitat és més favorable per a aquesta espècie.</string>
+    <string name="suitability_dialog_title">Busca zones probables</string>
+    <string name="suitability_dialog_text">El mapa destacarà on és més probable trobar %1$s al voltant del punt triat, segons els arbres dominants, el sòl i l\'orientació dels vessants.</string>
+    <string name="suitability_dialog_radius">Radi de cerca</string>
+    <string name="suitability_radius_value">%1$s km</string>
+    <string name="suitability_out_of_season">%1$s no és de temporada aquest mes: és poc probable que en trobis ara.</string>
+    <string name="suitability_dialog_disclaimer">Només és orientatiu. Cal connexió a internet. Els cercles grans es calculen de manera aproximada; apropa\'t per veure més detall.</string>
+    <string name="suitability_dialog_confirm">Mostra al mapa</string>
+    <string name="suitability_no_position">Encara no es coneix la teva posició. Obre el mapa, espera el GPS i torna-ho a provar.</string>
+    <string name="suitability_layer_title">Zones probables</string>
+    <string name="suitability_layer_description">%1$s, %2$s al voltant del punt triat</string>
+    <string name="suitability_layer_no_species">Tria un bolet a l\'apartat Bolets i toca «On en puc trobar?».</string>
+    <string name="suitability_legend_title">Zones probables</string>
+    <string name="suitability_legend_radius">Radi: %1$s</string>
+    <string name="suitability_legend_low">Baixa</string>
+    <string name="suitability_legend_high">Alta probabilitat</string>
+    <string name="suitability_legend_clear">Treu</string>
+    <string name="suitability_legend_show">Mostra les zones probables</string>
+    <string name="suitability_legend_note">Només orientatiu: combina els arbres (MFE25), el sòl (IGME 1:1.000.000) i l\'orientació. Apropa\'t per veure més detall.</string>
+    <string name="suitability_dialog_center">Busca al voltant de</string>
+    <string name="suitability_center_position">La meva posició</string>
+    <string name="suitability_center_map">Centre del mapa</string>
+    <string name="suitability_center_map_hint">El lloc on ara està centrat el mapa principal. Mou primer el mapa per buscar en una altra zona.</string>
+    <string name="suitability_no_map_center">Encara no s\'ha mostrat el mapa. Obre\'l, mou-lo a la zona on vols buscar i torna-ho a provar.</string>
+</resources>

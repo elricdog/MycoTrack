@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Quick logging from the recording notification -->
+    <string name="field_notification_action_mushroom">🍄 Seta encontrada</string>
+    <plurals name="field_notification_mushroom_saved">
+        <item quantity="one">🍄 Seta guardada · %1$d en esta salida</item>
+        <item quantity="other">🍄 Seta guardada · %1$d en esta salida</item>
+        <item quantity="many">🍄 Seta guardada · %1$d en esta salida</item>
+    </plurals>
+    <string name="field_notification_no_position">Todavía no hay posición GPS. No se ha guardado la seta.</string>
+
+    <!-- Voice dictation -->
+    <string name="field_dictate">Dictar la descripción</string>
+    <string name="field_dictation_prompt">Describe el hallazgo</string>
+    <string name="field_dictation_unavailable">El reconocimiento de voz no está disponible en este dispositivo</string>
+
+    <!-- Back to the car -->
+    <string name="field_parking_description">Coche</string>
+    <string name="field_map_button_car">Volver al coche</string>
+    <string name="field_car_chip">🚗 %1$s · %2$s</string>
+    <string name="field_car_distance">Coche: %1$s · %2$s · unos %3$s a pie</string>
+    <string name="field_car_unknown">No se sabe dónde está el coche.</string>
+
+    <!-- Safety warnings -->
+    <string name="field_safety_channel_name">Avisos de seguridad</string>
+    <string name="field_safety_channel_description">Avisos de puesta de sol y de batería baja mientras se graba una salida</string>
+    <plurals name="field_sunset_title">
+        <item quantity="one">Puesta de sol dentro de %1$d minuto</item>
+        <item quantity="other">Puesta de sol dentro de %1$d minutos</item>
+        <item quantity="many">Puesta de sol dentro de %1$d minutos</item>
+    </plurals>
+    <string name="field_sunset_text">El sol se pone a las %1$s. Es hora de volver.</string>
+    <string name="field_battery_title">Batería al %1$d%%</string>
+    <string name="field_battery_text">Ahorra batería para la vuelta.</string>
+
+    <!-- Settings -->
+    <string name="field_settings_safety">Seguridad</string>
+    <string name="field_settings_auto_parking">Guardar la posición del coche al empezar una salida</string>
+    <string name="field_settings_auto_parking_hint">Se añade un punto de aparcamiento con la primera posición GPS precisa (±30 m). Los avisos de puesta de sol y de batería baja se muestran siempre mientras se graba.</string>
+</resources>

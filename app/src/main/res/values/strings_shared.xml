@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Language -->
+    <string name="settings_language">Language</string>
+    <string name="language_system">System default</string>
+    <string name="language_catalan" translatable="false">Català</string>
+    <string name="language_spanish" translatable="false">Español</string>
+    <string name="language_english" translatable="false">English</string>
+
+    <!-- Theme -->
+    <string name="theme_system">System</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+
+    <!-- Waypoint categories -->
+    <string name="category_mushroom_found">Mushroom found</string>
+    <string name="category_mushroom_area">Mushroom area</string>
+    <string name="category_interesting_mushroom">Interesting mushroom</string>
+    <string name="category_promising_area">Promising area</string>
+    <string name="category_parking">Parking</string>
+    <string name="category_point_of_interest">Point of interest</string>
+    <string name="category_other">Other</string>
+
+    <!-- Map layers -->
+    <string name="layer_osm_street">Street map</string>
+    <string name="layer_osm_street_description">OpenStreetMap</string>
+    <string name="layer_icgc_topo">Topographic</string>
+    <string name="layer_icgc_topo_description">ICGC topographic</string>
+    <string name="layer_icgc_ortho">Orthophoto</string>
+    <string name="layer_icgc_ortho_description">ICGC aerial photography</string>
+    <string name="layer_icgc_hybrid">Hybrid</string>
+    <string name="layer_icgc_hybrid_description">ICGC orthophoto + labels</string>
+    <string name="layer_terrain">Terrain &amp; hillshade</string>
+    <string name="layer_terrain_description">Elevation model with hillshade</string>
+    <string name="layer_offline">Offline maps</string>
+    <string name="layer_offline_description">Downloaded MBTiles areas</string>
+
+    <!-- Export formats -->
+    <string name="export_format_gpx">GPX track</string>
+    <string name="export_format_geojson" translatable="false">GeoJSON</string>
+    <string name="export_format_kml" translatable="false">KML</string>
+    <string name="export_format_csv">CSV points</string>
+    <string name="export_format_zip">Complete package (ZIP)</string>
+    <string name="export_format_map">Map image (PNG)</string>
+    <string name="export_format_elevation">Elevation profile (PNG)</string>
+    <string name="export_format_report">Visual report (PNG)</string>
+
+    <!-- Permissions -->
+    <string name="perm_foreground_location_title">Location while using the app</string>
+    <string name="perm_foreground_location_purpose">Shows your position on the map and records the route of your trip.</string>
+    <string name="perm_foreground_location_rationale">MycoTrack needs your location to draw the route you walk. The GPS is read directly from the device, without Google Play Services, and nothing is ever uploaded.</string>
+    <string name="perm_foreground_location_consequence">Without this permission the map cannot show your position and no route can be recorded.</string>
+    <string name="perm_notifications_title">Notifications</string>
+    <string name="perm_notifications_purpose">Shows the ongoing recording notification while a trip is being recorded.</string>
+    <string name="perm_notifications_rationale">Android requires a visible notification for the service that keeps recording your route. It displays the elapsed time and the distance, and it lets you stop the recording without reopening the application.</string>
+    <string name="perm_notifications_consequence">Without notifications the recording service is stopped by the system as soon as the application goes to the background.</string>
+    <string name="perm_background_location_title">Location in the background</string>
+    <string name="perm_background_location_purpose">Keeps recording your route when the screen is off or another app is open.</string>
+    <string name="perm_background_location_rationale">Foraging trips last for hours and the phone is usually in a pocket with the screen off. This permission is what allows the route to keep being recorded in that situation, using the same foreground service that shows the notification.</string>
+    <string name="perm_background_location_consequence">Without it the route is only recorded while MycoTrack is visible on the screen.</string>
+    <string name="perm_camera_title">Camera</string>
+    <string name="perm_camera_purpose">Takes the geotagged photographs of the mushrooms you find.</string>
+    <string name="perm_camera_rationale">The photographs are stored on the device together with the coordinates, the altitude and the time of the shot, so you can find the spot again later.</string>
+    <string name="perm_camera_consequence">Without it you can still add waypoints by hand, but you cannot take a photograph from inside the application.</string>
+
+    <!-- Bundled offline areas -->
+    <string name="offline_bundled_catalonia_ortho">Catalonia orthophotography</string>
+    <string name="offline_bundled_catalonia_topo">Catalonia topographic</string>
+</resources>

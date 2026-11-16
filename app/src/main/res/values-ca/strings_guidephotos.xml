@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="guide_photos_more">Més fotos</string>
+    <string name="guide_photos_open">Obre la foto</string>
+    <string name="guide_photos_toxic">Tòxic</string>
+    <string name="guide_photos_not_edible">No comestible</string>
+    <string name="guide_photos_close">Tanca</string>
+    <string name="guide_photos_counter">%1$d / %2$d</string>
+    <string name="guide_photos_share">Comparteix la foto</string>
+    <string name="guide_photos_save">Desa al dispositiu</string>
+    <string name="guide_photos_saved">Foto desada a Imatges/%1$s</string>
+    <string name="guide_photos_action_error">No s\'ha pogut compartir ni desar la foto.</string>
+    <string name="guide_photos_source">Font</string>
+    <string name="guide_photos_licence">Llicència</string>
+    <string name="guide_habitat_chart_title">Arbres i sòls preferits</string>
+    <string name="guide_habitat_chart_expanded">Desplegat</string>
+    <string name="guide_habitat_chart_collapsed">Plegat</string>
+    <string name="guide_habitat_chart_trees">Tipus d\'arbre</string>
+    <string name="guide_habitat_chart_soil">Tipus de sòl</string>
+    <string name="guide_habitat_chart_aspect">Orientació</string>
+    <string name="guide_habitat_chart_note">Afinitat de l\'espècie per cada hàbitat (100% = preferit). Són els mateixos valors que puntuen les zones probables del mapa.</string>
+    <string name="guide_habitat_open_ground">Terreny obert (sense bosc)</string>
+    <string name="guide_habitat_bar_description">%1$s: %2$d%%</string>
+</resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">MycoTrack</string>
+
+    <!-- Navigation -->
+    <string name="nav_map">Map</string>
+    <string name="nav_history">History</string>
+    <string name="nav_gallery">Gallery</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Recording -->
+    <string name="start_recording">START</string>
+    <string name="stop_recording">END</string>
+    <string name="recording_notification_title">MycoTrack is recording</string>
+    <string name="recording_notification_waiting">Waiting for the GPS signal…</string>
+    <string name="recording_notification_progress" translatable="false">%1$s · %2$s</string>
+    <string name="recording_notification_stop">Stop</string>
+    <string name="recording_channel_name">Trip recording</string>
+    <string name="recording_channel_description">Shows the ongoing recording of the current trip</string>
+
+    <!-- Map -->
+    <string name="map_layer">Map layer</string>
+    <string name="map_layers">Layers</string>
+    <string name="overlay_routes">Previous routes</string>
+    <string name="follow_position">Follow my position</string>
+    <string name="elevation_profile">Elevation profile</string>
+    <string name="take_photo">Take photo</string>
+    <string name="add_waypoint">Add waypoint</string>
+
+    <!-- Statistics -->
+    <string name="stat_distance">Distance</string>
+    <string name="stat_duration">Duration</string>
+    <string name="stat_speed">Speed</string>
+    <string name="stat_max_speed">Max speed</string>
+    <string name="stat_altitude">Altitude</string>
+    <string name="stat_gain">Gain</string>
+    <string name="stat_loss">Loss</string>
+    <string name="stat_moving_time">Moving</string>
+    <string name="stat_stationary_time">Stationary</string>
+    <string name="stat_photos">Photos</string>
+    <string name="stat_waypoints">Waypoints</string>
+
+    <!-- History -->
+    <string name="history_empty">No trips recorded yet</string>
+    <string name="history_empty_hint">Press START on the map to record your first trip.</string>
+    <string name="search_trips">Search by name or notes</string>
+    <string name="trip_notes">Notes</string>
+    <string name="trip_name">Trip name</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="rename">Rename</string>
+    <string name="filters">Filters</string>
+    <string name="delete_trip_title">Delete this trip?</string>
+
+    <!-- Gallery -->
+    <string name="gallery_empty">No photographs yet</string>
+    <string name="gallery_empty_hint">Photographs taken during a trip appear here.</string>
+    <string name="description">Description</string>
+    <string name="category">Category</string>
+
+    <!-- Settings -->
+    <string name="gps_settings">GPS</string>
+    <string name="appearance">Appearance</string>
+    <string name="offline_maps">Offline maps</string>
+    <string name="download_area">Download area</string>
+    <string name="delete_area">Delete area</string>
+    <string name="permissions">Permissions</string>
+    <string name="grant">Grant</string>
+    <string name="export">Export</string>
+
+    <!-- Export -->
+    <string name="export_share">Share</string>
+    <string name="export_failed">The export failed</string>
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    MycoTrack talks to the Internet over HTTPS only: OpenStreetMap, the ICGC tile
+    servers and the elevation tiles are all reached through TLS.
+
+    The single exception is the local tile server that serves the offline MBTiles
+    packs to MapLibre. It listens on the loopback interface only, so its traffic
+    never leaves the device, but it speaks plain HTTP and therefore has to be
+    explicitly allowed.
+
+    Cleartext is permitted for the loopback addresses alone; every other host keeps
+    the secure default.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false" />
+
+    <domain-config cleartextTrafficPermitted="true">
+        <!-- The offline tile server started by LocalTileServer. -->
+        <domain includeSubdomains="false">127.0.0.1</domain>
+        <domain includeSubdomains="false">localhost</domain>
+        <!-- The loopback alias of the host machine seen from the Android emulator. -->
+        <domain includeSubdomains="false">10.0.2.2</domain>
+    </domain-config>
+</network-security-config>

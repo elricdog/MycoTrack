@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Gallery: deletion, waypoints without photo and "Show on map" -->
+    <string name="galmap_show_on_map">Mostra al mapa</string>
+    <string name="galmap_long_press_hint">Mantén premut un element per seleccionar-ne diversos.</string>
+    <string name="galmap_no_photo">Punt sense foto</string>
+    <string name="galmap_delete_selected">Suprimeix els punts seleccionats</string>
+    <string name="galmap_delete_title">Vols suprimir aquest punt?</string>
+    <string name="galmap_delete_message_photo">El punt i la seva foto se suprimiran per sempre.</string>
+    <string name="galmap_delete_message_no_photo">El punt se suprimirà per sempre.</string>
+    <plurals name="galmap_delete_selected_title">
+        <item quantity="one">Vols suprimir %1$d punt i la seva foto?</item>
+        <item quantity="many">Vols suprimir %1$d punts i les seves fotos?</item>
+        <item quantity="other">Vols suprimir %1$d punts i les seves fotos?</item>
+    </plurals>
+    <string name="galmap_delete_selected_message">Aquesta acció no es pot desfer.</string>
+    <plurals name="galmap_deleted">
+        <item quantity="one">S\'ha suprimit %1$d punt</item>
+        <item quantity="many">S\'han suprimit %1$d punts</item>
+        <item quantity="other">S\'han suprimit %1$d punts</item>
+    </plurals>
+
+    <!-- History: route colours -->
+    <string name="tripcolor_title">Color de la ruta</string>
+    <string name="tripcolor_change">Canvia el color de la ruta</string>
+    <string name="tripcolor_automatic">Automàtic</string>
+    <string name="tripcolor_automatic_hint">El color depèn de l\'ordre de les rutes superposades al mapa.</string>
+    <string name="tripcolor_auto_badge">A</string>
+    <string name="tripcolor_red">Vermell</string>
+    <string name="tripcolor_orange">Taronja</string>
+    <string name="tripcolor_yellow">Groc</string>
+    <string name="tripcolor_magenta">Magenta</string>
+    <string name="tripcolor_pink">Rosa</string>
+    <string name="tripcolor_purple">Lila</string>
+    <string name="tripcolor_blue">Blau</string>
+    <string name="tripcolor_navy">Blau marí</string>
+    <string name="tripcolor_cyan">Cian</string>
+    <string name="tripcolor_brown">Marró</string>
+    <string name="tripcolor_black">Negre</string>
+    <string name="tripcolor_white">Blanc</string>
+</resources>

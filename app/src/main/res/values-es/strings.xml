@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Navigation -->
+    <string name="nav_map">Mapa</string>
+    <string name="nav_history">Historial</string>
+    <string name="nav_gallery">Galería</string>
+    <string name="nav_settings">Ajustes</string>
+
+    <!-- Recording -->
+    <string name="start_recording">INICIO</string>
+    <string name="stop_recording">FIN</string>
+    <string name="recording_notification_title">MycoTrack está grabando</string>
+    <string name="recording_notification_waiting">Esperando la señal GPS…</string>
+    <string name="recording_notification_stop">Detener</string>
+    <string name="recording_channel_name">Grabación de salidas</string>
+    <string name="recording_channel_description">Muestra la grabación en curso de la salida actual</string>
+
+    <!-- Map -->
+    <string name="map_layer">Capa del mapa</string>
+    <string name="map_layers">Capas</string>
+    <string name="overlay_routes">Rutas anteriores</string>
+    <string name="follow_position">Seguir mi posición</string>
+    <string name="elevation_profile">Perfil de elevación</string>
+    <string name="take_photo">Hacer una foto</string>
+    <string name="add_waypoint">Añadir un punto</string>
+
+    <!-- Statistics -->
+    <string name="stat_distance">Distancia</string>
+    <string name="stat_duration">Duración</string>
+    <string name="stat_speed">Velocidad</string>
+    <string name="stat_max_speed">Velocidad máx.</string>
+    <string name="stat_altitude">Altitud</string>
+    <string name="stat_gain">Desnivel +</string>
+    <string name="stat_loss">Desnivel −</string>
+    <string name="stat_moving_time">En movimiento</string>
+    <string name="stat_stationary_time">Parado</string>
+    <string name="stat_photos">Fotos</string>
+    <string name="stat_waypoints">Puntos</string>
+
+    <!-- History -->
+    <string name="history_empty">Todavía no hay ninguna salida</string>
+    <string name="history_empty_hint">Pulsa INICIO en el mapa para grabar tu primera salida.</string>
+    <string name="search_trips">Buscar por nombre o notas</string>
+    <string name="trip_notes">Notas</string>
+    <string name="trip_name">Nombre de la salida</string>
+    <string name="save">Guardar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="delete">Eliminar</string>
+    <string name="edit">Editar</string>
+    <string name="rename">Cambiar el nombre</string>
+    <string name="filters">Filtros</string>
+    <string name="delete_trip_title">¿Eliminar esta salida?</string>
+
+    <!-- Gallery -->
+    <string name="gallery_empty">Todavía no hay fotografías</string>
+    <string name="gallery_empty_hint">Las fotografías tomadas durante una salida aparecen aquí.</string>
+    <string name="description">Descripción</string>
+    <string name="category">Categoría</string>
+
+    <!-- Settings -->
+    <string name="gps_settings">GPS</string>
+    <string name="appearance">Apariencia</string>
+    <string name="offline_maps">Mapas sin conexión</string>
+    <string name="download_area">Descargar una zona</string>
+    <string name="delete_area">Eliminar la zona</string>
+    <string name="permissions">Permisos</string>
+    <string name="grant">Conceder</string>
+    <string name="export">Exportar</string>
+
+    <!-- Export -->
+    <string name="export_share">Compartir</string>
+    <string name="export_failed">La exportación ha fallado</string>
+</resources>

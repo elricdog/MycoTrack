@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Habitat overlays of the map (slope orientation, tree species and soil). -->
+    <string name="habitat_section_title">Habitat layers</string>
+    <string name="habitat_section_description">Drawn on top of any base map. They need an internet connection: without it they simply stay empty. Pick the classes to show in the habitat legend.</string>
+    <string name="habitat_aspect_title">Slope orientation</string>
+    <string name="habitat_aspect_description">North-facing slopes (blue lines) are shadier and wetter, usually better for mushrooms; south-facing ones (orange lines) are sunnier and drier. Drawn as lines so the layers below stay visible. Computed from elevation data.</string>
+    <string name="habitat_trees_title">Tree types</string>
+    <string name="habitat_trees_description">Dominant tree species of every forest, from the Spanish Forest Map (MITECO). Visible from zoom level 7.</string>
+    <string name="habitat_soil_title">Soil (substrate)</string>
+    <string name="habitat_soil_description">Acid (siliceous) or basic (calcareous) bedrock, from the lithological map of the IGME. Many mushrooms prefer one of them: chanterelles and many boletes grow on acid soils, while others such as some milk caps or morels prefer limestone. Rough guide at 1:1,000,000.</string>
+
+    <string name="habitat_legend_title">Habitat legend</string>
+    <string name="habitat_legend_expand">Show the legend</string>
+    <string name="habitat_legend_collapse">Hide the legend</string>
+    <string name="habitat_legend_aspect">Orientation</string>
+    <string name="habitat_legend_trees">Tree types</string>
+    <string name="habitat_legend_soil">Soil (substrate)</string>
+    <string name="habitat_legend_all">All</string>
+    <string name="habitat_legend_none">None</string>
+    <string name="habitat_legend_expand_section">Show %1$s</string>
+    <string name="habitat_legend_collapse_section">Hide %1$s</string>
+    <string name="habitat_trees_source">Mapa Forestal de España © MITECO (CC BY 4.0)</string>
+    <string name="habitat_soil_source">Mapa litológico de España 1:1.000.000 © IGME-CSIC (CC BY 4.0)</string>
+    <string name="habitat_soil_mapping">Granite, gneiss, slate, quartzite and sandstone give acid soils; limestone, dolomite, marl and gypsum give basic ones. Mixed series, river deposits and volcanic rocks are shown as other.</string>
+
+    <string name="habitat_aspect_north">North-facing</string>
+    <string name="habitat_aspect_neutral">East / west</string>
+    <string name="habitat_aspect_south">South-facing</string>
+
+    <string name="habitat_tree_holm_oak">Holm oak</string>
+    <string name="habitat_tree_cork_oak">Cork oak</string>
+    <string name="habitat_tree_downy_oak">Downy oak</string>
+    <string name="habitat_tree_portuguese_oak">Portuguese oak</string>
+    <string name="habitat_tree_sessile_oak">Sessile / pedunculate oak</string>
+    <string name="habitat_tree_pyrenean_oak">Pyrenean oak</string>
+    <string name="habitat_tree_beech">Beech</string>
+    <string name="habitat_tree_chestnut">Chestnut</string>
+    <string name="habitat_tree_birch">Birch</string>
+    <string name="habitat_tree_strawberry_tree">Strawberry tree</string>
+    <string name="habitat_tree_wild_olive">Wild olive</string>
+    <string name="habitat_tree_mixed_broadleaf">Mixed broadleaf forest</string>
+    <string name="habitat_tree_scots_pine">Scots pine</string>
+    <string name="habitat_tree_mountain_pine">Mountain pine</string>
+    <string name="habitat_tree_black_pine">Black pine</string>
+    <string name="habitat_tree_aleppo_pine">Aleppo pine</string>
+    <string name="habitat_tree_stone_pine">Stone pine</string>
+    <string name="habitat_tree_maritime_pine">Maritime pine</string>
+    <string name="habitat_tree_fir_other_conifers">Fir and other conifers</string>
+    <string name="habitat_tree_mixed_conifers">Mixed conifers</string>
+    <string name="habitat_tree_mixed_conifer_broadleaf">Mixed conifers and broadleaves</string>
+    <string name="habitat_tree_riparian">Riparian forest</string>
+    <string name="habitat_tree_other_broadleaf">Other broadleaves (ash, hazel…)</string>
+    <string name="habitat_tree_junipers">Junipers</string>
+    <string name="habitat_tree_plantations">Production plantations (poplar…)</string>
+    <string name="habitat_tree_native_non_native">Native mixed with non-native trees</string>
+    <string name="habitat_tree_non_native">Non-native trees (planted conifers, robinia…)</string>
+
+    <string name="habitat_soil_group_acid">Acid / siliceous</string>
+    <string name="habitat_soil_group_basic">Basic / calcareous</string>
+    <string name="habitat_soil_group_other">Mixed or other</string>
+    <string name="habitat_soil_granitoids">Granite and granodiorite</string>
+    <string name="habitat_soil_two_mica_granites">Two-mica granite</string>
+    <string name="habitat_soil_felsic_plutonic">Felsic plutonic rocks</string>
+    <string name="habitat_soil_gneiss">Gneiss</string>
+    <string name="habitat_soil_migmatites">Migmatite and undifferentiated granitoids</string>
+    <string name="habitat_soil_slates_greywackes">Slate, greywacke and quartzite</string>
+    <string name="habitat_soil_quartzites_slates">Quartzite, slate and sandstone (some limestone)</string>
+    <string name="habitat_soil_felsic_volcanic">Felsic volcanic rocks</string>
+    <string name="habitat_soil_limestones_dolomites">Limestone, dolomite and marl</string>
+    <string name="habitat_soil_dolomites_marls">Dolomite, limestone and marl</string>
+    <string name="habitat_soil_calcarenites_marls">Calcarenite, marl and clay</string>
+    <string name="habitat_soil_basin_evaporites">Sandstone, clay, limestone and evaporites</string>
+    <string name="habitat_soil_triassic_gypsum">Sandstone, limestone, gypsum and variegated clay</string>
+    <string name="habitat_soil_sandstones_slates_limestones">Sandstone, slate and limestone</string>
+    <string name="habitat_soil_coal_series">Conglomerate, sandstone, slate and limestone with coal</string>
+    <string name="habitat_soil_schists_marbles">Mica schist, phyllite and marble</string>
+    <string name="habitat_soil_conglomerates_mudstones">Conglomerate, sandstone and mudstone</string>
+    <string name="habitat_soil_alluvium">Gravel, sand and silt (river deposits)</string>
+    <string name="habitat_soil_volcaniclastic">Volcanic and volcaniclastic rocks</string>
+    <string name="habitat_soil_mafic_volcanic">Mafic volcanic rocks (basalt)</string>
+    <string name="habitat_soil_mixed_volcanic">Mafic and felsic volcanic rocks</string>
+    <string name="habitat_soil_mixed_plutonic">Mafic and felsic plutonic rocks</string>
+    <string name="habitat_soil_ultramafic">Serpentinite, peridotite and ultramafic rocks</string>
+</resources>

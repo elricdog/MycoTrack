@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Quick logging from the recording notification -->
+    <string name="field_notification_action_mushroom">🍄 Mushroom found</string>
+    <plurals name="field_notification_mushroom_saved">
+        <item quantity="one">🍄 Mushroom saved · %1$d on this trip</item>
+        <item quantity="other">🍄 Mushroom saved · %1$d on this trip</item>
+    </plurals>
+    <string name="field_notification_no_position">No GPS position yet. The mushroom was not saved.</string>
+
+    <!-- Voice dictation -->
+    <string name="field_dictate">Dictate the description</string>
+    <string name="field_dictation_prompt">Describe the find</string>
+    <string name="field_dictation_unavailable">Speech recognition is not available on this device</string>
+
+    <!-- Back to the car -->
+    <string name="field_parking_description">Car</string>
+    <string name="field_map_button_car">Back to the car</string>
+    <string name="field_car_chip">🚗 %1$s · %2$s</string>
+    <string name="field_car_distance">Car: %1$s · %2$s · about %3$s walking</string>
+    <string name="field_car_unknown">The position of the car is unknown.</string>
+
+    <!-- Safety warnings -->
+    <string name="field_safety_channel_name">Safety warnings</string>
+    <string name="field_safety_channel_description">Sunset and low battery warnings while a trip is being recorded</string>
+    <plurals name="field_sunset_title">
+        <item quantity="one">Sunset in %1$d minute</item>
+        <item quantity="other">Sunset in %1$d minutes</item>
+    </plurals>
+    <string name="field_sunset_text">The sun sets at %1$s. Start heading back.</string>
+    <string name="field_battery_title">Battery at %1$d%%</string>
+    <string name="field_battery_text">Save battery for the way back.</string>
+
+    <!-- Settings -->
+    <string name="field_settings_safety">Safety</string>
+    <string name="field_settings_auto_parking">Save the car position when a trip starts</string>
+    <string name="field_settings_auto_parking_hint">A Parking point is added at the first accurate GPS fix (±30 m). Sunset and low battery warnings are always shown while recording.</string>
+</resources>

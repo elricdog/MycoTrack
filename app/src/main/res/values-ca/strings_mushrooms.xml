@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_mushrooms">Bolets</string>
+    <string name="mushroom_guide_title">Guia de bolets comestibles</string>
+    <string name="mushroom_guide_search">Cerca per nom</string>
+    <string name="mushroom_guide_in_season">De temporada</string>
+    <string name="mushroom_guide_disclaimer_title">No mengeu mai un bolet si no n\'esteu segurs</string>
+    <string name="mushroom_guide_disclaimer">Mengeu un bolet silvestre només si un expert l\'ha identificat amb tota seguretat. Aquesta guia és només orientativa i no substitueix un expert: algunes espècies mortals s\'assemblen molt a les comestibles.</string>
+    <string name="mushroom_guide_no_match">No s\'ha trobat cap bolet</string>
+    <string name="mushroom_guide_no_match_hint">Proveu un altre nom o desactiveu el filtre de temporada.</string>
+    <string name="mushroom_guide_not_found">Aquesta espècie no és a la guia.</string>
+    <string name="mushroom_guide_back">Enrere</string>
+    <string name="mushroom_guide_section_culinary">A la cuina</string>
+    <string name="mushroom_guide_section_habitat">Hàbitat</string>
+    <string name="mushroom_guide_section_season">Temporada</string>
+    <string name="mushroom_guide_section_look_alikes">Confusions perilloses</string>
+    <string name="mushroom_guide_edibility">Comestibilitat</string>
+    <string name="mushroom_guide_edibility_description">Comestibilitat: %1$d de 5</string>
+    <string name="mushroom_guide_photo_credit">Foto: %1$s · %2$s</string>
+    <string name="mushroom_guide_photo_credit_hint">Obre l\'origen de la foto</string>
+    <string name="mushroom_guide_month_initials">G,F,M,A,M,J,J,A,S,O,N,D</string>
+    <string name="mushroom_guide_season_description">Temporada: %1$s</string>
+</resources>

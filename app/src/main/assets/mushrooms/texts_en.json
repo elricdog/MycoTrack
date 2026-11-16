@@ -1,0 +1,240 @@
+{
+  "rovello": {
+    "commonName": "Saffron milk cap",
+    "culinary": "One of the most popular wild mushrooms in Catalonia. The flesh is firm and slightly grainy, with a mild, pleasant flavour. It is best grilled on the embers with garlic, parsley and olive oil, and it also goes well with sausages, rice and stews. Harmlessly, it can turn urine reddish after a meal.",
+    "habitat": "Grows under pines (Aleppo, maritime, Scots and stone pine), on both acidic and limestone soils, from the coast up to the mountains. Look for it in grassy clearings and on mossy banks of pine woods, often near paths. Typical areas include the Solsonès, the Berguedà, the Montseny and most pine forests of the pre-Pyrenees.",
+    "season": "Autumn, mainly from September to December, after the first rains following the summer. In warm years it can last until early winter on the coast.",
+    "lookAlikes": "Its key feature is the carrot-orange milk that slowly turns green; reject any milk cap with white milk. The woolly milk cap (Lactarius torminosus), with a hairy, pinkish rolled margin and white, acrid milk, is toxic and causes severe gastroenteritis. Lactarius chrysorrheus, under oaks, has white milk that turns yellow and is also indigestible."
+  },
+  "pinetell": {
+    "commonName": "Bloody milk cap",
+    "culinary": "Considered by many foragers even better than the saffron milk cap: its flesh is firmer and more aromatic. It is cooked in the same ways, grilled with garlic and parsley or sautéed, and keeps well in stews and preserves. It must always be cooked.",
+    "habitat": "Typical of Mediterranean pine woods, especially Aleppo and stone pine on limestone soils, from the lowlands to mid-altitude. It is common in the inland and southern counties of Catalonia (Bages, Anoia, Priorat, Garraf) and is less frequent on acidic soils.",
+    "season": "Autumn, from September to December, usually a little earlier than the saffron milk cap in the same areas.",
+    "lookAlikes": "It is recognised by its wine-red milk, which does not change much when exposed to air, and by its greyish-orange cap with vinous tones. As with all milk caps, discard any specimen with white milk, such as the toxic woolly milk cap (Lactarius torminosus), which has a hairy margin and very acrid white milk."
+  },
+  "cep": {
+    "commonName": "Penny bun (porcini)",
+    "culinary": "A first-class edible with white, firm flesh and a nutty flavour that intensifies when dried. Young specimens can be eaten raw in thin slices; it is excellent sautéed, grilled, in rice dishes, in sauces and in cream. Older ones with soft, greenish pores are best dried or discarded.",
+    "habitat": "Forms mycorrhizae with many trees: beech, chestnut, oaks, firs, spruces and pines, mostly on acidic soils. In Catalonia it is most abundant at mid and high altitudes, such as in the Pyrenees, the Montseny, the Guilleries and the Montnegre.",
+    "season": "From late summer to autumn, mainly from August to November. Flushes appear after warm rains; in some years there are also early crops in June.",
+    "lookAlikes": "The bitter bolete (Tylopilus felleus) has pinkish pores and a dark network on the stem; it is not dangerous but extremely bitter. Avoid any bolete with red or orange pores or whose flesh turns blue when cut, such as the devil's bolete (Rubroboletus satanas), which is toxic. A cep has white to yellow-green pores, a pale network on the top of the stem and white flesh that does not change colour."
+  },
+  "cep_estiu": {
+    "commonName": "Summer cep / Bronze bolete",
+    "culinary": "As good as the penny bun, with a slightly sweeter flavour and very firm flesh, especially the bronze bolete (Boletus aereus). It is used in the same ways: raw when young and healthy, sautéed, grilled, in rice or dried. Summer specimens are often infested by larvae, so check them before cooking.",
+    "habitat": "Grows in broadleaf woods: oaks, holm oaks, cork oaks, chestnuts and beeches. The summer cep (Boletus reticulatus) prefers deciduous woods at mid-altitude, while the bronze bolete thrives in warm Mediterranean holm oak and cork oak forests such as the Gavarres, the Montseny and the Montnegre.",
+    "season": "The earliest of the ceps: from June to October, appearing after summer storms.",
+    "lookAlikes": "Same rules as for the cep: reject boletes with red or orange pores, with flesh that turns blue, or with a bitter taste; the devil's bolete (Rubroboletus satanas), with red pores, is poisonous. The bitter bolete (Tylopilus felleus) has pink pores and a dark network on the stem. The summer cep has a dry, matt light brown cap and a network that covers almost the whole stem; the bronze bolete has a very dark brown cap."
+  },
+  "rossinyol": {
+    "commonName": "Chanterelle",
+    "culinary": "Highly appreciated for its fruity smell, reminiscent of apricot, and its slightly peppery flavour. The flesh is firm and somewhat elastic. It is ideal sautéed (dry-fry it first to release water), with scrambled eggs, rice, pasta or meat. It does not dry well; it is better frozen after cooking.",
+    "habitat": "Grows in both broadleaf and conifer woods (oak, beech, chestnut, pine, fir), usually on acidic, mossy soils. In Catalonia it is common in the Montseny, the Guilleries, the Montnegre, the Pyrenees and the pre-Pyrenees.",
+    "season": "From June to November; it is one of the mushrooms that appears with summer storms and continues through autumn.",
+    "lookAlikes": "The chanterelle has blunt, forked ridges running down the stem, not true gills, and is egg-yolk yellow. The jack-o'-lantern (Omphalotus olearius) is toxic: it is orange, has true thin gills and grows in clusters on stumps or roots of olive trees and oaks. The false chanterelle (Hygrophoropsis aurantiaca) is orange, has thin, true forked gills and is of poor quality."
+  },
+  "camagroc": {
+    "commonName": "Yellowfoot",
+    "culinary": "A very aromatic mushroom, highly valued in Catalan cooking. It is thin and slightly chewy, with a pleasant fruity smell. It is used in rice dishes, cannelloni, sauces and stews, and it dries extremely well, keeping its aroma.",
+    "habitat": "Grows in large groups among moss in damp pine woods and mixed woods, often near streams and on limestone soils. It is typical of mid-mountain areas such as the Solsonès, the Berguedà, the Ripollès and the pre-Pyrenees.",
+    "season": "Late autumn and winter, from October to January; it withstands the first frosts.",
+    "lookAlikes": "It has no real gills: the underside is almost smooth or slightly wrinkled, pinkish-orange, and the stem is yellow-orange and hollow. Similar edible relatives exist, like Craterellus tubaeformis. Discard any small brown mushroom with true blade-like gills, since some toxic species (for example certain Cortinarius) can grow nearby."
+  },
+  "trompeta_morts": {
+    "commonName": "Horn of plenty (black trumpet)",
+    "culinary": "An excellent, very aromatic mushroom with thin, slightly elastic flesh. It is cooked in sauces, rice, omelettes and with meat. It dries very well and can be ground into a powder used as a seasoning.",
+    "habitat": "Grows in groups in broadleaf woods, especially beech, oak, chestnut and hazel, on rich and damp soils covered with leaf litter. It is common in the Montseny, the Garrotxa, the Guilleries and the Pyrenean beech woods.",
+    "season": "Autumn, mainly from September to December.",
+    "lookAlikes": "It is shaped like a hollow trumpet open all the way to the base, dark grey to black, with an outer surface that is smooth or only slightly wrinkled and never has gills. There are no dangerous look-alikes if these features are checked, but discard any dark mushroom with true gills or a solid stem. Some dark elfin saddles (Helvella lacunosa), with an irregular saddle-shaped cap and a grooved, chambered stem, are poisonous raw and should not be picked."
+  },
+  "ou_de_reig": {
+    "commonName": "Caesar's mushroom",
+    "culinary": "One of the most prized edible mushrooms since Roman times. It has a delicate, slightly sweet flavour and tender flesh. Well-identified mature specimens can be eaten raw in carpaccio or salads, and it is also excellent lightly grilled.",
+    "habitat": "A thermophilous species that grows in sunny clearings of cork oak, holm oak, oak and chestnut woods, on acidic soils. In Catalonia it is found in areas such as the Gavarres, the Montseny, the Montnegre and the Alt Empordà.",
+    "season": "From July to October, especially after warm summer storms.",
+    "lookAlikes": "Confusion can be deadly. The fly agaric (Amanita muscaria) has a red cap with white warts (which rain can wash away), white gills and a white stem; the ou de reig has yellow gills, a yellow stem and ring, and a large white sac-like volva. In the closed egg stage it can be mistaken for the death cap (Amanita phalloides), which is lethal: never collect eggs, and if one is cut in half it must show an orange cap and yellow tissue inside."
+  },
+  "llenega_negra": {
+    "commonName": "Black slimy waxcap",
+    "culinary": "A good edible mushroom with mild flavour and soft, juicy flesh. Remove the slimy skin of the cap and clean it carefully. It is cooked grilled, in stews with meat or potatoes, and in rice dishes.",
+    "habitat": "Grows under pines, especially black pine and Aleppo pine, on limestone soils. It is typical of the inland areas of Catalonia and the pre-Pyrenees, and often appears in groups near the trunks.",
+    "season": "Late autumn and winter, from October to January, frequently after the first cold spells.",
+    "lookAlikes": "It has a very slimy dark grey-brown cap, thick, distant, white decurrent gills and a slimy stem. Slimy Cortinarius species, some of them toxic, can look similar but their gills turn rusty brown and they have a cobweb-like veil. Other edible llenegues (such as Hygrophorus hypothejus) have yellowish gills."
+  },
+  "moixerno": {
+    "commonName": "St George's mushroom",
+    "culinary": "One of the most valued and expensive mushrooms in Catalonia. Its white flesh is firm, with a strong smell of fresh flour. It is perfect in omelettes, with scrambled eggs, with cream or with meat. It is usually cooked in small amounts because of its intense flavour.",
+    "habitat": "Grows in rings or lines in mountain meadows and pastures, forest edges, near hawthorn and blackthorn bushes, mainly on limestone soils. It is typical of the Pyrenees and pre-Pyrenees (Cerdanya, Ripollès, Berguedà, Pallars).",
+    "season": "Spring, from April to June; it is traditionally associated with Saint George's Day (23 April).",
+    "lookAlikes": "Very dangerous confusions exist. Inocybe erubescens, which grows in the same habitat and season, has a fibrous cap that reddens and grey-brown gills; it is potentially deadly. The livid entoloma (Entoloma sinuatum) is toxic: its gills turn yellowish and then pink and it usually appears in summer and autumn. A moixernó has a white or cream cap, crowded white gills, a white spore print and a floury smell."
+  },
+  "cama_sec": {
+    "commonName": "Fairy ring champignon",
+    "culinary": "A small but very aromatic mushroom with a slight almond flavour. Only the caps are eaten, since the stems are tough. It is excellent in sauces, rice dishes and stews, and it dries extremely well.",
+    "habitat": "Grows in rings in meadows, pastures, grassy clearings and roadside verges, often on limestone soils. It is common in grasslands of the Pyrenees, the pre-Pyrenees and the central Catalan plateau.",
+    "season": "Two flushes: in spring (April to June) and in autumn (September to November), after rain.",
+    "lookAlikes": "Very dangerous confusion with small white Clitocybe species (Clitocybe dealbata, C. rivulosa), which contain muscarine and can grow in the same rings. Clitocybes have crowded gills running down the stem and a powdery white cap. The cama-sec has a bell-shaped tan cap with a central bump, widely spaced gills and a tough, elastic stem that can be twisted without breaking."
+  },
+  "fredolic": {
+    "commonName": "Grey knight",
+    "culinary": "A traditional edible in Catalonia, with mild flavour and soft flesh. It is cooked in stews, rice, omelettes and with meat. As a precaution, it should be eaten in moderate amounts.",
+    "habitat": "Grows in groups under pines, often on limestone soils, in the lowlands and at mid-altitude. It is common across inland Catalonia, the pre-Pyrenees and the Pyrenees.",
+    "season": "Late autumn and winter, from October to January; it can appear even after frosts, hence its name.",
+    "lookAlikes": "The tiger tricholoma (Tricholoma pardinum) is toxic and causes severe gastroenteritis: it is larger and fleshier, with a pale cap covered with dark scales and a floury smell. Tricholoma virgatum has a pointed cap and a bitter, peppery taste and is toxic. The fredolic is small, with a grey felty cap, grey-white gills and no ring; discard any specimen with a strong smell or bitter taste."
+  },
+  "murgola": {
+    "commonName": "Morel",
+    "culinary": "A gourmet mushroom with a unique flavour. It is TOXIC RAW and must always be cooked thoroughly; dried morels must be rehydrated and then cooked. It is excellent in cream sauces, stuffed and with meat. Clean it carefully because sand and insects hide in its pits.",
+    "habitat": "Grows in riversides and woods with ash, elm and poplar, in orchards, gardens and burned areas, mainly on limestone soils. It is found in the Pyrenees, pre-Pyrenees and along inland rivers.",
+    "season": "Spring, from March to May.",
+    "lookAlikes": "The false morel (Gyromitra esculenta) is potentially deadly: its cap is brain-shaped, irregularly folded rather than honeycombed, and inside it is divided into chambers. A true morel has a cap with honeycomb pits, joined to the stem at its base, and is completely hollow from top to bottom when cut lengthwise."
+  },
+  "apagallums": {
+    "commonName": "Parasol mushroom",
+    "culinary": "An excellent edible mushroom with a delicate, nutty flavour. Only the cap is eaten, as the stem is fibrous. It is delicious battered, breaded or grilled with garlic and parsley.",
+    "habitat": "Grows in clearings and edges of woods, meadows, heathland and roadside verges, in oak, chestnut and pine woods. It is common from the lowlands to the mountains all over Catalonia.",
+    "season": "From late summer to autumn, mainly from August to November.",
+    "lookAlikes": "Small Lepiota species (Lepiota brunneoincarnata, L. helveola and relatives) contain deadly amatoxins: never collect specimens with a cap smaller than 10 cm. The parasol has a stem with a snakeskin pattern, a double ring that slides along the stem and no volva. The shaggy parasol (Chlorophyllum rhacodes) reddens when cut and can cause digestive upsets."
+  },
+  "girgola": {
+    "commonName": "Oyster mushroom",
+    "culinary": "A good edible with firm flesh and mild flavour, also widely cultivated. It is delicious grilled with garlic and parsley, sautéed or in stews. Wild specimens should be picked young, as old ones become tough.",
+    "habitat": "Grows in overlapping clusters on dead or weakened trunks of broadleaf trees, especially poplar, beech, willow and elm. It is found in riverside woods and beech forests all over Catalonia.",
+    "season": "Late autumn and winter, from October to March; it often appears after the first cold spells.",
+    "lookAlikes": "The jack-o'-lantern (Omphalotus olearius) is toxic: it is bright orange and grows on the roots and stumps of olive trees and oaks. Avoid thin white shell-shaped mushrooms on conifer wood (Pleurocybella porrigens), which have been linked to serious poisonings. The gírgola has a grey-brown to bluish cap, white gills running down to a short lateral stem and grows on broadleaf wood."
+  },
+  "cep_pi": {
+    "commonName": "Pine bolete",
+    "culinary": "An excellent edible, considered by many the tastiest of the porcini, with white, firm, fragrant flesh. It is cooked like the cep: raw in thin slices when young, grilled, sautéed, in rice dishes, sauces or dried.",
+    "habitat": "It lives mainly in Scots pine and mountain pine woods, and also with fir, beech and chestnut, on acid soils. In Catalonia it is typical of the Pyrenees and Pre-Pyrenees (Cerdanya, Ripollès, Berguedà, Solsonès) and of Montseny.",
+    "season": "It has a late spring flush (May and June) in the mountains and another one in autumn, September to November.",
+    "lookAlikes": "It is recognised by its reddish-brown to mahogany cap, the stout stem with a pale net and pores going from white to greenish yellow; the flesh is white and does not change colour. The bitter bolete (Tylopilus felleus) has pinkish pores and a dark net on the stem and is extremely bitter. Avoid any bolete with red or orange pores or flesh that turns blue, such as the poisonous Satan's bolete (Rubroboletus satanas)."
+  },
+  "carlet": {
+    "commonName": "Charcoal burner",
+    "culinary": "One of the best and most sought-after russulas. Its flesh is white, firm and mild, and it keeps its texture when cooked. It is excellent grilled with garlic and parsley, sautéed, in omelettes and in meat or potato stews.",
+    "habitat": "It grows in broadleaf woods, especially beech, chestnut, cork oak, holm oak and oak forests, and sometimes in mixed woods with pines. It prefers fresh, acid soils from the lowlands to mid mountains: Montseny, Guilleries, Montnegre, Gavarres and the Pyrenees.",
+    "season": "From late spring to autumn, mainly June to November, after heavy rain.",
+    "lookAlikes": "The cap colour is very variable (lilac, bluish, green or grey), but the gills are white, flexible and greasy to the touch: they do not crumble like those of other russulas when you run a finger over them. Green russulas can be mistaken for the DEADLY death cap (Amanita phalloides): always check that there is no ring on the stem and no sac-like volva at the base, and pick the whole mushroom. Reject russulas with an acrid or peppery taste, such as Russula emetica, which cause gastrointestinal upsets."
+  },
+  "escarlet": {
+    "commonName": "Pinkmottle woodwax",
+    "culinary": "A good edible with white, firm, dense flesh that takes up flavours well. It is best to peel the cap, which can be slightly bitter, and many foragers blanch it briefly before cooking. It is very good in meat stews, rice dishes and preserves. It must always be cooked.",
+    "habitat": "It grows in large groups, often in rows or rings, in holm oak, oak and beech woods, preferably on limestone or neutral soils, from the lowlands to mid-altitude. It is more frequent in inland Catalonia and in Majorca.",
+    "season": "Autumn and early winter, mainly from October to December; it is a late species that stands the cold well.",
+    "lookAlikes": "The cap is fleshy and slightly sticky, with wine-red or purple streaks and scales on a whitish background; the gills are white and become spotted with wine red, the stem is white, stout and stained with wine red, and there is no milk. Red-capped russulas also have white gills, but they are brittle like chalk; acrid ones such as Russula emetica are poisonous. The livid entoloma (Entoloma sinuatum), poisonous, grows in the same woods in autumn: it has a greyish-cream cap and yellowish gills that turn pink. Do not confuse it with the charcoal burner (Russula cyanoxantha), an edible russula, or with the bitter Hygrophorus erubescens of conifer woods."
+  },
+  "llora_verda": {
+    "commonName": "Green-cracking russula",
+    "culinary": "For many the best of the russulas: white, firm flesh with a mild, nutty taste. It can be grilled, fried, sautéed or added to stews. In Italy and southern France young caps are even eaten raw, but it is safer to cook it.",
+    "habitat": "It lives in open, bright broadleaf woods and clearings: cork oak, holm oak, chestnut, oak and beech forests on acid soils. It is most common in the siliceous districts of north-eastern Catalonia (Montseny, Montnegre, Gavarres, Guilleries).",
+    "season": "Summer to autumn, June to October, often right after the first summer storms.",
+    "lookAlikes": "It is recognised by its greyish-green cap that cracks into small patches, like a mosaic, and by its white gills and stem. The serious risk is the DEADLY death cap (Amanita phalloides), which has a smooth green cap, a ring on the stem and a volva at the base: always pick the whole mushroom and check. Other smooth green russulas, such as Russula aeruginea, are edible but less good; reject any russula that tastes acrid."
+  },
+  "llora_vesca": {
+    "commonName": "Bare-toothed brittlegill",
+    "culinary": "A russula with a pleasant, mild taste and firm white flesh. It is a good edible sautéed, grilled, in omelettes or in stews, and combines well with other mushrooms.",
+    "habitat": "It grows in broadleaf and mixed woods on acid soils: beech, chestnut, oak, cork oak and humid holm oak woods, sometimes with pines. It is common in the northern half of Catalonia.",
+    "season": "Summer to autumn, June to October.",
+    "lookAlikes": "The cap is pink, wine-coloured or reddish brown, and the cuticle stops short of the margin, leaving a rim of white flesh (like bared teeth). The flesh turns salmon pink with iron sulphate. The main danger is acrid red russulas such as Russula emetica, which are poisonous: taste a tiny raw piece without swallowing and discard it if it burns. Also check that there is no ring and no volva."
+  },
+  "pebras": {
+    "commonName": "Milk-white brittlegill",
+    "culinary": "A stout white russula with firm flesh but a somewhat acrid, bitterish taste, especially in the gills. It is a low-grade edible: it is grilled or stewed after blanching, and in the Lleida and Tarragona districts it is traditionally roasted on a tray (a la llauna).",
+    "habitat": "It emerges half buried, pushing up the leaf litter, under holm oaks, oaks and beeches and also in Aleppo and Scots pine woods. It tolerates limestone soils and is common throughout Catalonia, from the coast to the mountains.",
+    "season": "Late summer to autumn, August to December.",
+    "lookAlikes": "Despite the Catalan folk name, pebràs (Russula delica) is a russula and has no milk. Do not confuse it with the peppery milkcap (Lactarius piperatus, called pebràs lleter) or Lactarius vellereus, which look very similar but ooze a very acrid white milk when broken; they are indigestible. Young white specimens might be confused with DEADLY white amanitas (Amanita verna, Amanita virosa): check there is no ring and no volva. Russula chloroides, with a bluish band at the top of the stem, is equivalent."
+  },
+  "llenega_blanca": {
+    "commonName": "White woodwax / Ivory woodwax",
+    "culinary": "A mushroom with tender, mild white flesh, much appreciated in Catalonia like the dark llenega negra. Peel off the slimy layer of the cap and stem before cooking. It is good sautéed, in omelettes, rice dishes and stews, and keeps well in oil or vinegar.",
+    "habitat": "In Catalonia the most sought-after llenega blanca is Hygrophorus gliocyclus, which fruits in Aleppo, black and Scots pine woods, mainly on limestone soils. The closely related Hygrophorus eburneus, the ivory woodwax, grows in beech and oak woods.",
+    "season": "Late autumn, October to December, often with the first frosts.",
+    "lookAlikes": "It is entirely white and very slimy when wet, with widely spaced, slightly decurrent gills. Check that there is no volva at the base: white amanitas (Amanita verna, Amanita virosa) are DEADLY. White Clitocybe species (Clitocybe dealbata, Clitocybe rivulosa), small and not slimy, growing in meadows and clearings, are poisonous and cause muscarine poisoning. Hygrophorus cossus, with an unpleasant smell, is not worth eating."
+  },
+  "fredolic_gros": {
+    "commonName": "Charbonnier",
+    "culinary": "A good edible with white, firm flesh and a mild, slightly mealy taste. It is good sautéed, in stews, rice dishes and with meat, and holds up well to cooking.",
+    "habitat": "It lives in mountain pine woods, mainly of Scots and black pine, and also with fir, on mossy acid or limestone soils. In Catalonia it is commonest in the Pre-Pyrenees and Pyrenees.",
+    "season": "Late autumn, October to December, often after the first frosts.",
+    "lookAlikes": "The cap is dark grey with radial black fibres and violet or yellow tints, and the gills and stem are white with yellowish tones. It can be confused with the tiger tricholoma (Tricholoma pardinum), POISONOUS, with a grey-scaled cap and a strong mealy smell, and with the bitter or acrid Tricholoma sejunctum and Tricholoma virgatum. The yellow knight (Tricholoma equestre), entirely yellow, is banned because it can cause serious poisoning."
+  },
+  "cama_perdiu": {
+    "commonName": "Copper spike",
+    "culinary": "A good edible with firm, salmon-orange flesh. It is good in stews, rice dishes and sauces, and also preserved. It darkens to almost purple when cooked and can stain the rest of the dish; it is best to peel off the slimy cap cuticle.",
+    "habitat": "It forms mycorrhizae with two-needle pines, mainly Scots, black, Aleppo and stone pines, and usually grows next to Suillus boletes, on which it is a parasite. It tolerates acid and limestone soils and is common in pine woods throughout Catalonia.",
+    "season": "Autumn, September to December.",
+    "lookAlikes": "The cap is orange-brown to wine-coloured with a central boss, the gills are decurrent, spaced and ochre, turning black with the spores, and the stem is orange with a yellow base. Do not confuse it with rusty-coloured Cortinarius species (such as Cortinarius orellanus), which are DEADLY to the kidneys: they have a cobweb-like veil under the cap, rust-coloured gills and are not linked to Suillus. Gomphidius glutinosus, grey and very slimy, is also edible."
+  },
+  "molleric": {
+    "commonName": "Weeping bolete",
+    "culinary": "An average edible, soft and mild. Always peel off the slimy cap cuticle, which is laxative, and remove the tubes if they are soft. It is best young, sautéed, in stews or preserved, and mixed with other mushrooms.",
+    "habitat": "It fruits in large groups in pine woods, especially Aleppo, stone, black, Scots and maritime pine, on limestone or acid soils. It is one of the commonest mushrooms of Catalan pine woods, from the coast to the mountains.",
+    "season": "It may appear in late spring and especially in autumn, September to December.",
+    "lookAlikes": "It has a slimy orange-brown cap, yellow pores that weep milky droplets when young and a ringless stem with granules at the top. The slippery jack (Suillus luteus), with a ring, and Suillus collinitus, with a pink stem base, are also mediocre edibles. Reject boletes with red or orange pores or with flesh that turns strongly blue, such as the poisonous devil's bolete (Rubroboletus satanas)."
+  },
+  "llengua_bou": {
+    "commonName": "Hedgehog mushroom",
+    "culinary": "A good edible with firm white flesh and a mild, slightly fruity taste. Young specimens are excellent sautéed, in meat stews, rice dishes or preserved; in older ones remove the spines, which can taste bitter, and blanch them before cooking.",
+    "habitat": "It grows in all kinds of woods, broadleaf and conifer: beech, chestnut, holm oak, oak, fir and pine forests, on acid or limestone soils, often in groups or rings among the moss of shady slopes.",
+    "season": "Autumn, September to December, and on the coast into winter.",
+    "lookAlikes": "Easy to recognise, with no dangerous look-alikes: under the cream to orange cap there are no gills or pores but short, brittle SPINES. Hydnum rufescens, smaller and more orange, is equally edible. Other toothed fungi such as Sarcodon and Hydnellum are tough, bitter or woody, but not seriously poisonous."
+  },
+  "pimpinella_morada": {
+    "commonName": "Wood blewit",
+    "culinary": "A good edible with tender, fragrant, slightly sweet flesh. It must ALWAYS be WELL COOKED, as it is poisonous raw. It is good sautéed, in meat stews, rice dishes and sauces; some people find it indigestible, so eat it in moderation.",
+    "habitat": "It grows in the leaf and needle litter of all kinds of woods, broadleaf and conifer, and also on verges, in gardens and on compost heaps. It prefers humus-rich, often limestone soils and is common throughout Catalonia.",
+    "season": "Late autumn and early winter, October to January, even after the first frosts.",
+    "lookAlikes": "Its cap, gills and stem are lilac or violet, it has a perfumed smell and a pinkish spore print. It can be confused with violet Cortinarius species (such as Cortinarius traganus or Cortinarius camphoratus), some poisonous, which have a cobweb-like veil under the cap, a rust-brown spore print and often an unpleasant smell. The smaller Lepista sordida is also edible."
+  },
+  "peu_de_rata": {
+    "commonName": "Cauliflower coral / Golden coral",
+    "culinary": "A mediocre and tricky edible. Only young, firm specimens are eaten, well cooked, in small amounts and with the often bitter tips removed. Even the edible species are LAXATIVE for many people and can cause diarrhoea. They are used in stews, omelettes or blanched and sautéed.",
+    "habitat": "They grow on the ground in humid mountain woods: Ramaria botrytis mainly in beech woods and mixed woods with fir, and Ramaria aurea in beech, fir, chestnut and oak woods, generally on acid soils. They are commonest in the Pyrenees, Montseny and Guilleries.",
+    "season": "Late summer to autumn, August to November.",
+    "lookAlikes": "WARNING: coral fungi are very hard to identify; there are dozens of Ramaria species and many can only be told apart under the microscope. The salmon coral (Ramaria formosa), pinkish orange with yellow tips and bitter flesh, is POISONOUS and causes severe gastroenteritis; Ramaria pallida and others are also laxative. Ramaria botrytis has a thick white trunk, whitish branches and pink to purplish tips; Ramaria aurea is golden yellow all over. If you are not completely sure, do not pick them. Do not give them to children."
+  },
+  "camperol": {
+    "commonName": "Field mushroom",
+    "culinary": "The wild relative of the cultivated button mushroom, but far tastier. Its flesh is white and tender with a pleasant mushroomy smell. It is delicious grilled with garlic and parsley, sautéed, in omelettes and sauces, and even raw in salads when very young and clean.",
+    "habitat": "It does not depend on trees: it fruits in meadows, pastures and manured fields, often in rings, where cows, horses or sheep graze. It is common in mid-mountain meadows and the alpine pastures of the Pyrenees, and also on grassy verges in the lowlands.",
+    "season": "After warm rain: in late spring and especially in autumn, September to November.",
+    "lookAlikes": "The gills are free, bright pink in young specimens and chocolate brown in old ones, and the stem has a thin ring. The DEADLY white amanitas (Amanita phalloides, verna and virosa) always have WHITE gills and a volva at the base: never pick white mushrooms with white gills. The poisonous yellow stainer (Agaricus xanthodermus) turns bright yellow when rubbed, especially at the stem base, and smells of ink or phenol."
+  },
+  "bola_de_neu": {
+    "commonName": "Horse mushroom / Wood mushroom",
+    "culinary": "A large, fleshy mushroom with a very characteristic smell of aniseed or bitter almond. It is an excellent edible, grilled, sautéed, stuffed or in sauces. Check large specimens, as they are often maggoty.",
+    "habitat": "Agaricus arvensis fruits in meadows, pastures and clearings, often in rings, while its relative Agaricus silvicola grows inside woods, in Scots pine, fir and beech forests. Both are commoner in the mid and high mountains.",
+    "season": "Late spring to autumn, mainly September to November.",
+    "lookAlikes": "It is recognised by its white cap that slowly turns yellowish, the aniseed smell, gills going from pinkish grey to chocolate black, and a large double ring shaped like a cogwheel. The poisonous yellow stainer (Agaricus xanthodermus) turns bright yellow instantly at the stem base and smells of ink. The DEADLY white amanitas (Amanita phalloides, verna, virosa) have WHITE gills and a volva: never pick closed, egg-shaped specimens without seeing their gills."
+  },
+  "bolet_tinta": {
+    "commonName": "Shaggy ink cap",
+    "culinary": "A good edible with tender white flesh and a delicate taste, but only while the gills are completely WHITE. It is sautéed, used in omelettes, soups or fried in batter, and must be cooked the same day it is picked, as within hours it dissolves into a black, ink-like liquid.",
+    "habitat": "It does not depend on trees: it fruits in meadows, lawns, path and field edges, disturbed ground and nitrogen-rich places, often in groups. Avoid those growing by roads or in polluted areas, since they accumulate heavy metals.",
+    "season": "Mainly in spring and in autumn after rain, but it can appear from spring to late autumn.",
+    "lookAlikes": "Very distinctive: a tall, cylindrical white cap covered in shaggy scales, with a loose ring on the stem, that opens and dissolves into black ink with age. The common ink cap (Coprinopsis atramentaria), with a smooth grey cap, is POISONOUS if alcohol is drunk up to three days before or after eating it (disulfiram-like effect). Do not confuse button stages with white amanitas, which have a volva."
+  },
+  "girgola_panical": {
+    "commonName": "King oyster mushroom",
+    "culinary": "An excellent edible with white, firm, tasty flesh, considered the best of the oyster mushrooms. It is delicious grilled with garlic and parsley, in rice dishes and with meat. It is also cultivated and sold in markets.",
+    "habitat": "It does not depend on trees: it is a parasite on the dead roots of field eryngo (Eryngium campestre), a thistle-like plant of wasteland, dry pastures, fallow fields and field margins, mainly on limestone soils. It is typical of the Lleida plains (Segarra, Urgell, Noguera), Anoia and Empordà.",
+    "season": "Mainly in autumn, October to December, and in some years also in spring.",
+    "lookAlikes": "The cap is greyish brown, the gills white or cream and strongly decurrent, and the stem often off-centre; it always grows next to field eryngo plants. White or greyish Clitocybe species of meadows (Clitocybe dealbata, Clitocybe rivulosa) are poisonous: they do not have an off-centre stem and are not linked to eryngo. The orange jack-o'-lantern (Omphalotus olearius), growing in clusters on stumps, is poisonous."
+  },
+  "pollancro": {
+    "commonName": "Poplar fieldcap / Black poplar mushroom",
+    "culinary": "A very good edible with firm, aromatic flesh and a slight hazelnut taste; the stem is fibrous and best discarded. It is excellent sautéed, in rice dishes, cannelloni and stews. It is easily cultivated and can be found in markets.",
+    "habitat": "It grows in dense clusters on living or dead trunks and stumps of poplars, and also willows, elms and other riverside trees. It is common in riparian woods and poplar plantations in the Segre, Ter, Tordera and Ebro valleys.",
+    "season": "From spring to autumn, mainly in spring (March to June) and autumn (September to November).",
+    "lookAlikes": "It has a light brown to cream cap, gills going from cream to tobacco brown and a membranous ring on the stem. Any brown mushroom growing in clusters on wood must be identified very carefully: the funeral bell (Galerina marginata), DEADLY, is small, ringed and grows on wood, mostly of conifers; the sulphur tuft (Hypholoma fasciculare), with greenish-yellow gills and a bitter taste, is poisonous. Honey fungi (Armillaria) have scaly caps and need thorough cooking."
+  },
+  "fetge_bou": {
+    "commonName": "Beefsteak fungus",
+    "culinary": "A curious edible with red, fibrous, juicy flesh that looks like raw meat and oozes a red juice. It tastes sour because of its tannins. Young specimens can be eaten raw, thinly sliced in salads or marinated; when cooking, blanch it first and then sauté or stew it, as this reduces the acidity.",
+    "habitat": "It does not grow on the ground but at the base of living trunks or stumps of chestnuts and oaks, more rarely of holm and cork oaks. It is fairly frequent in the chestnut woods of Montseny, Guilleries and Montnegre.",
+    "season": "Late summer to autumn, August to November.",
+    "lookAlikes": "Unmistakable: a fleshy red tongue or liver on wood, with the underside covered in small whitish or pinkish tubes that are separate from each other. The chicken of the woods (Laetiporus sulphureus), yellow-orange, also grows on trees and is edible well cooked only when young; some other bracket fungi are tough but not dangerous."
+  }
+}

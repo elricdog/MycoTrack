@@ -1,0 +1,35 @@
+*.iml
+.gradle/
+.kotlin/
+local.properties
+.idea/
+.DS_Store
+build/
+build-*/
+captures/
+.externalNativeBuild
+.cxx
+*.apk
+*.aab
+
+# Scratch files of local investigations
+.tmp-*/
+.tmp-*.txt
+.venv/
+__pycache__/
+*.pyc
+
+# Release signing credentials and keystore (keep private, never commit)
+keystore.properties
+*.keystore
+*.jks
+
+# Large offline map packs (packaged into debug builds only, downloaded on device in release)
+app/offline-assets/
+
+# Personal planning notes (kept local, not part of the published project)
+InitialPrompt.md
+*.ORIBELL.task
+
+# Leftover Subversion metadata
+.svn/

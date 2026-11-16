@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Settings: GPS -->
+    <string name="settings_gps_interval">Interval entre punts del traçat: %1$d s</string>
+    <string name="settings_gps_interval_hint">El GPS es llegeix cada segon i se suavitza; aquest interval només determina cada quant es desa un punt al traçat.</string>
+    <string name="settings_max_accuracy_value">Precisió màxima: %1$d m</string>
+    <string name="settings_max_jump_value">Salt màxim: %1$d m</string>
+    <string name="settings_keep_screen_on">Mantén la pantalla encesa durant l\'enregistrament</string>
+
+    <!-- Settings: map -->
+    <string name="settings_default_zoom">Nivell de zoom per defecte: %1$d</string>
+    <string name="settings_default_zoom_hint">Els valors més alts mostren més detall. També pots mantenir premut el botó de zoom per defecte del mapa per desar el nivell de zoom actual.</string>
+    <string name="settings_map_buttons">Botons del mapa</string>
+    <string name="settings_map_widgets">Widgets del mapa</string>
+    <string name="settings_map_widgets_hint">Els indicadors d\'estat que es mostren a sobre del mapa, al costat dels controls.</string>
+    <string name="settings_map_buttons_hint">Tria els botons que es mostren a la pantalla del mapa. INICI i FI sempre són visibles.</string>
+
+    <!-- Settings: offline maps -->
+    <string name="settings_download">Descarrega</string>
+    <plurals name="settings_download_progress">
+        <item quantity="one">%1$d / %2$d tessel·la</item>
+        <item quantity="other">%1$d / %2$d tessel·les</item>
+        <item quantity="many">%1$d / %2$d tessel·les</item>
+    </plurals>
+    <string name="settings_download_failed">La descàrrega ha fallat: %1$s</string>
+    <string name="settings_offline_empty_title">No hi ha cap zona fora de línia disponible</string>
+    <string name="settings_offline_empty_hint">S\'estan preparant els mapes de Catalunya inclosos a l\'aplicació. També pots descarregar una zona al voltant de la posició actual.</string>
+    <string name="settings_offline_included">Inclosa</string>
+    <plurals name="settings_offline_area_details">
+        <item quantity="one">%1$d tessel·la · %2$d MB · zoom %3$d-%4$d</item>
+        <item quantity="other">%1$d tessel·les · %2$d MB · zoom %3$d-%4$d</item>
+        <item quantity="many">%1$d tessel·les · %2$d MB · zoom %3$d-%4$d</item>
+    </plurals>
+    <string name="settings_offline_in_use">En ús</string>
+    <string name="settings_offline_use">Utilitza</string>
+
+    <!-- Settings: download dialog -->
+    <string name="settings_download_default_name">Zona fora de línia</string>
+    <string name="settings_download_name">Nom</string>
+    <string name="settings_download_layer">Capa</string>
+    <string name="settings_download_centre">Centre</string>
+    <string name="settings_download_latitude">Latitud</string>
+    <string name="settings_download_longitude">Longitud</string>
+    <string name="settings_download_radius">Radi: %1$d km</string>
+    <string name="settings_download_zoom">Zoom %1$d – %2$d</string>
+    <string name="settings_download_hint">La zona es desa al dispositiu i continua disponible sense cobertura. El nombre de tessel·les creix ràpidament amb el nivell de zoom.</string>
+
+    <!-- Settings: permissions -->
+    <string name="settings_permissions_intro">MycoTrack explica cada permís abans de demanar-lo. El centre de permisos mostra l\'estat actual de cadascun i enllaça amb la configuració del sistema quan un permís s\'ha denegat permanentment.</string>
+    <string name="settings_open_permission_centre">Obre el centre de permisos</string>
+
+    <!-- Settings: about -->
+    <string name="settings_about">Quant a</string>
+    <string name="settings_version">Versió %1$s</string>
+    <string name="settings_about_description">MycoTrack enregistra les sortides per buscar bolets completament al dispositiu. No cal cap compte, cap subscripció ni cap servei de mapes comercial: els mapes provenen d\'OpenStreetMap i de l\'Institut Cartogràfic i Geològic de Catalunya (ICGC).</string>
+    <string name="settings_about_licences">Els mapes fora de línia de Catalunya inclosos a l\'aplicació els publica l\'ICGC amb la llicència Creative Commons Reconeixement 4.0. El mapa de carrers és © col·laboradors d\'OpenStreetMap, també amb llicència Creative Commons Reconeixement.</string>
+
+    <!-- Permission centre -->
+    <string name="permissions_granted">Concedit</string>
+    <string name="permissions_intro">MycoTrack ho desa tot en aquest dispositiu. Aquests permisos només s\'utilitzen per enregistrar la ruta i fer les fotografies de les troballes.</string>
+    <string name="permissions_grant_missing">Concedeix els permisos que falten</string>
+    <string name="permissions_all_granted">Ja tens concedit tot el necessari per enregistrar una sortida.</string>
+    <string name="permissions_start_recording">Comença l\'enregistrament</string>
+    <string name="permissions_back_to_map">Torna al mapa</string>
+    <string name="permissions_required">Necessari per enregistrar</string>
+    <string name="permissions_optional">Opcional</string>
+    <string name="permissions_open_settings">Obre la configuració</string>
+    <string name="permissions_continue">Continua</string>
+    <string name="permissions_not_now">Ara no</string>
+    <string name="permissions_needed_title">Calen permisos</string>
+    <string name="permissions_needed_message">MycoTrack no pot enregistrar la ruta fins que no es concedeixin els permisos següents:</string>
+    <string name="permissions_needed_privacy">Les sortides no es pugen mai a cap servidor: tot es queda en aquest dispositiu. Pots canviar d\'opinió més endavant als ajustos.</string>
+    <string name="permissions_grant_all">Concedeix els permisos</string>
+
+    <!-- Camera -->
+    <string name="camera_error_start">No s\'ha pogut iniciar la càmera.</string>
+    <string name="camera_error_capture">No s\'ha pogut fer la foto.</string>
+
+    <!-- Elevation profile -->
+    <string name="elevation_not_enough_data">Encara no hi ha prou dades d\'elevació</string>
+</resources>

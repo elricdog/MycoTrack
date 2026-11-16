@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Likely areas of a species (probability habitat layer). -->
+    <string name="suitability_find_button">Where can I find it?</string>
+    <string name="suitability_find_description">Shows on the map the areas around you where the habitat suits this species best.</string>
+    <string name="suitability_dialog_title">Search likely areas</string>
+    <string name="suitability_dialog_text">The map will highlight where %1$s is more likely around the chosen point, from the dominant trees, the soil and the orientation of the slopes.</string>
+    <string name="suitability_dialog_radius">Search radius</string>
+    <string name="suitability_radius_value">%1$s km</string>
+    <string name="suitability_out_of_season">%1$s is not in season this month: you are unlikely to find it now.</string>
+    <string name="suitability_dialog_disclaimer">Indicative only. It needs an internet connection. Large circles are computed roughly; zoom in for more detail.</string>
+    <string name="suitability_dialog_confirm">Show on the map</string>
+    <string name="suitability_no_position">Your position is not known yet. Open the map, wait for the GPS fix and try again.</string>
+    <string name="suitability_layer_title">Likely areas</string>
+    <string name="suitability_layer_description">%1$s, %2$s around the chosen point</string>
+    <string name="suitability_layer_no_species">Choose a mushroom in the Mushrooms section and tap \"Where can I find it?\".</string>
+    <string name="suitability_legend_title">Likely areas</string>
+    <string name="suitability_legend_radius">Radius: %1$s</string>
+    <string name="suitability_legend_low">Low</string>
+    <string name="suitability_legend_high">High probability</string>
+    <string name="suitability_legend_clear">Remove</string>
+    <string name="suitability_legend_show">Show the likely areas</string>
+    <string name="suitability_legend_note">Indicative only: combines the trees (MFE25), the soil (IGME 1:1,000,000) and the orientation. Zoom in for more detail.</string>
+    <string name="suitability_dialog_center">Search around</string>
+    <string name="suitability_center_position">My position</string>
+    <string name="suitability_center_map">Centre of the map</string>
+    <string name="suitability_center_map_hint">The place the main map is centred on now. Move the map first to search another area.</string>
+    <string name="suitability_no_map_center">The map has not been shown yet. Open the map, move it to the area to search and try again.</string>
+</resources>
