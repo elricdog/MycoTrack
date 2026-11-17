@@ -333,8 +333,11 @@ class LocalTileServer(private val context: Context) {
 
     private fun writeHabitatTile(socket: Socket, data: ByteArray?) {
         if (data == null) {
-            // Usually there is no connection: the tile is simply left empty.
-            writeError(socket, 404)
+            // The tile could not be produced, usually because the elevation or soil
+            // download failed. A 500 (never a cached 404) tells MapLibre the tile is
+            // only unavailable for the moment, so it asks for it again the next time
+            // it is visible instead of keeping the hole.
+            writeError(socket, 500)
             return
         }
         val output = BufferedOutputStream(socket.getOutputStream())
@@ -372,10 +375,10 @@ class LocalTileServer(private val context: Context) {
     }
 
     private fun writeError(socket: Socket, code: Int) {        runCatching {
-            val body = "Not found".toByteArray()
+            val body = (if (code == 500) "Tile not available" else "Not found").toByteArray()
             val output = BufferedOutputStream(socket.getOutputStream())
             output.write(
-                ("HTTP/1.1 $code Not Found\r\n" +
+                ("HTTP/1.1 $code ${if (code == 500) "Internal Server Error" else "Not Found"}\r\n" +
                     "Content-Type: text/plain\r\n" +
                     "Content-Length: ${body.size}\r\n" +
                     "Cache-Control: no-store\r\n" +

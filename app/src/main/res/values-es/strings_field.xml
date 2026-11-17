@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Quick logging from the recording notification -->
     <string name="field_notification_action_mushroom">🍄 Seta encontrada</string>
@@ -37,4 +37,12 @@
     <string name="field_settings_safety">Seguridad</string>
     <string name="field_settings_auto_parking">Guardar la posición del coche al empezar una salida</string>
     <string name="field_settings_auto_parking_hint">Se añade un punto de aparcamiento con la primera posición GPS precisa (±30 m). Los avisos de puesta de sol y de batería baja se muestran siempre mientras se graba.</string>
+    <string name="field_settings_parking_icon">Icono del punto de coche</string>
+    <string name="field_settings_parking_color">Color del icono del coche</string>
+    <string name="parking_icon_car">Coche</string>
+    <string name="parking_icon_motorcycle">Motocicleta</string>
+    <string name="parking_icon_bicycle">Bicicleta</string>
+    <string name="parking_icon_campervan">Autocaravana</string>
+    <string name="parking_icon_garage">Garaje</string>
 </resources>
+

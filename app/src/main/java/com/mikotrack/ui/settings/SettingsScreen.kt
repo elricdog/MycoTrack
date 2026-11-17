@@ -2,13 +2,18 @@ package com.mikotrack.ui.settings
 
 import android.content.Intent
 import android.net.Uri
+import android.os.Build
 import com.mikotrack.maps.OfflineMapManager
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -18,11 +23,15 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.BugReport
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.CloudDownload
 import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.GpsFixed
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
@@ -44,6 +53,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
@@ -57,6 +68,7 @@ import com.mikotrack.core.AppLanguage
 import com.mikotrack.core.Permissions
 import com.mikotrack.data.prefs.MAX_ZOOM_LEVEL
 import com.mikotrack.data.prefs.MIN_ZOOM_LEVEL
+import com.mikotrack.data.prefs.ParkingIconStyles
 import com.mikotrack.data.prefs.ThemeMode
 import com.mikotrack.location.LocationTracker
 import com.mikotrack.maps.BoundingBox
@@ -172,6 +184,77 @@ fun SettingsScreen(
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
+
+            // The look of the parking marker on the map: icon and badge colour.
+            val parkingIconStyle by viewModel.parkingIconStyle.collectAsStateWithLifecycle()
+            val parkingIconColor by viewModel.parkingIconColor.collectAsStateWithLifecycle()
+            var showParkingColors by remember { mutableStateOf(false) }
+            Text(
+                text = stringResource(R.string.field_settings_parking_icon),
+                style = MaterialTheme.typography.titleSmall,
+                modifier = Modifier.padding(top = 8.dp),
+            )
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                ParkingIconStyles.ALL.forEach { style ->
+                    val iconRes = ParkingIconStyles.drawableRes(style)
+                    val selected = style == parkingIconStyle
+                    OutlinedButton(
+                        onClick = { viewModel.setParkingIconStyle(style) },
+                        modifier = Modifier.size(52.dp),
+                        contentPadding = PaddingValues(0.dp),
+                        shape = CircleShape,
+                        border = if (selected) {
+                            BorderStroke(2.dp, MaterialTheme.colorScheme.primary)
+                        } else {
+                            BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant)
+                        },
+                    ) {
+                        if (iconRes != null) {
+                            Icon(
+                                painterResource(iconRes),
+                                contentDescription = stringResource(parkingIconLabel(style)),
+                                tint = if (selected) {
+                                    MaterialTheme.colorScheme.primary
+                                } else {
+                                    MaterialTheme.colorScheme.onSurfaceVariant
+                                },
+                            )
+                        }
+                    }
+                }
+            }
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clip(RoundedCornerShape(10.dp))
+                    .clickable { showParkingColors = true }
+                    .padding(vertical = 6.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
+            ) {
+                Box(
+                    modifier = Modifier
+                        .size(28.dp)
+                        .clip(CircleShape)
+                        .background(Color(parkingIconColor)),
+                )
+                Text(
+                    text = stringResource(R.string.field_settings_parking_color),
+                    style = MaterialTheme.typography.bodyLarge,
+                    modifier = Modifier.weight(1f),
+                )
+                Icon(Icons.Filled.Edit, contentDescription = null, modifier = Modifier.size(18.dp))
+            }
+            if (showParkingColors) {
+                ParkingColorDialog(
+                    current = parkingIconColor,
+                    onSelect = { color ->
+                        viewModel.setParkingIconColor(color)
+                        showParkingColors = false
+                    },
+                    onDismiss = { showParkingColors = false },
+                )
+            }
         }
 
         SectionCard(title = stringResource(R.string.nav_map)) {
@@ -437,6 +520,21 @@ fun SettingsScreen(
             ) {
                 Text(stringResource(R.string.settings_donate_button))
             }
+            // Report a problem: opens a new issue on the project's GitHub, with the
+            // version and the device filled in.
+            OutlinedButton(
+                onClick = {
+                    context.startActivity(
+                        Intent(Intent.ACTION_VIEW, Uri.parse(newIssueUrl()))
+                            .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK),
+                    )
+                },
+                modifier = Modifier.fillMaxWidth(),
+            ) {
+                Icon(Icons.Filled.BugReport, contentDescription = null, modifier = Modifier.size(18.dp))
+                Spacer(Modifier.size(8.dp))
+                Text(stringResource(R.string.settings_report_bugs))
+            }
         }
 
         SectionCard(title = stringResource(R.string.settings_updates)) {
@@ -689,4 +787,88 @@ private fun DownloadDialog(
             TextButton(onClick = onDismiss) { Text(stringResource(R.string.cancel)) }
         },
     )
+}
+
+/** The label resource of a parking icon style. */
+private fun parkingIconLabel(style: String): Int = when (style) {
+    ParkingIconStyles.CAR -> R.string.parking_icon_car
+    ParkingIconStyles.MOTORCYCLE -> R.string.parking_icon_motorcycle
+    ParkingIconStyles.BICYCLE -> R.string.parking_icon_bicycle
+    ParkingIconStyles.CAMPERVAN -> R.string.parking_icon_campervan
+    ParkingIconStyles.GARAGE -> R.string.parking_icon_garage
+    else -> R.string.parking_icon_car
+}
+
+/** The badge colours the user can pick for parking waypoints. */
+private val PARKING_COLOR_OPTIONS = listOf(
+    0xFF42A5F5, 0xFFE53935, 0xFFFB8C00, 0xFFFDD835, 0xFF7CB342,
+    0xFF00897B, 0xFF8E24AA, 0xFF8D6E63, 0xFF607D8B, 0xFF212121,
+)
+
+/** Lets the user choose the colour of the parking waypoint badge. */
+@Composable
+private fun ParkingColorDialog(
+    current: Long,
+    onSelect: (Long) -> Unit,
+    onDismiss: () -> Unit,
+) {
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text(stringResource(R.string.field_settings_parking_color)) },
+        text = {
+            Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                PARKING_COLOR_OPTIONS.chunked(5).forEach { row ->
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceEvenly,
+                    ) {
+                        row.forEach { color ->
+                            val selected = color == current
+                            Box(
+                                modifier = Modifier
+                                    .size(44.dp)
+                                    .clip(CircleShape)
+                                    .background(Color(color))
+                                    .clickable { onSelect(color) },
+                                contentAlignment = Alignment.Center,
+                            ) {
+                                if (selected) {
+                                    Icon(
+                                        Icons.Filled.Check,
+                                        contentDescription = null,
+                                        tint = if (Color(color.toULong()).luminance() > 0.6f) {
+                                            Color.Black
+                                        } else {
+                                            Color.White
+                                        },
+                                    )
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        confirmButton = {
+            TextButton(onClick = onDismiss) { Text(stringResource(R.string.cancel)) }
+        },
+    )
+}
+
+/**
+ * The URL of a new GitHub issue, prefilled with the application version and the device
+ * so the report starts with the basics already written.
+ */
+private fun newIssueUrl(): String {
+    val title = java.net.URLEncoder.encode("[v" + BuildConfig.VERSION_NAME + "] ", "UTF-8")
+    val body = buildString {
+        append("**MycoTrack version:** ").append(BuildConfig.VERSION_NAME).append('\n')
+        append("**Device:** ").append(Build.MANUFACTURER).append(' ').append(Build.MODEL).append('\n')
+        append("**Android:** ").append(Build.VERSION.RELEASE).append("\n\n")
+        append("**What happened:**\n\n")
+        append("**Steps to reproduce:**\n1. \n\n")
+        append("**What did you expect:**\n")
+    }
+    return "https://github.com/elricdog/MycoTrack/issues/new?labels=bug&title=$title&body=" +
+        java.net.URLEncoder.encode(body, "UTF-8")
 }

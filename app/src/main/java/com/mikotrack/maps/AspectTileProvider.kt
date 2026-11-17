@@ -53,6 +53,13 @@ class AspectTileProvider(context: Context) {
     }
 
     /**
+     * Elevation tile downloads in progress, by `zoom/x/y` key. Many visible tiles share
+     * the same elevation neighbours, and a tile is downloaded only once: the rest of the
+     * workers wait for the same future instead of saturating the pool with duplicates.
+     */
+    private val inFlight = ConcurrentHashMap<String, Future<FloatArray?>>()
+
+    /**
      * The PNG of the aspect tile at the given coordinates drawing only the given
      * classes, or `null` when it cannot be produced, for instance without an internet
      * connection.
@@ -153,7 +160,7 @@ class AspectTileProvider(context: Context) {
                 val ny = y + dy
                 if (ny !in 0 until tiles) continue
                 val nx = Math.floorMod(x + dx, tiles)
-                futures[dx to dy] = downloader.submit<FloatArray?> { elevations(zoom, nx, ny) }
+                futures[dx to dy] = downloader.submit<FloatArray?> { loadElevation(zoom, nx, ny) }
             }
         }
         val neighbours = futures.mapValues { (_, future) ->
@@ -183,8 +190,35 @@ class AspectTileProvider(context: Context) {
         }
     }
 
-    /** The elevations of a Terrarium tile, from memory, from the disk or downloaded. */
+    /**
+     * The elevations of a Terrarium tile, from memory, from the disk or downloaded.
+     * Concurrent requests of the same tile share one download.
+     */
     private fun elevations(zoom: Int, x: Int, y: Int): FloatArray? {
+        val key = "$zoom/$x/$y"
+        elevationCache.get(key)?.let { return it }
+        while (true) {
+            val shared = inFlight[key]
+            if (shared != null) {
+                return runCatching { shared.get(TOTAL_TIMEOUT_MS, TimeUnit.MILLISECONDS) }.getOrNull()
+            }
+            val future = downloader.submit<FloatArray?> { loadElevation(zoom, x, y) }
+            if (inFlight.putIfAbsent(key, future) == null) {
+                return try {
+                    future.get(TOTAL_TIMEOUT_MS, TimeUnit.MILLISECONDS)
+                } catch (e: Exception) {
+                    null
+                } finally {
+                    inFlight.remove(key, future)
+                }
+            }
+            // Another worker started the same download right now: wait for it.
+            future.cancel(false)
+        }
+    }
+
+    /** The elevations of a Terrarium tile, from the disk or downloaded. */
+    private fun loadElevation(zoom: Int, x: Int, y: Int): FloatArray? {
         val key = "$zoom/$x/$y"
         elevationCache.get(key)?.let { return it }
 
@@ -268,7 +302,7 @@ class AspectTileProvider(context: Context) {
 
         private const val TILE_SIZE = 256
         private const val MEMORY_CACHE_TILES = 24
-        private const val DOWNLOAD_THREADS = 6
+        private const val DOWNLOAD_THREADS = 10
         private const val TOTAL_TIMEOUT_MS = 30_000L
         private val CLASSES = AspectClass.entries.toTypedArray()
     }

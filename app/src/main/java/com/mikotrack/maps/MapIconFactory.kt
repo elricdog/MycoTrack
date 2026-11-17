@@ -1,10 +1,14 @@
 package com.mikotrack.maps
 
+import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.Path
+import com.mikotrack.data.prefs.ParkingIconStyles
+import com.mikotrack.data.repository.DefaultCategory
+import java.util.concurrent.ConcurrentHashMap
 
 /**
  * Creates the small bitmaps used as MapLibre style images.
@@ -17,11 +21,22 @@ object MapIconFactory {
     /** Identifier of the icon used for the direction arrow. */
     const val BEARING_ICON = "mycotrack-bearing"
 
+    /**
+     * The icon style of the parking badge, set from the settings. It takes part in the
+     * identifier of the parking icon, so a new style gets its own style image.
+     */
+    @Volatile
+    var parkingIconStyle: String = ParkingIconStyles.DEFAULT
+
     /** The identifier of the style image that represents a waypoint category. */
-    fun waypointIconId(category: String): String = "mycotrack-wp-${category.lowercase()}"
+    fun waypointIconId(category: String): String = if (category == DefaultCategory.PARKING.key) {
+        "mycotrack-wp-parking-$parkingIconStyle"
+    } else {
+        "mycotrack-wp-${category.lowercase()}"
+    }
 
     /** Builds the coloured badge used for a waypoint of the given colour. */
-    fun waypointIcon(color: Long): Bitmap {
+    fun waypointIcon(context: Context, color: Long, glyphStyle: String? = null): Bitmap {
         val size = 48
         val bitmap = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888)
         val canvas = Canvas(bitmap)
@@ -40,12 +55,38 @@ object MapIconFactory {
         canvas.drawCircle(center, center, center - 10f, paint)
         paint.style = Paint.Style.FILL
 
-        // A small stem turns the circle into a mushroom-like marker.
-        paint.color = Color.WHITE
-        canvas.drawRoundRect(center - 4f, center - 1f, center + 4f, center + 9f, 3f, 3f, paint)
+        val glyph = glyphStyle?.let { parkingGlyph(context, it) }
+        if (glyph != null) {
+            val glyphSize = (size * 0.52f).toInt()
+            canvas.drawBitmap(glyph, center - glyphSize / 2f, center - glyphSize / 2f - 1f, paint)
+        } else {
+            // A small stem turns the circle into a mushroom-like marker.
+            paint.color = Color.WHITE
+            canvas.drawRoundRect(center - 4f, center - 1f, center + 4f, center + 9f, 3f, 3f, paint)
+        }
 
         return bitmap
     }
+
+    /** The white glyph of a parking style, rendered once per style. */
+    private val glyphs = ConcurrentHashMap<String, Bitmap?>()
+
+    private fun parkingGlyph(context: Context, style: String): Bitmap? =
+        glyphs.getOrPut(style) {
+            runCatching {
+                ParkingIconStyles.drawableRes(style)?.let { res ->
+                    val drawable = context.getDrawable(res) ?: return@let null
+                    drawable.setTint(Color.WHITE)
+                    val bitmap = Bitmap.createBitmap(GLYPH_SIZE, GLYPH_SIZE, Bitmap.Config.ARGB_8888)
+                    val canvas = Canvas(bitmap)
+                    drawable.setBounds(0, 0, GLYPH_SIZE, GLYPH_SIZE)
+                    drawable.draw(canvas)
+                    bitmap
+                }
+            }.getOrNull()
+        }
+
+    private const val GLYPH_SIZE = 26
 
     /** Builds the arrow that shows the direction of movement. */
     fun bearingIcon(color: Int = Color.WHITE): Bitmap {

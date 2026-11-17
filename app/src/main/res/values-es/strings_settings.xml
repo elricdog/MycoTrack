@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Settings: GPS -->
     <string name="settings_gps_interval">Intervalo entre     puntos del recorrido: %1$d s</string>
@@ -80,4 +80,7 @@
 
     <!-- Elevation profile -->
     <string name="elevation_not_enough_data">Todavía no hay suficientes datos de elevación</string>
+    <string name="splash_by">por Elric of Anaconda · versión %1$s</string>
+    <string name="settings_report_bugs">Informar de un problema</string>
 </resources>
+

@@ -51,6 +51,8 @@ class SettingsStore(private val context: Context) {
         val PROXIMITY_ALARM = booleanPreferencesKey("proximity_alarm")
         val PROXIMITY_RADIUS = intPreferencesKey("proximity_radius_m")
         val AUTO_PARKING = booleanPreferencesKey("auto_parking_waypoint")
+        val PARKING_ICON_STYLE = stringPreferencesKey("parking_icon_style")
+        val PARKING_ICON_COLOR = longPreferencesKey("parking_icon_color")
         val HABITAT_ASPECT = booleanPreferencesKey("habitat_aspect_layer")
         val HABITAT_TREES = booleanPreferencesKey("habitat_trees_layer")
         val HABITAT_SOIL = booleanPreferencesKey("habitat_soil_layer")
@@ -75,6 +77,24 @@ class SettingsStore(private val context: Context) {
 
     suspend fun setAutoParkingEnabled(enabled: Boolean) {
         context.dataStore.edit { it[Keys.AUTO_PARKING] = enabled }
+    }
+
+    /** The icon drawn for parking waypoints on the map (see [ParkingIconStyles]). */
+    val parkingIconStyle: Flow<String> = context.dataStore.data.map {
+        it[Keys.PARKING_ICON_STYLE] ?: ParkingIconStyles.DEFAULT
+    }
+
+    suspend fun setParkingIconStyle(style: String) {
+        context.dataStore.edit { it[Keys.PARKING_ICON_STYLE] = style }
+    }
+
+    /** The colour of the parking waypoint badge, as an ARGB Long. */
+    val parkingIconColor: Flow<Long> = context.dataStore.data.map {
+        it[Keys.PARKING_ICON_COLOR] ?: ParkingIconStyles.DEFAULT_COLOR
+    }
+
+    suspend fun setParkingIconColor(color: Long) {
+        context.dataStore.edit { it[Keys.PARKING_ICON_COLOR] = color }
     }
 
     /** Whether an alarm sounds when the user reaches a waypoint of an overlaid trip. */

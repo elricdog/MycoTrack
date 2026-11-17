@@ -555,6 +555,26 @@ class MapController {
         waypointIcons = categoryColors
     }
 
+    /**
+     * Re-registers the waypoint images of the current style (the parking badge may have
+     * changed its colour or icon in the settings) and draws the markers again.
+     */
+    fun refreshWaypointIcons() {
+        val style = map?.style ?: return
+        if (!style.isFullyLoaded) return
+        registerWaypointIcons(style)
+        runCatching { render(lastOverlays, lastWaypoints, lastPosition, lastBearing) }
+    }
+
+    private fun registerWaypointIcons(style: Style) {
+        val context = mapView?.context ?: return
+        waypointIcons.forEach { (category, color) ->
+            val glyph = category.takeIf { it == com.mikotrack.data.repository.DefaultCategory.PARKING.key }
+                ?.let { MapIconFactory.parkingIconStyle }
+            runCatching { style.addImage(MapIconFactory.waypointIconId(category), MapIconFactory.waypointIcon(context, color, glyph)) }
+        }
+    }
+
     /** Updates the drawn routes, waypoints and the current position. */
     fun render(
         overlays: List<RouteOverlay>,
@@ -786,10 +806,7 @@ class MapController {
         // The images and layers of the previous style are gone.
         overlayManager.onStyleChanged()
         // Register the marker images before the waypoint layer is created.
-        waypointIcons.forEach { (category, color) ->
-            val iconId = MapIconFactory.waypointIconId(category)
-            runCatching { style.addImage(iconId, MapIconFactory.waypointIcon(color)) }
-        }
+        registerWaypointIcons(style)
         runCatching { style.addImage(MapIconFactory.BEARING_ICON, MapIconFactory.bearingIcon()) }
         // A new style has no images, so the bubbles that are ready are registered again.
         bubbleImages.forEach { (id, image) ->

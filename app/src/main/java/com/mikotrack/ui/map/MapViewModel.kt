@@ -9,6 +9,7 @@ import com.mikotrack.R
 import com.mikotrack.data.files.ImageStore
 import com.mikotrack.data.prefs.DEFAULT_PROXIMITY_RADIUS
 import com.mikotrack.data.prefs.DEFAULT_ZOOM_LEVEL
+import com.mikotrack.data.prefs.ParkingIconStyles
 import com.mikotrack.data.prefs.SettingsStore
 import com.mikotrack.data.repository.CategoryRepository
 import com.mikotrack.data.repository.TripRepository
@@ -190,6 +191,22 @@ class MapViewModel(
 
     fun setProximityRadius(meters: Int) {
         viewModelScope.launch { settingsStore.setProximityRadius(meters) }
+    }
+
+    /** The icon style of the parking waypoint badge. */
+    val parkingIconStyle: StateFlow<String> = settingsStore.parkingIconStyle
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), ParkingIconStyles.DEFAULT)
+
+    /** The colour of the parking waypoint badge. */
+    val parkingIconColor: StateFlow<Long> = settingsStore.parkingIconColor
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), ParkingIconStyles.DEFAULT_COLOR)
+
+    fun setParkingIconStyle(style: String) {
+        viewModelScope.launch { settingsStore.setParkingIconStyle(style) }
+    }
+
+    fun setParkingIconColor(color: Long) {
+        viewModelScope.launch { settingsStore.setParkingIconColor(color) }
     }
 
     /** Hides the banner of the last reached waypoint. */

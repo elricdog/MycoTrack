@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Quick logging from the recording notification -->
     <string name="field_notification_action_mushroom">🍄 Bolet trobat</string>
@@ -37,4 +37,12 @@
     <string name="field_settings_safety">Seguretat</string>
     <string name="field_settings_auto_parking">Desa la posició del cotxe en començar una sortida</string>
     <string name="field_settings_auto_parking_hint">S\'afegeix un punt d\'aparcament amb la primera posició GPS precisa (±30 m). Els avisos de posta de sol i de bateria baixa es mostren sempre mentre s\'enregistra.</string>
+    <string name="field_settings_parking_icon">Icona del punt de cotxe</string>
+    <string name="field_settings_parking_color">Color de la icona del cotxe</string>
+    <string name="parking_icon_car">Cotxe</string>
+    <string name="parking_icon_motorcycle">Motocicleta</string>
+    <string name="parking_icon_bicycle">Bicicleta</string>
+    <string name="parking_icon_campervan">Autocaravana</string>
+    <string name="parking_icon_garage">Garatge</string>
 </resources>
+

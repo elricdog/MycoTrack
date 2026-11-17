@@ -18,6 +18,7 @@ import androidx.compose.ui.platform.LocalView
 import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
 import com.mikotrack.data.prefs.ThemeMode
+import com.mikotrack.ui.common.SplashScreen
 import com.mikotrack.ui.navigation.MycoTrackNavHost
 import com.mikotrack.ui.theme.MycoTrackTheme
 import com.mikotrack.ui.update.AppUpdateHost
@@ -29,6 +30,9 @@ import com.mikotrack.ui.update.AppUpdateHost
  * every Android version, not only on the ones with per-app languages.
  */
 class MainActivity : AppCompatActivity() {
+
+    /** Whether the loading screen has already been shown (once per activity). */
+    private val bootedFlow = kotlinx.coroutines.flow.MutableStateFlow(false)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,6 +64,10 @@ class MainActivity : AppCompatActivity() {
                 // The silent update check: at most once a day, and only when the
                 // setting is on. Failures stay invisible.
                 container.updateManager.check(force = false)
+                // The loading screen stays a short, fixed moment while the interface
+                // behind it composes and the map style starts loading.
+                kotlinx.coroutines.delay(SPLASH_MILLIS)
+                bootedFlow.value = true
             }
 
             MycoTrackTheme(darkTheme = darkTheme) {
@@ -75,10 +83,21 @@ class MainActivity : AppCompatActivity() {
                         controller.isAppearanceLightNavigationBars = !darkTheme
                     }
                 }
+                // The loading screen covers the interface for a short moment: the
+                // screens are composed behind it, so the map starts warming up at once.
+                val booted by bootedFlow.collectAsState(initial = false)
+                if (!booted) {
+                    SplashScreen()
+                }
                 MycoTrackNavHost(container = container)
                 // The self update dialogs, visible above every screen.
                 AppUpdateHost(container.updateManager)
             }
         }
+    }
+
+    private companion object {
+        /** How long the loading screen is shown at the start. */
+        const val SPLASH_MILLIS = 1_600L
     }
 }

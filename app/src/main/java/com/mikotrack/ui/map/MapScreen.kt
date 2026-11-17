@@ -72,6 +72,7 @@ import androidx.compose.material.icons.filled.CameraAlt
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.DirectionsCar
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Explore
 import androidx.compose.material.icons.filled.Map
@@ -363,14 +364,20 @@ fun MapScreen(
         controller.setZoomLimits(limits.start, limits.endInclusive)
     }
 
-    // The category colours define the markers shown on the map.
-    LaunchedEffect(categories) {
+    // The category colours define the markers shown on map. The parking badge adopts
+    // the colour and icon style chosen in the settings.
+    val parkingIconStyle by viewModel.parkingIconStyle.collectAsStateWithLifecycle()
+    val parkingIconColor by viewModel.parkingIconColor.collectAsStateWithLifecycle()
+    LaunchedEffect(categories, parkingIconStyle, parkingIconColor) {
+        com.mikotrack.maps.MapIconFactory.parkingIconStyle = parkingIconStyle
         val colors = categories.associate { it.name to it.color }
             .toMutableMap()
             .apply {
                 DefaultCategory.entries.forEach { putIfAbsent(it.key, it.color) }
+                put(DefaultCategory.PARKING.key, parkingIconColor)
             }
         controller.setWaypointIcons(colors)
+        controller.refreshWaypointIcons()
     }
 
     // Routes, waypoints and the current position are pushed to the map.
@@ -1117,6 +1124,9 @@ fun MapScreen(
             distance = selectedWaypointDistance,
             tripName = selectedWaypointTripName,
             onDismiss = { viewModel.selectWaypoint(null) },
+            onGoThere = {
+                openWalkingDirections(context, waypoint.latitude, waypoint.longitude)
+            },
             onSave = { description, category ->
                 viewModel.updateWaypoint(waypoint.id, description, category)
                 viewModel.selectWaypoint(null)
@@ -1956,6 +1966,7 @@ private fun WaypointSheet(
     distance: com.mikotrack.domain.WaypointDistance?,
     tripName: String?,
     onDismiss: () -> Unit,
+    onGoThere: () -> Unit,
     onSave: (String, String) -> Unit,
     onDelete: () -> Unit,
 ) {
@@ -2048,6 +2059,15 @@ private fun WaypointSheet(
             }
 
             Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                FilledTonalButton(onClick = onGoThere) {
+                    Icon(
+                        Icons.Filled.DirectionsCar,
+                        contentDescription = null,
+                        modifier = Modifier.size(18.dp),
+                    )
+                    Spacer(Modifier.size(8.dp))
+                    Text(stringResource(R.string.maproute_go_there))
+                }
                 Button(
                     onClick = { onSave(description, category) },
                     modifier = Modifier.weight(1f),

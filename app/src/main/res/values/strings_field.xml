@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Quick logging from the recording notification -->
     <string name="field_notification_action_mushroom">🍄 Mushroom found</string>
@@ -35,4 +35,12 @@
     <string name="field_settings_safety">Safety</string>
     <string name="field_settings_auto_parking">Save the car position when a trip starts</string>
     <string name="field_settings_auto_parking_hint">A Parking point is added at the first accurate GPS fix (±30 m). Sunset and low battery warnings are always shown while recording.</string>
+    <string name="field_settings_parking_icon">Parking icon</string>
+    <string name="field_settings_parking_color">Parking icon colour</string>
+    <string name="parking_icon_car">Car</string>
+    <string name="parking_icon_motorcycle">Motorcycle</string>
+    <string name="parking_icon_bicycle">Bicycle</string>
+    <string name="parking_icon_campervan">Campervan</string>
+    <string name="parking_icon_garage">Garage</string>
 </resources>
+

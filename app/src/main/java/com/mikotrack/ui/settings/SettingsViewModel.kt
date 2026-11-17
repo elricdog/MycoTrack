@@ -3,6 +3,7 @@ package com.mikotrack.ui.settings
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.mikotrack.data.prefs.DEFAULT_ZOOM_LEVEL
+import com.mikotrack.data.prefs.ParkingIconStyles
 import com.mikotrack.data.prefs.SettingsStore
 import com.mikotrack.data.prefs.ThemeMode
 import com.mikotrack.data.db.OfflineAreaEntity
@@ -76,6 +77,22 @@ class SettingsViewModel(
 
     fun setAutoParking(enabled: Boolean) {
         viewModelScope.launch { settingsStore.setAutoParkingEnabled(enabled) }
+    }
+
+    /** The icon style of the parking waypoint badge. */
+    val parkingIconStyle = settingsStore.parkingIconStyle
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), ParkingIconStyles.DEFAULT)
+
+    fun setParkingIconStyle(style: String) {
+        viewModelScope.launch { settingsStore.setParkingIconStyle(style) }
+    }
+
+    /** The colour of the parking waypoint badge, as an ARGB Long. */
+    val parkingIconColor = settingsStore.parkingIconColor
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), ParkingIconStyles.DEFAULT_COLOR)
+
+    fun setParkingIconColor(color: Long) {
+        viewModelScope.launch { settingsStore.setParkingIconColor(color) }
     }
 
     /** The downloaded offline areas. */
