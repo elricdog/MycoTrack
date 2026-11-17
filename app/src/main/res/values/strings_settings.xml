@@ -80,5 +80,30 @@
     <string name="elevation_not_enough_data">Not enough elevation data yet</string>
     <string name="splash_by">by Elric of Anaconda · version %1$s</string>
     <string name="settings_report_bugs">Report a problem</string>
+
+    <!-- Easter egg games. -->
+    <string name="settings_games_button">Games – While we wait for the mushrooms to appear</string>
+    <string name="games_hub_title">Forest arcade</string>
+    <string name="games_hub_subtitle">Little pixel games to play in the forest while the mushrooms grow. Each one keeps its own ranking.</string>
+    <string name="game_arkanoid">Mushroom Breaker</string>
+    <string name="game_arkanoid_blurb">Bounce the ball with the basket and knock down the mushrooms.</string>
+    <string name="game_arkanoid_hint">Drag to move the basket, tap to launch the ball.</string>
+    <string name="game_tetris">MycoTris</string>
+    <string name="game_tetris_blurb">Stack the mushroom bricks and clear rows.</string>
+    <string name="game_tetris_hint">Tap left / right to slide, tap the middle to rotate, swipe down to drop.</string>
+    <string name="game_pacman">Spore Maze</string>
+    <string name="game_pacman_blurb">Eat the spores and escape the puffball ghosts.</string>
+    <string name="game_pacman_hint">Swipe to steer. Golden spores let you eat the ghosts!</string>
+    <string name="game_soon_title">More games</string>
+    <string name="game_soon_blurb">New forest games will appear in future versions.</string>
+    <string name="game_back">Back</string>
+    <string name="game_score_label">Score</string>
+    <string name="game_level_label">Level</string>
+    <string name="game_lives_label">Lives</string>
+    <string name="game_over">Game over</string>
+    <string name="game_play_again">Play again</string>
+    <string name="game_ranking_title">Ranking</string>
+    <string name="game_ranking_empty">No records yet: be the first!</string>
+    <string name="game_best_score">Best: %1$d</string>
 </resources>
 

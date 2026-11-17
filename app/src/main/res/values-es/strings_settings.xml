@@ -82,5 +82,30 @@
     <string name="elevation_not_enough_data">Todavía no hay suficientes datos de elevación</string>
     <string name="splash_by">por Elric of Anaconda · versión %1$s</string>
     <string name="settings_report_bugs">Informar de un problema</string>
+
+    <!-- Juegos del huevo de Pascua. -->
+    <string name="settings_games_button">Juegos – Mientras esperamos a que salgan los boletus</string>
+    <string name="games_hub_title">Arcade del bosque</string>
+    <string name="games_hub_subtitle">Pequeños juegos de píxeles para jugar en el bosque mientras crecen los setas. Cada uno tiene su propio ranking.</string>
+    <string name="game_arkanoid">Aplasta Setas</string>
+    <string name="game_arkanoid_blurb">Haz rebotar la pelota con la cesta y derriba las setas.</string>
+    <string name="game_arkanoid_hint">Arrastra para mover la cesta, toca para lanzar la pelota.</string>
+    <string name="game_tetris">MycoTris</string>
+    <string name="game_tetris_blurb">Apila los ladrillos de seta y rellena filas.</string>
+    <string name="game_tetris_hint">Toca izquierda / derecha para desplazar, toca el centro para girar, desliza abajo para caer.</string>
+    <string name="game_pacman">Laberinto de Esporas</string>
+    <string name="game_pacman_blurb">Come las esporas y escapa de las puffballs fantasma.</string>
+    <string name="game_pacman_hint">Desliza para dirigir. ¡Las esporas doradas te dejan comer fantasmas!</string>
+    <string name="game_soon_title">Más juegos</string>
+    <string name="game_soon_blurb">En futuras versiones aparecerán nuevos juegos del bosque.</string>
+    <string name="game_back">Atrás</string>
+    <string name="game_score_label">Puntos</string>
+    <string name="game_level_label">Nivel</string>
+    <string name="game_lives_label">Vidas</string>
+    <string name="game_over">Fin del juego</string>
+    <string name="game_play_again">Volver a jugar</string>
+    <string name="game_ranking_title">Ranking</string>
+    <string name="game_ranking_empty">Aún no hay récords: ¡sé el primero!</string>
+    <string name="game_best_score">Mejor: %1$d</string>
 </resources>
 

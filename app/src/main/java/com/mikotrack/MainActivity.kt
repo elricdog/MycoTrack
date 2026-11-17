@@ -10,10 +10,13 @@ import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalView
 import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
@@ -86,18 +89,24 @@ class MainActivity : AppCompatActivity() {
                 // The loading screen covers the interface for a short moment: the
                 // screens are composed behind it, so the map starts warming up at once.
                 val booted by bootedFlow.collectAsState(initial = false)
-                if (!booted) {
-                    SplashScreen()
+                Box(Modifier.fillMaxSize()) {
+                    MycoTrackNavHost(container = container)
+                    // The self update dialogs, visible above every screen.
+                    AppUpdateHost(container.updateManager)
+                    if (!booted) {
+                        SplashScreen(Modifier.fillMaxSize())
+                    }
                 }
-                MycoTrackNavHost(container = container)
-                // The self update dialogs, visible above every screen.
-                AppUpdateHost(container.updateManager)
             }
         }
     }
 
     private companion object {
-        /** How long the loading screen is shown at the start. */
-        const val SPLASH_MILLIS = 1_600L
+        /**
+         * How long the loading screen is shown at the start. It counts from the first
+         * frame, which is also when the system splash (the app icon) starts to fade,
+         * so it has to cover that animation as well.
+         */
+        const val SPLASH_MILLIS = 2_600L
     }
 }

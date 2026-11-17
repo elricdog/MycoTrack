@@ -41,4 +41,13 @@ object Routes {
 
     /** Builds the route that opens the detail of a species of the mushroom guide. */
     fun mushroomDetail(id: String): String = "mushroom/$id"
+
+    /** The easter egg games hub, unlocked from the About section of the settings. */
+    const val GAMES = "games"
+
+    /** One of the easter egg games. */
+    const val GAME = "games/{game}"
+
+    /** Builds the route that opens one of the easter egg games. */
+    fun game(game: String): String = "games/$game"
 }

@@ -53,6 +53,15 @@ class SettingsViewModel(
     val keepScreenOn = settingsStore.keepScreenOn
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), true)
 
+    /** Whether the easter egg of the games has been unlocked. */
+    val gamesUnlocked = settingsStore.gamesUnlocked
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), false)
+
+    /** Unlocks the games hub (five taps on the banner of the About section). */
+    fun unlockGames() {
+        viewModelScope.launch { settingsStore.setGamesUnlocked(true) }
+    }
+
     /** The zoom level the map uses by default. */
     val defaultZoom = settingsStore.defaultZoom
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), DEFAULT_ZOOM_LEVEL)

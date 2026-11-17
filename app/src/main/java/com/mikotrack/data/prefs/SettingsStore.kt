@@ -70,6 +70,10 @@ class SettingsStore(private val context: Context) {
         val AUTO_UPDATE_CHECKS = booleanPreferencesKey("auto_update_checks")
         val LAST_UPDATE_CHECK = longPreferencesKey("last_update_check_ms")
         val DISMISSED_UPDATE_TAG = stringPreferencesKey("dismissed_update_tag")
+        val GAMES_UNLOCKED = booleanPreferencesKey("games_unlocked")
+        val GAME_SCORES_ARKANOID = stringPreferencesKey("game_scores_arkanoid")
+        val GAME_SCORES_TETRIS = stringPreferencesKey("game_scores_tetris")
+        val GAME_SCORES_PACMAN = stringPreferencesKey("game_scores_pacman")
     }
 
     /** Whether a parking waypoint is added at the first accurate fix of a new trip. */
@@ -378,5 +382,30 @@ class SettingsStore(private val context: Context) {
 
     suspend fun setDismissedUpdateTag(tag: String) {
         context.dataStore.edit { it[Keys.DISMISSED_UPDATE_TAG] = tag }
+    }
+
+    /** Whether the easter egg of the games has been unlocked (5 taps on the banner). */
+    val gamesUnlocked: Flow<Boolean> =
+        context.dataStore.data.map { it[Keys.GAMES_UNLOCKED] ?: false }
+
+    suspend fun setGamesUnlocked(unlocked: Boolean) {
+        context.dataStore.edit { it[Keys.GAMES_UNLOCKED] = unlocked }
+    }
+
+    /** The best scores of one of the games, most points first. */
+    fun gameScores(game: GameId): Flow<List<GameScore>> =
+        context.dataStore.data.map { GameScores.decode(it[gameKey(game)]) }
+
+    /** Adds a finished game and keeps the best [GameScores.MAX_RANK] scores. */
+    suspend fun recordGameScore(game: GameId, score: Int, level: Int, atMillis: Long) {
+        context.dataStore.edit {
+            it[gameKey(game)] = GameScores.insert(it[gameKey(game)], GameScore(score, level, atMillis))
+        }
+    }
+
+    private fun gameKey(game: GameId) = when (game) {
+        GameId.ARKANOID -> Keys.GAME_SCORES_ARKANOID
+        GameId.TETRIS -> Keys.GAME_SCORES_TETRIS
+        GameId.PACMAN -> Keys.GAME_SCORES_PACMAN
     }
 }

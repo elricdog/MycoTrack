@@ -28,6 +28,11 @@ import androidx.navigation.NavType
 import com.mikotrack.core.AppContainer
 import com.mikotrack.ui.diagnostics.DiagnosticsScreen
 import com.mikotrack.ui.diagnostics.DiagnosticsViewModel
+import com.mikotrack.ui.games.ArkanoidScreen
+import com.mikotrack.ui.games.GameHubScreen
+import com.mikotrack.ui.games.GamesViewModel
+import com.mikotrack.ui.games.PacmanScreen
+import com.mikotrack.ui.games.TetrisScreen
 import com.mikotrack.ui.gallery.GalleryScreen
 import com.mikotrack.ui.gallery.GalleryViewModel
 import com.mikotrack.ui.history.HistoryScreen
@@ -70,6 +75,7 @@ fun MycoTrackNavHost(
         Routes.TRIP_DETAIL -> TopLevelDestination.HISTORY
         Routes.DIAGNOSTICS -> TopLevelDestination.MAP
         Routes.MUSHROOM_DETAIL -> TopLevelDestination.MUSHROOMS
+        Routes.GAMES, Routes.GAME -> TopLevelDestination.SETTINGS
         else -> TopLevelDestination.entries.firstOrNull { it.route == currentRoute }
     }
 
@@ -232,7 +238,35 @@ fun MycoTrackNavHost(
                     onOpenDiagnostics = {
                         navController.navigate(Routes.DIAGNOSTICS) { launchSingleTop = true }
                     },
+                    onOpenGames = { navController.navigate(Routes.GAMES) },
                 )            }
+
+            composable(Routes.GAMES) {
+                val viewModel: GamesViewModel = containerViewModel(container) {
+                    GamesViewModel(it.settingsStore)
+                }
+                GameHubScreen(
+                    viewModel = viewModel,
+                    onBack = { navController.popBackStack() },
+                    onOpenGame = { game -> navController.navigate(Routes.game(game.name)) },
+                )
+            }
+
+            composable(
+                route = Routes.GAME,
+                arguments = listOf(navArgument("game") { type = NavType.StringType }),
+            ) { entry ->
+                val viewModel: GamesViewModel = containerViewModel(container) {
+                    GamesViewModel(it.settingsStore)
+                }
+                val back = { navController.popBackStack(Routes.GAMES, inclusive = false) }
+                when (entry.arguments?.getString("game")) {
+                    "ARKANOID" -> ArkanoidScreen(viewModel = viewModel, onBack = back)
+                    "TETRIS" -> TetrisScreen(viewModel = viewModel, onBack = back)
+                    "PACMAN" -> PacmanScreen(viewModel = viewModel, onBack = back)
+                    else -> navController.popBackStack()
+                }
+            }
 
             composable(Routes.DIAGNOSTICS) {
                 val appContext = LocalContext.current.applicationContext

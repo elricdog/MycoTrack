@@ -82,5 +82,30 @@
     <string name="elevation_not_enough_data">Encara no hi ha prou dades d\'elevació</string>
     <string name="splash_by">per Elric of Anaconda · versió %1$s</string>
     <string name="settings_report_bugs">Informar d\'un problema</string>
+
+    <!-- Jocs de l\'ou de Pasqua. -->
+    <string name="settings_games_button">Jocs – Mentre esperem els bolets apareixin</string>
+    <string name="games_hub_title">Arcade del bosc</string>
+    <string name="games_hub_subtitle">Petits jocs de píxels per jugar al bosc mentre els bolets creixen. Cadascun té el seu propi rànquing.</string>
+    <string name="game_arkanoid">Aixeta Bolets</string>
+    <string name="game_arkanoid_blurb">Fes rebotre la pilota amb la cistella i tomba els bolets.</string>
+    <string name="game_arkanoid_hint">Arrossega per moure la cistella, toca per llançar la pilota.</string>
+    <string name="game_tetris">MycoTris</string>
+    <string name="game_tetris_blurb">Apila els maons de bolet i omple files.</string>
+    <string name="game_tetris_hint">Toca l\'esquerra / la dreta per desplaçar, toca el centre per girar, llisca avall per fer caure.</string>
+    <string name="game_pacman">Laberint d\'Espores</string>
+    <string name="game_pacman_blurb">Mena\'t les espores i escapa de les bufaderes fantasma.</string>
+    <string name="game_pacman_hint">Llisca per dirigir. Les espores daurades et deixen menjar els fantasmes!</string>
+    <string name="game_soon_title">Més jocs</string>
+    <string name="game_soon_blurb">En futures versions apareixeran nous jocs del bosc.</string>
+    <string name="game_back">Enrere</string>
+    <string name="game_score_label">Punts</string>
+    <string name="game_level_label">Nivell</string>
+    <string name="game_lives_label">Vides</string>
+    <string name="game_over">Fi del joc</string>
+    <string name="game_play_again">Torna a jugar</string>
+    <string name="game_ranking_title">Rànquing</string>
+    <string name="game_ranking_empty">Encara no hi ha rècords: siga\'s el primer!</string>
+    <string name="game_best_score">Millor: %1$d</string>
 </resources>
 
