@@ -7,7 +7,10 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.media.AudioAttributes
 import android.media.AudioManager
+import android.media.Ringtone
+import android.media.RingtoneManager
 import android.media.ToneGenerator
 import android.os.Build
 import android.os.Handler
@@ -144,20 +147,85 @@ class ProximityAlertManager(
         if (now - lastAlarmAt >= MIN_ALARM_INTERVAL_MILLIS) {
             lastAlarmAt = now
             mainHandler.post {
-                playTone()
+                playAlarm()
                 vibrate()
             }
         }
         showNotification(hit)
     }
 
-    private fun playTone() {
+    private var alarmRingtone: Ringtone? = null
+    private var alarmStopRunnable: Runnable? = null
+    private var alarmRepeatRunnable: Runnable? = null
+
+    /**
+     * Wakes up a loud alarm: the alarm sound of the device, looping on the alarm stream
+     * for a few seconds, because a short tone is easy to miss in the forest. Falls back
+     * to a repeated tone generator burst when the device has no alarm sound.
+     */
+    private fun playAlarm() {
+        stopAlarm()
+        val ringtone = runCatching {
+            RingtoneManager.getRingtone(appContext, RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM))
+        }.getOrNull()
+        if (ringtone == null) {
+            playToneBursts(TONE_BURSTS)
+            return
+        }
+        runCatching {
+            ringtone.audioAttributes = AudioAttributes.Builder()
+                .setUsage(AudioAttributes.USAGE_ALARM)
+                .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+                .build()
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                ringtone.isLooping = true
+                ringtone.play()
+            } else {
+                ringtone.play()
+                // Below Android 9 the ringtone cannot loop itself: replay it periodically.
+                val repeat = Runnable { runCatching { ringtone.play() } }
+                alarmRepeatRunnable = repeat
+                val period = 2_000
+                var delay = period + 200L
+                while (delay < ALARM_RING_MILLIS) {
+                    mainHandler.postDelayed(repeat, delay)
+                    delay += period + 200L
+                }
+            }
+            alarmRingtone = ringtone
+        }.onFailure {
+            ringtone.stop()
+            playToneBursts(TONE_BURSTS)
+            return
+        }
+        val stop = Runnable { stopAlarm() }
+        alarmStopRunnable = stop
+        mainHandler.postDelayed(stop, ALARM_RING_MILLIS)
+    }
+
+    /** Silences a running alarm sound. */
+    private fun stopAlarm() {
+        alarmStopRunnable?.let { mainHandler.removeCallbacks(it) }
+        alarmStopRunnable = null
+        alarmRepeatRunnable?.let { mainHandler.removeCallbacks(it) }
+        alarmRepeatRunnable = null
+        alarmRingtone?.let { runCatching { it.stop() } }
+        alarmRingtone = null
+    }
+
+    private fun playToneBursts(burstsLeft: Int) {
+        if (burstsLeft <= 0) return
         runCatching {
             // The alarm stream is used because the phone is usually in a pocket during
             // a trip, where a notification sound is easy to miss.
             val tone = ToneGenerator(AudioManager.STREAM_ALARM, ToneGenerator.MAX_VOLUME)
             tone.startTone(ToneGenerator.TONE_CDMA_ALERT_CALL_GUARD, TONE_DURATION_MILLIS)
-            mainHandler.postDelayed({ tone.release() }, TONE_DURATION_MILLIS + 200L)
+            mainHandler.postDelayed({ tone.release() }, TONE_DURATION_MILLIS + 100L)
+        }
+        if (burstsLeft > 1) {
+            val next = Runnable { playToneBursts(burstsLeft - 1) }
+            alarmRepeatRunnable = next
+            mainHandler.postDelayed(next, TONE_DURATION_MILLIS + 300L)
         }
     }
 
@@ -231,7 +299,9 @@ class ProximityAlertManager(
         const val NOTIFICATION_ID = 4712
         const val REQUEST_OPEN = 20
         const val TONE_DURATION_MILLIS = 1_500
+        const val TONE_BURSTS = 4
+        const val ALARM_RING_MILLIS = 6_000L
         const val MIN_ALARM_INTERVAL_MILLIS = 5_000L
-        val VIBRATION_PATTERN = longArrayOf(0, 400, 200, 400, 200, 600)
+        val VIBRATION_PATTERN = longArrayOf(0, 600, 200, 600, 200, 600, 200, 1_000)
     }
 }

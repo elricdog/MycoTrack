@@ -1860,30 +1860,42 @@ private fun ProximityBanner(
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer),
         shape = RoundedCornerShape(16.dp),
     ) {
-        Row(
-            modifier = Modifier.padding(start = 16.dp, end = 4.dp, top = 8.dp, bottom = 8.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(12.dp),
+        // The buttons go on their own row so that the text gets the whole width of the
+        // card, which is kept free of the columns of map buttons.
+        Column(
+            modifier = Modifier.padding(start = 16.dp, end = 8.dp, top = 12.dp, bottom = 4.dp),
+            verticalArrangement = Arrangement.spacedBy(4.dp),
         ) {
-            Icon(Icons.Filled.NotificationsActive, contentDescription = null)
-            Column(Modifier.weight(1f)) {
-                Text(
-                    text = stringResource(R.string.proximity_notification_title),
-                    style = MaterialTheme.typography.titleSmall,
-                )
-                Text(
-                    text = stringResource(
-                        R.string.proximity_notification_text,
-                        label,
-                        Formatters.distance(hit.distanceMeters),
-                        hit.target.tripName,
-                    ),
-                    style = MaterialTheme.typography.bodyMedium,
-                )
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
+            ) {
+                Icon(Icons.Filled.NotificationsActive, contentDescription = null)
+                Column(Modifier.weight(1f)) {
+                    Text(
+                        text = stringResource(R.string.proximity_notification_title),
+                        style = MaterialTheme.typography.titleMedium,
+                    )
+                    Text(
+                        text = stringResource(
+                            R.string.proximity_notification_text,
+                            label,
+                            Formatters.distance(hit.distanceMeters),
+                            hit.target.tripName,
+                        ),
+                        style = MaterialTheme.typography.bodyMedium,
+                    )
+                }
             }
-            TextButton(onClick = onShow) { Text(stringResource(R.string.map_proximity_show)) }
-            IconButton(onClick = onDismiss) {
-                Icon(Icons.Filled.Close, contentDescription = stringResource(R.string.map_close))
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(4.dp, Alignment.End),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                TextButton(onClick = onShow) { Text(stringResource(R.string.map_proximity_show)) }
+                IconButton(onClick = onDismiss) {
+                    Icon(Icons.Filled.Close, contentDescription = stringResource(R.string.map_close))
+                }
             }
         }
     }
