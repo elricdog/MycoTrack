@@ -24,7 +24,9 @@ import kotlinx.coroutines.delay
 import com.mikotrack.R
 import com.mikotrack.data.prefs.GameId
 import kotlin.math.abs
+import kotlin.math.cos
 import kotlin.math.sin
+import kotlin.math.sqrt
 import kotlin.random.Random
 
 /**
@@ -51,7 +53,27 @@ private class ArkanoidState {
     var fireFrames by mutableIntStateOf(0)
     var serve = true
 
-    data class Ball(var x: Float, var y: Float, var vx: Float = 0.012f, var vy: Float = -0.016f)
+    /**
+     * Playfield height / width, kept in sync by the canvas (plain field, not
+     * state). Velocities are per-axis normalised, so angles need this factor to
+     * travel as straight diagonals on screen instead of near-vertical zigzags.
+     */
+    var aspect = 2.0f
+
+    data class Ball(var x: Float, var y: Float, var vx: Float = 0f, var vy: Float = 0f)
+
+    /** |v| measured on screen: 1 in this unit is `height` px per step. */
+    private fun speedMag(b: Ball): Float {
+        val vx = b.vx * aspect
+        return sqrt(vx * vx + b.vy * b.vy)
+    }
+
+    /** Set the velocity from a screen-space angle (degrees from horizontal, up). */
+    private fun setVel(b: Ball, mag: Float, angleDeg: Double) {
+        val rad = Math.toRadians(angleDeg)
+        b.vx = mag * aspect * cos(rad).toFloat()
+        b.vy = -mag * sin(rad).toFloat()
+    }
     data class Brick(val col: Int, val row: Int, val kind: Int, var alive: Boolean = true)
     /** A falling power-up: kind 0 = multiball, 1 = shooter. */
     data class Drop(var x: Float, var y: Float, val kind: Int)
@@ -81,8 +103,12 @@ private class ArkanoidState {
     }
 
     fun launch() {
-        val dir = if (Random.nextBoolean()) 1 else -1
-        balls = balls.map { it.copy(vx = dir * (0.010f + level * 0.001f), vy = -(0.016f + level * 0.001f)) }
+        // A crisp diagonal launch (about 65° from horizontal, slightly randomised)
+        // instead of a near-vertical wobble.
+        val mag = 0.015f + level * 0.0008f
+        val jitter = Random.nextInt(-12, 13)
+        val angle = if (Random.nextBoolean()) 65.0 + jitter else 115.0 - jitter
+        balls = balls.map { it.also { b -> setVel(b, mag, angle) } }
         serve = false
     }
 
@@ -114,10 +140,12 @@ private class ArkanoidState {
             if (ball.y < 0.02f) { ball.y = 0.02f; ball.vy = abs(ball.vy) }
             // The paddle sits at y = 0.86 and is 0.22 wide.
             if (ball.vy > 0 && ball.y in 0.84f..0.88f && abs(ball.x - paddleX) < 0.13f) {
-                ball.vy = -abs(ball.vy)
-                // The impact point steers the ball, like in the arcade original.
-                val offset = (ball.x - paddleX) / 0.13f
-                ball.vx = ball.vx * 0.8f + offset * 0.008f
+                // The impact point sets the bounce angle, as in the arcade original,
+                // measured in true screen space so the path stays a clean diagonal.
+                val offset = ((ball.x - paddleX) / 0.13f).coerceIn(-1f, 1f)
+                val mag = speedMag(ball).coerceIn(0.013f, 0.020f + level * 0.001f)
+                setVel(ball, mag, 90.0 - offset * 40.0)
+                ball.y = 0.83f
             }
             // Bricks: a 8 x 6 grid between y = 0.06 and 0.5.
             val col = (ball.x * 8).toInt()
@@ -159,10 +187,13 @@ private class ArkanoidState {
             for (d in caught) {
                 when (d.kind) {
                     0 -> {
-                        // Multiball: two siblings leave the caught ball at angles.
+                        // Multiball: two siblings leave the caught ball at diagonals.
                         val b = balls.firstOrNull()
                         if (b != null) {
-                            balls = balls + Ball(b.x, b.y, 0.011f, -0.015f) + Ball(b.x, b.y, -0.011f, -0.015f)
+                            val mag = speedMag(b)
+                            balls = balls +
+                                Ball(b.x, b.y).also { setVel(it, mag, 62.0) } +
+                                Ball(b.x, b.y).also { setVel(it, mag, 118.0) }
                         }
                     }
                     1 -> fireFrames = 8 * 60
@@ -285,6 +316,7 @@ fun ArkanoidScreen(
                     }
                 },
         ) {
+            state.aspect = size.height / size.width
             val cell = size.width / 8f
             drawRect(PixelArt.NIGHT_CELL)
             // Subtle forest floor at the bottom.
