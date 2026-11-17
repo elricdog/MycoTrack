@@ -89,10 +89,10 @@
     <string name="games_hub_subtitle">Petits jocs de píxels per jugar al bosc mentre els bolets creixen. Cadascun té el seu propi rànquing.</string>
     <string name="game_arkanoid">Aixeta Bolets</string>
     <string name="game_arkanoid_blurb">Fes rebotre la pilota amb la cistella i tomba els bolets.</string>
-    <string name="game_arkanoid_hint">Arrossega per moure la cistella, toca per llançar la pilota.</string>
+    <string name="game_arkanoid_hint">Arrossega la cistella, toca per llançar, doble toc per disparar.</string>
     <string name="game_tetris">MycoTris</string>
     <string name="game_tetris_blurb">Apila els maons de bolet i omple files.</string>
-    <string name="game_tetris_hint">Toca l\'esquerra / la dreta per desplaçar, toca el centre per girar, llisca avall per fer caure la peça a terra.</string>
+    <string name="game_tetris_hint">Toca l\'esquerra / la dreta, el centre per girar, llisca avall per caure a terra, lateral fins a la paret.</string>
     <string name="game_pacman">Laberint d\'Espores</string>
     <string name="game_pacman_blurb">Mena\'t les espores i escapa de les bufaderes fantasma.</string>
     <string name="game_pacman_hint">Llisca per dirigir. Les espores daurades et deixen menjar els fantasmes!</string>

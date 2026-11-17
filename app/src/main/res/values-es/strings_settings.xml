@@ -89,10 +89,10 @@
     <string name="games_hub_subtitle">Pequeños juegos de píxeles para jugar en el bosque mientras crecen los setas. Cada uno tiene su propio ranking.</string>
     <string name="game_arkanoid">Aplasta Setas</string>
     <string name="game_arkanoid_blurb">Haz rebotar la pelota con la cesta y derriba las setas.</string>
-    <string name="game_arkanoid_hint">Arrastra para mover la cesta, toca para lanzar la pelota.</string>
+    <string name="game_arkanoid_hint">Arrastra la cesta, toca para lanzar, doble toque para disparar.</string>
     <string name="game_tetris">MycoTris</string>
     <string name="game_tetris_blurb">Apila los ladrillos de seta y rellena filas.</string>
-    <string name="game_tetris_hint">Toca izquierda / derecha para desplazar, toca el centro para girar, desliza abajo para caer la pieza al suelo.</string>
+    <string name="game_tetris_hint">Toca izquierda / derecha, el centro para girar, desliza abajo para caer, lateral hasta la pared.</string>
     <string name="game_pacman">Laberinto de Esporas</string>
     <string name="game_pacman_blurb">Come las esporas y escapa de las puffballs fantasma.</string>
     <string name="game_pacman_hint">Desliza para dirigir. ¡Las esporas doradas te dejan comer fantasmas!</string>

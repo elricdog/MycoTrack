@@ -977,22 +977,26 @@ private fun sparkNoise(i: Int, seed: Float): Float {
 @Composable
 internal fun BoxScope.SparklesOverlay(bursts: List<SparkBurst>) {
     if (bursts.isEmpty()) return
-    val transition = androidx.compose.animation.core.rememberInfiniteTransition(label = "sparkles")
-    // A ticking value forces a redraw of the canvas every frame while bursts live.
-    transition.animateFloat(0f, 1f,
-        animationSpec = androidx.compose.animation.core.infiniteRepeatable(
-            androidx.compose.animation.core.tween(16),
-            androidx.compose.animation.core.RepeatMode.Restart,
-        ),
-        label = "frame",
-    )
+    // A per-frame ticker: the canvas reads [frameNow], and the coroutine refreshes it
+    // every vsync, so the explosion animates until every burst has expired.
+    var frameNow by androidx.compose.runtime.remember {
+        androidx.compose.runtime.mutableLongStateOf(System.currentTimeMillis())
+    }
+    if (bursts.isNotEmpty()) {
+        androidx.compose.runtime.LaunchedEffect(bursts.size) {
+            while (true) {
+                frameNow = System.currentTimeMillis()
+                androidx.compose.runtime.withFrameNanos { }
+            }
+        }
+    }
     Canvas(
         modifier = Modifier
             .matchParentSize()
             // The explosion may fly past the banner's rounded clip.
             .graphicsLayer { clip = false },
     ) {
-        val now = System.currentTimeMillis()
+        val now = frameNow
         val dp = density
         val gravity = 26f * dp // px/s²
         for (burst in bursts) {

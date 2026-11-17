@@ -73,13 +73,14 @@ private class PacmanState {
     var ghosts by mutableStateOf(listOf(Offset(6f, 6f), Offset(8f, 6f)))
     var ghostDirs by mutableStateOf(listOf(Offset(0f, -1f), Offset(0f, 1f)))
     var openDots by mutableIntStateOf(0)
-    private var lastCellX = 2
-    private var lastCellY = 8
 
     fun loadMap() {
         for (y in 0 until H) for (x in 0 until W) tiles[y][x] = MAP[y * W + x]
+        // The dots under the spawn cells are considered already eaten.
+        tiles[8][2] = '.'
         openDots = tiles.sumOf { row -> row.count { it == '.' || it == 'o' } }
         respawn()
+        eat(2, 8) // the dot under the spawn is eaten at once
     }
 
     /** Reset hero, ghosts and directions to the spawn cells. */
@@ -89,8 +90,6 @@ private class PacmanState {
         pendingDir = Offset.Zero
         ghosts = listOf(Offset(6f, 6f), Offset(8f, 6f))
         ghostDirs = listOf(Offset(0f, -1f), Offset(0f, 1f))
-        lastCellX = 2
-        lastCellY = 8
     }
 
     fun wallAt(x: Int, y: Int) = x < 0 || y < 0 || x >= W || y >= H || tiles[y][x] in WALL
@@ -108,9 +107,16 @@ private class PacmanState {
         }
     }
 
-    /** True when [p] is within [tol] cells of a grid centre. */
-    private fun nearCenter(p: Offset, tol: Float) =
-        abs(p.x - kotlin.math.round(p.x)) < tol && abs(p.y - kotlin.math.round(p.y)) < tol
+    /**
+     * The integer grid coordinate crossed while moving in one axis between
+     * [prev] and [next], or null when the segment stays inside a single cell.
+     */
+    private fun centerCrossed(prev: Float, next: Float): Float? {
+        val lo = minOf(prev, next)
+        val hi = maxOf(prev, next)
+        val c = kotlin.math.ceil(lo)
+        return if (c > lo + 1e-4f && c <= hi) c else null
+    }
 
     fun step() {
         if (gameOver) return
@@ -120,38 +126,54 @@ private class PacmanState {
         val heroSpeed = 0.085f + level * 0.003f
         val ghostSpeed = 0.062f + level * 0.0025f
 
-        // The hero glides; it turns and can stop at cell centres.
+        // The hero glides in a straight line. Only when it crosses a cell centre
+        // it consumes the queued turn or stops against a wall; otherwise the
+        // motion never snaps, so the hero cannot get stuck on the spot.
         var hp = heroPos
         var hd = heroDir
-        if (nearCenter(hp, heroSpeed)) {
+        if (hd == Offset.Zero) {
+            // Stuck against a wall: a queued swipe can free us at the current centre.
             val cx = kotlin.math.round(hp.x).toInt()
             val cy = kotlin.math.round(hp.y).toInt()
-            hp = Offset(cx.toFloat(), cy.toFloat())
-            if (pendingDir != Offset.Zero && canGo(cx, cy, pendingDir)) heroDir = pendingDir.also { hd = it }
-            if (!canGo(cx, cy, hd)) hd = Offset.Zero
+            if (pendingDir != Offset.Zero && canGo(cx, cy, pendingDir)) {
+                hd = pendingDir
+                pendingDir = Offset.Zero
+                hp += hd * heroSpeed
+            }
+        } else {
+            val np = hp + hd * heroSpeed
+            val cr = if (hd.x != 0f) centerCrossed(hp.x, np.x) else centerCrossed(hp.y, np.y)
+            if (cr != null) {
+                hp = if (hd.x != 0f) Offset(cr, hp.y) else Offset(hp.x, cr)
+                val cx = kotlin.math.round(hp.x).toInt()
+                val cy = kotlin.math.round(hp.y).toInt()
+                if (pendingDir != Offset.Zero && canGo(cx, cy, pendingDir)) {
+                    hd = pendingDir
+                    pendingDir = Offset.Zero
+                }
+                if (canGo(cx, cy, hd)) hp += hd * heroSpeed else hd = Offset.Zero
+                eat(cx, cy)
+            } else {
+                hp = np
+            }
         }
-        hp += hd * heroSpeed
         heroPos = hp
         heroDir = hd
-        val ncx = kotlin.math.round(hp.x).toInt()
-        val ncy = kotlin.math.round(hp.y).toInt()
-        if (ncx != lastCellX || ncy != lastCellY) {
-            lastCellX = ncx; lastCellY = ncy
-            eat(ncx, ncy)
-        }
 
-        // The ghosts glide too, deciding a new direction every time they cross a centre.
+        // The ghosts glide too, deciding a new direction when they cross a centre.
         val next = mutableListOf<Offset>()
         val nextDirs = mutableListOf<Offset>()
         ghosts.forEachIndexed { i, g ->
-            var gp = g
             var gd = ghostDirs[i]
-            if (nearCenter(gp, ghostSpeed)) {
+            val np = g + gd * ghostSpeed
+            val cr = if (gd.x != 0f) centerCrossed(g.x, np.x) else centerCrossed(g.y, np.y)
+            var gp = np
+            if (cr != null) {
+                gp = if (gd.x != 0f) Offset(cr, g.y) else Offset(g.x, cr)
                 val gx = kotlin.math.round(gp.x).toInt()
                 val gy = kotlin.math.round(gp.y).toInt()
-                gp = Offset(gx.toFloat(), gy.toFloat())
                 val options = DIRS.filter { canGo(gx, gy, it) && it != -gd }
-                val pick = if (options.isEmpty()) -gd else {
+                gd = if (options.isEmpty()) -gd else {
                     options.minByOrNull { d ->
                         val nx = gx + d.x.toInt()
                         val ny = gy + d.y.toInt()
@@ -161,9 +183,8 @@ private class PacmanState {
                         if (Random.nextInt(4) == 0) Random.nextDouble() else signed.toDouble()
                     } ?: gd
                 }
-                gd = pick
+                gp += gd * ghostSpeed
             }
-            gp += gd * ghostSpeed
             next += gp
             nextDirs += gd
         }
@@ -274,12 +295,10 @@ fun PacmanScreen(
                 }
             }
 
-            // The hero mushroom and the ghost puffballs.
-            drawSprite(
-                PixelArt.CEP,
-                Offset(left + (state.heroPos.x - 0.5f) * cell, top + (state.heroPos.y - 0.5f) * cell),
-                cell / 8f,
-            )
+            // The hero mushroom and the ghost puffballs, centred on their cell:
+            // a sprite is exactly one cell wide, so its origin is simply pos * cell.
+            fun spriteOrigin(p: Offset) = Offset(left + p.x * cell, top + p.y * cell)
+            drawSprite(PixelArt.CEP, spriteOrigin(state.heroPos), cell / 8f)
             val ghostPalette = if (state.fright > 0) {
                 PixelArt.PUFFBALL_GHOST.palette + mapOf('W' to PixelArt.SLIME)
             } else {
@@ -288,7 +307,7 @@ fun PacmanScreen(
             for (g in state.ghosts) {
                 drawSprite(
                     PixelArt.PUFFBALL_GHOST.copy(palette = ghostPalette),
-                    Offset(left + (g.x - 0.5f) * cell, top + (g.y - 0.5f) * cell),
+                    spriteOrigin(g),
                     cell / 8f,
                 )
             }

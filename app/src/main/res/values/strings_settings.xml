@@ -87,10 +87,10 @@
     <string name="games_hub_subtitle">Little pixel games to play in the forest while the mushrooms grow. Each one keeps its own ranking.</string>
     <string name="game_arkanoid">Mushroom Breaker</string>
     <string name="game_arkanoid_blurb">Bounce the ball with the basket and knock down the mushrooms.</string>
-    <string name="game_arkanoid_hint">Drag to move the basket, tap to launch the ball.</string>
+    <string name="game_arkanoid_hint">Drag the basket, tap to launch, double tap to shoot.</string>
     <string name="game_tetris">MycoTris</string>
     <string name="game_tetris_blurb">Stack the mushroom bricks and clear rows.</string>
-    <string name="game_tetris_hint">Tap left / right to slide, tap the middle to rotate, swipe down to drop the piece to the ground.</string>
+    <string name="game_tetris_hint">Tap left / right to slide, tap the middle to rotate, swipe down to drop, swipe sideways to wall.</string>
     <string name="game_pacman">Spore Maze</string>
     <string name="game_pacman_blurb">Eat the spores and escape the puffball ghosts.</string>
     <string name="game_pacman_hint">Swipe to steer. Golden spores let you eat the ghosts!</string>

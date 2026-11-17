@@ -117,6 +117,11 @@ private class TetrisState {
         }
     }
 
+    /** Slides the piece all the way to the wall on this side. */
+    fun slideToWall(dx: Int) {
+        while (fits(shape, rot, pieceX + dx, pieceY)) pieceX += dx
+    }
+
     fun hardDrop() {
         var dropped = 0
         while (fits(shape, rot, pieceX, pieceY + 1)) {
@@ -183,6 +188,11 @@ fun TetrisScreen(
     }
 
     LaunchedEffect(Unit) {
+        // The classics: Korobeiniki loops while the screen is open.
+        korobeinikiTune().playForever(this)
+    }
+
+    LaunchedEffect(Unit) {
         while (true) {
             delay(50)
             state.step()
@@ -214,18 +224,26 @@ fun TetrisScreen(
                 }
                 .pointerInput(state.gameOver) {
                     // One swipe = one action: swiping down hard-drops the current piece
-                    // to the ground; the next piece needs the finger lifted and a new swipe.
+                    // to the ground, swiping to a side slides the piece all the way to
+                    // that wall, swiping up rotates. The next action needs the finger
+                    // lifted and a new swipe.
+                    var accX = 0f
                     var accY = 0f
                     var used = false
                     detectDragGestures(
-                        onDragStart = { accY = 0f; used = false },
+                        onDragStart = { accX = 0f; accY = 0f; used = false },
                         onDragEnd = { used = false },
                         onDragCancel = { used = false },
                     ) { _, dragAmount ->
+                        accX += dragAmount.x
                         accY += dragAmount.y
-                        if (!used && kotlin.math.abs(accY) > 40f && kotlin.math.abs(accY) > kotlin.math.abs(dragAmount.x * 4f)) {
-                            if (accY > 0) state.hardDrop() else state.rotate()
-                            used = true
+                        if (used || kotlin.math.abs(accX).coerceAtLeast(kotlin.math.abs(accY)) < 40f) return@detectDragGestures
+                        used = true
+                        when {
+                            kotlin.math.abs(accX) > kotlin.math.abs(accY) ->
+                                state.slideToWall(if (accX > 0) 1 else -1)
+                            accY > 0 -> state.hardDrop()
+                            else -> state.rotate()
                         }
                     }
                 },
