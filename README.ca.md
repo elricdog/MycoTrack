@@ -27,6 +27,14 @@ instal·la'l a qualsevol telèfon o tauleta amb Android 8.0+, fins i tot sense G
 Services. Les instruccions pas a pas (permisos, tria de l'APK adequat, instal·lació manual,
 actualitzacions i solució de problemes) són a la **[guia d'instal·lació](install.ca.md)**.
 
+## Suporta el projecte
+
+El MycoTrack és gratuït, de codi obert i sense publicitat. Si t'agrada i vols donar suport
+al seu desenvolupament, pots convidar l'autor a un cafè:
+
+[![PayPal](https://img.shields.io/badge/PayPal-Donatiu-00457C?logo=paypal&logoColor=white)](https://paypal.me/elricdog)
+[![GitHub Sponsors](https://img.shields.io/badge/GitHub_Sponsors-Donatiu-ea4aaa?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/elricdog)
+
 ## Captures de pantalla
 
 | **Mapa i gravació** — mapa a pantalla completa amb la posició en viu, la ruta que es va dibuixant i el panell d'estadístiques en temps real; *Finalitza mantenint premut* acaba la sortida. | **Perfil d'altimetria** — altitud contra distància, sincronitzat amb el mapa: toca la gràfica per moure el marcador, els punts de foto es situen sobre la ruta. |

@@ -26,6 +26,14 @@ Android 8.0+ phone or tablet, even without Google Play Services. Step-by-step in
 (permissions, choosing the right APK, sideloading, updates and troubleshooting) are in
 **[install.md](install.md)** — available in [English](install.md) and [Català](install.ca.md).
 
+## Support the project
+
+MycoTrack is free, open source and has no ads. If you enjoy it and want to support its
+development, you can invite the author a coffee:
+
+[![PayPal](https://img.shields.io/badge/PayPal-Donate-00457C?logo=paypal&logoColor=white)](https://paypal.me/elricdog)
+[![GitHub Sponsors](https://img.shields.io/badge/GitHub_Sponsors-Donate-ea4aaa?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/elricdog)
+
 ## Screenshots
 
 | **Map & recording** — full-screen map with your live position, the route being drawn and the real-time statistics panel; *Hold to end* finishes a trip. | **Elevation profile** — altitude against distance, synchronised with the map: tap the chart to move the marker, the photo dots sit on the route. |

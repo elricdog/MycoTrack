@@ -54,6 +54,8 @@
     <string name="settings_version">Versió %1$s</string>
     <string name="settings_about_description">MycoTrack enregistra les sortides per buscar bolets completament al dispositiu. No cal cap compte, cap subscripció ni cap servei de mapes comercial: els mapes provenen d\'OpenStreetMap i de l\'Institut Cartogràfic i Geològic de Catalunya (ICGC).</string>
     <string name="settings_about_licences">Els mapes fora de línia de Catalunya inclosos a l\'aplicació els publica l\'ICGC amb la llicència Creative Commons Reconeixement 4.0. El mapa de carrers és © col·laboradors d\'OpenStreetMap, també amb llicència Creative Commons Reconeixement.</string>
+    <string name="settings_donate_description">El MycoTrack és gratuït, de codi obert i sense publicitat. Si t\'agrada i vols donar suport al seu desenvolupament, pots convidar l\'autor a un cafè.</string>
+    <string name="settings_donate_button">Suporta amb PayPal</string>
 
     <!-- Permission centre -->
     <string name="permissions_granted">Concedit</string>

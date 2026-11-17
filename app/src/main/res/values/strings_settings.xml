@@ -52,6 +52,8 @@
     <string name="settings_version">Version %1$s</string>
     <string name="settings_about_description">MycoTrack records mushroom foraging trips entirely on the device. No account, no subscription and no commercial map service is required: the maps come from OpenStreetMap and from the Institut Cartogràfic i Geològic de Catalunya (ICGC).</string>
     <string name="settings_about_licences">The offline maps of Catalonia that ship with the application are published by the ICGC under the Creative Commons Attribution 4.0 licence. The street map is © OpenStreetMap contributors, also under the Creative Commons Attribution licence.</string>
+    <string name="settings_donate_description">MycoTrack is free, open source and has no ads. If you enjoy it and want to support its development, you can invite the author a coffee.</string>
+    <string name="settings_donate_button">Support with PayPal</string>
 
     <!-- Permission centre -->
     <string name="permissions_granted">Granted</string>

@@ -54,6 +54,8 @@
     <string name="settings_version">Versión %1$s</string>
     <string name="settings_about_description">MycoTrack graba las salidas para buscar setas completamente en el dispositivo. No se necesita ninguna cuenta, ninguna suscripción ni ningún servicio de mapas comercial: los mapas provienen de OpenStreetMap y del Institut Cartogràfic i Geològic de Catalunya (ICGC).</string>
     <string name="settings_about_licences">Los mapas sin conexión de Cataluña incluidos en la aplicación los publica el ICGC con la licencia Creative Commons Reconocimiento 4.0. El mapa de calles es © colaboradores de OpenStreetMap, también con licencia Creative Commons Reconocimiento.</string>
+    <string name="settings_donate_description">MycoTrack es gratuito, de código abierto y sin publicidad. Si te gusta y quieres apoyar su desarrollo, puedes invitar al autor a un café.</string>
+    <string name="settings_donate_button">Apoyar con PayPal</string>
 
     <!-- Permission centre -->
     <string name="permissions_granted">Concedido</string>

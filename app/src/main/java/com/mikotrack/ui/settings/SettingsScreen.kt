@@ -1,5 +1,7 @@
 package com.mikotrack.ui.settings
 
+import android.content.Intent
+import android.net.Uri
 import com.mikotrack.maps.OfflineMapManager
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -69,6 +71,9 @@ import com.mikotrack.ui.update.updateStatusText
 import com.mikotrack.update.UpdateManager
 import java.util.Locale
 import kotlin.math.cos
+
+/** Where users can support the development of the application. */
+private const val DONATE_URL = "https://paypal.me/elricdog"
 
 /** The settings screen: GPS, appearance, offline maps and permissions. */
 @OptIn(ExperimentalLayoutApi::class)
@@ -416,6 +421,22 @@ fun SettingsScreen(
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
+            Text(
+                text = stringResource(R.string.settings_donate_description),
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+            OutlinedButton(
+                onClick = {
+                    context.startActivity(
+                        Intent(Intent.ACTION_VIEW, Uri.parse(DONATE_URL))
+                            .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK),
+                    )
+                },
+                modifier = Modifier.fillMaxWidth(),
+            ) {
+                Text(stringResource(R.string.settings_donate_button))
+            }
         }
 
         SectionCard(title = stringResource(R.string.settings_updates)) {
