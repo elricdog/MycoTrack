@@ -34,6 +34,9 @@ development, you can invite the author a coffee:
 [![PayPal](https://img.shields.io/badge/PayPal-Donate-00457C?logo=paypal&logoColor=white)](https://paypal.me/elricdog)
 [![GitHub Sponsors](https://img.shields.io/badge/GitHub_Sponsors-Donate-ea4aaa?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/elricdog)
 
+🥚 There is an easter egg as a gift for the launch of the integrated PayPal donation
+system… let's see who finds it first!!!
+
 ## Screenshots
 
 | **Map & recording** — full-screen map with your live position, the route being drawn and the real-time statistics panel; *Hold to end* finishes a trip. | **Elevation profile** — altitude against distance, synchronised with the map: tap the chart to move the marker, the photo dots sit on the route. |
