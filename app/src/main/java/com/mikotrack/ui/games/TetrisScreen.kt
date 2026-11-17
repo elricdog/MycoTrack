@@ -36,7 +36,7 @@ private class TetrisState {
         const val ROWS = 18
 
         /** The seven shapes, each as a list of rotations; every rotation is 4 cells. */
-        private val SHAPES: List<List<List<Pair<Int, Int>>>> = listOf(
+        val SHAPES: List<List<List<Pair<Int, Int>>>> = listOf(
             // I
             listOf(listOf(0 to 1, 1 to 1, 2 to 1, 3 to 1), listOf(2 to 0, 2 to 1, 2 to 2, 2 to 3)),
             // O
@@ -54,7 +54,7 @@ private class TetrisState {
         )
 
         /** One palette entry per shape, in the order of [SHAPES]. */
-        private val COLORS = listOf(
+        val COLORS = listOf(
             PixelArt.SLIME, PixelArt.CAP_GOLD, PixelArt.CAP_RED,
             PixelArt.FOREST, PixelArt.CAP_BROWN, PixelArt.CAP_ORANGE, PixelArt.LEAF,
         )
@@ -235,7 +235,7 @@ fun TetrisScreen(
             // Settled cells: each block is a pixel mushroom cap.
             for (y in 0 until TetrisState.ROWS) {
                 for (x in 0 until TetrisState.COLS) {
-                    val v = grid[y][x]
+                    val v = state.grid[y][x]
                     if (v == 0) continue
                     val color = TetrisState.COLORS[v - 1]
                     drawRect(color, cellOrigin(x, y), Size(cell - 1f, cell - 1f))

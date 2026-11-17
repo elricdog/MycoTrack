@@ -10,6 +10,7 @@ import com.mikotrack.data.db.OfflineAreaEntity
 import com.mikotrack.maps.BoundingBox
 import com.mikotrack.maps.MapLayer
 import com.mikotrack.maps.OfflineMapManager
+import com.mikotrack.update.GitHubRelease
 import com.mikotrack.update.UpdateManager
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
@@ -186,4 +187,7 @@ class SettingsViewModel(
     fun checkForUpdates() {
         updateManager.check(force = true)
     }
+
+    /** Every published release, newest first, for the changelog screen. */
+    suspend fun fetchChangelog(): List<GitHubRelease> = updateManager.fetchChangelog()
 }

@@ -83,21 +83,21 @@ fun GameHubScreen(
             title = stringResource(R.string.game_arkanoid),
             blurb = stringResource(R.string.game_arkanoid_blurb),
             ranking = scores[GameId.ARKANOID].orEmpty(),
-            icon = { drawMushroom(it, PixelArt.AGARIC) },
+            icon = { drawMushroom(this, PixelArt.AGARIC) },
             onClick = { onOpenGame(GameId.ARKANOID) },
         )
         GameCard(
             title = stringResource(R.string.game_tetris),
             blurb = stringResource(R.string.game_tetris_blurb),
             ranking = scores[GameId.TETRIS].orEmpty(),
-            icon = { drawMushroom(it, PixelArt.CHANTERELLE) },
+            icon = { drawMushroom(this, PixelArt.CHANTERELLE) },
             onClick = { onOpenGame(GameId.TETRIS) },
         )
         GameCard(
             title = stringResource(R.string.game_pacman),
             blurb = stringResource(R.string.game_pacman_blurb),
             ranking = scores[GameId.PACMAN].orEmpty(),
-            icon = { drawMushroom(it, PixelArt.CEP) },
+            icon = { drawMushroom(this, PixelArt.CEP) },
             onClick = { onOpenGame(GameId.PACMAN) },
         )
         // A placeholder for the games that will come later.

@@ -32,4 +32,12 @@
     <string name="update_status_available">Hi ha la versió %1$s</string>
     <string name="update_status_downloading">S\'està baixant…</string>
     <string name="update_status_ready">A punt per instal·lar</string>
+
+    <!-- Changelog dialog -->
+    <string name="changelog_title">Registre de canvis</string>
+    <string name="changelog_empty">No s\'ha trobat cap versió publicada.</string>
+    <string name="changelog_error">No s\'ha pogut carregar el registre de canvis. Comprova la connexió a internet.</string>
+    <string name="changelog_retry">Reintenta</string>
+    <string name="changelog_installed">Instal·lada</string>
+    <string name="changelog_date_pattern">dd MMM yyyy</string>
 </resources>

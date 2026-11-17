@@ -50,7 +50,7 @@ fun GameScaffold(
     level: Int,
     lives: Int?,
     hint: String,
-    gameOver: boolean,
+    gameOver: Boolean,
     ranking: List<GameScore>,
     onBack: () -> Unit,
     onRestart: () -> Unit,

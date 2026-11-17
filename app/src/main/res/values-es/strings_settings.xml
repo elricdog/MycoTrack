@@ -107,5 +107,7 @@
     <string name="game_ranking_title">Ranking</string>
     <string name="game_ranking_empty">Aún no hay récords: ¡sé el primero!</string>
     <string name="game_best_score">Mejor: %1$d</string>
+    <string name="settings_changelog">Ver el registro de cambios</string>
 </resources>
+
 

@@ -259,7 +259,7 @@ fun MycoTrackNavHost(
                 val viewModel: GamesViewModel = containerViewModel(container) {
                     GamesViewModel(it.settingsStore)
                 }
-                val back = { navController.popBackStack(Routes.GAMES, inclusive = false) }
+                val back: () -> Unit = { navController.popBackStack(Routes.GAMES, inclusive = false) }
                 when (entry.arguments?.getString("game")) {
                     "ARKANOID" -> ArkanoidScreen(viewModel = viewModel, onBack = back)
                     "TETRIS" -> TetrisScreen(viewModel = viewModel, onBack = back)

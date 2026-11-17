@@ -127,6 +127,7 @@ private class PacmanState {
                         val signed = if (fright > 0) -dist else dist
                         if (Random.nextInt(4) == 0) Random.nextDouble() else signed.toDouble()
                     } ?: ghostDirs[i]
+                }
                 if (canGo(gx, gy, pick)) {
                     gx += pick.x.toInt()
                     gy += pick.y.toInt()

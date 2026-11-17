@@ -3,6 +3,7 @@ package com.mikotrack.ui.settings
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
+import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.infiniteRepeatable
 import androidx.compose.animation.core.rememberInfiniteTransition
@@ -16,6 +17,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxScope
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
@@ -25,7 +27,6 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.matchParentSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
@@ -40,6 +41,7 @@ import androidx.compose.material.icons.filled.CloudDownload
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.GpsFixed
+import androidx.compose.material.icons.filled.History
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.FilterChip
@@ -88,6 +90,7 @@ import com.mikotrack.ui.common.SectionCard
 import com.mikotrack.ui.map.MapButton
 import com.mikotrack.ui.map.MapButtonGroup
 import com.mikotrack.ui.theme.ForestGreen
+import com.mikotrack.ui.update.ChangelogDialog
 import com.mikotrack.ui.update.CheckUpdatesButton
 import com.mikotrack.ui.update.updateStatusText
 import com.mikotrack.update.UpdateManager
@@ -125,6 +128,7 @@ fun SettingsScreen(
     val gamesUnlocked by viewModel.gamesUnlocked.collectAsStateWithLifecycle()
 
     var showDownloadDialog by remember { mutableStateOf(false) }
+    var showChangelog by remember { mutableStateOf(false) }
 
     // Easter egg: taps on the banner spawn sparkles, and five taps in a row unlock
     // the games hub.
@@ -611,6 +615,22 @@ fun SettingsScreen(
                     updateState is UpdateManager.State.Downloading,
                 onCheck = { viewModel.checkForUpdates() },
             )
+            // The history of the application: what each version brought, read from the
+            // GitHub releases.
+            OutlinedButton(
+                onClick = { showChangelog = true },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 6.dp),
+            ) {
+                Icon(
+                    Icons.Filled.History,
+                    contentDescription = null,
+                    modifier = Modifier.size(18.dp),
+                )
+                Spacer(Modifier.size(8.dp))
+                Text(stringResource(R.string.settings_changelog))
+            }
             val status = updateStatusText(updateState, BuildConfig.VERSION_NAME)
             if (status.isNotEmpty()) {
                 Text(
@@ -620,6 +640,13 @@ fun SettingsScreen(
                 )
             }
         }
+    }
+
+    if (showChangelog) {
+        ChangelogDialog(
+            fetch = { viewModel.fetchChangelog() },
+            onDismiss = { showChangelog = false },
+        )
     }
 
     if (showDownloadDialog) {

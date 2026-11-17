@@ -105,5 +105,7 @@
     <string name="game_ranking_title">Ranking</string>
     <string name="game_ranking_empty">No records yet: be the first!</string>
     <string name="game_best_score">Best: %1$d</string>
+    <string name="settings_changelog">View changelog</string>
 </resources>
+
 

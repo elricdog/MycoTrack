@@ -20,6 +20,9 @@ const val UPDATE_REPO = "elricdog/MycoTrack"
 /** The GitHub API endpoint of the latest published (not draft, not prerelease) release. */
 const val LATEST_RELEASE_URL = "https://api.github.com/repos/$UPDATE_REPO/releases/latest"
 
+/** The GitHub API endpoint listing the published releases, newest first. */
+const val RELEASES_URL = "https://api.github.com/repos/$UPDATE_REPO/releases?per_page=30"
+
 /** One downloadable file attached to a GitHub release. */
 @Serializable
 data class ReleaseAsset(
@@ -36,6 +39,7 @@ data class GitHubRelease(
     val name: String = "",
     val body: String? = null,
     val prerelease: Boolean = false,
+    val draft: Boolean = false,
     @SerialName("published_at") val publishedAt: String = "",
     val assets: List<ReleaseAsset> = emptyList(),
 )

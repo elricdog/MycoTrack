@@ -19,6 +19,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import kotlinx.serialization.builtins.ListSerializer
 import kotlinx.serialization.json.Json
 import java.io.File
 import java.io.IOException
@@ -197,10 +198,22 @@ class UpdateManager(
     }
 
     /** GETs the latest release from the GitHub API. */
-    private fun fetchLatestRelease(): GitHubRelease {
+    private fun fetchLatestRelease(): GitHubRelease =
+        json.decodeFromString(GitHubRelease.serializer(), httpGet(LATEST_RELEASE_URL))
+
+    /**
+     * GETs every published release, newest first, for the changelog. Drafts are dropped;
+     * the list is exactly what the releases page of the repository shows.
+     */
+    suspend fun fetchChangelog(): List<GitHubRelease> = withContext(Dispatchers.IO) {
+        json.decodeFromString(ListSerializer(GitHubRelease.serializer()), httpGet(RELEASES_URL))
+            .filter { !it.draft }
+    }
+
+    private fun httpGet(url: String): String {
         var connection: HttpURLConnection? = null
         try {
-            connection = (URL(LATEST_RELEASE_URL).openConnection() as HttpURLConnection).apply {
+            connection = (URL(url).openConnection() as HttpURLConnection).apply {
                 connectTimeout = 15_000
                 readTimeout = 20_000
                 setRequestProperty("Accept", "application/vnd.github+json")
@@ -215,8 +228,7 @@ class UpdateManager(
                 HttpURLConnection.HTTP_NOT_FOUND -> throw NoAssetException()
                 else -> throw HttpException(connection.responseCode)
             }
-            val body = connection.inputStream.bufferedReader().use { it.readText() }
-            return json.decodeFromString(GitHubRelease.serializer(), body)
+            return connection.inputStream.bufferedReader().use { it.readText() }
         } finally {
             connection?.disconnect()
         }

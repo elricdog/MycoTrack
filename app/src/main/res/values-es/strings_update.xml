@@ -32,4 +32,12 @@
     <string name="update_status_available">Hay la versión %1$s</string>
     <string name="update_status_downloading">Descargando…</string>
     <string name="update_status_ready">Lista para instalar</string>
+
+    <!-- Changelog dialog -->
+    <string name="changelog_title">Registro de cambios</string>
+    <string name="changelog_empty">No se ha encontrado ninguna versión publicada.</string>
+    <string name="changelog_error">No se ha podido cargar el registro de cambios. Comprueba la conexión a internet.</string>
+    <string name="changelog_retry">Reintentar</string>
+    <string name="changelog_installed">Instalada</string>
+    <string name="changelog_date_pattern">dd MMM yyyy</string>
 </resources>

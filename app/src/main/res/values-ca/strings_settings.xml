@@ -107,5 +107,7 @@
     <string name="game_ranking_title">Rànquing</string>
     <string name="game_ranking_empty">Encara no hi ha rècords: siga\'s el primer!</string>
     <string name="game_best_score">Millor: %1$d</string>
+    <string name="settings_changelog">Veure el registre de canvis</string>
 </resources>
+
 
