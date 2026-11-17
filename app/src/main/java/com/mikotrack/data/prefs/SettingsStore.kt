@@ -57,6 +57,8 @@ class SettingsStore(private val context: Context) {
         val HABITAT_ASPECT_CLASSES = stringPreferencesKey("habitat_aspect_classes")
         val HABITAT_HIDDEN_TREES = stringPreferencesKey("habitat_hidden_trees")
         val HABITAT_HIDDEN_SOIL = stringPreferencesKey("habitat_hidden_soil")
+        val HABITAT_RAIN = booleanPreferencesKey("habitat_rain_layer")
+        val HABITAT_RAIN_WINDOW = intPreferencesKey("habitat_rain_window")
         val SUITABILITY_LAYER = booleanPreferencesKey("suitability_layer")
         val SUITABILITY_SPECIES = stringPreferencesKey("suitability_species")
         val SUITABILITY_SPECIES_NAME = stringPreferencesKey("suitability_species_name")
@@ -269,6 +271,20 @@ class SettingsStore(private val context: Context) {
 
     suspend fun setHabitatHiddenSoil(keys: Set<String>) {
         context.dataStore.edit { it[Keys.HABITAT_HIDDEN_SOIL] = keys.sorted().joinToString(",") }
+    }
+
+    /** Whether the rainfall habitat overlay is shown on the map. */
+    val habitatRainLayer: Flow<Boolean> = context.dataStore.data.map { it[Keys.HABITAT_RAIN] ?: false }
+
+    suspend fun setHabitatRainLayer(enabled: Boolean) {
+        context.dataStore.edit { it[Keys.HABITAT_RAIN] = enabled }
+    }
+
+    /** The length of the rainfall accumulation window, in days (3, 7, 15 or 30). */
+    val habitatRainWindow: Flow<Int> = context.dataStore.data.map { it[Keys.HABITAT_RAIN_WINDOW] ?: 7 }
+
+    suspend fun setHabitatRainWindow(days: Int) {
+        context.dataStore.edit { it[Keys.HABITAT_RAIN_WINDOW] = days }
     }
 
     private fun decodeKeys(value: String?): Set<String> =

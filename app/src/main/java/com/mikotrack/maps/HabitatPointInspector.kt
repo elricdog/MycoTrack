@@ -107,6 +107,7 @@ data class HabitatPointInfo(
     val trees: PointValue<TreesAtPoint>? = null,
     val soil: PointValue<SoilAtPoint>? = null,
     val suitability: PointValue<SuitabilityAtPoint>? = null,
+    val rain: PointValue<RainAtPoint>? = null,
 ) {
     companion object {
         /** The initial state for the visible layers of [layers]. */
@@ -115,7 +116,27 @@ data class HabitatPointInfo(
             trees = PointValue.Loading.takeIf { layers.trees },
             soil = PointValue.Loading.takeIf { layers.soil },
             suitability = PointValue.Loading.takeIf { layers.suitabilityShown },
+            rain = PointValue.Loading.takeIf { layers.rain },
         )
+    }
+}
+
+/**
+ * The rain accumulated at a point over each window of the overlay, in millimetres, in
+ * the order of [RainRepository.WINDOWS] (3, 7, 15 and 30 days).
+ */
+data class RainAtPoint(
+    val millimeters3: Float,
+    val millimeters7: Float,
+    val millimeters15: Float,
+    val millimeters30: Float,
+) {
+    /** The accumulation over the given window, in millimetres. */
+    fun millimeters(windowDays: Int): Float = when (windowDays) {
+        3 -> millimeters3
+        15 -> millimeters15
+        30 -> millimeters30
+        else -> millimeters7
     }
 }
 
@@ -157,6 +178,21 @@ class HabitatPointInspector private constructor(context: Context) {
             if (layers.aspect && terrain != null) launch { val value = terrain.await(); update { it.copy(aspect = value) } }
             if (layers.trees && trees != null) launch { val value = trees.await(); update { it.copy(trees = value) } }
             if (layers.soil && soil != null) launch { val value = soil.await(); update { it.copy(soil = value) } }
+            if (layers.rain) launch {
+                // The totals come from the lattice downloaded by the overlay itself, so
+                // this needs no extra request; it only fails when there is no lattice.
+                val totals = runCatching {
+                    RainRepository.get(appContext).totalsAt(latitude, longitude)
+                }.getOrNull()
+                val value = if (totals != null && totals.size == RainRepository.WINDOWS.size) {
+                    PointValue.Ready(
+                        RainAtPoint(totals[0], totals[1], totals[2], totals[3]),
+                    )
+                } else {
+                    PointValue.Failed
+                }
+                update { it.copy(rain = value) }
+            }
             if (search != null) {
                 launch {
                     val preference = load { preferenceOf(search.speciesId) }

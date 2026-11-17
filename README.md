@@ -32,7 +32,7 @@ Android 8.0+ phone or tablet, even without Google Play Services. Step-by-step in
 |---|---|
 | <img src="docs/screenshots/en/01-map-recording.png" width="300" alt="Map and recording"> | <img src="docs/screenshots/en/02-trip-profile.png" width="300" alt="Elevation profile"> |
 
-| **Layers** — switch between OpenStreetMap, the ICGC topographic map, the orthophoto and the hybrid view, add offline areas and enable the habitat overlays (slope orientation, tree types, soil). | **History** — every recorded trip with distance, duration, elevation and photo counts; search, filter and give each trip its own route colour. |
+| **Layers** — switch between OpenStreetMap, the ICGC topographic map, the orthophoto and the hybrid view, add offline areas and enable the habitat overlays (rainfall, slope orientation, tree types, soil). | **History** — every recorded trip with distance, duration, elevation and photo counts; search, filter and give each trip its own route colour. |
 |---|---|
 | <img src="docs/screenshots/en/03-layers.png" width="300" alt="Layers"> | <img src="docs/screenshots/en/04-history.png" width="300" alt="History"> |
 
@@ -48,6 +48,10 @@ Android 8.0+ phone or tablet, even without Google Play Services. Step-by-step in
 |---|---|
 | <img src="docs/screenshots/en/09-mushroom-detail.png" width="300" alt="Species detail"> | <img src="docs/screenshots/en/10-settings.png" width="300" alt="Settings"> |
 
+| **Rainfall, last 3 days** — the *Rainfall* habitat overlay paints the rain accumulated over the chosen window (3 / 7 / 15 / 30 days) from the free Open-Meteo models: blue is wet, transparent is dry. Pick the window under the switch; the legend shows the ramp. | **Rainfall, last 30 days** — the same overlay over a month: the regions that received the autumn rains stand out, and long-pressing any point lists the exact accumulation of the four windows with a dry / damp / wet label. Rain a few days ago + suitable soil and trees is the classic mushroom signal. |
+|---|---|
+| <img src="docs/screenshots/en/11-rain-3d.png" width="300" alt="Rainfall overlay, last 3 days"> | <img src="docs/screenshots/en/12-rain-30d.png" width="300" alt="Rainfall overlay, last 30 days"> |
+
 ---
 
 ## 1. Feature overview
@@ -57,7 +61,7 @@ Android 8.0+ phone or tablet, even without Google Play Services. Step-by-step in
 | Map | Full-screen MapLibre map, live position, live route, overlaid previous routes, photograph markers, layer switcher |
 | Recording | `START` / `END` controls, foreground service that keeps recording with the screen off, progressive persistence, crash recovery |
 | Layers | OpenStreetMap, ICGC topographic, ICGC orthophotography, ICGC hybrid, terrain + hillshade, offline MBTiles |
-| Habitat layers | Switchable overlays on top of any base map: slope orientation (north / south / east-west hatching, computed on the device from elevation tiles), dominant tree species (Mapa Forestal de España, MITECO) and soil substrate (acid / basic bedrock, IGME lithological map), with an on-map legend where every class can be shown or hidden; plus the *likely areas* of a species of the guide around the user, scored from the three of them |
+| Habitat layers | Switchable overlays on top of any base map: rainfall (rain accumulated over the last 3, 7, 15 or 30 days, from the free Open-Meteo weather models), slope orientation (north / south / east-west hatching, computed on the device from elevation tiles), dominant tree species (Mapa Forestal de España, MITECO) and soil substrate (acid / basic bedrock, IGME lithological map), with an on-map legend where every class can be shown or hidden; plus the *likely areas* of a species of the guide around the user, scored from the three of them |
 | Elevation profile | Vico chart, distance on the horizontal axis, altitude on the vertical axis, tap to locate a point on the map, live position marker |
 | Statistics | Elapsed time, distance, current / average / maximum speed, altitude, gain, loss, moving and stationary time, photo and waypoint counters |
 | Photographs | In-application camera (CameraX), geotagged waypoints, editable description and category |
@@ -205,8 +209,8 @@ contributors), at most one request per second, only when the user submits a sear
 
 ### Habitat overlays
 
-Three optional overlays (*Layers → Habitat layers*) are drawn above any base map and below
-the routes, waypoints and position, from bottom to top: soil, tree types and slope
+Four optional overlays (*Layers → Habitat layers*) are drawn above any base map and below
+the routes, waypoints and position, from bottom to top: rainfall, soil, tree types and slope
 orientation (plus, on top, the likely areas of a species, described below). They need an internet connection; offline they stay empty. A collapsible
 legend (*Habitat legend* chip) appears on the map while one of them is on: it has one
 collapsible section per overlay with *All* / *None* shortcuts and a checkbox per class, so
@@ -214,9 +218,33 @@ only the classes of interest are drawn. The choices are stored in the settings.
 
 | Overlay | Source | Attribution / licence |
 | --- | --- | --- |
+| Rainfall | Open-Meteo forecast API `https://api.open-meteo.com/v1/forecast`, `daily=precipitation_sum` over a 27 × 37 lattice of points covering Catalonia, requested in chunks of 100 and stored in Room (`rain_daily` / `rain_meta`); the accumulation over the last 3, 7, 15 or 30 days is interpolated bilinearly and painted at `/rain/{z}/{x}/{y}.png?w=<days>&v=<version>` | Precipitation © Open-Meteo (ICON / ECMWF models, CC BY 4.0) |
 | Slope orientation | Computed on the device from the Terrarium elevation tiles (zoom 10–15; zoom 16–18 reuse the zoom 15 classes) and served by the loopback tile server at `/aspect/{z}/{x}/{y}.png?c=ns` | Elevation © Mapzen / OpenStreetMap contributors |
 | Tree types | MITECO WMS `https://iepnb.gob.es/geoserver/foto_fija_mfe/wms`, layer `ff_form_arbolada` (Mapa Forestal de España 1:25.000, dominant forest formation), requested in EPSG:3857 as transparent 512 px PNGs | Mapa Forestal de España © MITECO, CC BY 4.0 |
 | Soil (substrate) | IGME WMS `https://mapas.igme.es/gis/services/Cartografia_Geologica/IGME_Litologias_1M/MapServer/WMSServer`, layer `0` (Mapa litológico de España 1:1.000.000), requested in EPSG:3857 as 256 px PNGs by the loopback tile server and recoloured at `/soil/{z}/{x}/{y}.png?m=<mask>` (zoom 6–12, over-zoomed beyond) | Mapa litológico de España © IGME-CSIC, CC BY 4.0 (free service; the IGME asks to be contacted before building a paid value-added service on it) |
+
+**Rainfall.** The rain that fell in the last days is the main trigger of a mushroom
+fruiting: enough water a few days ago, and then a stable temperature, is what brings
+boletes and russulas up. The overlay paints, in blues fading to purple, the millimetres
+accumulated over the last **3, 7, 15 or 30 days** (picked with chips under the switch),
+so you can see at a glance which valleys got the rain you heard about and which stayed
+dry. It is drawn at the very bottom, under the soil and tree overlays, so every habitat
+stays readable on top of it.
+
+When the overlay is switched on, the app downloads the daily precipitation of a lattice
+of 999 points covering Catalonia plus a margin (0.1°, the resolution of the weather
+model), in chunks of 100 points spaced 1.2 s apart with a backoff on 429 answers, and
+stores it in Room (`maps/RainRepository.kt`, tables `rain_daily` and `rain_meta`). The
+download covers the last 31 finished days and is refreshed at most every 12 hours; every
+value is stored with the day it belongs to, so the four windows are computed on the
+device without asking again (`maps/RainGrid.kt`). The loopback server paints each tile
+from the bilinear interpolation of the window sums (`maps/RainTileProvider.kt`), and the
+colour ramp follows the *intensity* (millimetres per day) rather than the total, so a
+single ramp reads correctly for every window: 3 mm in 3 days is heavy rain, 3 mm in
+30 days is a drizzle. The window (`w`) and the timestamp of the download (`v`) travel in
+the URL, so a new download reloads the tiles. Long-pressing the map shows the exact
+accumulation of the four windows at that point, with a qualitative label (dry / damp /
+wet / very wet).
 
 **Orientation.** The orientation of every pixel is derived with Horn's 3×3 gradient
 (using the neighbouring elevation tiles for the border) and classified as north-facing
@@ -298,7 +326,9 @@ the canopy cover, from a WMS `GetFeatureInfo` request to the MITECO map
 again once because the service is sometimes inconsistent, and the colour of a 3 × 3 px
 `GetMap` is the fallback when there is no usable answer); the lithology and its substrate
 group, from `GetFeatureInfo` on the IGME service (`INFO_FORMAT=text/xml`); and, with the
-likely areas on, the score of the species there (low / medium / high). Every value is
+likely areas on, the score of the species there (low / medium / high). With the rainfall
+overlay on, the accumulated millimetres of the four windows at that point and a
+qualitative label (dry / damp / wet / very wet). Every value is
 fetched off the main thread with an 8 s timeout and abandoned when the sheet closes.
 
 The ICGC data is published under CC BY 4.0; please consult the
@@ -351,6 +381,8 @@ changes, update `OfflineMapManager.BUNDLED_PACKS` accordingly.
 | `waypoints` | `id`, `tripId`, `latitude`, `longitude`, `altitude`, `timestamp`, `description`, `category`, `imagePath` |
 | `waypoint_categories` | `id`, `name`, `color`, `symbol`, `builtIn` |
 | `offline_areas` | `id`, `name`, `layerId`, `filePath`, bounds, zoom range, `tileCount`, `sizeBytes`, `createdAt` |
+| `rain_daily` | `latitude`, `longitude`, `day` (primary key, micro-degrees / epoch day) and `millimeters` of rain on that day at each lattice node |
+| `rain_meta` | download timestamp and lattice geometry (origin, step, rows, cols) |
 
 Foreign keys use `ON DELETE CASCADE`, so deleting a trip also removes its track and its
 waypoints; the photographs are deleted from the file system by `ImageStore`.
@@ -405,6 +437,7 @@ device:
 * `TileMathTest`, `MbtilesStoreTest`, `OfflineMapPackTest` – tile maths, MBTiles files and
   the bundled packs.
 * `AspectClassifierTest` – slope orientation (aspect) and its north / south / neutral / flat classes.
+* `RainGridTest` and `RainScaleTest` – the accumulation windows, bilinear sampling and tile painting of the rainfall lattice, and the colour ramp and intensity bands.
 * `HabitatPointInspectorTest` – parsing of real `GetFeatureInfo` answers of the forest and
   lithological maps, and the orientation / slope at a point of an elevation grid.
 * `PermissionRequirementTest` – every permission explains itself in the three languages.

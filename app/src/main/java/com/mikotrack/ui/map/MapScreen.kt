@@ -970,6 +970,7 @@ fun MapScreen(
                             onHiddenSoilChange = viewModel::setHabitatHiddenSoil,
                             onSuitabilityChange = viewModel::setSuitabilityLayer,
                             onSuitabilityClear = viewModel::clearSuitabilitySearch,
+                            onRainChange = viewModel::setHabitatRainLayer,
                         )
                     }
                 }
@@ -1031,6 +1032,7 @@ fun MapScreen(
                             onHiddenSoilChange = viewModel::setHabitatHiddenSoil,
                             onSuitabilityChange = viewModel::setSuitabilityLayer,
                             onSuitabilityClear = viewModel::clearSuitabilitySearch,
+                            onRainChange = viewModel::setHabitatRainLayer,
                         )
                     }
                     // The profile next to the map, in the combined view.
@@ -1082,6 +1084,8 @@ fun MapScreen(
                 onHabitatTreesChange = viewModel::setHabitatTreesLayer,
                 onHabitatSoilChange = viewModel::setHabitatSoilLayer,
                 onSuitabilityChange = viewModel::setSuitabilityLayer,
+                onHabitatRainChange = viewModel::setHabitatRainLayer,
+                onHabitatRainWindowChange = viewModel::setHabitatRainWindow,
             )
         }
     }
@@ -1608,6 +1612,8 @@ private fun LayerSheet(
     onHabitatTreesChange: (Boolean) -> Unit = {},
     onHabitatSoilChange: (Boolean) -> Unit = {},
     onSuitabilityChange: (Boolean) -> Unit = {},
+    onHabitatRainChange: (Boolean) -> Unit = {},
+    onHabitatRainWindowChange: (Int) -> Unit = {},
 ) {
     Column(
         modifier = Modifier
@@ -1651,6 +1657,8 @@ private fun LayerSheet(
             onTreesChange = onHabitatTreesChange,
             onSoilChange = onHabitatSoilChange,
             onSuitabilityChange = onSuitabilityChange,
+            onRainChange = onHabitatRainChange,
+            onRainWindowChange = onHabitatRainWindowChange,
         )
     }
 }

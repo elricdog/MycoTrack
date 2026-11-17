@@ -239,6 +239,19 @@ class OfflineMapManager(
     fun soilTileUrl(): String? = tileServer.soilUrl()
 
     /**
+     * The URL template of the rainfall overlay, served by the local tile server.
+     * Starts the server when needed, so it must not be called on the main thread.
+     */
+    fun rainTileUrl(): String? = tileServer.rainUrl()
+
+    /** Downloads the rainfall lattice when it is missing or stale. */
+    suspend fun refreshRainData(force: Boolean = false): Boolean =
+        com.mikotrack.maps.RainRepository.get(appContext).refresh(force)
+
+    /** The timestamp of the rainfall lattice, `0` when nothing has been downloaded. */
+    suspend fun rainVersion(): Long = com.mikotrack.maps.RainRepository.get(appContext).currentVersion()
+
+    /**
      * Deletes an offline area and its MBTiles file.
      *
      * The areas that ship with the application are never deleted: they are restored

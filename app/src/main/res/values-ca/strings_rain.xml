@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- La capa d'hàbitat de pluviositat: pluja acumulada durant els últims dies. -->
+    <string name="habitat_rain_title">Pluviositat</string>
+    <string name="habitat_rain_description">Pluja acumulada durant els últims dies, segons els models meteorològics d\'Open-Meteo. La pluja d\'uns dies enrere és un bon senyal per als bolets.</string>
+    <string name="habitat_rain_window_days">%1$d d</string>
+    <string name="habitat_rain_legend_title">Pluviositat</string>
+    <string name="habitat_rain_legend_show">Mostra la capa de pluviositat</string>
+    <string name="habitat_rain_legend_window">Acumulada durant els últims %1$d dies</string>
+    <string name="habitat_rain_legend_low">sec</string>
+    <string name="habitat_rain_legend_high">torrencial</string>
+    <string name="habitat_rain_legend_note">Graella de model de 7 km, actualitzada cada 12 hores. Dades © Open-Meteo.</string>
+
+    <!-- Els valors de pluja d\'un punt premut amb la pressió llarga. -->
+    <string name="habitatpoint_rain_label">Pluviositat</string>
+    <string name="habitatpoint_rain_value">%1$s mm en %2$d dies · %3$s</string>
+    <string name="habitatpoint_rain_window">%1$d d: %2$s mm</string>
+    <string name="habitatpoint_rain_dry">sec</string>
+    <string name="habitatpoint_rain_damp">humit</string>
+    <string name="habitatpoint_rain_wet">molt humit</string>
+    <string name="habitatpoint_rain_very_wet">encharcat</string>
+</resources>

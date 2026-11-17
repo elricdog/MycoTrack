@@ -338,8 +338,14 @@ class MapViewModel(
         .stateIn(viewModelScope, SharingStarted.Eagerly, MapButton.entries.toSet())
 
     /**
-     * The habitat overlays (slope orientation, tree species, soil and the likely areas of
-     * a species) the user switched
+     * The timestamp of the downloaded rainfall lattice, which busts the tile URLs when
+     * new data arrives; `0` while there is none.
+     */
+    private val rainVersion = MutableStateFlow(0L)
+
+    /**
+     * The habitat overlays (slope orientation, tree species, soil, rainfall and the
+     * likely areas of a species) the user switched
      * on, with the classes picked in the legend. The URLs of the orientation and soil
      * tiles start the local tile server, so they are resolved off the main thread.
      */
@@ -355,7 +361,9 @@ class MapViewModel(
             settingsStore.habitatHiddenSoil,
         ) { classes, hiddenTrees, hiddenSoil -> Triple(classes, hiddenTrees, hiddenSoil) },
         combine(settingsStore.suitabilityLayer, settingsStore.suitabilitySearch) { enabled, search -> enabled to search },
-    ) { (aspect, trees, soil), (classes, hiddenTrees, hiddenSoil), (suitability, search) ->
+        combine(settingsStore.habitatRainLayer, settingsStore.habitatRainWindow) { rain, window -> rain to window },
+        rainVersion,
+    ) { (aspect, trees, soil), (classes, hiddenTrees, hiddenSoil), (suitability, search), (rain, rainWindow), rainVersion ->
         val showSuitability = suitability && search != null
         // The likely areas are served next to the orientation tiles, by the same server.
         val aspectUrl = if (aspect || showSuitability) offlineMapManager.aspectTileUrl() else null
@@ -375,9 +383,23 @@ class MapViewModel(
             } else {
                 null
             },
+            rain = rain,
+            rainWindow = rainWindow,
+            rainUrl = if (rain) offlineMapManager.rainTileUrl() else null,
+            rainVersion = rainVersion,
         )
     }.flowOn(Dispatchers.IO)
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), com.mikotrack.maps.HabitatLayers())
+
+    /** Shows or hides the rainfall habitat overlay, downloading the lattice on demand. */
+    fun setHabitatRainLayer(enabled: Boolean) {
+        viewModelScope.launch { settingsStore.setHabitatRainLayer(enabled) }
+    }
+
+    /** The length of the rainfall accumulation window, in days (3, 7, 15 or 30). */
+    fun setHabitatRainWindow(days: Int) {
+        viewModelScope.launch { settingsStore.setHabitatRainWindow(days) }
+    }
 
     /** Shows or hides the likely areas of the species chosen in the mushroom guide. */
     fun setSuitabilityLayer(enabled: Boolean) {
@@ -502,6 +524,19 @@ class MapViewModel(
             // storage and registered before anything else is displayed.
             offlineMapManager.seedBundledAreas()
             offlineMapManager.registerStoredAreas()
+        }
+        viewModelScope.launch {
+            // The rainfall lattice is downloaded when the overlay is switched on, and
+            // on the next start when it was left on. The version of the lattice is
+            // published so that the tile URLs of the overlay change with new data.
+            settingsStore.habitatRainLayer
+                .distinctUntilChanged()
+                .collectLatest { enabled ->
+                    if (enabled) {
+                        runCatching { offlineMapManager.refreshRainData() }
+                        rainVersion.value = runCatching { offlineMapManager.rainVersion() }.getOrDefault(0L)
+                    }
+                }
         }
         viewModelScope.launch {
             // The position of the user is tracked while the map is on screen, even when

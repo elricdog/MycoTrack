@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The rainfall habitat overlay: accumulated rain over the last days. -->
+    <string name="habitat_rain_title">Rainfall</string>
+    <string name="habitat_rain_description">Rain accumulated over the last days, from the Open-Meteo weather models. Rain a few days ago is a good sign for mushrooms.</string>
+    <string name="habitat_rain_window_days">%1$d d</string>
+    <string name="habitat_rain_legend_title">Rainfall</string>
+    <string name="habitat_rain_legend_show">Show the rainfall overlay</string>
+    <string name="habitat_rain_legend_window">Accumulated over the last %1$d days</string>
+    <string name="habitat_rain_legend_low">dry</string>
+    <string name="habitat_rain_legend_high">torrential</string>
+    <string name="habitat_rain_legend_note">Coarse 7 km model grid, updated every 12 hours. Data © Open-Meteo.</string>
+
+    <!-- The rainfall values of a long-pressed point. -->
+    <string name="habitatpoint_rain_label">Rainfall</string>
+    <string name="habitatpoint_rain_value">%1$s mm in %2$d days · %3$s</string>
+    <string name="habitatpoint_rain_window">%1$d d: %2$s mm</string>
+    <string name="habitatpoint_rain_dry">dry</string>
+    <string name="habitatpoint_rain_damp">damp</string>
+    <string name="habitatpoint_rain_wet">wet</string>
+    <string name="habitatpoint_rain_very_wet">very wet</string>
+</resources>

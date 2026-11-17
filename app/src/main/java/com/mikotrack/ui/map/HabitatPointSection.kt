@@ -29,6 +29,8 @@ import com.mikotrack.maps.HabitatLayers
 import com.mikotrack.maps.HabitatPointInfo
 import com.mikotrack.maps.HabitatPointInspector
 import com.mikotrack.maps.PointValue
+import com.mikotrack.maps.RainAtPoint
+import com.mikotrack.maps.RainScale
 import com.mikotrack.maps.SoilAtPoint
 import com.mikotrack.maps.SuitabilityAtPoint
 import com.mikotrack.maps.TerrainAtPoint
@@ -47,7 +49,13 @@ fun HabitatPointSection(latitude: Double, longitude: Double, layers: HabitatLaye
     val context = LocalContext.current
     val inspector = remember { HabitatPointInspector.get(context) }
     // Only what changes the values restarts the requests (not the hidden legend classes).
-    val request = listOf(layers.aspect, layers.trees, layers.soil, layers.suitabilitySearch?.takeIf { layers.suitabilityShown })
+    val request = listOf(
+        layers.aspect,
+        layers.trees,
+        layers.soil,
+        layers.suitabilitySearch?.takeIf { layers.suitabilityShown },
+        layers.rainWindow.takeIf { layers.rain },
+    )
     var info by remember(latitude, longitude, request) { mutableStateOf(HabitatPointInfo.loading(layers)) }
     LaunchedEffect(latitude, longitude, request) {
         inspector.inspect(latitude, longitude, layers).collect { info = it }
@@ -75,6 +83,9 @@ fun HabitatPointSection(latitude: Double, longitude: Double, layers: HabitatLaye
         info.suitability?.let { value ->
             val name = layers.suitabilitySearch?.speciesName.orEmpty()
             ValueRow(stringResource(R.string.habitatpoint_suitability_label, name), value) { SuitabilityValue(it) }
+        }
+        info.rain?.let { value ->
+            ValueRow(stringResource(R.string.habitatpoint_rain_label), value) { RainValue(it, layers.rainWindow) }
         }
     }
 }
@@ -184,3 +195,31 @@ private fun SuitabilityValue(suitability: SuitabilityAtPoint) {
     )
     ValueText(stringResource(R.string.habitatpoint_suitability_value, (suitability.score * 100).roundToInt(), level), null)
 }
+
+@Composable
+private fun RainValue(rain: RainAtPoint, currentWindow: Int) {
+    val level = stringResource(
+        when (RainScale.intensityOf(rain.millimeters(currentWindow) / currentWindow)) {
+            RainScale.Level.DRY -> R.string.habitatpoint_rain_dry
+            RainScale.Level.DAMP -> R.string.habitatpoint_rain_damp
+            RainScale.Level.WET -> R.string.habitatpoint_rain_wet
+            RainScale.Level.VERY_WET -> R.string.habitatpoint_rain_very_wet
+        },
+    )
+    val title = stringResource(
+        R.string.habitatpoint_rain_value,
+        formatMillimeters(rain.millimeters(currentWindow)),
+        currentWindow,
+        level,
+    )
+    val detail = buildList {
+        com.mikotrack.maps.RainRepository.WINDOWS.forEach { days ->
+            add(stringResource(R.string.habitatpoint_rain_window, days, formatMillimeters(rain.millimeters(days))))
+        }
+    }.joinToString(" \u00B7 ")
+    ValueText(title, detail)
+}
+
+/** Accumulated rain, with one decimal and the locale's decimal separator. */
+private fun formatMillimeters(millimeters: Float): String =
+    String.format(java.util.Locale.getDefault(), "%.1f", millimeters)

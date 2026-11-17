@@ -15,8 +15,10 @@ import androidx.sqlite.db.SupportSQLiteDatabase
         WaypointEntity::class,
         CategoryEntity::class,
         OfflineAreaEntity::class,
+        RainDailyEntity::class,
+        RainMetaEntity::class,
     ],
-    version = 3,
+    version = 4,
     exportSchema = true,
 )
 abstract class MycoTrackDatabase : RoomDatabase() {
@@ -26,6 +28,7 @@ abstract class MycoTrackDatabase : RoomDatabase() {
     abstract fun waypointDao(): WaypointDao
     abstract fun categoryDao(): CategoryDao
     abstract fun offlineAreaDao(): OfflineAreaDao
+    abstract fun rainDao(): RainDao
 
     companion object {
         private const val DATABASE_NAME = "mycotrack.db"
@@ -56,6 +59,23 @@ abstract class MycoTrackDatabase : RoomDatabase() {
             }
         }
 
+        /** Version 4 stores the lattice of the rainfall overlay. */
+        private val MIGRATION_3_4 = object : Migration(3, 4) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                db.execSQL(
+                    "CREATE TABLE IF NOT EXISTS `rain_daily` (`latitude` INTEGER NOT NULL, " +
+                        "`longitude` INTEGER NOT NULL, `day` INTEGER NOT NULL, " +
+                        "`millimeters` REAL NOT NULL, PRIMARY KEY(`latitude`, `longitude`, `day`))",
+                )
+                db.execSQL(
+                    "CREATE TABLE IF NOT EXISTS `rain_meta` (`id` INTEGER NOT NULL, " +
+                        "`fetchedAt` INTEGER NOT NULL, `lat0` REAL NOT NULL, `lon0` REAL NOT NULL, " +
+                        "`stepDeg` REAL NOT NULL, `rows` INTEGER NOT NULL, `cols` INTEGER NOT NULL, " +
+                        "PRIMARY KEY(`id`))",
+                )
+            }
+        }
+
         @Volatile
         private var instance: MycoTrackDatabase? = null
 
@@ -66,7 +86,7 @@ abstract class MycoTrackDatabase : RoomDatabase() {
 
         private fun build(context: Context): MycoTrackDatabase =
             Room.databaseBuilder(context, MycoTrackDatabase::class.java, DATABASE_NAME)
-                .addMigrations(MIGRATION_1_2, MIGRATION_2_3)
+                .addMigrations(MIGRATION_1_2, MIGRATION_2_3, MIGRATION_3_4)
                 .fallbackToDestructiveMigration(dropAllTables = true)
                 .build()
     }

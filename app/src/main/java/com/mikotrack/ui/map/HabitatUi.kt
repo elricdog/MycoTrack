@@ -22,6 +22,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material3.Checkbox
+import androidx.compose.material3.FilterChip
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -54,6 +55,8 @@ import com.mikotrack.maps.HabitatLayers
 import com.mikotrack.maps.HabitatLegendEntry
 import com.mikotrack.maps.HabitatSources
 import com.mikotrack.maps.LegendPattern
+import com.mikotrack.maps.RainRepository
+import com.mikotrack.maps.RainScale
 import com.mikotrack.maps.SoilGroup
 import com.mikotrack.maps.SuitabilityScorer
 
@@ -65,6 +68,8 @@ internal fun HabitatLayerSection(
     onTreesChange: (Boolean) -> Unit,
     onSoilChange: (Boolean) -> Unit = {},
     onSuitabilityChange: (Boolean) -> Unit = {},
+    onRainChange: (Boolean) -> Unit = {},
+    onRainWindowChange: (Int) -> Unit = {},
 ) {
     Column(Modifier.fillMaxWidth()) {
         HorizontalDivider(Modifier.padding(vertical = 8.dp))
@@ -113,6 +118,27 @@ internal fun HabitatLayerSection(
             onCheckedChange = onSuitabilityChange,
             enabled = search != null,
         )
+        HabitatSwitchRow(
+            title = stringResource(R.string.habitat_rain_title),
+            description = stringResource(R.string.habitat_rain_description),
+            checked = layers.rain,
+            onCheckedChange = onRainChange,
+        )
+        if (layers.rain) {
+            // The length of the accumulation window, in days.
+            Row(
+                modifier = Modifier.padding(horizontal = 20.dp),
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                RainRepository.WINDOWS.forEach { days ->
+                    FilterChip(
+                        selected = layers.rainWindow == days,
+                        onClick = { onRainWindowChange(days) },
+                        label = { Text(stringResource(R.string.habitat_rain_window_days, days)) },
+                    )
+                }
+            }
+        }
     }
 }
 
@@ -179,6 +205,7 @@ internal fun HabitatLegendCard(
     onHiddenSoilChange: (Set<String>) -> Unit = {},
     onSuitabilityChange: (Boolean) -> Unit = {},
     onSuitabilityClear: () -> Unit = {},
+    onRainChange: (Boolean) -> Unit = {},
 ) {
     if (!layers.anyVisible) return
     val unboundedMaxHeight = (LocalConfiguration.current.screenHeightDp * UNBOUNDED_HEIGHT_FRACTION).dp
@@ -227,6 +254,7 @@ internal fun HabitatLegendCard(
                         if (layers.aspect) AspectLegend(layers, onAspectClassesChange)
                         if (layers.trees) TreeLegend(layers, onHiddenTreesChange)
                         if (layers.soil) SoilLegend(layers, onHiddenSoilChange)
+                        if (layers.rain) RainLegend(layers, onRainChange)
                     }
                 }
             }
@@ -316,6 +344,84 @@ private fun SuitabilityLegend(layers: HabitatLayers, onChange: (Boolean) -> Unit
                 Text(stringResource(R.string.suitability_legend_high), style = MaterialTheme.typography.labelSmall)
             }
             LegendNote(stringResource(R.string.suitability_legend_note))
+        }
+    }
+}
+
+/**
+ * The rainfall overlay: the length of the accumulation window, the colour ramp from
+ * dry to torrential, and a switch to hide it.
+ */
+@Composable
+private fun RainLegend(layers: HabitatLayers, onChange: (Boolean) -> Unit) {
+    var open by rememberSaveable("rain") { mutableStateOf(true) }
+    Column(Modifier.fillMaxWidth()) {
+        Row(
+            modifier = Modifier.fillMaxWidth().padding(top = 4.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Row(
+                modifier = Modifier
+                    .weight(1f)
+                    .clip(RoundedCornerShape(6.dp))
+                    .clickable { open = !open }
+                    .padding(vertical = 4.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(2.dp),
+            ) {
+                val title = stringResource(R.string.habitat_rain_legend_title)
+                Icon(
+                    imageVector = if (open) Icons.Filled.KeyboardArrowUp else Icons.Filled.KeyboardArrowDown,
+                    contentDescription = stringResource(
+                        if (open) R.string.habitat_legend_collapse_section else R.string.habitat_legend_expand_section,
+                        title,
+                    ),
+                    tint = MaterialTheme.colorScheme.primary,
+                    modifier = Modifier.size(18.dp),
+                )
+                Text(
+                    text = title,
+                    style = MaterialTheme.typography.labelMedium,
+                    color = MaterialTheme.colorScheme.primary,
+                )
+            }
+            val switchLabel = stringResource(R.string.habitat_rain_legend_show)
+            Switch(
+                checked = layers.rain,
+                onCheckedChange = onChange,
+                modifier = Modifier
+                    .padding(start = 4.dp)
+                    .semantics { contentDescription = switchLabel },
+            )
+        }
+        if (open) {
+            Text(
+                text = stringResource(R.string.habitat_rain_legend_window, layers.rainWindow),
+                style = MaterialTheme.typography.bodySmall,
+                fontWeight = FontWeight.Bold,
+            )
+            Canvas(
+                Modifier
+                    .fillMaxWidth()
+                    .padding(top = 4.dp)
+                    .height(12.dp)
+                    .clip(RoundedCornerShape(3.dp)),
+            ) {
+                val intensities = RainScale.legendIntensities
+                val width = size.width / intensities.size
+                intensities.forEachIndexed { index, intensity ->
+                    drawRect(
+                        color = Color(RainScale.color(intensity)),
+                        topLeft = Offset(index * width, 0f),
+                        size = androidx.compose.ui.geometry.Size(width + 1f, size.height),
+                    )
+                }
+            }
+            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                Text(stringResource(R.string.habitat_rain_legend_low), style = MaterialTheme.typography.labelSmall)
+                Text(stringResource(R.string.habitat_rain_legend_high), style = MaterialTheme.typography.labelSmall)
+            }
+            LegendNote(stringResource(R.string.habitat_rain_legend_note))
         }
     }
 }

@@ -22,6 +22,12 @@ import com.mikotrack.R
  * started a search from the mushroom guide.
  * @param suitabilityUrl the URL template of the likely areas tiles on the local tile
  * server, or `null` while the server is not available.
+ * @param rain whether the rainfall overlay is shown.
+ * @param rainWindow the length of the accumulation window, in days (3, 7, 15 or 30).
+ * @param rainUrl the URL template of the rainfall tiles on the local tile server, or
+ * `null` while the server is not available.
+ * @param rainVersion the timestamp of the downloaded lattice, which busts the tile URLs
+ * when new rain data arrives; `0` while there is none.
  */
 data class HabitatLayers(
     val aspect: Boolean = false,
@@ -35,8 +41,12 @@ data class HabitatLayers(
     val suitability: Boolean = false,
     val suitabilitySearch: SuitabilitySearch? = null,
     val suitabilityUrl: String? = null,
+    val rain: Boolean = false,
+    val rainWindow: Int = 7,
+    val rainUrl: String? = null,
+    val rainVersion: Long = 0,
 ) {
-    val anyVisible: Boolean get() = aspect || trees || soil || suitabilityShown
+    val anyVisible: Boolean get() = aspect || trees || soil || rain || suitabilityShown
 
     /** Whether the likely areas overlay is switched on and has a species to draw. */
     val suitabilityShown: Boolean get() = suitability && suitabilitySearch != null
@@ -63,6 +73,13 @@ data class HabitatLayers(
             val mask = HabitatSources.soilMask(hiddenSoil)
             return if (mask == 0L) null else "$base?m=${SoilClassifier.encodeMask(mask)}"
         }
+
+    /**
+     * The rainfall tiles of the chosen window, or `null` when nothing is drawn. The
+     * version of the lattice goes in the URL, so a new download reloads the tiles.
+     */
+    val rainTileUrl: String?
+        get() = rainUrl?.takeIf { rain }?.let { "$it?w=$rainWindow&v=$rainVersion" }
 }
 
 /**
@@ -205,6 +222,19 @@ object HabitatSources {
     const val SOIL_LAYER = "mycotrack-habitat-soil-layer"
     const val SUITABILITY_SOURCE = "mycotrack-habitat-suitability-source"
     const val SUITABILITY_LAYER = "mycotrack-habitat-suitability-layer"
+    const val RAIN_SOURCE = "mycotrack-habitat-rain-source"
+    const val RAIN_LAYER = "mycotrack-habitat-rain-layer"
+
+    /** The rainfall overlay shows the daily precipitation of the Open-Meteo models. */
+    const val RAIN_ATTRIBUTION =
+        "Precipitation (c) Open-Meteo, ICON / ECMWF models (CC BY 4.0)"
+
+    /** The weather models are coarse, so the tiles are drawn from zoom 6 to 12. */
+    const val RAIN_MIN_ZOOM = 6
+    const val RAIN_MAX_ZOOM = 12
+
+    /** The continuous field is faded to keep the base map readable. */
+    const val RAIN_OPACITY = 0.65f
 
     /** The colour keys of the orientation layer (opaque versions of the textures). */
     val aspectLegend: List<HabitatLegendEntry> = listOf(

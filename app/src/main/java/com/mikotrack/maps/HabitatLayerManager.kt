@@ -12,9 +12,9 @@ import org.maplibre.android.style.sources.TileSet
  *
  * They are drawn right above the base map and below every overlay of the application
  * (routes, waypoints, photograph bubbles and the position), whose layers all start
- * with [OVERLAY_PREFIX]. From bottom to top: the soil, the tree species, the
- * orientation, whose sparse textures let the other two show through, and the likely
- * areas of a species.
+ * with [OVERLAY_PREFIX]. From bottom to top: the rainfall, the soil, the tree
+ * species, the orientation, whose sparse textures let the other two show through,
+ * and the likely areas of a species.
  *
  * The URL of a source changes with the classes the user selects (and with the port of
  * the local server); a source with a new URL is replaced, so MapLibre loads its tiles
@@ -28,6 +28,7 @@ class HabitatLayerManager {
     /** Brings the style in line with the requested habitat layers. */
     fun apply(style: Style, layers: HabitatLayers) {
         if (!style.isFullyLoaded) return
+        sync(style, RAIN, layers.rainTileUrl)
         sync(style, SOIL, layers.soilTileUrl)
         sync(style, TREES, layers.treesTileUrl)
         sync(style, ASPECT, layers.aspectTileUrl)
@@ -120,7 +121,15 @@ class HabitatLayerManager {
             HabitatSources.SUITABILITY_ATTRIBUTION, null,
         )
 
+        // The rainfall is a continuous field, so it goes at the very bottom: the discrete
+        // overlays (soil, trees, orientation) stay readable on top of it.
+        val RAIN = Overlay(
+            HabitatSources.RAIN_SOURCE, HabitatSources.RAIN_LAYER,
+            RainTileProvider.MIN_ZOOM, RainTileProvider.MAX_ZOOM, 256,
+            HabitatSources.RAIN_ATTRIBUTION, HabitatSources.RAIN_OPACITY,
+        )
+
         /** The habitat overlays from bottom to top. */
-        val ORDER = listOf(SOIL, TREES, ASPECT, SUITABILITY)
+        val ORDER = listOf(RAIN, SOIL, TREES, ASPECT, SUITABILITY)
     }
 }

@@ -33,7 +33,7 @@ actualitzacions i solució de problemes) són a la **[guia d'instal·lació](ins
 |---|---|
 | <img src="docs/screenshots/en/01-map-recording.png" width="300" alt="Mapa i gravació"> | <img src="docs/screenshots/en/02-trip-profile.png" width="300" alt="Perfil d'altimetria"> |
 
-| **Capes** — canvia entre OpenStreetMap, el mapa topogràfic de l'ICGC, l'ortofoto i la vista híbrida, afegeix àrees offline i activa les capes d'hàbitat (orientació de vessants, tipus d'arbres, sòl). | **Historial** — cada sortida registrada amb distància, durada, desnivell i nombre de fotos; cerca, filtra i assigna un color de ruta propi a cada sortida. |
+| **Capes** — canvia entre OpenStreetMap, el mapa topogràfic de l'ICGC, l'ortofoto i la vista híbrida, afegeix àrees offline i activa les capes d'hàbitat (pluviositat, orientació de vessants, tipus d'arbres, sòl). | **Historial** — cada sortida registrada amb distància, durada, desnivell i nombre de fotos; cerca, filtra i assigna un color de ruta propi a cada sortida. |
 |---|---|
 | <img src="docs/screenshots/en/03-layers.png" width="300" alt="Capes"> | <img src="docs/screenshots/en/04-history.png" width="300" alt="Historial"> |
 
@@ -49,6 +49,10 @@ actualitzacions i solució de problemes) són a la **[guia d'instal·lació](ins
 |---|---|
 | <img src="docs/screenshots/en/09-mushroom-detail.png" width="300" alt="Fitxa de l'espècie"> | <img src="docs/screenshots/en/10-settings.png" width="300" alt="Configuració"> |
 
+| **Pluviositat, últims 3 dies** — la capa d'hàbitat *Pluviositat* pinta la pluja acumulada a la finestra triada (3 / 7 / 15 / 30 dies) a partir dels models gratuïts d'Open-Meteo: el blau és humit, el transparent és sec. Tria la finestra sota l'interruptor; la llegenda mostra la rampa de colors. | **Pluviositat, últims 30 dies** — la mateixa capa sobre un mes: destaquen les valls que van rebre les pluges de la tardor, i prement un punt amb pressió llarga surt l'acumulació exacta de les quatre finestres amb l'etiqueta sec / humit / molt humit. Pluja fa pocs dies + sòl i arbres adequats és el senyal clàssic de bolets. |
+|---|---|
+| <img src="docs/screenshots/en/11-rain-3d.png" width="300" alt="Capa de pluviositat, últims 3 dies"> | <img src="docs/screenshots/en/12-rain-30d.png" width="300" alt="Capa de pluviositat, últims 30 dies"> |
+
 ---
 
 ## 1. Visió general de les funcionalitats
@@ -58,7 +62,7 @@ actualitzacions i solució de problemes) són a la **[guia d'instal·lació](ins
 | Mapa | Mapa MapLibre a pantalla completa, posició en directe, ruta en directe, rutes anteriors superposades, marcadors de fotografies i selector de capes |
 | Gravació | Controls *Inici* / *Fi*, servei en primer pla que continua gravant amb la pantalla apagada, persistència progressiva, recuperació després d'un bloqueig |
 | Capes | OpenStreetMap, topogràfic ICGC, ortofoto ICGC, híbrida ICGC, terreny + ombreig i MBTiles offline |
-| Capes d'hàbitat | Overlays commutables sobre qualsevol mapa base: orientació de vessants (nord / sud / est-oest amb tramat, calculat al dispositiu a partir de les tessel·les d'altitud), espècies dominants d'arbres (Mapa Forestal de Espanya, MITECO) i substrat del sòl (roca àcida / bàsica, mapa litològic de l'IGME), amb una llegenda al mapa on cada classe es pot mostrar o amagar; i les *zones probables* d'una espècie de la guia al voltant de l'usuari, puntuades a partir de les tres capes |
+| Capes d'hàbitat | Overlays commutables sobre qualsevol mapa base: pluviositat (pluja acumulada els últims 3, 7, 15 o 30 dies, a partir dels models gratuïts d'Open-Meteo), orientació de vessants (nord / sud / est-oest amb tramat, calculat al dispositiu a partir de les tessel·les d'altitud), espècies dominants d'arbres (Mapa Forestal de Espanya, MITECO) i substrat del sòl (roca àcida / bàsica, mapa litològic de l'IGME), amb una llegenda al mapa on cada classe es pot mostrar o amagar; i les *zones probables* d'una espècie de la guia al voltant de l'usuari, puntuades a partir de les tres capes |
 | Perfil d'altimetria | Gràfica Vico, distància a l'eix horitzontal, altitud a l'eix vertical, toc per localitzar un punt al mapa, marcador de posició en directe |
 | Estadístiques | Temps emprat, distància, velocitat actual / mitjana / màxima, altitud, desnivell positiu, negatiu, temps en moviment i aturat, comptadors de fotos i punts d'interès |
 | Fotografies | Càmera dins de l'aplicació (CameraX), punts d'interès amb geoposició, descripció i categoria editables |
@@ -169,6 +173,34 @@ La cerca de llocs utilitza el geocodificador Nominatim (`nominatim.openstreetmap
 © col·laboradors d'OpenStreetMap), com a màxim una consulta per segon, només quan
 l'usuari envia una cerca.
 
+### Capes d'hàbitat
+
+Quatre capes opcionals (*Capes → Capes d'hàbitat*) es dibuixen sobre qualsevol mapa base
+i per sota de les rutes, els punts i la posició, de baix a dalt: pluviositat, sòl, tipus
+d'arbres i orientació de vessants (i, a dalt de tot, les zones probables d'una espècie).
+Cal connexió a internet; offline queden buides.
+
+La capa de **pluviositat** pinta, en blaus que degraden a porpra, els mil·límetres
+acumulats els últims **3, 7, 15 o 30 dies** (es tria amb unes opcions sota l'interruptor),
+per veure d'un cop d'ull quines valls van rebre la pluja i quines van quedar seques: la
+pluja d'uns dies enrere és el principal desencadenant de la sortida dels bolets. En
+activar-la, l'aplicació descarrega la pluja diària d'una quadrícula de 999 punts que cobreix
+Catalunya amb marge (0,1°, la resolució del model) a l'API gratuïta d'
+[Open-Meteo](https://open-meteo.com/) (`daily=precipitation_sum`), en blocs de 100 punts
+separats 1,2 s amb reintent progressiu davant respostes 429, i la desa a la base de dades
+local (`maps/RainRepository.kt`, taules `rain_daily` i `rain_meta`). La descàrrega cobreix
+els 31 dies acabats i s'actualitza com a màxim cada 12 hores; com que cada valor es desa
+amb el seu dia, les quatre finestres es calculen al dispositiu sense tornar a preguntar
+(`maps/RainGrid.kt`). El servidor local pinta cada tessel·la interpolant bilinealment els
+sums de la finestra (`maps/RainTileProvider.kt`), i la rampa de colors segueix la
+*intensitat* (mm per dia) i no el total, així una sola rampa s'entén bé a cada finestra:
+3 mm en 3 dies és pluja intensa, 3 mm en 30 dies és xerinola. La finestra (`w`) i la
+versió de la descàrrega (`v`) viatgen a l'URL, així una descàrrega nova recarrega les
+tessel·les. Prement un punt amb pressió llarga, el full del punt mostra l'acumulació exacta
+de les quatre finestres i una etiqueta qualitativa (sec / humit / molt humit / encharcat).
+Dades © Open-Meteo (models ICON / ECMWF, CC BY 4.0); la quadrícula del model és de ~7 km,
+de manera que és una orientació general, no una previsió puntual.
+
 ## 5. Mapes sense connexió
 
 Les àrees descarregades són fitxers MBTiles (SQLite amb una taula `tiles`, convenció de
@@ -215,6 +247,8 @@ conseqüència.
 | `waypoints` | `id`, `tripId`, `latitude`, `longitude`, `altitude`, `timestamp`, `description`, `category`, `imagePath` |
 | `waypoint_categories` | `id`, `name`, `color`, `symbol`, `builtIn` |
 | `offline_areas` | `id`, `name`, `layerId`, `filePath`, límits, rang de zoom, `tileCount`, `sizeBytes`, `createdAt` |
+| `rain_daily` | latitud, longitud i dia (PK, en micro graus / dies d'època) i `millimeters` de pluja d'aquell dia a cada node de la quadrícula |
+| `rain_meta` | instant de la descàrrega i geometria de la quadrícula (origen, pas, files, columnes) |
 
 Les claus foranes utilitzen `ON DELETE CASCADE`, de manera que esborrar una sortida també
 en elimina el track i els punts; les fotografies s'esborren del sistema de fitxers per
@@ -270,6 +304,7 @@ verificar sense dispositiu:
 * `TileMathTest`, `MbtilesStoreTest`, `OfflineMapPackTest` – càlcul de tessel·les, fitxers MBTiles i
   els paquets incorporats.
 * `AspectClassifierTest` – orientació del pendent (aspecte) i les seves classes nord / sud / neutre / pla.
+* `RainGridTest` i `RainScaleTest` – les finestres d'acumulació, el mostreig bilineal i el pintat de tessel·les de la quadrícula de pluja, i la rampa de colors i les bandes d'intensitat.
 * `HabitatPointInspectorTest` – anàlisi de respostes reals `GetFeatureInfo` dels mapes forestal i
   litològic, i l'orientació / pendent en un punt d'una graella d'altitud.
 * `PermissionRequirementTest` – cada permís s'explica en les tres llengües.

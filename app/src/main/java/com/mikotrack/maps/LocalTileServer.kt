@@ -40,6 +40,9 @@ class LocalTileServer(private val context: Context) {
     /** Computes the tiles of the likely areas overlay, created on the first request. */
     private val suitabilityTiles by lazy { SuitabilityTileProvider(context, aspectTiles, soilTiles) }
 
+    /** Paints the tiles of the rainfall overlay, created on the first request. */
+    private val rainTiles by lazy { RainTileProvider(context) }
+
     /**
      * The likely areas tiles are slow (they gather three sources each), so they are
      * computed by a few threads of their own and never take every worker of the server.
@@ -161,6 +164,17 @@ class LocalTileServer(private val context: Context) {
         return "http://127.0.0.1:$currentPort/$SUITABILITY_PATH/{z}/{x}/{y}.png"
     }
 
+    /**
+     * The URL template of the rainfall overlay, whose tiles are painted from the lattice
+     * downloaded by the application. The window (in days) and the version of the lattice
+     * go in the query string, so new data gets new URLs. Starts the server when needed,
+     * so it must not be called on the main thread.
+     */
+    fun rainUrl(): String? {
+        val currentPort = port ?: start() ?: return null
+        return "http://127.0.0.1:$currentPort/$RAIN_PATH/{z}/{x}/{y}.png"
+    }
+
     private fun acceptLoop(socket: ServerSocket) {
         // The orientation tiles may wait for downloads, so there are enough workers
         // to keep serving the offline tiles meanwhile.
@@ -214,6 +228,10 @@ class LocalTileServer(private val context: Context) {
                 suitabilityExecutor.submit { socket.use { serveSuitability(it, segments, query) } }
                 return
             }
+            if (segments[0] == RAIN_PATH) {
+                serveRain(socket, segments, query)
+                return
+            }
 
             val areaId = segments[0].toLongOrNull()
             val zoom = segments[1].toIntOrNull()
@@ -255,6 +273,22 @@ class LocalTileServer(private val context: Context) {
         val data = if (zoom != null && x != null && y != null && search != null) {
             runCatching { suitabilityTiles.tile(zoom, x, y, search) }
                 .onFailure { Log.w(TAG, "Could not compute the likely areas tile $zoom/$x/$y", it) }
+                .getOrNull()
+        } else {
+            null
+        }
+        writeHabitatTile(socket, data)
+    }
+
+    private fun serveRain(socket: Socket, segments: List<String>, query: String) {
+        val zoom = segments[1].toIntOrNull()
+        val x = segments[2].toIntOrNull()
+        val y = segments[3].substringBefore('.').toIntOrNull()
+        // The accumulation window in days; anything unexpected falls back to the default.
+        val window = queryParameter(query, "w")?.toIntOrNull()?.takeIf { it > 0 } ?: 7
+        val data = if (zoom != null && x != null && y != null) {
+            runCatching { rainTiles.tile(zoom, x, y, window) }
+                .onFailure { Log.w(TAG, "Could not paint the rainfall tile $zoom/$x/$y", it) }
                 .getOrNull()
         } else {
             null
@@ -370,6 +404,9 @@ class LocalTileServer(private val context: Context) {
 
         /** The first path segment of the likely areas overlay tiles. */
         private const val SUITABILITY_PATH = "suitability"
+
+        /** The first path segment of the rainfall overlay tiles. */
+        private const val RAIN_PATH = "rain"
         private const val WORKER_THREADS = 8
         private const val SUITABILITY_THREADS = 3
     }

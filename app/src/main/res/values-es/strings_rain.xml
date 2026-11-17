@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- La capa de hábitat de lluvia: lluvia acumulada durante los últimos días. -->
+    <string name="habitat_rain_title">Lluvia</string>
+    <string name="habitat_rain_description">Lluvia acumulada durante los últimos días, según los modelos meteorológicos de Open-Meteo. La lluvia de unos días atrás es una buena señal para los setas.</string>
+    <string name="habitat_rain_window_days">%1$d d</string>
+    <string name="habitat_rain_legend_title">Lluvia</string>
+    <string name="habitat_rain_legend_show">Mostrar la capa de lluvia</string>
+    <string name="habitat_rain_legend_window">Acumulada durante los últimos %1$d días</string>
+    <string name="habitat_rain_legend_low">seco</string>
+    <string name="habitat_rain_legend_high">torrencial</string>
+    <string name="habitat_rain_legend_note">Cuadrícula del modelo de 7 km, actualizada cada 12 horas. Datos © Open-Meteo.</string>
+
+    <!-- Los valores de lluvia de un punto pulsado con presión larga. -->
+    <string name="habitatpoint_rain_label">Lluvia</string>
+    <string name="habitatpoint_rain_value">%1$s mm en %2$d días · %3$s</string>
+    <string name="habitatpoint_rain_window">%1$d d: %2$s mm</string>
+    <string name="habitatpoint_rain_dry">seco</string>
+    <string name="habitatpoint_rain_damp">húmedo</string>
+    <string name="habitatpoint_rain_wet">muy húmedo</string>
+    <string name="habitatpoint_rain_very_wet">encharcado</string>
+</resources>
