@@ -913,7 +913,7 @@ private fun ParkingColorDialog(
                                     Icon(
                                         Icons.Filled.Check,
                                         contentDescription = null,
-                                        tint = if (Color(color.toULong()).luminance() > 0.6f) {
+                                        tint = if (Color(color).luminance() > 0.6f) {
                                             Color.Black
                                         } else {
                                             Color.White
