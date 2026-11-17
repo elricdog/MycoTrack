@@ -34,15 +34,19 @@ actualitzacions i solució de problemes) són a la **[guia d'instal·lació](ins
 | <img src="docs/screenshots/en/01-map-recording.png" width="300" alt="Mapa i gravació"> | <img src="docs/screenshots/en/02-trip-profile.png" width="300" alt="Perfil d'altimetria"> |
 
 | **Capes** — canvia entre OpenStreetMap, el mapa topogràfic de l'ICGC, l'ortofoto i la vista híbrida, afegeix àrees offline i activa les capes d'hàbitat (orientació de vessants, tipus d'arbres, sòl). | **Historial** — cada sortida registrada amb distància, durada, desnivell i nombre de fotos; cerca, filtra i assigna un color de ruta propi a cada sortida. |
+|---|---|
 | <img src="docs/screenshots/en/03-layers.png" width="300" alt="Capes"> | <img src="docs/screenshots/en/04-history.png" width="300" alt="Historial"> |
 
 | **Repàs de la sortida** — mapa amb la ruta gravada, perfil d'altimetria, estadístiques completes, notes i reproducció animada; exporta o torna a carregar la ruta al mapa principal. | **Anàlisi de la sortida** — temps en moviment vs aturat, ritme, punt més llunyà, detecció de circuit, troballes per hora i per alçada, llum de dia restant i la teva classificació personal. |
+|---|---|
 | <img src="docs/screenshots/en/05-trip-review.png" width="300" alt="Repàs de la sortida"> | <img src="docs/screenshots/en/06-trip-analysis.png" width="300" alt="Anàlisi de la sortida"> |
 
 | **Galeria** — tots els punts d'interès amb etiquetatge geogràfic com a mosaic de fotos (o de color de categoria quan no tenen foto); mostra'n un al mapa, esborra'l, comparteix-lo o exporta'l amb la seva ubicació. | **Guia de bolets** — enciclopèdia offline dels bolets més populars de Catalunya: cerca, filtre *De temporada ara* i fitxes per espècie. |
+|---|---|
 | <img src="docs/screenshots/en/07-gallery.png" width="300" alt="Galeria"> | <img src="docs/screenshots/en/08-mushrooms.png" width="300" alt="Guia de bolets"> |
 
 | **Fitxa de l'espècie** — cocció, hàbitat, calendari de temporada, confusions perilloses, galeries de fotos i una cerca d'hàbitat *On en puc trobar?* que pinta al mapa les zones probables al teu voltant. | **Configuració** — idioma, tema, unitats, sons i alertes, gestor de mapes offline, diagnòstic de GPS i sensors i permisos. |
+|---|---|
 | <img src="docs/screenshots/en/09-mushroom-detail.png" width="300" alt="Fitxa de l'espècie"> | <img src="docs/screenshots/en/10-settings.png" width="300" alt="Configuració"> |
 
 ---
