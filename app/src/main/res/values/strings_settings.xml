@@ -90,7 +90,7 @@
     <string name="game_arkanoid_hint">Drag to move the basket, tap to launch the ball.</string>
     <string name="game_tetris">MycoTris</string>
     <string name="game_tetris_blurb">Stack the mushroom bricks and clear rows.</string>
-    <string name="game_tetris_hint">Tap left / right to slide, tap the middle to rotate, swipe down to drop one row.</string>
+    <string name="game_tetris_hint">Tap left / right to slide, tap the middle to rotate, swipe down to drop the piece to the ground.</string>
     <string name="game_pacman">Spore Maze</string>
     <string name="game_pacman_blurb">Eat the spores and escape the puffball ghosts.</string>
     <string name="game_pacman_hint">Swipe to steer. Golden spores let you eat the ghosts!</string>

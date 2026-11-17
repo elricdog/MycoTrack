@@ -1,4 +1,4 @@
-package com.mikotrack.ui.games
+﻿package com.mikotrack.ui.games
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.gestures.detectDragGestures
@@ -20,6 +20,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import kotlinx.coroutines.delay
 import com.mikotrack.R
 import com.mikotrack.data.prefs.GameId
+import kotlin.math.abs
 import kotlin.random.Random
 
 /**
@@ -64,20 +65,32 @@ private class PacmanState {
     var fright by mutableIntStateOf(0)
 
     val tiles = Array(H) { CharArray(W) }
-    var heroX by mutableIntStateOf(2)
-    var heroY by mutableIntStateOf(8)
-    var heroDir by mutableStateOf(Offset(-1f, 0f))
-    var pendingDir by mutableStateOf(Offset(0f, 0f))
+
+    /** Continuous (fractional cell) positions so movement glides instead of jumping. */
+    var heroPos by mutableStateOf(Offset(2f, 8f))
+    var heroDir by mutableStateOf(Offset(1f, 0f))
+    var pendingDir by mutableStateOf(Offset.Zero)
     var ghosts by mutableStateOf(listOf(Offset(6f, 6f), Offset(8f, 6f)))
     var ghostDirs by mutableStateOf(listOf(Offset(0f, -1f), Offset(0f, 1f)))
     var openDots by mutableIntStateOf(0)
+    private var lastCellX = 2
+    private var lastCellY = 8
 
     fun loadMap() {
         for (y in 0 until H) for (x in 0 until W) tiles[y][x] = MAP[y * W + x]
         openDots = tiles.sumOf { row -> row.count { it == '.' || it == 'o' } }
-        heroX = 2; heroY = 8; heroDir = Offset(1f, 0f); pendingDir = Offset(0f, 0f)
+        respawn()
+    }
+
+    /** Reset hero, ghosts and directions to the spawn cells. */
+    private fun respawn() {
+        heroPos = Offset(2f, 8f)
+        heroDir = Offset(1f, 0f)
+        pendingDir = Offset.Zero
         ghosts = listOf(Offset(6f, 6f), Offset(8f, 6f))
         ghostDirs = listOf(Offset(0f, -1f), Offset(0f, 1f))
+        lastCellX = 2
+        lastCellY = 8
     }
 
     fun wallAt(x: Int, y: Int) = x < 0 || y < 0 || x >= W || y >= H || tiles[y][x] in WALL
@@ -95,63 +108,81 @@ private class PacmanState {
         }
     }
 
+    /** True when [p] is within [tol] cells of a grid centre. */
+    private fun nearCenter(p: Offset, tol: Float) =
+        abs(p.x - kotlin.math.round(p.x)) < tol && abs(p.y - kotlin.math.round(p.y)) < tol
+
     fun step() {
         if (gameOver) return
         tick += 1
         if (fright > 0) fright -= 1
 
-        // The hero moves one cell every two ticks, in the pending direction when free.
-        if (tick % 2 == 0L) {
-            if (pendingDir != Offset.Zero && canGo(heroX, heroY, pendingDir)) heroDir = pendingDir
-            if (canGo(heroX, heroY, heroDir)) {
-                heroX += heroDir.x.toInt()
-                heroY += heroDir.y.toInt()
-                eat(heroX, heroY)
-            }
+        val heroSpeed = 0.085f + level * 0.003f
+        val ghostSpeed = 0.062f + level * 0.0025f
+
+        // The hero glides; it turns and can stop at cell centres.
+        var hp = heroPos
+        var hd = heroDir
+        if (nearCenter(hp, heroSpeed)) {
+            val cx = kotlin.math.round(hp.x).toInt()
+            val cy = kotlin.math.round(hp.y).toInt()
+            hp = Offset(cx.toFloat(), cy.toFloat())
+            if (pendingDir != Offset.Zero && canGo(cx, cy, pendingDir)) heroDir = pendingDir.also { hd = it }
+            if (!canGo(cx, cy, hd)) hd = Offset.Zero
         }
-        // The ghosts move every three ticks (faster with the level), chasing the hero.
-        val ghostPeriod = (3 - (level / 2)).coerceAtLeast(1)
-        if (tick % ghostPeriod == 0L) {
-            val next = mutableListOf<Offset>()
-            val nextDirs = mutableListOf<Offset>()
-            ghosts.forEachIndexed { i, g ->
-                var gx = g.x.toInt()
-                var gy = g.y.toInt()
-                val options = DIRS.filter { canGo(gx, gy, it) && it != -ghostDirs[i] }
-                val pick = if (options.isEmpty()) -ghostDirs[i] else {
+        hp += hd * heroSpeed
+        heroPos = hp
+        heroDir = hd
+        val ncx = kotlin.math.round(hp.x).toInt()
+        val ncy = kotlin.math.round(hp.y).toInt()
+        if (ncx != lastCellX || ncy != lastCellY) {
+            lastCellX = ncx; lastCellY = ncy
+            eat(ncx, ncy)
+        }
+
+        // The ghosts glide too, deciding a new direction every time they cross a centre.
+        val next = mutableListOf<Offset>()
+        val nextDirs = mutableListOf<Offset>()
+        ghosts.forEachIndexed { i, g ->
+            var gp = g
+            var gd = ghostDirs[i]
+            if (nearCenter(gp, ghostSpeed)) {
+                val gx = kotlin.math.round(gp.x).toInt()
+                val gy = kotlin.math.round(gp.y).toInt()
+                gp = Offset(gx.toFloat(), gy.toFloat())
+                val options = DIRS.filter { canGo(gx, gy, it) && it != -gd }
+                val pick = if (options.isEmpty()) -gd else {
                     options.minByOrNull { d ->
                         val nx = gx + d.x.toInt()
                         val ny = gy + d.y.toInt()
-                        val dist = kotlin.math.abs(nx - heroX) + kotlin.math.abs(ny - heroY)
+                        val dist = abs(nx - hp.x) + abs(ny - hp.y)
                         // Frightened ghosts run away; normal ghosts chase, with a pinch of chance.
                         val signed = if (fright > 0) -dist else dist
                         if (Random.nextInt(4) == 0) Random.nextDouble() else signed.toDouble()
-                    } ?: ghostDirs[i]
+                    } ?: gd
                 }
-                if (canGo(gx, gy, pick)) {
-                    gx += pick.x.toInt()
-                    gy += pick.y.toInt()
-                }
-                next += Offset(gx.toFloat(), gy.toFloat())
-                nextDirs += pick
+                gd = pick
             }
-            ghosts = next
-            ghostDirs = nextDirs
+            gp += gd * ghostSpeed
+            next += gp
+            nextDirs += gd
         }
+        ghosts = next
+        ghostDirs = nextDirs
 
-        // Collisions.
+        // Collisions: overlapping cells.
         ghosts.forEachIndexed { i, g ->
-            if (g.x.toInt() == heroX && g.y.toInt() == heroY) {
+            if (abs(g.x - hp.x) < 0.55f && abs(g.y - hp.y) < 0.55f) {
                 if (fright > 0) {
                     score += 200
                     ghosts = ghosts.toMutableList().also { it[i] = Offset(6f, 6f) }
+                    ghostDirs = ghostDirs.toMutableList().also { it[i] = Offset(0f, -1f) }
                 } else {
                     lives -= 1
                     if (lives <= 0) {
                         gameOver = true
                     } else {
-                        heroX = 2; heroY = 8; heroDir = Offset(1f, 0f)
-                        ghosts = listOf(Offset(6f, 6f), Offset(8f, 6f))
+                        respawn()
                     }
                 }
             }
@@ -163,6 +194,7 @@ private class PacmanState {
         loadMap()
     }
 }
+
 
 @Composable
 fun PacmanScreen(
@@ -179,7 +211,7 @@ fun PacmanScreen(
 
     LaunchedEffect(Unit) {
         while (true) {
-            delay(60)
+            delay(33)
             state.step()
         }
     }
@@ -245,7 +277,7 @@ fun PacmanScreen(
             // The hero mushroom and the ghost puffballs.
             drawSprite(
                 PixelArt.CEP,
-                Offset(left + state.heroX * cell, top + state.heroY * cell),
+                Offset(left + (state.heroPos.x - 0.5f) * cell, top + (state.heroPos.y - 0.5f) * cell),
                 cell / 8f,
             )
             val ghostPalette = if (state.fright > 0) {
@@ -256,7 +288,7 @@ fun PacmanScreen(
             for (g in state.ghosts) {
                 drawSprite(
                     PixelArt.PUFFBALL_GHOST.copy(palette = ghostPalette),
-                    Offset(left + g.x * cell, top + g.y * cell),
+                    Offset(left + (g.x - 0.5f) * cell, top + (g.y - 0.5f) * cell),
                     cell / 8f,
                 )
             }

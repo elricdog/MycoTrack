@@ -213,8 +213,8 @@ fun TetrisScreen(
                     }
                 }
                 .pointerInput(state.gameOver) {
-                    // One swipe = one action: the piece drops a single row per swipe-down
-                    // and must be re-swiped (finger lifted) to drop again.
+                    // One swipe = one action: swiping down hard-drops the current piece
+                    // to the ground; the next piece needs the finger lifted and a new swipe.
                     var accY = 0f
                     var used = false
                     detectDragGestures(
@@ -224,7 +224,7 @@ fun TetrisScreen(
                     ) { _, dragAmount ->
                         accY += dragAmount.y
                         if (!used && kotlin.math.abs(accY) > 40f && kotlin.math.abs(accY) > kotlin.math.abs(dragAmount.x * 4f)) {
-                            if (accY > 0) state.tryMove(0, 1) else state.rotate()
+                            if (accY > 0) state.hardDrop() else state.rotate()
                             used = true
                         }
                     }
@@ -260,15 +260,27 @@ fun TetrisScreen(
                 drawRect(color, cellOrigin(x, y), Size(cell - 1f, cell - 1f))
                 drawRect(PixelArt.SPOT.copy(alpha = 0.5f), cellOrigin(x, y), Size(cell - 1f, (cell - 1f) * 0.3f))
             }
-            // The next piece, in the side panel.
-            val panel = cell * 3
-            drawRect(PixelArt.NIGHT_CELL, Offset(left + boardW + 8f, top), Size(panel, panel))
-            for ((cx, cy) in TetrisState.SHAPES[state.nextShape][0]) {
-                drawRect(
-                    TetrisState.COLORS[state.nextShape],
-                    Offset(left + boardW + 8f + (cx + 1) * panel / 5f, top + (cy + 1) * panel / 5f),
-                    Size(panel / 5f - 1f, panel / 5f - 1f),
-                )
+            // The next piece, in the side panel, fully visible and centred.
+            val margin = size.width - left - boardW
+            val panel = (margin - 12f).coerceAtMost(3f * cell)
+            val panelX = left + boardW + (margin - panel) / 2f
+            if (panel > cell) {
+                drawRect(PixelArt.NIGHT_CELL, Offset(panelX, top), Size(panel, panel))
+                val preview = TetrisState.SHAPES[state.nextShape][0]
+                val bs = panel / 6f
+                val minX = preview.minOf { it.first }
+                val maxX = preview.maxOf { it.first }
+                val minY = preview.minOf { it.second }
+                val maxY = preview.maxOf { it.second }
+                val ox = panelX + (panel - (maxX - minX + 1) * bs) / 2f - minX * bs
+                val oy = top + (panel - (maxY - minY + 1) * bs) / 2f - minY * bs
+                for ((cx, cy) in preview) {
+                    drawRect(
+                        TetrisState.COLORS[state.nextShape],
+                        Offset(ox + cx * bs, oy + cy * bs),
+                        Size(bs - 1f, bs - 1f),
+                    )
+                }
             }
         }
     }
