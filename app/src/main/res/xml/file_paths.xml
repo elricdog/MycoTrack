@@ -12,4 +12,8 @@
     <external-cache-path
         name="external_export_cache"
         path="export/" />
+    <!-- The APK downloaded by the self update system, offered to the system installer. -->
+    <cache-path
+        name="update_apk"
+        path="updates/" />
 </paths>

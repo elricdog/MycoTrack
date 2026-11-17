@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Self update: diàlegs -->
+    <string name="update_available_title">Hi ha una versió nova</string>
+    <string name="update_available_text">El MycoTrack %1$s està disponible (n\'esteu fent servir el %2$s). La baixada necessita uns %3$s d\'espai i de dades mòbils.</string>
+    <string name="update_release_notes">Notes de la versió</string>
+    <string name="update_button_update">Actualitza</string>
+    <string name="update_button_later">Ara no</string>
+    <string name="update_button_cancel">Cancel·la</string>
+    <string name="update_button_ok">D\'acord</string>
+    <string name="update_button_install">Instal·la</string>
+    <string name="update_button_open_settings">Obre els paràmetres</string>
+    <string name="update_download_title">S\'està baixant l\'actualització</string>
+    <string name="update_download_progress">%1$s de %2$s</string>
+    <string name="update_ready_title">Baixada acabada</string>
+    <string name="update_ready_text">El MycoTrack %1$s està a punt. L\'Android us demanarà que confirmeu la instal·lació; els vostres recorreguts, fotos i paràmetres es conserven.</string>
+    <string name="update_need_install_permission">Per instal·lar actualitzacions, el MycoTrack ha de tenir permís per instal·lar aplicacions d\'origens desconeguts. Toqueu Obre els paràmetres, activeu el permís i torneu a tocar Instal·la.</string>
+    <string name="update_failed_title">L\'actualització ha fallat</string>
+    <string name="update_failed_network">L\'actualització no ha pogut arribar al GitHub. Comproveu la connexió a internet i torneu-ho a provar.</string>
+    <string name="update_failed_rate_limited">El GitHub ha refusat la comprovació per massa peticions. Torneu-ho a provar d\'aquí una estona.</string>
+    <string name="update_failed_http">El GitHub ha respost d\'una manera inesperada.</string>
+    <string name="update_failed_no_asset">L\'última versió no té cap APK que serveixi per a aquest dispositiu.</string>
+    <string name="update_failed_storage">L\'actualització no s\'ha pogut desar al dispositiu. Allibereu espai i torneu-ho a provar.</string>
+
+    <!-- Self update: paràmetres -->
+    <string name="settings_updates">Actualitzacions</string>
+    <string name="settings_check_updates">Comprova si hi ha actualitzacions</string>
+    <string name="settings_auto_update">Comprova-les automàticament</string>
+    <string name="settings_auto_update_hint">Un cop al dia, quan s\'obre l\'aplicació, pregunta al GitHub si hi ha una versió nova i us ofereix d\'instal·lar-la. Mai s\'instal·la res sense la vostra confirmació.</string>
+    <string name="update_status_checking">S\'està comprovant…</string>
+    <string name="update_status_up_to_date">Actualitzat (%1$s)</string>
+    <string name="update_status_available">Hi ha la versió %1$s</string>
+    <string name="update_status_downloading">S\'està baixant…</string>
+    <string name="update_status_ready">A punt per instal·lar</string>
+</resources>

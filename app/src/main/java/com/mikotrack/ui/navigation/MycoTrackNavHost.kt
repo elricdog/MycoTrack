@@ -220,7 +220,7 @@ fun MycoTrackNavHost(
 
             composable(TopLevelDestination.SETTINGS.route) {
                 val viewModel: SettingsViewModel = containerViewModel(container) {
-                    SettingsViewModel(it.settingsStore, it.offlineMapManager)
+                    SettingsViewModel(it.settingsStore, it.offlineMapManager, it.updateManager)
                 }
                 SettingsScreen(
                     viewModel = viewModel,

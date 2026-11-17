@@ -29,7 +29,7 @@ app/offline-assets/
 
 # Personal planning notes (kept local, not part of the published project)
 InitialPrompt.md
-*.ORIBELL.task
+*.ORIBELL*.task
 
 # Leftover Subversion metadata
 .svn/

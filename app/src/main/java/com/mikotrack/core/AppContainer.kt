@@ -12,6 +12,7 @@ import com.mikotrack.location.LocationTracker
 import com.mikotrack.location.ProximityAlertManager
 import com.mikotrack.location.SensorMonitor
 import com.mikotrack.maps.OfflineMapManager
+import com.mikotrack.update.UpdateManager
 
 /**
  * Manual dependency container.
@@ -54,4 +55,6 @@ class AppContainer(context: Context) {
     val proximityAlertManager: ProximityAlertManager by lazy {
         ProximityAlertManager(appContext, settingsStore, tripRepository, waypointRepository)
     }
+
+    val updateManager: UpdateManager by lazy { UpdateManager(appContext, settingsStore) }
 }

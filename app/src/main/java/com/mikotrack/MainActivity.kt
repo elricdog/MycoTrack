@@ -20,6 +20,7 @@ import androidx.core.view.WindowCompat
 import com.mikotrack.data.prefs.ThemeMode
 import com.mikotrack.ui.navigation.MycoTrackNavHost
 import com.mikotrack.ui.theme.MycoTrackTheme
+import com.mikotrack.ui.update.AppUpdateHost
 
 /**
  * The single activity of the application.
@@ -56,6 +57,9 @@ class MainActivity : AppCompatActivity() {
                 ) {
                     notificationLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
                 }
+                // The silent update check: at most once a day, and only when the
+                // setting is on. Failures stay invisible.
+                container.updateManager.check(force = false)
             }
 
             MycoTrackTheme(darkTheme = darkTheme) {
@@ -72,6 +76,8 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
                 MycoTrackNavHost(container = container)
+                // The self update dialogs, visible above every screen.
+                AppUpdateHost(container.updateManager)
             }
         }
     }

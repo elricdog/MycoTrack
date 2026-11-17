@@ -30,6 +30,10 @@
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="28" />
 
+    <!-- In-app self update: downloads the APK of a GitHub release and opens the system
+         installer. The user confirms every update and every installation. -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
     <uses-feature
         android:name="android.hardware.location.gps"
         android:required="false" />

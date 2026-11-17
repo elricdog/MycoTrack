@@ -73,6 +73,7 @@ Android 8.0+ phone or tablet, even without Google Play Services. Step-by-step in
 | Gallery export | Share the photographs, save them to `Pictures/MikoTrack` or pack them in a ZIP with their locations (GeoJSON + CSV) |
 | Offline | Areas downloaded in advance as MBTiles and served from a loopback tile server |
 | Languages | English, Catalan and Spanish. Chosen in *Settings → Language* or, on Android 13+, in the system per-app language settings |
+| Self update | Once a day on start and on demand from *Settings → Updates*, the application asks GitHub for a newer release, downloads the APK that suits the device and opens the system installer; the user confirms the update and the installation, and nothing is installed silently |
 | Mushroom guide | *Mushrooms* tab: offline mini encyclopedia of 34 popular edible mushrooms of Catalonia, with photo, cooking, habitat, season calendar, dangerous look-alikes and a safety disclaimer. Search and *In season now* filter. Extra photo gallery per species and photos of the dangerous look-alikes (red frame, *Toxic* / *Not edible* badge); every photo opens in a full-screen viewer with swipe, pinch / double-tap zoom, caption, credit and licence links, share and save to *Pictures/MikoTrack*. A collapsible *Preferred trees and soils* chart shows the species' affinity for each forest type, open ground, soil substrate and slope orientation (the values used for the likely areas). Content in `app/src/main/assets/mushrooms` |
 
 ## 2. Technology stack
@@ -179,6 +180,7 @@ Install the universal or per-ABI APK on any device (Android 8.0 / API 26 or newe
 | `POST_NOTIFICATIONS` | The ongoing recording notification |
 | `CAMERA` | Taking the geotagged photographs in the application |
 | `INTERNET` / `ACCESS_NETWORK_STATE` | Downloading map tiles and elevation data |
+| `REQUEST_INSTALL_PACKAGES` | Installing the updates the user confirms (self update) |
 
 ## 4. Map sources and attribution
 

@@ -83,6 +83,20 @@ place search and elevation data.
 
 ## 5. Updating to a new version
 
+### In-app auto-update (recommended)
+
+From v1.1 on, MycoTrack updates itself: once a day when the app opens — and whenever you
+tap **Settings → Check for updates** — it asks GitHub for a new release. If there is one,
+a dialog shows the new version and its notes, and with your confirmation it downloads the
+APK that suits your device and opens the Android installer. Nothing is ever installed
+without your explicit confirmation, and your trips, photos and settings are kept.
+
+The first time you update in-app, Android asks to allow MycoTrack to install apps from
+unknown sources (*Settings → Install unknown apps*): enable it and tap *Install* again.
+You can turn the automatic checks off in **Settings → Updates**.
+
+### Manual update
+
 Download the new APK and install it over the old one: trips, photographs and settings are
 kept. No need to uninstall first — and if you do, export or back up your data beforehand
 (*Settings* and the export tools). All released APKs are signed with the same key; an APK

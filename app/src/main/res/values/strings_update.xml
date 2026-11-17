@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Self update: dialogs -->
+    <string name="update_available_title">New version available</string>
+    <string name="update_available_text">MycoTrack %1$s is available (you are using %2$s). The download needs about %3$s of space and mobile data.</string>
+    <string name="update_release_notes">Release notes</string>
+    <string name="update_button_update">Update</string>
+    <string name="update_button_later">Not now</string>
+    <string name="update_button_cancel">Cancel</string>
+    <string name="update_button_ok">OK</string>
+    <string name="update_button_install">Install</string>
+    <string name="update_button_open_settings">Open settings</string>
+    <string name="update_download_title">Downloading the update</string>
+    <string name="update_download_progress">%1$s of %2$s</string>
+    <string name="update_ready_title">Download complete</string>
+    <string name="update_ready_text">MycoTrack %1$s is ready. Android will ask you to confirm the installation; your trips, photos and settings are kept.</string>
+    <string name="update_need_install_permission">To install updates MycoTrack must be allowed to install apps from unknown sources. Tap Open settings, enable the permission, and tap Install again.</string>
+    <string name="update_failed_title">Update failed</string>
+    <string name="update_failed_network">The update could not reach GitHub. Check the internet connection and try again.</string>
+    <string name="update_failed_rate_limited">GitHub refused the check because of too many requests. Try again in a while.</string>
+    <string name="update_failed_http">GitHub returned an unexpected answer.</string>
+    <string name="update_failed_no_asset">The latest release has no APK that suits this device.</string>
+    <string name="update_failed_storage">The update could not be stored on the device. Free some space and try again.</string>
+
+    <!-- Self update: settings -->
+    <string name="settings_updates">Updates</string>
+    <string name="settings_check_updates">Check for updates</string>
+    <string name="settings_auto_update">Check for updates automatically</string>
+    <string name="settings_auto_update_hint">Once a day, when the application opens, it asks GitHub for a new version and offers to install it. Nothing is ever installed without your confirmation.</string>
+    <string name="update_status_checking">Checking…</string>
+    <string name="update_status_up_to_date">Up to date (%1$s)</string>
+    <string name="update_status_available">Version %1$s available</string>
+    <string name="update_status_downloading">Downloading…</string>
+    <string name="update_status_ready">Ready to install</string>
+</resources>

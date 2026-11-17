@@ -64,6 +64,9 @@ import com.mikotrack.ui.common.SectionCard
 import com.mikotrack.ui.map.MapButton
 import com.mikotrack.ui.map.MapButtonGroup
 import com.mikotrack.ui.theme.ForestGreen
+import com.mikotrack.ui.update.CheckUpdatesButton
+import com.mikotrack.ui.update.updateStatusText
+import com.mikotrack.update.UpdateManager
 import java.util.Locale
 import kotlin.math.cos
 
@@ -87,6 +90,8 @@ fun SettingsScreen(
     val offlineAreas by viewModel.offlineAreas.collectAsStateWithLifecycle()
     val activeAreaId by viewModel.activeAreaId.collectAsStateWithLifecycle()
     val download by viewModel.download.collectAsStateWithLifecycle()
+    val autoUpdateChecks by viewModel.autoUpdateChecks.collectAsStateWithLifecycle()
+    val updateState by viewModel.updateState.collectAsStateWithLifecycle()
 
     var showDownloadDialog by remember { mutableStateOf(false) }
 
@@ -411,6 +416,40 @@ fun SettingsScreen(
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
+        }
+
+        SectionCard(title = stringResource(R.string.settings_updates)) {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clickable { viewModel.setAutoUpdateChecks(!autoUpdateChecks) },
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Text(
+                    text = stringResource(R.string.settings_auto_update),
+                    style = MaterialTheme.typography.bodyMedium,
+                    modifier = Modifier.weight(1f),
+                )
+                Switch(checked = autoUpdateChecks, onCheckedChange = { viewModel.setAutoUpdateChecks(it) })
+            }
+            Text(
+                text = stringResource(R.string.settings_auto_update_hint),
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+            CheckUpdatesButton(
+                checking = updateState is UpdateManager.State.Checking ||
+                    updateState is UpdateManager.State.Downloading,
+                onCheck = { viewModel.checkForUpdates() },
+            )
+            val status = updateStatusText(updateState, BuildConfig.VERSION_NAME)
+            if (status.isNotEmpty()) {
+                Text(
+                    text = status,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
         }
     }
 

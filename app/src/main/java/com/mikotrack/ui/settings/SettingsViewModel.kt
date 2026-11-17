@@ -9,6 +9,7 @@ import com.mikotrack.data.db.OfflineAreaEntity
 import com.mikotrack.maps.BoundingBox
 import com.mikotrack.maps.MapLayer
 import com.mikotrack.maps.OfflineMapManager
+import com.mikotrack.update.UpdateManager
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -28,6 +29,7 @@ data class DownloadProgress(
 class SettingsViewModel(
     private val settingsStore: SettingsStore,
     private val offlineMapManager: OfflineMapManager,
+    private val updateManager: UpdateManager,
 ) : ViewModel() {
 
     /** The theme mode. */
@@ -141,5 +143,21 @@ class SettingsViewModel(
     /** Deletes an offline area. */
     fun deleteArea(area: OfflineAreaEntity) {
         viewModelScope.launch { offlineMapManager.deleteArea(area) }
+    }
+
+    /** The state of the self update system, shown in the About section. */
+    val updateState: StateFlow<UpdateManager.State> = updateManager.state
+
+    /** Whether the application checks for new releases on start. */
+    val autoUpdateChecks = settingsStore.autoUpdateChecks
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), true)
+
+    fun setAutoUpdateChecks(enabled: Boolean) {
+        viewModelScope.launch { settingsStore.setAutoUpdateChecks(enabled) }
+    }
+
+    /** A forced check from the settings: it always runs and reports the outcome. */
+    fun checkForUpdates() {
+        updateManager.check(force = true)
     }
 }
