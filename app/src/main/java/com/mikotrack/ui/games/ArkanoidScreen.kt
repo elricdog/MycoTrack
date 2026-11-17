@@ -186,11 +186,12 @@ fun ArkanoidScreen(
                 drawSprite(sprite, origin, cell / 8f)
             }
 
-            // The ball is a little puffball.
+            // The ball is a little puffball, centred on its physics position.
+            val ballCell = cell / 16f
             drawSprite(
                 PixelArt.PUFFBALL_GHOST,
-                Offset(state.ballX * size.width - cell / 4f, state.ballY * size.height - cell / 4f),
-                cell / 4f,
+                Offset(state.ballX * size.width - 4f * ballCell, state.ballY * size.height - 4f * ballCell),
+                ballCell,
             )
 
             // The basket: a woven pixel paddle.

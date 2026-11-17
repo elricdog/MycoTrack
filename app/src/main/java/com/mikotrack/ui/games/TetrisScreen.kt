@@ -213,10 +213,19 @@ fun TetrisScreen(
                     }
                 }
                 .pointerInput(state.gameOver) {
-                    detectDragGestures { _, dragAmount ->
-                        // Only deliberate swipes: a clear vertical drag drops or turns.
-                        if (kotlin.math.abs(dragAmount.y) > 24f && kotlin.math.abs(dragAmount.y) > kotlin.math.abs(dragAmount.x)) {
-                            if (dragAmount.y > 0) state.hardDrop() else state.rotate()
+                    // One swipe = one action: the piece drops a single row per swipe-down
+                    // and must be re-swiped (finger lifted) to drop again.
+                    var accY = 0f
+                    var used = false
+                    detectDragGestures(
+                        onDragStart = { accY = 0f; used = false },
+                        onDragEnd = { used = false },
+                        onDragCancel = { used = false },
+                    ) { _, dragAmount ->
+                        accY += dragAmount.y
+                        if (!used && kotlin.math.abs(accY) > 40f && kotlin.math.abs(accY) > kotlin.math.abs(dragAmount.x * 4f)) {
+                            if (accY > 0) state.tryMove(0, 1) else state.rotate()
+                            used = true
                         }
                     }
                 },

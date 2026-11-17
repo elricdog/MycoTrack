@@ -65,6 +65,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
@@ -150,7 +151,6 @@ fun SettingsScreen(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(140.dp)
-                    .clip(RoundedCornerShape(12.dp))
                     // The easter egg: taps on the banner spawn sparkles, five taps unlock the games.
                     .pointerInput(Unit) {
                         detectTapGestures { offset ->
@@ -169,14 +169,16 @@ fun SettingsScreen(
                     painter = painterResource(R.drawable.brand_banner),
                     contentDescription = null,
                     contentScale = ContentScale.FillWidth,
-                    modifier = Modifier.fillMaxSize(),
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .clip(RoundedCornerShape(12.dp)),
                 )
                 SparklesOverlay(sparkBursts)
             }
             LaunchedEffect(sparkBursts.size) {
-                delay(1_100)
+                delay(1_800)
                 val now = System.currentTimeMillis()
-                sparkBursts.removeAll { now - it.atMillis > 1_000L }
+                sparkBursts.removeAll { now - it.atMillis > 1_600L }
             }
             if (gamesUnlocked) {
                 OutlinedButton(
@@ -950,12 +952,27 @@ private fun newIssueUrl(): String {
         java.net.URLEncoder.encode(body, "UTF-8")
 }
 
-/** A sparkle burst spawned by a tap on the banner, in canvas coordinates. */
+/** A firework burst spawned by a tap on the banner, in canvas coordinates. */
 internal class SparkBurst(val x: Float, val y: Float, val atMillis: Long)
 
+private val FIREWORK_PALETTE = listOf(
+    Color(0xFFFFD54F), // gold
+    Color(0xFFFF5252), // red
+    Color(0xFF9CCC65), // green
+    Color(0xFFFFFDE7), // cream
+    Color(0xFFFFB300), // amber
+)
+
+/** Deterministic pseudo-random in 0..1 from an index and the burst origin. */
+private fun sparkNoise(i: Int, seed: Float): Float {
+    val v = sin(i * 12.9898f + seed * 0.01f) * 43758.5453f
+    return v - kotlin.math.floor(v)
+}
+
 /**
- * The sparkle effect of the easter egg: every burst in [bursts] radiates small
- * mushroom-coloured stars that fly out and fade during a second.
+ * The easter egg fireworks: every burst in [bursts] explodes at the point that was
+ * tapped, radiating coloured sparks with gravity, fading trails and a few secondary
+ * cracks that pop a moment later.
  */
 @Composable
 internal fun BoxScope.SparklesOverlay(bursts: List<SparkBurst>) {
@@ -969,21 +986,71 @@ internal fun BoxScope.SparklesOverlay(bursts: List<SparkBurst>) {
         ),
         label = "frame",
     )
-    Canvas(Modifier.matchParentSize()) {
+    Canvas(
+        modifier = Modifier
+            .matchParentSize()
+            // The explosion may fly past the banner's rounded clip.
+            .graphicsLayer { clip = false },
+    ) {
         val now = System.currentTimeMillis()
+        val dp = density
+        val gravity = 26f * dp // px/s²
         for (burst in bursts) {
             val age = (now - burst.atMillis) / 1_000f
-            if (age < 0f || age > 1f) continue
-            for (i in 0 until 12) {
-                val angle = (i * 30.0 + burst.x) * Math.PI / 180.0
-                val dist = (18f + (i % 4) * 9f) * age.dp.toPx()
-                val px = burst.x + (cos(angle.toFloat()) * dist)
-                val py = burst.y + (sin(angle.toFloat()) * dist) - age * 8f
+            if (age < 0f || age > 1.6f) continue
+
+            // Main shell: 26 sparks radiating from the finger, with gravity and trails.
+            val life = 1.25f
+            if (age <= life) {
+                val fade = 1f - age / life
+                for (i in 0 until 26) {
+                    val angle = i * (2.0 * Math.PI / 26.0) + sparkNoise(i, burst.x) * 0.4
+                    val speed = (55f + 85f * sparkNoise(i + 7, burst.y)) * dp
+                    val trail = 3
+                    for (t in trail downTo 0) {
+                        val ta = age - t * 0.06f
+                        if (ta < 0f) continue
+                        val px = burst.x + cos(angle.toFloat()) * speed * ta
+                        val py = burst.y + sin(angle.toFloat()) * speed * ta + 0.5f * gravity * ta * ta
+                        val radius = (5f - 3f * ta).coerceAtLeast(1.2f) * 1f
+                        drawCircle(
+                            color = FIREWORK_PALETTE[i % FIREWORK_PALETTE.size],
+                            radius = radius,
+                            center = Offset(px, py),
+                            alpha = (fade * (1f - t * 0.3f)).coerceIn(0f, 1f),
+                        )
+                    }
+                }
+            }
+
+            // Secondary cracks: three small pops that fly out of the first blast.
+            for (k in 0 until 3) {
+                val start = 0.35f + k * 0.28f
+                val crackLife = 0.55f
+                val ca = age - start
+                if (ca < 0f || ca > crackLife) continue
+                val cAngle = k * 2.1f + sparkNoise(k, burst.x)
+                val cx = burst.x + cos(cAngle) * 55f * dp
+                val cy = burst.y + sin(cAngle) * 55f * dp
+                val fade = 1f - ca / crackLife
+                for (i in 0 until 10) {
+                    val angle = i * (2.0 * Math.PI / 10.0) + sparkNoise(i, burst.y + k)
+                    val speed = (30f + 45f * sparkNoise(i + 3, burst.x)) * dp
+                    val px = cx + cos(angle.toFloat()) * speed * ca
+                    val py = cy + sin(angle.toFloat()) * speed * ca + 0.5f * gravity * ca * ca
+                    drawCircle(
+                        color = FIREWORK_PALETTE[(i + k * 2) % FIREWORK_PALETTE.size],
+                        radius = (3.2f - 2f * ca).coerceAtLeast(1f),
+                        center = Offset(px, py),
+                        alpha = fade,
+                    )
+                }
+                // The flash of the crack itself.
                 drawCircle(
-                    color = if (i % 3 == 0) Color(0xFFFFC107) else Color(0xFFFFF176),
-                    radius = (4.5f - age * 3.5f).coerceAtLeast(1f),
-                    center = Offset(px, py),
-                    alpha = 1f - age,
+                    color = Color.White,
+                    radius = (7f * (1f - fade)).coerceAtLeast(1f),
+                    center = Offset(cx, cy),
+                    alpha = fade * 0.8f,
                 )
             }
         }

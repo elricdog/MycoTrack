@@ -92,7 +92,7 @@
     <string name="game_arkanoid_hint">Arrossega per moure la cistella, toca per llançar la pilota.</string>
     <string name="game_tetris">MycoTris</string>
     <string name="game_tetris_blurb">Apila els maons de bolet i omple files.</string>
-    <string name="game_tetris_hint">Toca l\'esquerra / la dreta per desplaçar, toca el centre per girar, llisca avall per fer caure.</string>
+    <string name="game_tetris_hint">Toca l\'esquerra / la dreta per desplaçar, toca el centre per girar, llisca avall per fer caure una fila.</string>
     <string name="game_pacman">Laberint d\'Espores</string>
     <string name="game_pacman_blurb">Mena\'t les espores i escapa de les bufaderes fantasma.</string>
     <string name="game_pacman_hint">Llisca per dirigir. Les espores daurades et deixen menjar els fantasmes!</string>

@@ -52,7 +52,7 @@ private class PacmanState {
             "#o.....#.....o#" +
             "###############"
         const val W = 15
-        const val H = 17
+        const val H = 16
         private val DIRS = listOf(Offset(1f, 0f), Offset(-1f, 0f), Offset(0f, 1f), Offset(0f, -1f))
     }
 
@@ -68,7 +68,7 @@ private class PacmanState {
     var heroY by mutableIntStateOf(8)
     var heroDir by mutableStateOf(Offset(-1f, 0f))
     var pendingDir by mutableStateOf(Offset(0f, 0f))
-    var ghosts by mutableStateOf(listOf(Offset(7f, 6f), Offset(10f, 6f)))
+    var ghosts by mutableStateOf(listOf(Offset(6f, 6f), Offset(8f, 6f)))
     var ghostDirs by mutableStateOf(listOf(Offset(0f, -1f), Offset(0f, 1f)))
     var openDots by mutableIntStateOf(0)
 
@@ -76,7 +76,7 @@ private class PacmanState {
         for (y in 0 until H) for (x in 0 until W) tiles[y][x] = MAP[y * W + x]
         openDots = tiles.sumOf { row -> row.count { it == '.' || it == 'o' } }
         heroX = 2; heroY = 8; heroDir = Offset(1f, 0f); pendingDir = Offset(0f, 0f)
-        ghosts = listOf(Offset(7f, 6f), Offset(10f, 6f))
+        ghosts = listOf(Offset(6f, 6f), Offset(8f, 6f))
         ghostDirs = listOf(Offset(0f, -1f), Offset(0f, 1f))
     }
 
@@ -144,14 +144,14 @@ private class PacmanState {
             if (g.x.toInt() == heroX && g.y.toInt() == heroY) {
                 if (fright > 0) {
                     score += 200
-                    ghosts = ghosts.toMutableList().also { it[i] = Offset(7f, 6f) }
+                    ghosts = ghosts.toMutableList().also { it[i] = Offset(6f, 6f) }
                 } else {
                     lives -= 1
                     if (lives <= 0) {
                         gameOver = true
                     } else {
                         heroX = 2; heroY = 8; heroDir = Offset(1f, 0f)
-                        ghosts = listOf(Offset(7f, 6f), Offset(10f, 6f))
+                        ghosts = listOf(Offset(6f, 6f), Offset(8f, 6f))
                     }
                 }
             }

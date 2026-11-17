@@ -92,7 +92,7 @@
     <string name="game_arkanoid_hint">Arrastra para mover la cesta, toca para lanzar la pelota.</string>
     <string name="game_tetris">MycoTris</string>
     <string name="game_tetris_blurb">Apila los ladrillos de seta y rellena filas.</string>
-    <string name="game_tetris_hint">Toca izquierda / derecha para desplazar, toca el centro para girar, desliza abajo para caer.</string>
+    <string name="game_tetris_hint">Toca izquierda / derecha para desplazar, toca el centro para girar, desliza abajo para caer una fila.</string>
     <string name="game_pacman">Laberinto de Esporas</string>
     <string name="game_pacman_blurb">Come las esporas y escapa de las puffballs fantasma.</string>
     <string name="game_pacman_hint">Desliza para dirigir. ¡Las esporas doradas te dejan comer fantasmas!</string>
