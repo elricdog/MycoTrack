@@ -108,3 +108,29 @@ internal fun korobeinikiTune(): ChiptuneLoop {
         ),
     )
 }
+
+/**
+ * The theme of Beethoven's "Ode to Joy" (public domain) as (frequency, beats) pairs.
+ * Shared by the rhythm game's chiptune and its beatmap, so notes and music match.
+ */
+internal fun odeToJoyNotes(): List<Pair<Double, Double>> {
+    val c4 = 261.63; val d4 = 293.66; val e4 = 329.63; val f4 = 349.23; val g4 = 392.00
+    fun phrase(endLong: List<Pair<Double, Double>>) = listOf(
+        e4 to 1.0, e4 to 1.0, f4 to 1.0, g4 to 1.0,
+        g4 to 1.0, f4 to 1.0, e4 to 1.0, d4 to 1.0,
+        c4 to 1.0, c4 to 1.0, d4 to 1.0, e4 to 1.0,
+    ) + endLong
+    val longShort = listOf(e4 to 1.5, d4 to 0.5)
+    val longRest = listOf(e4 to 1.5, 0.0 to 0.5)
+    return phrase(longShort) + phrase(longRest) +
+        listOf(
+            g4 to 1.0, g4 to 1.0, f4 to 1.0, e4 to 1.0,
+            d4 to 1.0, c4 to 1.0, d4 to 1.0, e4 to 1.0,
+            e4 to 1.0, e4 to 1.0, f4 to 1.0, g4 to 1.0,
+            g4 to 1.0, f4 to 1.0, e4 to 1.0, d4 to 1.0,
+        ) + phrase(longShort) + phrase(longRest)
+}
+
+/** The same melody as a playable [ChiptuneLoop]. */
+internal fun odeToJoyTune(beatSeconds: Double = 0.30): ChiptuneLoop =
+    ChiptuneLoop(odeToJoyNotes(), beatSeconds = beatSeconds)

@@ -29,13 +29,15 @@ object PixelArt {
     val SOIL = Color(0xFF5D4037)
     val CREAM = Color(0xFFFFF8E1)
     val SLIME = Color(0xFF4FC3F7)
+    val CAP_PURPLE = Color(0xFFAB47BC)
+    val CAP_PURPLE_DARK = Color(0xFF7B1FA2)
 
     /** A sprite: rows of palette keys, '.' marks a transparent pixel. */
     data class Sprite(val rows: List<String>, val palette: Map<Char, Color>)
 
     /** Builds every sprite off the main thread so the first game frame is never janky. */
     fun warmUp() {
-        listOf(CEP, AGARIC, CHANTERELLE, GREEN_BOLETE, PUFFBALL_GHOST)
+        listOf(CEP, AGARIC, CHANTERELLE, GREEN_BOLETE, PUFFBALL_GHOST, AMATISTA, SLIME_BLOB, GOLD_PUFF)
     }
 
     // --- shared sprites -------------------------------------------------------------------
@@ -129,6 +131,64 @@ object PixelArt {
         mapOf(
             'W' to Color(0xFFEDE7F6),
             'E' to NIGHT,
+        ),
+    )
+
+    /** A purple amethyst cap, 8 x 8 (memory games). */
+    val AMATISTA = Sprite(
+        listOf(
+            "..PPPP..",
+            ".PWPPWP.",
+            "PPWPPPPW",
+            "PPPPPPPP",
+            ".SSSSSS.",
+            "..S.ss..",
+            "..S.ss..",
+            "..SSSS..",
+        ),
+        mapOf(
+            'P' to CAP_PURPLE,
+            'W' to SPOT,
+            'S' to STEM,
+            's' to STEM_SHADE,
+        ),
+    )
+
+    /** A grumpy blue slug, 8 x 8: the thing you must NOT whack. */
+    val SLIME_BLOB = Sprite(
+        listOf(
+            "..B..B..",
+            "..B..B..",
+            ".BBBBBB.",
+            "BEBBBBEB",
+            "BBBBBBBB",
+            ".BBBBBB.",
+            "..LLLL..",
+            "...LL...",
+        ),
+        mapOf(
+            'B' to SLIME,
+            'E' to NIGHT,
+            'L' to CAP_PURPLE_DARK,
+        ),
+    )
+
+    /** A round golden puffball, 8 x 8 (bonus target). */
+    val GOLD_PUFF = Sprite(
+        listOf(
+            "..GGGG..",
+            ".GWGGGW.",
+            "GGWGGGGG",
+            "GGGGGGGG",
+            "GGGGGGGG",
+            "GGGGGGGG",
+            ".GGGGGG.",
+            "..gggg..",
+        ),
+        mapOf(
+            'G' to CAP_GOLD,
+            'W' to SPOT,
+            'g' to CAP_ORANGE,
         ),
     )
 }

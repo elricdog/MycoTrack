@@ -22,8 +22,11 @@ class GamesViewModel(private val settingsStore: SettingsStore) : ViewModel() {
             settingsStore.gameScores(GameId.ARKANOID),
             settingsStore.gameScores(GameId.TETRIS),
             settingsStore.gameScores(GameId.PACMAN),
-        ) { a, t, p ->
-            mapOf(GameId.ARKANOID to a, GameId.TETRIS to t, GameId.PACMAN to p)
+            settingsStore.gameScores(GameId.RHYTHM),
+            settingsStore.gameScores(GameId.MEMORY),
+            settingsStore.gameScores(GameId.TOPO),
+        ) { lists ->
+            GameId.entries.zip(lists).toMap()
         }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), emptyMap())
 
     /** The game the ranking of the current screen belongs to. */

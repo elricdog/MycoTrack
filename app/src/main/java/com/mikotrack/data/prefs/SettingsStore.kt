@@ -74,6 +74,9 @@ class SettingsStore(private val context: Context) {
         val GAME_SCORES_ARKANOID = stringPreferencesKey("game_scores_arkanoid")
         val GAME_SCORES_TETRIS = stringPreferencesKey("game_scores_tetris")
         val GAME_SCORES_PACMAN = stringPreferencesKey("game_scores_pacman")
+        val GAME_SCORES_RHYTHM = stringPreferencesKey("game_scores_rhythm")
+        val GAME_SCORES_MEMORY = stringPreferencesKey("game_scores_memory")
+        val GAME_SCORES_TOPO = stringPreferencesKey("game_scores_topo")
     }
 
     /** Whether a parking waypoint is added at the first accurate fix of a new trip. */
@@ -407,5 +410,8 @@ class SettingsStore(private val context: Context) {
         GameId.ARKANOID -> Keys.GAME_SCORES_ARKANOID
         GameId.TETRIS -> Keys.GAME_SCORES_TETRIS
         GameId.PACMAN -> Keys.GAME_SCORES_PACMAN
+        GameId.RHYTHM -> Keys.GAME_SCORES_RHYTHM
+        GameId.MEMORY -> Keys.GAME_SCORES_MEMORY
+        GameId.TOPO -> Keys.GAME_SCORES_TOPO
     }
 }

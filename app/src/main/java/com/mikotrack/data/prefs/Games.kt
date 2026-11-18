@@ -1,7 +1,7 @@
 package com.mikotrack.data.prefs
 
 /** The games of the easter egg. */
-enum class GameId { ARKANOID, TETRIS, PACMAN }
+enum class GameId { ARKANOID, TETRIS, PACMAN, RHYTHM, MEMORY, TOPO }
 
 /** One finished game: points, level reached and moment of the record. */
 data class GameScore(val score: Int, val level: Int, val atMillis: Long)

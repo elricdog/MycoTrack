@@ -100,6 +100,27 @@ fun GameHubScreen(
             icon = { drawMushroom(this, PixelArt.CEP) },
             onClick = { onOpenGame(GameId.PACMAN) },
         )
+        GameCard(
+            title = stringResource(R.string.game_rhythm),
+            blurb = stringResource(R.string.game_rhythm_blurb),
+            ranking = scores[GameId.RHYTHM].orEmpty(),
+            icon = { drawMushroom(this, PixelArt.GOLD_PUFF) },
+            onClick = { onOpenGame(GameId.RHYTHM) },
+        )
+        GameCard(
+            title = stringResource(R.string.game_memory),
+            blurb = stringResource(R.string.game_memory_blurb),
+            ranking = scores[GameId.MEMORY].orEmpty(),
+            icon = { drawMushroom(this, PixelArt.AMATISTA) },
+            onClick = { onOpenGame(GameId.MEMORY) },
+        )
+        GameCard(
+            title = stringResource(R.string.game_topo),
+            blurb = stringResource(R.string.game_topo_blurb),
+            ranking = scores[GameId.TOPO].orEmpty(),
+            icon = { drawMushroom(this, PixelArt.SLIME_BLOB) },
+            onClick = { onOpenGame(GameId.TOPO) },
+        )
         // A placeholder for the games that will come later.
         Card(
             modifier = Modifier.fillMaxWidth(),

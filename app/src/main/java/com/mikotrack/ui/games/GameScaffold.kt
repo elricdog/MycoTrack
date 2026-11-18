@@ -54,6 +54,7 @@ fun GameScaffold(
     ranking: List<GameScore>,
     onBack: () -> Unit,
     onRestart: () -> Unit,
+    timer: Int? = null,
     content: @Composable BoxScope.() -> Unit,
 ) {
     Column(
@@ -81,6 +82,9 @@ fun GameScaffold(
             PixelStat(label = stringResource(R.string.game_level_label), value = level.toString())
             if (lives != null) {
                 PixelStat(label = stringResource(R.string.game_lives_label), value = "x$lives")
+            }
+            if (timer != null) {
+                PixelStat(label = stringResource(R.string.game_time_label), value = timer.toString())
             }
         }
         Text(

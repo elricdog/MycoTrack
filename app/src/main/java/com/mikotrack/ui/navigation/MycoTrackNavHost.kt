@@ -31,8 +31,11 @@ import com.mikotrack.ui.diagnostics.DiagnosticsViewModel
 import com.mikotrack.ui.games.ArkanoidScreen
 import com.mikotrack.ui.games.GameHubScreen
 import com.mikotrack.ui.games.GamesViewModel
+import com.mikotrack.ui.games.MemoryScreen
 import com.mikotrack.ui.games.PacmanScreen
+import com.mikotrack.ui.games.RhythmScreen
 import com.mikotrack.ui.games.TetrisScreen
+import com.mikotrack.ui.games.TopoScreen
 import com.mikotrack.ui.gallery.GalleryScreen
 import com.mikotrack.ui.gallery.GalleryViewModel
 import com.mikotrack.ui.history.HistoryScreen
@@ -264,6 +267,9 @@ fun MycoTrackNavHost(
                     "ARKANOID" -> ArkanoidScreen(viewModel = viewModel, onBack = back)
                     "TETRIS" -> TetrisScreen(viewModel = viewModel, onBack = back)
                     "PACMAN" -> PacmanScreen(viewModel = viewModel, onBack = back)
+                    "RHYTHM" -> RhythmScreen(viewModel = viewModel, onBack = back)
+                    "MEMORY" -> MemoryScreen(viewModel = viewModel, onBack = back)
+                    "TOPO" -> TopoScreen(viewModel = viewModel, onBack = back)
                     else -> navController.popBackStack()
                 }
             }
