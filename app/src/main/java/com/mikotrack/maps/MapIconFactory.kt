@@ -6,6 +6,8 @@ import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.Path
+import android.graphics.Rect
+import android.graphics.RectF
 import com.mikotrack.data.prefs.ParkingIconStyles
 import com.mikotrack.data.repository.DefaultCategory
 import java.util.concurrent.ConcurrentHashMap
@@ -57,8 +59,15 @@ object MapIconFactory {
 
         val glyph = glyphStyle?.let { parkingGlyph(context, it) }
         if (glyph != null) {
-            val glyphSize = (size * 0.52f).toInt()
-            canvas.drawBitmap(glyph, center - glyphSize / 2f, center - glyphSize / 2f - 1f, paint)
+            val glyphSize = (size * 0.60f).toInt()
+            val left = center - glyphSize / 2f
+            val top = center - glyphSize / 2f - 1f
+            canvas.drawBitmap(
+                glyph,
+                Rect(0, 0, glyph.width, glyph.height),
+                RectF(left, top, left + glyphSize, top + glyphSize),
+                paint,
+            )
         } else {
             // A small stem turns the circle into a mushroom-like marker.
             paint.color = Color.WHITE
@@ -86,7 +95,8 @@ object MapIconFactory {
             }.getOrNull()
         }
 
-    private const val GLYPH_SIZE = 26
+    // Rendered a bit larger than drawn, so the downscaling keeps the glyph crisp.
+    private const val GLYPH_SIZE = 32
 
     /** Builds the arrow that shows the direction of movement. */
     fun bearingIcon(color: Int = Color.WHITE): Bitmap {

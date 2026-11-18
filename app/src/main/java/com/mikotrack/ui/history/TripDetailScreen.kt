@@ -67,6 +67,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalDensity
 import androidx.core.os.ConfigurationCompat
 import com.mikotrack.R
 import androidx.compose.ui.text.font.FontWeight
@@ -495,6 +496,13 @@ private fun MapTab(
                 .weight(1f),
         ) {
             MapCanvas(controller, Modifier.fillMaxSize())
+
+            // MapLibre hangs the compass from the top-right corner, right over the layer
+            // button, so it is pushed below it.
+            val density = LocalDensity.current
+            LaunchedEffect(Unit) {
+                with(density) { controller.setCompassTopInset(68.dp.roundToPx()) }
+            }
 
             // Loads the route on the main map, among the overlaid routes.
             FilledTonalButton(

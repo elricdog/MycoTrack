@@ -1,6 +1,7 @@
 package com.mikotrack.maps
 
 import android.graphics.Color
+import com.mikotrack.data.repository.DefaultCategory
 import org.maplibre.android.maps.Style
 import org.maplibre.android.style.expressions.Expression
 import org.maplibre.android.style.layers.CircleLayer
@@ -296,7 +297,16 @@ class MapOverlayManager {
                     PropertyFactory.iconImage(Expression.get("icon")),
                     PropertyFactory.iconAllowOverlap(true),
                     PropertyFactory.iconIgnorePlacement(true),
-                    PropertyFactory.iconSize(0.7f),
+                    // The parking marker is drawn larger than the rest of the waypoints,
+                    // so the car is easy to spot from far away.
+                    PropertyFactory.iconSize(
+                        Expression.match(
+                            Expression.string(Expression.get("category")),
+                            Expression.literal(WAYPOINT_ICON_SIZE),
+                            Expression.literal(DefaultCategory.PARKING.key),
+                            Expression.literal(PARKING_ICON_SIZE),
+                        ),
+                    ),
                 ),
             )
         } else {
@@ -459,6 +469,10 @@ class MapOverlayManager {
         const val MARKER_LAYER = "mycotrack-pressed-point-layer"
 
         private const val EMPTY_COLLECTION = "{\"type\":\"FeatureCollection\",\"features\":[]}"
+
+        /** Scale of the waypoint badges, and of the parking badge in particular. */
+        private const val WAYPOINT_ICON_SIZE = 0.7f
+        private const val PARKING_ICON_SIZE = 1.15f
 
         private val CASING_COLOR = Color.argb(255, 25, 25, 25)
         private const val CASING_WIDTH = 8.5f
