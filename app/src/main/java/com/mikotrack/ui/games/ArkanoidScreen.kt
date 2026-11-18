@@ -12,6 +12,7 @@ import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.runtime.withFrameNanos
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
@@ -20,7 +21,8 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import kotlinx.coroutines.delay
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import com.mikotrack.R
 import com.mikotrack.data.prefs.GameId
 import kotlin.math.abs
@@ -125,7 +127,12 @@ private class ArkanoidState {
     fun step() {
         if (gameOver) return
         if (serve) {
-            balls = balls.map { it.copy(x = paddleX, y = 0.72f) }
+            // Follow the basket in place: paddleX is state, so the canvas already
+            // redraws; copying the whole ball list every frame just churns garbage.
+            for (b in balls) {
+                b.x = paddleX
+                b.y = 0.72f
+            }
             return
         }
         tryFire()
@@ -269,6 +276,11 @@ internal fun DrawScope.drawSporeBall(cx: Float, cy: Float, r: Float) {
     drawSprite(SPORE_BALL, Offset(cx - r, cy - r), r / 4f)
 }
 
+/** Touches this file's sprites so they are built off the main thread. */
+private fun warmUpSprites() {
+    SPORE_BALL
+}
+
 @Composable
 fun ArkanoidScreen(
     viewModel: GamesViewModel,
@@ -283,10 +295,32 @@ fun ArkanoidScreen(
     }
 
     LaunchedEffect(Unit) {
+        // The first frames used to stutter: the screen is busy composing and the
+        // pixel sprites are built lazily on first draw. Build everything off the
+        // main thread before the physics loop starts.
+        withContext(Dispatchers.Default) {
+            PixelArt.warmUp()
+            warmUpSprites()
+        }
+        // VSync-aligned fixed-timestep loop: physics advances in 60 Hz steps in
+        // lockstep with the frame clock, so the ball never moves in bursts.
+        var prev = 0L
+        var acc = 0.0
         while (true) {
-            delay(16)
-            state.step()
-            state.tick += 1
+            withFrameNanos { now ->
+                if (prev != 0L) {
+                    acc += (now - prev).toDouble() / 16_666_667.0
+                    var steps = 0
+                    while (acc >= 1.0 && steps < 3) {
+                        state.step()
+                        state.tick += 1
+                        acc -= 1.0
+                        steps += 1
+                    }
+                    if (acc > 3.0) acc = 0.0
+                }
+                prev = now
+            }
         }
     }
 

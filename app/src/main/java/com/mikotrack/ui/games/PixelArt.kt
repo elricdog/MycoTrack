@@ -33,6 +33,11 @@ object PixelArt {
     /** A sprite: rows of palette keys, '.' marks a transparent pixel. */
     data class Sprite(val rows: List<String>, val palette: Map<Char, Color>)
 
+    /** Builds every sprite off the main thread so the first game frame is never janky. */
+    fun warmUp() {
+        listOf(CEP, AGARIC, CHANTERELLE, GREEN_BOLETE, PUFFBALL_GHOST)
+    }
+
     // --- shared sprites -------------------------------------------------------------------
 
     /** A classic red-capped mushroom (cep), 8 x 8. */
