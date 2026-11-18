@@ -12,6 +12,12 @@ import org.maplibre.android.style.layers.SymbolLayer
 import org.maplibre.android.style.sources.GeoJsonSource
 import java.util.Locale
 
+internal fun waypointIconSizeExpression(): Expression = Expression.match(
+    Expression.string(Expression.get("category")),
+    Expression.literal(0.7f),
+    Expression.stop(DefaultCategory.PARKING.key, 1.15f),
+)
+
 /**
  * Draws the recorded route, the overlaid historical routes, the waypoints and the current
  * position onto a MapLibre style.
@@ -297,16 +303,7 @@ class MapOverlayManager {
                     PropertyFactory.iconImage(Expression.get("icon")),
                     PropertyFactory.iconAllowOverlap(true),
                     PropertyFactory.iconIgnorePlacement(true),
-                    // The parking marker is drawn larger than the rest of the waypoints,
-                    // so the car is easy to spot from far away.
-                    PropertyFactory.iconSize(
-                        Expression.match(
-                            Expression.string(Expression.get("category")),
-                            Expression.literal(WAYPOINT_ICON_SIZE),
-                            Expression.literal(DefaultCategory.PARKING.key),
-                            Expression.literal(PARKING_ICON_SIZE),
-                        ),
-                    ),
+                    PropertyFactory.iconSize(waypointIconSizeExpression()),
                 ),
             )
         } else {
@@ -469,10 +466,6 @@ class MapOverlayManager {
         const val MARKER_LAYER = "mycotrack-pressed-point-layer"
 
         private const val EMPTY_COLLECTION = "{\"type\":\"FeatureCollection\",\"features\":[]}"
-
-        /** Scale of the waypoint badges, and of the parking badge in particular. */
-        private const val WAYPOINT_ICON_SIZE = 0.7f
-        private const val PARKING_ICON_SIZE = 1.15f
 
         private val CASING_COLOR = Color.argb(255, 25, 25, 25)
         private const val CASING_WIDTH = 8.5f

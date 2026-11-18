@@ -500,7 +500,7 @@ private fun MapTab(
             // MapLibre hangs the compass from the top-right corner, right over the layer
             // button, so it is pushed below it.
             val density = LocalDensity.current
-            LaunchedEffect(Unit) {
+            LaunchedEffect(controller, density) {
                 with(density) { controller.setCompassTopInset(68.dp.roundToPx()) }
             }
 
