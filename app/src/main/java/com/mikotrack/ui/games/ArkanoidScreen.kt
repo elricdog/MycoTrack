@@ -350,6 +350,11 @@ fun ArkanoidScreen(
                     }
                 },
         ) {
+            // Balls and bricks are mutated in place, which Compose cannot observe, so
+            // the frame counter is read here to redraw after every physics step.
+            // Without it the canvas only refreshed when the paddle or score changed.
+            @Suppress("UNUSED_VARIABLE")
+            val frame = state.tick
             state.aspect = size.height / size.width
             val cell = size.width / 8f
             drawRect(PixelArt.NIGHT_CELL)
