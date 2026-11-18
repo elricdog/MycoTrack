@@ -77,6 +77,7 @@ class SettingsStore(private val context: Context) {
         val GAME_SCORES_RHYTHM = stringPreferencesKey("game_scores_rhythm")
         val GAME_SCORES_MEMORY = stringPreferencesKey("game_scores_memory")
         val GAME_SCORES_TOPO = stringPreferencesKey("game_scores_topo")
+        val GAME_SCORES_SOLITAIRE = stringPreferencesKey("game_scores_solitaire")
     }
 
     /** Whether a parking waypoint is added at the first accurate fix of a new trip. */
@@ -413,5 +414,6 @@ class SettingsStore(private val context: Context) {
         GameId.RHYTHM -> Keys.GAME_SCORES_RHYTHM
         GameId.MEMORY -> Keys.GAME_SCORES_MEMORY
         GameId.TOPO -> Keys.GAME_SCORES_TOPO
+        GameId.SOLITAIRE -> Keys.GAME_SCORES_SOLITAIRE
     }
 }

@@ -29,9 +29,15 @@ import com.mikotrack.data.prefs.GameId
  * down its lane, landing on the golden line exactly as the tune sounds the note.
  * Tap the lane in time: perfect hits pay double. Five escaped notes end the jam,
  * and every completed loop of the melody raises the level (and the point rate).
+ * The tempo is deliberately relaxed so the taps stay playable on a phone screen.
  */
-private const val BEAT_SECONDS = 0.30
-private const val TRAVEL_BEATS = 4.0
+private const val BEAT_SECONDS = 0.42
+private const val TRAVEL_BEATS = 6.0
+
+/** Hit windows in beats: 0.42 s per beat, so 0.14 ≈ 60 ms and 0.30 ≈ 125 ms. */
+private const val PERFECT_BEATS = 0.14
+private const val GOOD_BEATS = 0.30
+private const val MISS_BEATS = 0.45
 
 /** One melody note falling down a lane. State: 0 upcoming, 1 hit, 2 missed. */
 private class BeatNote(val beat: Double, val lane: Int, var state: Int = 0)
@@ -80,7 +86,7 @@ private class RhythmState {
             return
         }
         for (n in notes) {
-            if (n.state == 0 && beat > n.beat + 0.35) {
+            if (n.state == 0 && beat > n.beat + MISS_BEATS) {
                 n.state = 2
                 combo = 0
                 lives -= 1
@@ -99,14 +105,14 @@ private class RhythmState {
             .minByOrNull { kotlin.math.abs(it.beat - beat) } ?: return
         val delta = kotlin.math.abs(candidate.beat - beat)
         when {
-            delta <= 0.07 -> {
+            delta <= PERFECT_BEATS -> {
                 candidate.state = 1
                 combo += 1
                 score += 100 * level + combo * 5
                 laneFlash = lane
                 flashTick = tick
             }
-            delta <= 0.16 -> {
+            delta <= GOOD_BEATS -> {
                 candidate.state = 1
                 combo += 1
                 score += 50 * level

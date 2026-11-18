@@ -25,6 +25,7 @@ class GamesViewModel(private val settingsStore: SettingsStore) : ViewModel() {
             settingsStore.gameScores(GameId.RHYTHM),
             settingsStore.gameScores(GameId.MEMORY),
             settingsStore.gameScores(GameId.TOPO),
+            settingsStore.gameScores(GameId.SOLITAIRE),
         ) { lists ->
             GameId.entries.zip(lists).toMap()
         }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), emptyMap())

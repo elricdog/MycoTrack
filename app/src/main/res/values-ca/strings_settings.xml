@@ -105,6 +105,9 @@
     <string name="game_topo">Topa-Bolets</string>
     <string name="game_topo_blurb">Colpeja els fantasmes de bolet que surten dels forats.</string>
     <string name="game_topo_hint">Colpeja bolets fantasma i puffballs daurats. No toquis mai les llesmes blaves!</string>
+    <string name="game_solitaire">Solitari Boletaire</string>
+    <string name="game_solitaire_blurb">El Klondike de tota la vida, amb quatre pals de bolets.</string>
+    <string name="game_solitaire_hint">Toca una carta per agafar-la i una pila per deixar-la. Toca una base i marxarà la millor carta.</string>
     <string name="game_soon_title">Més jocs</string>
     <string name="game_soon_blurb">En futures versions apareixeran nous jocs del bosc.</string>
     <string name="game_back">Enrere</string>

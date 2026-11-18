@@ -121,6 +121,13 @@ fun GameHubScreen(
             icon = { drawMushroom(this, PixelArt.SLIME_BLOB) },
             onClick = { onOpenGame(GameId.TOPO) },
         )
+        GameCard(
+            title = stringResource(R.string.game_solitaire),
+            blurb = stringResource(R.string.game_solitaire_blurb),
+            ranking = scores[GameId.SOLITAIRE].orEmpty(),
+            icon = { drawMushroom(this, PixelArt.GREEN_BOLETE) },
+            onClick = { onOpenGame(GameId.SOLITAIRE) },
+        )
         // A placeholder for the games that will come later.
         Card(
             modifier = Modifier.fillMaxWidth(),

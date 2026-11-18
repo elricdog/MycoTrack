@@ -34,6 +34,7 @@ import com.mikotrack.ui.games.GamesViewModel
 import com.mikotrack.ui.games.MemoryScreen
 import com.mikotrack.ui.games.PacmanScreen
 import com.mikotrack.ui.games.RhythmScreen
+import com.mikotrack.ui.games.SolitaireScreen
 import com.mikotrack.ui.games.TetrisScreen
 import com.mikotrack.ui.games.TopoScreen
 import com.mikotrack.ui.gallery.GalleryScreen
@@ -270,6 +271,7 @@ fun MycoTrackNavHost(
                     "RHYTHM" -> RhythmScreen(viewModel = viewModel, onBack = back)
                     "MEMORY" -> MemoryScreen(viewModel = viewModel, onBack = back)
                     "TOPO" -> TopoScreen(viewModel = viewModel, onBack = back)
+                    "SOLITAIRE" -> SolitaireScreen(viewModel = viewModel, onBack = back)
                     else -> navController.popBackStack()
                 }
             }
