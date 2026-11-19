@@ -105,7 +105,7 @@
     <string name="game_topo_hint">Whack ghost mushrooms and golden puffs. Never touch the blue slugs!</string>
     <string name="game_solitaire">Mushroom Solitaire</string>
     <string name="game_solitaire_blurb">The classic Klondike with four suits of mushrooms.</string>
-    <string name="game_solitaire_hint">Tap a card to pick it up, tap a pile to drop it. Tapping a foundation auto-sends the best card.</string>
+    <string name="game_solitaire_hint">Tap a card to pick it up, tap a pile to drop it. Double-tap sends a card to its foundation. Tapping a foundation auto-sends the best card.</string>
     <string name="game_soon_title">More games</string>
     <string name="game_soon_blurb">New forest games will appear in future versions.</string>
     <string name="game_back">Back</string>

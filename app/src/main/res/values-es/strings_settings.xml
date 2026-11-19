@@ -107,7 +107,7 @@
     <string name="game_topo_hint">Golpea setas fantasma y puffballs doradas. ¡Nunca toques las babosas azules!</string>
     <string name="game_solitaire">Solitario Boletario</string>
     <string name="game_solitaire_blurb">El Klondike de siempre, con cuatro palos de setas.</string>
-    <string name="game_solitaire_hint">Toca una carta para cogerla y una pila para soltarla. Toca una base y se irá la mejor carta.</string>
+    <string name="game_solitaire_hint">Toca una carta para cogerla y una pila para soltarla. Doble toque la envía a la base. Toca una base y se irá la mejor carta.</string>
     <string name="game_soon_title">Más juegos</string>
     <string name="game_soon_blurb">En futuras versiones aparecerán nuevos juegos del bosque.</string>
     <string name="game_back">Atrás</string>

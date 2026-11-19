@@ -13,6 +13,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.nativeCanvas
 import androidx.compose.ui.input.pointer.pointerInput
@@ -39,6 +40,8 @@ private const val COLD_2 = 3 // amatista: purple
 
 private fun isWarm(suit: Int) = suit == WARM_1 || suit == WARM_2
 
+private val FlashRed = Color(0xFFFF3B30)
+
 private data class SCard(val suit: Int, val rank: Int)
 private data class TabCard(val card: SCard, val up: Boolean)
 
@@ -54,8 +57,27 @@ private class SolitaireState {
     var foundations by mutableStateOf(List(4) { emptyList<SCard>() })
     var tableau by mutableStateOf(List(7) { emptyList<TabCard>() })
     var sel by mutableStateOf<Sel?>(null)
+    /** Bumped on every rejected move; drives the red "nope" flash on the target pile. */
+    var flash by mutableIntStateOf(0)
+        private set
+    /** 0 = stock/waste, 1 = tableau, 2 = foundation; -1 = no flash. */
+    var flashKind by mutableIntStateOf(-1)
+        private set
+    var flashPile by mutableIntStateOf(-1)
+        private set
+
+    private fun rejectPile(kind: Int, pile: Int) {
+        flashKind = kind
+        flashPile = pile
+        flash += 1
+    }
 
     val cleared get() = foundations.sumOf { it.size }
+
+    fun clearFlash() {
+        flashKind = -1
+        flashPile = -1
+    }
 
     fun start() {
         val deck = (0 until 4).flatMap { suit -> (1..13).map { SCard(suit, it) } }.toMutableList()
@@ -94,6 +116,12 @@ private class SolitaireState {
             stock = stock.dropLast(1)
         }
     }
+
+    /** True when [run] is a valid Klondike sequence: descending ranks, warm/cold alternating. */
+    private fun validRun(run: List<SCard>): Boolean =
+        run.zipWithNext().all { (a, b) ->
+            a.rank == b.rank + 1 && isWarm(a.suit) != isWarm(b.suit)
+        }
 
     /** Foundation pile that accepts [card] right now, or -1. */
     private fun foundationFor(card: SCard): Int {
@@ -149,7 +177,9 @@ private class SolitaireState {
         if (gameOver) return
         val col = tableau[pile]
         if (col.isEmpty()) {
-            sel?.let { tryDropTableau(pile) }
+            if (sel != null) {
+                if (!tryDropTableau(pile)) rejectPile(1, pile)
+            }
             return
         }
         val idx = pos.coerceIn(0, col.size - 1)
@@ -160,6 +190,7 @@ private class SolitaireState {
         }
         if (current != null) {
             if (tryDropTableau(pile)) return
+            rejectPile(1, pile)
         }
         val target = col[idx]
         if (!target.up) {
@@ -167,7 +198,15 @@ private class SolitaireState {
             if (idx == col.size - 1) {
                 val flipped = col.toMutableList().also { it[idx] = it[idx].copy(up = true) }
                 tableau = tableau.toMutableList().also { it[pile] = flipped }
+                score += 5
+            } else {
+                rejectPile(1, pile)
             }
+            return
+        }
+        val run = col.drop(idx).map { it.card }
+        if (!validRun(run)) {
+            rejectPile(1, pile)
             return
         }
         sel = Sel(1, pile, idx)
@@ -212,9 +251,12 @@ private class SolitaireState {
         if (s != null) {
             val run = selectedRun()
             if (run != null && run.size == 1) {
-                sendToFoundation(run.first(), s)
+                if (sendToFoundation(run.first(), s)) {
+                    sel = null
+                    return
+                }
             }
-            sel = null
+            rejectPile(2, pile)
             return
         }
         // Auto: top of the waste, then the top card of every tableau column.
@@ -223,6 +265,56 @@ private class SolitaireState {
             val col = tableau[p]
             val top = col.lastOrNull() ?: continue
             if (top.up && sendToFoundation(top.card, Sel(1, p, col.size - 1))) return
+        }
+        rejectPile(2, pile)
+    }
+
+    /**
+     * Double-tap: send the tapped card (waste top, tableau top, foundation top)
+     * straight to its destination. Returns false if it cannot move.
+     */
+    fun doubleTap(kind: Int, pile: Int): Boolean {
+        if (gameOver) return false
+        return when (kind) {
+            // Foundation top → back to the tableau (standard Klondike undo gesture).
+            2 -> {
+                val card = foundations.getOrNull(pile)?.lastOrNull() ?: return false
+                val placed = tableau.map { it.toMutableList() }
+                val target = placed.firstOrNull { col ->
+                    col.isNotEmpty() &&
+                        col.last().up &&
+                        col.last().card.rank == card.rank + 1 &&
+                        isWarm(col.last().card.suit) != isWarm(card.suit)
+                } ?: placed.firstOrNull { col -> col.isEmpty() && card.rank == 13 }
+                if (target == null) {
+                    rejectPile(2, pile)
+                    return false
+                }
+                target += TabCard(card, up = true)
+                tableau = placed
+                foundations = foundations.toMutableList().also { it[pile] = it[pile].dropLast(1) }
+                sel = null
+                true
+            }
+            else -> {
+                val s: Sel
+                val card: SCard
+                if (kind == 0) {
+                    val w = waste.lastOrNull() ?: return false
+                    s = Sel(0, -1, waste.size - 1)
+                    card = w
+                } else {
+                    val col = tableau.getOrNull(pile) ?: return false
+                    val t = col.lastOrNull()?.takeIf { it.up } ?: return false
+                    s = Sel(1, pile, col.size - 1)
+                    card = t.card
+                }
+                if (sendToFoundation(card, s)) true
+                else {
+                    rejectPile(if (kind == 0) 0 else 1, pile)
+                    false
+                }
+            }
         }
     }
 
@@ -263,6 +355,13 @@ fun SolitaireScreen(
         }
     }
 
+    LaunchedEffect(state.flash) {
+        if (state.flash > 0) {
+            kotlinx.coroutines.delay(320)
+            state.clearFlash()
+        }
+    }
+
     GameScaffold(
         title = stringResource(R.string.game_solitaire),
         score = state.score,
@@ -279,16 +378,27 @@ fun SolitaireScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .pointerInput(state.gameOver) {
-                    detectTapGestures { offset ->
-                        val layout = solitaireLayout(size.width.toFloat(), size.height.toFloat())
-                        val hit = layout.hit(offset.x, offset.y)
-                        when {
-                            hit.stock -> state.drawStock()
-                            hit.waste -> state.tapWaste()
-                            hit.foundation >= 0 -> state.tapFoundation(hit.foundation)
-                            hit.column >= 0 -> state.tapTableau(hit.column, hit.pos)
-                        }
-                    }
+                    detectTapGestures(
+                        onDoubleTap = { offset ->
+                            val layout = solitaireLayout(size.width.toFloat(), size.height.toFloat())
+                            val hit = layout.hit(offset.x, offset.y)
+                            when {
+                                hit.waste -> state.doubleTap(0, -1)
+                                hit.foundation >= 0 -> state.doubleTap(2, hit.foundation)
+                                hit.column >= 0 -> state.doubleTap(1, hit.column)
+                            }
+                        },
+                        onTap = { offset ->
+                            val layout = solitaireLayout(size.width.toFloat(), size.height.toFloat())
+                            val hit = layout.hit(offset.x, offset.y)
+                            when {
+                                hit.stock -> state.drawStock()
+                                hit.waste -> state.tapWaste()
+                                hit.foundation >= 0 -> state.tapFoundation(hit.foundation)
+                                hit.column >= 0 -> state.tapTableau(hit.column, hit.pos)
+                            }
+                        },
+                    )
                 },
         ) {
             drawRect(PixelArt.FOREST_DARK)
@@ -356,10 +466,16 @@ fun SolitaireScreen(
             // Stock and waste.
             val stockO = cardOrigin(layout.margin, layout.top)
             if (state.stock.isEmpty()) drawSlot(stockO, "+") else drawCardBack(stockO)
+            if (state.flashKind == 0 && state.flash > 0) {
+                drawRect(FlashRed, stockO, Size(layout.cardW, layout.cardH), style = Stroke(width = 6f))
+            }
             val wasteO = cardOrigin(layout.margin + layout.cardW + layout.gap, layout.top)
             val wasteTop = state.waste.lastOrNull()
             if (wasteTop == null) drawSlot(wasteO, null)
             else drawCard(wasteTop, wasteO, selected = state.sel?.kind == 0)
+            if (state.flashKind == 0 && state.flash > 0) {
+                drawRect(FlashRed, wasteO, Size(layout.cardW, layout.cardH), style = Stroke(width = 6f))
+            }
 
             // Foundations on the right of the top row.
             for (f in 0 until 4) {
@@ -369,6 +485,9 @@ fun SolitaireScreen(
                 )
                 val top = state.foundations[f].lastOrNull()
                 if (top == null) drawSlot(o, null) else drawCard(top, o, selected = false)
+                if (state.flashKind == 2 && state.flashPile == f && state.flash > 0) {
+                    drawRect(FlashRed, o, Size(layout.cardW, layout.cardH), style = Stroke(width = 6f))
+                }
             }
 
             // Tableau with cascading face-up cards.
@@ -377,6 +496,9 @@ fun SolitaireScreen(
                 val col = state.tableau[p]
                 if (col.isEmpty()) {
                     drawSlot(o, null)
+                    if (state.flashKind == 1 && state.flashPile == p && state.flash > 0) {
+                        drawRect(FlashRed, o, Size(layout.cardW, layout.cardH), style = Stroke(width = 6f))
+                    }
                     continue
                 }
                 col.forEachIndexed { i, tc ->
@@ -394,16 +516,20 @@ fun SolitaireScreen(
     }
 }
 
-/** Portrait layout for the table; shared by the draw and the tap hit-testing. */
-private class SolitaireLayout(val width: Float, val height: Float) {
-    val margin = width * 0.012f
-    val gap = width * 0.012f
-    val cardW = (width - 2 * margin - 6 * gap) / 7f
-    val cardH = cardW * 1.42f
-    val top = height * 0.02f
-    val tabTop = top + cardH + height * 0.05f
-    /** Cascade step between tableau cards, so the last column fits on screen. */
-    val step = min(cardH * 0.30f, (height - tabTop - cardH) / 19f)
+    /** Portrait layout for the table; shared by the draw and the tap hit-testing. */
+    private class SolitaireLayout(val width: Float, val height: Float) {
+        val margin = width * 0.012f
+        val gap = width * 0.012f
+        val cardW = (width - 2 * margin - 6 * gap) / 7f
+        val cardH = cardW * 1.45f
+        val top = height * 0.015f
+        val tabTop = top + cardH + height * 0.035f
+        /**
+         * Cascade step between tableau cards: as tall a strip as the screen allows
+         * (a column can grow to ~14 cards during play) so cards barely overlap and
+         * taps land on the right card.
+         */
+        val step = min(cardH * 0.62f, (height - tabTop - cardH) / 13f)
 
     class Hit {
         var stock = false
