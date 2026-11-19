@@ -7,6 +7,7 @@ import com.mikotrack.data.prefs.ParkingIconStyles
 import com.mikotrack.data.prefs.SettingsStore
 import com.mikotrack.data.prefs.ThemeMode
 import com.mikotrack.data.db.OfflineAreaEntity
+import com.mikotrack.domain.CheckInPolicy
 import com.mikotrack.maps.BoundingBox
 import com.mikotrack.maps.MapLayer
 import com.mikotrack.maps.OfflineMapManager
@@ -87,6 +88,22 @@ class SettingsViewModel(
 
     fun setAutoParking(enabled: Boolean) {
         viewModelScope.launch { settingsStore.setAutoParkingEnabled(enabled) }
+    }
+
+    /** Whether a recorded trip asks every now and then that the user is ok. */
+    val checkInEnabled = settingsStore.checkInEnabled
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), false)
+
+    /** How often the check-in asks, in minutes. */
+    val checkInMinutes = settingsStore.checkInMinutes
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), CheckInPolicy.DEFAULT_MINUTES)
+
+    fun setCheckInEnabled(enabled: Boolean) {
+        viewModelScope.launch { settingsStore.setCheckInEnabled(enabled) }
+    }
+
+    fun setCheckInMinutes(minutes: Int) {
+        viewModelScope.launch { settingsStore.setCheckInMinutes(minutes) }
     }
 
     /** The icon style of the parking waypoint badge. */

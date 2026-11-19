@@ -20,11 +20,13 @@ import com.mikotrack.domain.stats.TripStatsCalculator
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.NonCancellable
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 /**
  * Foreground service that owns the GPS while a trip is being recorded.
@@ -73,13 +75,25 @@ class RecordingService : Service() {
                     stopSelf()
                     return START_NOT_STICKY
                 }
-                saveMushroomHere()
+                saveWaypointHere("")
+            }
+
+            ACTION_TEXT_WAYPOINT -> {
+                if (trackingJob == null) {
+                    stopSelf()
+                    return START_NOT_STICKY
+                }
+                val text = intent.getStringExtra(EXTRA_WAYPOINT_TEXT).orEmpty().trim()
+                if (text.isNotEmpty()) saveWaypointHere(text)
             }
 
             else -> {
                 val tripId = intent?.getLongExtra(EXTRA_TRIP_ID, -1L) ?: -1L
                 startForegroundSafely()
-                if (tripId > 0) startTracking(tripId) else stopSelf()
+                if (tripId > 0) startTracking(tripId) else {
+                    disarmCheckIn()
+                    stopSelf()
+                }
             }
         }
         // Restart the service if the system kills it while a recording is running.
@@ -141,6 +155,8 @@ class RecordingService : Service() {
                 waypointRepository = container.waypointRepository,
             )
             runCatching { safetyMonitor.start() }
+            // Arm the periodic "are you ok?" check-in for this recording.
+            runCatching { CheckInAlarm.arm(this@RecordingService) }
 
             // The receiver is sampled every second whatever the stored interval is: the
             // extra fixes feed the smoothing and keep the position on the map fluid.
@@ -195,9 +211,10 @@ class RecordingService : Service() {
 
     /**
      * Adds a "mushroom found" waypoint at the last smoothed position, straight from the
-     * notification, so the phone can stay in the pocket or locked.
+     * notification, so the phone can stay in the pocket or locked. [description] comes
+     * from the voice action and is empty for the one tap action.
      */
-    private fun saveMushroomHere() {
+    private fun saveWaypointHere(description: String) {
         val tripId = activeTripId ?: return
         val position = lastSmoothedPosition
         serviceScope.launch {
@@ -212,7 +229,7 @@ class RecordingService : Service() {
                     longitude = position.longitude,
                     altitude = position.altitude,
                     timestamp = System.currentTimeMillis(),
-                    description = "",
+                    description = description,
                     category = DefaultCategory.MUSHROOM_FOUND.key,
                 )
                 val count = waypoints.countForTrip(tripId)
@@ -237,9 +254,19 @@ class RecordingService : Service() {
         }
     }
 
+    /** Disarms the "are you ok?" check-in; survives the shutdown of the service scope. */
+    private fun disarmCheckIn() {
+        serviceScope.launch {
+            withContext(NonCancellable) {
+                runCatching { CheckInAlarm.disarm(this@RecordingService) }
+            }
+        }
+    }
+
     private fun stopRecording() {
         val fallbackTripId = activeTripId ?: RecordingController.state.value.tripId
         feedbackJob?.cancel()
+        disarmCheckIn()
         serviceScope.launch {
             val tripId = fallbackTripId ?: container.tripRepository.getActiveTrip()?.id
             if (tripId != null && tripId > 0) {
@@ -274,6 +301,14 @@ class RecordingService : Service() {
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE,
         )
 
+        // The voice action goes through an invisible activity that hosts the recognizer.
+        val voiceIntent = PendingIntent.getActivity(
+            this,
+            3,
+            Intent(this, com.mikotrack.ui.map.VoiceWaypointActivity::class.java),
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE,
+        )
+
         return NotificationCompat.Builder(this, CHANNEL_ID)
             .setContentTitle(title)
             .setContentText(text)
@@ -281,9 +316,10 @@ class RecordingService : Service() {
             .setOngoing(true)
             .setOnlyAlertOnce(true)
             .setContentIntent(openIntent)
-            // Public, so the quick action can be used from the lock screen.
+            // Public, so the quick actions can be used from the lock screen.
             .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
             .addAction(0, getString(R.string.field_notification_action_mushroom), mushroomIntent)
+            .addAction(0, getString(R.string.field_notification_action_voice), voiceIntent)
             .addAction(0, getString(R.string.recording_notification_stop), stopIntent)
             .setCategory(NotificationCompat.CATEGORY_SERVICE)
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
@@ -319,6 +355,8 @@ class RecordingService : Service() {
         private const val EXTRA_TRIP_ID = "com.mikotrack.extra.TRIP_ID"
         const val ACTION_STOP = "com.mikotrack.action.STOP_RECORDING"
         const val ACTION_MUSHROOM_FOUND = "com.mikotrack.action.MUSHROOM_FOUND"
+        const val ACTION_TEXT_WAYPOINT = "com.mikotrack.action.TEXT_WAYPOINT"
+        const val EXTRA_WAYPOINT_TEXT = "com.mikotrack.extra.WAYPOINT_TEXT"
         private const val FEEDBACK_MILLIS = 6_000L
         private val QUICK_SAVE_VIBRATION = longArrayOf(0, 120)
         private val QUICK_SAVE_FAILED_VIBRATION = longArrayOf(0, 300, 150, 300)

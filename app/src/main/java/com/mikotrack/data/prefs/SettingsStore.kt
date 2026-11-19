@@ -11,6 +11,7 @@ import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.core.longPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
+import com.mikotrack.domain.CheckInPolicy
 import com.mikotrack.maps.SuitabilitySearch
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
@@ -51,6 +52,9 @@ class SettingsStore(private val context: Context) {
         val PROXIMITY_ALARM = booleanPreferencesKey("proximity_alarm")
         val PROXIMITY_RADIUS = intPreferencesKey("proximity_radius_m")
         val AUTO_PARKING = booleanPreferencesKey("auto_parking_waypoint")
+        val CHECKIN_ENABLED = booleanPreferencesKey("checkin_enabled")
+        val CHECKIN_MINUTES = intPreferencesKey("checkin_minutes")
+        val CHECKIN_DUE = longPreferencesKey("checkin_due_ms")
         val PARKING_ICON_STYLE = stringPreferencesKey("parking_icon_style")
         val PARKING_ICON_COLOR = longPreferencesKey("parking_icon_color")
         val HABITAT_ASPECT = booleanPreferencesKey("habitat_aspect_layer")
@@ -85,6 +89,31 @@ class SettingsStore(private val context: Context) {
 
     suspend fun setAutoParkingEnabled(enabled: Boolean) {
         context.dataStore.edit { it[Keys.AUTO_PARKING] = enabled }
+    }
+
+    /** Whether a recorded trip must ask every now and then that the user is ok. */
+    val checkInEnabled: Flow<Boolean> = context.dataStore.data.map { it[Keys.CHECKIN_ENABLED] ?: false }
+
+    suspend fun setCheckInEnabled(enabled: Boolean) {
+        context.dataStore.edit { it[Keys.CHECKIN_ENABLED] = enabled }
+    }
+
+    /** How often the check-in asks, in minutes (one of [CheckInPolicy.CHOICES_MINUTES]). */
+    val checkInMinutes: Flow<Int> = context.dataStore.data.map {
+        it[Keys.CHECKIN_MINUTES] ?: CheckInPolicy.DEFAULT_MINUTES
+    }
+
+    suspend fun setCheckInMinutes(minutes: Int) {
+        context.dataStore.edit { it[Keys.CHECKIN_MINUTES] = minutes }
+    }
+
+    /** When the running trip must ask whether the user is ok (0 when no check-in is armed). */
+    val checkInDueAt: Flow<Long> = context.dataStore.data.map { it[Keys.CHECKIN_DUE] ?: 0L }
+
+    suspend fun setCheckInDueAt(millis: Long) {
+        context.dataStore.edit {
+            if (millis <= 0L) it.remove(Keys.CHECKIN_DUE) else it[Keys.CHECKIN_DUE] = millis
+        }
     }
 
     /** The icon drawn for parking waypoints on the map (see [ParkingIconStyles]). */

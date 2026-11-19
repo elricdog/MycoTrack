@@ -60,6 +60,32 @@ class TripSafetyTest {
         assertEquals(39 * minute, WalkingEstimate.millisFor(2_000.0))
     }
 
+    @Test
+    fun `the unreachable warning fires when the walk is longer than the daylight left`() {
+        val tracker = SafetyWarningTracker()
+        // 50 minutes of walking, 85 minutes of daylight left: inside the 10 minute margin.
+        assertNull(tracker.unreachableWarning(sunset - 85 * minute, sunset, 50 * minute))
+        assertEquals(SafetyWarning.SUNSET_TOO_FAR, tracker.unreachableWarning(sunset - 30 * minute, sunset, 50 * minute))
+        // Only once per trip.
+        assertNull(tracker.unreachableWarning(sunset - 10 * minute, sunset, 50 * minute))
+    }
+
+    @Test
+    fun `the unreachable warning needs both a sunset and a walk time`() {
+        val tracker = SafetyWarningTracker()
+        assertNull(tracker.unreachableWarning(sunset - minute, null, 50 * minute))
+        assertNull(tracker.unreachableWarning(sunset - minute, sunset, null))
+        assertNull(tracker.unreachableWarning(sunset + minute, sunset, 50 * minute))
+    }
+
+    @Test
+    fun `the check-in deadline adds the chosen interval, clamped to at least five minutes`() {
+        val now = 10_000_000L
+        assertEquals(now + 120 * minute, CheckInPolicy.deadlineMillis(now, 120))
+        assertEquals(now + 5 * minute, CheckInPolicy.deadlineMillis(now, 0))
+        assertEquals(listOf(30, 60, 120, 180, 240), CheckInPolicy.CHOICES_MINUTES.toList())
+    }
+
     private fun waypoint(id: Long, tripId: Long, category: String, timestamp: Long) = Waypoint(
         id = id,
         tripId = tripId,

@@ -2,6 +2,7 @@
 <resources>
     <!-- Quick logging from the recording notification -->
     <string name="field_notification_action_mushroom">🍄 Mushroom found</string>
+    <string name="field_notification_action_voice">🎤 Voice note</string>
     <plurals name="field_notification_mushroom_saved">
         <item quantity="one">🍄 Mushroom saved · %1$d on this trip</item>
         <item quantity="other">🍄 Mushroom saved · %1$d on this trip</item>
@@ -22,19 +23,29 @@
 
     <!-- Safety warnings -->
     <string name="field_safety_channel_name">Safety warnings</string>
-    <string name="field_safety_channel_description">Sunset and low battery warnings while a trip is being recorded</string>
+    <string name="field_safety_channel_description">Sunset, battery and check-in warnings while a trip is being recorded</string>
     <plurals name="field_sunset_title">
         <item quantity="one">Sunset in %1$d minute</item>
         <item quantity="other">Sunset in %1$d minutes</item>
     </plurals>
     <string name="field_sunset_text">The sun sets at %1$s. Start heading back.</string>
+    <string name="field_sunset_far_title">The car is too far for the daylight left</string>
+    <string name="field_sunset_far_text">The sun sets at %1$s and the walk back is longer than the light that remains. Shorten the route or ask for a pick-up.</string>
     <string name="field_battery_title">Battery at %1$d%%</string>
     <string name="field_battery_text">Save battery for the way back.</string>
+
+    <!-- The "are you ok?" check-in of a recorded trip -->
+    <string name="field_checkin_title">Are you ok?</string>
+    <string name="field_checkin_text">Your trip has been running for %1$s. Tap \"I am ok\" to keep walking, or close the trip.</string>
+    <string name="field_checkin_action_ok">👍 I am ok</string>
 
     <!-- Settings -->
     <string name="field_settings_safety">Safety</string>
     <string name="field_settings_auto_parking">Save the car position when a trip starts</string>
     <string name="field_settings_auto_parking_hint">A Parking point is added at the first accurate GPS fix (±30 m). Sunset and low battery warnings are always shown while recording.</string>
+    <string name="field_settings_checkin">\"Are you ok?\" check-in</string>
+    <string name="field_settings_checkin_hint">While recording, a loud notification periodically asks whether you are ok. Tap \"I am ok\" to postpone it; it goes silent once the trip is closed.</string>
+    <string name="field_settings_checkin_minutes">%1$d min</string>
     <string name="field_settings_parking_icon">Parking icon</string>
     <string name="field_settings_parking_color">Parking icon colour</string>
     <string name="parking_icon_car">Car</string>

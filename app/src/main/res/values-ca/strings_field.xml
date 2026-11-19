@@ -2,6 +2,7 @@
 <resources>
     <!-- Quick logging from the recording notification -->
     <string name="field_notification_action_mushroom">🍄 Bolet trobat</string>
+    <string name="field_notification_action_voice">🎤 Nota de veu</string>
     <plurals name="field_notification_mushroom_saved">
         <item quantity="one">🍄 Bolet desat · %1$d en aquesta sortida</item>
         <item quantity="other">🍄 Bolet desat · %1$d en aquesta sortida</item>
@@ -23,20 +24,29 @@
 
     <!-- Safety warnings -->
     <string name="field_safety_channel_name">Avisos de seguretat</string>
-    <string name="field_safety_channel_description">Avisos de posta de sol i de bateria baixa mentre s\'enregistra una sortida</string>
+    <string name="field_safety_channel_description">Avisos de posta de sol, bateria i de verificació mentre s\'enregistra una sortida</string>
     <plurals name="field_sunset_title">
         <item quantity="one">Posta de sol d\'aquí a %1$d minut</item>
         <item quantity="other">Posta de sol d\'aquí a %1$d minuts</item>
         <item quantity="many">Posta de sol d\'aquí a %1$d minuts</item>
     </plurals>
     <string name="field_sunset_text">El sol es pon a les %1$s. És hora de tornar.</string>
+    <string name="field_sunset_far_title">El cotxe és massa lluny per a la llum que queda</string>
+    <string name="field_sunset_far_text">El sol es pon a les %1$s i el camí de tornada és més llarg que la llum que queda. Escurça la ruta o demana que vinguin a recollir-te.</string>
     <string name="field_battery_title">Bateria al %1$d%%</string>
     <string name="field_battery_text">Estalvia bateria per a la tornada.</string>
+
+    <!-- Verificació "estàs bé?" d'una sortida gravada -->
+    <string name="field_checkin_title">Estàs bé?</string>
+    <string name="field_checkin_text">La sortida porta %1$s en marxa. Toca \"Estic bé\" per seguir caminant, o tanca la sortida.</string>
+    <string name="field_checkin_action_ok">👍 Estic bé</string>
 
     <!-- Settings -->
     <string name="field_settings_safety">Seguretat</string>
     <string name="field_settings_auto_parking">Desa la posició del cotxe en començar una sortida</string>
     <string name="field_settings_auto_parking_hint">S\'afegeix un punt d\'aparcament amb la primera posició GPS precisa (±30 m). Els avisos de posta de sol i de bateria baixa es mostren sempre mentre s\'enregistra.</string>
+    <string name="field_settings_checkin">Avís \"Estàs bé?\"</string>
+    <string name="field_settings_checkin_hint">Mentre s\'enregistra, una notificació sonora pregunta cada estona si estàs bé. Toca \"Estic bé\" per ajornar-la; se n\'apaga el so en tancar la sortida.</string>
     <string name="field_settings_parking_icon">Icona del punt de cotxe</string>
     <string name="field_settings_parking_color">Color de la icona del cotxe</string>
     <string name="parking_icon_car">Cotxe</string>

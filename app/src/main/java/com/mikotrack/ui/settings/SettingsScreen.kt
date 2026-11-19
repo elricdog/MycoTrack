@@ -83,6 +83,7 @@ import com.mikotrack.data.prefs.MAX_ZOOM_LEVEL
 import com.mikotrack.data.prefs.MIN_ZOOM_LEVEL
 import com.mikotrack.data.prefs.ParkingIconStyles
 import com.mikotrack.data.prefs.ThemeMode
+import com.mikotrack.domain.CheckInPolicy
 import com.mikotrack.location.LocationTracker
 import com.mikotrack.maps.BoundingBox
 import com.mikotrack.maps.MapLayer
@@ -317,6 +318,36 @@ fun SettingsScreen(
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
+
+            // The "are you ok?" check-in of a recorded trip.
+            val checkInEnabled by viewModel.checkInEnabled.collectAsStateWithLifecycle()
+            val checkInMinutes by viewModel.checkInMinutes.collectAsStateWithLifecycle()
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 8.dp),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Text(stringResource(R.string.field_settings_checkin), modifier = Modifier.weight(1f))
+                Switch(checked = checkInEnabled, onCheckedChange = viewModel::setCheckInEnabled)
+            }
+            Text(
+                text = stringResource(R.string.field_settings_checkin_hint),
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+            if (checkInEnabled) {
+                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    CheckInPolicy.CHOICES_MINUTES.forEach { minutes ->
+                        FilterChip(
+                            selected = checkInMinutes == minutes,
+                            onClick = { viewModel.setCheckInMinutes(minutes) },
+                            label = { Text(stringResource(R.string.field_settings_checkin_minutes, minutes)) },
+                        )
+                    }
+                }
+            }
 
             // The look of the parking marker on the map: icon and badge colour.
             val parkingIconStyle by viewModel.parkingIconStyle.collectAsStateWithLifecycle()

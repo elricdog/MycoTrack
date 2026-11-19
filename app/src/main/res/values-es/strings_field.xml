@@ -2,6 +2,7 @@
 <resources>
     <!-- Quick logging from the recording notification -->
     <string name="field_notification_action_mushroom">🍄 Seta encontrada</string>
+    <string name="field_notification_action_voice">🎤 Nota de voz</string>
     <plurals name="field_notification_mushroom_saved">
         <item quantity="one">🍄 Seta guardada · %1$d en esta salida</item>
         <item quantity="other">🍄 Seta guardada · %1$d en esta salida</item>
@@ -23,20 +24,29 @@
 
     <!-- Safety warnings -->
     <string name="field_safety_channel_name">Avisos de seguridad</string>
-    <string name="field_safety_channel_description">Avisos de puesta de sol y de batería baja mientras se graba una salida</string>
+    <string name="field_safety_channel_description">Avisos de puesta de sol, batería y de verificación mientras se graba una salida</string>
     <plurals name="field_sunset_title">
         <item quantity="one">Puesta de sol dentro de %1$d minuto</item>
         <item quantity="other">Puesta de sol dentro de %1$d minutos</item>
         <item quantity="many">Puesta de sol dentro de %1$d minutos</item>
     </plurals>
     <string name="field_sunset_text">El sol se pone a las %1$s. Es hora de volver.</string>
+    <string name="field_sunset_far_title">El coche está demasiado lejos para la luz que queda</string>
+    <string name="field_sunset_far_text">El sol se pone a las %1$s y el camino de vuelta es más largo que la luz que queda. Acorta la ruta o pide que vengan a buscarte.</string>
     <string name="field_battery_title">Batería al %1$d%%</string>
     <string name="field_battery_text">Ahorra batería para la vuelta.</string>
+
+    <!-- Verificación \"¿estás bien?\" de una salida grabada -->
+    <string name="field_checkin_title">¿Estás bien?</string>
+    <string name="field_checkin_text">La salida lleva %1$s en marcha. Toca \"Estoy bien\" para seguir caminando, o cierra la salida.</string>
+    <string name="field_checkin_action_ok">👍 Estoy bien</string>
 
     <!-- Settings -->
     <string name="field_settings_safety">Seguridad</string>
     <string name="field_settings_auto_parking">Guardar la posición del coche al empezar una salida</string>
     <string name="field_settings_auto_parking_hint">Se añade un punto de aparcamiento con la primera posición GPS precisa (±30 m). Los avisos de puesta de sol y de batería baja se muestran siempre mientras se graba.</string>
+    <string name="field_settings_checkin">Aviso \"¿Estás bien?\"</string>
+    <string name="field_settings_checkin_hint">Mientras se graba, una notificación sonora pregunta cada cierto tiempo si estás bien. Toca \"Estoy bien\" para posponerla; se silencia al cerrar la salida.</string>
     <string name="field_settings_parking_icon">Icono del punto de coche</string>
     <string name="field_settings_parking_color">Color del icono del coche</string>
     <string name="parking_icon_car">Coche</string>

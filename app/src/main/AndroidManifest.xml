@@ -85,6 +85,23 @@
             android:foregroundServiceType="location"
             android:stopWithTask="false" />
 
+        <!-- Invisible host for the speech recognizer behind the voice waypoint action.
+             It shows no interface; a translucent window keeps the screen calm while
+             the system recognizer takes over. noHistory must stay unset: the activity
+             has to survive in the background until the recognizer returns its result. -->
+        <activity
+            android:name=".ui.map.VoiceWaypointActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTop"
+            android:taskAffinity=""
+            android:theme="@style/Theme.MycoTrack.Translucent" />
+
+        <!-- Delivers the periodic "are you ok?" check-in of a recorded trip. -->
+        <receiver
+            android:name=".location.CheckInReceiver"
+            android:exported="false" />
+
         <!-- Persists the language chosen inside the app on Android 12 and older. -->
         <service
             android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"

@@ -8,6 +8,7 @@ import kotlin.math.roundToLong
 enum class SafetyWarning {
     SUNSET_60,
     SUNSET_20,
+    SUNSET_TOO_FAR,
     BATTERY_20,
     BATTERY_10,
 }
@@ -40,6 +41,19 @@ class SafetyWarningTracker(issued: Set<SafetyWarning> = emptySet()) {
         }
     }
 
+    /**
+     * The warning shown when the walk back to the car would take longer than the
+     * daylight that is left. [walkMillis] is the estimated walking time to the car;
+     * nothing is said when there is no parking waypoint or the sun has already set.
+     */
+    fun unreachableWarning(nowMillis: Long, sunsetMillis: Long?, walkMillis: Long?): SafetyWarning? {
+        if (sunsetMillis == null || walkMillis == null) return null
+        val remaining = sunsetMillis - nowMillis
+        if (remaining <= 0) return null
+        return if (walkMillis > remaining + SAFE_MARGIN_MILLIS) SafetyWarning.SUNSET_TOO_FAR.takeIf { it !in _issued }?.also { _issued += it }
+        else null
+    }
+
     /** The low battery warning that is due now, if any. Nothing is said while charging. */
     fun batteryWarning(levelPercent: Int?, charging: Boolean): SafetyWarning? {
         if (levelPercent == null || charging) return null
@@ -63,7 +77,25 @@ class SafetyWarningTracker(issued: Set<SafetyWarning> = emptySet()) {
         const val SUNSET_LATE_MILLIS = 20 * 60_000L
         const val BATTERY_LOW = 20
         const val BATTERY_CRITICAL = 10
+        /** The warning tolerates a slight underestimate of the walking time before alarming. */
+        const val SAFE_MARGIN_MILLIS = 10 * 60_000L
     }
+}
+
+/**
+ * Decides when the periodic "are you ok?" check-in of a recorded trip is due, and which
+ * intervals the user can choose from. Pure so it can be tested without a device.
+ */
+object CheckInPolicy {
+
+    /** The check-in intervals the settings offer, in minutes. */
+    val CHOICES_MINUTES = intArrayOf(30, 60, 120, 180, 240)
+
+    const val DEFAULT_MINUTES = 120
+
+    /** The moment the next check-in is due. */
+    fun deadlineMillis(nowMillis: Long, intervalMinutes: Int): Long =
+        nowMillis + intervalMinutes.coerceAtLeast(5) * 60_000L
 }
 
 /** Rough walking time estimates for the way back. */
