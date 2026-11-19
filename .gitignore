@@ -33,3 +33,5 @@ InitialPrompt.md
 
 # Leftover Subversion metadata
 .svn/
+
+buildout.txt
