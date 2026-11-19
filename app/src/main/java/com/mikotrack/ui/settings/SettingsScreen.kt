@@ -344,6 +344,12 @@ fun SettingsScreen(
                             selected = checkInMinutes == minutes,
                             onClick = { viewModel.setCheckInMinutes(minutes) },
                             label = { Text(stringResource(R.string.field_settings_checkin_minutes, minutes)) },
+                            leadingIcon = {
+                                // Expose the selection to accessibility and UI automation.
+                                if (checkInMinutes == minutes) {
+                                    Icon(Icons.Filled.Check, contentDescription = null)
+                                }
+                            },
                         )
                     }
                 }
