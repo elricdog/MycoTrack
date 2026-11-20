@@ -32,12 +32,36 @@
     <string name="quiz_prompt_season">When does %1$s fruit?</string>
     <string name="quiz_prompt_edibility">How many stars does %1$s deserve in the kitchen?</string>
     <string name="quiz_prompt_habitat">Where is %1$s easiest to find?</string>
+    <string name="quiz_prompt_genus">What genus does %1$s belong to?</string>
+    <string name="quiz_prompt_same_genus">Which of these species belongs to the same genus as “%1$s”?</string>
+    <string name="quiz_prompt_genus_outsider">Which of these species does NOT belong to the genus %1$s?</string>
+    <string name="quiz_prompt_month_find">In which of these months can %1$s be found in the forest?</string>
+    <string name="quiz_prompt_month_cannot">In which of these months is it not the season for %1$s?</string>
+    <string name="quiz_prompt_kitchen_best">Which of these mushrooms is the most prized in the kitchen?</string>
+    <string name="quiz_prompt_kitchen_worst">Which of these mushrooms is the least prized in the kitchen?</string>
+
+    <string-array name="quiz_months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
 
     <string name="quiz_cat_scientific_name">🔬 Scientific name</string>
     <string name="quiz_cat_common_name">🍄 Common name</string>
     <string name="quiz_cat_season">📅 Season</string>
     <string name="quiz_cat_edibility">⭐ Kitchen</string>
     <string name="quiz_cat_habitat">🌲 Habitat</string>
+    <string name="quiz_cat_genus">🧬 Genus</string>
+    <string name="quiz_cat_month">🗓️ Month</string>
     <string name="quiz_cat_culture">🧺 Mushroom world</string>
 
     <!-- voice play -->

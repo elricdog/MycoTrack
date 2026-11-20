@@ -568,5 +568,7 @@ private fun QuizCategory.labelRes(): Int = when (this) {
     QuizCategory.SEASON -> R.string.quiz_cat_season
     QuizCategory.EDIBILITY -> R.string.quiz_cat_edibility
     QuizCategory.HABITAT -> R.string.quiz_cat_habitat
+    QuizCategory.GENUS -> R.string.quiz_cat_genus
+    QuizCategory.MONTH -> R.string.quiz_cat_month
     QuizCategory.CULTURE -> R.string.quiz_cat_culture
 }

@@ -32,12 +32,36 @@
     <string name="quiz_prompt_season">Quan fructifica %1$s?</string>
     <string name="quiz_prompt_edibility">Quants estels mereix %1$s a la cuina?</string>
     <string name="quiz_prompt_habitat">On és més fàcil trobar %1$s?</string>
+    <string name="quiz_prompt_genus">A quin gènere pertany %1$s?</string>
+    <string name="quiz_prompt_same_genus">Quina d\'aquestes espècies pertany al mateix gènere que «%1$s»?</string>
+    <string name="quiz_prompt_genus_outsider">Quina d\'aquestes espècies NO pertany al gènere %1$s?</string>
+    <string name="quiz_prompt_month_find">En quin d\'aquests mesos es pot trobar %1$s al bosc?</string>
+    <string name="quiz_prompt_month_cannot">En quin d\'aquests mesos no és temporada de %1$s?</string>
+    <string name="quiz_prompt_kitchen_best">Quin d\'aquests bolets és el més preuat a la cuina?</string>
+    <string name="quiz_prompt_kitchen_worst">Quin d\'aquests bolets és el menys preuat a la cuina?</string>
+
+    <string-array name="quiz_months">
+        <item>gener</item>
+        <item>febrer</item>
+        <item>març</item>
+        <item>abril</item>
+        <item>maig</item>
+        <item>juny</item>
+        <item>juliol</item>
+        <item>agost</item>
+        <item>setembre</item>
+        <item>octubre</item>
+        <item>novembre</item>
+        <item>desembre</item>
+    </string-array>
 
     <string name="quiz_cat_scientific_name">🔬 Nom científic</string>
     <string name="quiz_cat_common_name">🍄 Nom comú</string>
     <string name="quiz_cat_season">📅 Temporada</string>
     <string name="quiz_cat_edibility">⭐ Cuina</string>
     <string name="quiz_cat_habitat">🌲 Hàbitat</string>
+    <string name="quiz_cat_genus">🧬 Gènere</string>
+    <string name="quiz_cat_month">🗓️ Mes</string>
     <string name="quiz_cat_culture">🧺 Món boletaire</string>
 
     <!-- joc amb veu -->

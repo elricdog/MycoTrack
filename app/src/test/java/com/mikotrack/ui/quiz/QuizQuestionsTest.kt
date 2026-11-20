@@ -26,6 +26,20 @@ class QuizQuestionsTest {
         habitat = "hab %1\$s",
     )
 
+    private val fullPrompts = prompts.copy(
+        genus = "genus of %1\$s?",
+        sameGenus = "same genus as %1\$s?",
+        genusOutsider = "not in genus %1\$s?",
+        monthFind = "month you can find %1\$s?",
+        monthCannot = "month you cannot find %1\$s?",
+        kitchenBest = "which is the most prized?",
+        kitchenWorst = "which is the least prized?",
+        monthNames = listOf(
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December",
+        ),
+    )
+
     private val treeLabels = mapOf(
         "scots_pine" to "Pini roig",
         "holm_oak" to "Roure de fulla petita",
@@ -147,6 +161,150 @@ class QuizQuestionsTest {
         )
         assertTrue(deck.any { it.category == QuizCategory.EDIBILITY })
         assertTrue(deck.any { it.category == QuizCategory.CULTURE })
+    }
+
+    @Test
+    fun `new generators are disabled when their prompts are blank`() {
+        val deck = buildQuizDeck(mushrooms, curated, prompts, treeLabels, Random(9))
+        assertTrue(deck.none { it.category == QuizCategory.GENUS })
+        assertTrue(deck.none { it.category == QuizCategory.MONTH })
+        assertTrue(deck.none { it.key.startsWith("kbest:") || it.key.startsWith("kworst:") })
+    }
+
+    @Test
+    fun `genus question uses the first word of the scientific name`() {
+        val deck = buildQuizDeck(mushrooms, curated, fullPrompts, treeLabels, Random(11))
+        val rovello = deck.first { it.key == "gen:rovello" }
+        assertEquals("Lactarius", rovello.correctAnswer)
+        assertTrue(rovello.options.none { it == "Lactarius" && it != rovello.correctAnswer })
+        assertEquals(QuizCategory.GENUS, rovello.category)
+    }
+
+    @Test
+    fun `same genus question picks a congener and rejects other genera`() {
+        val deck = buildQuizDeck(mushrooms, curated, fullPrompts, treeLabels, Random(4))
+        val same = deck.filter { it.key.startsWith("sam:") }
+        assertTrue("no genus has two species in this catalogue", same.isEmpty())
+
+        val withCongeners = mushrooms + species(
+            "rovellet", "Lactarius quieticolor", "Rovellet", "Tardor", 4, mapOf("scots_pine" to 1f),
+        ) + species(
+            "camagrocs_group", "Craterellus lutescens", "Camagrocs", "Tardor", 4, mapOf("beech" to 1f),
+        )
+        val deck2 = buildQuizDeck(withCongeners, curated, fullPrompts, treeLabels, Random(4))
+        val both = deck2.filter { it.key in setOf("sam:rovello", "sam:rovellet") }
+        assertEquals(2, both.size)
+        for (question in both) {
+            assertEquals("Lactarius", question.correctAnswer.substringBefore(' '))
+            assertEquals(1, question.options.count { it.startsWith("Lactarius") })
+        }
+    }
+
+    @Test
+    fun `genus outsider question has exactly one species outside the genus`() {
+        val catalogue = listOf(
+            species("l1", "Lactarius deliciosus", "Rovelló", "Tardor", 4, mapOf("scots_pine" to 1f)),
+            species("l2", "Lactarius semisanguifluus", "Pinetell", "Tardor", 5, mapOf("scots_pine" to 1f)),
+            species("l3", "Lactarius quieticolor", "Rovellet", "Tardor", 3, mapOf("holm_oak" to 1f)),
+            species("b1", "Boletus edulis", "Cep", "Tardor", 5, mapOf("beech" to 1f)),
+            species("a1", "Amanita caesarea", "Ou de Reig", "Estiu", 5, mapOf("holm_oak" to 1f)),
+            species("m1", "Morchella esculenta", "Murgola", "Primavera", 4, mapOf("birch" to 1f)),
+        )
+        val deck = buildQuizDeck(catalogue, curated, fullPrompts, treeLabels, Random(8))
+        val outsides = deck.filter { it.key.startsWith("gout:") }
+        outsides.forEach { question ->
+            val genus = question.key.substringAfter("gout:").substringBefore(':')
+            assertEquals(genus + ": three congeners", 3, question.options.count { it.startsWith("$genus ") })
+            assertEquals(genus + ": one outsider", 1, question.options.count { !it.startsWith("$genus ") })
+            assertTrue(
+                "answer is the outsider",
+                !question.correctAnswer.startsWith("$genus "),
+            )
+        }
+    }
+
+    @Test
+    fun `month questions respect the season ranges`() {
+        val deck = buildQuizDeck(mushrooms, curated, fullPrompts, treeLabels, Random(2))
+        val months = deck.filter { it.category == QuizCategory.MONTH }
+        assertTrue("month questions are generated", months.isNotEmpty())
+        // The synthetic species fruit September to November only.
+        val inSeason = setOf("September", "October", "November")
+        for (month in months) {
+            assertEquals("month labels only", 4, month.options.distinct().size)
+            if (month.key.startsWith("mnf:")) {
+                assertTrue("answer in season: ${month.correctAnswer}", month.correctAnswer in inSeason)
+                assertTrue(month.options.filterIndexed { i, _ -> i != month.answerIndex }.none { it in inSeason })
+            } else {
+                assertTrue("answer out of season", month.correctAnswer !in inSeason)
+                assertEquals(3, month.options.count { it in inSeason })
+            }
+        }
+    }
+
+    @Test
+    fun `kitchen champion questions have a strict winner`() {
+        val deck = buildQuizDeck(mushrooms, curated, fullPrompts, treeLabels, Random(6))
+        val bests = deck.filter { it.key.startsWith("kbest:") }
+        val worsts = deck.filter { it.key.startsWith("kworst:") }
+        assertTrue(bests.isNotEmpty() && worsts.isNotEmpty())
+        val commonRating = mushrooms.associate { it.commonName to it.edibility }
+        for (question in bests) {
+            val answer = commonRating.getValue(question.correctAnswer)
+            question.options.filterIndexed { i, _ -> i != question.answerIndex }.forEach {
+                assertTrue("rating strictly higher than $it", answer > commonRating.getValue(it))
+            }
+        }
+        for (question in worsts) {
+            val answer = commonRating.getValue(question.correctAnswer)
+            question.options.filterIndexed { i, _ -> i != question.answerIndex }.forEach {
+                assertTrue("rating strictly lower than $it", answer < commonRating.getValue(it))
+            }
+        }
+    }
+
+    @Test
+    fun `deck keys are unique with all generators on`() {
+        val deck = buildQuizDeck(mushrooms, curated, fullPrompts, treeLabels, Random(1))
+        assertEquals(deck.size, deck.distinctBy { it.key }.size)
+    }
+
+    @Test
+    fun `real catalogues offer at least 500 questions per language`() {
+        val legendKeys = listOf(
+            "holm_oak", "cork_oak", "downy_oak", "portuguese_oak", "sessile_oak", "pyrenean_oak",
+            "beech", "chestnut", "birch", "strawberry_tree", "wild_olive", "mixed_broadleaf",
+            "scots_pine", "mountain_pine", "black_pine", "aleppo_pine", "stone_pine", "maritime_pine",
+            "fir_other_conifers", "mixed_conifers", "mixed_conifer_broadleaf", "riparian",
+            "other_broadleaf", "junipers", "plantations", "native_non_native", "non_native",
+        )
+        val treeLabels = legendKeys.associateWith { it }
+        val assets = java.io.File("src/main/assets/mushrooms")
+        val speciesJson = java.io.File(assets, "species.json").readText(Charsets.UTF_8)
+        for (language in listOf("ca", "es", "en")) {
+            val species = com.mikotrack.ui.mushrooms.MushroomCatalog.parseSpecies(speciesJson)
+            val texts = com.mikotrack.ui.mushrooms.MushroomCatalog.parseTexts(
+                java.io.File(assets, "texts_$language.json").readText(Charsets.UTF_8),
+            )
+            val catalogue = com.mikotrack.ui.mushrooms.MushroomCatalog.combine(species, texts)
+            assertEquals(44, catalogue.size)
+            val curatedBank = kotlinx.serialization.json.Json.decodeFromString(
+                kotlinx.serialization.builtins.ListSerializer(CuratedQuestion.serializer()),
+                java.io.File(assets, "quiz_$language.json").readText(Charsets.UTF_8),
+            )
+            val deck = buildQuizDeck(catalogue, curatedBank, fullPrompts, treeLabels, Random(1234))
+            assertTrue("$language pool is ${deck.size}", deck.size >= 500)
+            assertEquals("$language unique keys", deck.size, deck.distinctBy { it.key }.size)
+            for (question in deck) {
+                assertEquals("$language ${question.key} options", 4, question.options.size)
+                assertEquals("$language ${question.key} unique", 4, question.options.distinct().size)
+                assertTrue("$language ${question.key} answer", question.answerIndex in 0..3)
+                assertTrue(
+                    "$language ${question.key} non-blank",
+                    question.options.none { it.isBlank() },
+                )
+            }
+        }
     }
 
     @Test

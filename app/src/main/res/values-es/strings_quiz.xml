@@ -32,12 +32,36 @@
     <string name="quiz_prompt_season">¿Cuándo fructifica %1$s?</string>
     <string name="quiz_prompt_edibility">¿Cuántas estrellas merece %1$s en la cocina?</string>
     <string name="quiz_prompt_habitat">¿Dónde es más fácil encontrar %1$s?</string>
+    <string name="quiz_prompt_genus">¿A qué género pertenece %1$s?</string>
+    <string name="quiz_prompt_same_genus">¿Cuál de estas especies pertenece al mismo género que «%1$s»?</string>
+    <string name="quiz_prompt_genus_outsider">¿Cuál de estas especies NO pertenece al género %1$s?</string>
+    <string name="quiz_prompt_month_find">¿En cuál de estos meses se puede encontrar %1$s en el bosque?</string>
+    <string name="quiz_prompt_month_cannot">¿En cuál de estos meses no es temporada de %1$s?</string>
+    <string name="quiz_prompt_kitchen_best">¿Cuál de estas setas es la más apreciada en la cocina?</string>
+    <string name="quiz_prompt_kitchen_worst">¿Cuál de estas setas es la menos apreciada en la cocina?</string>
+
+    <string-array name="quiz_months">
+        <item>enero</item>
+        <item>febrero</item>
+        <item>marzo</item>
+        <item>abril</item>
+        <item>mayo</item>
+        <item>junio</item>
+        <item>julio</item>
+        <item>agosto</item>
+        <item>septiembre</item>
+        <item>octubre</item>
+        <item>noviembre</item>
+        <item>diciembre</item>
+    </string-array>
 
     <string name="quiz_cat_scientific_name">🔬 Nombre científico</string>
     <string name="quiz_cat_common_name">🍄 Nombre común</string>
     <string name="quiz_cat_season">📅 Temporada</string>
     <string name="quiz_cat_edibility">⭐ Cocina</string>
     <string name="quiz_cat_habitat">🌲 Hábitat</string>
+    <string name="quiz_cat_genus">🧬 Género</string>
+    <string name="quiz_cat_month">🗓️ Mes</string>
     <string name="quiz_cat_culture">🧺 Mundo setero</string>
 
     <!-- juego por voz -->

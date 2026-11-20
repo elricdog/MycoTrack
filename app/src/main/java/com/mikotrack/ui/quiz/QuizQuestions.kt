@@ -24,6 +24,12 @@ enum class QuizCategory {
     /** Preferred tree/forest habitat of the species. */
     HABITAT,
 
+    /** Genus of a species, from its scientific name. */
+    GENUS,
+
+    /** Month of the year a species fruits (or does not). */
+    MONTH,
+
     /** Curated "mushroom world" trivia from the bundled question banks. */
     CULTURE,
 }
@@ -55,6 +61,16 @@ data class QuizPrompts(
     val season: String,
     val edibility: String,
     val habitat: String,
+    /** Templates left blank disable the generators that would use them. */
+    val genus: String = "",
+    val sameGenus: String = "",
+    val genusOutsider: String = "",
+    val monthFind: String = "",
+    val monthCannot: String = "",
+    val kitchenBest: String = "",
+    val kitchenWorst: String = "",
+    /** Localised names of the twelve months, starting with January. */
+    val monthNames: List<String> = emptyList(),
 )
 
 /** One curated question as stored in the per-language JSON quiz banks. */
@@ -88,6 +104,11 @@ fun buildQuizDeck(
     questions += seasonQuestions(mushrooms, prompts, random)
     questions += edibilityQuestions(mushrooms, prompts, random)
     questions += habitatQuestions(mushrooms, prompts, treeLabels, random)
+    questions += genusQuestions(mushrooms, prompts, random)
+    questions += sameGenusQuestions(mushrooms, prompts, random)
+    questions += genusOutsiderQuestions(mushrooms, prompts, random)
+    questions += monthQuestions(mushrooms, prompts, random)
+    questions += kitchenChampionQuestions(mushrooms, prompts, random)
     return questions
 }
 
@@ -243,6 +264,214 @@ private fun habitatQuestions(
             random = random,
         )
     }
+}
+
+/** "What genus does <common name> belong to?" (first word of the scientific name). */
+private fun genusQuestions(
+    mushrooms: List<Mushroom>,
+    prompts: QuizPrompts,
+    random: Random,
+): List<QuizQuestion> {
+    if (prompts.genus.isBlank()) return emptyList()
+    val genera = mushrooms.map { it.data.scientificName.substringBefore(' ') }.distinct()
+    if (genera.size < 4) return emptyList()
+    return mushrooms.mapNotNull { species ->
+        val genus = species.data.scientificName.substringBefore(' ')
+        val distractors = genera.filter { it != genus }.shuffled(random).take(3)
+        if (distractors.size < 3) return@mapNotNull null
+        quizFrom(
+            key = "gen:${species.data.id}",
+            category = QuizCategory.GENUS,
+            prompt = prompts.genus.format(species.texts.commonName),
+            correct = genus,
+            distractors = distractors,
+            random = random,
+        )
+    }
+}
+
+/** "Which of these species shares the genus of <scientific name>?" */
+private fun sameGenusQuestions(
+    mushrooms: List<Mushroom>,
+    prompts: QuizPrompts,
+    random: Random,
+): List<QuizQuestion> {
+    if (prompts.sameGenus.isBlank()) return emptyList()
+    val byGenus = mushrooms.groupBy { it.data.scientificName.substringBefore(' ') }
+    if (byGenus.size < 4) return emptyList()
+    return mushrooms.mapNotNull { species ->
+        val genus = species.data.scientificName.substringBefore(' ')
+        val partner = (byGenus[genus] ?: emptyList())
+            .filter { it.data.id != species.data.id }
+            .shuffled(random)
+            .firstOrNull() ?: return@mapNotNull null
+        val distractors = mushrooms
+            .filter { it.data.scientificName.substringBefore(' ') != genus }
+            .map { it.data.scientificName }
+            .distinct()
+            .shuffled(random)
+            .take(3)
+        if (distractors.size < 3 || distractors.contains(partner.data.scientificName)) return@mapNotNull null
+        quizFrom(
+            key = "sam:${species.data.id}",
+            category = QuizCategory.GENUS,
+            prompt = prompts.sameGenus.format(species.data.scientificName),
+            correct = partner.data.scientificName,
+            distractors = distractors,
+            random = random,
+        )
+    }
+}
+
+/** "Which of these species is NOT in genus <genus>?" (three congeners + one outsider). */
+private fun genusOutsiderQuestions(
+    mushrooms: List<Mushroom>,
+    prompts: QuizPrompts,
+    random: Random,
+): List<QuizQuestion> {
+    if (prompts.genusOutsider.isBlank()) return emptyList()
+    return mushrooms
+        .groupBy { it.data.scientificName.substringBefore(' ') }
+        .filter { (_, members) -> members.size >= 3 }
+        .toSortedMap()
+        .flatMap { (genus, members) ->
+            val picks = members.shuffled(random)
+            val rest = mushrooms
+                .filter { it.data.scientificName.substringBefore(' ') != genus }
+                .map { it.data.scientificName }
+                .distinct()
+                .shuffled(random)
+            if (rest.isEmpty()) return@flatMap emptyList()
+            (0..picks.size - 3).mapNotNull { i ->
+                val conSpecifics = picks.subList(i, i + 3).map { it.data.scientificName }
+                val outsider = rest[i % rest.size]
+                if (outsider in conSpecifics) return@mapNotNull null
+                quizFrom(
+                    key = "gout:$genus:$i",
+                    category = QuizCategory.GENUS,
+                    prompt = prompts.genusOutsider.format(genus),
+                    correct = outsider,
+                    distractors = conSpecifics,
+                    random = random,
+                )
+            }
+        }
+}
+
+/** Month questions: one month in which the species does (or does not) fruit. */
+private fun monthQuestions(
+    mushrooms: List<Mushroom>,
+    prompts: QuizPrompts,
+    random: Random,
+): List<QuizQuestion> {
+    if (prompts.monthFind.isBlank() && prompts.monthCannot.isBlank()) return emptyList()
+    if (prompts.monthNames.size != 12) return emptyList()
+    val monthLabels = prompts.monthNames.map { it.trim() }
+    if (monthLabels.distinct().size != 12) return emptyList()
+
+    val questions = mutableListOf<QuizQuestion>()
+    for (species in mushrooms) {
+        val inMonths = (1..12).filter { species.isInSeason(it) }
+        val outMonths = (1..12) - inMonths.toSet()
+        if (inMonths.isEmpty() || outMonths.isEmpty()) continue
+
+        // "In which of these months can it be found?": answer in season, three out of season.
+        if (prompts.monthFind.isNotBlank() && outMonths.size >= 3) {
+            for (month in inMonths.shuffled(random).take(MONTH_QUESTIONS_PER_SPECIES)) {
+                val distractors = outMonths.filter { it != month }.shuffled(random).take(3)
+                if (distractors.size < 3) continue
+                questions += quizFrom(
+                    key = "mnf:${species.data.id}:$month",
+                    category = QuizCategory.MONTH,
+                    prompt = prompts.monthFind.format(species.texts.commonName),
+                    correct = monthLabels[month - 1],
+                    distractors = distractors.map { monthLabels[it - 1] },
+                    random = random,
+                )
+            }
+        }
+        // "In which of these months is it NOT season?": answer out of season, three in season.
+        if (prompts.monthCannot.isNotBlank() && inMonths.size >= 3) {
+            for (month in outMonths.shuffled(random).take(MONTH_QUESTIONS_PER_SPECIES)) {
+                val distractors = inMonths.filter { it != month }.shuffled(random).take(3)
+                if (distractors.size < 3) continue
+                questions += quizFrom(
+                    key = "mno:${species.data.id}:$month",
+                    category = QuizCategory.MONTH,
+                    prompt = prompts.monthCannot.format(species.texts.commonName),
+                    correct = monthLabels[month - 1],
+                    distractors = distractors.map { monthLabels[it - 1] },
+                    random = random,
+                )
+            }
+        }
+    }
+    return questions
+}
+
+private const val MONTH_QUESTIONS_PER_SPECIES = 2
+
+/**
+ * "Which of these is the most (least) prized in the kitchen?": the answer has a
+ * strictly higher (lower) catalogue rating than the three distractors, so the
+ * question is never ambiguous.
+ */
+private fun kitchenChampionQuestions(
+    mushrooms: List<Mushroom>,
+    prompts: QuizPrompts,
+    random: Random,
+): List<QuizQuestion> {
+    if (mushrooms.size < 4) return emptyList()
+    if (prompts.kitchenBest.isBlank() && prompts.kitchenWorst.isBlank()) return emptyList()
+    val questions = mutableListOf<QuizQuestion>()
+    for (species in mushrooms) {
+        val rating = species.data.edibility.coerceIn(1, 5)
+        if (prompts.kitchenBest.isNotBlank()) {
+            val distractors = mushrooms
+                .filter {
+                    it.data.id != species.data.id &&
+                        it.texts.commonName != species.texts.commonName &&
+                        it.data.edibility.coerceIn(1, 5) < rating
+                }
+                .map { it.texts.commonName }
+                .distinct()
+                .shuffled(random)
+                .take(3)
+            if (distractors.size == 3) {
+                questions += quizFrom(
+                    key = "kbest:${species.data.id}",
+                    category = QuizCategory.EDIBILITY,
+                    prompt = prompts.kitchenBest,
+                    correct = species.texts.commonName,
+                    distractors = distractors,
+                    random = random,
+                )
+            }
+        }
+        if (prompts.kitchenWorst.isNotBlank()) {
+            val distractors = mushrooms
+                .filter {
+                    it.data.id != species.data.id &&
+                        it.texts.commonName != species.texts.commonName &&
+                        it.data.edibility.coerceIn(1, 5) > rating
+                }
+                .map { it.texts.commonName }
+                .distinct()
+                .shuffled(random)
+                .take(3)
+            if (distractors.size == 3) {
+                questions += quizFrom(
+                    key = "kworst:${species.data.id}",
+                    category = QuizCategory.EDIBILITY,
+                    prompt = prompts.kitchenWorst,
+                    correct = species.texts.commonName,
+                    distractors = distractors,
+                    random = random,
+                )
+            }
+        }
+    }
+    return questions
 }
 
 private fun quizFrom(

@@ -156,6 +156,14 @@ class QuizViewModel(
             season = context.getString(R.string.quiz_prompt_season),
             edibility = context.getString(R.string.quiz_prompt_edibility),
             habitat = context.getString(R.string.quiz_prompt_habitat),
+            genus = context.getString(R.string.quiz_prompt_genus),
+            sameGenus = context.getString(R.string.quiz_prompt_same_genus),
+            genusOutsider = context.getString(R.string.quiz_prompt_genus_outsider),
+            monthFind = context.getString(R.string.quiz_prompt_month_find),
+            monthCannot = context.getString(R.string.quiz_prompt_month_cannot),
+            kitchenBest = context.getString(R.string.quiz_prompt_kitchen_best),
+            kitchenWorst = context.getString(R.string.quiz_prompt_kitchen_worst),
+            monthNames = context.resources.getStringArray(R.array.quiz_months).toList(),
         )
         val treeLabels = HabitatSources.treeLegend.associate { it.key to context.getString(it.labelRes) }
         return buildQuizDeck(mushrooms, curated, prompts, treeLabels, kotlin.random.Random(System.nanoTime()))
