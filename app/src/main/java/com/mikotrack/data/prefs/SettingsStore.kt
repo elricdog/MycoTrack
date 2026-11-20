@@ -85,6 +85,7 @@ class SettingsStore(private val context: Context) {
         val QUIZ_PLAYER_NAME = stringPreferencesKey("quiz_player_name")
         val QUIZ_SEEN_KEYS = stringPreferencesKey("quiz_seen_keys")
         val QUIZ_VOICE_MODE = booleanPreferencesKey("quiz_voice_mode")
+        val QUIZ_AUTO_ADVANCE = booleanPreferencesKey("quiz_auto_advance")
     }
 
     /** Whether a parking waypoint is added at the first accurate fix of a new trip. */
@@ -474,5 +475,13 @@ class SettingsStore(private val context: Context) {
 
     suspend fun setQuizVoiceMode(enabled: Boolean) {
         context.dataStore.edit { it[Keys.QUIZ_VOICE_MODE] = enabled }
+    }
+
+    /** Whether the quiz taps "next" by itself a few seconds per question. */
+    val quizAutoAdvance: Flow<Boolean> =
+        context.dataStore.data.map { it[Keys.QUIZ_AUTO_ADVANCE] ?: false }
+
+    suspend fun setQuizAutoAdvance(enabled: Boolean) {
+        context.dataStore.edit { it[Keys.QUIZ_AUTO_ADVANCE] = enabled }
     }
 }

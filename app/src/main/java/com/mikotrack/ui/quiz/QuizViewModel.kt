@@ -99,6 +99,37 @@ class QuizViewModel(
         false,
     )
 
+    /** Whether the screen should press "next" automatically after feedback. */
+    val autoAdvance: StateFlow<Boolean> = settingsStore.quizAutoAdvance.stateIn(
+        viewModelScope,
+        SharingStarted.WhileSubscribed(5_000),
+        false,
+    )
+
+    fun setAutoAdvance(enabled: Boolean) {
+        viewModelScope.launch { settingsStore.setQuizAutoAdvance(enabled) }
+    }
+
+    /** Short earcons so hits and misses are obvious without looking. */
+    private var toneGenerator: android.media.ToneGenerator? = null
+
+    private fun playFeedbackSound(correct: Boolean) {
+        try {
+            val tone = toneGenerator
+                ?: android.media.ToneGenerator(
+                    android.media.AudioManager.STREAM_MUSIC,
+                    85,
+                ).also { toneGenerator = it }
+            if (correct) {
+                tone.startTone(android.media.ToneGenerator.TONE_PROP_ACK, 180)
+            } else {
+                tone.startTone(android.media.ToneGenerator.TONE_PROP_NACK, 250)
+            }
+        } catch (_: Exception) {
+            // A device without tone support stays silent instead of crashing.
+        }
+    }
+
     private val _listenRequest = MutableStateFlow<QuizListenRequest?>(null)
 
     /** Non-null while the screen must open the speech recognizer. */
@@ -150,6 +181,8 @@ class QuizViewModel(
         val language = MushroomCatalog.languageOf(java.util.Locale.getDefault())
         val mushrooms = MushroomCatalog.load(context, language)
         val curated = loadCuratedQuestions(context, language)
+        val catalonia = loadBank(context, "cultura_", language)
+        val figures = loadBank(context, "personalitats_", language)
         val prompts = QuizPrompts(
             scientificName = context.getString(R.string.quiz_prompt_scientific_name),
             commonName = context.getString(R.string.quiz_prompt_common_name),
@@ -166,14 +199,25 @@ class QuizViewModel(
             monthNames = context.resources.getStringArray(R.array.quiz_months).toList(),
         )
         val treeLabels = HabitatSources.treeLegend.associate { it.key to context.getString(it.labelRes) }
-        return buildQuizDeck(mushrooms, curated, prompts, treeLabels, kotlin.random.Random(System.nanoTime()))
+        return buildQuizDeck(
+            mushrooms,
+            curated,
+            prompts,
+            treeLabels,
+            kotlin.random.Random(System.nanoTime()),
+            catalonia = catalonia,
+            figures = figures,
+        )
     }
 
-    private fun loadCuratedQuestions(context: Application, language: String): List<CuratedQuestion> {
+    private fun loadCuratedQuestions(context: Application, language: String): List<CuratedQuestion> =
+        loadBank(context, "quiz_", language)
+
+    private fun loadBank(context: Application, prefix: String, language: String): List<CuratedQuestion> {
         val languages = buildList { add(language); add("ca"); add("es"); add("en") }
         for (lang in languages) {
             val parsed = runCatching {
-                context.assets.open("mushrooms/quiz_$lang.json")
+                context.assets.open("mushrooms/$prefix$lang.json")
                     .bufferedReader(Charsets.UTF_8).use { it.readText() }
                     .let { json.decodeFromString<List<CuratedQuestion>>(it) }
             }.getOrNull()
@@ -214,6 +258,7 @@ class QuizViewModel(
         ttsEngine?.stop()
         val question = current.question ?: return
         val correct = optionIndex == question.answerIndex
+        playFeedbackSound(correct)
         val streak = if (correct) current.streak + 1 else 0
         val bonus = if (correct) {
             QUIZ_STREAK_BONUS * current.streak.coerceAtMost(QUIZ_MAX_STREAK_BONUS_STEPS)
@@ -497,6 +542,8 @@ class QuizViewModel(
     override fun onCleared() {
         ttsEngine?.shutdown()
         ttsEngine = null
+        toneGenerator?.release()
+        toneGenerator = null
         super.onCleared()
     }
 

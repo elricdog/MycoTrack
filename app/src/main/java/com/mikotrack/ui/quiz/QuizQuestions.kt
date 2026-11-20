@@ -32,6 +32,12 @@ enum class QuizCategory {
 
     /** Curated "mushroom world" trivia from the bundled question banks. */
     CULTURE,
+
+    /** Curated general-culture trivia about Catalonia (festivals, land, lore). */
+    CATALONIA,
+
+    /** Curated trivia about famous people from the Catalan cultural domain. */
+    FIGURES,
 }
 
 /**
@@ -97,8 +103,12 @@ fun buildQuizDeck(
     prompts: QuizPrompts,
     treeLabels: Map<String, String>,
     random: Random = Random.Default,
+    catalonia: List<CuratedQuestion> = emptyList(),
+    figures: List<CuratedQuestion> = emptyList(),
 ): List<QuizQuestion> {
-    val questions = curated.toQuizQuestions().toMutableList()
+    val questions = curated.toQuizQuestions("culture", QuizCategory.CULTURE).toMutableList()
+    questions += catalonia.toQuizQuestions("ctat", QuizCategory.CATALONIA)
+    questions += figures.toQuizQuestions("pers", QuizCategory.FIGURES)
     questions += scientificNameQuestions(mushrooms, prompts, random)
     questions += commonNameQuestions(mushrooms, prompts, random)
     questions += seasonQuestions(mushrooms, prompts, random)
@@ -112,7 +122,10 @@ fun buildQuizDeck(
     return questions
 }
 
-private fun List<CuratedQuestion>.toQuizQuestions(): List<QuizQuestion> =
+private fun List<CuratedQuestion>.toQuizQuestions(
+    keyPrefix: String,
+    category: QuizCategory,
+): List<QuizQuestion> =
     mapIndexedNotNull { index, question ->
         val options = question.options
         if (options.size != 4 || question.answer !in options.indices ||
@@ -121,8 +134,8 @@ private fun List<CuratedQuestion>.toQuizQuestions(): List<QuizQuestion> =
             null
         } else {
             QuizQuestion(
-                key = "culture:$index",
-                category = QuizCategory.CULTURE,
+                key = "$keyPrefix:$index",
+                category = category,
                 prompt = question.q,
                 options = options,
                 answerIndex = question.answer,

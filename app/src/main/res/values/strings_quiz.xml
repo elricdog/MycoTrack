@@ -63,8 +63,13 @@
     <string name="quiz_cat_genus">🧬 Genus</string>
     <string name="quiz_cat_month">🗓️ Month</string>
     <string name="quiz_cat_culture">🧺 Mushroom world</string>
+    <string name="quiz_cat_catalonia">🌹 Catalan culture</string>
+    <string name="quiz_cat_figures">🎭 Catalan figures</string>
 
     <!-- voice play -->
+    <string name="quiz_auto_next">Automatic next question</string>
+    <string name="quiz_auto_next_hint">After each answer, the "next" button is pressed by itself five seconds later.</string>
+    <string name="quiz_correct_answer">The correct answer was: %1$s</string>
     <string name="quiz_voice_mode">Play by voice</string>
     <string name="quiz_voice_hint">The app reads the questions aloud and listens to your answers: you can play without touching the phone. Say the option number or the answer name, "repeat" to hear the question again, or "stop" to leave the game.</string>
     <string name="quiz_voice_listening">Listening for your answer…</string>
@@ -72,7 +77,7 @@
     <string name="quiz_voice_prompt_answer">Say the number or the answer</string>
     <string name="quiz_voice_prompt_name">Say your name</string>
     <!-- texts read aloud by the text-to-speech engine -->
-    <string name="quiz_speak_question">Question %1$s: %2$s. Options: %3$s</string>
+    <string name="quiz_speak_question">Question: %1$s. Options: %2$s</string>
     <string name="quiz_speak_option">Option %1$d: %2$s</string>
     <string name="quiz_speak_stars">stars</string>
     <string name="quiz_speak_feedback">%1$s. The correct answer is: %2$s. %3$s</string>

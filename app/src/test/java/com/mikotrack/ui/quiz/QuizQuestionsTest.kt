@@ -126,6 +126,26 @@ class QuizQuestionsTest {
     }
 
     @Test
+    fun `catalonia and figures banks get own keys and categories`() {
+        val entry = CuratedQuestion("q?", listOf("a", "b", "c", "d"), 2, "fet")
+        val deck = buildQuizDeck(
+            mushrooms = emptyList(),
+            curated = listOf(entry),
+            prompts = prompts,
+            treeLabels = treeLabels,
+            random = Random(1),
+            catalonia = listOf(entry),
+            figures = listOf(entry, entry),
+        )
+        assertEquals(listOf("culture:0", "ctat:0", "pers:0", "pers:1"), deck.map { it.key })
+        assertEquals(
+            listOf(QuizCategory.CULTURE, QuizCategory.CATALONIA, QuizCategory.FIGURES, QuizCategory.FIGURES),
+            deck.map { it.category },
+        )
+        deck.forEach { assertEquals("c", it.options[it.answerIndex]) }
+    }
+
+    @Test
     fun `generation is deterministic for the same seed`() {
         val first = buildQuizDeck(mushrooms, curated, prompts, treeLabels, Random(3))
         val second = buildQuizDeck(mushrooms, curated, prompts, treeLabels, Random(3))

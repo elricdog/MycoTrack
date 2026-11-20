@@ -63,6 +63,7 @@ fun QuizScreen(viewModel: QuizViewModel) {
     val ranking by viewModel.ranking.collectAsStateWithLifecycle()
     val storedName by viewModel.storedName.collectAsStateWithLifecycle()
     val voiceMode by viewModel.voiceMode.collectAsStateWithLifecycle()
+    val autoAdvance by viewModel.autoAdvance.collectAsStateWithLifecycle()
     val listenRequest by viewModel.listenRequest.collectAsStateWithLifecycle()
 
     val context = LocalContext.current
@@ -105,6 +106,19 @@ fun QuizScreen(viewModel: QuizViewModel) {
         }
     }
 
+    // Auto-advance: press "next" five seconds after each feedback, unless the
+    // run is played by voice (the speech itself drives the pace then).
+    LaunchedEffect(state.phase, state.questionNumber, autoAdvance, voiceMode) {
+        if (
+            autoAdvance &&
+            !(voiceMode && voiceAvailable) &&
+            state.phase == QuizPhase.FEEDBACK
+        ) {
+            kotlinx.coroutines.delay(5_000)
+            viewModel.next()
+        }
+    }
+
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -125,6 +139,8 @@ fun QuizScreen(viewModel: QuizViewModel) {
                 voiceMode = voiceMode,
                 voiceAvailable = voiceAvailable,
                 onVoiceModeChange = viewModel::setVoiceMode,
+                autoAdvance = autoAdvance,
+                onAutoAdvanceChange = viewModel::setAutoAdvance,
                 onStart = { viewModel.startGame(voiceMode && voiceAvailable) },
             )
 
@@ -163,6 +179,8 @@ private fun QuizStartContent(
     voiceMode: Boolean,
     voiceAvailable: Boolean,
     onVoiceModeChange: (Boolean) -> Unit,
+    autoAdvance: Boolean,
+    onAutoAdvanceChange: (Boolean) -> Unit,
     onStart: () -> Unit,
 ) {
     Text("🍄", style = MaterialTheme.typography.displayLarge)
@@ -225,6 +243,25 @@ private fun QuizStartContent(
             style = MaterialTheme.typography.bodySmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
+    }
+    Spacer(Modifier.height(12.dp))
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                text = "⏩ " + stringResource(R.string.quiz_auto_next),
+                style = MaterialTheme.typography.titleMedium,
+                fontWeight = FontWeight.Bold,
+            )
+            Text(
+                text = stringResource(R.string.quiz_auto_next_hint),
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+        }
+        Switch(checked = autoAdvance, onCheckedChange = onAutoAdvanceChange)
     }
     Spacer(Modifier.height(24.dp))
     QuizRankingCard(ranking)
@@ -410,6 +447,13 @@ private fun QuizPlayContent(
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
                 )
+                if (!correct) {
+                    Text(
+                        text = "💡 " + stringResource(R.string.quiz_correct_answer, question.options[question.answerIndex]),
+                        style = MaterialTheme.typography.bodyMedium,
+                        fontWeight = FontWeight.Bold,
+                    )
+                }
                 question.fact?.let {
                     Text(text = "💡 $it", style = MaterialTheme.typography.bodyMedium)
                 }
@@ -571,4 +615,6 @@ private fun QuizCategory.labelRes(): Int = when (this) {
     QuizCategory.GENUS -> R.string.quiz_cat_genus
     QuizCategory.MONTH -> R.string.quiz_cat_month
     QuizCategory.CULTURE -> R.string.quiz_cat_culture
+    QuizCategory.CATALONIA -> R.string.quiz_cat_catalonia
+    QuizCategory.FIGURES -> R.string.quiz_cat_figures
 }

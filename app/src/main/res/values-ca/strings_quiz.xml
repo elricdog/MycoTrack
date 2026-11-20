@@ -63,6 +63,12 @@
     <string name="quiz_cat_genus">🧬 Gènere</string>
     <string name="quiz_cat_month">🗓️ Mes</string>
     <string name="quiz_cat_culture">🧺 Món boletaire</string>
+    <string name="quiz_cat_catalonia">🌹 Cultura catalana</string>
+    <string name="quiz_cat_figures">🎭 Personatges catalans</string>
+
+    <string name="quiz_auto_next">Següent pregunta automàtica</string>
+    <string name="quiz_auto_next_hint">Després de cada resposta, el botó de següent s\'apreta sol al cap de cinc segons.</string>
+    <string name="quiz_correct_answer">La resposta correcta era: %1$s</string>
 
     <!-- joc amb veu -->
     <string name="quiz_voice_mode">Jugar amb veu</string>
@@ -72,7 +78,7 @@
     <string name="quiz_voice_prompt_answer">Digues el número o la resposta</string>
     <string name="quiz_voice_prompt_name">Digues el teu nom</string>
     <!-- textos que llegeix el motor de text a veu -->
-    <string name="quiz_speak_question">Pregunta %1$s: %2$s. Opcions: %3$s</string>
+    <string name="quiz_speak_question">Pregunta: %1$s. Opcions: %2$s</string>
     <string name="quiz_speak_option">Opció %1$d: %2$s</string>
     <string name="quiz_speak_stars">estrelles</string>
     <string name="quiz_speak_feedback">%1$s La resposta correcta és: %2$s. %3$s</string>
