@@ -35,6 +35,8 @@ import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import com.mikotrack.ui.common.categoryLabel
 import androidx.compose.ui.res.stringArrayResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.core.os.ConfigurationCompat
 import com.mikotrack.R
@@ -236,6 +238,7 @@ fun MapScreen(
     val parkingWaypoint by viewModel.parkingWaypoint.collectAsStateWithLifecycle()
     val parkingDistance by viewModel.parkingDistance.collectAsStateWithLifecycle()
     val zoomLevel by controller.cameraZoom.collectAsStateWithLifecycle()
+    val zoomOverscaled by controller.overscaled.collectAsStateWithLifecycle()
     val localView = LocalView.current
 
     var showLayerSheet by remember { mutableStateOf(false) }
@@ -354,9 +357,10 @@ fun MapScreen(
             offlineMinZoom = if (isOffline) offlineSource?.minZoom ?: 0 else 0,
             offlineMaxZoom = if (isOffline) offlineSource?.maxZoom ?: 22 else 22,
         )
-        // The camera is limited to the zoom levels that the source really contains.
-        // An offline area only holds the tiles it was downloaded with, and zooming in
-        // further would only stretch them, which makes the map look blurred.
+        // The limits describe the zoom levels that the source really contains: an
+        // offline area only holds the tiles it was downloaded with. The camera may
+        // still go past the highest of them; the badge then marks the level as
+        // forced while the last tiles are scaled up.
         val limits = if (isOffline) {
             val source = offlineSource
             if (source != null) {
@@ -888,7 +892,7 @@ fun MapScreen(
                         verticalArrangement = Arrangement.spacedBy(8.dp),
                     ) {
                         if (showZoomBadge) {
-                            zoomLevel?.let { ZoomLevelBadge(it) }
+                            zoomLevel?.let { ZoomLevelBadge(it, zoomOverscaled) }
                         }
                         if (showGpsChip) {
                             GpsStatusChip(
@@ -945,6 +949,7 @@ fun MapScreen(
                                 horizontal = true,
                                 visibleButtons = visibleButtons,
                                 zoomLevel = zoomLevel,
+                                overscaled = zoomOverscaled,
                                 onZoomIn = controller::zoomIn,
                                 onZoomOut = controller::zoomOut,
                                 onResetZoom = resetZoom,
@@ -963,6 +968,7 @@ fun MapScreen(
                         horizontal = false,
                         visibleButtons = visibleButtons,
                         zoomLevel = zoomLevel,
+                        overscaled = zoomOverscaled,
                         onZoomIn = controller::zoomIn,
                         onZoomOut = controller::zoomOut,
                         onResetZoom = resetZoom,
@@ -1453,6 +1459,7 @@ private fun MapZoomControls(
     horizontal: Boolean,
     visibleButtons: Set<MapButton>,
     zoomLevel: Double?,
+    overscaled: Boolean,
     onZoomIn: () -> Unit,
     onZoomOut: () -> Unit,
     onResetZoom: () -> Unit,
@@ -1483,7 +1490,7 @@ private fun MapZoomControls(
     }
     val level: @Composable () -> Unit = {
         if (MapButton.ZOOM_LEVEL in visibleButtons && zoomLevel != null) {
-            ZoomLevelBadge(zoomLevel)
+            ZoomLevelBadge(zoomLevel, overscaled)
         }
     }
     if (horizontal) {
@@ -1509,18 +1516,41 @@ private fun MapZoomControls(
 
 /**
  * The zoom level of the camera, so the user can tell how close the map is zoomed in.
+ *
+ * While [overscaled] the source has no tiles at this level and the last ones are
+ * being scaled up: the badge takes a warning colour and carries an asterisk to say
+ * that the zoom is being forced past the resolution of the map.
  */
 @Composable
-private fun ZoomLevelBadge(zoomLevel: Double) {
+private fun ZoomLevelBadge(zoomLevel: Double, overscaled: Boolean) {
+    val container = if (overscaled) {
+        MaterialTheme.colorScheme.tertiaryContainer.copy(alpha = 0.92f)
+    } else {
+        MaterialTheme.colorScheme.surface.copy(alpha = 0.92f)
+    }
+    val onContainer = if (overscaled) {
+        MaterialTheme.colorScheme.onTertiaryContainer
+    } else {
+        MaterialTheme.colorScheme.onSurface
+    }
+    val overscaleHint = if (overscaled) stringResource(R.string.map_zoom_overscale) else null
     Surface(
         shape = RoundedCornerShape(12.dp),
-        color = MaterialTheme.colorScheme.surface.copy(alpha = 0.92f),
+        color = container,
     ) {
         Text(
-            text = "z${zoomLevel.roundToInt()}",
+            text = "z${zoomLevel.roundToInt()}" + if (overscaled) " *" else "",
             style = MaterialTheme.typography.labelLarge,
-            color = MaterialTheme.colorScheme.onSurface,
-            modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp),
+            color = onContainer,
+            modifier = Modifier
+                .padding(horizontal = 10.dp, vertical = 6.dp)
+                .then(
+                    if (overscaleHint != null) {
+                        Modifier.semantics { contentDescription = overscaleHint }
+                    } else {
+                        Modifier
+                    },
+                ),
         )
     }
 }

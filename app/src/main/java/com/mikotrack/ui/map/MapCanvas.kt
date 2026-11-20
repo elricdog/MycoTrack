@@ -273,46 +273,66 @@ class MapController {
     /** The lowest zoom level the camera is allowed to reach. */
     private var minZoomLimit: Double = 0.0
 
-    /** The highest zoom level the camera is allowed to reach. */
-    private var maxZoomLimit: Double = MAX_ZOOM_LIMIT
+    /** The highest zoom level whose tiles the current source really publishes. */
+    private var sourceMaxZoom: Double = MAX_ZOOM_LIMIT
+
+    /** Whether the camera is zoomed past [sourceMaxZoom]. */
+    private val _overscaled = MutableStateFlow(false)
 
     /**
-     * Restricts the zoom levels the camera can reach.
+     * Whether the map is zoomed beyond the highest zoom level the source publishes.
      *
-     * A source that only publishes tiles up to a given zoom level must not be zoomed
-     * beyond it: the tiles would be scaled up and the map would look blurred. The
-     * limits are also published to the renderer, so that it does not ask for tiles
-     * that the source does not have.
+     * Past that level the last tiles are scaled up ("forced zoom"), which is useful
+     * to read the map at the cost of sharpness. The zoom badge colours and marks the
+     * level while this is the case.
+     */
+    val overscaled: StateFlow<Boolean> = _overscaled.asStateFlow()
+
+    /**
+     * Describes the zoom levels that the current source publishes.
+     *
+     * The camera is deliberately not capped at [maxZoom]: zooming past the last
+     * level the source has scales those tiles up instead, and [overscaled] tells
+     * the user interface that the map is being forced.
      */
     fun setZoomLimits(minZoom: Double, maxZoom: Double) {
         val low = minZoom.coerceIn(0.0, MAX_ZOOM_LIMIT)
         val high = maxZoom.coerceIn(low, MAX_ZOOM_LIMIT)
-        if (minZoomLimit == low && maxZoomLimit == high) return
+        if (minZoomLimit == low && sourceMaxZoom == high) return
         minZoomLimit = low
-        maxZoomLimit = high
+        sourceMaxZoom = high
         applyZoomLimits()
         clampCamera()
+        updateOverscaled()
     }
 
-    /** Keeps a zoom level inside the limits of the current source. */
-    fun clampZoom(zoom: Double): Double = zoom.coerceIn(minZoomLimit, maxZoomLimit)
+    /** Keeps a zoom level inside the levels the camera can reach. */
+    fun clampZoom(zoom: Double): Double = zoom.coerceIn(minZoomLimit, MAX_ZOOM_LIMIT)
 
     /** Publishes the zoom limits to the renderer. */
     private fun applyZoomLimits() {
         val map = this.map ?: return
         runCatching { map.setMinZoomPreference(minZoomLimit) }
-        runCatching { map.setMaxZoomPreference(maxZoomLimit) }
+        // The camera may always reach the highest level of the renderer: past the
+        // last tile the source publishes, the renderer scales that tile up itself.
+        runCatching { map.setMaxZoomPreference(MAX_ZOOM_LIMIT) }
     }
 
-    /** Brings the camera back inside the zoom limits, if it is outside of them. */
+    /** Brings the camera back above the minimum zoom, if it is below it. */
     private fun clampCamera() {
         val map = this.map ?: return
         val position = map.cameraPosition
-        val zoom = position.zoom.coerceIn(minZoomLimit, maxZoomLimit)
+        val zoom = position.zoom.coerceIn(minZoomLimit, MAX_ZOOM_LIMIT)
         val target = position.target ?: return
         if (zoom != position.zoom) {
             runCatching { map.animateCamera(CameraUpdateFactory.newLatLngZoom(target, zoom)) }
         }
+    }
+
+    /** Refreshes [overscaled] from the live camera and the current source. */
+    private fun updateOverscaled() {
+        val zoom = map?.cameraPosition?.zoom ?: _cameraZoom.value ?: return
+        _overscaled.value = zoom > sourceMaxZoom + 1e-9
     }
 
     /**
@@ -427,7 +447,7 @@ class MapController {
                 isCameraPlaced = true
                 mapLibreMap.setCameraPosition(
                     CameraPosition.Builder(camera)
-                        .zoom(camera.zoom.coerceIn(minZoomLimit, maxZoomLimit))
+                        .zoom(clampZoom(camera.zoom))
                         .build(),
                 )
             }
@@ -819,6 +839,7 @@ class MapController {
      */
     private fun publishCameraZoom() {
         _cameraZoom.value = map?.cameraPosition?.zoom
+        updateOverscaled()
     }
 
     /**

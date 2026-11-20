@@ -16,6 +16,7 @@
     <string name="map_zoom_default_long_press">Default zoom (long press to store the current zoom as default)</string>
     <string name="map_zoom_fit">Show the whole route</string>
     <string name="map_zoom_default_set">Default zoom set to %1$d</string>
+    <string name="map_zoom_overscale">Forced zoom: the map is scaled past its native resolution</string>
     <string name="map_no_route_yet">There is no route to show yet</string>
     <string name="map_control_routes">Routes</string>
     <string name="map_control_centre">Centre</string>

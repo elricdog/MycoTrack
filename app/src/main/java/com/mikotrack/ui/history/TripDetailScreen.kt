@@ -147,8 +147,9 @@ fun TripDetailScreen(
 
     LaunchedEffect(tripId) { viewModel.load(tripId) }
 
-    // The map of the review uses the base layer that the user has chosen, and the
-    // camera is limited to the zoom levels that the source really contains.
+    // The map of the review uses the base layer that the user has chosen. The limits
+    // describe the zoom levels that the source publishes; the camera may go past the
+    // highest of them, scaling the last tiles up.
     LaunchedEffect(exportLayer, exportOfflineSource) {
         val isOffline = exportLayer == MapLayer.OFFLINE
         val source = exportOfflineSource

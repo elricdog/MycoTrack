@@ -16,6 +16,7 @@
     <string name="map_zoom_default_long_press">Zoom per defecte (mantén premut per desar el zoom actual com a predeterminat)</string>
     <string name="map_zoom_fit">Mostra tota la ruta</string>
     <string name="map_zoom_default_set">S\'ha establert el zoom per defecte a %1$d</string>
+    <string name="map_zoom_overscale">Zoom forçat: el mapa s\'amplia més enllà de la seva resolució nativa</string>
     <string name="map_no_route_yet">Encara no hi ha cap ruta per mostrar</string>
     <string name="map_control_routes">Rutes</string>
     <string name="map_control_centre">Centra</string>
