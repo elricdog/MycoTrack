@@ -236,5 +236,75 @@
     "habitat": "No crece en el suelo sino en la base de troncos vivos o tocones de castaños y robles, y más raramente de encinas y alcornoques. Es relativamente frecuente en los castañares del Montseny, las Guilleries y el Montnegre.",
     "season": "De finales de verano a otoño, de agosto a noviembre.",
     "lookAlikes": "Es inconfundible: forma una lengua o un hígado carnoso rojo sobre la madera, con la cara inferior llena de tubos pequeños, blanquecinos o rosados, separados entre sí. El políporo azufrado (Laetiporus sulphureus), de color amarillo anaranjado, también crece en árboles y es comestible bien cocinada solo cuando es joven; algunos políporos de madera son duros pero no peligrosos."
+  },
+  "carneroll": {
+    "commonName": "Higró de marzo",
+    "culinary": "Es el primer boletín del año y muy apreciado: carne firme y blanca, de gusto suave. Bueno a la brasa, en tortilla, en revuelto y en arroces. Congela bien tras escaldarlo.",
+    "habitat": "Aparece en invierno bajo las coníferas, sobre todo en pinares de pino negro, pino rojo y abeto, entre el musgo y la acícula, también en claros quemados. Baja del piso subalpino a vaguadas frescas.",
+    "season": "De enero a abril, cuando apenas hay otros boletos.",
+    "lookAlikes": "Algunos higróforos grises y tricolomas pálidos. Asegúrate de que las láminas son decurrentes y blanquecinas y de que el hábitat es de conífera húmeda, posiblemente con nieve reciente. Rechaza los fibrocylindias del género Inocybe, mortales: laminillas pardas y pie fibrilloso."
+  },
+  "trompeta_grisa": {
+    "commonName": "Trompeta gris",
+    "culinary": "La carne es más firme que la del níscalo y algo amarga: hay que cocinarla bien. Buenísima en samfaina, guisos, arroces y sofritos, donde aguanta mejor que las rebozuelas.",
+    "habitat": "En bosques húmedos de coníferas y haya, en hileras entre el musgo y la acícula caída, a menudo en corros. Abunda tras las primeras lluvias de otoño.",
+    "season": "De mediados de otoño al inicio del invierno.",
+    "lookAlikes": "La trompeta de los muertos es más oscura y embudada, con el himenio gris ceniza; Hygrophoropsis aurantiaca, que sale también sobre la hojarasca, es naranja y de calidad inferior. Y la Hygrophoropsis aurantiaca, tóxica, de láminas muy apretadas anaranjadas."
+  },
+  "rossinyol_ametista": {
+    "commonName": "Níscalo amatista",
+    "culinary": "Igual que el níscalo: carne firme y muy perfumada, ideal a la brasa y en arroces. Se reconoce por los tonos púrpura de la cutícula.",
+    "habitat": "Como el níscalo, en bosques húmedos de encina, roble, haya y castaño, entre el musgo, en suelos ácidos o básicos poco ricos en nutrientes.",
+    "season": "De mayo a octubre.",
+    "lookAlikes": "Muchos lo consideran una variedad del níscalo de verdad. No lo confundas nunca con hongo de la oliva (Omphalotus olearius), que sale en manojos sobre tocones, es naranja intenso y es tóxico. Y la Hygrophoropsis aurantiaca, tóxica, de láminas muy apretadas anaranjadas."
+  },
+  "llora_daurada": {
+    "commonName": "Rújula dorada",
+    "culinary": "Una de las mejores rújulas: carne firme y de gusto dulce, excelente a la brasa, en samfaina y en guiso. Se conserva bien en salmuera.",
+    "habitat": "Bajo robles y hayas, en lugares frescos y húmedos, tanto en suelo silíceo como calizo. Se reconoce por los tonos dorados del sombrero y la carne que se mancha al golpe.",
+    "season": "De junio a octubre.",
+    "lookAlikes": "Otras rújulas amarillentas como la gallineta. Fíjate en la carne quebradiza como porcelana y en las reacciones del pie con el sulfato de hierro; las rújulas amargas son incomestibles pero no tóxicas. La gallineta (Russula emetica), muy picante, y otras Russula de aspecto parecido."
+  },
+  "ou_de_bord": {
+    "commonName": "Oronja vulgar",
+    "culinary": "Comestible corriente que hay que cocinar siempre muy bien (crudo es tóxico). La piel del sombrero se retira fácilmente. Buena en revuelto, a la brasa y en guiso.",
+    "habitat": "Bajo pinos, robles y hayas, en tierras ácidas. Muy común. La carne enrojece al romperse o recibir golpes, también en el pie.",
+    "season": "De junio a noviembre.",
+    "lookAlikes": "De joven puede confundirse con la oronja de cesárea, pero su carne enrojece y las láminas son blancas y luego rosadas. Evita siempre los ejemplares con láminas bien blancas, volva en bulbo y carne que no enrojece. Con la oronja de cesárea (Amanita caesarea) y otras Amanita: mira siempre la volva y la reacción de la carne."
+  },
+  "ou_de_coloma": {
+    "commonName": "Yema de paloma",
+    "culinary": "Muy buscada en el cinturón de Barcelona: carne abundante, firme y de gusto suave cuando es joven y bien formada. Hay que cocinarla bien. Se conserva en salmuera.",
+    "habitat": "En matorral mediterráneo, alcornocales y encinares, preferentemente en suelo calizo y solanas. Aparece con el calor de fin de verano, tras las primeras lluvias.",
+    "season": "De agosto a noviembre.",
+    "lookAlikes": "Cuidado con Amanita proxima, muy peligrosa: tiene una volva membranosa que enrojece en la base del bulbo y un hilo pruinoso rosado en el margen del sombrero; la yema de paloma tiene volva blanda en forma de saco y esporas bien blancas. En la duda, no la recojas."
+  },
+  "carrerulla": {
+    "commonName": "Monja",
+    "culinary": "Muy popular a comienzos de año: carne firme y gusto suave. Buena a la brasa, con jamón, en tortilla y en arroces. El pie, más duro, se aprovecha menos.",
+    "habitat": "En claros, pastos, prados, cunetas y bardales, a menudo en corros alrededor de los árboles. Prefiere tierras calizas.",
+    "season": "De marzo a mayo y, más rara, de noviembre a diciembre.",
+    "lookAlikes": "Con otros setas blancas de invierno: el pie debe ser fino y tomentoso en la base y las láminas algo decurrentes. No recojas clitocibes blancos de olor harinoso y láminas muy decorrentes, algunos muy tóxicos. Sobre todo con Clitocybe rivulosa y Clitocybe dealbata, tóxicas: pie carnoso y laminillas blancas."
+  },
+  "ram_de_bou": {
+    "commonName": "Maitake",
+    "culinary": "Muy rendible y aromático. Se usan las puntas de las ramas jóvenes, escaldadas primero y luego salteadas o en samfaina. Congela bien una vez escaldado.",
+    "habitat": "En manojos grandes al pie de robles, castaños y hayas. De final de verano al otoño, vuelve al mismo pie cada año.",
+    "season": "De agosto a noviembre.",
+    "lookAlikes": "Meripilus giganteus, más blando y que se oscurece al apretarlo, es de calidad inferior. Asegúrate de que sale al pie de un árbol vivo o un tocón y que las láminas bajan por el pie. Y el pollo del bosque (Laetiporus sulphureus), que puede sentar mal: carnosos sulfurados."
+  },
+  "cep_de_cavall": {
+    "commonName": "Bolet castaño",
+    "culinary": "Sombrero chocolate y carne marrón claro firme: se conserva bien y va en cualquier guiso, revuelto o salteado. Ojo con los gusanos, suelen estar llenos.",
+    "habitat": "Pinares húmedos de musgo, castañares y hayedos, en suelo ácido. Muy común tras las lluvias de verano y otoño.",
+    "season": "De junio a octubre.",
+    "lookAlikes": "Se parece a los xerocomus y otros boletus de tubos; la carne del bolet castaño enrojece poco al cortarla y los tubos son amarillos y luego ocre marronados. El más molesto es hongo amargo (Tylopilus felleus): tubos rosados y carne muy amarga."
+  },
+  "rovell_de_roure": {
+    "commonName": "Rovellón de encina",
+    "culinary": "Primo del rovellón: carne algo más firme y gusto más intenso, excelente a la brasa y en revuelto. Exuda un látex naranja que ennegrece con el aire.",
+    "habitat": "Bajo robles, encinas y alcornoces, también joven bajo pinos plantados entre robledales. Tierra ácida, desde el otoño.",
+    "season": "De septiembre a diciembre.",
+    "lookAlikes": "Con los láctarios del grupo de los rovellones. Evítalos si el sombrero no es zonado y el látex no es naranja: Lactarius chrysorrheus, de un naranja amarillento, es indigesto. Evita los Lactarius de leche blanca picante, como el picamulón (Lactarius piperatus)."
   }
 }

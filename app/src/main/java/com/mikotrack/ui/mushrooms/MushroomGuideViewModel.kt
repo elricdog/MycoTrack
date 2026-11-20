@@ -10,6 +10,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.util.Calendar
@@ -27,6 +28,21 @@ class MushroomGuideViewModel(application: Application) : AndroidViewModel(applic
 
     private val _onlyInSeason = MutableStateFlow(false)
     val onlyInSeason: StateFlow<Boolean> = _onlyInSeason.asStateFlow()
+
+    private val _selected = MutableStateFlow<Set<String>>(emptySet())
+
+    /** The species picked with a long press to look for them all at once. */
+    val selected: StateFlow<Set<String>> = _selected.asStateFlow()
+
+    /** Adds or removes a species from the multi-species selection. */
+    fun toggleSelected(id: String) {
+        _selected.update { if (id in it) it - id else it + id }
+    }
+
+    /** Empties the multi-species selection. */
+    fun clearSelected() {
+        _selected.value = emptySet()
+    }
 
     /** The current month, from 1 to 12. */
     val currentMonth: Int = Calendar.getInstance().get(Calendar.MONTH) + 1

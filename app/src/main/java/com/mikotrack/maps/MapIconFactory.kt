@@ -37,6 +37,34 @@ object MapIconFactory {
         "mycotrack-wp-${category.lowercase()}"
     }
 
+    /** The identifier of the style image of the rank-th hotspot mark. */
+    fun hotspotIconId(rank: Int): String = "mycotrack-hotspot-$rank"
+
+    /** Builds the purple numbered badge used to mark a hotspot of a multi-species search. */
+    fun hotspotIcon(rank: Int): Bitmap {
+        val size = 56
+        val bitmap = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888)
+        val canvas = Canvas(bitmap)
+        val paint = Paint(Paint.ANTI_ALIAS_FLAG)
+        val center = size / 2f
+
+        paint.color = Color.WHITE
+        canvas.drawCircle(center, center, center - 2f, paint)
+
+        paint.color = Color.parseColor("#7B1FA2")
+        canvas.drawCircle(center, center, center - 6f, paint)
+
+        paint.color = Color.WHITE
+        paint.textAlign = Paint.Align.CENTER
+        paint.isFakeBoldText = true
+        paint.textSize = size * 0.52f
+        val bounds = Rect()
+        val label = rank.toString()
+        paint.getTextBounds(label, 0, label.length, bounds)
+        canvas.drawText(label, center, center - (bounds.top + bounds.bottom) / 2f, paint)
+        return bitmap
+    }
+
     /** Builds the coloured badge used for a waypoint of the given colour. */
     fun waypointIcon(context: Context, color: Long, glyphStyle: String? = null): Bitmap {
         val size = 48

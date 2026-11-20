@@ -14,6 +14,16 @@ import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
 
 /**
+ * The habitat inputs of a tile — orientation, lithologies and forest formations — any of
+ * which may be missing when its source failed.
+ */
+data class HabitatInputs(
+    val aspect: ByteArray?,
+    val lithologies: IntArray?,
+    val trees: IntArray?,
+)
+
+/**
  * Produces the tiles of the "likely areas" overlay of a species.
  *
  * For every tile, the three habitat inputs of the same tile are gathered: the
@@ -67,41 +77,68 @@ class SuitabilityTileProvider(
         cache.trimOnce { (it.name.startsWith("suitability-v") && it != tilesDirectory) ||
             (it.name.startsWith("trees-v") && it != treesDirectory) }
 
-        val preference = preferenceOf(search.speciesId) ?: return null
+        val preference = preferencesOf(search.speciesIds) ?: return null
         val key = cacheKey(search, preference)
         val file = File(tilesDirectory, "$key/$zoom/$x/$y.png")
         cache.read(file)?.let { return it }
 
+        val inputs = habitatInputs(zoom, x, y)
+        val aspect = inputs.aspect
+        val lithologies = inputs.lithologies
+        val trees = inputs.trees
+        if (aspect == null && lithologies == null && trees == null) return null
+
+        val models = preference.map { SuitabilityScorer.Model(it.second) }
+        // A cell counts as good when it suits at least one of the searched species.
+        var scores: FloatArray? = null
+        for (model in models) {
+            val scoresOfModel = SuitabilityScorer.scoreGrid(model, GRID_SIZE, TILE_SIZE, trees, lithologies, lithologyGroups, aspect)
+            scores = scores?.let { existing ->
+                FloatArray(existing.size) { index -> maxOf(existing[index], scoresOfModel[index]) }
+            } ?: scoresOfModel
+        }
+        val pixels = SuitabilityScorer.render(
+            scores ?: return null, GRID_SIZE, TILE_SIZE, zoom, x, y, search.latitude, search.longitude, radius,
+        )
+        val png = HabitatTileCache.encodePng(pixels, TILE_SIZE)
+        val complete = models.all { model ->
+            (aspect != null || !model.usesAspect) &&
+                (lithologies != null || !model.usesSoil) &&
+                (trees != null || !model.usesTrees)
+        }
+        if (complete) cache.write(file, png) else Log.d(TAG, "Tile $zoom/$x/$y drawn without some inputs")
+        return png
+    }
+
+    /**
+     * The three habitat inputs of a tile, gathered concurrently: the orientation classes,
+     * the substrate lithologies and the forest formations. Each one is `null` when it
+     * could not be obtained.
+     */
+    fun habitatInputs(zoom: Int, x: Int, y: Int): HabitatInputs {
         val soilFuture = inputs.submit<IntArray?> { soilTiles.lithologies(zoom, x, y) }
         val treesFuture = inputs.submit<IntArray?> { trees(zoom, x, y) }
         val aspect = runCatching { aspectTiles.classGrid(zoom, x, y) }.getOrNull()
         val lithologies = runCatching { soilFuture.get(INPUT_TIMEOUT_MS, TimeUnit.MILLISECONDS) }.getOrNull()
         val trees = runCatching { treesFuture.get(INPUT_TIMEOUT_MS, TimeUnit.MILLISECONDS) }.getOrNull()
-        if (aspect == null && lithologies == null && trees == null) return null
-
-        val model = SuitabilityScorer.Model(preference)
-        val scores = SuitabilityScorer.scoreGrid(model, GRID_SIZE, TILE_SIZE, trees, lithologies, lithologyGroups, aspect)
-        val pixels = SuitabilityScorer.render(
-            scores, GRID_SIZE, TILE_SIZE, zoom, x, y, search.latitude, search.longitude, radius,
-        )
-        val png = HabitatTileCache.encodePng(pixels, TILE_SIZE)
-        val complete = (aspect != null || !model.usesAspect) &&
-            (lithologies != null || !model.usesSoil) &&
-            (trees != null || !model.usesTrees)
-        if (complete) cache.write(file, png) else Log.d(TAG, "Tile $zoom/$x/$y drawn without some inputs")
-        return png
+        return HabitatInputs(aspect, lithologies, trees)
     }
 
-    /** The habitat of a species of the guide (the affinities do not depend on the language). */
-    private fun preferenceOf(speciesId: String): HabitatPreference? =
+    /**
+     * The habitats of the searched species of the guide paired with their ids, in the
+     * order of [speciesIds] (the affinities do not depend on the language), or `null`
+     * when none of them is known.
+     */
+    internal fun preferencesOf(speciesIds: List<String>): List<Pair<String, HabitatPreference>>? =
         runCatching { MushroomCatalog.load(context, "en") }
             .onFailure { Log.w(TAG, "Could not load the mushroom guide", it) }
             .getOrNull()
-            ?.firstOrNull { it.id == speciesId }
-            ?.data
-            ?.habitat
+            ?.let { guide ->
+                speciesIds.mapNotNull { id -> guide.firstOrNull { it.id == id }?.let { id to it.data.habitat } }
+                    .takeIf { it.isNotEmpty() }
+            }
 
-    private fun cacheKey(search: SuitabilitySearch, preference: HabitatPreference): String {
+    private fun cacheKey(search: SuitabilitySearch, preference: List<Pair<String, HabitatPreference>>): String {
         val text = "${search.toQuery()}|$preference"
         return Integer.toHexString(text.hashCode()) + "-" + Integer.toHexString(text.reversed().hashCode())
     }

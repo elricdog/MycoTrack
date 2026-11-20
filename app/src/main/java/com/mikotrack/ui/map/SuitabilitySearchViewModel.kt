@@ -5,6 +5,9 @@ import androidx.lifecycle.viewModelScope
 import com.mikotrack.data.prefs.SettingsStore
 import com.mikotrack.location.LocationTracker
 import com.mikotrack.maps.GeoPoint
+import com.mikotrack.maps.HotspotRequest
+import com.mikotrack.maps.HotspotRequests
+import com.mikotrack.maps.HotspotSearches
 import com.mikotrack.maps.SuitabilitySearch
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -75,6 +78,55 @@ class SuitabilitySearchViewModel(
             )
             settingsStore.startSuitabilitySearch(search)
             SuitabilityFocusRequests.post(search)
+            HotspotSearches.clear()
+            HotspotRequests.clear()
+            onDone(true)
+        }
+    }
+
+    /**
+     * Stores a multi-species search of the likely areas of every selected species at
+     * once and, when [findHotspots] is set, asks for the three places of the circle
+     * where more species of the selection could be found. The centre is chosen like in
+     * [start].
+     *
+     * @param onDone called on the main thread with `true` once the search is stored and
+     * the map can be shown, or `false` when there is no centre to search around.
+     */
+    fun startMulti(
+        species: List<Pair<String, String>>,
+        radiusKm: Int,
+        aroundMapCenter: Boolean,
+        mapCenter: GeoPoint?,
+        findHotspots: Boolean,
+        language: String,
+        onDone: (Boolean) -> Unit,
+    ) {
+        viewModelScope.launch {
+            val center = if (aroundMapCenter) {
+                mapCenter
+            } else {
+                withContext(Dispatchers.IO) {
+                    runCatching { locationTracker.lastKnownLocation() }.getOrNull()
+                        ?.let { GeoPoint(it.latitude, it.longitude) }
+                } ?: mapCenter
+            }
+            if (center == null) {
+                onDone(false)
+                return@launch
+            }
+            val search = SuitabilitySearch(
+                speciesId = species.joinToString(",") { it.first },
+                speciesName = species.joinToString(", ") { it.second },
+                latitude = center.latitude,
+                longitude = center.longitude,
+                radiusMeters = radiusKm * 1000,
+            )
+            settingsStore.startSuitabilitySearch(search)
+            SuitabilityFocusRequests.post(search)
+            HotspotSearches.clear()
+            HotspotRequests.clear()
+            if (findHotspots) HotspotRequests.post(HotspotRequest(search, language))
             onDone(true)
         }
     }

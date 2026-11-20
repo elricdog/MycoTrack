@@ -16,6 +16,7 @@ import androidx.compose.ui.viewinterop.AndroidView
 import com.mikotrack.maps.GeoPoint
 import com.mikotrack.maps.HabitatLayerManager
 import com.mikotrack.maps.HabitatLayers
+import com.mikotrack.maps.Hotspot
 import com.mikotrack.maps.MapIconFactory
 import com.mikotrack.maps.MapLayer
 import com.mikotrack.maps.MapOverlayManager
@@ -114,6 +115,12 @@ class MapController {
 
     /** Invoked when the user taps a waypoint marker or a photograph bubble. */
     var onWaypointClicked: ((Long) -> Unit)? = null
+
+    /** Invoked when the user taps one of the hotspot marks of a multi-species search. */
+    var onHotspotClicked: ((Int) -> Unit)? = null
+
+    /** The hotspot marks of a multi-species search, drawn while its search is active. */
+    private var lastHotspots: List<Hotspot> = emptyList()
 
     /** Invoked with the latitude and longitude of a long press on the map. */
     var onMapLongClicked: ((Double, Double) -> Unit)? = null
@@ -396,6 +403,11 @@ class MapController {
             mapLibreMap.addOnCameraMoveListener(cameraMoveListener)
             mapLibreMap.addOnCameraIdleListener(cameraIdleListener)
             mapLibreMap.addOnMapClickListener { latLng ->
+                val rank = hotspotAt(mapLibreMap, latLng)
+                if (rank != null) {
+                    onHotspotClicked?.invoke(rank)
+                    return@addOnMapClickListener true
+                }
                 val waypointId = waypointAt(mapLibreMap, latLng) ?: return@addOnMapClickListener false
                 onWaypointClicked?.invoke(waypointId)
                 true
@@ -451,6 +463,37 @@ class MapController {
             map.queryRenderedFeatures(area, MapOverlayManager.WAYPOINT_LAYER)
         }.getOrNull()?.firstOrNull()
         return marker?.getNumberProperty("id")?.toLong()
+    }
+
+    /** The rank of the hotspot mark tapped, if the tap fell on one. */
+    private fun hotspotAt(map: MapLibreMap, latLng: LatLng): Int? {
+        if (lastHotspots.isEmpty()) return null
+        val point = map.projection.toScreenLocation(latLng)
+        val density = mapView?.resources?.displayMetrics?.density ?: 1f
+        val tolerance = WAYPOINT_TAP_TOLERANCE_DP * density
+        val area = RectF(point.x - tolerance, point.y - tolerance, point.x + tolerance, point.y + tolerance)
+        val feature = runCatching {
+            map.queryRenderedFeatures(area, MapOverlayManager.HOTSPOT_LAYER)
+        }.getOrNull()?.firstOrNull()
+        return feature?.getNumberProperty("rank")?.toInt()
+    }
+
+    /** Draws the hotspot marks of a multi-species search, or removes them when empty. */
+    fun setHotspots(hotspots: List<Hotspot>) {
+        lastHotspots = hotspots
+        val style = map?.style ?: return
+        if (!style.isFullyLoaded) return
+        registerHotspotIcons(style)
+        runCatching { overlayManager.applyHotspots(style, hotspots) }
+    }
+
+    private fun registerHotspotIcons(style: Style) {
+        lastHotspots.forEach { hotspot ->
+            val id = MapIconFactory.hotspotIconId(hotspot.rank)
+            if (style.getImage(id) == null) {
+                runCatching { style.addImage(id, MapIconFactory.hotspotIcon(hotspot.rank)) }
+            }
+        }
     }
 
     /** Shows or hides the photograph bubbles. */
@@ -604,6 +647,8 @@ class MapController {
             MapIconFactory.waypointIconId(category)
         }
         overlayManager.applyPhotoBubbles(style, bubbles)
+        registerHotspotIcons(style)
+        runCatching { overlayManager.applyHotspots(style, lastHotspots) }
         runCatching { overlayManager.applyMarker(style, pressedPoint) }
         runCatching { applySearchMarker(style) }
         overlayManager.applyPosition(style, position, bearing)

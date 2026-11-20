@@ -10,12 +10,37 @@
         "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lactarius_deliciosus_2010_G1.jpg"
       },
-      "season": [{ "from": 9, "to": 12 }],
+      "season": [
+        {
+          "from": 9,
+          "to": 12
+        }
+      ],
       "edibility": 5,
       "habitat": {
-        "trees": { "scots_pine": 0.9, "stone_pine": 0.9, "maritime_pine": 0.9, "black_pine": 0.8, "aleppo_pine": 0.5, "mountain_pine": 0.5, "mixed_conifers": 0.8, "mixed_conifer_broadleaf": 0.6, "fir_other_conifers": 0.3, "plantations": 0.4, "native_non_native": 0.3 },
-        "soil": { "acid": 1.0, "basic": 0.6, "other": 0.7 },
-        "aspect": { "n": 0.8, "s": 0.6, "e": 0.9 }
+        "trees": {
+          "scots_pine": 0.9,
+          "stone_pine": 0.9,
+          "maritime_pine": 0.9,
+          "black_pine": 0.8,
+          "aleppo_pine": 0.5,
+          "mountain_pine": 0.5,
+          "mixed_conifers": 0.8,
+          "mixed_conifer_broadleaf": 0.6,
+          "fir_other_conifers": 0.3,
+          "plantations": 0.4,
+          "native_non_native": 0.3
+        },
+        "soil": {
+          "acid": 1.0,
+          "basic": 0.6,
+          "other": 0.7
+        },
+        "aspect": {
+          "n": 0.8,
+          "s": 0.6,
+          "e": 0.9
+        }
       },
       "gallery": [
         {
@@ -26,7 +51,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:2011-11-26_Lactarius_deliciosus_(L.)_Gray_187161.jpg"
           },
-          "caption": { "ca": "Làmines i peu", "es": "Láminas y pie", "en": "Gills and stem" }
+          "caption": {
+            "ca": "Làmines i peu",
+            "es": "Láminas y pie",
+            "en": "Gills and stem"
+          }
         },
         {
           "image": "rovello_g2.jpg",
@@ -36,7 +65,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lactarius_deliciosus_(32969568682).jpg"
           },
-          "caption": { "ca": "Peu amb clotets taronja", "es": "Pie con hoyuelos anaranjados", "en": "Stem with orange pits" }
+          "caption": {
+            "ca": "Peu amb clotets taronja",
+            "es": "Pie con hoyuelos anaranjados",
+            "en": "Stem with orange pits"
+          }
         },
         {
           "image": "rovello_g3.jpg",
@@ -46,7 +79,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lactarius_deliciosus_bisected_WFalls_orig.jpg"
           },
-          "caption": { "ca": "Vista lateral", "es": "Vista lateral", "en": "Side view" }
+          "caption": {
+            "ca": "Vista lateral",
+            "es": "Vista lateral",
+            "en": "Side view"
+          }
         }
       ],
       "lookAlikeImages": [
@@ -58,7 +95,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lactarius_torminosus_September_2011.jpg"
           },
-          "caption": { "ca": "Lactarius torminosus – tòxic", "es": "Lactarius torminosus – tóxico", "en": "Lactarius torminosus – poisonous" },
+          "caption": {
+            "ca": "Lactarius torminosus – tòxic",
+            "es": "Lactarius torminosus – tóxico",
+            "en": "Lactarius torminosus – poisonous"
+          },
           "scientificName": "Lactarius torminosus",
           "toxic": true
         },
@@ -70,7 +111,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chrysorrheus.jpg"
           },
-          "caption": { "ca": "Lactarius chrysorrheus – indigest", "es": "Lactarius chrysorrheus – indigesto", "en": "Lactarius chrysorrheus – indigestible" },
+          "caption": {
+            "ca": "Lactarius chrysorrheus – indigest",
+            "es": "Lactarius chrysorrheus – indigesto",
+            "en": "Lactarius chrysorrheus – indigestible"
+          },
           "scientificName": "Lactarius chrysorrheus",
           "toxic": false
         }
@@ -86,12 +131,35 @@
         "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lactarius_sanguifluus_186490.jpg"
       },
-      "season": [{ "from": 9, "to": 12 }],
+      "season": [
+        {
+          "from": 9,
+          "to": 12
+        }
+      ],
       "edibility": 5,
       "habitat": {
-        "trees": { "aleppo_pine": 1.0, "stone_pine": 0.7, "black_pine": 0.7, "scots_pine": 0.5, "maritime_pine": 0.3, "mixed_conifers": 0.7, "mixed_conifer_broadleaf": 0.5, "junipers": 0.2, "plantations": 0.3 },
-        "soil": { "acid": 0.3, "basic": 1.0, "other": 0.6 },
-        "aspect": { "n": 0.7, "s": 0.7, "e": 0.9 }
+        "trees": {
+          "aleppo_pine": 1.0,
+          "stone_pine": 0.7,
+          "black_pine": 0.7,
+          "scots_pine": 0.5,
+          "maritime_pine": 0.3,
+          "mixed_conifers": 0.7,
+          "mixed_conifer_broadleaf": 0.5,
+          "junipers": 0.2,
+          "plantations": 0.3
+        },
+        "soil": {
+          "acid": 0.3,
+          "basic": 1.0,
+          "other": 0.6
+        },
+        "aspect": {
+          "n": 0.7,
+          "s": 0.7,
+          "e": 0.9
+        }
       },
       "gallery": [
         {
@@ -102,7 +170,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:2011-11-30_Lactarius_sanguifluus_(Paulet)_Fr_186489.jpg"
           },
-          "caption": { "ca": "Làmines i peu", "es": "Láminas y pie", "en": "Gills and stem" }
+          "caption": {
+            "ca": "Làmines i peu",
+            "es": "Láminas y pie",
+            "en": "Gills and stem"
+          }
         },
         {
           "image": "pinetell_g2.jpg",
@@ -112,7 +184,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Veririisikas1.jpg"
           },
-          "caption": { "ca": "Làtex vermell vinós", "es": "Látex rojo vinoso", "en": "Wine-red milk" }
+          "caption": {
+            "ca": "Làtex vermell vinós",
+            "es": "Látex rojo vinoso",
+            "en": "Wine-red milk"
+          }
         },
         {
           "image": "pinetell_g3.jpg",
@@ -122,7 +198,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lactarius_sanguifluus_2454.jpg"
           },
-          "caption": { "ca": "Vista lateral", "es": "Vista lateral", "en": "Side view" }
+          "caption": {
+            "ca": "Vista lateral",
+            "es": "Vista lateral",
+            "en": "Side view"
+          }
         }
       ],
       "lookAlikeImages": [
@@ -134,7 +214,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lactarius_torminosus_September_2011.jpg"
           },
-          "caption": { "ca": "Lactarius torminosus – tòxic", "es": "Lactarius torminosus – tóxico", "en": "Lactarius torminosus – poisonous" },
+          "caption": {
+            "ca": "Lactarius torminosus – tòxic",
+            "es": "Lactarius torminosus – tóxico",
+            "en": "Lactarius torminosus – poisonous"
+          },
           "scientificName": "Lactarius torminosus",
           "toxic": true
         }
@@ -150,12 +234,41 @@
         "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Boletus_edulis_(7).jpg"
       },
-      "season": [{ "from": 8, "to": 11 }],
+      "season": [
+        {
+          "from": 8,
+          "to": 11
+        }
+      ],
       "edibility": 5,
       "habitat": {
-        "trees": { "beech": 1.0, "chestnut": 0.8, "sessile_oak": 0.8, "pyrenean_oak": 0.7, "downy_oak": 0.6, "holm_oak": 0.3, "cork_oak": 0.3, "birch": 0.7, "mixed_broadleaf": 0.7, "scots_pine": 0.8, "mountain_pine": 0.6, "black_pine": 0.4, "fir_other_conifers": 0.9, "mixed_conifers": 0.8, "mixed_conifer_broadleaf": 0.8 },
-        "soil": { "acid": 1.0, "basic": 0.4, "other": 0.6 },
-        "aspect": { "n": 1.0, "s": 0.4, "e": 0.8 }
+        "trees": {
+          "beech": 1.0,
+          "chestnut": 0.8,
+          "sessile_oak": 0.8,
+          "pyrenean_oak": 0.7,
+          "downy_oak": 0.6,
+          "holm_oak": 0.3,
+          "cork_oak": 0.3,
+          "birch": 0.7,
+          "mixed_broadleaf": 0.7,
+          "scots_pine": 0.8,
+          "mountain_pine": 0.6,
+          "black_pine": 0.4,
+          "fir_other_conifers": 0.9,
+          "mixed_conifers": 0.8,
+          "mixed_conifer_broadleaf": 0.8
+        },
+        "soil": {
+          "acid": 1.0,
+          "basic": 0.4,
+          "other": 0.6
+        },
+        "aspect": {
+          "n": 1.0,
+          "s": 0.4,
+          "e": 0.8
+        }
       },
       "gallery": [
         {
@@ -166,7 +279,11 @@
             "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:AD2009Sep13_Boletus_edulis_04.jpg"
           },
-          "caption": { "ca": "Exemplar tallat", "es": "Ejemplar cortado", "en": "Cut specimen" }
+          "caption": {
+            "ca": "Exemplar tallat",
+            "es": "Ejemplar cortado",
+            "en": "Cut specimen"
+          }
         },
         {
           "image": "cep_g2.jpg",
@@ -176,7 +293,11 @@
             "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:AD2009Sep13_Boletus_edulis_03.jpg"
           },
-          "caption": { "ca": "Exemplar jove", "es": "Ejemplar joven", "en": "Young specimen" }
+          "caption": {
+            "ca": "Exemplar jove",
+            "es": "Ejemplar joven",
+            "en": "Young specimen"
+          }
         },
         {
           "image": "cep_g3.jpg",
@@ -186,7 +307,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:(Gemeine_Steinpilz)_Boletus_edulis.jpg"
           },
-          "caption": { "ca": "Grup d'exemplars", "es": "Grupo de ejemplares", "en": "Group of specimens" }
+          "caption": {
+            "ca": "Grup d'exemplars",
+            "es": "Grupo de ejemplares",
+            "en": "Group of specimens"
+          }
         }
       ],
       "lookAlikeImages": [
@@ -198,7 +323,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:H%C5%99ib_%C5%BElu%C4%8Dn%C3%ADk_6.jpg"
           },
-          "caption": { "ca": "Tylopilus felleus – molt amarg", "es": "Tylopilus felleus – muy amargo", "en": "Tylopilus felleus – very bitter" },
+          "caption": {
+            "ca": "Tylopilus felleus – molt amarg",
+            "es": "Tylopilus felleus – muy amargo",
+            "en": "Tylopilus felleus – very bitter"
+          },
           "scientificName": "Tylopilus felleus",
           "toxic": false
         },
@@ -210,7 +339,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Frankenwarte_10.08.2016_Satan%27s_Bolete_-_Rubroboletus_satanas_(28600649664).jpg"
           },
-          "caption": { "ca": "Rubroboletus satanas – tòxic", "es": "Rubroboletus satanas – tóxico", "en": "Rubroboletus satanas – poisonous" },
+          "caption": {
+            "ca": "Rubroboletus satanas – tòxic",
+            "es": "Rubroboletus satanas – tóxico",
+            "en": "Rubroboletus satanas – poisonous"
+          },
           "scientificName": "Rubroboletus satanas",
           "toxic": true
         }
@@ -226,12 +359,39 @@
         "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Boletus_aestivalis_7.jpg"
       },
-      "season": [{ "from": 6, "to": 10 }],
+      "season": [
+        {
+          "from": 6,
+          "to": 10
+        }
+      ],
       "edibility": 5,
       "habitat": {
-        "trees": { "holm_oak": 0.9, "cork_oak": 0.9, "downy_oak": 0.8, "sessile_oak": 0.8, "portuguese_oak": 0.7, "pyrenean_oak": 0.7, "chestnut": 0.9, "beech": 0.7, "mixed_broadleaf": 0.8, "strawberry_tree": 0.5, "mixed_conifer_broadleaf": 0.6, "scots_pine": 0.2, "riparian": 0.1 },
-        "soil": { "acid": 0.9, "basic": 0.5, "other": 0.6 },
-        "aspect": { "n": 0.7, "s": 0.7, "e": 0.8 }
+        "trees": {
+          "holm_oak": 0.9,
+          "cork_oak": 0.9,
+          "downy_oak": 0.8,
+          "sessile_oak": 0.8,
+          "portuguese_oak": 0.7,
+          "pyrenean_oak": 0.7,
+          "chestnut": 0.9,
+          "beech": 0.7,
+          "mixed_broadleaf": 0.8,
+          "strawberry_tree": 0.5,
+          "mixed_conifer_broadleaf": 0.6,
+          "scots_pine": 0.2,
+          "riparian": 0.1
+        },
+        "soil": {
+          "acid": 0.9,
+          "basic": 0.5,
+          "other": 0.6
+        },
+        "aspect": {
+          "n": 0.7,
+          "s": 0.7,
+          "e": 0.8
+        }
       },
       "gallery": [
         {
@@ -242,7 +402,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Boletus_reticulatus_(27473289563).jpg"
           },
-          "caption": { "ca": "Exemplar jove", "es": "Ejemplar joven", "en": "Young specimen" }
+          "caption": {
+            "ca": "Exemplar jove",
+            "es": "Ejemplar joven",
+            "en": "Young specimen"
+          }
         },
         {
           "image": "cep_estiu_g2.jpg",
@@ -252,7 +416,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Boletus_reticulatus_(28484417073).jpg"
           },
-          "caption": { "ca": "Vista lateral", "es": "Vista lateral", "en": "Side view" }
+          "caption": {
+            "ca": "Vista lateral",
+            "es": "Vista lateral",
+            "en": "Side view"
+          }
         },
         {
           "image": "cep_estiu_g3.jpg",
@@ -262,7 +430,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Boletus_reticulatus_(27484276973).jpg"
           },
-          "caption": { "ca": "Al seu hàbitat", "es": "En su hábitat", "en": "In its habitat" }
+          "caption": {
+            "ca": "Al seu hàbitat",
+            "es": "En su hábitat",
+            "en": "In its habitat"
+          }
         }
       ],
       "lookAlikeImages": [
@@ -274,7 +446,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:H%C5%99ib_%C5%BElu%C4%8Dn%C3%ADk_6.jpg"
           },
-          "caption": { "ca": "Tylopilus felleus – molt amarg", "es": "Tylopilus felleus – muy amargo", "en": "Tylopilus felleus – very bitter" },
+          "caption": {
+            "ca": "Tylopilus felleus – molt amarg",
+            "es": "Tylopilus felleus – muy amargo",
+            "en": "Tylopilus felleus – very bitter"
+          },
           "scientificName": "Tylopilus felleus",
           "toxic": false
         },
@@ -286,7 +462,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Frankenwarte_10.08.2016_Satan%27s_Bolete_-_Rubroboletus_satanas_(28600649664).jpg"
           },
-          "caption": { "ca": "Rubroboletus satanas – tòxic", "es": "Rubroboletus satanas – tóxico", "en": "Rubroboletus satanas – poisonous" },
+          "caption": {
+            "ca": "Rubroboletus satanas – tòxic",
+            "es": "Rubroboletus satanas – tóxico",
+            "en": "Rubroboletus satanas – poisonous"
+          },
           "scientificName": "Rubroboletus satanas",
           "toxic": true
         }
@@ -302,12 +482,42 @@
         "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:2007-07-14_Cantharellus_cibarius.jpg"
       },
-      "season": [{ "from": 6, "to": 11 }],
+      "season": [
+        {
+          "from": 6,
+          "to": 11
+        }
+      ],
       "edibility": 4,
       "habitat": {
-        "trees": { "holm_oak": 0.8, "cork_oak": 0.9, "chestnut": 0.9, "beech": 0.9, "sessile_oak": 0.8, "pyrenean_oak": 0.7, "downy_oak": 0.5, "birch": 0.6, "strawberry_tree": 0.6, "mixed_broadleaf": 0.8, "scots_pine": 0.6, "maritime_pine": 0.4, "stone_pine": 0.3, "fir_other_conifers": 0.6, "mixed_conifers": 0.5, "mixed_conifer_broadleaf": 0.8 },
-        "soil": { "acid": 1.0, "basic": 0.2, "other": 0.5 },
-        "aspect": { "n": 1.0, "s": 0.4, "e": 0.8 }
+        "trees": {
+          "holm_oak": 0.8,
+          "cork_oak": 0.9,
+          "chestnut": 0.9,
+          "beech": 0.9,
+          "sessile_oak": 0.8,
+          "pyrenean_oak": 0.7,
+          "downy_oak": 0.5,
+          "birch": 0.6,
+          "strawberry_tree": 0.6,
+          "mixed_broadleaf": 0.8,
+          "scots_pine": 0.6,
+          "maritime_pine": 0.4,
+          "stone_pine": 0.3,
+          "fir_other_conifers": 0.6,
+          "mixed_conifers": 0.5,
+          "mixed_conifer_broadleaf": 0.8
+        },
+        "soil": {
+          "acid": 1.0,
+          "basic": 0.2,
+          "other": 0.5
+        },
+        "aspect": {
+          "n": 1.0,
+          "s": 0.4,
+          "e": 0.8
+        }
       },
       "gallery": [
         {
@@ -318,7 +528,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cantharellus_cibarius_(50199063302).jpg"
           },
-          "caption": { "ca": "Plecs sota el barret", "es": "Pliegues bajo el sombrero", "en": "Ridges under the cap" }
+          "caption": {
+            "ca": "Plecs sota el barret",
+            "es": "Pliegues bajo el sombrero",
+            "en": "Ridges under the cap"
+          }
         },
         {
           "image": "rossinyol_g2.jpg",
@@ -328,7 +542,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cantharellus_cibarius_20180928_224540.jpg"
           },
-          "caption": { "ca": "Grup d'exemplars", "es": "Grupo de ejemplares", "en": "Group of specimens" }
+          "caption": {
+            "ca": "Grup d'exemplars",
+            "es": "Grupo de ejemplares",
+            "en": "Group of specimens"
+          }
         },
         {
           "image": "rossinyol_g3.jpg",
@@ -338,7 +556,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Botanical_Garden_Gothenburg_and_Angg%C3%A5rdsbergen_13.08.2017_Chanterelle_-_Cantharellus_cibarius_(37321571732).jpg"
           },
-          "caption": { "ca": "Exemplar jove", "es": "Ejemplar joven", "en": "Young specimen" }
+          "caption": {
+            "ca": "Exemplar jove",
+            "es": "Ejemplar joven",
+            "en": "Young specimen"
+          }
         }
       ],
       "lookAlikeImages": [
@@ -350,7 +572,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jackolantern_mushrooms_(20898601786).jpg"
           },
-          "caption": { "ca": "Omphalotus olearius – tòxic", "es": "Omphalotus olearius – tóxico", "en": "Omphalotus olearius – poisonous" },
+          "caption": {
+            "ca": "Omphalotus olearius – tòxic",
+            "es": "Omphalotus olearius – tóxico",
+            "en": "Omphalotus olearius – poisonous"
+          },
           "scientificName": "Omphalotus olearius",
           "toxic": true
         },
@@ -362,7 +588,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:False_Chanterelle_Hygrophoropsis_aurantiaca.jpg"
           },
-          "caption": { "ca": "Hygrophoropsis aurantiaca – no comestible", "es": "Hygrophoropsis aurantiaca – no comestible", "en": "Hygrophoropsis aurantiaca – inedible" },
+          "caption": {
+            "ca": "Hygrophoropsis aurantiaca – no comestible",
+            "es": "Hygrophoropsis aurantiaca – no comestible",
+            "en": "Hygrophoropsis aurantiaca – inedible"
+          },
           "scientificName": "Hygrophoropsis aurantiaca",
           "toxic": false
         }
@@ -378,12 +608,38 @@
         "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cantharellus_lutescens.jpg"
       },
-      "season": [{ "from": 10, "to": 1 }],
+      "season": [
+        {
+          "from": 10,
+          "to": 1
+        }
+      ],
       "edibility": 4,
       "habitat": {
-        "trees": { "fir_other_conifers": 0.7, "scots_pine": 0.8, "black_pine": 0.6, "mountain_pine": 0.6, "aleppo_pine": 0.4, "beech": 0.5, "holm_oak": 0.4, "downy_oak": 0.5, "mixed_broadleaf": 0.5, "mixed_conifers": 0.8, "mixed_conifer_broadleaf": 0.7, "junipers": 0.3 },
-        "soil": { "acid": 0.6, "basic": 0.9, "other": 0.6 },
-        "aspect": { "n": 1.0, "s": 0.2, "e": 0.6 }
+        "trees": {
+          "fir_other_conifers": 0.7,
+          "scots_pine": 0.8,
+          "black_pine": 0.6,
+          "mountain_pine": 0.6,
+          "aleppo_pine": 0.4,
+          "beech": 0.5,
+          "holm_oak": 0.4,
+          "downy_oak": 0.5,
+          "mixed_broadleaf": 0.5,
+          "mixed_conifers": 0.8,
+          "mixed_conifer_broadleaf": 0.7,
+          "junipers": 0.3
+        },
+        "soil": {
+          "acid": 0.6,
+          "basic": 0.9,
+          "other": 0.6
+        },
+        "aspect": {
+          "n": 1.0,
+          "s": 0.2,
+          "e": 0.6
+        }
       },
       "gallery": [
         {
@@ -394,7 +650,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kollakas_torbikseen1.jpg"
           },
-          "caption": { "ca": "Grup d'exemplars", "es": "Grupo de ejemplares", "en": "Group of specimens" }
+          "caption": {
+            "ca": "Grup d'exemplars",
+            "es": "Grupo de ejemplares",
+            "en": "Group of specimens"
+          }
         },
         {
           "image": "camagroc_g2.jpg",
@@ -404,7 +664,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kollakas_torbikseen2.jpg"
           },
-          "caption": { "ca": "Peus grocs i buits", "es": "Pies amarillos y huecos", "en": "Yellow, hollow stems" }
+          "caption": {
+            "ca": "Peus grocs i buits",
+            "es": "Pies amarillos y huecos",
+            "en": "Yellow, hollow stems"
+          }
         },
         {
           "image": "camagroc_g3.jpg",
@@ -414,7 +678,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cantharellus_aurora_Eestis.JPG"
           },
-          "caption": { "ca": "Al seu hàbitat", "es": "En su hábitat", "en": "In its habitat" }
+          "caption": {
+            "ca": "Al seu hàbitat",
+            "es": "En su hábitat",
+            "en": "In its habitat"
+          }
         }
       ],
       "lookAlikeImages": [
@@ -426,7 +694,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:K%C3%BChmv%C3%B6%C3%B6dik.jpg"
           },
-          "caption": { "ca": "Cortinarius rubellus – mortal", "es": "Cortinarius rubellus – mortal", "en": "Cortinarius rubellus – deadly" },
+          "caption": {
+            "ca": "Cortinarius rubellus – mortal",
+            "es": "Cortinarius rubellus – mortal",
+            "en": "Cortinarius rubellus – deadly"
+          },
           "scientificName": "Cortinarius rubellus",
           "toxic": true
         }
@@ -442,12 +714,37 @@
         "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Craterellus_cornucopioides_JPG1.jpg"
       },
-      "season": [{ "from": 9, "to": 12 }],
+      "season": [
+        {
+          "from": 9,
+          "to": 12
+        }
+      ],
       "edibility": 4,
       "habitat": {
-        "trees": { "beech": 1.0, "chestnut": 0.8, "holm_oak": 0.7, "sessile_oak": 0.7, "downy_oak": 0.6, "pyrenean_oak": 0.6, "cork_oak": 0.5, "birch": 0.3, "mixed_broadleaf": 0.8, "mixed_conifer_broadleaf": 0.6, "fir_other_conifers": 0.4 },
-        "soil": { "acid": 0.7, "basic": 0.7, "other": 0.6 },
-        "aspect": { "n": 1.0, "s": 0.3, "e": 0.7 }
+        "trees": {
+          "beech": 1.0,
+          "chestnut": 0.8,
+          "holm_oak": 0.7,
+          "sessile_oak": 0.7,
+          "downy_oak": 0.6,
+          "pyrenean_oak": 0.6,
+          "cork_oak": 0.5,
+          "birch": 0.3,
+          "mixed_broadleaf": 0.8,
+          "mixed_conifer_broadleaf": 0.6,
+          "fir_other_conifers": 0.4
+        },
+        "soil": {
+          "acid": 0.7,
+          "basic": 0.7,
+          "other": 0.6
+        },
+        "aspect": {
+          "n": 1.0,
+          "s": 0.3,
+          "e": 0.7
+        }
       },
       "gallery": [
         {
@@ -458,7 +755,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Black_trumpet_Craterellus_cornucopioides.jpg"
           },
-          "caption": { "ca": "Grup d'exemplars", "es": "Grupo de ejemplares", "en": "Group of specimens" }
+          "caption": {
+            "ca": "Grup d'exemplars",
+            "es": "Grupo de ejemplares",
+            "en": "Group of specimens"
+          }
         },
         {
           "image": "trompeta_morts_g2.jpg",
@@ -468,7 +769,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Craterellus_cornucopioides_(29074276793).jpg"
           },
-          "caption": { "ca": "Al seu hàbitat", "es": "En su hábitat", "en": "In its habitat" }
+          "caption": {
+            "ca": "Al seu hàbitat",
+            "es": "En su hábitat",
+            "en": "In its habitat"
+          }
         },
         {
           "image": "trompeta_morts_g3.jpg",
@@ -478,7 +783,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cantharellus_cornicopioides_90.jpg"
           },
-          "caption": { "ca": "Interior de la trompeta", "es": "Interior de la trompeta", "en": "Inside of the trumpet" }
+          "caption": {
+            "ca": "Interior de la trompeta",
+            "es": "Interior de la trompeta",
+            "en": "Inside of the trumpet"
+          }
         }
       ],
       "lookAlikeImages": [
@@ -490,7 +799,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Helvella_lacunosa_-_Mustam%C3%B6rsky,_Svart_hattmurkla,_Slate_grey_saddle_C_IMG_0362.JPG"
           },
-          "caption": { "ca": "Helvella lacunosa – tòxic en cru", "es": "Helvella lacunosa – tóxico en crudo", "en": "Helvella lacunosa – poisonous raw" },
+          "caption": {
+            "ca": "Helvella lacunosa – tòxic en cru",
+            "es": "Helvella lacunosa – tóxico en crudo",
+            "en": "Helvella lacunosa – poisonous raw"
+          },
           "scientificName": "Helvella lacunosa",
           "toxic": true
         }
@@ -506,12 +819,38 @@
         "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Oronges.jpg"
       },
-      "season": [{ "from": 7, "to": 10 }],
+      "season": [
+        {
+          "from": 7,
+          "to": 10
+        }
+      ],
       "edibility": 5,
       "habitat": {
-        "trees": { "cork_oak": 1.0, "holm_oak": 0.9, "chestnut": 0.9, "downy_oak": 0.7, "sessile_oak": 0.7, "portuguese_oak": 0.6, "pyrenean_oak": 0.6, "strawberry_tree": 0.5, "mixed_broadleaf": 0.7, "mixed_conifer_broadleaf": 0.5, "stone_pine": 0.3, "maritime_pine": 0.3 },
-        "soil": { "acid": 1.0, "basic": 0.3, "other": 0.6 },
-        "aspect": { "n": 0.5, "s": 0.9, "e": 0.8 }
+        "trees": {
+          "cork_oak": 1.0,
+          "holm_oak": 0.9,
+          "chestnut": 0.9,
+          "downy_oak": 0.7,
+          "sessile_oak": 0.7,
+          "portuguese_oak": 0.6,
+          "pyrenean_oak": 0.6,
+          "strawberry_tree": 0.5,
+          "mixed_broadleaf": 0.7,
+          "mixed_conifer_broadleaf": 0.5,
+          "stone_pine": 0.3,
+          "maritime_pine": 0.3
+        },
+        "soil": {
+          "acid": 1.0,
+          "basic": 0.3,
+          "other": 0.6
+        },
+        "aspect": {
+          "n": 0.5,
+          "s": 0.9,
+          "e": 0.8
+        }
       },
       "gallery": [
         {
@@ -522,7 +861,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Amanita_caesarea._Ekadia_Forest_Park_(2).jpg"
           },
-          "caption": { "ca": "Làmines grogues i volva blanca", "es": "Láminas amarillas y volva blanca", "en": "Yellow gills and white volva" }
+          "caption": {
+            "ca": "Làmines grogues i volva blanca",
+            "es": "Láminas amarillas y volva blanca",
+            "en": "Yellow gills and white volva"
+          }
         },
         {
           "image": "ou_de_reig_g2.jpg",
@@ -532,7 +875,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Amanita_caesarea_190;_DSC_0642.jpg"
           },
-          "caption": { "ca": "Exemplar sortint de l'ou", "es": "Ejemplar saliendo del huevo", "en": "Specimen emerging from the egg" }
+          "caption": {
+            "ca": "Exemplar sortint de l'ou",
+            "es": "Ejemplar saliendo del huevo",
+            "en": "Specimen emerging from the egg"
+          }
         },
         {
           "image": "ou_de_reig_g3.jpg",
@@ -542,7 +889,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Amanita_caesarea_Caesar%27s_Mushroom_%E1%83%9C%E1%83%98%E1%83%A7%E1%83%95%E1%83%98_(2).JPG"
           },
-          "caption": { "ca": "Làmines i peu", "es": "Láminas y pie", "en": "Gills and stem" }
+          "caption": {
+            "ca": "Làmines i peu",
+            "es": "Láminas y pie",
+            "en": "Gills and stem"
+          }
         }
       ],
       "lookAlikeImages": [
@@ -554,7 +905,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Amanita_muscaria_3.jpg"
           },
-          "caption": { "ca": "Amanita muscaria – tòxic", "es": "Amanita muscaria – tóxico", "en": "Amanita muscaria – poisonous" },
+          "caption": {
+            "ca": "Amanita muscaria – tòxic",
+            "es": "Amanita muscaria – tóxico",
+            "en": "Amanita muscaria – poisonous"
+          },
           "scientificName": "Amanita muscaria",
           "toxic": true
         },
@@ -566,7 +921,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Amanita_phalloides_(29069664382).jpg"
           },
-          "caption": { "ca": "Amanita phalloides – mortal", "es": "Amanita phalloides – mortal", "en": "Amanita phalloides – deadly" },
+          "caption": {
+            "ca": "Amanita phalloides – mortal",
+            "es": "Amanita phalloides – mortal",
+            "en": "Amanita phalloides – deadly"
+          },
           "scientificName": "Amanita phalloides",
           "toxic": true
         }
@@ -582,12 +941,34 @@
         "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hygrophorus_latitabundus1.JPG"
       },
-      "season": [{ "from": 10, "to": 1 }],
+      "season": [
+        {
+          "from": 10,
+          "to": 1
+        }
+      ],
       "edibility": 3,
       "habitat": {
-        "trees": { "aleppo_pine": 0.9, "black_pine": 0.9, "scots_pine": 0.8, "stone_pine": 0.6, "maritime_pine": 0.4, "mixed_conifers": 0.8, "mixed_conifer_broadleaf": 0.5, "junipers": 0.2 },
-        "soil": { "acid": 0.4, "basic": 1.0, "other": 0.6 },
-        "aspect": { "n": 0.8, "s": 0.5, "e": 0.8 }
+        "trees": {
+          "aleppo_pine": 0.9,
+          "black_pine": 0.9,
+          "scots_pine": 0.8,
+          "stone_pine": 0.6,
+          "maritime_pine": 0.4,
+          "mixed_conifers": 0.8,
+          "mixed_conifer_broadleaf": 0.5,
+          "junipers": 0.2
+        },
+        "soil": {
+          "acid": 0.4,
+          "basic": 1.0,
+          "other": 0.6
+        },
+        "aspect": {
+          "n": 0.8,
+          "s": 0.5,
+          "e": 0.8
+        }
       },
       "gallery": [
         {
@@ -598,7 +979,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hygophorus_latitabundus.jpg"
           },
-          "caption": { "ca": "Làmines i peu", "es": "Láminas y pie", "en": "Gills and stem" }
+          "caption": {
+            "ca": "Làmines i peu",
+            "es": "Láminas y pie",
+            "en": "Gills and stem"
+          }
         },
         {
           "image": "llenega_negra_g2.jpg",
@@ -608,7 +993,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hygrophorus_latitabundus2.JPG"
           },
-          "caption": { "ca": "Al seu hàbitat", "es": "En su hábitat", "en": "In its habitat" }
+          "caption": {
+            "ca": "Al seu hàbitat",
+            "es": "En su hábitat",
+            "en": "In its habitat"
+          }
         },
         {
           "image": "llenega_negra_g3.jpg",
@@ -618,7 +1007,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gro%C3%9Fe_Kiefern-Schneckling_Hygrophorus_latitabundus.jpg"
           },
-          "caption": { "ca": "Exemplars collits", "es": "Ejemplares recolectados", "en": "Picked specimens" }
+          "caption": {
+            "ca": "Exemplars collits",
+            "es": "Ejemplares recolectados",
+            "en": "Picked specimens"
+          }
         }
       ],
       "lookAlikeImages": [
@@ -630,7 +1023,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cortinarius_mucosus,_Anchor_Bay.jpg"
           },
-          "caption": { "ca": "Cortinarius mucosus – no comestible", "es": "Cortinarius mucosus – no comestible", "en": "Cortinarius mucosus – inedible" },
+          "caption": {
+            "ca": "Cortinarius mucosus – no comestible",
+            "es": "Cortinarius mucosus – no comestible",
+            "en": "Cortinarius mucosus – inedible"
+          },
           "scientificName": "Cortinarius mucosus",
           "toxic": false
         }
@@ -646,12 +1043,40 @@
         "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Calocybe_gambosa_080420wa.jpg"
       },
-      "season": [{ "from": 4, "to": 6 }],
+      "season": [
+        {
+          "from": 4,
+          "to": 6
+        }
+      ],
       "edibility": 5,
       "habitat": {
-        "trees": { "none": 0.9, "downy_oak": 0.4, "holm_oak": 0.3, "pyrenean_oak": 0.3, "sessile_oak": 0.3, "beech": 0.3, "mixed_broadleaf": 0.4, "other_broadleaf": 0.4, "riparian": 0.3, "scots_pine": 0.3, "black_pine": 0.3, "fir_other_conifers": 0.2, "mixed_conifer_broadleaf": 0.4, "junipers": 0.4 },
-        "soil": { "acid": 0.4, "basic": 1.0, "other": 0.7 },
-        "aspect": { "n": 0.6, "s": 0.7, "e": 0.8 }
+        "trees": {
+          "none": 0.9,
+          "downy_oak": 0.4,
+          "holm_oak": 0.3,
+          "pyrenean_oak": 0.3,
+          "sessile_oak": 0.3,
+          "beech": 0.3,
+          "mixed_broadleaf": 0.4,
+          "other_broadleaf": 0.4,
+          "riparian": 0.3,
+          "scots_pine": 0.3,
+          "black_pine": 0.3,
+          "fir_other_conifers": 0.2,
+          "mixed_conifer_broadleaf": 0.4,
+          "junipers": 0.4
+        },
+        "soil": {
+          "acid": 0.4,
+          "basic": 1.0,
+          "other": 0.7
+        },
+        "aspect": {
+          "n": 0.6,
+          "s": 0.7,
+          "e": 0.8
+        }
       },
       "gallery": [
         {
@@ -662,7 +1087,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Calocybe_gambosa_(34412661523).jpg"
           },
-          "caption": { "ca": "Làmines", "es": "Láminas", "en": "Gills" }
+          "caption": {
+            "ca": "Làmines",
+            "es": "Láminas",
+            "en": "Gills"
+          }
         },
         {
           "image": "moixerno_g2.jpg",
@@ -672,7 +1101,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Calocybe_gambosa_(36064595975).jpg"
           },
-          "caption": { "ca": "Grup d'exemplars", "es": "Grupo de ejemplares", "en": "Group of specimens" }
+          "caption": {
+            "ca": "Grup d'exemplars",
+            "es": "Grupo de ejemplares",
+            "en": "Group of specimens"
+          }
         },
         {
           "image": "moixerno_g3.jpg",
@@ -682,7 +1115,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Calocybe_gambosa_4.jpg"
           },
-          "caption": { "ca": "Al seu hàbitat", "es": "En su hábitat", "en": "In its habitat" }
+          "caption": {
+            "ca": "Al seu hàbitat",
+            "es": "En su hábitat",
+            "en": "In its habitat"
+          }
         }
       ],
       "lookAlikeImages": [
@@ -694,7 +1131,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:2010-04-27_Inocybe_erubescens.jpg"
           },
-          "caption": { "ca": "Inocybe erubescens – mortal", "es": "Inocybe erubescens – mortal", "en": "Inocybe erubescens – deadly" },
+          "caption": {
+            "ca": "Inocybe erubescens – mortal",
+            "es": "Inocybe erubescens – mortal",
+            "en": "Inocybe erubescens – deadly"
+          },
           "scientificName": "Inocybe erubescens",
           "toxic": true
         },
@@ -706,7 +1147,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:2013-11-02_Entoloma_sinuatum_(Bull.)_P._Kumm_393814.jpg"
           },
-          "caption": { "ca": "Entoloma sinuatum – tòxic", "es": "Entoloma sinuatum – tóxico", "en": "Entoloma sinuatum – poisonous" },
+          "caption": {
+            "ca": "Entoloma sinuatum – tòxic",
+            "es": "Entoloma sinuatum – tóxico",
+            "en": "Entoloma sinuatum – poisonous"
+          },
           "scientificName": "Entoloma sinuatum",
           "toxic": true
         }
@@ -722,12 +1167,40 @@
         "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Marasmius_oreades_garden_050829B.JPG"
       },
-      "season": [{ "from": 4, "to": 6 }, { "from": 9, "to": 11 }],
+      "season": [
+        {
+          "from": 4,
+          "to": 6
+        },
+        {
+          "from": 9,
+          "to": 11
+        }
+      ],
       "edibility": 4,
       "habitat": {
-        "trees": { "none": 1.0, "downy_oak": 0.2, "holm_oak": 0.1, "mixed_broadleaf": 0.1, "other_broadleaf": 0.2, "riparian": 0.2, "scots_pine": 0.1, "black_pine": 0.1, "junipers": 0.2, "plantations": 0.1 },
-        "soil": { "acid": 0.6, "basic": 0.8, "other": 0.7 },
-        "aspect": { "n": 0.5, "s": 0.8, "e": 0.8 }
+        "trees": {
+          "none": 1.0,
+          "downy_oak": 0.2,
+          "holm_oak": 0.1,
+          "mixed_broadleaf": 0.1,
+          "other_broadleaf": 0.2,
+          "riparian": 0.2,
+          "scots_pine": 0.1,
+          "black_pine": 0.1,
+          "junipers": 0.2,
+          "plantations": 0.1
+        },
+        "soil": {
+          "acid": 0.6,
+          "basic": 0.8,
+          "other": 0.7
+        },
+        "aspect": {
+          "n": 0.5,
+          "s": 0.8,
+          "e": 0.8
+        }
       },
       "gallery": [
         {
@@ -738,7 +1211,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Brownish_mushroom_on_green_grass_3.JPG"
           },
-          "caption": { "ca": "Cercle de bruixes a la gespa", "es": "Corro de brujas en el césped", "en": "Fairy ring in grass" }
+          "caption": {
+            "ca": "Cercle de bruixes a la gespa",
+            "es": "Corro de brujas en el césped",
+            "en": "Fairy ring in grass"
+          }
         },
         {
           "image": "cama_sec_g2.jpg",
@@ -748,7 +1225,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:2010-10-16_Marasmius_oreades_(Bolton)_Fr_112385.jpg"
           },
-          "caption": { "ca": "Làmines i peu", "es": "Láminas y pie", "en": "Gills and stem" }
+          "caption": {
+            "ca": "Làmines i peu",
+            "es": "Láminas y pie",
+            "en": "Gills and stem"
+          }
         },
         {
           "image": "cama_sec_g3.jpg",
@@ -758,7 +1239,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Feldschwindling_02.jpg"
           },
-          "caption": { "ca": "Vista lateral", "es": "Vista lateral", "en": "Side view" }
+          "caption": {
+            "ca": "Vista lateral",
+            "es": "Vista lateral",
+            "en": "Side view"
+          }
         }
       ],
       "lookAlikeImages": [
@@ -770,7 +1255,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clitocybe_dealbata_1.jpg"
           },
-          "caption": { "ca": "Clitocybe dealbata – tòxic", "es": "Clitocybe dealbata – tóxico", "en": "Clitocybe dealbata – poisonous" },
+          "caption": {
+            "ca": "Clitocybe dealbata – tòxic",
+            "es": "Clitocybe dealbata – tóxico",
+            "en": "Clitocybe dealbata – poisonous"
+          },
           "scientificName": "Clitocybe dealbata",
           "toxic": true
         },
@@ -782,7 +1271,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:2007-08-29_Clitocybe_rivulosa.jpg"
           },
-          "caption": { "ca": "Clitocybe rivulosa – tòxic", "es": "Clitocybe rivulosa – tóxico", "en": "Clitocybe rivulosa – poisonous" },
+          "caption": {
+            "ca": "Clitocybe rivulosa – tòxic",
+            "es": "Clitocybe rivulosa – tóxico",
+            "en": "Clitocybe rivulosa – poisonous"
+          },
           "scientificName": "Clitocybe rivulosa",
           "toxic": true
         }
@@ -798,12 +1291,35 @@
         "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tricholoma_terreum_20061105wa.jpg"
       },
-      "season": [{ "from": 10, "to": 1 }],
+      "season": [
+        {
+          "from": 10,
+          "to": 1
+        }
+      ],
       "edibility": 3,
       "habitat": {
-        "trees": { "scots_pine": 0.9, "black_pine": 0.9, "aleppo_pine": 0.7, "stone_pine": 0.6, "mountain_pine": 0.5, "maritime_pine": 0.4, "fir_other_conifers": 0.4, "mixed_conifers": 0.9, "mixed_conifer_broadleaf": 0.5 },
-        "soil": { "acid": 0.5, "basic": 0.9, "other": 0.6 },
-        "aspect": { "n": 0.8, "s": 0.5, "e": 0.8 }
+        "trees": {
+          "scots_pine": 0.9,
+          "black_pine": 0.9,
+          "aleppo_pine": 0.7,
+          "stone_pine": 0.6,
+          "mountain_pine": 0.5,
+          "maritime_pine": 0.4,
+          "fir_other_conifers": 0.4,
+          "mixed_conifers": 0.9,
+          "mixed_conifer_broadleaf": 0.5
+        },
+        "soil": {
+          "acid": 0.5,
+          "basic": 0.9,
+          "other": 0.6
+        },
+        "aspect": {
+          "n": 0.8,
+          "s": 0.5,
+          "e": 0.8
+        }
       },
       "gallery": [
         {
@@ -814,7 +1330,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tricholoma_terreum_-_lamelles_et_pied_(Haute-Loire,_France).jpg"
           },
-          "caption": { "ca": "Làmines i peu", "es": "Láminas y pie", "en": "Gills and stem" }
+          "caption": {
+            "ca": "Làmines i peu",
+            "es": "Láminas y pie",
+            "en": "Gills and stem"
+          }
         },
         {
           "image": "fredolic_g2.jpg",
@@ -824,7 +1344,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Maaheinik4.jpg"
           },
-          "caption": { "ca": "Grup d'exemplars", "es": "Grupo de ejemplares", "en": "Group of specimens" }
+          "caption": {
+            "ca": "Grup d'exemplars",
+            "es": "Grupo de ejemplares",
+            "en": "Group of specimens"
+          }
         },
         {
           "image": "fredolic_g3.jpg",
@@ -834,7 +1358,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tricholoma_terreum_(2).JPG"
           },
-          "caption": { "ca": "Al seu hàbitat", "es": "En su hábitat", "en": "In its habitat" }
+          "caption": {
+            "ca": "Al seu hàbitat",
+            "es": "En su hábitat",
+            "en": "In its habitat"
+          }
         }
       ],
       "lookAlikeImages": [
@@ -846,7 +1374,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tricholoma_pardinum_112561_cropped.jpg"
           },
-          "caption": { "ca": "Tricholoma pardinum – tòxic", "es": "Tricholoma pardinum – tóxico", "en": "Tricholoma pardinum – poisonous" },
+          "caption": {
+            "ca": "Tricholoma pardinum – tòxic",
+            "es": "Tricholoma pardinum – tóxico",
+            "en": "Tricholoma pardinum – poisonous"
+          },
           "scientificName": "Tricholoma pardinum",
           "toxic": true
         },
@@ -858,7 +1390,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tricholoma_virgatum,_McCall_1.jpg"
           },
-          "caption": { "ca": "Tricholoma virgatum – tòxic", "es": "Tricholoma virgatum – tóxico", "en": "Tricholoma virgatum – poisonous" },
+          "caption": {
+            "ca": "Tricholoma virgatum – tòxic",
+            "es": "Tricholoma virgatum – tóxico",
+            "en": "Tricholoma virgatum – poisonous"
+          },
           "scientificName": "Tricholoma virgatum",
           "toxic": true
         }
@@ -874,12 +1410,36 @@
         "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Morchella_esculenta_-_DE_-_TH_-_2013-05-01_-_01.JPG"
       },
-      "season": [{ "from": 3, "to": 5 }],
+      "season": [
+        {
+          "from": 3,
+          "to": 5
+        }
+      ],
       "edibility": 4,
       "habitat": {
-        "trees": { "none": 0.4, "riparian": 0.9, "plantations": 0.5, "other_broadleaf": 0.5, "mixed_broadleaf": 0.4, "downy_oak": 0.3, "fir_other_conifers": 0.4, "black_pine": 0.3, "scots_pine": 0.3, "non_native": 0.3 },
-        "soil": { "acid": 0.4, "basic": 0.9, "other": 0.7 },
-        "aspect": { "n": 0.6, "s": 0.6, "e": 0.7 }
+        "trees": {
+          "none": 0.4,
+          "riparian": 0.9,
+          "plantations": 0.5,
+          "other_broadleaf": 0.5,
+          "mixed_broadleaf": 0.4,
+          "downy_oak": 0.3,
+          "fir_other_conifers": 0.4,
+          "black_pine": 0.3,
+          "scots_pine": 0.3,
+          "non_native": 0.3
+        },
+        "soil": {
+          "acid": 0.4,
+          "basic": 0.9,
+          "other": 0.7
+        },
+        "aspect": {
+          "n": 0.6,
+          "s": 0.6,
+          "e": 0.7
+        }
       },
       "gallery": [
         {
@@ -890,7 +1450,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Morchella_esculenta_(17160152652).jpg"
           },
-          "caption": { "ca": "Grup d'exemplars", "es": "Grupo de ejemplares", "en": "Group of specimens" }
+          "caption": {
+            "ca": "Grup d'exemplars",
+            "es": "Grupo de ejemplares",
+            "en": "Group of specimens"
+          }
         },
         {
           "image": "murgola_g2.jpg",
@@ -900,7 +1464,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Morchella_esculenta_(26593538756).jpg"
           },
-          "caption": { "ca": "Alvèols del barret", "es": "Alvéolos del sombrero", "en": "Honeycomb pits of the cap" }
+          "caption": {
+            "ca": "Alvèols del barret",
+            "es": "Alvéolos del sombrero",
+            "en": "Honeycomb pits of the cap"
+          }
         },
         {
           "image": "murgola_g3.jpg",
@@ -910,7 +1478,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Morchella_esculenta_(26902814196).jpg"
           },
-          "caption": { "ca": "Vista lateral", "es": "Vista lateral", "en": "Side view" }
+          "caption": {
+            "ca": "Vista lateral",
+            "es": "Vista lateral",
+            "en": "Side view"
+          }
         }
       ],
       "lookAlikeImages": [
@@ -922,7 +1494,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:False_Morel.jpg"
           },
-          "caption": { "ca": "Gyromitra esculenta – mortal", "es": "Gyromitra esculenta – mortal", "en": "Gyromitra esculenta – deadly" },
+          "caption": {
+            "ca": "Gyromitra esculenta – mortal",
+            "es": "Gyromitra esculenta – mortal",
+            "en": "Gyromitra esculenta – deadly"
+          },
           "scientificName": "Gyromitra esculenta",
           "toxic": true
         }
@@ -938,12 +1514,46 @@
         "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Parasol-Macrolepiota-procera.jpg"
       },
-      "season": [{ "from": 8, "to": 11 }],
+      "season": [
+        {
+          "from": 8,
+          "to": 11
+        }
+      ],
       "edibility": 4,
       "habitat": {
-        "trees": { "none": 0.3, "chestnut": 0.7, "cork_oak": 0.7, "holm_oak": 0.6, "downy_oak": 0.6, "sessile_oak": 0.6, "pyrenean_oak": 0.6, "beech": 0.5, "strawberry_tree": 0.5, "mixed_broadleaf": 0.7, "scots_pine": 0.6, "stone_pine": 0.6, "maritime_pine": 0.6, "aleppo_pine": 0.5, "black_pine": 0.5, "mixed_conifers": 0.6, "mixed_conifer_broadleaf": 0.7, "riparian": 0.3, "other_broadleaf": 0.5, "plantations": 0.4 },
-        "soil": { "acid": 0.8, "basic": 0.6, "other": 0.7 },
-        "aspect": { "n": 0.6, "s": 0.7, "e": 0.8 }
+        "trees": {
+          "none": 0.3,
+          "chestnut": 0.7,
+          "cork_oak": 0.7,
+          "holm_oak": 0.6,
+          "downy_oak": 0.6,
+          "sessile_oak": 0.6,
+          "pyrenean_oak": 0.6,
+          "beech": 0.5,
+          "strawberry_tree": 0.5,
+          "mixed_broadleaf": 0.7,
+          "scots_pine": 0.6,
+          "stone_pine": 0.6,
+          "maritime_pine": 0.6,
+          "aleppo_pine": 0.5,
+          "black_pine": 0.5,
+          "mixed_conifers": 0.6,
+          "mixed_conifer_broadleaf": 0.7,
+          "riparian": 0.3,
+          "other_broadleaf": 0.5,
+          "plantations": 0.4
+        },
+        "soil": {
+          "acid": 0.8,
+          "basic": 0.6,
+          "other": 0.7
+        },
+        "aspect": {
+          "n": 0.6,
+          "s": 0.7,
+          "e": 0.8
+        }
       },
       "gallery": [
         {
@@ -954,7 +1564,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Velika_sun%C4%8Danica.jpg"
           },
-          "caption": { "ca": "Anell doble i peu atigrat", "es": "Anillo doble y pie atigrado", "en": "Double ring and snakeskin stem" }
+          "caption": {
+            "ca": "Anell doble i peu atigrat",
+            "es": "Anillo doble y pie atigrado",
+            "en": "Double ring and snakeskin stem"
+          }
         },
         {
           "image": "apagallums_g2.jpg",
@@ -964,7 +1578,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0/at/deed.en",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Parasol_oder_Riesenschirmpilz,_Macrolepiota_procera_3.JPG"
           },
-          "caption": { "ca": "Barret amb esquames", "es": "Sombrero con escamas", "en": "Scaly cap" }
+          "caption": {
+            "ca": "Barret amb esquames",
+            "es": "Sombrero con escamas",
+            "en": "Scaly cap"
+          }
         },
         {
           "image": "apagallums_g3.jpg",
@@ -974,7 +1592,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bedle_vysok%C3%A1.JPG"
           },
-          "caption": { "ca": "Exemplar jove tancat", "es": "Ejemplar joven cerrado", "en": "Young closed specimen" }
+          "caption": {
+            "ca": "Exemplar jove tancat",
+            "es": "Ejemplar joven cerrado",
+            "en": "Young closed specimen"
+          }
         }
       ],
       "lookAlikeImages": [
@@ -986,7 +1608,11 @@
             "licenceUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lepiota_brunneoincarnata_060823w.jpg"
           },
-          "caption": { "ca": "Lepiota brunneoincarnata – mortal", "es": "Lepiota brunneoincarnata – mortal", "en": "Lepiota brunneoincarnata – deadly" },
+          "caption": {
+            "ca": "Lepiota brunneoincarnata – mortal",
+            "es": "Lepiota brunneoincarnata – mortal",
+            "en": "Lepiota brunneoincarnata – deadly"
+          },
           "scientificName": "Lepiota brunneoincarnata",
           "toxic": true
         },
@@ -998,7 +1624,11 @@
             "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Knolparasolzwammen._09-11-2023._(d.j.b).jpg"
           },
-          "caption": { "ca": "Chlorophyllum rhacodes – indigest", "es": "Chlorophyllum rhacodes – indigesto", "en": "Chlorophyllum rhacodes – indigestible" },
+          "caption": {
+            "ca": "Chlorophyllum rhacodes – indigest",
+            "es": "Chlorophyllum rhacodes – indigesto",
+            "en": "Chlorophyllum rhacodes – indigestible"
+          },
           "scientificName": "Chlorophyllum rhacodes",
           "toxic": false
         }
@@ -1014,12 +1644,37 @@
         "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pleurotus_ostreatus_JPG7.jpg"
       },
-      "season": [{ "from": 10, "to": 3 }],
+      "season": [
+        {
+          "from": 10,
+          "to": 3
+        }
+      ],
       "edibility": 4,
       "habitat": {
-        "trees": { "none": 0.3, "riparian": 1.0, "plantations": 0.7, "beech": 0.7, "other_broadleaf": 0.7, "mixed_broadleaf": 0.6, "chestnut": 0.4, "downy_oak": 0.3, "holm_oak": 0.3, "native_non_native": 0.3, "non_native": 0.4 },
-        "soil": { "acid": 0.6, "basic": 0.6, "other": 0.6 },
-        "aspect": { "n": 0.7, "s": 0.5, "e": 0.7 }
+        "trees": {
+          "none": 0.3,
+          "riparian": 1.0,
+          "plantations": 0.7,
+          "beech": 0.7,
+          "other_broadleaf": 0.7,
+          "mixed_broadleaf": 0.6,
+          "chestnut": 0.4,
+          "downy_oak": 0.3,
+          "holm_oak": 0.3,
+          "native_non_native": 0.3,
+          "non_native": 0.4
+        },
+        "soil": {
+          "acid": 0.6,
+          "basic": 0.6,
+          "other": 0.6
+        },
+        "aspect": {
+          "n": 0.7,
+          "s": 0.5,
+          "e": 0.7
+        }
       },
       "gallery": [
         {
@@ -1030,7 +1685,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Beauty,_this_Pleurotus_ostreatus_(Oyster_Mushroom,_D%3D_Austernseitling,_NL%3D_Gewone_oesterzwam)_at_a_Chestnuttree_Arnhem_-_panoramio.jpg"
           },
-          "caption": { "ca": "Làmines i peu", "es": "Láminas y pie", "en": "Gills and stem" }
+          "caption": {
+            "ca": "Làmines i peu",
+            "es": "Láminas y pie",
+            "en": "Gills and stem"
+          }
         },
         {
           "image": "girgola_g2.jpg",
@@ -1040,7 +1699,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Austernpilz_Pleurotus_ostreatus.jpg"
           },
-          "caption": { "ca": "Sobre fusta de planifoli", "es": "Sobre madera de planifolio", "en": "On broadleaf wood" }
+          "caption": {
+            "ca": "Sobre fusta de planifoli",
+            "es": "Sobre madera de planifolio",
+            "en": "On broadleaf wood"
+          }
         },
         {
           "image": "girgola_g3.jpg",
@@ -1050,7 +1713,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Austernpilz_Pleurotus_ostreatus_3.jpg"
           },
-          "caption": { "ca": "Exemplar jove", "es": "Ejemplar joven", "en": "Young specimen" }
+          "caption": {
+            "ca": "Exemplar jove",
+            "es": "Ejemplar joven",
+            "en": "Young specimen"
+          }
         }
       ],
       "lookAlikeImages": [
@@ -1062,7 +1729,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jackolantern_mushrooms_(20898601786).jpg"
           },
-          "caption": { "ca": "Omphalotus olearius – tòxic", "es": "Omphalotus olearius – tóxico", "en": "Omphalotus olearius – poisonous" },
+          "caption": {
+            "ca": "Omphalotus olearius – tòxic",
+            "es": "Omphalotus olearius – tóxico",
+            "en": "Omphalotus olearius – poisonous"
+          },
           "scientificName": "Omphalotus olearius",
           "toxic": true
         },
@@ -1074,7 +1745,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:2011-10-21_Pleurocybella_porrigens_177980.jpg"
           },
-          "caption": { "ca": "Pleurocybella porrigens – tòxic", "es": "Pleurocybella porrigens – tóxico", "en": "Pleurocybella porrigens – poisonous" },
+          "caption": {
+            "ca": "Pleurocybella porrigens – tòxic",
+            "es": "Pleurocybella porrigens – tóxico",
+            "en": "Pleurocybella porrigens – poisonous"
+          },
           "scientificName": "Pleurocybella porrigens",
           "toxic": true
         }
@@ -1090,12 +1765,41 @@
         "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Boletus_pinophilus_cropped.jpg"
       },
-      "season": [{ "from": 5, "to": 6 }, { "from": 9, "to": 11 }],
+      "season": [
+        {
+          "from": 5,
+          "to": 6
+        },
+        {
+          "from": 9,
+          "to": 11
+        }
+      ],
       "edibility": 5,
       "habitat": {
-        "trees": { "scots_pine": 1.0, "mountain_pine": 0.7, "black_pine": 0.6, "maritime_pine": 0.5, "stone_pine": 0.4, "fir_other_conifers": 0.7, "mixed_conifers": 0.8, "mixed_conifer_broadleaf": 0.7, "beech": 0.5, "chestnut": 0.5, "sessile_oak": 0.4 },
-        "soil": { "acid": 1.0, "basic": 0.3, "other": 0.6 },
-        "aspect": { "n": 0.9, "s": 0.5, "e": 0.8 }
+        "trees": {
+          "scots_pine": 1.0,
+          "mountain_pine": 0.7,
+          "black_pine": 0.6,
+          "maritime_pine": 0.5,
+          "stone_pine": 0.4,
+          "fir_other_conifers": 0.7,
+          "mixed_conifers": 0.8,
+          "mixed_conifer_broadleaf": 0.7,
+          "beech": 0.5,
+          "chestnut": 0.5,
+          "sessile_oak": 0.4
+        },
+        "soil": {
+          "acid": 1.0,
+          "basic": 0.3,
+          "other": 0.6
+        },
+        "aspect": {
+          "n": 0.9,
+          "s": 0.5,
+          "e": 0.8
+        }
       },
       "gallery": [
         {
@@ -1106,7 +1810,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Boletus_pinophilus_15.jpg"
           },
-          "caption": { "ca": "Grup d'exemplars", "es": "Grupo de ejemplares", "en": "Group of specimens" }
+          "caption": {
+            "ca": "Grup d'exemplars",
+            "es": "Grupo de ejemplares",
+            "en": "Group of specimens"
+          }
         },
         {
           "image": "cep_pi_g2.jpg",
@@ -1116,7 +1824,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Karl_Johan_svamp.jpeg"
           },
-          "caption": { "ca": "Al seu hàbitat", "es": "En su hábitat", "en": "In its habitat" }
+          "caption": {
+            "ca": "Al seu hàbitat",
+            "es": "En su hábitat",
+            "en": "In its habitat"
+          }
         },
         {
           "image": "cep_pi_g3.jpg",
@@ -1126,7 +1838,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Boletus_pinophilus_12.jpg"
           },
-          "caption": { "ca": "Vista lateral", "es": "Vista lateral", "en": "Side view" }
+          "caption": {
+            "ca": "Vista lateral",
+            "es": "Vista lateral",
+            "en": "Side view"
+          }
         }
       ],
       "lookAlikeImages": [
@@ -1138,7 +1854,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:H%C5%99ib_%C5%BElu%C4%8Dn%C3%ADk_6.jpg"
           },
-          "caption": { "ca": "Tylopilus felleus – molt amarg", "es": "Tylopilus felleus – muy amargo", "en": "Tylopilus felleus – very bitter" },
+          "caption": {
+            "ca": "Tylopilus felleus – molt amarg",
+            "es": "Tylopilus felleus – muy amargo",
+            "en": "Tylopilus felleus – very bitter"
+          },
           "scientificName": "Tylopilus felleus",
           "toxic": false
         },
@@ -1150,7 +1870,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Frankenwarte_10.08.2016_Satan%27s_Bolete_-_Rubroboletus_satanas_(28600649664).jpg"
           },
-          "caption": { "ca": "Rubroboletus satanas – tòxic", "es": "Rubroboletus satanas – tóxico", "en": "Rubroboletus satanas – poisonous" },
+          "caption": {
+            "ca": "Rubroboletus satanas – tòxic",
+            "es": "Rubroboletus satanas – tóxico",
+            "en": "Rubroboletus satanas – poisonous"
+          },
           "scientificName": "Rubroboletus satanas",
           "toxic": true
         }
@@ -1166,12 +1890,39 @@
         "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:2010-09-29_Russula_cyanoxantha_cropped.jpg"
       },
-      "season": [{ "from": 6, "to": 11 }],
+      "season": [
+        {
+          "from": 6,
+          "to": 11
+        }
+      ],
       "edibility": 4,
       "habitat": {
-        "trees": { "beech": 0.9, "chestnut": 0.9, "cork_oak": 0.8, "holm_oak": 0.7, "sessile_oak": 0.8, "pyrenean_oak": 0.7, "downy_oak": 0.6, "birch": 0.5, "strawberry_tree": 0.5, "mixed_broadleaf": 0.8, "mixed_conifer_broadleaf": 0.7, "scots_pine": 0.4, "fir_other_conifers": 0.4 },
-        "soil": { "acid": 1.0, "basic": 0.4, "other": 0.6 },
-        "aspect": { "n": 0.9, "s": 0.5, "e": 0.8 }
+        "trees": {
+          "beech": 0.9,
+          "chestnut": 0.9,
+          "cork_oak": 0.8,
+          "holm_oak": 0.7,
+          "sessile_oak": 0.8,
+          "pyrenean_oak": 0.7,
+          "downy_oak": 0.6,
+          "birch": 0.5,
+          "strawberry_tree": 0.5,
+          "mixed_broadleaf": 0.8,
+          "mixed_conifer_broadleaf": 0.7,
+          "scots_pine": 0.4,
+          "fir_other_conifers": 0.4
+        },
+        "soil": {
+          "acid": 1.0,
+          "basic": 0.4,
+          "other": 0.6
+        },
+        "aspect": {
+          "n": 0.9,
+          "s": 0.5,
+          "e": 0.8
+        }
       },
       "gallery": [
         {
@@ -1182,7 +1933,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Russula_cyanoxantha_19.jpg"
           },
-          "caption": { "ca": "Làmines i peu", "es": "Láminas y pie", "en": "Gills and stem" }
+          "caption": {
+            "ca": "Làmines i peu",
+            "es": "Láminas y pie",
+            "en": "Gills and stem"
+          }
         },
         {
           "image": "carlet_g2.jpg",
@@ -1192,7 +1947,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Russula_cyanoxantha_(43389477400).jpg"
           },
-          "caption": { "ca": "Forma de barret morat", "es": "Forma de sombrero morado", "en": "Purple-capped form" }
+          "caption": {
+            "ca": "Forma de barret morat",
+            "es": "Forma de sombrero morado",
+            "en": "Purple-capped form"
+          }
         },
         {
           "image": "carlet_g3.jpg",
@@ -1202,7 +1961,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Russula_cyanoxantha_(44290996435).jpg"
           },
-          "caption": { "ca": "Forma de barret gris verdós", "es": "Forma de sombrero gris verdoso", "en": "Grey-green form" }
+          "caption": {
+            "ca": "Forma de barret gris verdós",
+            "es": "Forma de sombrero gris verdoso",
+            "en": "Grey-green form"
+          }
         }
       ],
       "lookAlikeImages": [
@@ -1214,7 +1977,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Amanita_phalloides_(29069664382).jpg"
           },
-          "caption": { "ca": "Amanita phalloides – mortal", "es": "Amanita phalloides – mortal", "en": "Amanita phalloides – deadly" },
+          "caption": {
+            "ca": "Amanita phalloides – mortal",
+            "es": "Amanita phalloides – mortal",
+            "en": "Amanita phalloides – deadly"
+          },
           "scientificName": "Amanita phalloides",
           "toxic": true
         },
@@ -1226,7 +1993,11 @@
             "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mushroom-IMG_4384.JPG"
           },
-          "caption": { "ca": "Russula emetica – tòxic", "es": "Russula emetica – tóxico", "en": "Russula emetica – poisonous" },
+          "caption": {
+            "ca": "Russula emetica – tòxic",
+            "es": "Russula emetica – tóxico",
+            "en": "Russula emetica – poisonous"
+          },
           "scientificName": "Russula emetica",
           "toxic": true
         }
@@ -1242,12 +2013,37 @@
         "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hygrophorus_russula_(Schaeff.)_Kauffman._(15707688639).jpg"
       },
-      "season": [{ "from": 10, "to": 12 }],
+      "season": [
+        {
+          "from": 10,
+          "to": 12
+        }
+      ],
       "edibility": 3,
       "habitat": {
-        "trees": { "holm_oak": 1.0, "downy_oak": 0.9, "portuguese_oak": 0.8, "beech": 0.8, "sessile_oak": 0.7, "pyrenean_oak": 0.6, "cork_oak": 0.5, "chestnut": 0.4, "strawberry_tree": 0.3, "mixed_broadleaf": 0.8, "mixed_conifer_broadleaf": 0.5 },
-        "soil": { "acid": 0.4, "basic": 1.0, "other": 0.7 },
-        "aspect": { "n": 0.8, "s": 0.6, "e": 0.8 }
+        "trees": {
+          "holm_oak": 1.0,
+          "downy_oak": 0.9,
+          "portuguese_oak": 0.8,
+          "beech": 0.8,
+          "sessile_oak": 0.7,
+          "pyrenean_oak": 0.6,
+          "cork_oak": 0.5,
+          "chestnut": 0.4,
+          "strawberry_tree": 0.3,
+          "mixed_broadleaf": 0.8,
+          "mixed_conifer_broadleaf": 0.5
+        },
+        "soil": {
+          "acid": 0.4,
+          "basic": 1.0,
+          "other": 0.7
+        },
+        "aspect": {
+          "n": 0.8,
+          "s": 0.6,
+          "e": 0.8
+        }
       },
       "gallery": [
         {
@@ -1258,7 +2054,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:2011-10-09_Hygrophorus_russula_(Schaeff.)_Kauffman_175022.jpg"
           },
-          "caption": { "ca": "Làmines blanques tacades de vi", "es": "Láminas blancas manchadas de vino", "en": "White gills spotted with wine-red" }
+          "caption": {
+            "ca": "Làmines blanques tacades de vi",
+            "es": "Láminas blancas manchadas de vino",
+            "en": "White gills spotted with wine-red"
+          }
         },
         {
           "image": "escarlet_g2.jpg",
@@ -1268,7 +2068,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hygrophorus_russula_(Moselle,_France).jpg"
           },
-          "caption": { "ca": "Grup nombrós entre fulles de roure", "es": "Grupo numeroso entre hojas de roble", "en": "Large group among oak leaves" }
+          "caption": {
+            "ca": "Grup nombrós entre fulles de roure",
+            "es": "Grupo numeroso entre hojas de roble",
+            "en": "Large group among oak leaves"
+          }
         },
         {
           "image": "escarlet_g3.jpg",
@@ -1278,7 +2082,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:2011-10-09_Hygrophorus_russula_(Schaeff.)_Kauffman_175024.jpg"
           },
-          "caption": { "ca": "Barret i làmines", "es": "Sombrero y láminas", "en": "Cap and gills" }
+          "caption": {
+            "ca": "Barret i làmines",
+            "es": "Sombrero y láminas",
+            "en": "Cap and gills"
+          }
         }
       ],
       "lookAlikeImages": [
@@ -1290,7 +2098,11 @@
             "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mushroom-IMG_4384.JPG"
           },
-          "caption": { "ca": "Russula emetica – tòxic", "es": "Russula emetica – tóxico", "en": "Russula emetica – poisonous" },
+          "caption": {
+            "ca": "Russula emetica – tòxic",
+            "es": "Russula emetica – tóxico",
+            "en": "Russula emetica – poisonous"
+          },
           "scientificName": "Russula emetica",
           "toxic": true
         },
@@ -1302,7 +2114,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:2013-11-02_Entoloma_sinuatum_(Bull.)_P._Kumm_393814.jpg"
           },
-          "caption": { "ca": "Entoloma sinuatum – tòxic", "es": "Entoloma sinuatum – tóxico", "en": "Entoloma sinuatum – poisonous" },
+          "caption": {
+            "ca": "Entoloma sinuatum – tòxic",
+            "es": "Entoloma sinuatum – tóxico",
+            "en": "Entoloma sinuatum – poisonous"
+          },
           "scientificName": "Entoloma sinuatum",
           "toxic": true
         }
@@ -1318,12 +2134,38 @@
         "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Russula_virescens_B%C5%BB2.1.jpg"
       },
-      "season": [{ "from": 6, "to": 10 }],
+      "season": [
+        {
+          "from": 6,
+          "to": 10
+        }
+      ],
       "edibility": 4,
       "habitat": {
-        "trees": { "chestnut": 0.9, "cork_oak": 0.9, "holm_oak": 0.8, "sessile_oak": 0.8, "beech": 0.8, "pyrenean_oak": 0.7, "downy_oak": 0.6, "portuguese_oak": 0.5, "birch": 0.4, "strawberry_tree": 0.5, "mixed_broadleaf": 0.8, "mixed_conifer_broadleaf": 0.6 },
-        "soil": { "acid": 1.0, "basic": 0.3, "other": 0.6 },
-        "aspect": { "n": 0.7, "s": 0.6, "e": 0.8 }
+        "trees": {
+          "chestnut": 0.9,
+          "cork_oak": 0.9,
+          "holm_oak": 0.8,
+          "sessile_oak": 0.8,
+          "beech": 0.8,
+          "pyrenean_oak": 0.7,
+          "downy_oak": 0.6,
+          "portuguese_oak": 0.5,
+          "birch": 0.4,
+          "strawberry_tree": 0.5,
+          "mixed_broadleaf": 0.8,
+          "mixed_conifer_broadleaf": 0.6
+        },
+        "soil": {
+          "acid": 1.0,
+          "basic": 0.3,
+          "other": 0.6
+        },
+        "aspect": {
+          "n": 0.7,
+          "s": 0.6,
+          "e": 0.8
+        }
       },
       "gallery": [
         {
@@ -1334,7 +2176,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Green-cracking_Russula_-_Russula_virescens_(37432136886).jpg"
           },
-          "caption": { "ca": "Barret clivellat en mosaic", "es": "Sombrero agrietado en mosaico", "en": "Cap cracked like a mosaic" }
+          "caption": {
+            "ca": "Barret clivellat en mosaic",
+            "es": "Sombrero agrietado en mosaico",
+            "en": "Cap cracked like a mosaic"
+          }
         },
         {
           "image": "llora_verda_g2.jpg",
@@ -1344,7 +2190,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Green_Russula_-_Flickr_-_treegrow_(4).jpg"
           },
-          "caption": { "ca": "Làmines i peu", "es": "Láminas y pie", "en": "Gills and stem" }
+          "caption": {
+            "ca": "Làmines i peu",
+            "es": "Láminas y pie",
+            "en": "Gills and stem"
+          }
         },
         {
           "image": "llora_verda_g3.jpg",
@@ -1354,7 +2204,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Koroso.jpg"
           },
-          "caption": { "ca": "Grup d'exemplars", "es": "Grupo de ejemplares", "en": "Group of specimens" }
+          "caption": {
+            "ca": "Grup d'exemplars",
+            "es": "Grupo de ejemplares",
+            "en": "Group of specimens"
+          }
         }
       ],
       "lookAlikeImages": [
@@ -1366,7 +2220,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Amanita_phalloides_(29069664382).jpg"
           },
-          "caption": { "ca": "Amanita phalloides – mortal", "es": "Amanita phalloides – mortal", "en": "Amanita phalloides – deadly" },
+          "caption": {
+            "ca": "Amanita phalloides – mortal",
+            "es": "Amanita phalloides – mortal",
+            "en": "Amanita phalloides – deadly"
+          },
           "scientificName": "Amanita phalloides",
           "toxic": true
         }
@@ -1382,12 +2240,38 @@
         "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:2007-07-28_Russula_vesca_Fr_30066_cropped.jpg"
       },
-      "season": [{ "from": 6, "to": 10 }],
+      "season": [
+        {
+          "from": 6,
+          "to": 10
+        }
+      ],
       "edibility": 3,
       "habitat": {
-        "trees": { "beech": 0.8, "chestnut": 0.8, "sessile_oak": 0.8, "cork_oak": 0.7, "holm_oak": 0.6, "pyrenean_oak": 0.6, "downy_oak": 0.5, "birch": 0.5, "mixed_broadleaf": 0.7, "mixed_conifer_broadleaf": 0.6, "scots_pine": 0.4, "fir_other_conifers": 0.3 },
-        "soil": { "acid": 1.0, "basic": 0.3, "other": 0.6 },
-        "aspect": { "n": 0.8, "s": 0.5, "e": 0.8 }
+        "trees": {
+          "beech": 0.8,
+          "chestnut": 0.8,
+          "sessile_oak": 0.8,
+          "cork_oak": 0.7,
+          "holm_oak": 0.6,
+          "pyrenean_oak": 0.6,
+          "downy_oak": 0.5,
+          "birch": 0.5,
+          "mixed_broadleaf": 0.7,
+          "mixed_conifer_broadleaf": 0.6,
+          "scots_pine": 0.4,
+          "fir_other_conifers": 0.3
+        },
+        "soil": {
+          "acid": 1.0,
+          "basic": 0.3,
+          "other": 0.6
+        },
+        "aspect": {
+          "n": 0.8,
+          "s": 0.5,
+          "e": 0.8
+        }
       },
       "gallery": [
         {
@@ -1398,7 +2282,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bare-toothed_Russula_(Russula_vesca)_in_Tychy_(Paprocany),_Silesian_Voivodeship,_Poland,_August_2022.jpg"
           },
-          "caption": { "ca": "Cutícula que no arriba al marge", "es": "Cutícula que no llega al margen", "en": "Cuticle short of the margin" }
+          "caption": {
+            "ca": "Cutícula que no arriba al marge",
+            "es": "Cutícula que no llega al margen",
+            "en": "Cuticle short of the margin"
+          }
         },
         {
           "image": "llora_vesca_g2.jpg",
@@ -1408,7 +2296,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gibelarrosa_goiztiarra_azpitik.jpg"
           },
-          "caption": { "ca": "Làmines i peu", "es": "Láminas y pie", "en": "Gills and stem" }
+          "caption": {
+            "ca": "Làmines i peu",
+            "es": "Láminas y pie",
+            "en": "Gills and stem"
+          }
         },
         {
           "image": "llora_vesca_g3.jpg",
@@ -1418,7 +2310,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:DSC01754_Russula_vesca.jpg"
           },
-          "caption": { "ca": "Vista lateral", "es": "Vista lateral", "en": "Side view" }
+          "caption": {
+            "ca": "Vista lateral",
+            "es": "Vista lateral",
+            "en": "Side view"
+          }
         }
       ],
       "lookAlikeImages": [
@@ -1430,7 +2326,11 @@
             "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mushroom-IMG_4384.JPG"
           },
-          "caption": { "ca": "Russula emetica – tòxic", "es": "Russula emetica – tóxico", "en": "Russula emetica – poisonous" },
+          "caption": {
+            "ca": "Russula emetica – tòxic",
+            "es": "Russula emetica – tóxico",
+            "en": "Russula emetica – poisonous"
+          },
           "scientificName": "Russula emetica",
           "toxic": true
         }
@@ -1446,12 +2346,41 @@
         "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Russ.del.jpg"
       },
-      "season": [{ "from": 8, "to": 12 }],
+      "season": [
+        {
+          "from": 8,
+          "to": 12
+        }
+      ],
       "edibility": 2,
       "habitat": {
-        "trees": { "holm_oak": 0.8, "downy_oak": 0.7, "cork_oak": 0.6, "beech": 0.6, "chestnut": 0.6, "sessile_oak": 0.5, "pyrenean_oak": 0.5, "mixed_broadleaf": 0.7, "aleppo_pine": 0.6, "black_pine": 0.6, "scots_pine": 0.6, "stone_pine": 0.5, "fir_other_conifers": 0.4, "mixed_conifers": 0.6, "mixed_conifer_broadleaf": 0.7 },
-        "soil": { "acid": 0.7, "basic": 0.8, "other": 0.7 },
-        "aspect": { "n": 0.7, "s": 0.6, "e": 0.8 }
+        "trees": {
+          "holm_oak": 0.8,
+          "downy_oak": 0.7,
+          "cork_oak": 0.6,
+          "beech": 0.6,
+          "chestnut": 0.6,
+          "sessile_oak": 0.5,
+          "pyrenean_oak": 0.5,
+          "mixed_broadleaf": 0.7,
+          "aleppo_pine": 0.6,
+          "black_pine": 0.6,
+          "scots_pine": 0.6,
+          "stone_pine": 0.5,
+          "fir_other_conifers": 0.4,
+          "mixed_conifers": 0.6,
+          "mixed_conifer_broadleaf": 0.7
+        },
+        "soil": {
+          "acid": 0.7,
+          "basic": 0.8,
+          "other": 0.7
+        },
+        "aspect": {
+          "n": 0.7,
+          "s": 0.6,
+          "e": 0.8
+        }
       },
       "gallery": [
         {
@@ -1462,7 +2391,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.5",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:RussDel22.jpg"
           },
-          "caption": { "ca": "Làmines i peu", "es": "Láminas y pie", "en": "Gills and stem" }
+          "caption": {
+            "ca": "Làmines i peu",
+            "es": "Láminas y pie",
+            "en": "Gills and stem"
+          }
         },
         {
           "image": "pebras_g2.jpg",
@@ -1472,7 +2405,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gemeine_Wei%C3%9F-T%C3%A4ubling_Russula_delica.jpg"
           },
-          "caption": { "ca": "Vista lateral", "es": "Vista lateral", "en": "Side view" }
+          "caption": {
+            "ca": "Vista lateral",
+            "es": "Vista lateral",
+            "en": "Side view"
+          }
         },
         {
           "image": "pebras_g3.jpg",
@@ -1482,7 +2419,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Russula_Delica.jpg"
           },
-          "caption": { "ca": "Grup d'exemplars", "es": "Grupo de ejemplares", "en": "Group of specimens" }
+          "caption": {
+            "ca": "Grup d'exemplars",
+            "es": "Grupo de ejemplares",
+            "en": "Group of specimens"
+          }
         }
       ],
       "lookAlikeImages": [
@@ -1494,7 +2435,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:2011-07-09_Lactarius_piperatus_(L.)_Pers_157554.jpg"
           },
-          "caption": { "ca": "Lactarius piperatus – indigest", "es": "Lactarius piperatus – indigesto", "en": "Lactarius piperatus – indigestible" },
+          "caption": {
+            "ca": "Lactarius piperatus – indigest",
+            "es": "Lactarius piperatus – indigesto",
+            "en": "Lactarius piperatus – indigestible"
+          },
           "scientificName": "Lactarius piperatus",
           "toxic": false
         },
@@ -1506,7 +2451,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Amanita_virosa_11.jpg"
           },
-          "caption": { "ca": "Amanita virosa – mortal", "es": "Amanita virosa – mortal", "en": "Amanita virosa – deadly" },
+          "caption": {
+            "ca": "Amanita virosa – mortal",
+            "es": "Amanita virosa – mortal",
+            "en": "Amanita virosa – deadly"
+          },
           "scientificName": "Amanita virosa",
           "toxic": true
         }
@@ -1522,12 +2471,38 @@
         "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hygrophorus_eburneus-pastorino.JPG"
       },
-      "season": [{ "from": 10, "to": 12 }],
+      "season": [
+        {
+          "from": 10,
+          "to": 12
+        }
+      ],
       "edibility": 3,
       "habitat": {
-        "trees": { "aleppo_pine": 0.6, "black_pine": 0.7, "scots_pine": 0.7, "stone_pine": 0.6, "maritime_pine": 0.5, "mixed_conifers": 0.7, "mixed_conifer_broadleaf": 0.6, "beech": 0.8, "downy_oak": 0.5, "holm_oak": 0.5, "sessile_oak": 0.4, "mixed_broadleaf": 0.5 },
-        "soil": { "acid": 0.5, "basic": 0.9, "other": 0.6 },
-        "aspect": { "n": 0.8, "s": 0.5, "e": 0.8 }
+        "trees": {
+          "aleppo_pine": 0.6,
+          "black_pine": 0.7,
+          "scots_pine": 0.7,
+          "stone_pine": 0.6,
+          "maritime_pine": 0.5,
+          "mixed_conifers": 0.7,
+          "mixed_conifer_broadleaf": 0.6,
+          "beech": 0.8,
+          "downy_oak": 0.5,
+          "holm_oak": 0.5,
+          "sessile_oak": 0.4,
+          "mixed_broadleaf": 0.5
+        },
+        "soil": {
+          "acid": 0.5,
+          "basic": 0.9,
+          "other": 0.6
+        },
+        "aspect": {
+          "n": 0.8,
+          "s": 0.5,
+          "e": 0.8
+        }
       },
       "gallery": [
         {
@@ -1538,7 +2513,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hygrophorus_eburneus_342550623.jpg"
           },
-          "caption": { "ca": "Làmines i peu", "es": "Láminas y pie", "en": "Gills and stem" }
+          "caption": {
+            "ca": "Làmines i peu",
+            "es": "Láminas y pie",
+            "en": "Gills and stem"
+          }
         },
         {
           "image": "llenega_blanca_g2.jpg",
@@ -1548,7 +2527,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hygrophorus_eburneus_342550618.jpg"
           },
-          "caption": { "ca": "Grup d'exemplars", "es": "Grupo de ejemplares", "en": "Group of specimens" }
+          "caption": {
+            "ca": "Grup d'exemplars",
+            "es": "Grupo de ejemplares",
+            "en": "Group of specimens"
+          }
         },
         {
           "image": "llenega_blanca_g3.jpg",
@@ -1558,7 +2541,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Elfenbeinschneckling_Hygrophorus_eburneus.jpg"
           },
-          "caption": { "ca": "Vista lateral", "es": "Vista lateral", "en": "Side view" }
+          "caption": {
+            "ca": "Vista lateral",
+            "es": "Vista lateral",
+            "en": "Side view"
+          }
         }
       ],
       "lookAlikeImages": [
@@ -1570,7 +2557,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Amanita_virosa_11.jpg"
           },
-          "caption": { "ca": "Amanita virosa – mortal", "es": "Amanita virosa – mortal", "en": "Amanita virosa – deadly" },
+          "caption": {
+            "ca": "Amanita virosa – mortal",
+            "es": "Amanita virosa – mortal",
+            "en": "Amanita virosa – deadly"
+          },
           "scientificName": "Amanita virosa",
           "toxic": true
         },
@@ -1582,7 +2573,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clitocybe_dealbata_1.jpg"
           },
-          "caption": { "ca": "Clitocybe dealbata – tòxic", "es": "Clitocybe dealbata – tóxico", "en": "Clitocybe dealbata – poisonous" },
+          "caption": {
+            "ca": "Clitocybe dealbata – tòxic",
+            "es": "Clitocybe dealbata – tóxico",
+            "en": "Clitocybe dealbata – poisonous"
+          },
           "scientificName": "Clitocybe dealbata",
           "toxic": true
         }
@@ -1598,12 +2593,35 @@
         "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tricholoma_portentosum_181316.jpg"
       },
-      "season": [{ "from": 10, "to": 12 }],
+      "season": [
+        {
+          "from": 10,
+          "to": 12
+        }
+      ],
       "edibility": 4,
       "habitat": {
-        "trees": { "scots_pine": 0.9, "black_pine": 0.8, "fir_other_conifers": 0.6, "mountain_pine": 0.6, "aleppo_pine": 0.4, "stone_pine": 0.4, "mixed_conifers": 0.8, "mixed_conifer_broadleaf": 0.5, "beech": 0.3 },
-        "soil": { "acid": 0.8, "basic": 0.6, "other": 0.6 },
-        "aspect": { "n": 0.8, "s": 0.4, "e": 0.8 }
+        "trees": {
+          "scots_pine": 0.9,
+          "black_pine": 0.8,
+          "fir_other_conifers": 0.6,
+          "mountain_pine": 0.6,
+          "aleppo_pine": 0.4,
+          "stone_pine": 0.4,
+          "mixed_conifers": 0.8,
+          "mixed_conifer_broadleaf": 0.5,
+          "beech": 0.3
+        },
+        "soil": {
+          "acid": 0.8,
+          "basic": 0.6,
+          "other": 0.6
+        },
+        "aspect": {
+          "n": 0.8,
+          "s": 0.4,
+          "e": 0.8
+        }
       },
       "gallery": [
         {
@@ -1614,7 +2632,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tricholoma_portentosum_G8(3).jpg"
           },
-          "caption": { "ca": "Barret", "es": "Sombrero", "en": "Cap" }
+          "caption": {
+            "ca": "Barret",
+            "es": "Sombrero",
+            "en": "Cap"
+          }
         },
         {
           "image": "fredolic_gros_g2.jpg",
@@ -1624,7 +2646,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:G%C4%85ska_niekszta%C5%82tnaDSCN7008.jpg"
           },
-          "caption": { "ca": "Làmines i peu", "es": "Láminas y pie", "en": "Gills and stem" }
+          "caption": {
+            "ca": "Làmines i peu",
+            "es": "Láminas y pie",
+            "en": "Gills and stem"
+          }
         },
         {
           "image": "fredolic_gros_g3.jpg",
@@ -1634,7 +2660,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:G%C4%85ska_niekszta%C5%82tna.jpg"
           },
-          "caption": { "ca": "Al seu hàbitat", "es": "En su hábitat", "en": "In its habitat" }
+          "caption": {
+            "ca": "Al seu hàbitat",
+            "es": "En su hábitat",
+            "en": "In its habitat"
+          }
         }
       ],
       "lookAlikeImages": [
@@ -1646,7 +2676,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tricholoma_pardinum_112561_cropped.jpg"
           },
-          "caption": { "ca": "Tricholoma pardinum – tòxic", "es": "Tricholoma pardinum – tóxico", "en": "Tricholoma pardinum – poisonous" },
+          "caption": {
+            "ca": "Tricholoma pardinum – tòxic",
+            "es": "Tricholoma pardinum – tóxico",
+            "en": "Tricholoma pardinum – poisonous"
+          },
           "scientificName": "Tricholoma pardinum",
           "toxic": true
         },
@@ -1658,7 +2692,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:G%C4%85ska_zielonka_4163586757.jpg"
           },
-          "caption": { "ca": "Tricholoma equestre – tòxic", "es": "Tricholoma equestre – tóxico", "en": "Tricholoma equestre – poisonous" },
+          "caption": {
+            "ca": "Tricholoma equestre – tòxic",
+            "es": "Tricholoma equestre – tóxico",
+            "en": "Tricholoma equestre – poisonous"
+          },
           "scientificName": "Tricholoma equestre",
           "toxic": true
         },
@@ -1670,7 +2708,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tricholoma_virgatum,_McCall_1.jpg"
           },
-          "caption": { "ca": "Tricholoma virgatum – tòxic", "es": "Tricholoma virgatum – tóxico", "en": "Tricholoma virgatum – poisonous" },
+          "caption": {
+            "ca": "Tricholoma virgatum – tòxic",
+            "es": "Tricholoma virgatum – tóxico",
+            "en": "Tricholoma virgatum – poisonous"
+          },
           "scientificName": "Tricholoma virgatum",
           "toxic": true
         }
@@ -1686,12 +2728,35 @@
         "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.5",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chroogomphus_rutilus_Bryonia_orig.jpg"
       },
-      "season": [{ "from": 9, "to": 12 }],
+      "season": [
+        {
+          "from": 9,
+          "to": 12
+        }
+      ],
       "edibility": 3,
       "habitat": {
-        "trees": { "scots_pine": 0.9, "black_pine": 0.9, "aleppo_pine": 0.8, "stone_pine": 0.7, "maritime_pine": 0.6, "mountain_pine": 0.6, "mixed_conifers": 0.8, "mixed_conifer_broadleaf": 0.5, "plantations": 0.3 },
-        "soil": { "acid": 0.7, "basic": 0.8, "other": 0.7 },
-        "aspect": { "n": 0.7, "s": 0.6, "e": 0.8 }
+        "trees": {
+          "scots_pine": 0.9,
+          "black_pine": 0.9,
+          "aleppo_pine": 0.8,
+          "stone_pine": 0.7,
+          "maritime_pine": 0.6,
+          "mountain_pine": 0.6,
+          "mixed_conifers": 0.8,
+          "mixed_conifer_broadleaf": 0.5,
+          "plantations": 0.3
+        },
+        "soil": {
+          "acid": 0.7,
+          "basic": 0.8,
+          "other": 0.7
+        },
+        "aspect": {
+          "n": 0.7,
+          "s": 0.6,
+          "e": 0.8
+        }
       },
       "gallery": [
         {
@@ -1702,7 +2767,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chroogomphus_rutilus_(Schaeff.)_O.K._Mill._(11033350254).jpg"
           },
-          "caption": { "ca": "Làmines i peu", "es": "Láminas y pie", "en": "Gills and stem" }
+          "caption": {
+            "ca": "Làmines i peu",
+            "es": "Láminas y pie",
+            "en": "Gills and stem"
+          }
         },
         {
           "image": "cama_perdiu_g2.jpg",
@@ -1712,7 +2781,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tava-m%C3%A4nniliimik.jpg"
           },
-          "caption": { "ca": "Grup d'exemplars", "es": "Grupo de ejemplares", "en": "Group of specimens" }
+          "caption": {
+            "ca": "Grup d'exemplars",
+            "es": "Grupo de ejemplares",
+            "en": "Group of specimens"
+          }
         },
         {
           "image": "cama_perdiu_g3.jpg",
@@ -1722,7 +2795,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chroogomphus_rutilus_(Schaeff.)_O.K._Mill._(11033271625).jpg"
           },
-          "caption": { "ca": "Sota pins", "es": "Bajo pinos", "en": "Under pines" }
+          "caption": {
+            "ca": "Sota pins",
+            "es": "Bajo pinos",
+            "en": "Under pines"
+          }
         }
       ],
       "lookAlikeImages": [
@@ -1734,7 +2811,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:2013-10-16_Cortinarius_orellanus_1a.jpg"
           },
-          "caption": { "ca": "Cortinarius orellanus – mortal", "es": "Cortinarius orellanus – mortal", "en": "Cortinarius orellanus – deadly" },
+          "caption": {
+            "ca": "Cortinarius orellanus – mortal",
+            "es": "Cortinarius orellanus – mortal",
+            "en": "Cortinarius orellanus – deadly"
+          },
           "scientificName": "Cortinarius orellanus",
           "toxic": true
         }
@@ -1750,12 +2831,40 @@
         "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:2004-09-07_Suillus_granulatus.jpg"
       },
-      "season": [{ "from": 5, "to": 6 }, { "from": 9, "to": 12 }],
+      "season": [
+        {
+          "from": 5,
+          "to": 6
+        },
+        {
+          "from": 9,
+          "to": 12
+        }
+      ],
       "edibility": 2,
       "habitat": {
-        "trees": { "aleppo_pine": 0.9, "stone_pine": 0.9, "black_pine": 0.9, "scots_pine": 0.8, "maritime_pine": 0.8, "mountain_pine": 0.5, "mixed_conifers": 0.8, "mixed_conifer_broadleaf": 0.5, "plantations": 0.5, "native_non_native": 0.3 },
-        "soil": { "acid": 0.7, "basic": 0.8, "other": 0.7 },
-        "aspect": { "n": 0.7, "s": 0.7, "e": 0.8 }
+        "trees": {
+          "aleppo_pine": 0.9,
+          "stone_pine": 0.9,
+          "black_pine": 0.9,
+          "scots_pine": 0.8,
+          "maritime_pine": 0.8,
+          "mountain_pine": 0.5,
+          "mixed_conifers": 0.8,
+          "mixed_conifer_broadleaf": 0.5,
+          "plantations": 0.5,
+          "native_non_native": 0.3
+        },
+        "soil": {
+          "acid": 0.7,
+          "basic": 0.8,
+          "other": 0.7
+        },
+        "aspect": {
+          "n": 0.7,
+          "s": 0.7,
+          "e": 0.8
+        }
       },
       "gallery": [
         {
@@ -1766,7 +2875,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Suillus-granulatus.jpg"
           },
-          "caption": { "ca": "Porus", "es": "Poros", "en": "Pores" }
+          "caption": {
+            "ca": "Porus",
+            "es": "Poros",
+            "en": "Pores"
+          }
         },
         {
           "image": "molleric_g2.jpg",
@@ -1776,7 +2889,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:K%C3%B6rnchen-R%C3%B6hrling_Suillus_granulatus_1.jpg"
           },
-          "caption": { "ca": "Al seu hàbitat", "es": "En su hábitat", "en": "In its habitat" }
+          "caption": {
+            "ca": "Al seu hàbitat",
+            "es": "En su hábitat",
+            "en": "In its habitat"
+          }
         },
         {
           "image": "molleric_g3.jpg",
@@ -1786,7 +2903,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:2017-08-09_Suillus_granulatus_(L.)_Roussel_776585.jpg"
           },
-          "caption": { "ca": "Porus", "es": "Poros", "en": "Pores" }
+          "caption": {
+            "ca": "Porus",
+            "es": "Poros",
+            "en": "Pores"
+          }
         }
       ],
       "lookAlikeImages": [
@@ -1798,7 +2919,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Frankenwarte_10.08.2016_Satan%27s_Bolete_-_Rubroboletus_satanas_(28600649664).jpg"
           },
-          "caption": { "ca": "Rubroboletus satanas – tòxic", "es": "Rubroboletus satanas – tóxico", "en": "Rubroboletus satanas – poisonous" },
+          "caption": {
+            "ca": "Rubroboletus satanas – tòxic",
+            "es": "Rubroboletus satanas – tóxico",
+            "en": "Rubroboletus satanas – poisonous"
+          },
           "scientificName": "Rubroboletus satanas",
           "toxic": true
         }
@@ -1814,12 +2939,41 @@
         "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:2012-08-29_Hydnum_repandum_L_256175_crop.jpg"
       },
-      "season": [{ "from": 9, "to": 12 }],
+      "season": [
+        {
+          "from": 9,
+          "to": 12
+        }
+      ],
       "edibility": 4,
       "habitat": {
-        "trees": { "beech": 0.8, "holm_oak": 0.8, "cork_oak": 0.7, "chestnut": 0.8, "sessile_oak": 0.7, "downy_oak": 0.7, "pyrenean_oak": 0.6, "birch": 0.4, "strawberry_tree": 0.4, "mixed_broadleaf": 0.8, "fir_other_conifers": 0.7, "scots_pine": 0.7, "black_pine": 0.5, "mixed_conifers": 0.7, "mixed_conifer_broadleaf": 0.8 },
-        "soil": { "acid": 0.8, "basic": 0.7, "other": 0.7 },
-        "aspect": { "n": 1.0, "s": 0.4, "e": 0.7 }
+        "trees": {
+          "beech": 0.8,
+          "holm_oak": 0.8,
+          "cork_oak": 0.7,
+          "chestnut": 0.8,
+          "sessile_oak": 0.7,
+          "downy_oak": 0.7,
+          "pyrenean_oak": 0.6,
+          "birch": 0.4,
+          "strawberry_tree": 0.4,
+          "mixed_broadleaf": 0.8,
+          "fir_other_conifers": 0.7,
+          "scots_pine": 0.7,
+          "black_pine": 0.5,
+          "mixed_conifers": 0.7,
+          "mixed_conifer_broadleaf": 0.8
+        },
+        "soil": {
+          "acid": 0.8,
+          "basic": 0.7,
+          "other": 0.7
+        },
+        "aspect": {
+          "n": 1.0,
+          "s": 0.4,
+          "e": 0.7
+        }
       },
       "gallery": [
         {
@@ -1830,7 +2984,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:%22Sweet_Tooth%22,_Dentinum_repandum_(10190099594).jpg"
           },
-          "caption": { "ca": "Agulles sota el barret", "es": "Aguijones bajo el sombrero", "en": "Spines under the cap" }
+          "caption": {
+            "ca": "Agulles sota el barret",
+            "es": "Aguijones bajo el sombrero",
+            "en": "Spines under the cap"
+          }
         },
         {
           "image": "llengua_bou_g2.jpg",
@@ -1840,7 +2998,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hydnum_repandum_(30096528225).jpg"
           },
-          "caption": { "ca": "Al seu hàbitat", "es": "En su hábitat", "en": "In its habitat" }
+          "caption": {
+            "ca": "Al seu hàbitat",
+            "es": "En su hábitat",
+            "en": "In its habitat"
+          }
         }
       ],
       "lookAlikeImages": [
@@ -1852,7 +3014,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:H_Peckii_2019_KOPMB.jpg"
           },
-          "caption": { "ca": "Hydnellum peckii – no comestible", "es": "Hydnellum peckii – no comestible", "en": "Hydnellum peckii – inedible" },
+          "caption": {
+            "ca": "Hydnellum peckii – no comestible",
+            "es": "Hydnellum peckii – no comestible",
+            "en": "Hydnellum peckii – inedible"
+          },
           "scientificName": "Hydnellum peckii",
           "toxic": false
         },
@@ -1864,7 +3030,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sarcodon_scabrosus_(9734513169).jpg"
           },
-          "caption": { "ca": "Sarcodon scabrosus – molt amarg", "es": "Sarcodon scabrosus – muy amargo", "en": "Sarcodon scabrosus – very bitter" },
+          "caption": {
+            "ca": "Sarcodon scabrosus – molt amarg",
+            "es": "Sarcodon scabrosus – muy amargo",
+            "en": "Sarcodon scabrosus – very bitter"
+          },
           "scientificName": "Sarcodon scabrosus",
           "toxic": false
         }
@@ -1880,12 +3050,46 @@
         "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lepista_nuda_cropped.jpg"
       },
-      "season": [{ "from": 10, "to": 1 }],
+      "season": [
+        {
+          "from": 10,
+          "to": 1
+        }
+      ],
       "edibility": 3,
       "habitat": {
-        "trees": { "none": 0.3, "holm_oak": 0.7, "downy_oak": 0.7, "beech": 0.7, "chestnut": 0.6, "cork_oak": 0.5, "sessile_oak": 0.6, "pyrenean_oak": 0.6, "mixed_broadleaf": 0.7, "scots_pine": 0.7, "black_pine": 0.7, "aleppo_pine": 0.6, "stone_pine": 0.6, "fir_other_conifers": 0.6, "mixed_conifers": 0.7, "mixed_conifer_broadleaf": 0.8, "riparian": 0.4, "other_broadleaf": 0.5, "plantations": 0.4, "junipers": 0.3 },
-        "soil": { "acid": 0.6, "basic": 0.8, "other": 0.7 },
-        "aspect": { "n": 0.8, "s": 0.5, "e": 0.8 }
+        "trees": {
+          "none": 0.3,
+          "holm_oak": 0.7,
+          "downy_oak": 0.7,
+          "beech": 0.7,
+          "chestnut": 0.6,
+          "cork_oak": 0.5,
+          "sessile_oak": 0.6,
+          "pyrenean_oak": 0.6,
+          "mixed_broadleaf": 0.7,
+          "scots_pine": 0.7,
+          "black_pine": 0.7,
+          "aleppo_pine": 0.6,
+          "stone_pine": 0.6,
+          "fir_other_conifers": 0.6,
+          "mixed_conifers": 0.7,
+          "mixed_conifer_broadleaf": 0.8,
+          "riparian": 0.4,
+          "other_broadleaf": 0.5,
+          "plantations": 0.4,
+          "junipers": 0.3
+        },
+        "soil": {
+          "acid": 0.6,
+          "basic": 0.8,
+          "other": 0.7
+        },
+        "aspect": {
+          "n": 0.8,
+          "s": 0.5,
+          "e": 0.8
+        }
       },
       "gallery": [
         {
@@ -1896,7 +3100,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lepista_nuda_LC0372.jpg"
           },
-          "caption": { "ca": "Exemplar jove", "es": "Ejemplar joven", "en": "Young specimen" }
+          "caption": {
+            "ca": "Exemplar jove",
+            "es": "Ejemplar joven",
+            "en": "Young specimen"
+          }
         },
         {
           "image": "pimpinella_morada_g2.jpg",
@@ -1906,7 +3114,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clitocybe_Nuda,_AKA_Lepista_Nuda,_AKA_Wood_Blewit.jpg"
           },
-          "caption": { "ca": "Làmines i peu", "es": "Láminas y pie", "en": "Gills and stem" }
+          "caption": {
+            "ca": "Làmines i peu",
+            "es": "Láminas y pie",
+            "en": "Gills and stem"
+          }
         },
         {
           "image": "pimpinella_morada_g3.jpg",
@@ -1916,7 +3128,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clitocybe_nuda_(Fr.)_H.E._Bigelow_%26_A.H._Sm_267650.jpg"
           },
-          "caption": { "ca": "Grup d'exemplars", "es": "Grupo de ejemplares", "en": "Group of specimens" }
+          "caption": {
+            "ca": "Grup d'exemplars",
+            "es": "Grupo de ejemplares",
+            "en": "Group of specimens"
+          }
         }
       ],
       "lookAlikeImages": [
@@ -1928,7 +3144,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cortinarius_traganus_72952.jpg"
           },
-          "caption": { "ca": "Cortinarius traganus – no comestible", "es": "Cortinarius traganus – no comestible", "en": "Cortinarius traganus – inedible" },
+          "caption": {
+            "ca": "Cortinarius traganus – no comestible",
+            "es": "Cortinarius traganus – no comestible",
+            "en": "Cortinarius traganus – inedible"
+          },
           "scientificName": "Cortinarius traganus",
           "toxic": false
         }
@@ -1944,12 +3164,37 @@
         "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:2010-09-17_Ramaria_botrytis_crop.jpg"
       },
-      "season": [{ "from": 8, "to": 11 }],
+      "season": [
+        {
+          "from": 8,
+          "to": 11
+        }
+      ],
       "edibility": 2,
       "habitat": {
-        "trees": { "beech": 1.0, "fir_other_conifers": 0.8, "sessile_oak": 0.6, "pyrenean_oak": 0.6, "downy_oak": 0.5, "chestnut": 0.6, "holm_oak": 0.3, "mixed_broadleaf": 0.6, "scots_pine": 0.5, "mixed_conifers": 0.6, "mixed_conifer_broadleaf": 0.8 },
-        "soil": { "acid": 0.8, "basic": 0.6, "other": 0.6 },
-        "aspect": { "n": 1.0, "s": 0.3, "e": 0.7 }
+        "trees": {
+          "beech": 1.0,
+          "fir_other_conifers": 0.8,
+          "sessile_oak": 0.6,
+          "pyrenean_oak": 0.6,
+          "downy_oak": 0.5,
+          "chestnut": 0.6,
+          "holm_oak": 0.3,
+          "mixed_broadleaf": 0.6,
+          "scots_pine": 0.5,
+          "mixed_conifers": 0.6,
+          "mixed_conifer_broadleaf": 0.8
+        },
+        "soil": {
+          "acid": 0.8,
+          "basic": 0.6,
+          "other": 0.6
+        },
+        "aspect": {
+          "n": 1.0,
+          "s": 0.3,
+          "e": 0.7
+        }
       },
       "gallery": [
         {
@@ -1960,7 +3205,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ramaria_botrytis_702588.jpg"
           },
-          "caption": { "ca": "Vista lateral", "es": "Vista lateral", "en": "Side view" }
+          "caption": {
+            "ca": "Vista lateral",
+            "es": "Vista lateral",
+            "en": "Side view"
+          }
         },
         {
           "image": "peu_de_rata_g2.jpg",
@@ -1970,7 +3219,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ramaria_botrytis_299869.jpg"
           },
-          "caption": { "ca": "Puntes rosades de les branques", "es": "Puntas rosadas de las ramas", "en": "Pinkish branch tips" }
+          "caption": {
+            "ca": "Puntes rosades de les branques",
+            "es": "Puntas rosadas de las ramas",
+            "en": "Pinkish branch tips"
+          }
         },
         {
           "image": "peu_de_rata_g3.jpg",
@@ -1980,7 +3233,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Atzapar_puntagorriak_azpitik.jpg"
           },
-          "caption": { "ca": "Tronc blanc i gruixut", "es": "Tronco blanco y grueso", "en": "Thick white trunk" }
+          "caption": {
+            "ca": "Tronc blanc i gruixut",
+            "es": "Tronco blanco y grueso",
+            "en": "Thick white trunk"
+          }
         }
       ],
       "lookAlikeImages": [
@@ -1992,7 +3249,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ramaria_formosa_Alan_Rockefeller.JPG"
           },
-          "caption": { "ca": "Ramaria formosa – tòxic", "es": "Ramaria formosa – tóxico", "en": "Ramaria formosa – poisonous" },
+          "caption": {
+            "ca": "Ramaria formosa – tòxic",
+            "es": "Ramaria formosa – tóxico",
+            "en": "Ramaria formosa – poisonous"
+          },
           "scientificName": "Ramaria formosa",
           "toxic": true
         }
@@ -2008,12 +3269,37 @@
         "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:2012-10-03_Agaricus_campestris.jpg"
       },
-      "season": [{ "from": 5, "to": 6 }, { "from": 9, "to": 11 }],
+      "season": [
+        {
+          "from": 5,
+          "to": 6
+        },
+        {
+          "from": 9,
+          "to": 11
+        }
+      ],
       "edibility": 4,
       "habitat": {
-        "trees": { "none": 1.0, "riparian": 0.2, "other_broadleaf": 0.2, "plantations": 0.2, "mixed_broadleaf": 0.1, "downy_oak": 0.1, "holm_oak": 0.1 },
-        "soil": { "acid": 0.6, "basic": 0.7, "other": 0.8 },
-        "aspect": { "n": 0.6, "s": 0.7, "e": 0.8 }
+        "trees": {
+          "none": 1.0,
+          "riparian": 0.2,
+          "other_broadleaf": 0.2,
+          "plantations": 0.2,
+          "mixed_broadleaf": 0.1,
+          "downy_oak": 0.1,
+          "holm_oak": 0.1
+        },
+        "soil": {
+          "acid": 0.6,
+          "basic": 0.7,
+          "other": 0.8
+        },
+        "aspect": {
+          "n": 0.6,
+          "s": 0.7,
+          "e": 0.8
+        }
       },
       "gallery": [
         {
@@ -2024,7 +3310,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:2012-07-11_Agaricus_campestris_group_236668.jpg"
           },
-          "caption": { "ca": "Làmines rosades d'exemplar jove", "es": "Láminas rosadas de ejemplar joven", "en": "Pink gills of a young specimen" }
+          "caption": {
+            "ca": "Làmines rosades d'exemplar jove",
+            "es": "Láminas rosadas de ejemplar joven",
+            "en": "Pink gills of a young specimen"
+          }
         },
         {
           "image": "camperol_g2.jpg",
@@ -2034,7 +3324,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Agaricus_campestris_(48647010296).jpg"
           },
-          "caption": { "ca": "Làmines i peu", "es": "Láminas y pie", "en": "Gills and stem" }
+          "caption": {
+            "ca": "Làmines i peu",
+            "es": "Láminas y pie",
+            "en": "Gills and stem"
+          }
         },
         {
           "image": "camperol_g3.jpg",
@@ -2044,7 +3338,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Agaricus_campestris_IMG_20200912_170142.jpg"
           },
-          "caption": { "ca": "Làmines marró xocolata d'exemplar vell", "es": "Láminas marrón chocolate de ejemplar viejo", "en": "Chocolate-brown gills of an old specimen" }
+          "caption": {
+            "ca": "Làmines marró xocolata d'exemplar vell",
+            "es": "Láminas marrón chocolate de ejemplar viejo",
+            "en": "Chocolate-brown gills of an old specimen"
+          }
         }
       ],
       "lookAlikeImages": [
@@ -2056,7 +3354,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:2011-10-13_Agaricus_xanthodermus_Genev_181971.jpg"
           },
-          "caption": { "ca": "Agaricus xanthodermus – tòxic", "es": "Agaricus xanthodermus – tóxico", "en": "Agaricus xanthodermus – poisonous" },
+          "caption": {
+            "ca": "Agaricus xanthodermus – tòxic",
+            "es": "Agaricus xanthodermus – tóxico",
+            "en": "Agaricus xanthodermus – poisonous"
+          },
           "scientificName": "Agaricus xanthodermus",
           "toxic": true
         },
@@ -2068,7 +3370,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Amanita_virosa_11.jpg"
           },
-          "caption": { "ca": "Amanita virosa – mortal", "es": "Amanita virosa – mortal", "en": "Amanita virosa – deadly" },
+          "caption": {
+            "ca": "Amanita virosa – mortal",
+            "es": "Amanita virosa – mortal",
+            "en": "Amanita virosa – deadly"
+          },
           "scientificName": "Amanita virosa",
           "toxic": true
         }
@@ -2084,12 +3390,42 @@
         "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:2012-10-09_Agaricus_arvensis_Schaeff_270481.jpg"
       },
-      "season": [{ "from": 5, "to": 6 }, { "from": 9, "to": 11 }],
+      "season": [
+        {
+          "from": 5,
+          "to": 6
+        },
+        {
+          "from": 9,
+          "to": 11
+        }
+      ],
       "edibility": 4,
       "habitat": {
-        "trees": { "none": 0.8, "scots_pine": 0.4, "black_pine": 0.3, "fir_other_conifers": 0.4, "beech": 0.3, "mixed_conifers": 0.4, "mixed_conifer_broadleaf": 0.4, "mixed_broadleaf": 0.3, "riparian": 0.3, "other_broadleaf": 0.3, "downy_oak": 0.3, "holm_oak": 0.2 },
-        "soil": { "acid": 0.6, "basic": 0.7, "other": 0.7 },
-        "aspect": { "n": 0.6, "s": 0.6, "e": 0.8 }
+        "trees": {
+          "none": 0.8,
+          "scots_pine": 0.4,
+          "black_pine": 0.3,
+          "fir_other_conifers": 0.4,
+          "beech": 0.3,
+          "mixed_conifers": 0.4,
+          "mixed_conifer_broadleaf": 0.4,
+          "mixed_broadleaf": 0.3,
+          "riparian": 0.3,
+          "other_broadleaf": 0.3,
+          "downy_oak": 0.3,
+          "holm_oak": 0.2
+        },
+        "soil": {
+          "acid": 0.6,
+          "basic": 0.7,
+          "other": 0.7
+        },
+        "aspect": {
+          "n": 0.6,
+          "s": 0.6,
+          "e": 0.8
+        }
       },
       "gallery": [
         {
@@ -2100,7 +3436,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Agaricus_arvensis_14.jpg"
           },
-          "caption": { "ca": "Làmines i anell", "es": "Láminas y anillo", "en": "Gills and ring" }
+          "caption": {
+            "ca": "Làmines i anell",
+            "es": "Láminas y anillo",
+            "en": "Gills and ring"
+          }
         },
         {
           "image": "bola_de_neu_g2.jpg",
@@ -2110,7 +3450,11 @@
             "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Agaricus_arvensis_-_December_2024_-_Sarah_Stierch_02.jpg"
           },
-          "caption": { "ca": "Exemplar de bosc", "es": "Ejemplar de bosque", "en": "Woodland specimen" }
+          "caption": {
+            "ca": "Exemplar de bosc",
+            "es": "Ejemplar de bosque",
+            "en": "Woodland specimen"
+          }
         }
       ],
       "lookAlikeImages": [
@@ -2122,7 +3466,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:2011-10-13_Agaricus_xanthodermus_Genev_181971.jpg"
           },
-          "caption": { "ca": "Agaricus xanthodermus – tòxic", "es": "Agaricus xanthodermus – tóxico", "en": "Agaricus xanthodermus – poisonous" },
+          "caption": {
+            "ca": "Agaricus xanthodermus – tòxic",
+            "es": "Agaricus xanthodermus – tóxico",
+            "en": "Agaricus xanthodermus – poisonous"
+          },
           "scientificName": "Agaricus xanthodermus",
           "toxic": true
         },
@@ -2134,7 +3482,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Amanita_virosa_11.jpg"
           },
-          "caption": { "ca": "Amanita virosa – mortal", "es": "Amanita virosa – mortal", "en": "Amanita virosa – deadly" },
+          "caption": {
+            "ca": "Amanita virosa – mortal",
+            "es": "Amanita virosa – mortal",
+            "en": "Amanita virosa – deadly"
+          },
           "scientificName": "Amanita virosa",
           "toxic": true
         }
@@ -2150,12 +3502,36 @@
         "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Coprinus_comatus.jpg"
       },
-      "season": [{ "from": 3, "to": 6 }, { "from": 9, "to": 11 }],
+      "season": [
+        {
+          "from": 3,
+          "to": 6
+        },
+        {
+          "from": 9,
+          "to": 11
+        }
+      ],
       "edibility": 3,
       "habitat": {
-        "trees": { "none": 0.9, "riparian": 0.3, "plantations": 0.3, "other_broadleaf": 0.2, "non_native": 0.2, "mixed_broadleaf": 0.1 },
-        "soil": { "acid": 0.6, "basic": 0.7, "other": 0.8 },
-        "aspect": { "n": 0.6, "s": 0.6, "e": 0.7 }
+        "trees": {
+          "none": 0.9,
+          "riparian": 0.3,
+          "plantations": 0.3,
+          "other_broadleaf": 0.2,
+          "non_native": 0.2,
+          "mixed_broadleaf": 0.1
+        },
+        "soil": {
+          "acid": 0.6,
+          "basic": 0.7,
+          "other": 0.8
+        },
+        "aspect": {
+          "n": 0.6,
+          "s": 0.6,
+          "e": 0.7
+        }
       },
       "gallery": [
         {
@@ -2166,7 +3542,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/2.5",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:-_Coprinus_comatus_-.jpg"
           },
-          "caption": { "ca": "Exemplar jove", "es": "Ejemplar joven", "en": "Young specimen" }
+          "caption": {
+            "ca": "Exemplar jove",
+            "es": "Ejemplar joven",
+            "en": "Young specimen"
+          }
         },
         {
           "image": "bolet_tinta_g2.jpg",
@@ -2176,7 +3556,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:14.9.20_2_Strkov_to_Roudne_26_(50342759432).jpg"
           },
-          "caption": { "ca": "Exemplars madurs que es desfan en tinta", "es": "Ejemplares maduros deshaciéndose en tinta", "en": "Mature specimens dissolving into ink" }
+          "caption": {
+            "ca": "Exemplars madurs que es desfan en tinta",
+            "es": "Ejemplares maduros deshaciéndose en tinta",
+            "en": "Mature specimens dissolving into ink"
+          }
         },
         {
           "image": "bolet_tinta_g3.jpg",
@@ -2186,7 +3570,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Breil-Brigels_(actm)_20.jpg"
           },
-          "caption": { "ca": "Al seu hàbitat", "es": "En su hábitat", "en": "In its habitat" }
+          "caption": {
+            "ca": "Al seu hàbitat",
+            "es": "En su hábitat",
+            "en": "In its habitat"
+          }
         }
       ],
       "lookAlikeImages": [
@@ -2198,7 +3586,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Common_Inkcap,_2007-10-17_Leystra.JPG"
           },
-          "caption": { "ca": "Coprinopsis atramentaria – tòxic amb alcohol", "es": "Coprinopsis atramentaria – tóxico con alcohol", "en": "Coprinopsis atramentaria – poisonous with alcohol" },
+          "caption": {
+            "ca": "Coprinopsis atramentaria – tòxic amb alcohol",
+            "es": "Coprinopsis atramentaria – tóxico con alcohol",
+            "en": "Coprinopsis atramentaria – poisonous with alcohol"
+          },
           "scientificName": "Coprinopsis atramentaria",
           "toxic": true
         }
@@ -2214,12 +3606,36 @@
         "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Seta_de_cardo_(Pleurotus_eryngii),_2012-10-03,_DD_01.JPG"
       },
-      "season": [{ "from": 10, "to": 12 }, { "from": 3, "to": 5 }],
+      "season": [
+        {
+          "from": 10,
+          "to": 12
+        },
+        {
+          "from": 3,
+          "to": 5
+        }
+      ],
       "edibility": 5,
       "habitat": {
-        "trees": { "none": 1.0, "junipers": 0.2, "holm_oak": 0.1, "downy_oak": 0.1, "aleppo_pine": 0.1, "wild_olive": 0.1 },
-        "soil": { "acid": 0.4, "basic": 0.9, "other": 0.7 },
-        "aspect": { "n": 0.5, "s": 0.8, "e": 0.8 }
+        "trees": {
+          "none": 1.0,
+          "junipers": 0.2,
+          "holm_oak": 0.1,
+          "downy_oak": 0.1,
+          "aleppo_pine": 0.1,
+          "wild_olive": 0.1
+        },
+        "soil": {
+          "acid": 0.4,
+          "basic": 0.9,
+          "other": 0.7
+        },
+        "aspect": {
+          "n": 0.5,
+          "s": 0.8,
+          "e": 0.8
+        }
       },
       "gallery": [
         {
@@ -2230,7 +3646,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Seta_de_cardo_(Pleurotus_eryngii)_R%C3%ADo_Pisuerga._La_Horadada._Valoria_de_Aguilar-P.JPG"
           },
-          "caption": { "ca": "Làmines i peu", "es": "Láminas y pie", "en": "Gills and stem" }
+          "caption": {
+            "ca": "Làmines i peu",
+            "es": "Láminas y pie",
+            "en": "Gills and stem"
+          }
         },
         {
           "image": "girgola_panical_g2.jpg",
@@ -2240,7 +3660,11 @@
             "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Seta_de_cardo_(Pleurotus_eryngii)_silvestre_en_Gran_Canaria,_Islas_Canarias,_Espa%C3%B1a_(grupo).jpg"
           },
-          "caption": { "ca": "Exemplars entre panical", "es": "Ejemplares entre cardo corredor", "en": "Specimens among field eryngo" }
+          "caption": {
+            "ca": "Exemplars entre panical",
+            "es": "Ejemplares entre cardo corredor",
+            "en": "Specimens among field eryngo"
+          }
         },
         {
           "image": "girgola_panical_g3.jpg",
@@ -2250,7 +3674,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pleurotus_eryngii_-_Do%C4%9Fal_Ortam%C4%B1nda_%C3%87a%C5%9F%C4%B1r_Mantar%C4%B1.jpg"
           },
-          "caption": { "ca": "Grup d'exemplars", "es": "Grupo de ejemplares", "en": "Group of specimens" }
+          "caption": {
+            "ca": "Grup d'exemplars",
+            "es": "Grupo de ejemplares",
+            "en": "Group of specimens"
+          }
         }
       ],
       "lookAlikeImages": [
@@ -2262,7 +3690,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:2007-08-29_Clitocybe_rivulosa.jpg"
           },
-          "caption": { "ca": "Clitocybe rivulosa – tòxic", "es": "Clitocybe rivulosa – tóxico", "en": "Clitocybe rivulosa – poisonous" },
+          "caption": {
+            "ca": "Clitocybe rivulosa – tòxic",
+            "es": "Clitocybe rivulosa – tóxico",
+            "en": "Clitocybe rivulosa – poisonous"
+          },
           "scientificName": "Clitocybe rivulosa",
           "toxic": true
         },
@@ -2274,7 +3706,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jackolantern_mushrooms_(20898601786).jpg"
           },
-          "caption": { "ca": "Omphalotus olearius – tòxic", "es": "Omphalotus olearius – tóxico", "en": "Omphalotus olearius – poisonous" },
+          "caption": {
+            "ca": "Omphalotus olearius – tòxic",
+            "es": "Omphalotus olearius – tóxico",
+            "en": "Omphalotus olearius – poisonous"
+          },
           "scientificName": "Omphalotus olearius",
           "toxic": true
         }
@@ -2290,12 +3726,37 @@
         "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Agrocybe_aegerita.jpg"
       },
-      "season": [{ "from": 3, "to": 6 }, { "from": 9, "to": 11 }],
+      "season": [
+        {
+          "from": 3,
+          "to": 6
+        },
+        {
+          "from": 9,
+          "to": 11
+        }
+      ],
       "edibility": 4,
       "habitat": {
-        "trees": { "none": 0.3, "riparian": 1.0, "plantations": 0.9, "other_broadleaf": 0.5, "non_native": 0.4, "native_non_native": 0.3, "mixed_broadleaf": 0.3 },
-        "soil": { "acid": 0.6, "basic": 0.6, "other": 0.6 },
-        "aspect": { "n": 0.6, "s": 0.6, "e": 0.6 }
+        "trees": {
+          "none": 0.3,
+          "riparian": 1.0,
+          "plantations": 0.9,
+          "other_broadleaf": 0.5,
+          "non_native": 0.4,
+          "native_non_native": 0.3,
+          "mixed_broadleaf": 0.3
+        },
+        "soil": {
+          "acid": 0.6,
+          "basic": 0.6,
+          "other": 0.6
+        },
+        "aspect": {
+          "n": 0.6,
+          "s": 0.6,
+          "e": 0.6
+        }
       },
       "gallery": [
         {
@@ -2306,7 +3767,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:2010-10-22_Agrocybe_cylindrica_(DC_1815_-_Fr.)_Maire_1938_113767.jpg"
           },
-          "caption": { "ca": "Làmines i anell", "es": "Láminas y anillo", "en": "Gills and ring" }
+          "caption": {
+            "ca": "Làmines i anell",
+            "es": "Láminas y anillo",
+            "en": "Gills and ring"
+          }
         },
         {
           "image": "pollancro_g2.jpg",
@@ -2316,7 +3781,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:2010-10-22_Agrocybe_cylindrica_(DC_1815_-_Fr.)_Maire_1938_113770.jpg"
           },
-          "caption": { "ca": "Pinya d'exemplars en un tronc", "es": "Racimo de ejemplares en un tronco", "en": "Cluster on a trunk" }
+          "caption": {
+            "ca": "Pinya d'exemplars en un tronc",
+            "es": "Racimo de ejemplares en un tronco",
+            "en": "Cluster on a trunk"
+          }
         }
       ],
       "lookAlikeImages": [
@@ -2328,7 +3797,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:GalrinaMarginata.jpg"
           },
-          "caption": { "ca": "Galerina marginata – mortal", "es": "Galerina marginata – mortal", "en": "Galerina marginata – deadly" },
+          "caption": {
+            "ca": "Galerina marginata – mortal",
+            "es": "Galerina marginata – mortal",
+            "en": "Galerina marginata – deadly"
+          },
           "scientificName": "Galerina marginata",
           "toxic": true
         },
@@ -2340,7 +3813,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:%22Sulpher_Tuft%22,_Naematoloma_fasciculare_(9875911505).jpg"
           },
-          "caption": { "ca": "Hypholoma fasciculare – tòxic", "es": "Hypholoma fasciculare – tóxico", "en": "Hypholoma fasciculare – poisonous" },
+          "caption": {
+            "ca": "Hypholoma fasciculare – tòxic",
+            "es": "Hypholoma fasciculare – tóxico",
+            "en": "Hypholoma fasciculare – poisonous"
+          },
           "scientificName": "Hypholoma fasciculare",
           "toxic": true
         }
@@ -2356,12 +3833,35 @@
         "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:2008-08-08_Fistulina_hepatica_crop.jpg"
       },
-      "season": [{ "from": 8, "to": 11 }],
+      "season": [
+        {
+          "from": 8,
+          "to": 11
+        }
+      ],
       "edibility": 2,
       "habitat": {
-        "trees": { "chestnut": 1.0, "sessile_oak": 0.8, "downy_oak": 0.7, "pyrenean_oak": 0.7, "cork_oak": 0.7, "portuguese_oak": 0.6, "holm_oak": 0.5, "mixed_broadleaf": 0.6, "other_broadleaf": 0.3 },
-        "soil": { "acid": 0.8, "basic": 0.5, "other": 0.6 },
-        "aspect": { "n": 0.7, "s": 0.5, "e": 0.7 }
+        "trees": {
+          "chestnut": 1.0,
+          "sessile_oak": 0.8,
+          "downy_oak": 0.7,
+          "pyrenean_oak": 0.7,
+          "cork_oak": 0.7,
+          "portuguese_oak": 0.6,
+          "holm_oak": 0.5,
+          "mixed_broadleaf": 0.6,
+          "other_broadleaf": 0.3
+        },
+        "soil": {
+          "acid": 0.8,
+          "basic": 0.5,
+          "other": 0.6
+        },
+        "aspect": {
+          "n": 0.7,
+          "s": 0.5,
+          "e": 0.7
+        }
       },
       "gallery": [
         {
@@ -2372,7 +3872,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:2010-06-26_Fistulina_hepatica_47685.jpg"
           },
-          "caption": { "ca": "Cara inferior amb tubs", "es": "Cara inferior con tubos", "en": "Underside with tubes" }
+          "caption": {
+            "ca": "Cara inferior amb tubs",
+            "es": "Cara inferior con tubos",
+            "en": "Underside with tubes"
+          }
         },
         {
           "image": "fetge_bou_g2.jpg",
@@ -2382,7 +3886,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:2014-07-05_Fistulina_hepatica_(Schaeff.)_With_431989.jpg"
           },
-          "caption": { "ca": "Carn tallada, com un tros de carn", "es": "Carne cortada, como un filete", "en": "Cut flesh, like a steak" }
+          "caption": {
+            "ca": "Carn tallada, com un tros de carn",
+            "es": "Carne cortada, como un filete",
+            "en": "Cut flesh, like a steak"
+          }
         },
         {
           "image": "fetge_bou_g3.jpg",
@@ -2392,7 +3900,11 @@
             "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Beefsteak_Fungus%5E_Fistulina_hepatica_-_Flickr_-_gailhampshire.jpg"
           },
-          "caption": { "ca": "Al seu hàbitat", "es": "En su hábitat", "en": "In its habitat" }
+          "caption": {
+            "ca": "Al seu hàbitat",
+            "es": "En su hábitat",
+            "en": "In its habitat"
+          }
         }
       ],
       "lookAlikeImages": [
@@ -2404,8 +3916,961 @@
             "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bracket-fungi.jpg"
           },
-          "caption": { "ca": "Laetiporus sulphureus – comestible només jove i ben cuit", "es": "Laetiporus sulphureus – comestible solo joven y bien cocinado", "en": "Laetiporus sulphureus – edible only young and well cooked" },
+          "caption": {
+            "ca": "Laetiporus sulphureus – comestible només jove i ben cuit",
+            "es": "Laetiporus sulphureus – comestible solo joven y bien cocinado",
+            "en": "Laetiporus sulphureus – edible only young and well cooked"
+          },
           "scientificName": "Laetiporus sulphureus",
+          "toxic": false
+        }
+      ]
+    },
+    {
+      "id": "carneroll",
+      "scientificName": "Hygrophorus marzuolus",
+      "image": "carneroll.jpg",
+      "imageCredit": {
+        "author": "Amirosław",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hygrophorus_marzuolus-6.jpg"
+      },
+      "season": [
+        {
+          "from": 1,
+          "to": 4
+        }
+      ],
+      "edibility": 4,
+      "habitat": {
+        "trees": {
+          "mountain_pine": 0.8,
+          "scots_pine": 0.7,
+          "fir_other_conifers": 0.9,
+          "beech": 0.6,
+          "mixed_conifers": 0.8,
+          "mixed_conifer_broadleaf": 0.6,
+          "plantations": 0.3,
+          "none": 0.1
+        },
+        "soil": {
+          "acid": 1.0,
+          "basic": 0.4,
+          "other": 0.6
+        },
+        "aspect": {
+          "n": 0.8,
+          "s": 0.5,
+          "e": 0.7
+        }
+      },
+      "gallery": [
+        {
+          "image": "carneroll_g1.jpg",
+          "credit": {
+            "author": "GLJIVARSKO DRUSTVO NIS from Serbia",
+            "licence": "CC BY 2.0",
+            "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:HYGROPHORUS_MARZUOLUS_(F._Fr.)Bresadola_(5731126499).jpg"
+          },
+          "caption": {
+            "ca": "Aspecte general",
+            "es": "Aspecto general",
+            "en": "Overall view"
+          }
+        },
+        {
+          "image": "carneroll_g2.jpg",
+          "credit": {
+            "author": "GLJIVARSKO DRUSTVO NIS from Serbia",
+            "licence": "CC BY 2.0",
+            "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:HYGROPHORUS_MARZUOLUS_(F._Fr.)Bresadola_(5731129003).jpg"
+          },
+          "caption": {
+            "ca": "Hàbitat",
+            "es": "Hábitat",
+            "en": "Habitat"
+          }
+        }
+      ],
+      "lookAlikeImages": [
+        {
+          "image": "la_inocybe_erubescens.jpg",
+          "credit": {
+            "author": "Andreas Kunze",
+            "licence": "CC BY-SA 3.0",
+            "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:2010-04-27_Inocybe_erubescens.jpg"
+          },
+          "caption": {
+            "ca": "Inocybe erubescens – mortal",
+            "es": "Inocybe erubescens – mortal",
+            "en": "Inocybe erubescens – deadly"
+          },
+          "scientificName": "Inocybe erubescens",
+          "toxic": true
+        }
+      ]
+    },
+    {
+      "id": "trompeta_grisa",
+      "scientificName": "Craterellus tubaeformis",
+      "image": "trompeta_grisa.jpg",
+      "imageCredit": {
+        "author": "Strobilomyces",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Craterellus_tubaeformis_110921w.JPG"
+      },
+      "season": [
+        {
+          "from": 10,
+          "to": 12
+        }
+      ],
+      "edibility": 3,
+      "habitat": {
+        "trees": {
+          "mountain_pine": 0.7,
+          "scots_pine": 0.6,
+          "fir_other_conifers": 0.8,
+          "beech": 0.5,
+          "chestnut": 0.6,
+          "mixed_conifers": 0.7,
+          "mixed_conifer_broadleaf": 0.6,
+          "other_broadleaf": 0.3,
+          "none": 0.05
+        },
+        "soil": {
+          "acid": 1.0,
+          "basic": 0.3,
+          "other": 0.5
+        },
+        "aspect": {
+          "n": 0.8,
+          "s": 0.4,
+          "e": 0.6
+        }
+      },
+      "gallery": [
+        {
+          "image": "trompeta_grisa_g1.jpg",
+          "credit": {
+            "author": "User:Strobilomyces",
+            "licence": "CC BY-SA 3.0",
+            "licenceUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cantharellus_tubaeformis_20070927w.JPG"
+          },
+          "caption": {
+            "ca": "Aspecte general",
+            "es": "Aspecto general",
+            "en": "Overall view"
+          }
+        },
+        {
+          "image": "trompeta_grisa_g2.jpg",
+          "credit": {
+            "author": "Jerzy Opioła",
+            "licence": "CC BY-SA 4.0",
+            "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cantharellus_tubaeformis_G28.JPG"
+          },
+          "caption": {
+            "ca": "Hàbitat",
+            "es": "Hábitat",
+            "en": "Habitat"
+          }
+        }
+      ],
+      "lookAlikeImages": [
+        {
+          "image": "la_hygrophoropsis_aurantiaca.jpg",
+          "credit": {
+            "author": "Holger Krisp",
+            "licence": "CC BY 3.0",
+            "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:False_Chanterelle_Hygrophoropsis_aurantiaca.jpg"
+          },
+          "caption": {
+            "ca": "Hygrophoropsis aurantiaca – no comestible",
+            "es": "Hygrophoropsis aurantiaca – no comestible",
+            "en": "Hygrophoropsis aurantiaca – inedible"
+          },
+          "scientificName": "Hygrophoropsis aurantiaca",
+          "toxic": false
+        }
+      ]
+    },
+    {
+      "id": "rossinyol_ametista",
+      "scientificName": "Cantharellus amethysteus",
+      "image": "rossinyol_ametista.jpg",
+      "imageCredit": {
+        "author": "Holger Krisp",
+        "licence": "CC BY 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cantharellus_amethysteus_2012-09-28.jpg"
+      },
+      "season": [
+        {
+          "from": 5,
+          "to": 10
+        }
+      ],
+      "edibility": 4,
+      "habitat": {
+        "trees": {
+          "holm_oak": 0.6,
+          "cork_oak": 0.7,
+          "downy_oak": 0.7,
+          "portuguese_oak": 0.8,
+          "sessile_oak": 0.8,
+          "pyrenean_oak": 0.8,
+          "beech": 0.8,
+          "chestnut": 0.7,
+          "scots_pine": 0.4,
+          "mountain_pine": 0.4,
+          "black_pine": 0.3,
+          "fir_other_conifers": 0.5,
+          "mixed_broadleaf": 0.7,
+          "other_broadleaf": 0.6,
+          "riparian": 0.3,
+          "plantations": 0.3,
+          "none": 0.2
+        },
+        "soil": {
+          "acid": 0.8,
+          "basic": 0.8,
+          "other": 0.9
+        },
+        "aspect": {
+          "n": 0.8,
+          "s": 0.6,
+          "e": 0.7
+        }
+      },
+      "gallery": [
+        {
+          "image": "rossinyol_ametista_g1.jpg",
+          "credit": {
+            "author": "This image was created by user Gerhard Koller (Gerhard) at Mushroom Observer , a source for mycological images. You can contact this user here .",
+            "licence": "CC BY-SA 3.0",
+            "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:2008-08-12_Cantharellus_amethysteus_19170_cropped.JPG"
+          },
+          "caption": {
+            "ca": "Aspecte general",
+            "es": "Aspecto general",
+            "en": "Overall view"
+          }
+        },
+        {
+          "image": "rossinyol_ametista_g2.jpg",
+          "credit": {
+            "author": "Jose Angel Urquia Goitia",
+            "licence": "CC BY-SA 4.0",
+            "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cantharellus_amethysteus_1.jpg"
+          },
+          "caption": {
+            "ca": "Hàbitat",
+            "es": "Hábitat",
+            "en": "Habitat"
+          }
+        }
+      ],
+      "lookAlikeImages": [
+        {
+          "image": "la_hygrophoropsis_aurantiaca.jpg",
+          "credit": {
+            "author": "Holger Krisp",
+            "licence": "CC BY 3.0",
+            "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:False_Chanterelle_Hygrophoropsis_aurantiaca.jpg"
+          },
+          "caption": {
+            "ca": "Hygrophoropsis aurantiaca – no comestible",
+            "es": "Hygrophoropsis aurantiaca – no comestible",
+            "en": "Hygrophoropsis aurantiaca – inedible"
+          },
+          "scientificName": "Hygrophoropsis aurantiaca",
+          "toxic": false
+        }
+      ]
+    },
+    {
+      "id": "llora_daurada",
+      "scientificName": "Russula aurea",
+      "image": "llora_daurada.jpg",
+      "imageCredit": {
+        "author": "Holger Krisp",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Goldt%C3%A4ubling_Russula_aurea.jpg"
+      },
+      "season": [
+        {
+          "from": 6,
+          "to": 10
+        }
+      ],
+      "edibility": 4,
+      "habitat": {
+        "trees": {
+          "holm_oak": 0.6,
+          "cork_oak": 0.6,
+          "downy_oak": 0.7,
+          "portuguese_oak": 0.8,
+          "sessile_oak": 0.8,
+          "pyrenean_oak": 0.8,
+          "beech": 0.8,
+          "chestnut": 0.6,
+          "birch": 0.4,
+          "scots_pine": 0.5,
+          "mountain_pine": 0.5,
+          "black_pine": 0.4,
+          "fir_other_conifers": 0.5,
+          "mixed_broadleaf": 0.7,
+          "other_broadleaf": 0.6,
+          "mixed_conifer_broadleaf": 0.6,
+          "plantations": 0.3
+        },
+        "soil": {
+          "acid": 0.7,
+          "basic": 0.8,
+          "other": 0.8
+        },
+        "aspect": {
+          "n": 0.7,
+          "s": 0.6,
+          "e": 0.7
+        }
+      },
+      "gallery": [
+        {
+          "image": "llora_daurada_g1.jpg",
+          "credit": {
+            "author": "Holger Krisp",
+            "licence": "CC BY 3.0",
+            "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gold-T%C3%A4ubling_Russula_aurea.JPG"
+          },
+          "caption": {
+            "ca": "Aspecte general",
+            "es": "Aspecto general",
+            "en": "Overall view"
+          }
+        },
+        {
+          "image": "llora_daurada_g2.jpg",
+          "credit": {
+            "author": "Holger Krisp",
+            "licence": "CC BY-SA 4.0",
+            "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Goldt%C3%A4ubling_Russula_aurea.jpg"
+          },
+          "caption": {
+            "ca": "Hàbitat",
+            "es": "Hábitat",
+            "en": "Habitat"
+          }
+        }
+      ],
+      "lookAlikeImages": [
+        {
+          "image": "la_russula_emetica.jpg",
+          "credit": {
+            "author": "Dohduhdah",
+            "licence": "Public domain",
+            "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mushroom-IMG_4384.JPG"
+          },
+          "caption": {
+            "ca": "Russula emetica – tòxic",
+            "es": "Russula emetica – tóxico",
+            "en": "Russula emetica – poisonous"
+          },
+          "scientificName": "Russula emetica",
+          "toxic": true
+        }
+      ]
+    },
+    {
+      "id": "ou_de_bord",
+      "scientificName": "Amanita rubescens",
+      "image": "ou_de_bord.jpg",
+      "imageCredit": {
+        "author": "George Chernilevsky",
+        "licence": "Public domain",
+        "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Amanita_rubescens_2011_G1.jpg"
+      },
+      "season": [
+        {
+          "from": 6,
+          "to": 11
+        }
+      ],
+      "edibility": 3,
+      "habitat": {
+        "trees": {
+          "scots_pine": 0.7,
+          "mountain_pine": 0.6,
+          "black_pine": 0.6,
+          "maritime_pine": 0.5,
+          "stone_pine": 0.4,
+          "aleppo_pine": 0.4,
+          "fir_other_conifers": 0.6,
+          "beech": 0.6,
+          "chestnut": 0.6,
+          "sessile_oak": 0.5,
+          "portuguese_oak": 0.5,
+          "downy_oak": 0.4,
+          "mixed_conifer_broadleaf": 0.6,
+          "mixed_conifers": 0.5,
+          "birch": 0.5,
+          "other_broadleaf": 0.5,
+          "plantations": 0.4,
+          "none": 0.1
+        },
+        "soil": {
+          "acid": 0.9,
+          "basic": 0.5,
+          "other": 0.7
+        },
+        "aspect": {
+          "n": 0.7,
+          "s": 0.5,
+          "e": 0.6
+        }
+      },
+      "gallery": [
+        {
+          "image": "ou_de_bord_g1.jpg",
+          "credit": {
+            "author": "Flocci Nivis",
+            "licence": "CC BY 4.0",
+            "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:20210710_Amanita_rubescens_01.jpg"
+          },
+          "caption": {
+            "ca": "Aspecte general",
+            "es": "Aspecto general",
+            "en": "Overall view"
+          }
+        },
+        {
+          "image": "ou_de_bord_g2.jpg",
+          "credit": {
+            "author": "No machine-readable author provided. Archenzo assumed (based on copyright claims).",
+            "licence": "CC BY-SA 3.0",
+            "licenceUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Amanita_rubescens.JPG"
+          },
+          "caption": {
+            "ca": "Hàbitat",
+            "es": "Hábitat",
+            "en": "Habitat"
+          }
+        }
+      ],
+      "lookAlikeImages": [
+        {
+          "image": "la_amanita_muscaria.jpg",
+          "credit": {
+            "author": "Chrumps",
+            "licence": "CC BY-SA 3.0",
+            "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Amanita_muscaria_3.jpg"
+          },
+          "caption": {
+            "ca": "Amanita muscaria – tòxic",
+            "es": "Amanita muscaria – tóxico",
+            "en": "Amanita muscaria – poisonous"
+          },
+          "scientificName": "Amanita muscaria",
+          "toxic": true
+        }
+      ]
+    },
+    {
+      "id": "ou_de_coloma",
+      "scientificName": "Amanita ovoidea",
+      "image": "ou_de_coloma.jpg",
+      "imageCredit": {
+        "author": "Pere Orga Esteve",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Amanita_ovoidea_-_Santa_Perp%C3%A8tua,_2.jpg"
+      },
+      "season": [
+        {
+          "from": 8,
+          "to": 11
+        }
+      ],
+      "edibility": 3,
+      "habitat": {
+        "trees": {
+          "holm_oak": 0.8,
+          "cork_oak": 0.7,
+          "downy_oak": 0.8,
+          "portuguese_oak": 0.6,
+          "strawberry_tree": 0.5,
+          "wild_olive": 0.5,
+          "aleppo_pine": 0.5,
+          "maritime_pine": 0.4,
+          "stone_pine": 0.4,
+          "black_pine": 0.4,
+          "mixed_broadleaf": 0.6,
+          "other_broadleaf": 0.4,
+          "plantations": 0.3,
+          "none": 0.2
+        },
+        "soil": {
+          "acid": 0.2,
+          "basic": 1.0,
+          "other": 0.6
+        },
+        "aspect": {
+          "n": 0.5,
+          "s": 0.8,
+          "e": 0.7
+        }
+      },
+      "lookAlikeImages": [
+        {
+          "image": "la_proxima.jpg",
+          "credit": {
+            "author": "Nikos D. Karabelas",
+            "licence": "CC BY 4.0",
+            "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Amanita_proxima_Mushroom_Skafidaki_1.jpg"
+          },
+          "caption": {
+            "ca": "Amanita proxima – molt tòxica, confusible amb l'ou de coloma",
+            "es": "Amanita proxima – muy tóxica, confundible con la yema de paloma",
+            "en": "Amanita proxima – highly poisonous, confusingly similar to the Caesar's amanita"
+          },
+          "scientificName": "Amanita proxima",
+          "toxic": true
+        }
+      ],
+      "gallery": [
+        {
+          "image": "ou_de_coloma_g1.jpg",
+          "credit": {
+            "author": "Amamita_ovoidea_G.jpg : archenzo derivative work: Ak ccm",
+            "licence": "CC BY-SA 3.0",
+            "licenceUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:2006-10-14_Amanita_ovoidea_crop.jpg"
+          },
+          "caption": {
+            "ca": "Aspecte general",
+            "es": "Aspecto general",
+            "en": "Overall view"
+          }
+        },
+        {
+          "image": "ou_de_coloma_g2.jpg",
+          "credit": {
+            "author": "Vincenzo Briganti (1766-1836) e Francesco Briganti (1802-1865).",
+            "licence": "Public domain",
+            "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Agaricus_ovoideus_var._leucosarcos_V._Brig.,_1837_accepted_as_Amanita_ovoidea_(Bull.)_Link,_1833.jpg"
+          },
+          "caption": {
+            "ca": "Hàbitat",
+            "es": "Hábitat",
+            "en": "Habitat"
+          }
+        }
+      ]
+    },
+    {
+      "id": "carrerulla",
+      "scientificName": "Clitocybe geotropa",
+      "image": "carrerulla.jpg",
+      "imageCredit": {
+        "author": "Ermell",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Infundibulicybe_geotropa_(M%C3%B6nchskopf)_-20201108-RM-155413.jpg"
+      },
+      "season": [
+        {
+          "from": 3,
+          "to": 5
+        },
+        {
+          "from": 11,
+          "to": 12
+        }
+      ],
+      "edibility": 4,
+      "habitat": {
+        "trees": {
+          "holm_oak": 0.4,
+          "cork_oak": 0.4,
+          "downy_oak": 0.6,
+          "portuguese_oak": 0.5,
+          "sessile_oak": 0.5,
+          "pyrenean_oak": 0.5,
+          "scots_pine": 0.3,
+          "black_pine": 0.3,
+          "aleppo_pine": 0.4,
+          "maritime_pine": 0.3,
+          "junipers": 0.4,
+          "mixed_broadleaf": 0.4,
+          "riparian": 0.3,
+          "plantations": 0.3,
+          "none": 0.6
+        },
+        "soil": {
+          "acid": 0.5,
+          "basic": 0.9,
+          "other": 0.8
+        },
+        "aspect": {
+          "n": 0.6,
+          "s": 0.6,
+          "e": 0.6
+        }
+      },
+      "gallery": [
+        {
+          "image": "carrerulla_g1.jpg",
+          "credit": {
+            "author": "Achim Lammerts (Syntaxys)",
+            "licence": "CC BY-SA 4.0",
+            "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:2025-10-26_D500-1240_Achim-Lammerts_Infundibulicybe-geotropa.jpg"
+          },
+          "caption": {
+            "ca": "Aspecte general",
+            "es": "Aspecto general",
+            "en": "Overall view"
+          }
+        },
+        {
+          "image": "carrerulla_g2.jpg",
+          "credit": {
+            "author": "Charles Sommer",
+            "licence": "Public domain",
+            "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Adolesent_Clitocybe_geotropa.JPG"
+          },
+          "caption": {
+            "ca": "Hàbitat",
+            "es": "Hábitat",
+            "en": "Habitat"
+          }
+        }
+      ],
+      "lookAlikeImages": [
+        {
+          "image": "la_clitocybe_dealbata.jpg",
+          "credit": {
+            "author": "Archenzo",
+            "licence": "CC BY 3.0",
+            "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clitocybe_dealbata_1.jpg"
+          },
+          "caption": {
+            "ca": "Clitocybe dealbata – tòxic",
+            "es": "Clitocybe dealbata – tóxico",
+            "en": "Clitocybe dealbata – poisonous"
+          },
+          "scientificName": "Clitocybe dealbata",
+          "toxic": true
+        }
+      ]
+    },
+    {
+      "id": "ram_de_bou",
+      "scientificName": "Grifola frondosa",
+      "image": "ram_de_bou.jpg",
+      "imageCredit": {
+        "author": "George Chernilevsky",
+        "licence": "Public domain",
+        "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Grifola_frondosa_2014_G1.jpg"
+      },
+      "season": [
+        {
+          "from": 8,
+          "to": 11
+        }
+      ],
+      "edibility": 4,
+      "habitat": {
+        "trees": {
+          "holm_oak": 0.7,
+          "cork_oak": 0.7,
+          "downy_oak": 0.8,
+          "portuguese_oak": 0.8,
+          "sessile_oak": 0.7,
+          "pyrenean_oak": 0.7,
+          "chestnut": 0.7,
+          "beech": 0.5,
+          "other_broadleaf": 0.6,
+          "mixed_broadleaf": 0.6,
+          "birch": 0.4,
+          "riparian": 0.4,
+          "plantations": 0.3,
+          "none": 0.05
+        },
+        "soil": {
+          "acid": 0.8,
+          "basic": 0.5,
+          "other": 0.7
+        },
+        "aspect": {
+          "n": 0.7,
+          "s": 0.5,
+          "e": 0.6
+        }
+      },
+      "gallery": [
+        {
+          "image": "ram_de_bou_g1.jpg",
+          "credit": {
+            "author": "Lukas from London, England",
+            "licence": "CC BY-SA 2.0",
+            "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Grifola_frondosa_(29715305790).jpg"
+          },
+          "caption": {
+            "ca": "Aspecte general",
+            "es": "Aspecto general",
+            "en": "Overall view"
+          }
+        },
+        {
+          "image": "ram_de_bou_g2.jpg",
+          "credit": {
+            "author": "Rosser1954",
+            "licence": "CC BY-SA 4.0",
+            "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Grifola_frondosa_-_Hen_of_the_Woods_at_Wheatrig,_Ayrshire.JPG"
+          },
+          "caption": {
+            "ca": "Hàbitat",
+            "es": "Hábitat",
+            "en": "Habitat"
+          }
+        }
+      ],
+      "lookAlikeImages": [
+        {
+          "image": "la_laetiporus_sulphureus.jpg",
+          "credit": {
+            "author": "Khushwant8693",
+            "licence": "CC BY-SA 4.0",
+            "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bracket-fungi.jpg"
+          },
+          "caption": {
+            "ca": "Laetiporus sulphureus – comestible només jove i ben cuit",
+            "es": "Laetiporus sulphureus – comestible solo joven y bien cocinado",
+            "en": "Laetiporus sulphureus – edible only young and well cooked"
+          },
+          "scientificName": "Laetiporus sulphureus",
+          "toxic": false
+        }
+      ]
+    },
+    {
+      "id": "cep_de_cavall",
+      "scientificName": "Imleria badia",
+      "image": "cep_de_cavall.jpg",
+      "imageCredit": {
+        "author": "Jörg Hempel",
+        "licence": "CC BY-SA 3.0 de",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Imleria_badia_LC00337.jpg"
+      },
+      "season": [
+        {
+          "from": 6,
+          "to": 10
+        }
+      ],
+      "edibility": 3,
+      "habitat": {
+        "trees": {
+          "scots_pine": 0.6,
+          "maritime_pine": 0.6,
+          "black_pine": 0.5,
+          "mountain_pine": 0.5,
+          "stone_pine": 0.3,
+          "chestnut": 0.7,
+          "beech": 0.6,
+          "sessile_oak": 0.4,
+          "portuguese_oak": 0.5,
+          "downy_oak": 0.4,
+          "pyrenean_oak": 0.5,
+          "other_broadleaf": 0.5,
+          "mixed_conifer_broadleaf": 0.6,
+          "mixed_broadleaf": 0.5,
+          "plantations": 0.4,
+          "none": 0.1
+        },
+        "soil": {
+          "acid": 1.0,
+          "basic": 0.3,
+          "other": 0.6
+        },
+        "aspect": {
+          "n": 0.7,
+          "s": 0.5,
+          "e": 0.6
+        }
+      },
+      "gallery": [
+        {
+          "image": "cep_de_cavall_g1.jpg",
+          "credit": {
+            "author": "Achim Lammerts (Syntaxys)",
+            "licence": "CC BY-SA 4.0",
+            "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:2025-10-08_D500-0912_Achim-Lammerts_Imleria-badia.jpg"
+          },
+          "caption": {
+            "ca": "Aspecte general",
+            "es": "Aspecto general",
+            "en": "Overall view"
+          }
+        },
+        {
+          "image": "cep_de_cavall_g2.jpg",
+          "credit": {
+            "author": "Achim Lammerts (Syntaxys)",
+            "licence": "CC BY-SA 4.0",
+            "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:2025-11-04_D500-1630_Achim-Lammerts_Imleria-badia.jpg"
+          },
+          "caption": {
+            "ca": "Hàbitat",
+            "es": "Hábitat",
+            "en": "Habitat"
+          }
+        }
+      ],
+      "lookAlikeImages": [
+        {
+          "image": "la_tylopilus_felleus.jpg",
+          "credit": {
+            "author": "Dezidor",
+            "licence": "CC BY 3.0",
+            "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:H%C5%99ib_%C5%BElu%C4%8Dn%C3%ADk_6.jpg"
+          },
+          "caption": {
+            "ca": "Tylopilus felleus – molt amarg",
+            "es": "Tylopilus felleus – muy amargo",
+            "en": "Tylopilus felleus – very bitter"
+          },
+          "scientificName": "Tylopilus felleus",
+          "toxic": false
+        }
+      ]
+    },
+    {
+      "id": "rovell_de_roure",
+      "scientificName": "Lactarius quieticolor",
+      "image": "rovell_de_roure.jpg",
+      "imageCredit": {
+        "author": "Karelj",
+        "licence": "Public domain",
+        "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lactarius_quieticolor_1.jpg"
+      },
+      "season": [
+        {
+          "from": 9,
+          "to": 12
+        }
+      ],
+      "edibility": 3,
+      "habitat": {
+        "trees": {
+          "holm_oak": 0.7,
+          "cork_oak": 0.7,
+          "downy_oak": 0.8,
+          "portuguese_oak": 0.8,
+          "sessile_oak": 0.7,
+          "pyrenean_oak": 0.7,
+          "beech": 0.4,
+          "chestnut": 0.4,
+          "strawberry_tree": 0.4,
+          "black_pine": 0.6,
+          "maritime_pine": 0.5,
+          "stone_pine": 0.4,
+          "aleppo_pine": 0.4,
+          "mixed_broadleaf": 0.6,
+          "other_broadleaf": 0.5,
+          "plantations": 0.3,
+          "none": 0.05
+        },
+        "soil": {
+          "acid": 0.9,
+          "basic": 0.5,
+          "other": 0.7
+        },
+        "aspect": {
+          "n": 0.8,
+          "s": 0.5,
+          "e": 0.7
+        }
+      },
+      "gallery": [
+        {
+          "image": "rovell_de_roure_g1.jpg",
+          "credit": {
+            "author": "This image was created by user Anna Baykalova (anna_ru) at Mushroom Observer , a source for mycological images. You can contact this user here .",
+            "licence": "CC BY-SA 3.0",
+            "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:2007-09-12_Lactarius_quieticolor_1.jpg"
+          },
+          "caption": {
+            "ca": "Aspecte general",
+            "es": "Aspecto general",
+            "en": "Overall view"
+          }
+        },
+        {
+          "image": "rovell_de_roure_g2.jpg",
+          "credit": {
+            "author": "This image was created by user Anna Baykalova (anna_ru) at Mushroom Observer , a source for mycological images. You can contact this user here .",
+            "licence": "CC BY-SA 3.0",
+            "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:2007-09-12_Lactarius_quieticolor_1_cropped.jpg"
+          },
+          "caption": {
+            "ca": "Hàbitat",
+            "es": "Hábitat",
+            "en": "Habitat"
+          }
+        }
+      ],
+      "lookAlikeImages": [
+        {
+          "image": "la_lactarius_piperatus.jpg",
+          "credit": {
+            "author": "Brian Adamo (adamo588) at Mushroom Observer",
+            "licence": "CC BY-SA 3.0",
+            "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:2011-07-09_Lactarius_piperatus_(L.)_Pers_157554.jpg"
+          },
+          "caption": {
+            "ca": "Lactarius piperatus – indigest",
+            "es": "Lactarius piperatus – indigesto",
+            "en": "Lactarius piperatus – indigestible"
+          },
+          "scientificName": "Lactarius piperatus",
           "toxic": false
         }
       ]

@@ -4,6 +4,10 @@
     <string name="mushroom_guide_title">Edible mushroom guide</string>
     <string name="mushroom_guide_search">Search by name</string>
     <string name="mushroom_guide_in_season">In season now</string>
+    <string name="mushroom_guide_find_selected">Find mushrooms (%1$d)</string>
+    <string name="mushroom_guide_clear_selection">Clear selection</string>
+    <string name="mushroom_guide_selection_hint">Long press a mushroom to add or remove it from the search.</string>
+    <string name="mushroom_guide_toggle_selection">Add or remove from the search</string>
     <string name="mushroom_guide_disclaimer_title">Never eat a mushroom you are not sure about</string>
     <string name="mushroom_guide_disclaimer">Only eat a wild mushroom if an expert has identified it with complete certainty. This guide is only orientative and is no substitute for an expert: some deadly species look very similar to edible ones.</string>
     <string name="mushroom_guide_no_match">No mushrooms found</string>

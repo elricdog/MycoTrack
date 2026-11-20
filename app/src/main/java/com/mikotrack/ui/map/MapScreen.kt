@@ -135,9 +135,15 @@ import com.mikotrack.data.repository.DefaultCategory
 import com.mikotrack.domain.model.Trip
 import com.mikotrack.domain.model.Waypoint
 import com.mikotrack.maps.GeoPoint
+import com.mikotrack.maps.Hotspot
+import com.mikotrack.maps.HotspotRequests
+import com.mikotrack.maps.HotspotSearches
+import com.mikotrack.maps.HotspotState
 import com.mikotrack.maps.MapLayer
 import com.mikotrack.maps.RouteOverlay
+import com.mikotrack.maps.SuitabilityScorer
 import com.mikotrack.maps.WaypointOverlay
+import com.mikotrack.ui.mushrooms.guideLanguage
 import com.mikotrack.ui.camera.CameraCaptureScreen
 import com.mikotrack.ui.common.ColorDot
 import com.mikotrack.ui.common.ConfirmationDialog
@@ -552,6 +558,44 @@ fun MapScreen(
         controller.markCameraPlaced()
         legendExpanded = true
         SuitabilityFocusRequests.consume(search)
+    }
+    // A multi-species search asked for hotspots: scan for them and mark the map.
+    val hotspotRequest by HotspotRequests.pending.collectAsStateWithLifecycle()
+    val guideLocale = guideLanguage()
+    LaunchedEffect(hotspotRequest) {
+        val request = hotspotRequest ?: return@LaunchedEffect
+        HotspotSearches.start(context, request.search, request.language)
+        Toast.makeText(context, R.string.suitability_hotspots_searching, Toast.LENGTH_SHORT).show()
+        HotspotRequests.consume(request)
+    }
+    val hotspotState by HotspotSearches.state.collectAsStateWithLifecycle()
+    var selectedHotspot by remember { mutableStateOf<Hotspot?>(null) }
+    LaunchedEffect(hotspotState) {
+        when (val state = hotspotState) {
+            is HotspotState.Ready -> {
+                controller.setHotspots(state.hotspots)
+                Toast.makeText(
+                    context,
+                    context.getString(R.string.suitability_hotspots_found, state.hotspots.size),
+                    Toast.LENGTH_SHORT,
+                ).show()
+            }
+            HotspotState.None -> {
+                controller.setHotspots(emptyList())
+                Toast.makeText(context, R.string.suitability_hotspots_none, Toast.LENGTH_SHORT).show()
+            }
+            HotspotState.Failed -> {
+                controller.setHotspots(emptyList())
+                Toast.makeText(context, R.string.suitability_hotspots_failed, Toast.LENGTH_SHORT).show()
+            }
+            else -> if (state == HotspotState.Idle) controller.setHotspots(emptyList())
+        }
+    }
+    DisposableEffect(controller) {
+        controller.onHotspotClicked = { rank ->
+            (hotspotState as? HotspotState.Ready)?.hotspots?.firstOrNull { it.rank == rank }?.let { selectedHotspot = it }
+        }
+        onDispose { controller.onHotspotClicked = null }
     }
     // A place picked in the place search: the camera stops following the user, frames
     // the extent of the place (or centres it) and the place is marked.
@@ -1133,6 +1177,20 @@ fun MapScreen(
             },
             onDelete = {
                 viewModel.deleteWaypoint(waypoint.id)
+            },
+        )
+    }
+
+    selectedHotspot?.let { hotspot ->
+        HotspotSheet(
+            hotspot = hotspot,
+            distanceMeters = currentPosition?.let {
+                SuitabilityScorer.distanceMeters(it.latitude, it.longitude, hotspot.latitude, hotspot.longitude)
+            },
+            onDismiss = { selectedHotspot = null },
+            onGoThere = {
+                selectedHotspot = null
+                openWalkingDirections(context, hotspot.latitude, hotspot.longitude)
             },
         )
     }

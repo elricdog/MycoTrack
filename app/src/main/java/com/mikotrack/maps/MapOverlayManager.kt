@@ -312,6 +312,41 @@ class MapOverlayManager {
     }
 
     /**
+     * Draws the numbered marks of the hotspots of a multi-species search, best first.
+     * Only ranks whose badge image is already registered in the style are drawn.
+     */
+    fun applyHotspots(style: Style, hotspots: List<Hotspot>) {
+        val geoJson = buildString {
+            append("{\"type\":\"FeatureCollection\",\"features\":[")
+            hotspots.forEachIndexed { index, hotspot ->
+                if (index > 0) append(',')
+                append("{\"type\":\"Feature\",\"properties\":{")
+                append("\"rank\":").append(hotspot.rank)
+                append(",\"icon\":\"").append(MapIconFactory.hotspotIconId(hotspot.rank)).append('"')
+                append("},\"geometry\":{\"type\":\"Point\",\"coordinates\":")
+                append(formatCoordinate(GeoPoint(hotspot.latitude, hotspot.longitude)))
+                append("}}")
+            }
+            append("]}")
+        }
+
+        val source = style.getSourceAs<GeoJsonSource>(HOTSPOT_SOURCE)
+        if (source == null) {
+            style.addSource(GeoJsonSource(HOTSPOT_SOURCE, geoJson))
+            style.addLayer(
+                SymbolLayer(HOTSPOT_LAYER, HOTSPOT_SOURCE).withProperties(
+                    PropertyFactory.iconImage(Expression.get("icon")),
+                    PropertyFactory.iconAllowOverlap(true),
+                    PropertyFactory.iconIgnorePlacement(true),
+                    PropertyFactory.iconSize(1.15f),
+                ),
+            )
+        } else {
+            source.setGeoJson(geoJson)
+        }
+    }
+
+    /**
      * Draws the photograph bubbles. Only waypoints whose bubble image is already in the
      * style are passed in; the bubbles sit above the waypoint markers.
      */
@@ -454,6 +489,8 @@ class MapOverlayManager {
     companion object {
         const val WAYPOINT_SOURCE = "mycotrack-waypoints"
         const val WAYPOINT_LAYER = "mycotrack-waypoints-layer"
+        const val HOTSPOT_SOURCE = "mycotrack-hotspots"
+        const val HOTSPOT_LAYER = "mycotrack-hotspots-layer"
         const val PHOTO_BUBBLE_SOURCE = "mycotrack-photo-bubbles"
         const val PHOTO_BUBBLE_LAYER = "mycotrack-photo-bubbles-layer"
         const val POSITION_SOURCE = "mycotrack-position-source"

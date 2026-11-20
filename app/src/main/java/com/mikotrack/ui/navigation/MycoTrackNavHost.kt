@@ -49,6 +49,7 @@ import com.mikotrack.ui.map.MapViewModel
 import com.mikotrack.ui.mushrooms.MushroomDetailScreen
 import com.mikotrack.ui.mushrooms.MushroomGuideScreen
 import com.mikotrack.ui.mushrooms.MushroomGuideViewModel
+import com.mikotrack.ui.mushrooms.guideLanguage
 import com.mikotrack.ui.permissions.PermissionCenterScreen
 import com.mikotrack.ui.permissions.PermissionCenterViewModel
 import com.mikotrack.ui.settings.SettingsScreen
@@ -198,9 +199,28 @@ fun MycoTrackNavHost(
 
             composable(TopLevelDestination.MUSHROOMS.route) {
                 val viewModel: MushroomGuideViewModel = viewModel()
+                val guideLocale = guideLanguage()
+                val suitabilityViewModel: com.mikotrack.ui.map.SuitabilitySearchViewModel =
+                    containerViewModel(container) {
+                        com.mikotrack.ui.map.SuitabilitySearchViewModel(it.settingsStore, it.locationTracker)
+                    }
                 MushroomGuideScreen(
                     viewModel = viewModel,
                     onOpenSpecies = { id -> navController.navigate(Routes.mushroomDetail(id)) },
+                    onFindSpecies = { species, radiusKm, aroundMapCenter, findHotspots, onDone ->
+                        suitabilityViewModel.startMulti(
+                            species = species,
+                            radiusKm = radiusKm,
+                            aroundMapCenter = aroundMapCenter,
+                            mapCenter = mapController.cameraTarget(),
+                            findHotspots = findHotspots,
+                            language = guideLocale,
+                            onDone = { ok ->
+                                if (ok) navigateToMap()
+                                onDone(ok)
+                            },
+                        )
+                    },
                 )
             }
 

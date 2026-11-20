@@ -26,4 +26,19 @@
     <string name="suitability_center_map">Centro del mapa</string>
     <string name="suitability_center_map_hint">El lugar donde está centrado ahora el mapa principal. Mueve antes el mapa para buscar en otra zona.</string>
     <string name="suitability_no_map_center">Todavía no se ha mostrado el mapa. Ábrelo, muévelo a la zona donde quieres buscar y vuelve a intentarlo.</string>
+    <!-- Búsqueda multiespecie y puntos calientes. -->
+    <string name="suitability_multi_dialog_title">Buscar %1$d especies a la vez</string>
+    <string name="suitability_multi_dialog_text">El mapa resaltará las zonas alrededor del punto elegido donde alguna de las especies seleccionadas sea más probable: %1$s.</string>
+    <string name="suitability_multi_out_of_season">Ninguna de las especies seleccionadas está en temporada este mes: es poco probable que las encuentres ahora.</string>
+    <string name="suitability_hotspots_option">Marcar 3 puntos calientes</string>
+    <string name="suitability_hotspots_hint">Marca los tres lugares del círculo donde más especies de la selección podrían encontrarse, y permite ir a pie hasta ellos.</string>
+    <string name="suitability_hotspots_searching">Buscando los mejores lugares para las setas seleccionadas…</string>
+    <string name="suitability_hotspots_found">%1$d puntos calientes marcados en el mapa.</string>
+    <string name="suitability_hotspots_none">Ningún lugar del círculo favorece bastante a esta selección para marcarlo como punto caliente.</string>
+    <string name="suitability_hotspots_failed">Los puntos calientes no se han podido calcular. Comprueba la conexión y vuelve a intentarlo.</string>
+    <string name="hotspot_sheet_title">Punto caliente %1$d</string>
+    <string name="hotspot_sheet_likelihood">%1$d%% de probabilidad para la selección</string>
+    <string name="hotspot_sheet_likelihood_distance">%1$d%% de probabilidad para la selección · a %2$s</string>
+    <string name="hotspot_sheet_species">Aquí puedes encontrar</string>
+    <string name="hotspot_sheet_go">Quiero ir</string>
 </resources>

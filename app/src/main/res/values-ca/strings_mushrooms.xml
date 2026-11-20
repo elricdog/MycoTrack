@@ -4,6 +4,10 @@
     <string name="mushroom_guide_title">Guia de bolets comestibles</string>
     <string name="mushroom_guide_search">Cerca per nom</string>
     <string name="mushroom_guide_in_season">De temporada</string>
+    <string name="mushroom_guide_find_selected">Trobar bolets (%1$d)</string>
+    <string name="mushroom_guide_clear_selection">Buidar la selecció</string>
+    <string name="mushroom_guide_selection_hint">Mantén premut un bolet per afegir-lo o treure\'l de la cerca.</string>
+    <string name="mushroom_guide_toggle_selection">Afegir o treure de la cerca</string>
     <string name="mushroom_guide_disclaimer_title">No mengeu mai un bolet si no n\'esteu segurs</string>
     <string name="mushroom_guide_disclaimer">Mengeu un bolet silvestre només si un expert l\'ha identificat amb tota seguretat. Aquesta guia és només orientativa i no substitueix un expert: algunes espècies mortals s\'assemblen molt a les comestibles.</string>
     <string name="mushroom_guide_no_match">No s\'ha trobat cap bolet</string>

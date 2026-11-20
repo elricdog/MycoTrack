@@ -236,5 +236,75 @@
     "habitat": "It does not grow on the ground but at the base of living trunks or stumps of chestnuts and oaks, more rarely of holm and cork oaks. It is fairly frequent in the chestnut woods of Montseny, Guilleries and Montnegre.",
     "season": "Late summer to autumn, August to November.",
     "lookAlikes": "Unmistakable: a fleshy red tongue or liver on wood, with the underside covered in small whitish or pinkish tubes that are separate from each other. The chicken of the woods (Laetiporus sulphureus), yellow-orange, also grows on trees and is edible well cooked only when young; some other bracket fungi are tough but not dangerous."
+  },
+  "carneroll": {
+    "commonName": "Winter hygrophore",
+    "culinary": "The first mushroom of the year and much prized: firm white flesh with a mild taste. Good on the grill, in omelettes, scrambled with eggs and in rice dishes. Freezes well after blanching.",
+    "habitat": "Fruits in winter under conifers, above all in black pine, Scots pine and fir woods, among moss and needles, also in burned clearings. Comes down from the subalpine belt to cool hollows.",
+    "season": "From January to April, when hardly any other mushroom is about.",
+    "lookAlikes": "Some grey wetbands and pale knightless tricholomas. Check that the gills are decurrent and whitish and that the habitat is a damp conifer wood, possibly with fresh snow. Shun the fibrecaps of the genus Inocybe, deadly: brownish gills and a fibrillose stem."
+  },
+  "trompeta_grisa": {
+    "commonName": "Tawny funnel",
+    "culinary": "The flesh is firmer than a chanterelle's and slightly bitter: it must be cooked well. Excellent in casseroles, stews, rice and soffritto, where it holds up better than chanterelles.",
+    "habitat": "In damp conifer and beech woods, in rows among the moss and fallen needles, often in rings. Abundant after the first autumn rains.",
+    "season": "From mid-autumn to the start of winter.",
+    "lookAlikes": "The trumpet of the dead is darker and more funnel-shaped, with a grey hymenium; the jack-o'-lantern, which also grows on deep litter, is orange and of lower quality. And the poisonous jack-o'-lantern Hygrophoropsis aurantiaca, with crowded orange gills."
+  },
+  "rossinyol_ametista": {
+    "commonName": "Amethyst chanterelle",
+    "culinary": "Like the chanterelle: firm, very fragrant flesh, ideal on the grill and in rice dishes. Recognised by the purple tones of the cap.",
+    "habitat": "Like the chanterelle, in damp oak, beech and chestnut woods, among moss, on nutrient-poor acid or basic soils.",
+    "season": "From May to October.",
+    "lookAlikes": "Many consider it a variety of the true chanterelle. Never confuse it with the jack-o'-lantern, which grows in clusters on stumps, is intense orange and poisonous. And the poisonous jack-o'-lantern Hygrophoropsis aurantiaca, and the Omphalotus olivari."
+  },
+  "llora_daurada": {
+    "commonName": "Golden russula",
+    "culinary": "One of the best russulas: firm flesh with a sweet taste, excellent on the grill, in casseroles and stews. Keeps well in brine.",
+    "habitat": "Under oaks and beeches, in fresh damp places, on both siliceous and calcareous soil. Recognised by the golden tones of the cap and the flesh that darkens where knocked.",
+    "season": "From June to October.",
+    "lookAlikes": "Other yellowish russulas. Note the flesh that snaps like porcelain and the stem's reaction with iron sulphate; bitter russulas are inedible but not poisonous. The emetic russula (Russula emetica), very acrid, and other look-alike Russula species."
+  },
+  "ou_de_bord": {
+    "commonName": "Blusher",
+    "culinary": "A common edible that must always be cooked thoroughly (raw it is poisonous). The cap skin peels easily. Good scrambled, on the grill and in stews.",
+    "habitat": "Under pines, oaks and beeches, on acid soils. Very common. The flesh reddens where broken or knocked, also inside the stem.",
+    "season": "From June to November.",
+    "lookAlikes": "Young buttons may be mistaken for Caesar's mushroom, but its flesh reddens and the gills are white then pinkish. Always avoid specimens with pure white gills, a volva in a bulb and flesh that does not redden. With Caesar's mushroom (Amanita caesarea) and other Amanita: check the volva and the flesh reaction."
+  },
+  "ou_de_coloma": {
+    "commonName": "White Caesar's amanita",
+    "culinary": "Much sought after near Barcelona: abundant, firm flesh with a mild taste when young and fresh. Must be cooked well. Keeps in brine.",
+    "habitat": "In Mediterranean maquis, cork oak and holm oak woods, preferably on calcareous soil and sunny slopes. Appears with the late-summer heat, after the first rains.",
+    "season": "From August to November.",
+    "lookAlikes": "Beware of Amanita proxima, very dangerous: it has a membranous volva that reddens at the base of the bulb and a pinkish pruinose thread at the cap margin; this species has a soft sac-like volva and pure white spores. When in doubt, do not pick it."
+  },
+  "carrerulla": {
+    "commonName": "Funnelled clitocybe",
+    "culinary": "Very popular at the start of the year: firm flesh with a mild taste. Good on the grill, with ham, in omelettes and rice dishes. The tougher stem is less used.",
+    "habitat": "In clearings, pastures, meadows, ditch edges and hedgerows, often in rings around trees. Prefers calcareous soils.",
+    "season": "From March to May and, rarer, from November to December.",
+    "lookAlikes": "With other white winter mushrooms: the stem must be thin and downy at the base and the gills slightly decurrent. Do not pick white clitocybes with a mealy smell and very decurrent gills, several of them very poisonous. Above all with the poisonous Clitocybe rivulosa and Clitocybe dealbata: fleshy stem and pale gills."
+  },
+  "ram_de_bou": {
+    "commonName": "Hen of the woods",
+    "culinary": "Very cropping and fragrant. Use the tips of the young branches, blanched first and then sautéed or in casseroles. Freezes well once blanched.",
+    "habitat": "In big clusters at the foot of oaks, chestnuts and beeches. From late summer to autumn, it returns to the same tree every year.",
+    "season": "From August to November.",
+    "lookAlikes": "Meripilus giganteus, softer and darkening when pressed, is of lower quality. Make sure it grows at the foot of a living tree or stump and that the gills run down the stem. And the chicken of the woods (Laetiporus sulphureus), which can disagree: sulphur pore brackets."
+  },
+  "cep_de_cavall": {
+    "commonName": "Bay bolete",
+    "culinary": "Chocolate cap and firm light-brown flesh: it keeps well and suits any stew, scramble or sauté. Watch for grubs, they are often full of them.",
+    "habitat": "Damp mossy pine woods, chestnut groves and beech woods, on acid soil. Very common after the summer and autumn rains.",
+    "season": "From June to October.",
+    "lookAlikes": "Resembles the xerocomas and other pore boletes; the flesh of the bay bolete blushes little when cut and the pores are yellow, then ochre-brown. The bitter bolete (Tylopilus felleus) spoils stews: pink pores and very bitter flesh."
+  },
+  "rovell_de_roure": {
+    "commonName": "Saffron milkcap of the oaks",
+    "culinary": "A cousin of the saffron milkcap: slightly firmer flesh and a fuller taste, excellent on the grill and scrambled. It exudes an orange latex that blackens in the air.",
+    "habitat": "Under oaks, holm oaks and cork oaks, also young under pines planted among oak woods. Acid soil, from autumn onwards.",
+    "season": "From September to December.",
+    "lookAlikes": "With the milkcaps of the saffron group. Avoid those whose cap is not zonate and whose latex is not orange: Lactarius chrysorrheus, yellowish orange, is indigestible. Avoid the acrid white-milk Lactarius, like the peppered milkcap (Lactarius piperatus)."
   }
 }

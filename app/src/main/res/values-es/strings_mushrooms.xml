@@ -4,6 +4,10 @@
     <string name="mushroom_guide_title">Guía de setas comestibles</string>
     <string name="mushroom_guide_search">Buscar por nombre</string>
     <string name="mushroom_guide_in_season">De temporada</string>
+    <string name="mushroom_guide_find_selected">Buscar setas (%1$d)</string>
+    <string name="mushroom_guide_clear_selection">Vaciar la selección</string>
+    <string name="mushroom_guide_selection_hint">Mantén pulsada una seta para añadirla o quitarla de la búsqueda.</string>
+    <string name="mushroom_guide_toggle_selection">Añadir o quitar de la búsqueda</string>
     <string name="mushroom_guide_disclaimer_title">No coma nunca una seta si no está seguro</string>
     <string name="mushroom_guide_disclaimer">Coma una seta silvestre solo si un experto la ha identificado con total seguridad. Esta guía es solo orientativa y no sustituye a un experto: algunas especies mortales se parecen mucho a las comestibles.</string>
     <string name="mushroom_guide_no_match">No se ha encontrado ninguna seta</string>

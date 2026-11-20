@@ -98,6 +98,18 @@ data class SuitabilitySearch(
     val radiusMeters: Int,
 ) {
     /**
+     * The identifiers of the searched species: one for a normal search and several,
+     * comma separated, for a search of the likely areas of many species at once.
+     */
+    val speciesIds: List<String> get() = speciesId.split(',').map(String::trim).filter(String::isNotEmpty)
+
+    /** The common names of the species, paired with [speciesIds] when it is a multi search. */
+    val speciesNames: List<String> get() = speciesName.split(Regex(",\\s*")).map(String::trim).filter(String::isNotEmpty)
+
+    /** Whether the search looks for the likely areas of many species at once. */
+    val isMultiSpecies: Boolean get() = speciesIds.size > 1
+
+    /**
      * The query string of the tiles. Everything that changes the tiles is in it, so a
      * new search gets new URLs and MapLibre does not reuse the tiles of the previous one.
      */

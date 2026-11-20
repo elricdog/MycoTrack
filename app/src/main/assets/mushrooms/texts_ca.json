@@ -236,5 +236,75 @@
     "habitat": "No creix a terra sinó a la base de troncs vius o soques de castanyers i roures, i més rarament d'alzines i sureres. És relativament freqüent a les castanyedes del Montseny, les Guilleries i el Montnegre.",
     "season": "De finals d'estiu a la tardor, d'agost a novembre.",
     "lookAlikes": "És inconfusible: forma una llengua o un fetge carnós vermell sobre la fusta, amb la cara inferior plena de tubs petits, blanquinosos o rosats, separats entre ells. Laetiporus sulphureus, de color groc taronja, també creix en arbres i és comestible ben cuit només quan és jove; alguns poliporus de fusta són durs però no perillosos."
+  },
+  "carneroll": {
+    "commonName": "Carneroll",
+    "culinary": "És el primer bolet de l'any i es molt apreciat: la carn ferma i blanca té un gust suau. Bo a la brasa, en truita, en rovellada i en arrossos. Congela bé després d'escaldar-lo.",
+    "habitat": "Sorteix a l'hivern sota els confers, sobretot a les pinedes de pi negre, pi roig i avet, entre el molsa i l'agulla, també en clars cremats. Baixa del pis subalpí fins a fondals frescos.",
+    "season": "De gener a abril, quan ja no hi ha gairebé cap altre bolet.",
+    "lookAlikes": "Alguns higròfors grisos i trictomes pàl·lids. Assegura't que les làmines són decorrents i blanquines i que l'hàbitat és de confera humida, possiblement amb neu recent. Rebutja els fibrilis del gènere Inocybe, letals: lamel·les marronoses i peu fibril·at."
+  },
+  "trompeta_grisa": {
+    "commonName": "Trompeta grisa",
+    "culinary": "La carn és més ferma que la del rossinyol i una mica amarga: cal ben coure-la. Boníssima en samfaina, guisats, arrossos i sofregits, on aguanta millor que els rossinyols.",
+    "habitat": "Als boscos humits de confers i de faig, arrenglerada entre el molsa i l'agulla caiguda, sovint en cerclles. Abunda després de les primeres pluges de tardor.",
+    "season": "De mitja tardor a l'inici de l'hivern.",
+    "lookAlikes": "La trompeta dels morts és més fosca i embutxacada, amb la cara inferior gris cendra; la Hygrophoropsis aurantiaca, que creix també sobre l'aguinalda, és taronja i de qualitat inferior. I la Hygrophoropsis aurantiaca, tòxica, de làmines taronges molt serrades."
+  },
+  "rossinyol_ametista": {
+    "commonName": "Rossinyol ametista",
+    "culinary": "Igual que el rossinyol: carn ferma i molt perfumada, ideal a la brasa i en arrossos. Es reconeix pels tons porpres de la cutícula.",
+    "habitat": "Com el rossinyol, en boscos humits d'alzina, roure, faig i castanyer, entre el molsa i terra àcida o bàsica poc rica en nutrients.",
+    "season": "De maig a octubre.",
+    "lookAlikes": "Molta gent el considera una varietat del rossinyol de veritat. Mai no el confonguis amb la falca de l'olivera (Omphalotus olearius), que creix en rams sobre socs, és taronja intens i és tòxica. I la Hygrophoropsis aurantiaca, tòxica, de làmines taronges molt serrades."
+  },
+  "llora_daurada": {
+    "commonName": "Llora daurada",
+    "culinary": "Una de les millors lloras: carn ferma i de gust seu, excel·lent a la brasa, en samfaina i en guisat. Es conserva bé assecada en salmuera.",
+    "habitat": "Sota roures i faigs, en indrets frescos i humits, tant a terra silícia com calcària. Es reconeix pels tons daurats de la barret i la carn que s'enfosqueix als cops.",
+    "season": "De juny a octubre.",
+    "lookAlikes": "Altres rústules groguenques com la raveya. Fixa't en la carn trencadissa com la porcellana i en les reaccions del peu amb el sulfat de ferro; les rústules amargues són incomestibles però no tòxiques. La raveya (Russula emetica), molt picant, i altres Russula d'aspecte semblant."
+  },
+  "ou_de_bord": {
+    "commonName": "Ou de bord",
+    "culinary": "Comestible corrent que cal coure sempre molt bé (cru és tòxic). La pell del barret se'n va fàcilment. Bona en rovellada, a la brasa i en guisats.",
+    "habitat": "Sota pins, roures i faigs, en terres àcides. Molt comuna. La carn enrogueix quan es trenca o rep cops, i la carn del peu es torna rosada.",
+    "season": "De juny a novembre.",
+    "lookAlikes": "De jove es pot confondre amb l'ou de reig, però la carn li enrogueix i les làmines són blanques i després rosades. Evita sempre els exemplars amb làmines ben blanques, volva en bulb i carn que no enrogueix. Amb l'ou de reig (Amanita caesarea) i altres Amanita: mira sempre la volva i la reacció de la carn."
+  },
+  "ou_de_coloma": {
+    "commonName": "Ou de coloma",
+    "culinary": "Molt buscat al cinturó de Barcelona: carn abundant, ferma i de gust suau quan és de jove i ben fet. Cal coure-la bé. Es conserva en salmuera.",
+    "habitat": "En brolles mediterrànies, suredes i alzinars, preferentment a terra calcària i solanes. Apareix amb la calor de finals d'estiu, després de les primeres pluges.",
+    "season": "D'agost a novembre.",
+    "lookAlikes": "Compte amb l'Amanita proxima, molt perillosa: té una volva membranosa que es rosseja a la base del bulb i un fil pruïnós rosat a la vora del barret; l'ou de coloma té volva tova en forma de sac i espores ben blanques. En el dubte, no el collis."
+  },
+  "carrerulla": {
+    "commonName": "Carrerulla",
+    "culinary": "Molt popular a començaments d'any: carn ferma i gust suau. Bona a la brasa, amb pernil, en truita i en arrossos. El peu, més dur, se'n aproveita menys.",
+    "habitat": "En clars, pastures, prats, vores de carretera i bardisses, sovint en cerclles al voltant dels arbres. Prefereix terres calçaries.",
+    "season": "De març a maig i, més rara, de novembre a desembre.",
+    "lookAlikes": "Amb altres bolets blancs d'hivern: el peu ha de ser fi i llanós a la base i les làmines una mica decorrents. No collaris clitocibes blancs d'olor de farina i làmines molt decorrents, alguns molt tòxics. Sobretot amb Clitocybe rivulosa i Clitocybe dealbata, tòxiques: peu carnós i laminetes blanques."
+  },
+  "ram_de_bou": {
+    "commonName": "Ram de bou",
+    "culinary": "Molt rendible i perfumat. Es fan servir els caps de les rames joves, escaldats primer i després saltejats o en samfaina. Congela bé un cop escaldat.",
+    "habitat": "En rams grans al peu de roures, castanyers i faigs. Del final de l'estiu a la tardor, torna al mateix peu cada any.",
+    "season": "D'agost a novembre.",
+    "lookAlikes": "El Meripilus giganteus, més tou i que s'enfosqueix en prémer-lo, és de qualitat inferior. Assegura't que surt al peu d'un arbre viu o d'un soc i que les làmines baixen pel peu. I el poll crestat (Laetiporus sulphureus), que pot caure malament: carnosos sulfurats."
+  },
+  "cep_de_cavall": {
+    "commonName": "Cep de cavall",
+    "culinary": "Barret de color xocolata i carn ferma marró clar: es conserva bé i va bé en qualsevol guisat, rovellada i saltat. Compte amb els cucs, sovint n'estan plens.",
+    "habitat": "Pinedes humides de molsa, castanyedes i faigedes, a terra àcida. Molt comú després de les pluges d'estiu i tardor.",
+    "season": "De juny a octubre.",
+    "lookAlikes": "S'assembla als xerocomus i altres boletus de tubs; la carn del cep de cavall blaveix poc en tallar-la i els tubs són grocs i després ocre marronats. El més molest és el mico amargant (Tylopilus felleus): tubs rosats i carn molt amarga."
+  },
+  "rovell_de_roure": {
+    "commonName": "Rovell de roure",
+    "culinary": "Cosí del rovell: carn una mica més ferma i gust més intens, excel·lent a la brasa i en rovellada. Exsuda un làtex taronja que ennegreix amb l'aire.",
+    "habitat": "Sota roures, alzines i sureres, també jove sota pins plantats entre rouredes. Terra àcida, de la tardor endavant.",
+    "season": "De setembre a desembre.",
+    "lookAlikes": "Amb els lactaris del grup dels rovellons. Evita'ls si el barret no és zonat i el làtex no és taronja: el Lactarius chrysorrheus, d'un taronja groguenc, és indigest. Evita els Lactarius de llet blanc picant, com el pebrassos (Lactarius piperatus)."
   }
 }

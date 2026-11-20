@@ -26,4 +26,19 @@
     <string name="suitability_center_map">Centre del mapa</string>
     <string name="suitability_center_map_hint">El lloc on ara està centrat el mapa principal. Mou primer el mapa per buscar en una altra zona.</string>
     <string name="suitability_no_map_center">Encara no s\'ha mostrat el mapa. Obre\'l, mou-lo a la zona on vols buscar i torna-ho a provar.</string>
+    <!-- Cerca multipau i punts calents. -->
+    <string name="suitability_multi_dialog_title">Cerca %1$d espècies alhora</string>
+    <string name="suitability_multi_dialog_text">El mapa destacarà les zones del voltant del punt triat on alguna de les espècies seleccionades sigui més probable: %1$s.</string>
+    <string name="suitability_multi_out_of_season">Cap de les espècies seleccionades és de temporada aquest mes: ara és poc probable que en trobis.</string>
+    <string name="suitability_hotspots_option">Marca 3 punts calents</string>
+    <string name="suitability_hotspots_hint">Marca els tres llocs del cercle on més espècies de la selecció s\'hi podrien trobar, i et deixa anar-hi a peu.</string>
+    <string name="suitability_hotspots_searching">Buscant els millors llocs per als bolets seleccionats…</string>
+    <string name="suitability_hotspots_found">%1$d punts calents marcats al mapa.</string>
+    <string name="suitability_hotspots_none">Cap lloc del cercle afavoreix prou aquesta selecció per marcar-lo com a punt calent.</string>
+    <string name="suitability_hotspots_failed">Els punts calents no s\'han pogut calcular. Comprova la connexió i torna-ho a provar.</string>
+    <string name="hotspot_sheet_title">Punt calent %1$d</string>
+    <string name="hotspot_sheet_likelihood">%1$d%% de probabilitat per a la selecció</string>
+    <string name="hotspot_sheet_likelihood_distance">%1$d%% de probabilitat per a la selecció · a %2$s</string>
+    <string name="hotspot_sheet_species">Hi pots trobar</string>
+    <string name="hotspot_sheet_go">Hi vull anar</string>
 </resources>

@@ -31,6 +31,8 @@ import com.mikotrack.location.RecordingService
 import com.mikotrack.location.toCurrentPosition
 import com.mikotrack.location.toRawFix
 import com.mikotrack.maps.GeoPoint
+import com.mikotrack.maps.HotspotRequests
+import com.mikotrack.maps.HotspotSearches
 import com.mikotrack.maps.MapIconFactory
 import com.mikotrack.maps.MapLayer
 import com.mikotrack.maps.OfflineMapManager
@@ -425,6 +427,8 @@ class MapViewModel(
 
     /** Forgets the likely areas search and hides its layer. */
     fun clearSuitabilitySearch() {
+        HotspotSearches.clear()
+        HotspotRequests.clear()
         viewModelScope.launch { settingsStore.clearSuitabilitySearch() }
     }
 

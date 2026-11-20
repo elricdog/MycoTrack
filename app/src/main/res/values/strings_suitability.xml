@@ -26,4 +26,19 @@
     <string name="suitability_center_map">Centre of the map</string>
     <string name="suitability_center_map_hint">The place the main map is centred on now. Move the map first to search another area.</string>
     <string name="suitability_no_map_center">The map has not been shown yet. Open the map, move it to the area to search and try again.</string>
+    <!-- Multi-species search and hotspots. -->
+    <string name="suitability_multi_dialog_title">Search %1$d species at once</string>
+    <string name="suitability_multi_dialog_text">The map will highlight the areas around the chosen point where any of the selected species is more likely: %1$s.</string>
+    <string name="suitability_multi_out_of_season">None of the selected species is in season this month: you are unlikely to find them now.</string>
+    <string name="suitability_hotspots_option">Mark 3 hotspots</string>
+    <string name="suitability_hotspots_hint">Marks the three places of the circle where more of the selected species could meet, and lets you walk to them.</string>
+    <string name="suitability_hotspots_searching">Looking for the best spots for the selected mushrooms…</string>
+    <string name="suitability_hotspots_found">%1$d hotspot marks drawn on the map.</string>
+    <string name="suitability_hotspots_none">No place in the circle suits this selection well enough to be marked as a hotspot.</string>
+    <string name="suitability_hotspots_failed">The hotspots could not be computed. Check the connection and try again.</string>
+    <string name="hotspot_sheet_title">Hotspot %1$d</string>
+    <string name="hotspot_sheet_likelihood">%1$d%% probability for the selection</string>
+    <string name="hotspot_sheet_likelihood_distance">%1$d%% probability for the selection · %2$s away</string>
+    <string name="hotspot_sheet_species">What you can find here</string>
+    <string name="hotspot_sheet_go">Go there</string>
 </resources>

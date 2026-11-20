@@ -195,14 +195,17 @@ class HabitatPointInspector private constructor(context: Context) {
             }
             if (search != null) {
                 launch {
-                    val preference = load { preferenceOf(search.speciesId) }
-                    val value = if (preference is PointValue.Ready) {
-                        val score = HabitatPointMath.score(
-                            preference.value,
-                            (terrain?.await() as? PointValue.Ready)?.value,
-                            trees?.await(),
-                            (soil?.await() as? PointValue.Ready)?.value,
-                        )
+                    val preferences = load { preferencesOf(search.speciesIds) }
+                    val value = if (preferences is PointValue.Ready) {
+                        // A place counts as good when it suits at least one species.
+                        val score = preferences.value.maxOf { preference ->
+                            HabitatPointMath.score(
+                                preference,
+                                (terrain?.await() as? PointValue.Ready)?.value,
+                                trees?.await(),
+                                (soil?.await() as? PointValue.Ready)?.value,
+                            )
+                        }
                         PointValue.Ready(SuitabilityAtPoint(search.speciesName, score))
                     } else {
                         PointValue.Failed
@@ -278,8 +281,11 @@ class HabitatPointInspector private constructor(context: Context) {
         return HabitatPointMath.parseSoilFeatureInfo(response)
     }
 
-    private fun preferenceOf(speciesId: String): HabitatPreference? =
-        MushroomCatalog.load(appContext, "en").firstOrNull { it.id == speciesId }?.data?.habitat
+    /** The habitats of the searched species (the affinities do not depend on the language). */
+    private fun preferencesOf(speciesIds: List<String>): List<HabitatPreference>? =
+        MushroomCatalog.load(appContext, "en")
+            .mapNotNull { entry -> speciesIds.firstOrNull { it == entry.id }?.let { entry.data.habitat } }
+            .takeIf { it.isNotEmpty() }
 
     private fun centrePixel(bytes: ByteArray): Int? {
         val options = BitmapFactory.Options().apply {
