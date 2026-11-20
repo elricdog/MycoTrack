@@ -64,13 +64,14 @@ class MainActivity : AppCompatActivity() {
                 ) {
                     notificationLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
                 }
-                // The silent update check: at most once a day, and only when the
-                // setting is on. Failures stay invisible.
-                container.updateManager.check(force = false)
                 // The loading screen stays a short, fixed moment while the interface
                 // behind it composes and the map style starts loading.
                 kotlinx.coroutines.delay(SPLASH_MILLIS)
                 bootedFlow.value = true
+                // The silent update check runs once the loading screen is gone, so
+                // that the dialog is never hidden behind it: at most once a day, and
+                // only when the setting is on. Failures stay invisible.
+                container.updateManager.check(force = false)
             }
 
             MycoTrackTheme(darkTheme = darkTheme) {

@@ -73,7 +73,6 @@ class SettingsStore(private val context: Context) {
         val SUITABILITY_RADIUS = intPreferencesKey("suitability_radius_m")
         val AUTO_UPDATE_CHECKS = booleanPreferencesKey("auto_update_checks")
         val LAST_UPDATE_CHECK = longPreferencesKey("last_update_check_ms")
-        val DISMISSED_UPDATE_TAG = stringPreferencesKey("dismissed_update_tag")
         val GAMES_UNLOCKED = booleanPreferencesKey("games_unlocked")
         val GAME_SCORES_ARKANOID = stringPreferencesKey("game_scores_arkanoid")
         val GAME_SCORES_TETRIS = stringPreferencesKey("game_scores_tetris")
@@ -407,14 +406,6 @@ class SettingsStore(private val context: Context) {
 
     suspend fun setLastUpdateCheck(millis: Long) {
         context.dataStore.edit { it[Keys.LAST_UPDATE_CHECK] = millis }
-    }
-
-    /** The tag of the release the user declined, so silent checks skip it. */
-    val dismissedUpdateTag: Flow<String> =
-        context.dataStore.data.map { it[Keys.DISMISSED_UPDATE_TAG] ?: "" }
-
-    suspend fun setDismissedUpdateTag(tag: String) {
-        context.dataStore.edit { it[Keys.DISMISSED_UPDATE_TAG] = tag }
     }
 
     /** Whether the easter egg of the games has been unlocked (5 taps on the banner). */

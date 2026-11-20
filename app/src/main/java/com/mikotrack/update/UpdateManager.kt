@@ -76,9 +76,9 @@ class UpdateManager(
 
     /**
      * Asks GitHub for the latest release. A silent check ([force] = false) respects the
-     * settings (auto checks on, at most one check per day, releases the user dismissed)
-     * and never leaves a visible failure; a forced check from the settings always runs
-     * and reports the outcome.
+     * settings (auto checks on, at most one check per day) and never leaves a visible
+     * failure; a forced check from the settings always runs, does not consume the daily
+     * slot of the silent checks, and reports the outcome.
      */
     fun check(force: Boolean = false) {
         val current = _state.value
@@ -93,20 +93,19 @@ class UpdateManager(
             try {
                 val release = fetchLatestRelease()
                 val checkedAt = System.currentTimeMillis()
-                settingsStore.setLastUpdateCheck(checkedAt)
+                // Only a silent check records the daily slot: a manual check from the
+                // settings must not silence the offers on the following starts.
+                if (!force) settingsStore.setLastUpdateCheck(checkedAt)
                 val currentVersion = BuildConfig.VERSION_NAME
                 val isNewer = compareVersions(releaseVersion(release.tagName), currentVersion) > 0
-                val dismissed = settingsStore.dismissedUpdateTag.first() == release.tagName
-                when {
-                    !isNewer -> _state.value = State.UpToDate(checkedAt)
-                    dismissed && !force -> _state.value = State.Idle
-                    else -> {
-                        val asset = pickApkAsset(release.assets, Build.SUPPORTED_ABIS.toList())
-                        if (asset == null) {
-                            _state.value = State.Failed(UpdateFailure.NoAsset, release.tagName)
-                        } else {
-                            _state.value = State.Available(AppUpdate(currentVersion, release, asset))
-                        }
+                if (!isNewer) {
+                    _state.value = State.UpToDate(checkedAt)
+                } else {
+                    val asset = pickApkAsset(release.assets, Build.SUPPORTED_ABIS.toList())
+                    if (asset == null) {
+                        _state.value = State.Failed(UpdateFailure.NoAsset, release.tagName)
+                    } else {
+                        _state.value = State.Available(AppUpdate(currentVersion, release, asset))
                     }
                 }
             } catch (e: Exception) {
@@ -158,10 +157,11 @@ class UpdateManager(
         _state.value = State.Idle
     }
 
-    /** The user declined this release; silent checks skip it, forced checks show it again. */
+    /**
+     * The user declined the release for now. Nothing is remembered on purpose: the same
+     * release is offered again on the next start of the application.
+     */
     fun dismiss() {
-        val update = (_state.value as? State.Available)?.update ?: return
-        scope.launch { settingsStore.setDismissedUpdateTag(update.release.tagName) }
         _state.value = State.Idle
     }
 
