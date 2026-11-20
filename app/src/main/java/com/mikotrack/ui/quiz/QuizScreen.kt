@@ -1,5 +1,11 @@
 package com.mikotrack.ui.quiz
 
+import android.app.Activity
+import android.content.ActivityNotFoundException
+import android.content.Intent
+import android.speech.RecognizerIntent
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -24,20 +30,25 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.core.os.ConfigurationCompat
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.mikotrack.R
 import com.mikotrack.data.prefs.QuizScore
@@ -51,6 +62,48 @@ fun QuizScreen(viewModel: QuizViewModel) {
     val state by viewModel.state.collectAsStateWithLifecycle()
     val ranking by viewModel.ranking.collectAsStateWithLifecycle()
     val storedName by viewModel.storedName.collectAsStateWithLifecycle()
+    val voiceMode by viewModel.voiceMode.collectAsStateWithLifecycle()
+    val listenRequest by viewModel.listenRequest.collectAsStateWithLifecycle()
+
+    val context = LocalContext.current
+    val locale = ConfigurationCompat.getLocales(LocalConfiguration.current)[0] ?: Locale.getDefault()
+    // One recognizer intent per expected answer kind, in the phone language.
+    fun recognizerIntent(prompt: String) = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
+        .putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
+        .putExtra(RecognizerIntent.EXTRA_LANGUAGE, locale.toLanguageTag())
+        .putExtra(RecognizerIntent.EXTRA_PREFER_OFFLINE, true)
+        .putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 1)
+        .putExtra(RecognizerIntent.EXTRA_PROMPT, prompt)
+
+    val probe = remember { recognizerIntent("") }
+    val voiceAvailable = remember(probe) { probe.resolveActivity(context.packageManager) != null }
+    val recognizerUnavailable = stringResource(R.string.quiz_voice_unavailable)
+
+    val launcher = rememberLauncherForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        if (result.resultCode != Activity.RESULT_OK) {
+            viewModel.onVoiceCancelled()
+            return@rememberLauncherForActivityResult
+        }
+        val text = result.data
+            ?.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS)
+            ?.firstOrNull()
+            ?.trim()
+            .orEmpty()
+        viewModel.onVoiceResult(text)
+    }
+    LaunchedEffect(listenRequest?.token) {
+        val request = listenRequest ?: return@LaunchedEffect
+        val prompt = context.getString(
+            if (request.kind == QuizListenKind.NAME) R.string.quiz_voice_prompt_name
+            else R.string.quiz_voice_prompt_answer,
+        )
+        try {
+            launcher.launch(recognizerIntent(prompt))
+        } catch (_: ActivityNotFoundException) {
+            viewModel.stopVoiceForLaunchFailure()
+            android.widget.Toast.makeText(context, recognizerUnavailable, android.widget.Toast.LENGTH_LONG).show()
+        }
+    }
 
     Column(
         modifier = Modifier
@@ -69,13 +122,21 @@ fun QuizScreen(viewModel: QuizViewModel) {
             QuizPhase.START -> QuizStartContent(
                 state = state,
                 ranking = ranking,
-                onStart = viewModel::startGame,
+                voiceMode = voiceMode,
+                voiceAvailable = voiceAvailable,
+                onVoiceModeChange = viewModel::setVoiceMode,
+                onStart = { viewModel.startGame(voiceMode && voiceAvailable) },
             )
 
             QuizPhase.PLAYING, QuizPhase.FEEDBACK -> QuizPlayContent(
                 state = state,
+                listening = listenRequest?.kind == QuizListenKind.ANSWER,
                 onAnswer = viewModel::answer,
-                onNext = viewModel::next,
+                onNext = {
+                    // Tapping while the recognizer is open ends that listening.
+                    if (listenRequest != null) viewModel.onVoiceCancelled()
+                    viewModel.next()
+                },
                 onQuit = viewModel::quitGame,
             )
 
@@ -83,7 +144,11 @@ fun QuizScreen(viewModel: QuizViewModel) {
                 state = state,
                 storedName = storedName,
                 ranking = ranking,
-                onSave = viewModel::saveScore,
+                awaitingName = listenRequest?.kind == QuizListenKind.NAME,
+                onSave = { name ->
+                    if (listenRequest?.kind == QuizListenKind.NAME) viewModel.onVoiceCancelled()
+                    viewModel.saveScore(name)
+                },
                 onPlayAgain = viewModel::backToStart,
             )
         }
@@ -95,6 +160,9 @@ fun QuizScreen(viewModel: QuizViewModel) {
 private fun QuizStartContent(
     state: QuizUiState,
     ranking: List<QuizScore>,
+    voiceMode: Boolean,
+    voiceAvailable: Boolean,
+    onVoiceModeChange: (Boolean) -> Unit,
     onStart: () -> Unit,
 ) {
     Text("🍄", style = MaterialTheme.typography.displayLarge)
@@ -129,6 +197,33 @@ private fun QuizStartContent(
         Text(
             text = "▶ " + stringResource(R.string.quiz_start) + " 🧺",
             style = MaterialTheme.typography.titleMedium,
+        )
+    }
+    Spacer(Modifier.height(12.dp))
+    if (voiceAvailable) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    text = "🎤 " + stringResource(R.string.quiz_voice_mode),
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.Bold,
+                )
+                Text(
+                    text = stringResource(R.string.quiz_voice_hint),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+            Switch(checked = voiceMode, onCheckedChange = onVoiceModeChange)
+        }
+    } else {
+        Text(
+            text = stringResource(R.string.quiz_voice_unavailable),
+            style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
     }
     Spacer(Modifier.height(24.dp))
@@ -198,6 +293,7 @@ private fun QuizRankingRow(index: Int, entry: QuizScore) {
 @Composable
 private fun QuizPlayContent(
     state: QuizUiState,
+    listening: Boolean,
     onAnswer: (Int) -> Unit,
     onNext: () -> Unit,
     onQuit: () -> Unit,
@@ -270,6 +366,15 @@ private fun QuizPlayContent(
     }
 
     Spacer(Modifier.height(12.dp))
+    if (listening) {
+        Text(
+            text = "🎤 " + stringResource(R.string.quiz_voice_listening),
+            style = MaterialTheme.typography.labelLarge,
+            color = MaterialTheme.colorScheme.primary,
+            fontWeight = FontWeight.Bold,
+        )
+        Spacer(Modifier.height(8.dp))
+    }
     question.options.forEachIndexed { index, option ->
         QuizOptionButton(
             text = option,
@@ -379,6 +484,7 @@ private fun QuizGameOverContent(
     state: QuizUiState,
     storedName: String,
     ranking: List<QuizScore>,
+    awaitingName: Boolean,
     onSave: (String) -> Unit,
     onPlayAgain: () -> Unit,
 ) {
@@ -404,6 +510,15 @@ private fun QuizGameOverContent(
     )
     Spacer(Modifier.height(16.dp))
     if (!state.scoreSaved) {
+        if (awaitingName) {
+            Text(
+                text = "🎤 " + stringResource(R.string.quiz_voice_listening),
+                style = MaterialTheme.typography.labelLarge,
+                color = MaterialTheme.colorScheme.primary,
+                fontWeight = FontWeight.Bold,
+            )
+            Spacer(Modifier.height(8.dp))
+        }
         OutlinedTextField(
             value = name,
             onValueChange = { name = it },

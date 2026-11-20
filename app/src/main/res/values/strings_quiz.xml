@@ -39,4 +39,27 @@
     <string name="quiz_cat_edibility">⭐ Kitchen</string>
     <string name="quiz_cat_habitat">🌲 Habitat</string>
     <string name="quiz_cat_culture">🧺 Mushroom world</string>
+
+    <!-- voice play -->
+    <string name="quiz_voice_mode">Play by voice</string>
+    <string name="quiz_voice_hint">The app reads the questions aloud and listens to your answers: you can play without touching the phone. Say the option number or the answer name, "repeat" to hear the question again, or "stop" to leave the game.</string>
+    <string name="quiz_voice_listening">Listening for your answer…</string>
+    <string name="quiz_voice_unavailable">Speech recognition is not available on this device. You can still play by tapping.</string>
+    <string name="quiz_voice_prompt_answer">Say the number or the answer</string>
+    <string name="quiz_voice_prompt_name">Say your name</string>
+    <!-- texts read aloud by the text-to-speech engine -->
+    <string name="quiz_speak_question">Question %1$s: %2$s. Options: %3$s</string>
+    <string name="quiz_speak_option">Option %1$d: %2$s</string>
+    <string name="quiz_speak_stars">stars</string>
+    <string name="quiz_speak_feedback">%1$s. The correct answer is: %2$s. %3$s</string>
+    <string name="quiz_speak_game_over">Game over. You scored %1$d points with %2$d correct answers.</string>
+    <string name="quiz_speak_name">To save your score on the leaderboard, say your name.</string>
+    <string name="quiz_speak_name_stored">To save your score, say your name. The last name used was %1$s.</string>
+    <string name="quiz_speak_saved">Score saved. Well played!</string>
+    <string name="quiz_speak_not_understood_retry">I did not understand you. You have %1$d voice attempts left before continuing by tapping. Say the option number or the answer name.</string>
+    <string name="quiz_speak_tap_fallback">Voice does not seem to work well here. Let us continue by tapping the screen.</string>
+    <string-array name="quiz_verdicts">
+        <item>Correct!</item>
+        <item>Wrong.</item>
+    </string-array>
 </resources>

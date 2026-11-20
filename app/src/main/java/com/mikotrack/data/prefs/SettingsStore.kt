@@ -84,6 +84,7 @@ class SettingsStore(private val context: Context) {
         val QUIZ_SCORES = stringPreferencesKey("quiz_scores")
         val QUIZ_PLAYER_NAME = stringPreferencesKey("quiz_player_name")
         val QUIZ_SEEN_KEYS = stringPreferencesKey("quiz_seen_keys")
+        val QUIZ_VOICE_MODE = booleanPreferencesKey("quiz_voice_mode")
     }
 
     /** Whether a parking waypoint is added at the first accurate fix of a new trip. */
@@ -465,5 +466,13 @@ class SettingsStore(private val context: Context) {
 
     suspend fun setQuizSeenKeys(keys: List<String>) {
         context.dataStore.edit { it[Keys.QUIZ_SEEN_KEYS] = keys.joinToString(";") }
+    }
+
+    /** Whether the quiz reads questions aloud and accepts spoken answers. */
+    val quizVoiceMode: Flow<Boolean> =
+        context.dataStore.data.map { it[Keys.QUIZ_VOICE_MODE] ?: false }
+
+    suspend fun setQuizVoiceMode(enabled: Boolean) {
+        context.dataStore.edit { it[Keys.QUIZ_VOICE_MODE] = enabled }
     }
 }

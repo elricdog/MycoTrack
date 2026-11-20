@@ -39,4 +39,27 @@
     <string name="quiz_cat_edibility">⭐ Cuina</string>
     <string name="quiz_cat_habitat">🌲 Hàbitat</string>
     <string name="quiz_cat_culture">🧺 Món boletaire</string>
+
+    <!-- joc amb veu -->
+    <string name="quiz_voice_mode">Jugar amb veu</string>
+    <string name="quiz_voice_hint">L\'aplicació llegeix les preguntes i escolta les teves respostes: pots jugar sense tocar el telèfon. Digues el número de l\'opció o el nom de la resposta, "repeteix" per tornar-la a sentir o "prou" per sortir.</string>
+    <string name="quiz_voice_listening">Escoltant la teva resposta…</string>
+    <string name="quiz_voice_unavailable">El reconeixement de veu del dispositiu no està disponible. Pots continuar jugant tocant la pantalla.</string>
+    <string name="quiz_voice_prompt_answer">Digues el número o la resposta</string>
+    <string name="quiz_voice_prompt_name">Digues el teu nom</string>
+    <!-- textos que llegeix el motor de text a veu -->
+    <string name="quiz_speak_question">Pregunta %1$s: %2$s. Opcions: %3$s</string>
+    <string name="quiz_speak_option">Opció %1$d: %2$s</string>
+    <string name="quiz_speak_stars">estrelles</string>
+    <string name="quiz_speak_feedback">%1$s La resposta correcta és: %2$s. %3$s</string>
+    <string name="quiz_speak_game_over">Fi de la partida. Has fet %1$d punts amb %2$d respostes correctes.</string>
+    <string name="quiz_speak_name">Per guardar la puntuació al rànquing, digues el teu nom.</string>
+    <string name="quiz_speak_name_stored">Per guardar la puntuació, digues el teu nom. L\'últim nom utilitzat és %1$s.</string>
+    <string name="quiz_speak_saved">Puntuació guardada. Bona partida!</string>
+    <string name="quiz_speak_not_understood_retry">No t\'he entès. Et queden %1$d intents per veu abans de continuar tocant la pantalla. Digues el número de l\'opció o el nom de la resposta.</string>
+    <string name="quiz_speak_tap_fallback">Sembla que la veu no funciona bé. Continuem tocant la pantalla.</string>
+    <string-array name="quiz_verdicts">
+        <item>Correcte!</item>
+        <item>Has fallat.</item>
+    </string-array>
 </resources>

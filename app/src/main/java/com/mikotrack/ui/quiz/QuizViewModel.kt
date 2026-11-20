@@ -28,8 +28,17 @@ private const val QUIZ_BASE_POINTS = 10
 private const val QUIZ_STREAK_BONUS = 2
 private const val QUIZ_MAX_STREAK_BONUS_STEPS = 5
 
+/** Misunderstood answers tolerated before voice play falls back to touch. */
+private const val QUIZ_VOICE_FALLBACK = 3
+
 /** The screen the quiz is showing right now. */
 enum class QuizPhase { START, LOADING, PLAYING, FEEDBACK, GAME_OVER }
+
+/** What a pending speech recognition is expected to capture. */
+enum class QuizListenKind { ANSWER, NAME }
+
+/** A speech recognition the screen must launch; token rises per request. */
+data class QuizListenRequest(val token: Int, val kind: QuizListenKind)
 
 /** Everything the quiz screen renders. */
 data class QuizUiState(
@@ -83,6 +92,37 @@ class QuizViewModel(
         "",
     )
 
+    /** Whether the quiz speaks and accepts spoken answers. */
+    val voiceMode: StateFlow<Boolean> = settingsStore.quizVoiceMode.stateIn(
+        viewModelScope,
+        SharingStarted.WhileSubscribed(5_000),
+        false,
+    )
+
+    private val _listenRequest = MutableStateFlow<QuizListenRequest?>(null)
+
+    /** Non-null while the screen must open the speech recognizer. */
+    val listenRequest: StateFlow<QuizListenRequest?> = _listenRequest.asStateFlow()
+
+    private var ttsEngine: QuizTts? = null
+
+    /** Lazily creates the speech engine; only voice play ever touches it. */
+    private fun tts(): QuizTts = ttsEngine ?: QuizTts(getApplication()).also { ttsEngine = it }
+
+    /** True while the current run drives its flow by voice. */
+    private var voiceRun = false
+    private var listenToken = 0
+    private var notUnderstood = 0
+    private var cancellations = 0
+
+    private val speechLocale: java.util.Locale
+        get() = java.util.Locale.getDefault()
+
+    fun setVoiceMode(enabled: Boolean) {
+        viewModelScope.launch { settingsStore.setQuizVoiceMode(enabled) }
+        if (!enabled) stopVoice()
+    }
+
     /** Full deck for the current language, null while assets are loading. */
     private var deck: List<QuizQuestion>? = null
 
@@ -134,8 +174,8 @@ class QuizViewModel(
         return emptyList()
     }
 
-    /** Starts a new run. */
-    fun startGame() {
+    /** Starts a new run; with [voice] the run is played hands free. */
+    fun startGame(voice: Boolean) {
         val full = deck ?: return
         var fresh = full.filter { it.key !in seenKeys }.shuffled()
         if (fresh.isEmpty()) {
@@ -145,18 +185,25 @@ class QuizViewModel(
         }
         queue = fresh
         persistSeenKeys()
+        voiceRun = voice
+        notUnderstood = 0
+        cancellations = 0
         _state.value = QuizUiState(
             phase = QuizPhase.PLAYING,
             question = fresh.first(),
             questionNumber = 1,
             lives = QUIZ_LIVES,
         )
+        if (voiceRun) speakCurrentQuestion()
     }
 
     /** Registers the player's answer and shows the feedback. */
     fun answer(optionIndex: Int) {
         val current = _state.value
         if (current.phase != QuizPhase.PLAYING) return
+        // A tap resolves any listening still in flight.
+        _listenRequest.value = null
+        ttsEngine?.stop()
         val question = current.question ?: return
         val correct = optionIndex == question.answerIndex
         val streak = if (correct) current.streak + 1 else 0
@@ -176,6 +223,7 @@ class QuizViewModel(
             correctCount = current.correctCount + if (correct) 1 else 0,
             lives = current.lives - if (correct) 0 else 1,
         )
+        if (voiceRun) speakFeedbackThenNext(_state.value)
     }
 
     /** Moves to the next question, or ends the run when the lives are gone. */
@@ -195,6 +243,7 @@ class QuizViewModel(
                 finishedCorrect = current.correctCount,
                 scoreSaved = false,
             )
+            if (voiceRun) speakGameOver()
             return
         }
         queue = queue.drop(1)
@@ -212,6 +261,7 @@ class QuizViewModel(
                     finishedBestStreak = current.bestStreak,
                     finishedCorrect = current.correctCount,
                 )
+                if (voiceRun) speakGameOver()
                 return
             }
             _state.value = current.copy(
@@ -220,6 +270,7 @@ class QuizViewModel(
                 questionNumber = current.questionNumber + 1,
                 selectedOption = null,
             )
+            if (voiceRun) speakCurrentQuestion()
             return
         }
         _state.value = current.copy(
@@ -228,6 +279,184 @@ class QuizViewModel(
             questionNumber = current.questionNumber + 1,
             selectedOption = null,
         )
+        if (voiceRun) speakCurrentQuestion()
+    }
+
+    private fun speakCurrentQuestion() {
+        val context = getApplication<Application>()
+        val question = _state.value.question ?: return
+        val spoken = spokenOptions(question)
+        tts().speak(
+            context.getString(R.string.quiz_speak_question, question.prompt, spoken),
+            speechLocale,
+        ) { startListening(QuizListenKind.ANSWER) }
+    }
+
+    private fun speakFeedbackThenNext(updated: QuizUiState) {
+        val context = getApplication<Application>()
+        val question = updated.question ?: return
+        val verdicts = context.resources.getStringArray(R.array.quiz_verdicts)
+        val verdict = verdicts[if (updated.lastAnswerCorrect) 0 else 1]
+        tts().speak(
+            context.getString(
+                R.string.quiz_speak_feedback,
+                verdict,
+                question.options[question.answerIndex],
+                question.fact ?: "",
+            ),
+            speechLocale,
+        ) { if (_state.value.phase == QuizPhase.FEEDBACK) next() }
+    }
+
+    private fun speakGameOver() {
+        val context = getApplication<Application>()
+        val finished = _state.value
+        tts().speak(
+            context.getString(R.string.quiz_speak_game_over, finished.finishedScore, finished.finishedCorrect),
+            speechLocale,
+        ) { askName() }
+    }
+
+    private fun askName() {
+        val context = getApplication<Application>()
+        val stored = storedName.value
+        val prompt = if (stored.isNotBlank()) {
+            context.getString(R.string.quiz_speak_name_stored, stored)
+        } else {
+            context.getString(R.string.quiz_speak_name)
+        }
+        tts().speak(prompt, speechLocale) { startListening(QuizListenKind.NAME) }
+    }
+
+    /**
+     * Text read out for the options: star ratings become plain numbers with
+     * the localized word for "stars", and every option is numbered so the
+     * player can answer "opción dos".
+     */
+    private fun spokenOptions(question: QuizQuestion): String {
+        val context = getApplication<Application>()
+        val starsWord = context.getString(R.string.quiz_speak_stars)
+        return question.options.mapIndexed { index, option ->
+            val stars = option.count { c -> c == '\u2605' }
+            val spoken = if (stars > 0 && option.all { c -> c == '\u2605' || c == ' ' }) {
+                "$stars $starsWord"
+            } else {
+                option
+            }
+            context.getString(R.string.quiz_speak_option, index + 1, spoken)
+        }.joinToString(" ")
+    }
+
+    private fun startListening(kind: QuizListenKind) {
+        listenToken++
+        _listenRequest.value = QuizListenRequest(listenToken, kind)
+    }
+
+    /** A speech recognizer transcript for the pending [listenRequest]. */
+    fun onVoiceResult(transcript: String) {
+        val request = _listenRequest.value ?: return
+        _listenRequest.value = null
+        val context = getApplication<Application>()
+        if (transcript.isBlank()) {
+            notUnderstood++
+            onListeningFailed(
+                context.getString(R.string.quiz_speak_not_understood_retry, QUIZ_VOICE_FALLBACK - notUnderstood)
+            )
+            return
+        }
+        when (request.kind) {
+            QuizListenKind.NAME -> {
+                notUnderstood = 0
+                saveScore(transcript.trim())
+                tts().speak(context.getString(R.string.quiz_speak_saved), speechLocale)
+            }
+
+            QuizListenKind.ANSWER -> {
+                if (_state.value.phase != QuizPhase.PLAYING) return
+                when (val command = QuizVoice.command(transcript)) {
+                    VoiceCommand.REPEAT -> {
+                        notUnderstood = 0
+                        speakCurrentQuestion()
+                    }
+
+                    VoiceCommand.STOP -> {
+                        stopVoice()
+                        quitGame()
+                    }
+
+                    VoiceCommand.PLAY, null -> {
+                        val question = _state.value.question ?: return
+                        val match = QuizVoice.matchAnswer(transcript, question)
+                        if (match != null) {
+                            notUnderstood = 0
+                            answer(match)
+                        } else {
+                            notUnderstood++
+                            onListeningFailed(
+                                context.getString(
+                                    R.string.quiz_speak_not_understood_retry,
+                                    QUIZ_VOICE_FALLBACK - notUnderstood,
+                                )
+                            )
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /** The player cancelled (or the recognizer failed) a listening round. */
+    fun onVoiceCancelled() {
+        val request = _listenRequest.value ?: return
+        _listenRequest.value = null
+        if (request.kind == QuizListenKind.NAME) {
+            // Name by voice skipped: leave the field for the keyboard.
+            ttsEngine?.stop()
+            return
+        }
+        cancellations++
+        if (cancellations >= 2) {
+            stopAutoListen()
+        }
+    }
+
+    /**
+     * Announces [message] and listens again, falling back to touch play
+     * after a few unsuccessful attempts so nobody gets stuck.
+     */
+    private fun onListeningFailed(message: String) {
+        val context = getApplication<Application>()
+        if (notUnderstood >= QUIZ_VOICE_FALLBACK) {
+            notUnderstood = 0
+            stopAutoListen()
+            tts().speak(context.getString(R.string.quiz_speak_tap_fallback), speechLocale)
+            return
+        }
+        tts().speak(message, speechLocale) { startListening(QuizListenKind.ANSWER) }
+    }
+
+    /** Stops re-opening the recognizer; the run continues by tapping. */
+    private fun stopAutoListen() {
+        _listenRequest.value = null
+        voiceRun = false
+    }
+
+    /** Stops voice expectations when the recognizer cannot even be launched. */
+    fun stopVoiceForLaunchFailure() {
+        stopVoiceInternal()
+    }
+
+    /** Silences speech and speech expectations without leaving the screen. */
+    private fun stopVoice() {
+        stopVoiceInternal()
+    }
+
+    private fun stopVoiceInternal() {
+        _listenRequest.value = null
+        voiceRun = false
+        notUnderstood = 0
+        cancellations = 0
+        ttsEngine?.stop()
     }
 
     /** Stores the finished run under [name] in the leaderboard. */
@@ -247,12 +476,20 @@ class QuizViewModel(
 
     /** Leaves the game over screen and returns to the start screen. */
     fun backToStart() {
+        stopVoice()
         _state.value = QuizUiState(phase = QuizPhase.START, poolSize = deck?.size ?: 0)
     }
 
     /** Abandons a run in progress and returns to the start screen. */
     fun quitGame() {
+        stopVoice()
         _state.value = QuizUiState(phase = QuizPhase.START, poolSize = deck?.size ?: 0)
+    }
+
+    override fun onCleared() {
+        ttsEngine?.shutdown()
+        ttsEngine = null
+        super.onCleared()
     }
 
     private fun persistSeenKeys() {

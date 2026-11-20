@@ -39,4 +39,27 @@
     <string name="quiz_cat_edibility">⭐ Cocina</string>
     <string name="quiz_cat_habitat">🌲 Hábitat</string>
     <string name="quiz_cat_culture">🧺 Mundo setero</string>
+
+    <!-- juego por voz -->
+    <string name="quiz_voice_mode">Jugar por voz</string>
+    <string name="quiz_voice_hint">La aplicación lee las preguntas en voz alta y escucha tus respuestas: puedes jugar sin tocar el teléfono. Di el número de la opción o el nombre de la respuesta, "repite" para volver a oírla o "basta" para salir.</string>
+    <string name="quiz_voice_listening">Escuchando tu respuesta…</string>
+    <string name="quiz_voice_unavailable">El reconocimiento de voz del dispositivo no está disponible. Puedes seguir jugando tocando la pantalla.</string>
+    <string name="quiz_voice_prompt_answer">Di el número o la respuesta</string>
+    <string name="quiz_voice_prompt_name">Di tu nombre</string>
+    <!-- textos que lee el motor de texto a voz -->
+    <string name="quiz_speak_question">Pregunta %1$s: %2$s. Opciones: %3$s</string>
+    <string name="quiz_speak_option">Opción %1$d: %2$s</string>
+    <string name="quiz_speak_stars">estrellas</string>
+    <string name="quiz_speak_feedback">%1$s La respuesta correcta es: %2$s. %3$s</string>
+    <string name="quiz_speak_game_over">Fin de la partida. Has conseguido %1$d puntos con %2$d respuestas correctas.</string>
+    <string name="quiz_speak_name">Para guardar tu puntuación en el ranking, di tu nombre.</string>
+    <string name="quiz_speak_name_stored">Para guardar la puntuación, di tu nombre. El último nombre usado fue %1$s.</string>
+    <string name="quiz_speak_saved">Puntuación guardada. ¡Bien jugado!</string>
+    <string name="quiz_speak_not_understood_retry">No te he entendido. Te quedan %1$d intentos por voz antes de continuar tocando la pantalla. Di el número de la opción o el nombre de la respuesta.</string>
+    <string name="quiz_speak_tap_fallback">Parece que la voz no funciona bien. Continuemos tocando la pantalla.</string>
+    <string-array name="quiz_verdicts">
+        <item>¡Correcto!</item>
+        <item>Has fallado.</item>
+    </string-array>
 </resources>
