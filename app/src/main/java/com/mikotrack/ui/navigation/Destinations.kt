@@ -4,6 +4,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.History
 import androidx.compose.material.icons.filled.Map
 import androidx.compose.material.icons.filled.PhotoLibrary
+import androidx.compose.material.icons.filled.Quiz
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Spa
 import androidx.annotation.StringRes
@@ -19,6 +20,7 @@ enum class TopLevelDestination(
     MAP("map", R.string.nav_map, Icons.Filled.Map),
     HISTORY("history", R.string.nav_history, Icons.Filled.History),
     GALLERY("gallery", R.string.nav_gallery, Icons.Filled.PhotoLibrary),
+    QUIZ("quiz", R.string.nav_quiz, Icons.Filled.Quiz),
     MUSHROOMS("mushrooms", R.string.nav_mushrooms, Icons.Filled.Spa),
     SETTINGS("settings", R.string.nav_settings, Icons.Filled.Settings),
 }

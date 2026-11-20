@@ -1,0 +1,264 @@
+package com.mikotrack.ui.quiz
+
+import com.mikotrack.ui.mushrooms.Mushroom
+import kotlinx.serialization.Serializable
+import kotlin.random.Random
+
+/**
+ * Themed area a quiz question belongs to. The UI uses it to badge the card
+ * (emoji + label) so the game feels varied.
+ */
+enum class QuizCategory {
+    /** Guess the scientific name of a species. */
+    SCIENTIFIC_NAME,
+
+    /** Guess the vernacular name behind a scientific name. */
+    COMMON_NAME,
+
+    /** When does the species fruit. */
+    SEASON,
+
+    /** Culinary rating (1..5 stars) of the species. */
+    EDIBILITY,
+
+    /** Preferred tree/forest habitat of the species. */
+    HABITAT,
+
+    /** Curated "mushroom world" trivia from the bundled question banks. */
+    CULTURE,
+}
+
+/**
+ * A four-option multiple-choice question. Options are already shuffled and
+ * [answerIndex] points at the correct one. [key] identifies the underlying
+ * question so the game can avoid repeating recent questions.
+ */
+data class QuizQuestion(
+    val key: String,
+    val category: QuizCategory,
+    val prompt: String,
+    val options: List<String>,
+    val answerIndex: Int,
+    /** Optional didactic note shown after answering. */
+    val fact: String? = null,
+) {
+    val correctAnswer: String get() = options[answerIndex]
+}
+
+/**
+ * Localised question templates. The generated questions embed the species
+ * name into one of these; each template contains a single %1$s placeholder.
+ */
+data class QuizPrompts(
+    val scientificName: String,
+    val commonName: String,
+    val season: String,
+    val edibility: String,
+    val habitat: String,
+)
+
+/** One curated question as stored in the per-language JSON quiz banks. */
+@Serializable
+data class CuratedQuestion(
+    val q: String,
+    val options: List<String>,
+    val answer: Int,
+    val fact: String? = null,
+)
+
+/**
+ * Builds the full deck for one run from the mushroom catalogue and the curated
+ * culture bank. The order is deterministic for a given [random] seed, which
+ * the unit tests rely on.
+ *
+ * @param prompts localised question templates.
+ * @param treeLabels map of habitat tree keys (as used in the catalogue JSON)
+ *   to their translated labels; used by the habitat questions.
+ */
+fun buildQuizDeck(
+    mushrooms: List<Mushroom>,
+    curated: List<CuratedQuestion>,
+    prompts: QuizPrompts,
+    treeLabels: Map<String, String>,
+    random: Random = Random.Default,
+): List<QuizQuestion> {
+    val questions = curated.toQuizQuestions().toMutableList()
+    questions += scientificNameQuestions(mushrooms, prompts, random)
+    questions += commonNameQuestions(mushrooms, prompts, random)
+    questions += seasonQuestions(mushrooms, prompts, random)
+    questions += edibilityQuestions(mushrooms, prompts, random)
+    questions += habitatQuestions(mushrooms, prompts, treeLabels, random)
+    return questions
+}
+
+private fun List<CuratedQuestion>.toQuizQuestions(): List<QuizQuestion> =
+    mapIndexedNotNull { index, question ->
+        val options = question.options
+        if (options.size != 4 || question.answer !in options.indices ||
+            options.distinct().size != 4 || options[question.answer].isBlank()
+        ) {
+            null
+        } else {
+            QuizQuestion(
+                key = "culture:$index",
+                category = QuizCategory.CULTURE,
+                prompt = question.q,
+                options = options,
+                answerIndex = question.answer,
+                fact = question.fact?.takeIf { it.isNotBlank() },
+            )
+        }
+    }
+
+/** "What is the scientific name of <common name>?" */
+private fun scientificNameQuestions(
+    mushrooms: List<Mushroom>,
+    prompts: QuizPrompts,
+    random: Random,
+): List<QuizQuestion> {
+    if (mushrooms.size < 4) return emptyList()
+    return mushrooms.mapNotNull { species ->
+        val genus = species.data.scientificName.substringBefore(' ')
+        val distractors = mushrooms
+            .filter { it.data.id != species.data.id && it.data.scientificName.substringBefore(' ') != genus }
+            .map { it.data.scientificName }
+            .distinct()
+            .shuffled(random)
+            .take(3)
+        if (distractors.size < 3) return@mapNotNull null
+        quizFrom(
+            key = "sci:${species.data.id}",
+            category = QuizCategory.SCIENTIFIC_NAME,
+            prompt = prompts.scientificName.format(species.texts.commonName),
+            correct = species.data.scientificName,
+            distractors = distractors,
+            random = random,
+        )
+    }
+}
+
+/** "Which mushroom hides behind this scientific name?" */
+private fun commonNameQuestions(
+    mushrooms: List<Mushroom>,
+    prompts: QuizPrompts,
+    random: Random,
+): List<QuizQuestion> {
+    if (mushrooms.size < 4) return emptyList()
+    return mushrooms.mapNotNull { species ->
+        val distractors = mushrooms
+            .filter { it.data.id != species.data.id }
+            .map { it.texts.commonName }
+            .distinct()
+            .shuffled(random)
+            .take(3)
+        if (distractors.size < 3) return@mapNotNull null
+        quizFrom(
+            key = "com:${species.data.id}",
+            category = QuizCategory.COMMON_NAME,
+            prompt = prompts.commonName.format(species.data.scientificName),
+            correct = species.texts.commonName,
+            distractors = distractors,
+            random = random,
+        )
+    }
+}
+
+/** "In which season does it fruit?" using the descriptive season texts. */
+private fun seasonQuestions(
+    mushrooms: List<Mushroom>,
+    prompts: QuizPrompts,
+    random: Random,
+): List<QuizQuestion> {
+    val seasons = mushrooms.map { it.texts.season.trim() }.distinct()
+    if (seasons.size < 4) return emptyList()
+    return mushrooms.mapNotNull { species ->
+        val correct = species.texts.season.trim()
+        val distractors = seasons.filter { !it.equals(correct, ignoreCase = true) }
+            .shuffled(random)
+            .take(3)
+        if (distractors.size < 3) return@mapNotNull null
+        quizFrom(
+            key = "season:${species.data.id}",
+            category = QuizCategory.SEASON,
+            prompt = prompts.season.format(species.texts.commonName),
+            correct = correct,
+            distractors = distractors,
+            random = random,
+        )
+    }
+}
+
+private const val STAR_LABELS_MAX = 5
+
+/** "How many stars does it deserve in the kitchen?" (catalogue edibility). */
+private fun edibilityQuestions(
+    mushrooms: List<Mushroom>,
+    prompts: QuizPrompts,
+    random: Random,
+): List<QuizQuestion> {
+    val starLabels = (1..STAR_LABELS_MAX).associateWith { stars ->
+        "★".repeat(stars) + "☆".repeat(STAR_LABELS_MAX - stars)
+    }
+    return mushrooms.mapNotNull { species ->
+        val rating = species.data.edibility.coerceIn(1, STAR_LABELS_MAX)
+        val distractors = (1..STAR_LABELS_MAX).filter { it != rating }.shuffled(random).take(3)
+        quizFrom(
+            key = "edi:${species.data.id}",
+            category = QuizCategory.EDIBILITY,
+            prompt = prompts.edibility.format(species.texts.commonName),
+            correct = starLabels.getValue(rating),
+            distractors = distractors.map { starLabels.getValue(it) },
+            random = random,
+        )
+    }
+}
+
+/** "Where is it easiest to find it?" (highest-weight tree of its habitat). */
+private fun habitatQuestions(
+    mushrooms: List<Mushroom>,
+    prompts: QuizPrompts,
+    treeLabels: Map<String, String>,
+    random: Random,
+): List<QuizQuestion> {
+    if (treeLabels.size < 4) return emptyList()
+    return mushrooms.mapNotNull { species ->
+        val bestTreeKey = species.data.habitat.trees
+            .filter { (key, weight) -> weight > 0f && treeLabels.containsKey(key) }
+            .maxByOrNull { (_, weight) -> weight }
+            ?.key ?: return@mapNotNull null
+        val correct = treeLabels.getValue(bestTreeKey)
+        val distractors = treeLabels.entries
+            .filter { it.key != bestTreeKey && it.value != correct }
+            .map { it.value }
+            .distinct()
+            .shuffled(random)
+            .take(3)
+        if (distractors.size < 3) return@mapNotNull null
+        quizFrom(
+            key = "hab:${species.data.id}",
+            category = QuizCategory.HABITAT,
+            prompt = prompts.habitat.format(species.texts.commonName),
+            correct = correct,
+            distractors = distractors,
+            random = random,
+        )
+    }
+}
+
+private fun quizFrom(
+    key: String,
+    category: QuizCategory,
+    prompt: String,
+    correct: String,
+    distractors: List<String>,
+    random: Random,
+): QuizQuestion {
+    val options = (listOf(correct) + distractors).shuffled(random)
+    return QuizQuestion(
+        key = key,
+        category = category,
+        prompt = prompt,
+        options = options,
+        answerIndex = options.indexOf(correct),
+    )
+}

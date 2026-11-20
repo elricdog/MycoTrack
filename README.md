@@ -90,6 +90,7 @@ system… let's see who finds it first!!!
 | Export | GPX, GeoJSON, KML, CSV, ZIP package, plus PNG map images, elevation profiles and visual trip reports |
 | Gallery | All waypoints: photographs, and waypoints without photo as tiles in the category colour with its icon. *Show on map* overlays the trip and centres the map on the waypoint; one or several waypoints (long press to select) can be deleted with their photos after a confirmation |
 | Gallery export | Share the photographs, save them to `Pictures/MikoTrack` or pack them in a ZIP with their locations (GeoJSON + CSV) |
+| Mushroom quiz | *Quiz* tab: four-option trivia game about the mushroom world. Hundreds of questions — auto-generated from the guide (scientific and vernacular names, season, kitchen rating, habitat) plus curated trivia banks — dealt without repeating recent ones. 5 lives, score with streak bonus, and a leaderboard saved under a player name |
 | Offline | Areas downloaded in advance as MBTiles and served from a loopback tile server |
 | Languages | English, Catalan and Spanish. Chosen in *Settings → Language* or, on Android 13+, in the system per-app language settings |
 | Self update | Once a day on start and on demand from *Settings → Updates*, the application asks GitHub for a newer release, downloads the APK that suits the device and opens the system installer; the user confirms the update and the installation, and nothing is installed silently |

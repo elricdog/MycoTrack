@@ -81,6 +81,9 @@ class SettingsStore(private val context: Context) {
         val GAME_SCORES_MEMORY = stringPreferencesKey("game_scores_memory")
         val GAME_SCORES_TOPO = stringPreferencesKey("game_scores_topo")
         val GAME_SCORES_SOLITAIRE = stringPreferencesKey("game_scores_solitaire")
+        val QUIZ_SCORES = stringPreferencesKey("quiz_scores")
+        val QUIZ_PLAYER_NAME = stringPreferencesKey("quiz_player_name")
+        val QUIZ_SEEN_KEYS = stringPreferencesKey("quiz_seen_keys")
     }
 
     /** Whether a parking waypoint is added at the first accurate fix of a new trip. */
@@ -435,5 +438,32 @@ class SettingsStore(private val context: Context) {
         GameId.MEMORY -> Keys.GAME_SCORES_MEMORY
         GameId.TOPO -> Keys.GAME_SCORES_TOPO
         GameId.SOLITAIRE -> Keys.GAME_SCORES_SOLITAIRE
+    }
+
+    /** The quiz leaderboard, best score first. */
+    val quizScores: Flow<List<QuizScore>> =
+        context.dataStore.data.map { QuizScores.decode(it[Keys.QUIZ_SCORES]) }
+
+    /** Adds a finished quiz run and keeps the best entries on the leaderboard. */
+    suspend fun recordQuizScore(name: String, score: Int, atMillis: Long) {
+        context.dataStore.edit {
+            it[Keys.QUIZ_SCORES] = QuizScores.insert(it[Keys.QUIZ_SCORES], QuizScore(name, score, atMillis))
+        }
+    }
+
+    /** The last player name used, offered as the default for the next run. */
+    val quizPlayerName: Flow<String> =
+        context.dataStore.data.map { it[Keys.QUIZ_PLAYER_NAME] ?: "" }
+
+    suspend fun setQuizPlayerName(name: String) {
+        context.dataStore.edit { it[Keys.QUIZ_PLAYER_NAME] = name }
+    }
+
+    /** Question keys already asked, so recent questions do not repeat. */
+    val quizSeenKeys: Flow<List<String>> =
+        context.dataStore.data.map { it[Keys.QUIZ_SEEN_KEYS]?.split(';')?.filter { key -> key.isNotBlank() } ?: emptyList() }
+
+    suspend fun setQuizSeenKeys(keys: List<String>) {
+        context.dataStore.edit { it[Keys.QUIZ_SEEN_KEYS] = keys.joinToString(";") }
     }
 }

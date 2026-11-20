@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_quiz">Quiz</string>
+
+    <string name="quiz_title">Quiz boletaire</string>
+    <string name="quiz_tagline">5 vides, 4 respostes i tot el món boletaire. Fins on arribaràs?</string>
+    <string name="quiz_start">Jugar</string>
+    <string name="quiz_pool_size">%1$d preguntes al pou</string>
+    <string name="quiz_best_score">Millor puntuació: %1$d</string>
+    <string name="quiz_ranking">Classificació</string>
+    <string name="quiz_ranking_empty">Encara ningú a la classificació. Sigues el primer!</string>
+    <string name="quiz_score">Punts</string>
+    <string name="quiz_question_number">Pregunta %1$d</string>
+    <string name="quiz_lives_left">%1$d vides</string>
+    <string name="quiz_streak">Ratxa x%1$d</string>
+    <string name="quiz_correct">Correcte!</string>
+    <string name="quiz_correct_bonus">+%1$d punts</string>
+    <string name="quiz_wrong">Fallada!</string>
+    <string name="quiz_lost_life">Has perdut una vida 💔</string>
+    <string name="quiz_next">Següent</string>
+    <string name="quiz_game_over">Fi de la partida</string>
+    <string name="quiz_final_result">%1$d punts · %2$d encerts · millor ratxa x%3$d</string>
+    <string name="quiz_name_label">El teu nom</string>
+    <string name="quiz_save_score">Guarda a la classificació</string>
+    <string name="quiz_saved">Guardat! Mira la classificació.</string>
+    <string name="quiz_play_again">Torna a jugar</string>
+    <string name="quiz_quit">Surt de la partida</string>
+    <string name="quiz_progress_a11y">Queden %1$d de %2$d vides</string>
+
+    <string name="quiz_prompt_scientific_name">Quin nom científic té %1$s?</string>
+    <string name="quiz_prompt_common_name">Quin bolet s\'amaga darrere del nom «%1$s»?</string>
+    <string name="quiz_prompt_season">Quan fructifica %1$s?</string>
+    <string name="quiz_prompt_edibility">Quants estels mereix %1$s a la cuina?</string>
+    <string name="quiz_prompt_habitat">On és més fàcil trobar %1$s?</string>
+
+    <string name="quiz_cat_scientific_name">🔬 Nom científic</string>
+    <string name="quiz_cat_common_name">🍄 Nom comú</string>
+    <string name="quiz_cat_season">📅 Temporada</string>
+    <string name="quiz_cat_edibility">⭐ Cuina</string>
+    <string name="quiz_cat_habitat">🌲 Hàbitat</string>
+    <string name="quiz_cat_culture">🧺 Món boletaire</string>
+</resources>

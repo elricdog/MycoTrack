@@ -52,6 +52,8 @@ import com.mikotrack.ui.mushrooms.MushroomGuideViewModel
 import com.mikotrack.ui.mushrooms.guideLanguage
 import com.mikotrack.ui.permissions.PermissionCenterScreen
 import com.mikotrack.ui.permissions.PermissionCenterViewModel
+import com.mikotrack.ui.quiz.QuizScreen
+import com.mikotrack.ui.quiz.QuizViewModel
 import com.mikotrack.ui.settings.SettingsScreen
 import com.mikotrack.ui.settings.SettingsViewModel
 
@@ -129,7 +131,7 @@ fun MycoTrackNavHost(
                             }
                         },
                         icon = { Icon(destination.icon, contentDescription = stringResource(destination.labelRes)) },
-                        // Five sections share the bar, so a long label is cut instead of wrapping.
+                        // Six sections share the bar, so a long label is cut instead of wrapping.
                         label = {
                             Text(
                                 text = stringResource(destination.labelRes),
@@ -195,6 +197,14 @@ fun MycoTrackNavHost(
                     viewModel = viewModel,
                     onShowOnMap = navigateToMap,
                 )
+            }
+
+            composable(TopLevelDestination.QUIZ.route) {
+                val appContext = LocalContext.current.applicationContext
+                val viewModel: QuizViewModel = containerViewModel(container) {
+                    QuizViewModel(appContext as android.app.Application, it.settingsStore)
+                }
+                QuizScreen(viewModel = viewModel)
             }
 
             composable(TopLevelDestination.MUSHROOMS.route) {

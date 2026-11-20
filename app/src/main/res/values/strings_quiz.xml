@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_quiz">Quiz</string>
+
+    <string name="quiz_title">Mushroom quiz</string>
+    <string name="quiz_tagline">5 lives, 4 answers and the whole mushroom world. How far can you get?</string>
+    <string name="quiz_start">Play</string>
+    <string name="quiz_pool_size">%1$d questions in the pool</string>
+    <string name="quiz_best_score">Best score: %1$d</string>
+    <string name="quiz_ranking">Leaderboard</string>
+    <string name="quiz_ranking_empty">Nobody in the leaderboard yet. Be the first!</string>
+    <string name="quiz_score">Score</string>
+    <string name="quiz_question_number">Question %1$d</string>
+    <string name="quiz_lives_left">%1$d lives</string>
+    <string name="quiz_streak">Streak x%1$d</string>
+    <string name="quiz_correct">Correct!</string>
+    <string name="quiz_correct_bonus">+%1$d points</string>
+    <string name="quiz_wrong">Wrong!</string>
+    <string name="quiz_lost_life">You lost a life 💔</string>
+    <string name="quiz_next">Next</string>
+    <string name="quiz_game_over">Game over</string>
+    <string name="quiz_final_result">%1$d points · %2$d correct answers · best streak x%3$d</string>
+    <string name="quiz_name_label">Your name</string>
+    <string name="quiz_save_score">Save to the leaderboard</string>
+    <string name="quiz_saved">Saved! Check the leaderboard.</string>
+    <string name="quiz_play_again">Play again</string>
+    <string name="quiz_quit">Leave the game</string>
+    <string name="quiz_progress_a11y">%1$d of %2$d lives left</string>
+
+    <string name="quiz_prompt_scientific_name">What is the scientific name of %1$s?</string>
+    <string name="quiz_prompt_common_name">Which mushroom hides behind the name “%1$s”?</string>
+    <string name="quiz_prompt_season">When does %1$s fruit?</string>
+    <string name="quiz_prompt_edibility">How many stars does %1$s deserve in the kitchen?</string>
+    <string name="quiz_prompt_habitat">Where is %1$s easiest to find?</string>
+
+    <string name="quiz_cat_scientific_name">🔬 Scientific name</string>
+    <string name="quiz_cat_common_name">🍄 Common name</string>
+    <string name="quiz_cat_season">📅 Season</string>
+    <string name="quiz_cat_edibility">⭐ Kitchen</string>
+    <string name="quiz_cat_habitat">🌲 Habitat</string>
+    <string name="quiz_cat_culture">🧺 Mushroom world</string>
+</resources>
