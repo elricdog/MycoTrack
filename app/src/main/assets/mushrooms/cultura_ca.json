@@ -1,0 +1,2744 @@
+[
+ {
+  "q": "Quantes comarques té Catalunya?",
+  "options": [
+   "42",
+   "40",
+   "41",
+   "44"
+  ],
+  "answer": 0,
+  "fact": "Des del 2015, amb la creació del Moianès, Catalunya compta amb 42 comarques."
+ },
+ {
+  "q": "Quina serralada fa de frontera natural entre Catalunya i França?",
+  "options": [
+   "La serra Cantàbrica",
+   "El sistema Central",
+   "Els Ports de Morella",
+   "El Pirineu"
+  ],
+  "answer": 3
+ },
+ {
+  "q": "Quin és el riu més llarg que neix i desemboca íntegrament a Catalunya?",
+  "options": [
+   "El Ter",
+   "L'Ebre",
+   "El Llobregat",
+   "El Segre"
+  ],
+  "answer": 0,
+  "fact": "El Ter fa uns 209 km: neix a l'Ulldemó i desemboca a l'Estartit."
+ },
+ {
+  "q": "Quin riu desaigua al mar formant el delta més gran del Mediterrani occidental?",
+  "options": [
+   "El Ter",
+   "El Llobregat",
+   "L'Ebre",
+   "La Tordera"
+  ],
+  "answer": 2,
+  "fact": "El delta de l'Ebre ocupa unes 32.000 hectàrees i és parc natural."
+ },
+ {
+  "q": "Quin riu passa per la ciutat de Lleida?",
+  "options": [
+   "L'Ebre",
+   "El Gaià",
+   "El Francolí",
+   "El Segre"
+  ],
+  "answer": 3,
+  "fact": "El Segre desemboca a l'Ebre just a Mequinensa."
+ },
+ {
+  "q": "En quina ciutat es troben els rius Ter i Onyar?",
+  "options": [
+   "Girona",
+   "Figueres",
+   "Olot",
+   "Vic"
+  ],
+  "answer": 0,
+  "fact": "L'Onyar, amb les cases penjades, desemboca al Ter dins de Girona."
+ },
+ {
+  "q": "Quin riu travessa Manresa abans de unir-se al Llobregat?",
+  "options": [
+   "El Gaià",
+   "L'Anoia",
+   "El Congost",
+   "El Cardener"
+  ],
+  "answer": 3,
+  "fact": "El Cardener neix a prop d'Ensija, al Solsonès."
+ },
+ {
+  "q": "Quin riu, amb Sort com a capital, és la referència del ròding a Catalunya?",
+  "options": [
+   "La Noguera Ribagorça",
+   "El Segre",
+   "La Tordera",
+   "La Noguera Pallaresa"
+  ],
+  "answer": 3,
+  "fact": "Al Pallars es van popularitzar els descensos d'aigües braves als anys seixanta."
+ },
+ {
+  "q": "Quina ciutat travessa el riu Valira, que baixa d'Andorra?",
+  "options": [
+   "Puigcerdà",
+   "Ripoll",
+   "La Seu d'Urgell",
+   "Berga"
+  ],
+  "answer": 2,
+  "fact": "El Valira es junta amb el Segre al Pont de Bar."
+ },
+ {
+  "q": "On desemboca el Segre?",
+  "options": [
+   "Al mar, a Tortosa",
+   "A l'Ebre, a Mequinensa",
+   "A l'Atlàntic per Bordeus",
+   "Al Ter, a Girona"
+  ],
+  "answer": 1,
+  "fact": "Just sota Mequinensa el Segre aboca les seves aigües a l'Ebre."
+ },
+ {
+  "q": "Com es diu el cim més alt de Catalunya?",
+  "options": [
+   "El Puigmal",
+   "El Carlit",
+   "La Pica d'Estats",
+   "El Comaloforno"
+  ],
+  "answer": 2,
+  "fact": "Amb 3.143 metres, fa de frontera entre el Pallars Sobirà i l'Arieja."
+ },
+ {
+  "q": "A quina comarca es dreça la Pica d'Estats?",
+  "options": [
+   "La Val d'Aran",
+   "L'Alt Urgell",
+   "El Pallars Sobirà",
+   "El Ripollès"
+  ],
+  "answer": 2
+ },
+ {
+  "q": "El cim del Torbó és el punt més alt de quin parc natural?",
+  "options": [
+   "El del Montseny",
+   "El Cadí-Moixeró",
+   "Els Ports de Tortosa-Beseit",
+   "El del Cap de Creus"
+  ],
+  "answer": 3,
+  "fact": "El Torbó, de 640 metres, presideix l'extrem pirinenc del Mediterrani."
+ },
+ {
+  "q": "Quin és el cim més alt del massís del Montseny?",
+  "options": [
+   "El Matagalls",
+   "Les Agudes",
+   "El Taga",
+   "El turó de l'Home"
+  ],
+  "answer": 3,
+  "fact": "El turó de l'Home arriba als 1.712 metres, pocs metres més que el Matagalls."
+ },
+ {
+  "q": "Quin cim és el més alt de la serra de Montserrat?",
+  "options": [
+   "El Cavall Bernat",
+   "Sant Jeroni",
+   "Sant Antoni",
+   "La Mola"
+  ],
+  "answer": 1,
+  "fact": "Sant Jeroni, de 1.236 metres, té una vista de 360 graus sobre mig país."
+ },
+ {
+  "q": "Què és el Cavall Bernat de Montserrat?",
+  "options": [
+   "Una roca amb forma de cap de cavall",
+   "Un refugi de muntanya",
+   "Un camí de ferrata",
+   "Un santuari"
+  ],
+  "answer": 0,
+  "fact": "El Cavall Bernat és una de les agulles més famoses de la muntanya."
+ },
+ {
+  "q": "Les agulles característiques de Montserrat són fetes de quina roca?",
+  "options": [
+   "Granit",
+   "Conglomerat",
+   "Calcària pura",
+   "Basalt"
+  ],
+  "answer": 1,
+  "fact": "El conglomerat de Montserrat es va formar fa desenes de milions d'anys."
+ },
+ {
+  "q": "Quin cim corona la serra del Cadí?",
+  "options": [
+   "El Cadroner",
+   "La Tuta",
+   "Comabona",
+   "Comaloforno"
+  ],
+  "answer": 0,
+  "fact": "El Cadroner, de 2.562 metres, presideix el parc natural Cadí-Moixeró."
+ },
+ {
+  "q": "Com es diu la muntanya bessona de la Vansa, icona de l'excursionisme català?",
+  "options": [
+   "Comabona",
+   "Boumort",
+   "El Bessó",
+   "El Pedraforca"
+  ],
+  "answer": 3,
+  "fact": "El Pedraforca, de 2.497 metres, és un dels cims més estimats de Catalunya."
+ },
+ {
+  "q": "On es dreça el Puigmal, emblema de la Catalunya oriental?",
+  "options": [
+   "Al Ripollès",
+   "A la Cerdanya",
+   "Al Pallars Sobirà",
+   "A la Val d'Aran"
+  ],
+  "answer": 0,
+  "fact": "El Puigmal, de 2.911 metres, es puja habitualment des del refugi d'Ulldemó."
+ },
+ {
+  "q": "Quin massís va esdevenir el primer parc natural de Catalunya, el 1921?",
+  "options": [
+   "L'Aigüestortes",
+   "El Cap de Creus",
+   "La Zona Volcànica de la Garrotxa",
+   "El Montseny"
+  ],
+  "answer": 3,
+  "fact": "El Montseny va ser un dels primers parcs naturals declarats al sud d'Europa."
+ },
+ {
+  "q": "Quin és el parc natural més gran de Catalunya, entre la Val d'Aran i el Pallars Sobirà?",
+  "options": [
+   "L'Aigüestortes",
+   "El Montseny",
+   "L'Alt Pirineu",
+   "El Cadí-Moixeró"
+  ],
+  "answer": 2,
+  "fact": "Creat el 2003, l'Alt Pirineu protegeix un territori de muntanya immens."
+ },
+ {
+  "q": "L'Aigüestortes, declarat parc nacional el 1935, va ser el primer parc nacional d'Espanya?",
+  "options": [
+   "No, va ser el segon",
+   "Sí, va ser el primer",
+   "No, va ser el cinquè",
+   "No, va ser el desè"
+  ],
+  "answer": 0,
+  "fact": "Covadonga (1918) obre la llista; Aigüestortes la continua el 1935."
+ },
+ {
+  "q": "Els cons volcànics del Croscat i de Santa Margarida són a la comarca de...",
+  "options": [
+   "l'Empordà",
+   "la Garrotxa",
+   "Osona",
+   "la Selva"
+  ],
+  "answer": 1,
+  "fact": "La Zona Volcànica de la Garrotxa compta una quarantena de cons volcànics."
+ },
+ {
+  "q": "Quin volcà de la Garrotxa té una ermita aixecada dins del cràter?",
+  "options": [
+   "El Croscat",
+   "Roca Pineda",
+   "El Comanegra",
+   "Santa Margarida"
+  ],
+  "answer": 3,
+  "fact": "L'ermita de Santa Margarida s'aixeca al mig del cràter d'un volcà apagat."
+ },
+ {
+  "q": "A quina comarca pertany l'estany de Sant Maurici?",
+  "options": [
+   "L'Alta Ribagorça",
+   "El Pallars Sobirà",
+   "La Val d'Aran",
+   "La Cerdanya"
+  ],
+  "answer": 0,
+  "fact": "L'estany és dins del terme d'Espot, al peu de les Agulles."
+ },
+ {
+  "q": "Quin estany del Pallars Jussà és meromíctic, amb capes d'aigua que no es barregen?",
+  "options": [
+   "L'estany de Sant Maurici",
+   "L'estany de Banyoles",
+   "L'estany de Sant Llorenç de la Muga",
+   "L'estany de Montcortès"
+  ],
+  "answer": 3,
+  "fact": "Montcortès és d'origen kàrstic i amaga fonts submarines."
+ },
+ {
+  "q": "En quina vila hi ha l'estany natural més gran de Catalunya?",
+  "options": [
+   "A Olot",
+   "A Vic",
+   "A Puigcerdà",
+   "A Banyoles"
+  ],
+  "answer": 3,
+  "fact": "L'estany de Banyoles fa unes 11 hectàrees i banya el centre de la vila."
+ },
+ {
+  "q": "Quin és el punt més oriental de la península Ibèrica?",
+  "options": [
+   "El cap de Palos",
+   "El cap de Gata",
+   "El cap de Begur",
+   "El cap de Creus"
+  ],
+  "answer": 3,
+  "fact": "El far del cap de Creus, davant de Cadaqués, veu sortir el primer sol peninsular."
+ },
+ {
+  "q": "Les illes Medes, reserva marina mítica per al busseig, són davant de...",
+  "options": [
+   "Roses",
+   "Calella",
+   "l'Estartit",
+   "Cambrils"
+  ],
+  "answer": 2,
+  "fact": "Les Medes formen part de l'espai natural del Montgrí, el Baix Ter i les Illes Medes."
+ },
+ {
+  "q": "La Costa Brava s'estén des de Blanes fins on?",
+  "options": [
+   "A Barcelona",
+   "A la frontera francesa, a Portbou",
+   "A la desembocadura de l'Ebre",
+   "A Cambrils"
+  ],
+  "answer": 1,
+  "fact": "El nom «Costa Brava» es va popularitzar a principis del segle XX."
+ },
+ {
+  "q": "De quina província és la Costa Daurada?",
+  "options": [
+   "Tarragona",
+   "Girona",
+   "Barcelona",
+   "Castelló"
+  ],
+  "answer": 0,
+  "fact": "El nom fa referència al daurat de les seves sorres fines."
+ },
+ {
+  "q": "Quina contrada és la gran terra de l'arròs a Catalunya?",
+  "options": [
+   "Els aiguamolls de l'Empordà",
+   "L'estany de Banyoles",
+   "El pantà de Sau",
+   "El delta de l'Ebre"
+  ],
+  "answer": 3,
+  "fact": "L'arròs del delta es planta a la primavera i es colleix a la tardor."
+ },
+ {
+  "q": "Els aiguamolls de l'Empordà, amb flamencs i cavalls, s'obren a la badia de...",
+  "options": [
+   "Sant Carles de la Ràpita",
+   "Roses",
+   "Alcanar",
+   "Badalona"
+  ],
+  "answer": 1,
+  "fact": "La reserva acull aus migratòries i és parc natural des del 1983."
+ },
+ {
+  "q": "Quin parc natural s'aixeca entre Sitges, Gavà, Castelldefels i Vilanova i la Geltrú?",
+  "options": [
+   "Sant Llorenç del Munt",
+   "Collserola",
+   "La Serralada de Marina",
+   "El massís del Garraf"
+  ],
+  "answer": 3,
+  "fact": "El Garraf és un massís calcari amb vinyes fins a prop del mar."
+ },
+ {
+  "q": "Quin parc natural entre el Maresme i el Vallès deu el nom a una ermita?",
+  "options": [
+   "Sant Llorenç del Munt i l'Obac",
+   "Els Cingles de Bertí",
+   "La Zona Volcànica",
+   "El Montnegre i el Corredor"
+  ],
+  "answer": 3,
+  "fact": "L'ermita del Corredor és al terme de Sant Pere de Vilamajor."
+ },
+ {
+  "q": "Les Coves del Salnitre, les més visitades de Catalunya, són a la falda de quina muntanya?",
+  "options": [
+   "El Montseny",
+   "Montserrat",
+   "El Cadí",
+   "La Mola"
+  ],
+  "answer": 1,
+  "fact": "S'obren al terme de Collbató, als peus de la muntanya daurada."
+ },
+ {
+  "q": "Els Ports de Tortosa-Beseit són dins la província de...",
+  "options": [
+   "Castelló",
+   "Tarragona",
+   "Terol",
+   "Saragossa"
+  ],
+  "answer": 1,
+  "fact": "Al migjorn dels Ports s'aixeca el santuari de la Mare de Déu de Beseit."
+ },
+ {
+  "q": "Per què és coneguda la serra del Cardó, entre la Ribera d'Ebre i el Baix Ebre?",
+  "options": [
+   "Per un antic monestir cartuixà",
+   "Per un far romà",
+   "Per un poble abandonat al cim",
+   "Per les seves fonts termals"
+  ],
+  "answer": 0,
+  "fact": "De la cartoixa del Cardó se'n fa una coneguda ratafia d'herbes."
+ },
+ {
+  "q": "El castell de Sant Iscle, cuna del vol en tàndem, corona quina serra?",
+  "options": [
+   "La serra del Cadí",
+   "Els Cingles de Bertí",
+   "La serra de Prades",
+   "El Montsec"
+  ],
+  "answer": 3,
+  "fact": "Des de Sant Iscle enlairen pilots de tot el món; a la falda hi ha el parc astronòmic del Montsec."
+ },
+ {
+  "q": "L'aranès, oficial a Catalunya juntament amb el català i el castellà, és una variant de...",
+  "options": [
+   "El basc",
+   "L'aragonès",
+   "El francès",
+   "l'occità"
+  ],
+  "answer": 3,
+  "fact": "L'aranès pertany al gascó, un dialecte de la llengua occitana."
+ },
+ {
+  "q": "Cap on davallen les aigües de la Val d'Aran?",
+  "options": [
+   "Al Mediterrani",
+   "Al Golf de Biscaia directament",
+   "Al Roine",
+   "A l'Atlàntic, per la Garona"
+  ],
+  "answer": 3,
+  "fact": "La Garona neix a la Val d'Aran i desaigua a l'oceà per Bordeus."
+ },
+ {
+  "q": "Quina comarca té la capital al Vielha?",
+  "options": [
+   "L'Alt Urgell",
+   "El Pallars Sobirà",
+   "La Val d'Aran",
+   "La Cerdanya"
+  ],
+  "answer": 2,
+  "fact": "La Val d'Aran es travessa per carretera mitjançant el túnel de Vielha, de més de 5 km."
+ },
+ {
+  "q": "Quins tres rius neixen al massís de l'Ulldemó?",
+  "options": [
+   "El Ter, el Fluvià i la Muga",
+   "L'Ebre, el Segre i el Cinca",
+   "El Llobregat, el Cardener i l'Anoia",
+   "El Ter, el Freser i el Segre"
+  ],
+  "answer": 3,
+  "fact": "Per això l'Ulldemó és conegut com el sostre on neixen tres rius."
+ },
+ {
+  "q": "De quina localitat arrenca el cremallera que puja a Núria?",
+  "options": [
+   "Camprodon",
+   "Ribes de Freser",
+   "Sant Joan de les Abadesses",
+   "Puigcerdà"
+  ],
+  "answer": 1,
+  "fact": "El cremallera de la Vall de Núria funciona des del 1931."
+ },
+ {
+  "q": "El poble vell de Sau, amb el campanar que emergeix quan baixa l'aigua, reposa sota l'embassament de...",
+  "options": [
+   "Camarasa",
+   "Sau",
+   "Susqueda",
+   "Terradets"
+  ],
+  "answer": 1,
+  "fact": "El pantà de Sau es va omplir el 1963 i va ofegar un poble sencer."
+ },
+ {
+  "q": "Quina muntanya de Barcelona corona el temple del Sagrat Cor i un parc d'atraccions històric?",
+  "options": [
+   "Montjuïc",
+   "El Tibidabo",
+   "Turó de la Rovira",
+   "El Montcada"
+  ],
+  "answer": 1,
+  "fact": "«Tibi dabo» vol dir «jo te'l donaré» en llatí."
+ },
+ {
+  "q": "Quin poble blanc, darrere del qual s'aixeca el cap de Creus, va encisar Dalí i Picasso?",
+  "options": [
+   "Roses",
+   "Cadaqués",
+   "Llançà",
+   "L'Escala"
+  ],
+  "answer": 1,
+  "fact": "A peu de mar, Cadaqués és el nucli més oriental de la península."
+ },
+ {
+  "q": "L'Ebre desemboca a la badia dels...",
+  "options": [
+   "Roses",
+   "Fornells",
+   "Alfacs",
+   "Pollença"
+  ],
+  "answer": 2,
+  "fact": "La badia dels Alfacs és una de les baies tancades més grans d'Europa."
+ },
+ {
+  "q": "L'illot de sorra de l'illa de Sant Antoni, les «Maldives» catalanes, emergeix a l'embassament de...",
+  "options": [
+   "Terradets",
+   "Camarasa",
+   "Susqueda",
+   "Utxesa"
+  ],
+  "answer": 1,
+  "fact": "Quan el pantà de Camarasa baixa, apareix un oasi de sorra enlaire."
+ },
+ {
+  "q": "Què són els castells?",
+  "options": [
+   "Un ball amb bastons de fusta",
+   "Una cercavila de gegants",
+   "Un foc d'artifici",
+   "Torres humanes que es cargolen uns damunt dels altres"
+  ],
+  "answer": 3,
+  "fact": "Són Patrimoni cultural immaterial de la UNESCO des del 2010."
+ },
+ {
+  "q": "On es considera que van néixer els castells, cuna castellera per excel·lència?",
+  "options": [
+   "A Reus",
+   "A Vilafranca del Penedès",
+   "A Tarragona",
+   "A Valls"
+  ],
+  "answer": 3,
+  "fact": "Les colles de Valls documenten la tradició des del segle XVIII."
+ },
+ {
+  "q": "Sense els peus de suport, què sostenen els troncs d'un castell des de baix?",
+  "options": [
+   "La totpot",
+   "La panxa",
+   "La banda de música",
+   "La pom de dalt"
+  ],
+  "answer": 3,
+  "fact": "El tronc sosté l'enxaneta i l'acotxador, la pom de dalt."
+ },
+ {
+  "q": "Com es diu l'infant que corona el castell i aixeca la mà al cim?",
+  "options": [
+   "L'enxaneta",
+   "L'acotxador",
+   "La crossa",
+   "El cap de colla"
+  ],
+  "answer": 0,
+  "fact": "L'enxaneta saluta amb la mà aixecada abans de començar a baixar."
+ },
+ {
+  "q": "Quina colla castellera de camisa vermella té la seu a la ciutat de Barcelona?",
+  "options": [
+   "Els Minyons de Terrassa",
+   "Els Castellers de Barcelona",
+   "Els Xiquets de Tarragona",
+   "Els Moixigangers"
+  ],
+  "answer": 1,
+  "fact": "Els Minyons de Terrassa, la segona colla més antiga, porten camisa lila."
+ },
+ {
+  "q": "Quin gran esdeveniment castellera reuneix les millors colles a la Tarragona, cada dos anys?",
+  "options": [
+   "El Concurs de Castells",
+   "L'Aplec del Caragol",
+   "La Festa de la Llampugeda",
+   "La Diada de l'Enxaneta"
+  ],
+  "answer": 0,
+  "fact": "El concurs se celebra a la Tarraco Arena Plaça."
+ },
+ {
+  "q": "Quan se celebra La Patum, la festa més famosa de Berga?",
+  "options": [
+   "Per Sant Joan",
+   "Per Nadal",
+   "La setmana del Corpus",
+   "A mitjan agost"
+  ],
+  "answer": 2,
+  "fact": "La Patum va ser proclamada obra mestra del patrimoni oral i immaterial el 2005."
+ },
+ {
+  "q": "Quin ball de foc de La Patum fa saltar guspires encesa darrere dels portadors?",
+  "options": [
+   "La Guita",
+   "L'Àliga",
+   "Els Plens",
+   "Els Nans"
+  ],
+  "answer": 2,
+  "fact": "Els Plens són pilotes de foc que cremen durant minuts."
+ },
+ {
+  "q": "Qui llança espurnes pels carrers durant el correfoc?",
+  "options": [
+   "Els gegants amb fanalets",
+   "Els diables i les diabresses amb caceroles de foc",
+   "Els nans amb serps de cartró",
+   "Els xiquets amb coets de festa"
+  ],
+  "answer": 1,
+  "fact": "El correfoc barreixa tabal, pólvora i ball."
+ },
+ {
+  "q": "Per quina festa major de Barcelona surten els gegants, els capgrossos i el seguici complet?",
+  "options": [
+   "Sant Joan",
+   "La Mercè",
+   "Sant Jordi",
+   "Santa Eulàlia"
+  ],
+  "answer": 1,
+  "fact": "La Mercè se celebra entorn del 24 de setembre."
+ },
+ {
+  "q": "Què és tradició regalar per Sant Jordi?",
+  "options": [
+   "Una rosa i un llibre",
+   "Un neula i un moscatell",
+   "Una coca i un ram de flors",
+   "Un castanyó i un panellet"
+  ],
+  "answer": 0,
+  "fact": "Cada 23 d'abril les parades de roses i llibres omplen els carrers."
+ },
+ {
+  "q": "Segons la llegenda, què va néixer de la sang del drac de Sant Jordi?",
+  "options": [
+   "Un camp de blat",
+   "Un llorer",
+   "Un roser",
+   "Un oliver"
+  ],
+  "answer": 2,
+  "fact": "Del costat ferit del drac en va brollar un roser ple de roses vermelles."
+ },
+ {
+  "q": "El 23 d'abril, a banda de Sant Jordi, el món celebra el...",
+  "options": [
+   "Dia de la Poesia",
+   "Dia Internacional del Llibre",
+   "Dia de la Traducció",
+   "Dia dels Escriptors"
+  ],
+  "answer": 1,
+  "fact": "La data recorda la mort de Cervantes i de Shakespeare el 1616."
+ },
+ {
+  "q": "Què se celebra la nit més curta de l'any, la de Sant Joan?",
+  "options": [
+   "El cap d'any agrari",
+   "La verema",
+   "El solstici d'estiu",
+   "L'inici de la tardor"
+  ],
+  "answer": 2,
+  "fact": "Correfocs, cavalcades de dimonis i coets marquen la nit més curta de l'any."
+ },
+ {
+  "q": "Quin dolç típic de Sant Joan porta fruita confitada i pinyons?",
+  "options": [
+   "El tortell de Reis",
+   "La coca de Sant Joan",
+   "El panellet",
+   "El xuixo"
+  ],
+  "answer": 1,
+  "fact": "La coca de llardons també és protagonista del Carnaval."
+ },
+ {
+  "q": "Quina obra de teatre tradicional es representa arreu de Catalunya per Nadal?",
+  "options": [
+   "Els Pastorets",
+   "El Misteri d'Elx",
+   "El Ball de Gitanes",
+   "La Dansa de l'Ofrena"
+  ],
+  "answer": 0,
+  "fact": "Els Pastorets barrejen l'àngel, el dimoni i el quadre humil del pessebre."
+ },
+ {
+  "q": "Com es diu el tronc de Nadal que els infants colpegen amb bastons perquè 'cagui' torrons?",
+  "options": [
+   "El Caganer",
+   "El Tió",
+   "El Patge",
+   "El Bracet"
+  ],
+  "answer": 1,
+  "fact": "El Tió s'alimenta els dies abans del 24 de desembre."
+ },
+ {
+  "q": "Quin personatge del pessebre, sempre ajupit, fa les seves necessitats en un racó del maset?",
+  "options": [
+   "El Rabadà",
+   "El Pubill",
+   "El Caganer",
+   "El Trista"
+  ],
+  "answer": 2,
+  "fact": "El Caganer no falta mai, i avui té versions de personatges famosos."
+ },
+ {
+  "q": "La Cavalcada dels Reis d'Orient es fa la tarda-vespre del...",
+  "options": [
+   "5 de gener",
+   "24 de desembre",
+   "25 de desembre",
+   "2 de gener"
+  ],
+  "answer": 0,
+  "fact": "Després de la cavalcada, els nens marxen a dormir d'hora."
+ },
+ {
+  "q": "Quin dolç del Nadal amaga una fava i una figureta d'amagat?",
+  "options": [
+   "El tortell de Reis",
+   "La coca de llardons",
+   "La mona de Pasqua",
+   "La brandada de bacallà"
+  ],
+  "answer": 0,
+  "fact": "Qui troba la figureta corona el rei; qui troba la fava, la paga."
+ },
+ {
+  "q": "Quina dansa catalana es balla en rotllana, agafats de les mans?",
+  "options": [
+   "El ball de bastons",
+   "La sardana",
+   "La jota",
+   "La muixeranga"
+  ],
+  "answer": 1,
+  "fact": "Les ballades de sardanes convoca la gent a les places amb banderes."
+ },
+ {
+  "q": "Quin conjunt instrumental toca les sardanes?",
+  "options": [
+   "La xaranga",
+   "L'orfeó",
+   "La cobla",
+   "La rondalla"
+  ],
+  "answer": 2,
+  "fact": "La cobla té onze instruments, entre ells dues tenores."
+ },
+ {
+  "q": "De quina vila és la Principal, la cobla de sardanes més famosa?",
+  "options": [
+   "De Vic",
+   "De Berga",
+   "De Ripoll",
+   "De la Bisbal d'Empordà"
+  ],
+  "answer": 3,
+  "fact": "La Principal de la Bisbal va enregistrar centenars de sardanes històriques."
+ },
+ {
+  "q": "La festa gran de Tarragona, que esclata el 23 de setembre, és en honor de...",
+  "options": [
+   "Santa Eulàlia",
+   "Santa Tecla",
+   "Santa Agnès",
+   "Santa Coloma"
+  ],
+  "answer": 1,
+  "fact": "La processó de Santa Tecla baixa al carrer amb ball i trabucaires."
+ },
+ {
+  "q": "A La Patum, quin ocell daurat fa l'ofrena davant de l'altar?",
+  "options": [
+   "La Víbria",
+   "El Drac",
+   "L'Àliga",
+   "La Mulassa"
+  ],
+  "answer": 2,
+  "fact": "L'Àliga de Berga fa la reverència a l'altar de la Basílica de Sant Pere."
+ },
+ {
+  "q": "Quantes barres vermelles té la senyera sobre fons groc?",
+  "options": [
+   "Dues",
+   "Cinc",
+   "Quatre",
+   "Set"
+  ],
+  "answer": 2,
+  "fact": "Les quatre barres són el senyal de la casa comtal de Barcelona."
+ },
+ {
+  "q": "Com es diu l'himne de Catalunya?",
+  "options": [
+   "L'Estaca",
+   "La Santa Espina",
+   "Els Segadors",
+   "El Virolai"
+  ],
+  "answer": 2,
+  "fact": "Els Segadors és himne oficial des del 1993; la lletra recorda la revolta dels segadors."
+ },
+ {
+  "q": "Què commemora la Diada de l'11 de setembre?",
+  "options": [
+   "La proclamació de la Segona República",
+   "La caiguda de Barcelona el 1714 davant les tropes de Felip V",
+   "L'entrada de les tropes napoleòniques a Barcelona",
+   "La batalla de Bailén de 1808"
+  ],
+  "answer": 1,
+  "fact": "El setge de Barcelona va acabar l'11 de setembre del 1714 amb la rendició de la ciutat."
+ },
+ {
+  "q": "En quantes províncies es reparteix administrativament Catalunya?",
+  "options": [
+   "Tres",
+   "Quatre",
+   "Cinc",
+   "Sis"
+  ],
+  "answer": 1,
+  "fact": "Barcelona, Girona, Lleida i Tarragona."
+ },
+ {
+  "q": "On es reuneix el Parlament de Catalunya?",
+  "options": [
+   "A Tarragona",
+   "A Barcelona",
+   "A Girona",
+   "A Perpinyà"
+  ],
+  "answer": 1,
+  "fact": "El Parlament té la seu dins del parc de la Ciutadella."
+ },
+ {
+  "q": "Com es diuen els càntics populars que exalten una verge, un sant o un santuari?",
+  "options": [
+   "Els goigs",
+   "Les saetes",
+   "Els Pastorets",
+   "Les caramelles"
+  ],
+  "answer": 0,
+  "fact": "Les caramelles, en concret, es canten per Pasqua Florida."
+ },
+ {
+  "q": "Quins dos instruments marquen el ritme mentre s'aixeca un castell?",
+  "options": [
+   "El flabiol i el tamborí",
+   "El timbal i la gralla",
+   "La dolçaina i el tabal",
+   "El fiscorn i la tenora"
+  ],
+  "answer": 1,
+  "fact": "La gralla avisa amb tocs diferents quan el castell es carrega i quan es descarrega."
+ },
+ {
+  "q": "Com és la gralla, l'instrument rei de les cercaviles?",
+  "options": [
+   "Dolça, de fusta i de so estrident",
+   "Un corda-pinxada gran com un violoncel",
+   "Un metall greu com un trombó",
+   "Un teclat portàtil"
+  ],
+  "answer": 0,
+  "fact": "La gralla té set forats i un abocador en forma de pompa."
+ },
+ {
+  "q": "Quin instrument de metall greu, com un trombó curt, és propi de la cobla?",
+  "options": [
+   "La tenora",
+   "El flabiol",
+   "El fiscorn",
+   "L'oboè"
+  ],
+  "answer": 2,
+  "fact": "El nom ve de 'fiscorn', corneta greu que fa el baix de la cobla."
+ },
+ {
+  "q": "On se celebra l'Aplec del Caragol, aplec gastronomic de cent mil comensals?",
+  "options": [
+   "A Tortosa",
+   "A Girona",
+   "A Lleida",
+   "A Mollerussa"
+  ],
+  "answer": 2,
+  "fact": "L'aplec defensa el cargol a la brasa amb allioli, al final de maig."
+ },
+ {
+  "q": "Què es llança des dels carros el dia de Sant Medir, entre Sant Cugat i Barcelona?",
+  "options": [
+   "Olives",
+   "Cargols",
+   "Castanyes",
+   "Almendres confitades"
+  ],
+  "answer": 3,
+  "fact": "Qui recull més caramel·lades del cap, té sort tot l'any."
+ },
+ {
+  "q": "Quina dansa tradicional fa xocar bastons de fusta al ritme del tabal?",
+  "options": [
+   "La sardana",
+   "El ball de gegants",
+   "El ball de les cintes",
+   "El ball de bastons"
+  ],
+  "answer": 3,
+  "fact": "El ball de bastons està documentat a Catalunya des de l'edat mitjana."
+ },
+ {
+  "q": "El carnaval més multitudinari de la costa del Garraf, amb rues a la platja, és el de...",
+  "options": [
+   "Vilanova i la Geltrú",
+   "Sitges",
+   "Calella",
+   "Cadaqués"
+  ],
+  "answer": 1,
+  "fact": "El carnaval de Sitges atrau centenars de milers de persones cada febrer."
+ },
+ {
+  "q": "Quina festa major de Barcelona, al mes d'agost, és cèlebre pels carrers guarnits?",
+  "options": [
+   "La de Sant Andreu",
+   "La de Sants",
+   "La de Gràcia",
+   "La de la Bordeta"
+  ],
+  "answer": 2,
+  "fact": "Els veïns de Gràcia competeixen guarnint passarel·les temàtiques."
+ },
+ {
+  "q": "Què són els capgrossos de les cercaviles?",
+  "options": [
+   "Aquells caps grossos de cartró que ballen disfressats",
+   "gegants de fusta amb corona",
+   "mascotes del seguici",
+   "nans de jardí"
+  ],
+  "answer": 0,
+  "fact": "Hi ha capgrossos de personatges populars de cada vila."
+ },
+ {
+  "q": "Per Pasqua Florida, qui sol regalar la mona a la fillola?",
+  "options": [
+   "El veí",
+   "El fadrí",
+   "El rector",
+   "El padrí"
+  ],
+  "answer": 3,
+  "fact": "La mona modernament és un ou de xocolata gran i farcit."
+ },
+ {
+  "q": "El 17 de gener, a molts pobles es cremen falles i es beneeixen animals en honor de...",
+  "options": [
+   "Sant Antoni de Pàdua",
+   "Sant Sebastià",
+   "Sant Isidre",
+   "Sant Antoni Abat"
+  ],
+  "answer": 3,
+  "fact": "Sant Antoni Abat és el patró dels animals de companyia i del porc."
+ },
+ {
+  "q": "Quin animal s'associa tradicionalment amb Sant Antoni Abat?",
+  "options": [
+   "El porc",
+   "L'ase",
+   "La gallina",
+   "El conill"
+  ],
+  "answer": 0,
+  "fact": "Els porcs domesticaven el bosc i per això acompanyaven el sant ermità."
+ },
+ {
+  "q": "Què es beneeix el Diumenge de Rams?",
+  "options": [
+   "Rams de violetes",
+   "Cistelles d'ous",
+   "Neules beneïdes",
+   "Rams d'olivera i de palmera"
+  ],
+  "answer": 3,
+  "fact": "Amb els rams beneïts es feien creus que es penjaven a les habitacions."
+ },
+ {
+  "q": "Quin temps litúrgic arrenca el Dimecres de Cendra, tot just acabat el Carnaval?",
+  "options": [
+   "L'Advent",
+   "L'Ascensió",
+   "La Quaresma",
+   "El Temps de Pastorets"
+  ],
+  "answer": 2,
+  "fact": "Quaranta dies de dejuni abans de la Pasqua, d'aquí el nom."
+ },
+ {
+  "q": "A les comarques vinícoles catalanes, la verema es fa principalment al...",
+  "options": [
+   "setembre",
+   "juliol",
+   "novembre",
+   "maig"
+  ],
+  "answer": 0,
+  "fact": "El raïm de cava es collit abans, entre juliol i agost."
+ },
+ {
+  "q": "Per Tots Sants, quina parella de dolç i fruit sec regna a la castanyada?",
+  "options": [
+   "Castanyes i panellets",
+   "Neules i torró",
+   "Xuixo i mató",
+   "Coca i ratafia"
+  ],
+  "answer": 0,
+  "fact": "Els panellets es fan de massapà, pinyons o moniato."
+ },
+ {
+  "q": "Quin dolç fi i enrotllat, tostat a la brasa, es mulla amb moscatell pels Reis?",
+  "options": [
+   "Les neules",
+   "Els panellets",
+   "Els carquinyolis",
+   "Melindros"
+  ],
+  "answer": 0,
+  "fact": "Neules, moscatell i torró són el trio nadalenc per excel·lència."
+ },
+ {
+  "q": "Quina vila és la capital històrica del cava català?",
+  "options": [
+   "Vilafranca del Penedès",
+   "Sant Sadurní d'Anoia",
+   "Reus",
+   "Falset"
+  ],
+  "answer": 1,
+  "fact": "Aquesta vila de l'Alt Penedès guarda els cellers històrics de Codorníu i Freixenet."
+ },
+ {
+  "q": "De quina ciutat és el xuixo, bunyol daurat farcit de crema?",
+  "options": [
+   "Girona",
+   "Lleida",
+   "Tarragona",
+   "Vic"
+  ],
+  "answer": 0,
+  "fact": "El xuixo és el dolç estrella del Gironès."
+ },
+ {
+  "q": "En quina ciutat s'aixeca la Sagrada Família, l'obra magna de Gaudí?",
+  "options": [
+   "A Barcelona",
+   "A Madrid",
+   "A València",
+   "A Palma"
+  ],
+  "answer": 0,
+  "fact": "Es va començar a construir el 1882 i encara no s'ha acabat."
+ },
+ {
+  "q": "Quin any van començar les obres de la Sagrada Família?",
+  "options": [
+   "El 1714",
+   "El 1901",
+   "El 1882",
+   "El 1929"
+  ],
+  "answer": 2
+ },
+ {
+  "q": "Qui va dissenyar la Sagrada Família?",
+  "options": [
+   "Lluís Domènech i Montaner",
+   "Josep Puig i Cadafalch",
+   "Cèsar Martinell",
+   "Antoni Gaudí"
+  ],
+  "answer": 3,
+  "fact": "Gaudí va dirigir l'obra fins a la seva mort, el 1926."
+ },
+ {
+  "q": "On està el Park Güell, el jardí modernista de Gaudí?",
+  "options": [
+   "Al carrer del Carmel de Barcelona",
+   "A les afores de Girona",
+   "Al port de Tarragona",
+   "Dins del bosc de Poblet"
+  ],
+  "answer": 0,
+  "fact": "Va ser una urbanització fallida abans de ser parc públic."
+ },
+ {
+  "q": "Com es diu la casa on va viure Gaudí dins del Park Güell?",
+  "options": [
+   "Can Batlló",
+   "La Casa Gaudí",
+   "La Pedrera",
+   "El Chalet Modernista"
+  ],
+  "answer": 1
+ },
+ {
+  "q": "Quina casa modernista de Gaudí sembla una pedrera, al passeig de Gràcia?",
+  "options": [
+   "La Casa Gran",
+   "Can Modernista",
+   "La Casa de les Pedres",
+   "La Pedrera"
+  ],
+  "answer": 3,
+  "fact": "El seu nom oficial és casa Milà."
+ },
+ {
+  "q": "Quina altra casa de Gaudí al passeig de Gràcia té façana d'os i escates?",
+  "options": [
+   "La Batlló",
+   "L'Amatller",
+   "La Freixa",
+   "Les Punxes"
+  ],
+  "answer": 0,
+  "fact": "La Batlló és coneguda popularment com la casa dels ossos."
+ },
+ {
+  "q": "Quin arquitecte va construir el Palau de la Música Catalana?",
+  "options": [
+   "Lluís Domènech i Montaner",
+   "Gaudí",
+   "Puig i Cadafalch",
+   "Josep Fontserè"
+  ],
+  "answer": 0,
+  "fact": "És Patrimoni de la Humanitat, com l'Hospital de Sant Pau del mateix autor."
+ },
+ {
+  "q": "Quin altre conjunt de Domènech i Montaner és seu de la UNESCO a Barcelona?",
+  "options": [
+   "L'Hospital de Sant Pau",
+   "La Casa Vicens",
+   "El recinte de la Maladreta",
+   "El monestir de Pedralbes"
+  ],
+  "answer": 0
+ },
+ {
+  "q": "Qui va dissenyar la casa Amatller i les torres de Les Punxes?",
+  "options": [
+   "Gaudí",
+   "Domènech i Montaner",
+   "Enric Sagnier",
+   "Josep Puig i Cadafalch"
+  ],
+  "answer": 3,
+  "fact": "La casa Amatller és la veïna de la Batlló al passeig de Gràcia."
+ },
+ {
+  "q": "Quins tres monestirs formen la ruta del Cister a Catalunya?",
+  "options": [
+   "Poblet, Santes Creus i Vallbona",
+   "Sant Cugat, Montserrat i Pedralbes",
+   "Sant Llorenç, Bujedo d'Ojeda i Rueda",
+   "Sant Pere de Rodes, Sant Miquel i Sant Benet"
+  ],
+  "answer": 0,
+  "fact": "Poblet és el reial panteó on reposen sobirans de la Corona d'Aragó."
+ },
+ {
+  "q": "En quina comarca està el monestir de Poblet?",
+  "options": [
+   "A l'Anoia",
+   "Al Berguedà",
+   "A la Conca de Barberà",
+   "Al Priorat"
+  ],
+  "answer": 2
+ },
+ {
+  "q": "Quin monestir cistercenc conserva els sepulcres de Pere el Gran i Jaume el Just?",
+  "options": [
+   "Vallbona de les Monges",
+   "Sant Cugat",
+   "Santes Creus",
+   "Santa Maria de Ripoll"
+  ],
+  "answer": 2,
+  "fact": "Santes Creus és a l'Alt Camp, entre Valls i Montblanc."
+ },
+ {
+  "q": "Com és el monestir de Vallbona de les Monges?",
+  "options": [
+   "Un priorat de monjos negres",
+   "Una seu templària",
+   "Un convent de clarisses",
+   "Un monestir femení cistercenc"
+  ],
+  "answer": 3,
+  "fact": "A l'Urgell, va acollir reines i infantas de la Corona."
+ },
+ {
+  "q": "Quina ciutat catalana tenia el Circus més gran de la Hispània romana?",
+  "options": [
+   "Empúries",
+   "Tarragona",
+   "Barcino",
+   "Ilerda"
+  ],
+  "answer": 1,
+  "fact": "Part del Circ de Tàrraco es pot visitar sota la Rambla Nova."
+ },
+ {
+  "q": "Com es diu l'aqüeducte romà de Tarragona, de doble arcada?",
+  "options": [
+   "Pont del Diable",
+   "Pont de Besalú",
+   "Pont de les Ferreres",
+   "Pont de Montblanc"
+  ],
+  "answer": 2,
+  "fact": "El Pont de les Ferreres té dos pisos d'arcades."
+ },
+ {
+  "q": "Quina era la primera colònia grega i després romana de la costa catalana?",
+  "options": [
+   "Rhode",
+   "Kisse",
+   "Subiktària",
+   "Empúries"
+  ],
+  "answer": 3,
+  "fact": "Empúries (Sant Martí d'Empúries) va ser la porta de la romanització."
+ },
+ {
+  "q": "Quin museu de Vic guarda les columnes del temple romà?",
+  "options": [
+   "El Museu Episcopal",
+   "El Museu del Cauter",
+   "El Museu de la Pell",
+   "El Museu d'Art Modern"
+  ],
+  "answer": 0,
+  "fact": "El temple romà de Vic s'aixecava al fòrum de la ciutat romana."
+ },
+ {
+  "q": "En quina comarca està el pont medieval de Besalú?",
+  "options": [
+   "A la Garrotxa",
+   "Al Ripollès",
+   "Al Pla de l'Estany",
+   "A la Selva"
+  ],
+  "answer": 0,
+  "fact": "El pont fortificat de Besalú és un dels millors conservats de Catalunya."
+ },
+ {
+  "q": "De quina riquesa va viure segles la vila de Cardona, amb un castell enorme?",
+  "options": [
+   "Del guix",
+   "Del ferro",
+   "Del suro",
+   "De la sal"
+  ],
+  "answer": 3,
+  "fact": "El castell de Cardona domina una muntanya de sal que aflora."
+ },
+ {
+  "q": "On s'ubica el Teatre-Museu Dalí?",
+  "options": [
+   "A Cadaqués",
+   "A Portlligat",
+   "A Poble-sec",
+   "A Figueres"
+  ],
+  "answer": 3,
+  "fact": "Ocupa l'antic teatre municipal, cremat en temps de guerra."
+ },
+ {
+  "q": "A banda de les obres, què es pot visitar al Teatre-Museu Dalí?",
+  "options": [
+   "El seu taller de Girona",
+   "La tomba de Dalí",
+   "La casa dels seus pares",
+   "El vaixell que va pintar"
+  ],
+  "answer": 1,
+  "fact": "Dalí el va dissenyar com la gran obra de la seva vida."
+ },
+ {
+  "q": "Quin any va acollir Barcelona l'Exposició Internacional que va deixar el Poble Espanyol?",
+  "options": [
+   "El 1888",
+   "El 1911",
+   "El 1929",
+   "El 1936"
+  ],
+  "answer": 2,
+  "fact": "La font màgica de Montjuïc és d'aquella mateixa exposició."
+ },
+ {
+  "q": "On és el Pi de les Tres Branques, arbre simbòlic de Catalunya?",
+  "options": [
+   "A la Cerdanya",
+   "Al Berguedà",
+   "Al Montseny",
+   "Als Ports de Tortosa"
+  ],
+  "answer": 1,
+  "fact": "Les seves tres branques simbolitzen les tres nacions de la llengua."
+ },
+ {
+  "q": "Quina catedral té la nau gòtica més ampla del món?",
+  "options": [
+   "La de Girona",
+   "La de Barcelona",
+   "La de Tarragona",
+   "La de Tortosa"
+  ],
+  "answer": 0,
+  "fact": "La nau de Santa Maria de Girona fa més de vint metres d'ample."
+ },
+ {
+  "q": "Quina llegenda acompanya la cartoixa d'Escaldéi?",
+  "options": [
+   "La del contracte del diable",
+   "La del Comte Arnau",
+   "La del Timbaler del Bruc",
+   "La de la mòra encisada"
+  ],
+  "answer": 0,
+  "fact": "Segons la tradició, el diable va escriure el contracte amb sang."
+ },
+ {
+  "q": "Quin poblat ibèric prop de la Bisbal d'Empordà és dels més grans de Catalunya?",
+  "options": [
+   "Edeta",
+   "Ullastret",
+   "Uxama",
+   "Kelse"
+  ],
+  "answer": 1,
+  "fact": "Ullastret va ser la capital dels indigets al segle VI aC."
+ },
+ {
+  "q": "Els frescos romànics de Sant Climent de Taüll es conserven a...",
+  "options": [
+   "El Museu de Reus",
+   "La catedral de Vic",
+   "El Louvre",
+   "El Museu Nacional d'Art de Catalunya"
+  ],
+  "answer": 3,
+  "fact": "Una còpia del Crist de Taüll presideix in situ l'església de la Vall de Boí."
+ },
+ {
+  "q": "En quina muntanya s'aixeca la basílica de Santa Maria de Montserrat?",
+  "options": [
+   "Al cim del Canigó",
+   "A la Mola de Gallinera",
+   "Al massís de Montserrat",
+   "Al turó de sant Llorenç"
+  ],
+  "answer": 2,
+  "fact": "El santuari és a més de set-cents metres d'alçada, entre agulles de conglomerat."
+ },
+ {
+  "q": "Com es coneix popularment la verge de Montserrat?",
+  "options": [
+   "La Moreneta",
+   "La Blancauro",
+   "La Verge de la Plata",
+   "La Verge de Ferro"
+  ],
+  "answer": 0,
+  "fact": "És una talla romànica del segle XII."
+ },
+ {
+  "q": "Quina catedral alta de Lleida va servir segles de quarter militar?",
+  "options": [
+   "La Seu Nova",
+   "Santa Maria de Gardeny",
+   "La Seu Vella",
+   "Sant Martí de Lleida"
+  ],
+  "answer": 2,
+  "fact": "Avui, restaurada, presideix un turó sobre la ciutat."
+ },
+ {
+  "q": "El monestir de Santa Maria de Ripoll destacà a l'edat mitjana per...",
+  "options": [
+   "El seu banc medieval",
+   "Les seves drassanes",
+   "Les seves salines",
+   "El seu escriptori i biblioteca"
+  ],
+  "answer": 3,
+  "fact": "Al panteó comtal hi ha la tomba de Guifré el Pelós."
+ },
+ {
+  "q": "Quin monestir romànic arrapat a la muntanya domina la badia de Roses?",
+  "options": [
+   "Sant Pere de Rodes",
+   "Sant Feliu de Guíxols",
+   "Sant Cugat",
+   "Sant Benet de Bages"
+  ],
+  "answer": 0,
+  "fact": "L'església té un campanar de cinc cossos visible des de la costa."
+ },
+ {
+  "q": "En quina vila del Baix Llobregat està la cripta de la Colònia Güell, obra de Gaudí?",
+  "options": [
+   "A Cervelló",
+   "Al Prat de Llobregat",
+   "A Molins de Rei",
+   "A Santa Coloma de Cervelló"
+  ],
+  "answer": 3,
+  "fact": "La cripta, declarada Patrimoni de la Humanitat, va inspirar les columnes de la Sagrada Família."
+ },
+ {
+  "q": "Quina és la primera casa barcelonina de Gaudí, d'estil orientalista, a Gràcia?",
+  "options": [
+   "La Casa Batlló",
+   "La Casa Vicens",
+   "La Casa Amatller",
+   "La Casa Lleó Morera"
+  ],
+  "answer": 1,
+  "fact": "Gaudí la va cobrir amb ceràmica de motius florals."
+ },
+ {
+  "q": "Quina verge i màrtir és la patrona de la catedral de Barcelona?",
+  "options": [
+   "Santa Llúcia",
+   "Santa Eulàlia",
+   "Santa Cecília",
+   "Santa Madrona"
+  ],
+  "answer": 1,
+  "fact": "La catedral s'anomena formalment de la Santa Creu i Santa Eulàlia."
+ },
+ {
+  "q": "On es poden veure les columnes del temple romà de Barcino?",
+  "options": [
+   "Al carrer del Paradís",
+   "Al Born Centre Cultural",
+   "A la plaça de Sant Jaume",
+   "Al peu de la Rambla"
+  ],
+  "answer": 0,
+  "fact": "Quatre columnes queden guardades dins un edifici del carrer."
+ },
+ {
+  "q": "Quin poble emmurallat del Baix Empordà conserva un nucli medieval sencer?",
+  "options": [
+   "Peratallada",
+   "Pals",
+   "Vulpellac",
+   "Monells"
+  ],
+  "answer": 0,
+  "fact": "El nom ve de les pedres tallades en capes de les seves cases."
+ },
+ {
+  "q": "Quina muralla d'origen romà envolta encara el nucli antic de Tarragona?",
+  "options": [
+   "El recinte àrab",
+   "La muralla romana",
+   "Les muralles medievals de Sant Joan",
+   "El baluard de la Ferreria"
+  ],
+  "answer": 1,
+  "fact": "Alguns llenços van ser bastits al segle II abans de la nostra era."
+ },
+ {
+  "q": "On es poden visitar els banys àrabs del segle XII a Catalunya?",
+  "options": [
+   "A Lleida",
+   "A Girona",
+   "A Cervera",
+   "A Balaguer"
+  ],
+  "answer": 1,
+  "fact": "Són dins l'antic call de la ciutat."
+ },
+ {
+  "q": "Quina fortalesa templera de Lleida conserva una església rodona?",
+  "options": [
+   "El castell de Montsonís",
+   "El castell de Falset",
+   "El castell de Gardeny",
+   "Castell de Sarroca de Bellera"
+  ],
+  "answer": 2,
+  "fact": "Fou una de les commanderies templers més importants de la Corona d'Aragó."
+ },
+ {
+  "q": "Quin edifici gòtic de Barcelona va allotjar les drassanes de la Corona d'Aragó?",
+  "options": [
+   "La Llotja de Mar",
+   "El Saló del Tinell",
+   "El porxo de Santa Maria",
+   "Les Drassanes Reials"
+  ],
+  "answer": 3,
+  "fact": "Avui hi ha el Museu Marítim, al peu de les Rambles."
+ },
+ {
+  "q": "De quin segle és l'església de Santa Maria del Mar, la catedral del poble mariner?",
+  "options": [
+   "Del segle XI",
+   "Del segle XVII",
+   "Del segle XIX",
+   "Del segle XIV"
+  ],
+  "answer": 3,
+  "fact": "Els bastaixos del port hi carregaren les pedres a l'espatlla, segons la tradició."
+ },
+ {
+  "q": "Quin castell presideix la muntanya de Montjuïc, sobre el port de Barcelona?",
+  "options": [
+   "La fortalesa de Sant Carles",
+   "El castell de Montjuïc",
+   "El castell dels Comtes",
+   "La torre de Guaita"
+  ],
+  "answer": 1,
+  "fact": "Dels seus miradors es veu gairebé tot el port."
+ },
+ {
+  "q": "En quin conjunt gòtic de Barcelona tenia residència la cort comtal?",
+  "options": [
+   "El Reial Major",
+   "El palau de la Generalitat",
+   "El palau episcopal",
+   "La casa de la Ciutat"
+  ],
+  "answer": 0,
+  "fact": "Dins el conjunt hi ha la capella de Santa Àgata i el Saló del Tinell."
+ },
+ {
+  "q": "La patrona de la ciutat de Reus és la Mare de Déu de...",
+  "options": [
+   "la Misericòrdia",
+   "la Cinta",
+   "del Camí",
+   "dels Desemparats"
+  ],
+  "answer": 0,
+  "fact": "El seu santuari és un dels més concorreguts de les Terres de l'Ebre."
+ },
+ {
+  "q": "En quina ciutat es conserva un dels calls jueus millors d'Europa, amb miqvé inclòs?",
+  "options": [
+   "A Tàrrega",
+   "A Besalú",
+   "A Girona",
+   "A Cervera"
+  ],
+  "answer": 2,
+  "fact": "El call de Girona va funcionar fins a l'expulsió del 1492."
+ },
+ {
+  "q": "Les pintures rupestres del Cogul, a les Garrigues, són un exemple d'art...",
+  "options": [
+   "mozàrab",
+   "bizantí",
+   "rupestre de l'arc mediterrani",
+   "gòtic"
+  ],
+  "answer": 2,
+  "fact": "La cova està inclosa al Patrimoni de la Humanitat de l'art rupestre mediterrani."
+ },
+ {
+  "q": "Què hi ha avui a l'antic Hospital de la Santa Creu gòtic de Barcelona?",
+  "options": [
+   "El Museu d'Història",
+   "La Biblioteca de Catalunya",
+   "L'Arxiu de la Corona",
+   "El Conservatori de música"
+  ],
+  "answer": 1,
+  "fact": "Va ser l'hospital de la ciutat durant quatre cents anys."
+ },
+ {
+  "q": "Quin poble del Priorat penja sobre el congost del pantà de Siurana?",
+  "options": [
+   "La Vilella Baixa",
+   "Gratallops",
+   "Siurana",
+   "Cornudella de Montsant"
+  ],
+  "answer": 2,
+  "fact": "Va ser un dels últims reductes sarraïns de Catalunya, segons la llegenda de la reina Arsenda."
+ },
+ {
+  "q": "En quina muntanya de Barcelona s'aixeca el MNAC?",
+  "options": [
+   "Al Tibidabo",
+   "A la Collserola",
+   "A Montjuïc",
+   "Al parc de la Ciutadella"
+  ],
+  "answer": 2,
+  "fact": "Les seves sales de romànic i gòtic són referents mundials."
+ },
+ {
+  "q": "El Museu Picasso de Barcelona conserva sobretot obra de quina etapa del pintor?",
+  "options": [
+   "El cubisme",
+   "La joventut i el període blau",
+   "L'etapa clàssica",
+   "L'etapa de la Costa Blava"
+  ],
+  "answer": 1,
+  "fact": "Picasso va passar a Barcelona els anys de la seva formació."
+ },
+ {
+  "q": "A quina muntanya de Barcelona és la Fundació Joan Miró?",
+  "options": [
+   "Al Carmel",
+   "A Vallvidrera",
+   "Al parc del Laberint",
+   "A Montjuïc"
+  ],
+  "answer": 3,
+  "fact": "La va fundar el mateix Miró amb l'arquitecte Josep Lluís Sert."
+ },
+ {
+  "q": "A Sitges, el museu Cau Ferrat va ser el taller de quina figura?",
+  "options": [
+   "Santiago Rusiñol",
+   "Pablo Picasso",
+   "Ramon Casas",
+   "Ignasi Zuloaga"
+  ],
+  "answer": 0,
+  "fact": "Rusiñol el va muntar dins un casal gòtic, ple de ferro forjat."
+ },
+ {
+  "q": "Quina taverna modernista, reoberta el 1989, va veure Picasso de jove?",
+  "options": [
+   "La Plata",
+   "Lo Gato Negro",
+   "Els Quatre Gats",
+   "Els Set Gats"
+  ],
+  "answer": 2,
+  "fact": "Hi va fer la seva primera exposició individual el 1900."
+ },
+ {
+  "q": "A quin barri de Barcelona és el Museu d'Art Contemporani (MACBA)?",
+  "options": [
+   "Al Born",
+   "A Gràcia",
+   "Al Raval",
+   "Al Poble-sec"
+  ],
+  "answer": 2,
+  "fact": "L'edifici de Richard Meier va obrir el 1995."
+ },
+ {
+  "q": "Quin museu barceloní de la ciència té un bosc inundat a la sala gran?",
+  "options": [
+   "La CosmoCaixa",
+   "El Museu de la Ciència de Manresa",
+   "El Museu Marès",
+   "L'Antic Arsenal"
+  ],
+  "answer": 0,
+  "fact": "Reprodueix un bosc equatorial amb animals vius."
+ },
+ {
+  "q": "De quin edifici procedeix el Museu de la Xocolata de Barcelona?",
+  "options": [
+   "De les Drassanes",
+   "Del monestir de Pedralbes",
+   "De l'antic convent de Sant Josep",
+   "Del recinte de l'Hospital de la Creu"
+  ],
+  "answer": 2,
+  "fact": "S'hi explica la història del cacau i del xocolata des dels romans."
+ },
+ {
+  "q": "La Rambla de Barcelona davalla de la plaça de Catalunya fins a...",
+  "options": [
+   "la plaça de la Catedral",
+   "el parc de la Ciutadella",
+   "la Sagrada Família",
+   "la mar, al monument de Colom"
+  ],
+  "answer": 3,
+  "fact": "El carrer era el llit d'un riu que van cobrir."
+ },
+ {
+  "q": "Què és avui l'arsenal de la vella Ciutadela de Barcelona?",
+  "options": [
+   "El Museu d'Història",
+   "La seu de la Diputació",
+   "El Arxiu Municipal",
+   "El Parlament de Catalunya"
+  ],
+  "answer": 3,
+  "fact": "De la fortalesa del segle XVIII només en queda aquest edifici."
+ },
+ {
+  "q": "Quina cançó de Lluís Llach va sonar a tot el món com a crit de llibertat?",
+  "options": [
+   "Mediterrània",
+   "L'Estaca",
+   "L'oreneta",
+   "La balada de la tramuntana"
+  ],
+  "answer": 1,
+  "fact": "La dictadura la va prohibir i ella es va fer encara més popular."
+ },
+ {
+  "q": "Quina sardana cantada és considerada himne no oficial de Catalunya?",
+  "options": [
+   "L'Empordà",
+   "La Santa Espina",
+   "La Maria de la Plaça",
+   "El Setè Cel"
+  ],
+  "answer": 1,
+  "fact": "Es seguia ballant fins i tot quan la senyera estava prohibida."
+ },
+ {
+  "q": "Qui és considerat el rei de la rumba catalana, amb 'El muerto vivo'?",
+  "options": [
+   "El Pescaílla",
+   "Rumba Tres",
+   "Peret",
+   "Manolo Caracol"
+  ],
+  "answer": 2,
+  "fact": "Va inventar la tècnica del ventilador a la guitarra."
+ },
+ {
+  "q": "Quina és la novel·la més coneguda de Mercè Rodoreda?",
+  "options": [
+   "Mirall trencat",
+   "La mort i la primavera",
+   "La plaça del Diamant",
+   "Tantes naixences"
+  ],
+  "answer": 2,
+  "fact": "La seva protagonista rep el sobrenom de la Colometa."
+ },
+ {
+  "q": "Qui va escriure els poemes èpics L'Atlàntida i Canigó?",
+  "options": [
+   "Jacint Verdaguer",
+   "Joan Maragall",
+   "Pere Quart",
+   "Mossèn Anton"
+  ],
+  "answer": 0
+ },
+ {
+  "q": "Sota quin pseudònim van sortir 'Solitud' i les novel·les de Caterina Albert?",
+  "options": [
+   "Carles Dona",
+   "Josep Sevilla",
+   "Rafael Serafí",
+   "Victor Català"
+  ],
+  "answer": 3,
+  "fact": "Va néixer a L'Escala, i la seva casa és ara un museu."
+ },
+ {
+  "q": "De quin poble del Baix Empordà era Josep Pla, autor del 'Quadern gris'?",
+  "options": [
+   "De Llafranc",
+   "De Begur",
+   "De Torroella de Montgrí",
+   "De Palafrugell"
+  ],
+  "answer": 3,
+  "fact": "A Palafrugell, la seva casa familiar és la Fundació Josep Pla."
+ },
+ {
+  "q": "Qui va escriure 'Veus del Pamano' i 'Jo confesso'?",
+  "options": [
+   "Jaume Cabré",
+   "Eduardo Mendoza",
+   "Màrius Serra",
+   "Jordi Coca"
+  ],
+  "answer": 0,
+  "fact": "Cabré fou professor de filologia catalana a la Universitat de Barcelona."
+ },
+ {
+  "q": "Qui va escriure el best-seller històric 'La catedral del mar'?",
+  "options": [
+   "Ken Follett",
+   "Arturo Pérez-Reverte",
+   "Ildefons Falcones",
+   "Matias Mola"
+  ],
+  "answer": 2,
+  "fact": "La novel·la se centra en la construcció de Santa Maria del Mar."
+ },
+ {
+  "q": "Quin cantant nord-americà va gravar 'Barcelona' amb Montserrat Caballé?",
+  "options": [
+   "Luciano Pavarotti",
+   "Plácido Domingo",
+   "Freddie Mercury",
+   "Andrea Bocelli"
+  ],
+  "answer": 2,
+  "fact": "Aquella cançó va ser himne dels Jocs Olímpics del 92."
+ },
+ {
+  "q": "En quin any va fundar Joan Gamper el Futbol Club Barcelona?",
+  "options": [
+   "El 1910",
+   "El 1929",
+   "El 1945",
+   "El 1899"
+  ],
+  "answer": 3,
+  "fact": "Va ser fundador i, diverses vegades, president del club."
+ },
+ {
+  "q": "Com es diu l'estadi del FC Barcelona, el més gran d'Europa?",
+  "options": [
+   "El Camp Nou",
+   "L'Estadi Olímpic",
+   "Les Corts",
+   "La Devès"
+  ],
+  "answer": 0,
+  "fact": "S'està remodelant per acollir més de noranta mil espectadors."
+ },
+ {
+  "q": "De quin poble del Baix Llobregat és l'estrella del Barça Alexia Putellas?",
+  "options": [
+   "De Sant Feliu",
+   "De Cornellà",
+   "De Molins de Rei",
+   "De Martorell"
+  ],
+  "answer": 2,
+  "fact": "Ha guanyat la pilota d'or femenina dos cops."
+ },
+ {
+  "q": "D'on és nat Pep Guardiola, tècnic del Manchester City?",
+  "options": [
+   "De Manresa",
+   "De Berga",
+   "De Vic",
+   "De Santpedor"
+  ],
+  "answer": 3,
+  "fact": "Com a jugador va guanyar la primera Copa d'Europa del Barça, el 1992."
+ },
+ {
+  "q": "De quina capital vallesana és Xavi Hernández?",
+  "options": [
+   "De Sabadell",
+   "De Granollers",
+   "De Terrassa",
+   "De Mataró"
+  ],
+  "answer": 2,
+  "fact": "Va guanyar el mundial del 2010 com a motor del mig del camp espanyol."
+ },
+ {
+  "q": "En quina localitat del Maresme va néixer Cesc Fàbregas?",
+  "options": [
+   "A Calella",
+   "A Pineda",
+   "A Arenys de Mar",
+   "A Blanes"
+  ],
+  "answer": 2,
+  "fact": "Es va formar a la cantera del Barça abans de marxar a l'Arsenal."
+ },
+ {
+  "q": "Qui és l'NBA Ricky Rubio, nat en quina vila del Maresme?",
+  "options": [
+   "Premià de Mar",
+   "Teià",
+   "El Masnou",
+   "Tiana"
+  ],
+  "answer": 2,
+  "fact": "Va ser campió del món amb Espanya el 2019 i MVP del torneig."
+ },
+ {
+  "q": "De quina vila de la Costa Brava és Juan Carlos Navarro?",
+  "options": [
+   "De Lloret",
+   "De Palamós",
+   "De Tossa",
+   "De Sant Feliu de Guíxols"
+  ],
+  "answer": 3,
+  "fact": "Legenda del Barça de bàsquet i de la selecció espanyola."
+ },
+ {
+  "q": "A quina ciutat del Barcelonès s'ha criat la nedadora Mireia Belmonte?",
+  "options": [
+   "A Sant Adrià",
+   "A Badalona",
+   "A Salou",
+   "A Cambrils"
+  ],
+  "answer": 1,
+  "fact": "Va guanyar l'or olímpic dels 200 metres papallona als Jocs de Rio."
+ },
+ {
+  "q": "El 1999, quin pilot va guanyar el mundial de 500cc, el primer de l'estat en aquesta cilindrada?",
+  "options": [
+   "Jordi Arcarons",
+   "Sete Gibernau",
+   "Àlex Crivillé",
+   "Dani Pedrosa"
+  ],
+  "answer": 2,
+  "fact": "Crivillé va néixer a Lloret de Mar."
+ },
+ {
+  "q": "De quina capital de la Segarra és Marc Márquez?",
+  "options": [
+   "De Cervera",
+   "De Guissona",
+   "De Tàrrega",
+   "De Mollerussa"
+  ],
+  "answer": 0,
+  "fact": "Ha guanyat el mundial de MotoGP nombroses vegades amb la Honda."
+ },
+ {
+  "q": "De quina vila de l'Anoia és el campió de trial Toni Bou?",
+  "options": [
+   "D'Igualada",
+   "De Piera",
+   "De Martorell",
+   "De Capellades"
+  ],
+  "answer": 1,
+  "fact": "Ha acumulat títols mundials de trial com cap altre pilot."
+ },
+ {
+  "q": "A quina vila del Baix Llobregat va néixer la tennista Arantxa Sánchez Vicario?",
+  "options": [
+   "A Sant Joan Despí",
+   "A Molins de Rei",
+   "A Sant Boi",
+   "A Sant Vicenç dels Horts"
+  ],
+  "answer": 3,
+  "fact": "Va guanyar Roland Garros dues vegades i va ser número u mundial."
+ },
+ {
+  "q": "En quin any va començar les emissions TV3?",
+  "options": [
+   "El 1975",
+   "El 1983",
+   "El 1992",
+   "El 1980"
+  ],
+  "answer": 1,
+  "fact": "Va ser la primera cadena de televisió en català."
+ },
+ {
+  "q": "Quin periodista presentava 'Salvados', a laSexta?",
+  "options": [
+   "Jordi Évole",
+   "Iñaki Gabilondo",
+   "Jesús Hermida",
+   "Manuel Campo Vidal"
+  ],
+  "answer": 0,
+  "fact": "La seva entrevista a Mariano Rajoy va ser la més vista de la televisió espanyola."
+ },
+ {
+  "q": "Quina sèrie de TV3 tenia un mestre de filosofia com a heroi?",
+  "options": [
+   "La Riera",
+   "Merlí",
+   "Nit i dia",
+   "Com si fos ahir"
+  ],
+  "answer": 1,
+  "fact": "El personatge l'encarnava Francesc Orella."
+ },
+ {
+  "q": "Quina pel·lícula de Bigas Luna va llançar Javier Bardem i Penélope Cruz?",
+  "options": [
+   "Jamón, jamón",
+   "El día de la bestia",
+   "Airbag",
+   "Boca a boca"
+  ],
+  "answer": 0,
+  "fact": "Formava part de la trilogia mediterrània, amb 'Huevos de oro' i 'La teta y la montaña'."
+ },
+ {
+  "q": "Quina directora barcelonina va guanyar el Goya amb 'La vida secreta de las palabras'?",
+  "options": [
+   "Icíar Bollaín",
+   "Isabel Coixet",
+   "Gracia Querejeta",
+   "Judith Colell"
+  ],
+  "answer": 1
+ },
+ {
+  "q": "En quin edifici històric guarda la UPC el supercomputador MareNostrum?",
+  "options": [
+   "A l'antiga capella del campus",
+   "Al Seminari Conciliar",
+   "A la presó La Model",
+   "Al col·legi de les Jesuïtes"
+  ],
+  "answer": 0,
+  "fact": "El Barcelona Supercomputing Center el té al campus de la Politècnica."
+ },
+ {
+  "q": "A quina vila del Baix Empordà va regalar Dalí un castell per a Gala?",
+  "options": [
+   "A Pals",
+   "A Púbol",
+   "A Sant Martí Vell",
+   "A Vergòs"
+  ],
+  "answer": 1,
+  "fact": "El castell de Púbol és avui la casa-museu de Gala."
+ },
+ {
+  "q": "Quin teatre d'òpera de les Rambles es va reconstruir després de l'incendi del 1994?",
+  "options": [
+   "El Gran Teatre del Liceu",
+   "El Teatre Novedades",
+   "El Teatre Victòria",
+   "El Teatre Tívoli"
+  ],
+  "answer": 0,
+  "fact": "L'incendi del gener del 1994 va destruir la sala i va reobrir el 1999."
+ },
+ {
+  "q": "Quin festival barceloní de música electrònica i tecnologia va néixer el 1994?",
+  "options": [
+   "El Cruïlla",
+   "El Sónar",
+   "El Primavera Sound",
+   "Fòrum"
+  ],
+  "answer": 1,
+  "fact": "Meitat concerts, meitat congressos d'innovació."
+ },
+ {
+  "q": "Quina escola de cinema de Sant Cugat va formar Juan Antonio Bayona?",
+  "options": [
+   "La ECAM de Madrid",
+   "L'ESCAC",
+   "La Casa de Cinema de Barcelona",
+   "L'aula de cinema de la UB"
+  ],
+  "answer": 1,
+  "fact": "L'ESCAC, adjunta a la Universitat Ramon Llull, també va formar Cesc Gay."
+ },
+ {
+  "q": "Quin equip de la Catalunya Central va guanyar la lliga ACB de bàsquet del 1998?",
+  "options": [
+   "El Bàsquet Girona",
+   "El Bàsquet Manresa",
+   "L'CB Lleida",
+   "CB Cornellà"
+  ],
+  "answer": 1,
+  "fact": "La seva lliga és un dels grans miracles esportius catalans."
+ },
+ {
+  "q": "Quin diari barceloní van fundar els Godó el 1882?",
+  "options": [
+   "El Periódico",
+   "Avui",
+   "El Correo Catalán",
+   "La Vanguardia"
+  ],
+  "answer": 3,
+  "fact": "Va néixer com un butlletí il·lustrat d'anuncis."
+ },
+ {
+  "q": "Com es diu la ràdio pública de la Generalitat, en català?",
+  "options": [
+   "Ràdio 4",
+   "RAC1",
+   "Catalunya Ràdio",
+   "Ona Catalana"
+  ],
+  "answer": 2,
+  "fact": "Va començar a emetre el 1985."
+ },
+ {
+  "q": "Quin parc temàtic de Salou va obrir les portes el 1995?",
+  "options": [
+   "Isla Mágica",
+   "Aqualand",
+   "Terra de dinosaures",
+   "PortAventura"
+  ],
+  "answer": 3,
+  "fact": "Va créixer vora el mar amb parcs nous amb els anys."
+ },
+ {
+  "q": "Durant el segle XVIII, a quina capital de la Segarra va traslladar Felip V la Universitat?",
+  "options": [
+   "A Vic",
+   "A Manresa",
+   "A Cervera",
+   "A Balaguer"
+  ],
+  "answer": 2,
+  "fact": "La universitat única de Cervera va reunir els estudis catalans fins al 1839."
+ },
+ {
+  "q": "Quina orquestra simfònica té la seu a l'Auditori de Barcelona?",
+  "options": [
+   "L'Orquestra Simfònica de Barcelona i Nacional de Catalunya",
+   "Orquestra Pau Casals",
+   "Capella Reial",
+   "Ciutat de Girona"
+  ],
+  "answer": 0,
+  "fact": "L'Auditori, de Rafael Moneo, va obrir el 1999."
+ },
+ {
+  "q": "Quina competició de vela reuneix cada estiu vaixells al Port Vell de Barcelona?",
+  "options": [
+   "La Volta a vela de l'Mediterrani",
+   "El Circuit de la Costa Brava",
+   "La Copa del Rei",
+   "El Trofeu SM el Comte"
+  ],
+  "answer": 2,
+  "fact": "El Reial Club Nàutic de Barcelona n'és l'amfitrió històric."
+ },
+ {
+  "q": "Quins són els quatre ingredients del pa amb tomàquet?",
+  "options": [
+   "Pa, ceba, oli i sal",
+   "Pa, tomàquet, vi i sal",
+   "Pa, tomàquet, oli i sal",
+   "Pa, all, oli i pebre"
+  ],
+  "answer": 2,
+  "fact": "El pa es frega amb mitja tomàtiga madura."
+ },
+ {
+  "q": "Quin plat de cullera és el gran clàssic dels dinars de festa?",
+  "options": [
+   "La samfaina",
+   "La brandada",
+   "L'arròs a la cassola",
+   "L'escudella i la carn d'olla"
+  ],
+  "answer": 3,
+  "fact": "La pilota de l'escudella es fa amb carn, ou i all."
+ },
+ {
+  "q": "Cap a 1830, a quina vila van néixer els calçots?",
+  "options": [
+   "A Reus",
+   "A Valls",
+   "A Vilafranca",
+   "A Tarragona"
+  ],
+  "answer": 1,
+  "fact": "Les calçotades es concentren entre gener i abril."
+ },
+ {
+  "q": "De quina ciutat és la salsa romesco, companya del bacallà i dels peixos?",
+  "options": [
+   "De Barcelona",
+   "D'Empúries",
+   "De Tortosa",
+   "De Tarragona"
+  ],
+  "answer": 3,
+  "fact": "Du nyora, alls, avellanes i tomàquet."
+ },
+ {
+  "q": "A quina ciutat és cèlebre la cargolada de Sant Jaume?",
+  "options": [
+   "A Girona",
+   "A Lleida",
+   "A Vic",
+   "A Reus"
+  ],
+  "answer": 1,
+  "fact": "El 25 de juliol els veïns surten al carrer a menjar cargols en safata."
+ },
+ {
+  "q": "De quina vila del Garraf és cèlebre el xató, amanida d'escarola i alls tendres?",
+  "options": [
+   "De Castelldefels",
+   "De Calella",
+   "De Sitges",
+   "De Tossa"
+  ],
+  "answer": 2,
+  "fact": "El nom ve del «això», el que es demanava a la fira segons la tradició."
+ },
+ {
+  "q": "Quin dolç porta crema coberta d'una capa dura de sucre cremat?",
+  "options": [
+   "El mató",
+   "El menjar blanc",
+   "El braç de gitano",
+   "La crema catalana"
+  ],
+  "answer": 3,
+  "fact": "El sucre s'crema amb una planxa calenta just abans de servir."
+ },
+ {
+  "q": "Quin formatge fresc, amb mel, és dolç propi de la primavera?",
+  "options": [
+   "El torró",
+   "El meló",
+   "El mató",
+   "La melmelada"
+  ],
+  "answer": 2,
+  "fact": "El mató es fa quallar la llet i s'escorre en un drap."
+ },
+ {
+  "q": "Quin embotit acompanya les mongetes del ganxet, plat català per excel·lència?",
+  "options": [
+   "El xoriço",
+   "La sobrassada",
+   "La botifarra",
+   "El pernil"
+  ],
+  "answer": 2,
+  "fact": "La botifarra del perol es menja fresca, a la brasa."
+ },
+ {
+  "q": "Què porta una coca de recapte?",
+  "options": [
+   "Tonyina en salmorra, escalivada i alls",
+   "Xocolata i nata",
+   "Mel i mató",
+   "Sucre i pinyons"
+  ],
+  "answer": 0,
+  "fact": "«Recapte» vol dir el que es guardava a casa: peix cura i verdures."
+ },
+ {
+  "q": "De quina ciutat valenciana és d'origen la fideuà?",
+  "options": [
+   "De Gandia",
+   "De València",
+   "D'Alacant",
+   "De Dénia"
+  ],
+  "answer": 0,
+  "fact": "Va néixer entre pescadors, com a variant de la paella de fideus."
+ },
+ {
+  "q": "Quina amanida de bacallà esqueixat és típica de les comarques tarragonines?",
+  "options": [
+   "La samfaina",
+   "L'esqueixada",
+   "La trempó",
+   "La xatonada"
+  ],
+  "answer": 1,
+  "fact": "Es fa amb bacallà, tomàquet, ceba, olives i oli."
+ },
+ {
+  "q": "Quina pastisseta esponjosa es mulla a la xocolata desfeta?",
+  "options": [
+   "El carquinyoli",
+   "El melindro",
+   "La neula",
+   "El panellet"
+  ],
+  "answer": 1,
+  "fact": "El melindro absorbeix la xocolata com una esponja."
+ },
+ {
+  "q": "Què és la ratafia?",
+  "options": [
+   "Un licor casolà d'herbes i fruits",
+   "Un vi escumós",
+   "Un dolç de monestir",
+   "Una salsa de pebrots"
+  ],
+  "answer": 0,
+  "fact": "La millor es fa amb nous verdes i vint herbes."
+ },
+ {
+  "q": "A quina ciutat és típic el dolç menjar blanc?",
+  "options": [
+   "A Girona",
+   "A Lleida",
+   "A Reus",
+   "A Tarragona"
+  ],
+  "answer": 2,
+  "fact": "Es cuina amb llet d'ametlla, canyella i llimona."
+ },
+ {
+  "q": "Quina institució normalitza la llengua catalana, fundada el 1907?",
+  "options": [
+   "La Reial Acadèmia",
+   "L'Institut d'Estudis Catalans",
+   "L'Obra Cultural Balear",
+   "La Institució de les Lletres"
+  ],
+  "answer": 1,
+  "fact": "Sota la batuta de Pompeu Fabra va fixar-ne l'ortografia el 1913."
+ },
+ {
+  "q": "De qui porta el nom les norms ortogràfiques modernes del català?",
+  "options": [
+   "De Mossèn Alcover",
+   "De Pompeu Fabra",
+   "De Joan Coromines",
+   "De Manuel de Montoliu"
+  ],
+  "answer": 1,
+  "fact": "El seu diccionari i la seva gramàtica van fonar el català normatiu."
+ },
+ {
+  "q": "Què és una flassada?",
+  "options": [
+   "Una post de fusta",
+   "Un cistell d'escombraries",
+   "Un bastó de pastora",
+   "Un cobrellit gran"
+  ],
+  "answer": 3,
+  "fact": "Les flassades antigues es feien de llana."
+ },
+ {
+  "q": "De quina forma té la seva espiral l'ensaïmada de Mallorca, que es menja amb mató?",
+  "options": [
+   "De socarrelle",
+   "De barret",
+   "De trenat",
+   "De caragol"
+  ],
+  "answer": 3,
+  "fact": "El nom ve de saïm, el greix que li dona la textura."
+ },
+ {
+  "q": "De quina fruita seca es fa l'orxata de València?",
+  "options": [
+   "De l'ametlla",
+   "De l'avellana",
+   "De la xufa",
+   "De la castanya"
+  ],
+  "answer": 2,
+  "fact": "La xufa es collia a l'Horta Nord valenciana."
+ },
+ {
+  "q": "Quin bolet és considerat el rei de la cuina boletaire a Catalunya?",
+  "options": [
+   "El rovelló",
+   "La moixernera",
+   "El peu de cabra",
+   "El ceps"
+  ],
+  "answer": 3,
+  "fact": "El ceps es reconeix pel peu inflat amb un dibuix blanquinós."
+ },
+ {
+  "q": "Quin bolet deu el nom a ser considerat digne dels reis?",
+  "options": [
+   "L'ou de reig",
+   "El rovell d'ou",
+   "La farigola",
+   "El barret de picaplets"
+  ],
+  "answer": 0,
+  "fact": "És la llimac o cesària, una de les millors amanites comestibles del món."
+ },
+ {
+  "q": "Quin bolet és el més tòxic, responsable de la majoria d'enverinaments mortals?",
+  "options": [
+   "La teba",
+   "El rovelló",
+   "La fuja",
+   "El ceps"
+  ],
+  "answer": 0,
+  "fact": "Una sola amanita phalloides pot ferir el fetge de manera irreversible."
+ },
+ {
+  "q": "Què tenen a sota el barret els bolets com el ceps, en lloc de làmines?",
+  "options": [
+   "Agulles",
+   "Plomes",
+   "Escates",
+   "Tubes"
+  ],
+  "answer": 3,
+  "fact": "Els bolets tenen una capa de tubs on es formen les espores."
+ },
+ {
+  "q": "Com es diuen els bolets de carn que es torna blava, molt buscats a les pinedes?",
+  "options": [
+   "Els llanegres",
+   "Els camacurts",
+   "Els peus de cabra",
+   "Els cangrejos"
+  ],
+  "answer": 0,
+  "fact": "Al tallar-los, la carn s'enblaveix en pocs segons."
+ },
+ {
+  "q": "Quin bolet és daurat i aromàtic com una fruita, molt buscat a l'Empordà?",
+  "options": [
+   "El moixernó",
+   "La trompeta negra",
+   "El rossinyol",
+   "El peu negre"
+  ],
+  "answer": 2,
+  "fact": "Els rossinyols petits es diuen 'pebrerots' a molts indrets."
+ },
+ {
+  "q": "Com es recull correctament un bolet, sense fer mal al bosc?",
+  "options": [
+   "Arrencant-lo de soca-rel",
+   "Tallant-lo per la base amb un ganivet",
+   "Plegant el barret",
+   "Cavant un forat gran"
+  ],
+  "answer": 1,
+  "fact": "Cal deixar el peu a terra perquè el micel·li sobrevisqui."
+ },
+ {
+  "q": "En quina estació surt la majoria de bolets a Catalunya?",
+  "options": [
+   "A la primavera",
+   "A l'estiu",
+   "A la tardor",
+   "A l'hivern"
+  ],
+  "answer": 2,
+  "fact": "Les pluges de setembre i la baixada de temperatures els desperten."
+ },
+ {
+  "q": "A què fan els fongs en el bosc, a més de nodrir-nos?",
+  "options": [
+   "Descompondre la matèria orgànica",
+   "Fer de llenya",
+   "Donar ombra",
+   "Aturar el vent"
+  ],
+  "answer": 0,
+  "fact": "El micel·li recicla el fullarac i alimenta les arrels dels arbres."
+ },
+ {
+  "q": "Refrany: 'Per Setmana Santa, cada ovella...', què fa?",
+  "options": [
+   "Al mig del prat",
+   "Amb el seu anyell",
+   "A l'ombra del roure",
+   "Al seu costat"
+  ],
+  "answer": 3,
+  "fact": "El refrany vol dir que cadascú torna al lloc que li és habitual."
+ },
+ {
+  "q": "Com es diu la gran catedral gòtica de Palma?",
+  "options": [
+   "La Seu",
+   "El Micalet",
+   "La Almudena",
+   "El Duomo"
+  ],
+  "answer": 0,
+  "fact": "La Seu de Palma s'aixeca sobre l'antiga mesquita major."
+ },
+ {
+  "q": "On s'aixeca el Micalet, campanar emblemàtic?",
+  "options": [
+   "A Alacant",
+   "A València",
+   "A Castelló",
+   "A Tarragona"
+  ],
+  "answer": 1,
+  "fact": "El Micalet és el campanar de la catedral de València."
+ },
+ {
+  "q": "A quina ciutat cremen les Falles el 19 de març?",
+  "options": [
+   "A València",
+   "A Alacant",
+   "A Múrcia",
+   "A Alcoi"
+  ],
+  "answer": 0,
+  "fact": "Són monuments de cartró que cremen a la Nit de la Cremà."
+ },
+ {
+  "q": "Quins animals són els protagonistes del Sant Joan de Ciutadella?",
+  "options": [
+   "Bous",
+   "Àguiles",
+   "Cavalls",
+   "Dofins"
+  ],
+  "answer": 2,
+  "fact": "Els cavallers fan ballar els cavalls pels carrers de la capital de Menorca."
+ },
+ {
+  "q": "A quina illa és el cap de Formentor?",
+  "options": [
+   "A Menorca",
+   "A Eivissa",
+   "A Cabrera",
+   "A Mallorca"
+  ],
+  "answer": 3,
+  "fact": "El far de Formentor és el més septentrional de Mallorca."
+ },
+ {
+  "q": "A quina illa italiana es conserva el català a la ciutat de l'Alguer?",
+  "options": [
+   "A Còrsega",
+   "A Sardenya",
+   "A Sicília",
+   "A l'Elba"
+  ],
+  "answer": 1,
+  "fact": "Els alguesos mantenen el català com a llengua tradicional de la ciutat."
+ },
+ {
+  "q": "Què vol dir el refrany 'Qui no plora no mama'?",
+  "options": [
+   "Qui no ho demana, no ho obté",
+   "Qui plora, sempre té raó",
+   "Cal plorar per menjar",
+   "Els nens manen a casa"
+  ],
+  "answer": 0,
+  "fact": "Compara l'esforç de l'infant amb guanyar-se el que necessita."
+ },
+ {
+  "q": "Què és una barraca a l'Albufera de València?",
+  "options": [
+   "Una era de batre",
+   "Una casa de camp",
+   "Una barra de bar",
+   "Una cova de llaurador"
+  ],
+  "answer": 1,
+  "fact": "Les barraques tenen sostre de canyes a dues aigües."
+ },
+ {
+  "q": "Els balears diuen «hui»; què diuen els catalans del Principat?",
+  "options": [
+   "«aiguós»",
+   "«ahir»",
+   "«avui»",
+   "«demà»"
+  ],
+  "answer": 2,
+  "fact": "«Hui» ve del llatí hodie, com en occità."
+ },
+ {
+  "q": "En quin estat d'Europa el català és llengua oficial?",
+  "options": [
+   "A Malta",
+   "A Andorra",
+   "A Mònaco",
+   "A Luxemburg"
+  ],
+  "answer": 1,
+  "fact": "L'únic estat amb el català com a llengua oficial és Andorra."
+ },
+ {
+  "q": "Què és avui l'antic llit del Túria, que passava per València?",
+  "options": [
+   "Un aparcament",
+   "Un canal de reg",
+   "Un jardí de nou quilòmetres",
+   "Una ronda de trànsit"
+  ],
+  "answer": 2,
+  "fact": "Després de la riuada del 1957 van desviar el riu i l'antic llit és parc."
+ },
+ {
+  "q": "Què és un esmorzar de forquilla?",
+  "options": [
+   "Un café amb croissant",
+   "Un entrepà de formatge",
+   "Un esmorzar abundant, amb plats de tallar",
+   "Un licor d'anís"
+  ],
+  "answer": 2,
+  "fact": "Es pren abans de migdia i es menja amb ganivet i forquilla."
+ },
+ {
+  "q": "Què distingeix l'arròs a banda del seu parent valencià?",
+  "options": [
+   "Porta cigala viva",
+   "L'arròs es cou sol i es serveix a part del peix",
+   "És de cocció dolça",
+   "Es menja fred"
+  ],
+  "answer": 1,
+  "fact": "Els mariners cuinaven l'arròs 'a banda', separat del peix."
+ },
+ {
+  "q": "Quin demostratiu usa el valencià en lloc de «aquest»?",
+  "options": [
+   "«aqueste»",
+   "«issò»",
+   "«aquetes»",
+   "«este»"
+  ],
+  "answer": 3,
+  "fact": "«Este», «eixa», «allà»: el valencià conserva formes medievals."
+ },
+ {
+  "q": "Què és una albada?",
+  "options": [
+   "Un ball de bastons",
+   "Un mocador de cap",
+   "Un cant tradicional de matinada per a la promesa",
+   "Un vaixell de pesca"
+  ],
+  "answer": 2,
+  "fact": "Els gaiters canten albades a la festa de molts pobles mallorquins."
+ },
+ {
+  "q": "Refrany: 'Per Sant Joan, el foc al cap', què vol dir?",
+  "options": [
+   "Que cal encendre fogueres a les teulades",
+   "Que aleshores el sol toca més fort al cap",
+   "Que es cou pa al forn",
+   "Que s'apaga el foc de la llar"
+  ],
+  "answer": 1,
+  "fact": "El solstici porta el sol al punt més alt i les nits de fogueres."
+ },
+ {
+  "q": "Què és un torrent?",
+  "options": [
+   "Un llac petit",
+   "Un rec de molí",
+   "Un pou de séquia",
+   "Un curs d'aigua sovint sec"
+  ],
+  "answer": 3,
+  "fact": "En una torrentada, l'aigua baixa de cop amb una fúria brutal."
+ },
+ {
+  "q": "Què és una escletxa?",
+  "options": [
+   "Una esquerda estreta i fonda",
+   "Una cistella ampla",
+   "Un graó d'escala",
+   "Un vel de nuvi"
+  ],
+  "answer": 0,
+  "fact": "El forat era estret com una escletxa i calia eixamplar-lo."
+ },
+ {
+  "q": "Quin animal designa la paraula 'porcell' a les Balears?",
+  "options": [
+   "Un captaire",
+   "Un corder",
+   "El porc",
+   "Un pollastre"
+  ],
+  "answer": 2,
+  "fact": "El porcell rostit és signe de la bona taula mallorquina."
+ },
+ {
+  "q": "Què era Cendro, que va arribar a la Vall d'Aran el 1997?",
+  "options": [
+   "Un ós bru",
+   "Un voltor",
+   "Un llop marcat",
+   "Un cabirol daurat"
+  ],
+  "answer": 0,
+  "fact": "Aran ha tornat a acollir ossos gràcies a la repoblació pirenaica."
+ }
+]

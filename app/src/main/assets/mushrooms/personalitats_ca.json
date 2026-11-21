@@ -1,0 +1,2720 @@
+[
+ {
+  "q": "En quina ciutat va néixer Picasso el 1881?",
+  "options": [
+   "Málaga",
+   "Barcelona",
+   "Madrid",
+   "Sevilla"
+  ],
+  "answer": 0,
+  "fact": "La família es va traslladar a Barcelona quan Picasso era un noi."
+ },
+ {
+  "q": "Qui va crear l'enorme escultura 'Dona i Ocell' de la vila olímpica de Barcelona?",
+  "options": [
+   "Antoni Tàpies",
+   "Eduardo Chillida",
+   "Josep Maria Subirachs",
+   "Joan Miró"
+  ],
+  "answer": 3,
+  "fact": "La figura de 22 metres va coronar el parc de Joan Miró el 1982."
+ },
+ {
+  "q": "On descansen les restes d'Antoni Gaudí?",
+  "options": [
+   "A la cripta de la Sagrada Família",
+   "Al cementiri de Montjuïc",
+   "A la cripta de la Colònia Güell",
+   "Al claustre de Pedralbes"
+  ],
+  "answer": 0,
+  "fact": "Va morir el juny de 1926, pocs dies després que el tombés un tramvia."
+ },
+ {
+  "q": "En quina via de Barcelona s'aixeca la Pedrera?",
+  "options": [
+   "A la rambla de Catalunya",
+   "Al carrer Gran de Gràcia",
+   "Al passeig de Gràcia",
+   "A l'avinguda Diagonal"
+  ],
+  "answer": 2,
+  "fact": "Gaudí la va construir per a la família Milà entre 1906 i 1912."
+ },
+ {
+  "q": "On es pot visitar el Teatre-Museu Dalí?",
+  "options": [
+   "A Cadaqués",
+   "A Púbol",
+   "A Girona",
+   "A Figueres"
+  ],
+  "answer": 3,
+  "fact": "El seu teatre-museu és un dels museus més visitats d'Espanya."
+ },
+ {
+  "q": "Quin tret físic feia Dalí inconfusible?",
+  "options": [
+   "El bigot aixecat",
+   "La barba blanca",
+   "El barret de cordovà",
+   "Les ulleres rodones"
+  ],
+  "answer": 0,
+  "fact": "El bigot era un dels seus gestos davant les càmeres."
+ },
+ {
+  "q": "Quina fundació d'art contemporani va impulsar Antoni Tàpies a Barcelona?",
+  "options": [
+   "La Fundació Miró",
+   "El MACBA",
+   "La Fundació Suñol",
+   "La Fundació Tàpies"
+  ],
+  "answer": 3,
+  "fact": "El 1990 va obrir al públic la seva fundació a l'antiga impremta Montaner i Simon."
+ },
+ {
+  "q": "Quin arquitecta va construir el Palau de la Música i l'Hospital de Sant Pau?",
+  "options": [
+   "Josep Puig i Cadafalch",
+   "Antoni Gaudí",
+   "Josep Fontserè",
+   "Lluís Domènech i Montaner"
+  ],
+  "answer": 3,
+  "fact": "Ambdós monuments han estat declarats patrimoni de la humanitat."
+ },
+ {
+  "q": "Qui va dissenyar el parc de la Ciutadella?",
+  "options": [
+   "Antoni Gaudí",
+   "Lluís Domènech i Montaner",
+   "El mestre d'obres Josep Fontserè",
+   "Josep Puig i Cadafalch"
+  ],
+  "answer": 2,
+  "fact": "La font monumental la va aixecar un jove Gaudí."
+ },
+ {
+  "q": "Quin arquitecte va edificar la Casa Lleó-Morera de la rambla?",
+  "options": [
+   "Josep Puig i Cadafalch",
+   "Lluís Domènech i Montaner",
+   "Elies Rogent",
+   "Cèsar Martinell"
+  ],
+  "answer": 1,
+  "fact": "Va ser de les primeres cases de Barcelona amb llum elèctrica, aigua corrent i telèfon."
+ },
+ {
+  "q": "Quin grup d'arquitectes modernitzadors de la República va liderar Josep Lluís Sert?",
+  "options": [
+   "El Grup Obert",
+   "Els Amics de l'Art",
+   "El GATCPAC",
+   "L'Associació del Carrer"
+  ],
+  "answer": 2,
+  "fact": "El GATCPAC va portar l'arquitectura rationalista a Catalunya."
+ },
+ {
+  "q": "Qui va signar els cellers cooperatius de Gandesa, anomenats catedrals del vi?",
+  "options": [
+   "Ildefons Cerdà",
+   "Manuel de Solà-Morales",
+   "Cèsar Martinell",
+   "Enric Sagnier"
+  ],
+  "answer": 2,
+  "fact": "Martinell va construir cellers cooperatius com catedrals del vi."
+ },
+ {
+  "q": "Qui va dibuixar el pla de l'Eixample de Barcelona el 1859?",
+  "options": [
+   "Antoni Rovira i Trias",
+   "Francesc Daniel Molina",
+   "Josep Fontserè",
+   "Ildefons Cerdà"
+  ],
+  "answer": 3,
+  "fact": "Cerdà va encunyar la paraula 'urbanització' per al seu pla."
+ },
+ {
+  "q": "On s'aixeca la Seu Vella, catedral-fortalesa amb torre octogonal?",
+  "options": [
+   "A Tortosa",
+   "A Vic",
+   "A Solsona",
+   "A Lleida"
+  ],
+  "answer": 3,
+  "fact": "La torre de la Seu Vella fa de mirador sobre tota la plana de Ponent."
+ },
+ {
+  "q": "Quin fotògraf barceloní va fundar el 1912 l'arxiu fotogràfic Mas?",
+  "options": [
+   "Francesc Català-Roca",
+   "Adolf Mas",
+   "Manel Armengol",
+   "Joan Colom"
+  ],
+  "answer": 1,
+  "fact": "La casa Mas va retratar Gaudí, els castells i la cultura catalana."
+ },
+ {
+  "q": "Quin fotògraf de Valls va documentar el carrer amb honestat brutal?",
+  "options": [
+   "Francesc Català-Roca",
+   "Adolf Mas",
+   "Manel Armengol",
+   "Joan Colom"
+  ],
+  "answer": 0,
+  "fact": "Les seves fotos per a 'A tot vent' van fer època."
+ },
+ {
+  "q": "Qui va modelar 'El desconsol', una mare i dos infants en repòs absolut?",
+  "options": [
+   "Pau Gargallo",
+   "Josep Clarà",
+   "Venanci Vallmitjana",
+   "Enric Clarasó"
+  ],
+  "answer": 1,
+  "fact": "Una còpia de l'escultura presideix l'avinguda del Tibidabo de Barcelona."
+ },
+ {
+  "q": "D'on era l'escultor Venanci Vallmitjana, retratista de personatges de carrer?",
+  "options": [
+   "De Barcelona",
+   "De Reus",
+   "De Lleida",
+   "D'Olot"
+  ],
+  "answer": 0,
+  "fact": "Vallmitjana va fondre en bronze vells, cegats i pagesos amb empatia màxima."
+ },
+ {
+  "q": "Els sostres daurats del Consell de Seguretat de l'ONU, a Nova York, són obra de quin pintor barceloní?",
+  "options": [
+   "Pau Gargallo",
+   "Hermen Anglada Camarasa",
+   "Ismael Smith",
+   "Josep Maria Sert"
+  ],
+  "answer": 3,
+  "fact": "Sert cobria sostres i salons amb daurats de dimensió gegantina."
+ },
+ {
+  "q": "Quin pintor barceloní, líder dels modernistes joves, va morir el 1911 amb només 39 anys?",
+  "options": [
+   "Isidre Nonell",
+   "Ramon Casas",
+   "Santiago Rusiñol",
+   "Joaquim Mir"
+  ],
+  "answer": 0,
+  "fact": "El seu curt període blau va retratar els marginats del Paral·lel."
+ },
+ {
+  "q": "El quadre 'Garrot vil' de Ramon Casas denuncia l'execució de quin anarquista el 1909?",
+  "options": [
+   "Alejandro Lerroux",
+   "Salvador Seguí",
+   "Francisco Ascaso",
+   "Francesc Ferrer i Guàrdia"
+  ],
+  "answer": 3,
+  "fact": "El llenç, conservat al MNAC, va causar un escàndol de magnitud."
+ },
+ {
+  "q": "Quin pintor de Reus, astre de l'orientalisme europeu, va morir a Roma el 1874 amb tot just 36 anys?",
+  "options": [
+   "Ramon Casas",
+   "Santiago Rusiñol",
+   "Marià Fortuny",
+   "Hermen Anglada Camarasa"
+  ],
+  "answer": 2,
+  "fact": "Els seus quadres penjen en els millors museus d'Europa i Amèrica."
+ },
+ {
+  "q": "Mariano Fortuny i Madrazo, fill del gran pintor de Reus, va fer fama mundial a...",
+  "options": [
+   "Venècia, com a modista dels teixits plissats",
+   "París, com a creador de la torre Eiffel",
+   "Viena, com a compositor",
+   "Londres, com a enginyer"
+  ],
+  "answer": 0,
+  "fact": "El seu plissat immortal va vestir les dones més elegants del segle XX."
+ },
+ {
+  "q": "El sostre-cova del palau de les nacions a Ginebra, ple de fragments, és obra del mallorquí...",
+  "options": [
+   "Rafael Canogar",
+   "Miquel Barceló",
+   "Juan Genovés",
+   "Miquel Utrillo"
+  ],
+  "answer": 1,
+  "fact": "Va cobrir el sostre del Consell de Drets Humans amb una cova de calcària."
+ },
+ {
+  "q": "On va néixer Antoni Miró, pintor dels suros i paisatges valencians?",
+  "options": [
+   "A Alacant",
+   "A València",
+   "A Gandia",
+   "A Xàtiva"
+  ],
+  "answer": 3,
+  "fact": "L'horta, l'oli i la pedra poblen els seus llenços mediterranis."
+ },
+ {
+  "q": "L'escultor Julio Antonio, autor del 'Pagès' de la plaça de Catalunya, va morir el 1930 amb només...",
+  "options": [
+   "32 anys",
+   "45 anys",
+   "58 anys",
+   "71 anys"
+  ],
+  "answer": 0,
+  "fact": "Nascut a Tortosa, va ser un escultor de formes plenes i mediterrànies."
+ },
+ {
+  "q": "Quin escultor reusenc, avantguardista del metall retallat, va morir el desembre del 1934?",
+  "options": [
+   "Venanci Vallmitjana",
+   "Pere Jou",
+   "Enric Clarasó",
+   "Pau Gargallo"
+  ],
+  "answer": 3,
+  "fact": "La casa-museu dels Gargallo es pot visitar al carrer de Sant Joan de Reus."
+ },
+ {
+  "q": "Quin pintor barceloní neoimpressionista va pintar el punt de Mont-roig que després encisaria Picasso?",
+  "options": [
+   "Modest Urgell",
+   "Hermen Anglada Camarasa",
+   "Feliu Elias",
+   "Joaquim Mir"
+  ],
+  "answer": 3,
+  "fact": "Les seues taques de color cremen els paisatges de terra i mar."
+ },
+ {
+  "q": "Quin pintor de Guimerà va pintar ermites, molins i erms infinits banyats de boira?",
+  "options": [
+   "Hermen Anglada Camarasa",
+   "Joaquim Mir",
+   "Isidre Nonell",
+   "Modest Urgell"
+  ],
+  "answer": 3,
+  "fact": "El seu paisatge brumós va enciser els simbolistes de tot Europa."
+ },
+ {
+  "q": "Quin pintor barceloní, enamorat de Portitxol a Mallorca, va ofegar els seus llenços en blaus profunds?",
+  "options": [
+   "Modest Urgell",
+   "Joaquim Mir",
+   "Hermen Anglada Camarasa",
+   "Pere Borrell del Caso"
+  ],
+  "answer": 2,
+  "fact": "El ball de la vida, una de les seues teles grans, bull de color."
+ },
+ {
+  "q": "El gran pintor valencià de la llum plena, que va omplir platges de xiquets i barques, era...",
+  "options": [
+   "Gustavo de Maeztu",
+   "Joaquín Sorolla",
+   "Ignacio Zuloaga",
+   "Juan de Valés"
+  ],
+  "answer": 1,
+  "fact": "De jove va guanyar una pensió que el va portar a estudiar a la Llotja de Barcelona."
+ },
+ {
+  "q": "Qui va esculpir la façana de la Passió de la Sagrada Família?",
+  "options": [
+   "Josep Maria Subirachs",
+   "Josep Maria Sert",
+   "Pere Jou",
+   "Venanci Vallmitjana"
+  ],
+  "answer": 0,
+  "fact": "Les pedres geomètriques de Subirachs van fer discussió durant dècades."
+ },
+ {
+  "q": "Qui va ser el col·laborador de Gaudí al parc Güell, creador de molts dels seus trencadisos?",
+  "options": [
+   "Josep Fontserè",
+   "Enric Sagnier",
+   "Cèsar Martinell",
+   "Josep Maria Jujol"
+  ],
+  "answer": 3,
+  "fact": "Jujol va signar els mosaics més fantàstics del recinte."
+ },
+ {
+  "q": "Quin arquitecte modernista va ser president de la Mancomunitat de Catalunya?",
+  "options": [
+   "Lluís Domènech i Montaner",
+   "Josep Puig i Cadafalch",
+   "Josep Domènech i Estapà",
+   "Elies Rogent"
+  ],
+  "answer": 1,
+  "fact": "Sota el seu mandat es va començar a excavar la ciutat grega d'Empúries."
+ },
+ {
+  "q": "Qui va projectar el temple del Sagrat Cor, dalt del Tibidabo?",
+  "options": [
+   "Josep Puig i Cadafalch",
+   "Lluís Domènech i Montaner",
+   "Antoni Gaudí",
+   "Enric Sagnier"
+  ],
+  "answer": 3,
+  "fact": "L'obra, continuada pel seu fill, es veu des de mitja plana barcelonina."
+ },
+ {
+  "q": "Quin arquitecte barceloní, cap d'urbanisme de la ciutat, va planificar la Vila Olímpica del 92?",
+  "options": [
+   "Manuel de Solà-Morales",
+   "Ricard Bofill",
+   "Josep Anton Coderch",
+   "Oriol Bohigas"
+  ],
+  "answer": 3,
+  "fact": "Bohigas va ser l'ànima de la reconversió olímpica del litoral."
+ },
+ {
+  "q": "L'edifici de la UB conegut com La Fàbrica, ple de columnes bessones, és obra de...",
+  "options": [
+   "Oriol Bohigas",
+   "Ricard Bofill",
+   "Manuel de Solà-Morales",
+   "Alberto Campo Baeza"
+  ],
+  "answer": 1,
+  "fact": "Bofill va transformar una antiga fàbrica de ciment amb arquitectura de somni."
+ },
+ {
+  "q": "Quin estudi d'arquitectura d'Olot, del qual és sòcia Carme Pigem, va guanyar el Pritzker del 2017?",
+  "options": [
+   "Cruz y Ortiz",
+   "RCR Arquitectes",
+   "Jean Nouvel",
+   "Estudi Gaspar"
+  ],
+  "answer": 1,
+  "fact": "El premi va honorar la seua obra sensible al paisatge de la Garrotxa."
+ },
+ {
+  "q": "Quin poeta modernista, autor d''Enllà', va omplir 'Visions i cants' de vida i música?",
+  "options": [
+   "Joan Maragall",
+   "Jacint Verdaguer",
+   "Josep Carner",
+   "Joan Salvat-Papasseit"
+  ],
+  "answer": 0,
+  "fact": "La seua 'paraula viva' va coronar el modernisme literari."
+ },
+ {
+  "q": "Quin poeta, anomenat príncep dels poetes catalans, va escriure 'Els fruits saborosos'?",
+  "options": [
+   "Joan Maragall",
+   "Carles Riba",
+   "Pere Quart",
+   "Josep Carner"
+  ],
+  "answer": 3,
+  "fact": "Va viure gairebé trenta anys d'exili a Brussel·les i va tornar el 1969."
+ },
+ {
+  "q": "Qui va traduir l''Odissea' al català i estava casat amb la poetessa Clemència Miró?",
+  "options": [
+   "Josep Carner",
+   "Joan Vinyoli",
+   "Miquel Desclot",
+   "Carles Riba"
+  ],
+  "answer": 3,
+  "fact": "La seua traducció de l'obra d'Homer és un clàssic de les lletres catalanes."
+ },
+ {
+  "q": "'La pell de brau', llibre cabdal sobre la guerra i el silenci, és del poeta...",
+  "options": [
+   "Pere Quart",
+   "Marià Manent",
+   "Joan Vinyoli",
+   "Salvador Espriu"
+  ],
+  "answer": 3,
+  "fact": "Espriu va néixer el 1913 a Santa Coloma de Farners i va morir a Barcelona."
+ },
+ {
+  "q": "Quin artista barceloní va fer de la poesia visual, les endevinalles i l'objecte senya d'identitat?",
+  "options": [
+   "Antoni Tàpies",
+   "Bartomeu Fàbregas",
+   "Joan Brossa",
+   "Feliu Elias"
+  ],
+  "answer": 2,
+  "fact": "Brossa, nascut el 1919, va omplir els murs de paraules i signes."
+ },
+ {
+  "q": "Les aventures del detectiu gastrònom Pepe Carvalho van fer cèlebre...",
+  "options": [
+   "Eduardo Mendoza",
+   "Juan Marsé",
+   "Jaime Campmany",
+   "Manuel Vázquez Montalbán"
+  ],
+  "answer": 3
+ },
+ {
+  "q": "Amb quina novel·la va debutar l'escriptor barceloní Eduardo Mendoza el 1975?",
+  "options": [
+   "La ciutat dels meravellosos",
+   "La veritat sobre el cas Savolta",
+   "Soldats de Salamina",
+   "La guerra del fi del món"
+  ],
+  "answer": 1,
+  "fact": "Mendoza va traduir Conrad i va viure anys a Nova York."
+ },
+ {
+  "q": "Quina novel·la de Montserrat Roig segueix tres generacions de dones des de la República?",
+  "options": [
+   "Pedra de tartera",
+   "El temps de les cireres",
+   "La plaça del Diamant",
+   "La passió segons Renée Vivien"
+  ],
+  "answer": 1,
+  "fact": "El mateix any va publicar 'Els catalans als camps nazis', obra de memòria històrica."
+ },
+ {
+  "q": "'Primera memòria', el relat d'una infància ferida a la Barcelona de postguerra, és de...",
+  "options": [
+   "Carmen Laforet",
+   "Ana María Matute",
+   "Mercè Rodoreda",
+   "Montserrat Roig"
+  ],
+  "answer": 1,
+  "fact": "Va rebre el Premi Cervantes del 2010."
+ },
+ {
+  "q": "Quin mestre del conte fantàstic, autor d''Les minúscules', era barceloní?",
+  "options": [
+   "Quim Monzó",
+   "Pere Calders",
+   "Jordi Sierra i Fabra",
+   "Lluís-Anton Baulenas"
+  ],
+  "answer": 1,
+  "fact": "Calders, creador d'humor fi, va estar exiliat a Mèxic i va tornar el 1962."
+ },
+ {
+  "q": "Qui va donar veu als barris d'immigrants de Barcelona amb 'Els altres catalans' (1964)?",
+  "options": [
+   "Manuel Vázquez Montalbán",
+   "Josep M. Castellet",
+   "Francesc Candel",
+   "Albert Manent"
+  ],
+  "answer": 2,
+  "fact": "Fill d'immigrants aragonesos, va ser una veu clau del moviment veïnal."
+ },
+ {
+  "q": "L'escriptor barceloní autor de 'Bartleby y compañía', sobre escriptors que van callar, és...",
+  "options": [
+   "Juan Marsé",
+   "Enrique Vila-Matas",
+   "Ignacio Martínez de Pisón",
+   "Javier Cercas"
+  ],
+  "answer": 1,
+  "fact": "Vila-Matas, nascut el 1948, combina diari, assaig i ironia."
+ },
+ {
+  "q": "A quina vila del Baix Penedès va néixer Pau Casals el 1876?",
+  "options": [
+   "Vilafranca",
+   "Sitges",
+   "Tarragona",
+   "El Vendrell"
+  ],
+  "answer": 3,
+  "fact": "El seu compositor és avui un museu al davant del mar."
+ },
+ {
+  "q": "Quina melodia va fer sonar Pau Casals a l'ONU el 1958?",
+  "options": [
+   "L'emigrant",
+   "La santa espina",
+   "Corts de Castro",
+   "El cant dels ocells"
+  ],
+  "answer": 3,
+  "fact": "Casals va posar la viola al servei de la pau i dels sense veu."
+ },
+ {
+  "q": "Quin cantant de Xàtiva va obrir camí amb 'Al vent'?",
+  "options": [
+   "Lluís Llach",
+   "Maria del Mar Bonet",
+   "Ovidi Montllor",
+   "Raimon"
+  ],
+  "answer": 3,
+  "fact": "Aquell 'Al vent' del 1966 va ser un llampec de la nova cançó."
+ },
+ {
+  "q": "De quina vila de l'Alcoià era Ovidi Montllor?",
+  "options": [
+   "Alcoi",
+   "La Bisbal",
+   "Figueres",
+   "Palamós"
+  ],
+  "answer": 0,
+  "fact": "Montllor va posar música als poetes i va cantar la gent menuda."
+ },
+ {
+  "q": "On va néixer Maria del Mar Bonet, gran dama de la cançó?",
+  "options": [
+   "Palma",
+   "Maó",
+   "Eivissa",
+   "Ciutadella"
+  ],
+  "answer": 1,
+  "fact": "La seva veu poderosa ha omplert escenaris de mig món."
+ },
+ {
+  "q": "Quin cantant nascut al carrer del Paral·lel de Barcelona va fer inseparable el mar de 'Mediterrània'?",
+  "options": [
+   "Joan Manuel Serrat",
+   "Lluís Llach",
+   "Jaume Sisa",
+   "Albert Pla"
+  ],
+  "answer": 0,
+  "fact": "El seu disc 'Mediterráneo' va sonar el 1971 i encara sona."
+ },
+ {
+  "q": "Quina vila pirinenca va veure néixer el pianista Isaac Albéniz el 1860?",
+  "options": [
+   "Puigcerdà",
+   "Ripoll",
+   "Camprodon",
+   "La Pobla de Lillet"
+  ],
+  "answer": 2,
+  "fact": "La seua suite per a piano 'Iberia' és un monument de la música espanyola."
+ },
+ {
+  "q": "Quina coral barcelonina van fundar el 1891 Lluís Millet i Amadeu Vives?",
+  "options": [
+   "Cor Madrigal",
+   "Coral Sant Jordi",
+   "Orfeó Català",
+   "La Capella Reial"
+  ],
+  "answer": 2,
+  "fact": "L'Orfeó va bastir el Palau de la Música, obra de Domènech i Montaner."
+ },
+ {
+  "q": "Quin compositor de Lleida, autor de 'Goyescas', va morir el 1916 en el naufragi del vaixell que el portava a Amèrica?",
+  "options": [
+   "Isaac Albéniz",
+   "Enric Granados",
+   "Felip Pedrell",
+   "Robert Gerhard"
+  ],
+  "answer": 1,
+  "fact": "El seu estil pianístic va fer de la poesia en música catalana i espanyola."
+ },
+ {
+  "q": "Quin violinista de Vilanova i la Geltrú va fundar el 1944 l'Orquestra Municipal de Barcelona?",
+  "options": [
+   "Enric Granados",
+   "Eduard Toldrà",
+   "Robert Gerhard",
+   "Joan Manén"
+  ],
+  "answer": 1,
+  "fact": "De l'Orquestra Municipal nasqué l'actual Orquestra de Barcelona Nacional."
+ },
+ {
+  "q": "De quina vila de l'Alt Camp era el compositor Robert Gerhard, que va morir a Cambridge el 1970?",
+  "options": [
+   "De Valls",
+   "De Reus",
+   "De Tarragona",
+   "De Montblanc"
+  ],
+  "answer": 0,
+  "fact": "Deixeble de Felip Pedrell i d'Arnold Schönberg, descansa a Valls."
+ },
+ {
+  "q": "El gran compositor de estudis i preludis per a guitarra, nascut a Barcelona el 1778, és...",
+  "options": [
+   "Narciso Yepes",
+   "Andrés Segovia",
+   "Fernando Sor",
+   "Heitor Villa-Lobos"
+  ],
+  "answer": 2,
+  "fact": "Els seus estudis són lectura obligatòria a les escoles de guitarra."
+ },
+ {
+  "q": "Quin viola de Igualada, fundador de Hespèrion XX, és referència mundial de la música antiga?",
+  "options": [
+   "Albert Recasens",
+   "Jordi Savall",
+   "Lluís Vilademajó",
+   "Antoni Ros-Marzá"
+  ],
+  "answer": 1,
+  "fact": "Els seus enregistraments han recuperat segles de música oblidada."
+ },
+ {
+  "q": "Quina soprano de Mollet del Vallès, reina de la música antiga, va formar parella artística i vital amb Savall?",
+  "options": [
+   "Montserrat Caballé",
+   "Bernabé Martorell",
+   "Montserrat Figueras",
+   "Josep Carreras"
+  ],
+  "answer": 2,
+  "fact": "Va morir el 2011 deixant una discografia de referència."
+ },
+ {
+  "q": "Al primer concert dels Tres Tenors, el 1990 a terme de Caracal·la de Roma, hi havia el barceloní...",
+  "options": [
+   "Jaume Aragall",
+   "Josep Carreras",
+   "Alfredo Kraus",
+   "Josep Pons"
+  ],
+  "answer": 1,
+  "fact": "Va guanyar una leucèmia als quaranta-un anys i va fundar una fundació contra la malaltia."
+ },
+ {
+  "q": "On va fer Lluís Llach el seu comiat de l'escenari el juny del 1979, davant una marea de gent?",
+  "options": [
+   "A l'antic Camp Nou",
+   "A la Monumental",
+   "A l'estadi Olímpic de Montjuïc",
+   "Al Palau Sant Jordi"
+  ],
+  "answer": 0,
+  "fact": "Va estar gairebé una dècada sense cantar en públic i va tornar el 1985."
+ },
+ {
+  "q": "Quin cantant barceloní de Sants va publicar l'àlbum de culte 'La Transalpina' (1977)?",
+  "options": [
+   "Lluís Llach",
+   "Jaume Sisa",
+   "Albert Pla",
+   "Marina Rossell"
+  ],
+  "answer": 1
+ },
+ {
+  "q": "La cantant d'Amposta, veu del Delta de l'Ebre i de la cançó mediterrània, és...",
+  "options": [
+   "Maria Arnal",
+   "Maria del Mar Bonet",
+   "Marina Rossell",
+   "Marta Torné"
+  ],
+  "answer": 2,
+  "fact": "Ha portat la seva veu pels grans escenaris de la Nova Cançó francesa."
+ },
+ {
+  "q": "Quin trio d'humoristes barcelonins, tot just nascuda la democràcia, va fer riure mig país?",
+  "options": [
+   "La Trinca",
+   "Tricicle",
+   "Els Comediants",
+   "La Cubana"
+  ],
+  "answer": 0
+ },
+ {
+  "q": "El trio mut d'humor visual de Caldes de Montbui, famós a mig planeta, és...",
+  "options": [
+   "Tricicle",
+   "Els Comediants",
+   "La Trinca",
+   "La Fura dels Baus"
+  ],
+  "answer": 0,
+  "fact": "Carrol, Esteban i Cordada van omplir teatres de Broadway al Japó."
+ },
+ {
+  "q": "Qui va dirigir la cerimònia de cloenda dels Jocs Olímpics de Barcelona 92?",
+  "options": [
+   "La Fura dels Baus",
+   "Els Comediants",
+   "Tricicle",
+   "La Cubana"
+  ],
+  "answer": 1,
+  "fact": "Les seves desfilades de foc i carrosses han rodat el món sencer."
+ },
+ {
+  "q": "La companyia barcelonina de teatre d'acció, màquines i impacte visual es diu...",
+  "options": [
+   "Els Comediants",
+   "Teatre Lliure",
+   "La Fura dels Baus",
+   "La Cubana"
+  ],
+  "answer": 2,
+  "fact": "Ha dut l'espectacle total dels carrers als grans teatres d'òpera."
+ },
+ {
+  "q": "Qui va portar 'Mil cretins' de Quim Monzó al cinema el 2009?",
+  "options": [
+   "Cesc Gay",
+   "Bigas Luna",
+   "Joel Joan",
+   "Ventura Pons"
+  ],
+  "answer": 3,
+  "fact": "Especialista en adaptacions literàries, ha filmat mig escriptori català."
+ },
+ {
+  "q": "El director de 'Truman', el comiat sense eufemismes entre dos vells amics, és...",
+  "options": [
+   "Isaki Lacuesta",
+   "Cesc Gay",
+   "Juan Antonio Bayona",
+   "Albert Serra"
+  ],
+  "answer": 1,
+  "fact": "La pel·lícula va guanyar el Goya a la millor pel·lícula del 2015."
+ },
+ {
+  "q": "Qui va debutar amb 'El orfanato' el 2007 i va filmar l'epopea del tsunami 'Lo imposible'?",
+  "options": [
+   "Guillermo del Toro",
+   "Alberto Rodríguez",
+   "Juan Antonio Bayona",
+   "Mateo Gil"
+  ],
+  "answer": 2,
+  "fact": "Després va filmar 'Un monstruo viene a verme', segons Patrick Ness."
+ },
+ {
+  "q": "'La plaga', retrat dels darrers pagesos de l'horta barcelonina, és de...",
+  "options": [
+   "Isabel Coixet",
+   "Carla Simón",
+   "Neus Ballús",
+   "Judith Colell"
+  ],
+  "answer": 2,
+  "fact": "Ballús va conviure mesos amb els pagesos fins a guanyar-se la seva confiança."
+ },
+ {
+  "q": "La directora d''Estiu 1993' i de l'Os d'Or 'Alcarràs' a la Berlinale 2022 és...",
+  "options": [
+   "Neus Ballús",
+   "Pilar Palomero",
+   "Carla Simón",
+   "Merlin Pascual"
+  ],
+  "answer": 2,
+  "fact": "'Alcarràs' explica l'última verema de peols d'una família pagesa."
+ },
+ {
+  "q": "El director banyolí que va conquerir el cinema d'autor amb 'El cant dels ocells', sobre els Reis d'Orient, és...",
+  "options": [
+   "Isaki Lacuesta",
+   "Albert Serra",
+   "Cesc Gay",
+   "Ventura Pons"
+  ],
+  "answer": 1,
+  "fact": "La seva càmera lenta hipnotitza des dels carrers de Girona fins a Cannes."
+ },
+ {
+  "q": "L'humorista de Reus que va fundar la producció El Terrat és...",
+  "options": [
+   "Xavier Sardà",
+   "Andreu Buenafuente",
+   "Frank Blanco",
+   "Paco Mir"
+  ],
+  "answer": 1,
+  "fact": "Va fundar El Terrat el 1990 amb un grapat de companys de redacció."
+ },
+ {
+  "q": "La periodista i escriptora de Llançà, autora de llibres de memòria i política, és...",
+  "options": [
+   "Àngels Barceló",
+   "Pilar Rahola",
+   "Júlia Otero",
+   "Victoria Prego"
+  ],
+  "answer": 1,
+  "fact": "Va néixer el 1956 i ha conreat el reportatge, la novel·la i la tribuna."
+ },
+ {
+  "q": "La dona que va conduir l'informatiu nocturn 'Hora 25' de la Cadena SER, de Barcelona, és...",
+  "options": [
+   "Àngels Barceló",
+   "Pilar Rahola",
+   "Ana Rosa Quintana",
+   "Susanna Griso"
+  ],
+  "answer": 0,
+  "fact": "'Hora 25' és un far informatiu de la nit radiofònica espanyola."
+ },
+ {
+  "q": "El rock català de Sopa de Cabra va néixer en un petit poble anomenat...",
+  "options": [
+   "Sant Pere Pescator",
+   "Camps",
+   "Camarasa",
+   "Castellfollit de la Roca"
+  ],
+  "answer": 1
+ },
+ {
+  "q": "El grup de pop mediterrani procedent de Constantí, al Camp de Tarragona, és...",
+  "options": [
+   "Els Pets",
+   "Sopa de Cabra",
+   "Sau",
+   "Txarango"
+  ],
+  "answer": 0,
+  "fact": "Amb 'Bon dia' van omplir les ones de les radios dels noranta."
+ },
+ {
+  "q": "La formació de mestissatge i festa nascuda a Begur s'anomena...",
+  "options": [
+   "La Fúmiga",
+   "Doctor Prats",
+   "Txarango",
+   "Obeses"
+  ],
+  "answer": 2
+ },
+ {
+  "q": "El grup d'indie procedent d'Olot, cap de fila del so de la Garrotxa, és...",
+  "options": [
+   "Antònia Font",
+   "El Petit de Cal Eril",
+   "Obeses",
+   "Standstill"
+  ],
+  "answer": 2
+ },
+ {
+  "q": "El Petit de Cal Eril, indie etèri de Joan Pons, ve del poble de...",
+  "options": [
+   "Solsona",
+   "Talarn",
+   "Bagà",
+   "Guissona"
+  ],
+  "answer": 3
+ },
+ {
+  "q": "La cantant de Sant Esteve Sesrovires que va reinventar el flamenc pop amb 'El Mal Querer' s'anomena...",
+  "options": [
+   "Aitana",
+   "Bad Gyal",
+   "Rigoberta Bandini",
+   "Rosalía"
+  ],
+  "answer": 3,
+  "fact": "El disc va guanyar un Grammy i va conquerir mig planeta."
+ },
+ {
+  "q": "Qui va dirigir elBulli, tancat el 2011 i proclamat diverses vegades millor restaurant del món?",
+  "options": [
+   "Santi Santamaría",
+   "Ferran Adrià",
+   "Andoni Luis Adán",
+   "Martín Berasategui"
+  ],
+  "answer": 1,
+  "fact": "Cada nit, a cala Montjoi, a Roses, només hi dinaven quaranta persones."
+ },
+ {
+  "q": "Qui va compondre la música de l'obra teatral 'La Santa Espina' (1901), amb lletra de Josep Pous i Pagès?",
+  "options": [
+   "Enric Morera",
+   "Vicent Andrés",
+   "Amadeu Vives",
+   "Enric Granados"
+  ],
+  "answer": 2,
+  "fact": "L'obra és un dels grans èxits del teatre catalanista de principis de segle."
+ },
+ {
+  "q": "Quina formació musical tradicional toca sardanes a les places catalanes?",
+  "options": [
+   "La cobla",
+   "La charanga",
+   "La rondalla",
+   "La bandúrria"
+  ],
+  "answer": 0,
+  "fact": "Deu instruments, entre tenora i tible, per a una dansa en cercle."
+ },
+ {
+  "q": "Qui va escriure el 1899 la lletra definitiva de l'himne 'Els segadors'?",
+  "options": [
+   "Pep Ventura",
+   "Amadeu Vives",
+   "Josep Anselm Clavé",
+   "Emili Guanyavents"
+  ],
+  "answer": 3,
+  "fact": "La melodia ve de temps de la guerra dels Segadors."
+ },
+ {
+  "q": "Quin violoncel·lista barceloní nascut el 1897, deixeble de Casals, va rodar el món abans de la guerra?",
+  "options": [
+   "Lluís Claret",
+   "Salvador Brotons",
+   "Pau Casals",
+   "Gaspar Cassadó"
+  ],
+  "answer": 3,
+  "fact": "Va ser un dels grans violoncels de la seua generació."
+ },
+ {
+  "q": "Quin cantant barceloní va ballar 'Bailar pegados' a Eurovisió el 1991?",
+  "options": [
+   "Sergio Dalma",
+   "David Bisbal",
+   "David Bustamante",
+   "Manu Tenorio"
+  ],
+  "answer": 0,
+  "fact": "Des d'aleshores ha omplert escenaris de mig món llatí."
+ },
+ {
+  "q": "El grup de Vic que va cantar 'Ai, Dolors' i va omplir pavellons és...",
+  "options": [
+   "Antònia Font",
+   "Sidonie",
+   "Els Pets",
+   "Manel"
+  ],
+  "answer": 3,
+  "fact": "El primer disc, 'Els millors professors europeus', va esclatar el 2008."
+ },
+ {
+  "q": "Quin compositor valencià, cec des de petit, va escriure el cèlebre 'Concierto de Aranjuez'?",
+  "options": [
+   "Manuel de Falla",
+   "Isaac Albéniz",
+   "Joaquín Rodrigo",
+   "Enric Morera"
+  ],
+  "answer": 2,
+  "fact": "La seva ceguesa precoç no va impedir una carrera universal."
+ },
+ {
+  "q": "La cuinera que va projectar Sant Pol de Mar al món i ha acumulat estrelles Michelin en tres continents és...",
+  "options": [
+   "Carme Ruscalleda",
+   "Elena Arzak",
+   "Susi Díaz",
+   "María Marte"
+  ],
+  "answer": 0,
+  "fact": "Va obrir el restaurant Sant Pau el 1981 amb el seu marit."
+ },
+ {
+  "q": "Segons la tradició, quin comte va deixar les quatre barres de sang a l'escut català?",
+  "options": [
+   "Guifré el Pilós",
+   "Guifré II",
+   "Sunyer",
+   "Miró"
+  ],
+  "answer": 0,
+  "fact": "Va repoblar Osona i descansa a Santa Maria de Ripoll."
+ },
+ {
+  "q": "La tropa lleugera de muntanya dels segles XIII i XIV, que anava a la guerra cridant 'Ferro! Ferro!', eren...",
+  "options": [
+   "Almogàvers",
+   "Gendarmes",
+   "Rotllans",
+   "Mercenaris genovesos"
+  ],
+  "answer": 0,
+  "fact": "Ramon Muntaner va contar les seves gestes en una crònica inoblidable."
+ },
+ {
+  "q": "Quin capità italià va portar la Companyia Catalana a Orient el 1303, abans de ser assassinat pels romans d'Orient?",
+  "options": [
+   "Bernat de Rocafort",
+   "Roger de Flor",
+   "Ramon Muntaner",
+   "Enric de Montfort"
+  ],
+  "answer": 1,
+  "fact": "El seu assassinat, el 1305, va encendre la Vengeance contra l'Imperi."
+ },
+ {
+  "q": "Quin rei va conquistar Mallorca el 1229 i la ciutat de València el 1238?",
+  "options": [
+   "Jaume I",
+   "Pere el Gran",
+   "Alfons el Cast",
+   "Pere el Cerimoniós"
+  ],
+  "answer": 0,
+  "fact": "El 'Llibre dels fets' transmet les seves gestes en prosa medieval vividíssima."
+ },
+ {
+  "q": "Qui va presidir el Comitè Olímpic Internacional del 1980 al 2001?",
+  "options": [
+   "Juan Antonio Samaranch",
+   "Josep Lluís Núñez",
+   "Joan Lladró",
+   "Santi Nogueira"
+  ],
+  "answer": 0,
+  "fact": "Va morir a Logronyo el 2010, després de convertir els Jocs en espectacle global."
+ },
+ {
+  "q": "La tennista de Barcelona que va guanyar Roland Garros el 1994 es diu...",
+  "options": [
+   "Conchita Martínez",
+   "Garbiñe Muguruza",
+   "Arantxa Sánchez Vicario",
+   "Steffi Graf"
+  ],
+  "answer": 2,
+  "fact": "Amb la pala de doble i el cor de lleona va dominar la terra batuda."
+ },
+ {
+  "q": "Qui va guanyar el torneig de Wimbledon de 1994 davant Navratilova?",
+  "options": [
+   "Arantxa Sánchez Vicario",
+   "Steffi Graf",
+   "Monica Seles",
+   "Conchita Martínez"
+  ],
+  "answer": 3,
+  "fact": "La de Jaca és l'única espanyola campeona sobre l'herba londinenca."
+ },
+ {
+  "q": "El ciclista d'Espot, or olímpic a Beijing 2008, és...",
+  "options": [
+   "Samuel Sánchez",
+   "Joaquim Rodríguez",
+   "Alberto Contador",
+   "Alejandro Valverde"
+  ],
+  "answer": 0,
+  "fact": "Va arribar a la meta en solitari i plorant de felicitat."
+ },
+ {
+  "q": "La nedadora sincronitzada de Barcelona, atleta espanyola amb més medalles mundials, és...",
+  "options": [
+   "Gemma Mengual",
+   "Ona Carbonell",
+   "Laia Raventós",
+   "Mireia Belmonte"
+  ],
+  "answer": 1,
+  "fact": "Va créixer a les piscines del Club Mediterrani."
+ },
+ {
+  "q": "La regatista de Banyoles, medalla d'or a Barcelona 92 i Atlanta 96, és...",
+  "options": [
+   "Mireia Belmonte",
+   "Ona Meseguer",
+   "Florentino Soria",
+   "Theresa Zabell"
+  ],
+  "answer": 3
+ },
+ {
+  "q": "El waterpolista de Terrassa, considerat el millor de la història, és...",
+  "options": [
+   "Manuel Estiarte",
+   "Xavi Hernández",
+   "Pau Gasol",
+   "Marc López"
+  ],
+  "answer": 0,
+  "fact": "Va jugar quatre Jocs Olímpics i va fer de l'aigua el seu regne."
+ },
+ {
+  "q": "En quina ciutat va néixer Pau Gasol el 1980?",
+  "options": [
+   "A Barcelona",
+   "A Girona",
+   "A Lleida",
+   "A Tarragona"
+  ],
+  "answer": 0,
+  "fact": "El 2006 va guanyar el mundial i dues vegades el bronze olímpic."
+ },
+ {
+  "q": "El bàsquet barceloní va arribar a l'anell de l'NBA el 2009 de la mà de...",
+  "options": [
+   "Jordi Rullán",
+   "Marc Gasol",
+   "Raül López",
+   "Sergio Rodríguez"
+  ],
+  "answer": 0,
+  "fact": "Aquell juny va lluir la senyera al costat de Kobe Bryant."
+ },
+ {
+  "q": "Quin base de Vic va saltar als Utah Jazz el 2002?",
+  "options": [
+   "Juan Carlos Navarro",
+   "Pau Gasol",
+   "Felipe Reyes",
+   "Raül López"
+  ],
+  "answer": 3
+ },
+ {
+  "q": "El pilot de Cunit, primer espanyà campió del món de la categoria reina del motociclisme (1999), és...",
+  "options": [
+   "Àlex Crivillé",
+   "Sete Gibernau",
+   "Jordi Xaus",
+   "Daniel Pedrosa"
+  ],
+  "answer": 0,
+  "fact": "Aquella victòria de València del 99 encara se sent a les graderies."
+ },
+ {
+  "q": "El pilot de Cervera, múltiples vegades campió del món de MotoGP, és...",
+  "options": [
+   "Jorge Lorenzo",
+   "Dani Pedrosa",
+   "Marc Márquez",
+   "Àlex Márquez"
+  ],
+  "answer": 2,
+  "fact": "El 2013 es va convertir en el campió més jove de la categoria reina."
+ },
+ {
+  "q": "L'especialista en trial d'Abrera, que ha guanyat el Mundial de la especialitat més vegades que ningú, és...",
+  "options": [
+   "Adam Raga",
+   "Marc Freixa",
+   "Toni Bou",
+   "Jordi Tarrats"
+  ],
+  "answer": 2
+ },
+ {
+  "q": "Quin avançat hongarès, criat a Barcelona, va fer les delícies del Barça dels anys cinquanta?",
+  "options": [
+   "Ferenc Puskás",
+   "Helenio Herrera",
+   "Sándor Kocsis",
+   "László Kubala"
+  ],
+  "answer": 3,
+  "fact": "Kubala és un dels màxims golejadors de la història del Barça."
+ },
+ {
+  "q": "El primer gran capità del Barça dels anys vint, després directiu del Madrid d'Europacopas, era...",
+  "options": [
+   "Ricardo Zamora",
+   "Josep Samitier",
+   "László Kubala",
+   "Paulino Alcántara"
+  ],
+  "answer": 1,
+  "fact": "Zamora, el porter llegenda, era del mateix temps i de la mateixa ciutat."
+ },
+ {
+  "q": "El porter barceloní conegut com 'el Diví', que dona nom al trofeu de millor porter, era...",
+  "options": [
+   "José Samitier",
+   "Juan Acevedo",
+   "Ricardo Zamora",
+   "Ricardo Zambrano"
+  ],
+  "answer": 2,
+  "fact": "Va brillar a l'Espanyol i al Barça abans de la guerra; la Guerra Civil el va atrapar a França."
+ },
+ {
+  "q": "Amb qui a la banqueta el Barça va guanyar la seva primera Copa d'Europa, a Wembley el 1992?",
+  "options": [
+   "Bobby Robson",
+   "Cèsar Luis Menotti",
+   "Terry Venables",
+   "Johann Cruyff"
+  ],
+  "answer": 3,
+  "fact": "Ronald Koeman va marcar el gol de l'eternitat d'una falta memorable."
+ },
+ {
+  "q": "El davanter de la Cellera de Ter, ídol del Barça dels anys setanta, era...",
+  "options": [
+   "Carles Rexach",
+   "Migueli",
+   "Joaquim Rifé",
+   "Juan Manuel Asensi"
+  ],
+  "answer": 0,
+  "fact": "Encara avui està entre els màxims golejadors de la història del club."
+ },
+ {
+  "q": "El defensa barceloní 'de tota la vida', capità del Barça durant tretze temporades, era...",
+  "options": [
+   "Migueli",
+   "Carles Rexach",
+   "Joaquim Rifé",
+   "Costas"
+  ],
+  "answer": 0,
+  "fact": "El seu xut llarg va decidir la final de la Copa del Rei del 1978."
+ },
+ {
+  "q": "El porter de l'Hospitalet de Llobregat, titular en tres Copes d'Europa blaugranes, és...",
+  "options": [
+   "Andoni Zubizarreta",
+   "Claudio Bravo",
+   "Juan Velasco",
+   "Víctor Valdés"
+  ],
+  "answer": 3
+ },
+ {
+  "q": "El lateral de l'Hospitalet que va obrir la golejada a la final de l'Eurocopa 2012 és...",
+  "options": [
+   "Juan Bernat",
+   "Jesús Navas",
+   "Nacho Monreal",
+   "Jordi Alba"
+  ],
+  "answer": 3,
+  "fact": "Aquell 4-0 a Itàlia va ser el primer títol gran d'una selecció en tres grans tornejos seguits."
+ },
+ {
+  "q": "En quina ciutat va néixer Gerard Piqué el 1987?",
+  "options": [
+   "A Madrid",
+   "A Barcelona",
+   "A Reus",
+   "A València"
+  ],
+  "answer": 1,
+  "fact": "Va guanyar el doblet Mundial 2010 i Eurocopa 2012 amb la selecció."
+ },
+ {
+  "q": "El mig de Reus que va marxar del Barça per fitxar pel Como italià el 2024 és...",
+  "options": [
+   "Sergi Darder",
+   "Sergi Samper",
+   "Sergi Roberto",
+   "Sergi Enrich"
+  ],
+  "answer": 2
+ },
+ {
+  "q": "El pilot de Vic que va guanyar el Dakar en motocicleta el 2004 i en cotxe el 2014 és...",
+  "options": [
+   "Marc Coma",
+   "Nani Roma",
+   "Carlos Sainz",
+   "Laia Sanz"
+  ],
+  "answer": 1
+ },
+ {
+  "q": "Kilian Jornet, el corredor de muntanya nascut a Sabadell el 1987, es va criar a quina comarca?",
+  "options": [
+   "La Cerdanya",
+   "El Berguedà",
+   "La Garrotxa",
+   "El Pallars"
+  ],
+  "answer": 0,
+  "fact": "Va guanyar dues vegades l'Ultra Trail du Mont Blanc i múltiples mundials de curses de muntanya."
+ },
+ {
+  "q": "Contra quin equip va perdre la selecció espanyola de bàsquet la final olímpica de Barcelona 92?",
+  "options": [
+   "El Dream Team dels Estats Units",
+   "L'Equip Unificat",
+   "Iugoslàvia",
+   "Lituània"
+  ],
+  "answer": 0,
+  "fact": "Magic Johnson, Larry Bird i Michael Jordan formaven el que molts consideren el millor equip de la història."
+ },
+ {
+  "q": "El tennista de Lleida que va guanyar Roland Garros el 2002 és...",
+  "options": [
+   "Carlos Moyà",
+   "Albert Costa",
+   "Juan Carlos Ferrero",
+   "Tommy Robredo"
+  ],
+  "answer": 1
+ },
+ {
+  "q": "El ciclista barceloní, campió del món de persecució cinc anys seguits del 1955 al 1959, era...",
+  "options": [
+   "Guillermo Timoner",
+   "Bernardo Ruiz",
+   "Luis Otaño",
+   "Miguel Poblet"
+  ],
+  "answer": 3,
+  "fact": "Va guanyar etapes al Tour, al Giro i a la Volta."
+ },
+ {
+  "q": "L'aler de Tortosa, tres vegades medallista olímpica amb la selecció espanyola de bàsquet, és...",
+  "options": [
+   "Pau Ribas",
+   "Rudy Fernández",
+   "Víctor Claver",
+   "Sergio Rodríguez"
+  ],
+  "answer": 2,
+  "fact": "Es va formar al planter del Joventut de Badalona."
+ },
+ {
+  "q": "El tennista barceloní, campió de Roland Garros el 1993 i el 1994, també guanyà plata olímpica a Barcelona. Qui és?",
+  "options": [
+   "Sergi Bruguera",
+   "Àlex Corretja",
+   "Juan Carlos Ferrero",
+   "Emilio Sánchez"
+  ],
+  "answer": 0,
+  "fact": "La final olímpica del 92 la va perdre davant el suís Marc Rosset."
+ },
+ {
+  "q": "El tennista barceloní número 2 del món, finalista de Roland Garros 1998 i avui comentarista, és...",
+  "options": [
+   "Carlos Moyà",
+   "Tommy Robredo",
+   "Àlex Corretja",
+   "Feliciano López"
+  ],
+  "answer": 2,
+  "fact": "Va guanyar el Masters de tennis de 1998."
+ },
+ {
+  "q": "El tennista d'Hostalric que va arribar a ser número 5 del món és...",
+  "options": [
+   "Albert Costa",
+   "Feliciano López",
+   "Daniel Gimeno",
+   "Tommy Robredo"
+  ],
+  "answer": 3
+ },
+ {
+  "q": "La pilot de Corbera de Llobregat, multiplem campiona del món de trial, es diu...",
+  "options": [
+   "Laia Sanz",
+   "Mireia Belmonte",
+   "Ona Carbonell",
+   "Theresa Zabell"
+  ],
+  "answer": 0,
+  "fact": "Va ser la primera dona a acabar entre les deu primeres del Dakar en motocicleta."
+ },
+ {
+  "q": "El pilot de Sallent, quatre vegades guanyador del Dakar en motocicleta, és...",
+  "options": [
+   "Nani Roma",
+   "Jordi Arcarons",
+   "Lapierre Marc",
+   "Marc Coma"
+  ],
+  "answer": 3
+ },
+ {
+  "q": "En quina localitat vallesana s'ubica el Circuit de Barcelona-Catalunya?",
+  "options": [
+   "A Cardedeu",
+   "A Montmeló",
+   "A Granollers",
+   "A Mollet"
+  ],
+  "answer": 1
+ },
+ {
+  "q": "El pilot de Sabadell que va guanyar les 24 hores de Le Mans del 2009 amb Peugeot és...",
+  "options": [
+   "Pedro de la Rosa",
+   "Marc Gené",
+   "Jaime Alguersuari",
+   "Lluís Pérez-Sala"
+  ],
+  "answer": 1,
+  "fact": "Va ser pilot de proves de Ferrari a la Fórmula 1."
+ },
+ {
+  "q": "L'entrenador de Bellcaire d'Empordà que va dirigir el Barça a la temporada 2012-13 era...",
+  "options": [
+   "Tito Vilanova",
+   "Jordi Roura",
+   "Pep Guardiola",
+   "Tata Martino"
+  ],
+  "answer": 0
+ },
+ {
+  "q": "L'entrenador de Balaguer que va portar el Barça femení a guanyar la seva primera Champions el 2021 és...",
+  "options": [
+   "Lluís Cortés",
+   "Xavi Llorens",
+   "Pere Romeu",
+   "Xavi Hernández"
+  ],
+  "answer": 0,
+  "fact": "Va onejar una senyera abans d'un partit al Bernabéu que va obrir un gran debat."
+ },
+ {
+  "q": "El pilot de Roses, campió del món de Moto3 el 2013 abans de saltar a MotoGP, és...",
+  "options": [
+   "Pol Espargaró",
+   "Maverick Viñales",
+   "Jorge Lorenzo",
+   "Dani Pedrosa"
+  ],
+  "answer": 1
+ },
+ {
+  "q": "El pilot de Granollers, germà petit d'Àlex i campió del món de Moto2 el 2023, és...",
+  "options": [
+   "Dani Pedrosa",
+   "Pol Espargaró",
+   "Jorge Lorenzo",
+   "Àlex Márquez"
+  ],
+  "answer": 1
+ },
+ {
+  "q": "El pilot de Cervera, germà petit de Marc i campió del món de Moto3 el 2014, és...",
+  "options": [
+   "Julián Simón",
+   "Nico Terol",
+   "Àlex Márquez",
+   "Héctor Faubel"
+  ],
+  "answer": 2
+ },
+ {
+  "q": "A quina ciutat va néixer el pilot de motociclisme Sete Gibernau, criat a Andorra?",
+  "options": [
+   "A Girona",
+   "A Lleida",
+   "A Tarragona",
+   "A Barcelona"
+  ],
+  "answer": 3
+ },
+ {
+  "q": "El pilot de Sabadell, campió del món de 125cc el 2003 i de 250cc el 2004 i el 2005, és...",
+  "options": [
+   "Hiroshi Aoyama",
+   "Andrea Dovizioso",
+   "Casey Stoner",
+   "Dani Pedrosa"
+  ],
+  "answer": 3,
+  "fact": "Va debutar a la categoria reina el 2006 amb 20 anys."
+ },
+ {
+  "q": "El davanter de Manresa, màxim golejador històric de l'Espanyol, va marcar un gol llegendaris al Bernabéu...",
+  "options": [
+   "Pochettino",
+   "Raúl Tamudo",
+   "De la Peña",
+   "Valdo"
+  ],
+  "answer": 1,
+  "fact": "El seu gol a última hora va estar a punt de deixar el Madrid sense Lliga."
+ },
+ {
+  "q": "El waterpolista barceloní campió olímpic a Barcelona 92 que després va entrenar la selecció de sincronitzada és...",
+  "options": [
+   "Miki Oca",
+   "Manuel Estiarte",
+   "Jordi Garcia",
+   "Xavi Garcia"
+  ],
+  "answer": 0
+ },
+ {
+  "q": "La capitana de la sincronitzada plata olímpica a Pequín 2008, companya d'Ona Carbonell, era...",
+  "options": [
+   "Gemma Mengual",
+   "Theresa Zabell",
+   "Laia Raventós",
+   "Andrea Fuentes"
+  ],
+  "answer": 0,
+  "fact": "La medalla de Pequín la va guanyar en duel al costat d'Andrea Fuentes."
+ },
+ {
+  "q": "El ciclista barceloní conegut com el 'Purito', tercer al Tour de França 2012, era...",
+  "options": [
+   "Samuel Sánchez",
+   "Óscar Sevilla",
+   "Joaquim Rodríguez",
+   "Carlos Sastre"
+  ],
+  "answer": 2
+ },
+ {
+  "q": "On va néixer Marc Gasol, campió del món el 2006 i de l'NBA el 2019 amb els Toronto Raptors?",
+  "options": [
+   "A Girona",
+   "A Memphis",
+   "A Barcelona",
+   "A Madrid"
+  ],
+  "answer": 2,
+  "fact": "El 2019 va aconseguir l'anell acompanyat del seu germà Pau."
+ },
+ {
+  "q": "L'aler barceloní històric capità del Barça de bàsquet, després entrenador, és...",
+  "options": [
+   "Pau Ribas",
+   "Roger Grimau",
+   "Xavi Pascual",
+   "Juan Carlos Navarro"
+  ],
+  "answer": 1
+ },
+ {
+  "q": "El mig d'Ulldecona que va fitxar pel Chelsea el 2011 i més tard va retornar a Girona és...",
+  "options": [
+   "Sergi Samper",
+   "Àlex Grimaldo",
+   "Oriol Romeu",
+   "Rafinha"
+  ],
+  "answer": 2
+ },
+ {
+  "q": "Quin comte de Barcelona es va casar amb Peronella, hereva d'Aragó, i va iniciar la Corona d'Aragó?",
+  "options": [
+   "Ramon Berenguer III",
+   "Alfons el Cast",
+   "Ramon Berenguer IV",
+   "Ramir II"
+  ],
+  "answer": 2,
+  "fact": "Va ser el primer a titular-se princeps de Barcelona, primer entre iguals."
+ },
+ {
+  "q": "El rei i comte conegut com el 'Rei Comte', fundador del castell de Cervera, era...",
+  "options": [
+   "Pere el Gran",
+   "Alfons el Cast",
+   "Jaume el Conqueridor",
+   "Alfons el Magnànim"
+  ],
+  "answer": 1
+ },
+ {
+  "q": "Guifré el Pilós, fundador de la nissaga comtal catalana, va morir l'any 897...",
+  "options": [
+   "De vell, al monestir de Ripoll que ell havia fundat",
+   "Durant un setge normand a Barcelona",
+   "En peregrinació a Roma",
+   "Ferit de mort quan defensava Barcelona assetjada"
+  ],
+  "answer": 3,
+  "fact": "El seu fill Guifré II va heretar un comtat que amb els anys seria una potència mediterrània."
+ },
+ {
+  "q": "El 985, Almansor, dictador de Còrdova, va saquejar Barcelona i ningú no va acudir en auxili del comte. Quin comte governava llavors?",
+  "options": [
+   "Borrell II",
+   "Ramon Borrell",
+   "Sunyer",
+   "Miró"
+  ],
+  "answer": 0,
+  "fact": "Aquella soledat davant del perill va obrir el camí d'un comtat independent del rei franc."
+ },
+ {
+  "q": "Quin rei va prendre Sicília el 1282, cridat pels sicilians contra els francesos?",
+  "options": [
+   "Jaume I",
+   "Alfons el Magnànim",
+   "Pere el Gran",
+   "Pere el Cerimoniós"
+  ],
+  "answer": 2,
+  "fact": "Les Vespres Sicilianes van donar a la Corona d'Aragó una illa clau del Mediterrani."
+ },
+ {
+  "q": "De qui és el 'Llibre dels fets', les memories d'un rei que va conquerir Mallorca i València?",
+  "options": [
+   "Pere el Cerimoniós",
+   "Martí l'Humà",
+   "Jaume I",
+   "Alfons el Cast"
+  ],
+  "answer": 2,
+  "fact": "El llibre conta en primera persona les conquestes i fins i tot els dubtes del rei."
+ },
+ {
+  "q": "El frare franciscà autor de la 'Doctrina compendiosa', cimal de la prosa del segle XIV, és...",
+  "options": [
+   "Francesc Eiximenis",
+   "Ramon Llull",
+   "Ramon Sibiuda",
+   "Bernat Metge"
+  ],
+  "answer": 0,
+  "fact": "Va néixer entre Girona i Barcelona a mitjan segle XIV."
+ },
+ {
+  "q": "El jueu mallorquí que el 1375 va dibuixar, amb el seu fill, el famós Atles català d'encàrrec del rei Joan I era...",
+  "options": [
+   "Jafudà Cresques",
+   "Samuel Zacuto",
+   "Cresques Abraham",
+   "Nahmanides"
+  ],
+  "answer": 2,
+  "fact": "Aquell atles, regal del rei a la cort anglesa, és la joia de la cartografia medieval."
+ },
+ {
+  "q": "El dominic mallorquí del segle XIII que va escriure el 'Pugio fidei' contra jueus i sarraïns era...",
+  "options": [
+   "Ramon Llull",
+   "Ramon Sibiuda",
+   "Anselm Turmeda",
+   "Ramon Martí"
+  ],
+  "answer": 3,
+  "fact": "La seva obra, escrita a Barcelona, va ser llargament llegida a l'Europa cristiana."
+ },
+ {
+  "q": "L'eclesiàstic gironí autor del 'Stimulus amoris', obra difosa per tota Europa i durant segles atribuïda a Ramon Llull, era...",
+  "options": [
+   "Ramon Martí",
+   "Eiximenis",
+   "Arnau de Vilanova",
+   "Ramon Sibiuda"
+  ],
+  "answer": 3
+ },
+ {
+  "q": "El metge mallorquí deixeble de l'obra de Ramon Llull que la va defensar a la Universitat de París va ser...",
+  "options": [
+   "Guillem Soler",
+   "Guillem Sescomes",
+   "Arnau de Vilanova",
+   "Anselm Turmeda"
+  ],
+  "answer": 1,
+  "fact": "Fou rector de la Universitat de París i impulsor dels estudis lul·listes."
+ },
+ {
+  "q": "L'abat Oliba, fundador de Montserrat, també va ser abat de Ripoll i de Cuixà i va impulsar...",
+  "options": [
+   "La Inquisició",
+   "Les Treves de Déu",
+   "Les Croçades",
+   "L'Orde del Temple"
+  ],
+  "answer": 1,
+  "fact": "El 1027 va participar en el sínode que va proclamar les Treves de Déu a Toluges."
+ },
+ {
+  "q": "Amb qui es va casar Isabel la Catòlica, unió que va ajuntar les dues corones espanyoles?",
+  "options": [
+   "Joan II d'Aragó",
+   "Carles I",
+   "Ferran el Catòlic",
+   "Felip II"
+  ],
+  "answer": 2,
+  "fact": "El seu net Carles va heretar les dues corones i els dominis americans."
+ },
+ {
+  "q": "El castellà que el Compromís de Casp del 1412 va triar nou rei d'Aragó era...",
+  "options": [
+   "Alfons el Magnànim",
+   "Martí el Jove",
+   "Ferran I d'Antequera",
+   "Enric de Trastàmara"
+  ],
+  "answer": 2,
+  "fact": "Va ser el primer rei d'una nissaga nova, la dels Trastàmara."
+ },
+ {
+  "q": "El rei que va fer de Nàpols la seva residència i va omplir la cort d'artistes era...",
+  "options": [
+   "Alfons el Magnànim",
+   "Ferran el Catòlic",
+   "Pere el Cerimoniós",
+   "Alfons el Cast"
+  ],
+  "answer": 0,
+  "fact": "Va entrar a Nàpols el 1442 i la seva cort va ser una de les més brillants d'Itàlia."
+ },
+ {
+  "q": "Alfons el Magnànim va fundar la Universitat de Barcelona el...",
+  "options": [
+   "1398",
+   "1510",
+   "1283",
+   "1450"
+  ],
+  "answer": 3,
+  "fact": "L'estudi va néixer sobre les escoles existents de la ciutat, amb butlla papal."
+ },
+ {
+  "q": "Com es va dir la revolta dels gremis de València començada el 1519?",
+  "options": [
+   "La remença",
+   "La forana",
+   "L'Irmandança",
+   "La Germania"
+  ],
+  "answer": 3
+ },
+ {
+  "q": "Com es diu la sentència que el 1486 va posar fi al conflicte dels pagesos de remença?",
+  "options": [
+   "La Sentència de Guadalupe",
+   "La Sentència Arbitral de Segòvia",
+   "El Privilegi General",
+   "La Concòrdia de Berga"
+  ],
+  "answer": 0,
+  "fact": "La remença era el rescat que el pagès devia al senyor per alliberar-se'n."
+ },
+ {
+  "q": "Qui era el president de la Diputació del General, cap de la revolta de Catalunya el 1640 contra Felip IV?",
+  "options": [
+   "Francesc de Tamarit",
+   "Lluís de Requesens",
+   "Pau Claris",
+   "Rafael Casanova"
+  ],
+  "answer": 2,
+  "fact": "Poc abans de morir va posar Catalunya sota la protecció del rei de França."
+ },
+ {
+  "q": "El 1641, la milícia catalana va derrotar el gran exèrcit castellà a la muntanya de...",
+  "options": [
+   "Bruc, al cor de la Selva",
+   "Valls, en plena vall del riu",
+   "Montjuïc, davant mateix de Barcelona",
+   "Prats de Molló, al Rosselló"
+  ],
+  "answer": 2,
+  "fact": "La victòria de Montjuïc es va cantar en els versos que originaren Els Segadors."
+ },
+ {
+  "q": "Quina comarca catalana va ser cedida a França pel Tractat dels Pirineus del 1659?",
+  "options": [
+   "La Val d'Aran",
+   "La Ribagorça",
+   "El Priorat",
+   "El Rosselló"
+  ],
+  "answer": 3,
+  "fact": "Amb el Rosselló també foren cedides la Cerdanya, el Conflent i el Capcir."
+ },
+ {
+  "q": "El 1705, durant la guerra de Successió, els catalans van jurar a Girona com a nou sobirà...",
+  "options": [
+   "L'arxiduc Carles",
+   "Felip d'Anjou",
+   "Víctor Amadeu de Savoia",
+   "Príncep de Darmstadt"
+  ],
+  "answer": 0,
+  "fact": "L'arxiduc va entrar a Barcelona i va ser reconegut com a Carles III."
+ },
+ {
+  "q": "Qui era conseller en cap i mestre en cap de Barcelona durant el setge de 1714?",
+  "options": [
+   "Josep Moragues",
+   "Manuel Desvalls",
+   "Rafael Casanova",
+   "Rafael Nebot"
+  ],
+  "answer": 2,
+  "fact": "Segons la tradició, va caure ferit el mateix 11 de setembre defensant la porta de Sant Pere."
+ },
+ {
+  "q": "Correlà català resistit a Mallorca després del 1714, fet presoner i decapitat el 1716, va ser...",
+  "options": [
+   "Rafael Casanova",
+   "Anton de Villarroel",
+   "Duc del Popoli",
+   "Josep Moragues"
+  ],
+  "answer": 3,
+  "fact": "El seu cap va estar exposat en una gàbia de ferro durant molts anys."
+ },
+ {
+  "q": "Quina disposició del 1716 va abolir les institucions i les constitucions catalanes?",
+  "options": [
+   "La Pragmàtica Sanció",
+   "L'Edicte de Fontainebleau",
+   "El Decret de Nova Planta",
+   "La Concòrdia de Berga"
+  ],
+  "answer": 2,
+  "fact": "Va imposar les lleis de Castella i els Nous Cosos com a nova administració."
+ },
+ {
+  "q": "El primer rei de la dinastia Borbó a Espanya, vencedor de la guerra de Successió, va ser...",
+  "options": [
+   "Felip IV",
+   "Carles II",
+   "Felip V",
+   "Lluís I"
+  ],
+  "answer": 2,
+  "fact": "Va reorganitzar l'Estat sobre el model de França amb els decrets de Nova Planta."
+ },
+ {
+  "q": "La mort de Carles II el 1700, sense descendència, va engegar...",
+  "options": [
+   "La guerra dels Segadors",
+   "Les Germanies",
+   "La guerra de Successió",
+   "La Guerra Gran"
+  ],
+  "answer": 2,
+  "fact": "Europa es va partir entre els qui volien l'arxiduc Carles i els qui volien Felip d'Anjou."
+ },
+ {
+  "q": "La pau que el 1713 va posar fi a la guerra de Successió es va signar a...",
+  "options": [
+   "Rastatt",
+   "Nimègue",
+   "Breda",
+   "Utrecht"
+  ],
+  "answer": 3,
+  "fact": "Catalunya, que no hi va ser admesa, va haver de resistir sola l'últim any de setge."
+ },
+ {
+  "q": "El general de Reus que va tramar la revolució de 1868, anomenada 'la Gloriosa', va ser...",
+  "options": [
+   "Ramón María Narváez",
+   "Joan Prim",
+   "Leopoldo O'Donnell",
+   "Baldomero Espartero"
+  ],
+  "answer": 1,
+  "fact": "Va morir a Madrid dos dies després d'un atemptat, el desembre del 1870."
+ },
+ {
+  "q": "El primer ferrocarril de la península, inaugurat el 1848, va ser la línia de Barcelona a...",
+  "options": [
+   "Sitges",
+   "Sabadell",
+   "Mataró",
+   "Reus"
+  ],
+  "answer": 2,
+  "fact": "Els trens d'aquell tram són els avantpassats de la línia R1 de rodalies."
+ },
+ {
+  "q": "L'aixecament popular de Barcelona del juliol del 1909 contra l'enviament de reservistes al Marroc es coneix com...",
+  "options": [
+   "La Setmana Tràgica",
+   "La Vaga de la Canadenca",
+   "La Revolució de la Setmana Santa",
+   "Els Fets de Fígols"
+  ],
+  "answer": 0,
+  "fact": "La revolta va esclatar quan reservistes casats i pares de família van ser embarcats cap a Melilla."
+ },
+ {
+  "q": "Com anomenem el moviment cultural que, des de mitjan segle XIX, va recuperar el català com a llengua de literatura?",
+  "options": [
+   "El Modernisme",
+   "La Renaixença",
+   "El Noucentisme",
+   "La Gaia Fe"
+  ],
+  "answer": 1,
+  "fact": "La rehabilitació dels Jocs Florals de Barcelona el 1859 en va ser un dels grans símbols."
+ },
+ {
+  "q": "El dramaturg de 'Terra baixa' i 'Maria Rosa', anomenat carinyosament 'el Mestre', va ser...",
+  "options": [
+   "Ignasi Iglésias",
+   "Josep Maria de Sagarra",
+   "Domènec Monser",
+   "Àngel Guimerà"
+  ],
+  "answer": 3,
+  "fact": "'Terra baixa' (1897) va ser versionada com a òpera amb el títol 'Tiefland'."
+ },
+ {
+  "q": "El militar que va ser comandant principal de la defensa de Barcelona el 1714 va ser...",
+  "options": [
+   "Duc de Berwick",
+   "Anton de Villarroel",
+   "Duc del Popoli",
+   "Manuel Desvalls"
+  ],
+  "answer": 1,
+  "fact": "Va ser ferit el mateix onzè de setembre mentre combatia a la bretxa oberta al baluard."
+ },
+ {
+  "q": "La Generalitat de Catalunya té el seu origen medieval en...",
+  "options": [
+   "La Diputació del General de les Corts",
+   "El Consell de Cent",
+   "El veguer reial",
+   "La Copa Seca"
+  ],
+  "answer": 0,
+  "fact": "Era la delegació permanente que vetllava pels pactes aprovats pels estaments del país."
+ },
+ {
+  "q": "El virrei comte de Santa Coloma va ser assassinat pels segadors al setembre del...",
+  "options": [
+   "1659",
+   "1640",
+   "1620",
+   "1714"
+  ],
+  "answer": 1,
+  "fact": "Era l'home de Felip IV a Catalunya en esclatar la revolta dels Segadors."
+ },
+ {
+  "q": "La fortalesa que Felip V va manar aixecar sobre el barri de la Ribera de Barcelona per tenir la ciutat sota control es deia...",
+  "options": [
+   "La Ciutadella",
+   "El castell de Montjuïc",
+   "Sant Ferran",
+   "El Fort Pius"
+  ],
+  "answer": 0,
+  "fact": "Arran de la revolució del 1868 es va enderrocar la fortalesa: avui n'és el jardí el parc de la Ciutadella."
+ },
+ {
+  "q": "La victòria de les armes catalanes contra Napoleó del juny del 1808 es va lliurar a...",
+  "options": [
+   "Figueres",
+   "El Bruc",
+   "Tortosa",
+   "Hostalric"
+  ],
+  "answer": 1,
+  "fact": "La llegenda diu que els tambors fets sonar entre els boscos van espantar els francesos."
+ },
+ {
+  "q": "El 1919, una vaga a una empresa de serveis de Barcelona va arrencar la jornada laboral de vuit hores a Espanya. Era la vaga...",
+  "options": [
+   "De La Canadenca",
+   "Dels tramvies",
+   "Dels metal·lúrgics",
+   "De la telefònica"
+  ],
+  "answer": 0,
+  "fact": "El nom venia de l'empresa Barcelona Traction, coneguda com La Canadenca."
+ },
+ {
+  "q": "Com es coneix l'onada d'exili català cap a França del gener i febrer del 1939?",
+  "options": [
+   "L'Èxode gità",
+   "La Retirada",
+   "La Marxa Verda",
+   "El Gran Camí"
+  ],
+  "answer": 1,
+  "fact": "Mig milió de persones van creuar els Pirineus amb fred, gana i por."
+ },
+ {
+  "q": "Qui va ser el primer president de la Mancomunitat de Catalunya, elegit el 1914?",
+  "options": [
+   "Enric Prat de la Riba",
+   "Josep Puig i Cadafalch",
+   "Francesc Cambó",
+   "Francesc Macià"
+  ],
+  "answer": 0,
+  "fact": "Autor de 'La nacionalitat catalana', va morir el 1917 deixant Puig i Cadafalch com a relleu."
+ },
+ {
+  "q": "El dirigent de la Lliga Regionalista que va ser ministre dels governs de la Restauració es deia...",
+  "options": [
+   "Alejandro Lerroux",
+   "Francesc Cambó",
+   "Santiago Alba",
+   "Manuel Azaña"
+  ],
+  "answer": 1,
+  "fact": "La seva crida als catalanistes, 'Tornem a Espanya!', va marcar l'estratègia del seu partit."
+ },
+ {
+  "q": "El filòsof mallorquí del segle XIII autor del 'Llibre de Blanquerna', canonitzat el 1985, va ser...",
+  "options": [
+   "Anselm Turmeda",
+   "Ramon Llull",
+   "Ramon Martí",
+   "Arnau de Vilanova"
+  ],
+  "answer": 1,
+  "fact": "Va escriure més de dues-centes obres i va morir, segons la tradició, a Mallorca cap al 1316."
+ },
+ {
+  "q": "L'humanista que a 'Lo somni' va dialogar en somnis amb les ànimes dels clàssics va ser...",
+  "options": [
+   "Francesc Eiximenis",
+   "Bernat Metge",
+   "Ramon Sibiuda",
+   "Joan Roís de Corella"
+  ],
+  "answer": 1,
+  "fact": "Escrita el 1410, és una de les grans joies de la prosa humanística catalana."
+ },
+ {
+  "q": "Escriptor barceloní del segle XIV que va traduir Boccaccio i que va acabar a Túnez convertit a l'islam...",
+  "options": [
+   "Bernat Metge",
+   "Ramon Llull",
+   "Isabel de Villena",
+   "Anselm Turmeda"
+  ],
+  "answer": 3,
+  "fact": "Al nord d'Àfrica va signar com a Abd Allah at-Tarjuman, 'el traductor'."
+ },
+ {
+  "q": "Com es diu el document del 1885 en què centenars de municipis catalans es queixaven al rei Alfons XII del centralisme?",
+  "options": [
+   "Manifest de Manresa",
+   "Capitulacions de Compromís",
+   "Memorial de Greuges",
+   "Dictamen de les Corts"
+  ],
+  "answer": 2
+ },
+ {
+  "q": "El primer projecte polític d'autonomia per a Catalunya, redactat a Manresa el 1892, es coneix com...",
+  "options": [
+   "El Codi de Pallars",
+   "Els Furs de Girona",
+   "La Pau i Treball",
+   "Les Bases de Manresa"
+  ],
+  "answer": 3
+ },
+ {
+  "q": "El 14 d'abril del 1931, des del balcó de la plaça de Sant Jaume, Francesc Macià va proclamar...",
+  "options": [
+   "L'estat independent d'Espanya",
+   "El retorn del Regne d'Aragó",
+   "La República Catalana",
+   "La república federal ibèrica"
+  ],
+  "answer": 2,
+  "fact": "Pocs mesos després es va restaurar la Generalitat i en va ser el primer president."
+ },
+ {
+  "q": "El president de la Generalitat afusellat al castell de Montjuïc l'octubre del 1940 va ser...",
+  "options": [
+   "Lluís Companys",
+   "Francesc Macià",
+   "Josep Sunyol",
+   "Manuel Azaña"
+  ],
+  "answer": 0,
+  "fact": "Entregat per la Gestapo a Barcelona, va ser jutjat en consell de guerra sumaríssim."
+ },
+ {
+  "q": "El president de la Generalitat a l'exili que va tornar a Barcelona el 1977 pronunciant el 'Ja sóc a casa!' va ser...",
+  "options": [
+   "Heribert Barrera",
+   "Jordi Pujol",
+   "Josep Tarradellas",
+   "Ernest Lluch"
+  ],
+  "answer": 2,
+  "fact": "El seu retorn, negociat amb el govern d'Adolfo Suárez, va anticipar la restauració de la Generalitat."
+ },
+ {
+  "q": "De qui és el mètode de tractament de les fractures que va revolucionar la traumatologia moderna?",
+  "options": [
+   "Pere Bosch i Gimpera",
+   "Ramon Turró",
+   "Josep Trueta",
+   "Josep Trueta i Casals"
+  ],
+  "answer": 2,
+  "fact": "Exiliat a Anglaterra des del 1939, va rebre el títol de sir el 1952."
+ },
+ {
+  "q": "Quina obra monumental va dirigir el filòleg Joan Coromines?",
+  "options": [
+   "La gramàtica normativa de l'IEC",
+   "El 'Diccionari de la llengua catalana' de l'IEC",
+   "L'atles lingüístic de la península",
+   "El 'Diccionari català-valencià-balear'"
+  ],
+  "answer": 3,
+  "fact": "Va viure exiliat als Estats Units entre 1939 i 1955."
+ },
+ {
+  "q": "Qui va escriure 'Notícia de Catalunya', assaig clau sobre la història econòmica catalana?",
+  "options": [
+   "Pierre Vilar",
+   "Jaume Vicens Vives",
+   "Jaume Botey",
+   "Albert Balcells"
+  ],
+  "answer": 1,
+  "fact": "Va morir el 1960, quan encara no havia fet els cinquanta anys."
+ },
+ {
+  "q": "A qui se'l considera el pare de l'ecologia catalana?",
+  "options": [
+   "Pius Font i Quer",
+   "Maurici Muchnik",
+   "Josep Maluquer de Motes",
+   "Ramon Margalef"
+  ],
+  "answer": 3,
+  "fact": "Va escriure l'obra 'Biosfera', que va obrir camí a l'ecologia del nostre país."
+ },
+ {
+  "q": "Qui va escriure el 'Diccionari de filosofia' de referència en castellà?",
+  "options": [
+   "Eugeni d'Ors",
+   "Josep Ferrater i Mora",
+   "Joan Maragall",
+   "Norbert Bilbeny"
+  ],
+  "answer": 1,
+  "fact": "Va néixer a Girona el 1922."
+ },
+ {
+  "q": "De qui és l'obra 'Plantas medicinales', un clàssic de la botànica?",
+  "options": [
+   "August Pi i Sunyer",
+   "Norbert Font i Queralt",
+   "Pius Font i Quer",
+   "Cèsir Comas i Solà"
+  ],
+  "answer": 2,
+  "fact": "Va néixer a Lleida l'any 1878. El Jardí Botànic de Barcelona porta el seu nom."
+ },
+ {
+  "q": "Qui era Ramon Turró, filòsof de Mataró?",
+  "options": [
+   "Un metge i escriptor",
+   "Un enginyer industrial",
+   "Un mossèn i científic",
+   "Un químic i filòsof autodidacte"
+  ],
+  "answer": 3,
+  "fact": "Va morir el 1926 deixant l'obra inacabada."
+ },
+ {
+  "q": "Qui va ser Maria Mercè Marçal?",
+  "options": [
+   "Una pintora",
+   "Una cantant",
+   "Una poeta i assagista",
+   "Una advocada"
+  ],
+  "answer": 2,
+  "fact": "Va néixer a Solsona l'any 1952 i va morir el 1998."
+ },
+ {
+  "q": "De qui són les columnes reunides sota el títol 'Glosses', que van encunyar el Noucentisme?",
+  "options": [
+   "Les de Josep Carner",
+   "Les de Gabriel Ferraté",
+   "Les d'Eugeni d'Ors",
+   "Les de Joan Maragall"
+  ],
+  "answer": 2,
+  "fact": "Les publicava a 'El Punt' amb el nom de ploma Xènius."
+ },
+ {
+  "q": "Quin va ser el primer canal de televisió en català?",
+  "options": [
+   "TV3",
+   "Canal 9",
+   "Televisió Espanyola",
+   "Betevé"
+  ],
+  "answer": 0,
+  "fact": "Va començar les emissions regulars l'any 1983."
+ },
+ {
+  "q": "Què és 'La Marató' de televisió?",
+  "options": [
+   "Un programa benèfic anual",
+   "Un concurs de cant",
+   "Una cursa de muntanya",
+   "Un programa de cuina"
+  ],
+  "answer": 0,
+  "fact": "S'emet des del 1992 i recapta fons per a la recerca biomèdica."
+ },
+ {
+  "q": "Qui va ser Narcís Socías i Humbert?",
+  "options": [
+   "Un president de la Generalitat",
+   "El primer alcalde democràtic de Barcelona",
+   "Un premi Nobel",
+   "Un pilot de Fórmula 1"
+  ],
+  "answer": 1,
+  "fact": "Va ser alcalde de Barcelona entre 1979 i 1982."
+ },
+ {
+  "q": "Qui va ser Ernest Lluch?",
+  "options": [
+   "Un alcalde de Barcelona",
+   "Un economista ministre, assassinat per ETA el 2000",
+   "Un atleta olímpic",
+   "Un escriptor exiliat a Mèxic"
+  ],
+  "answer": 1,
+  "fact": "La seva casa de Barcelona va ser atacada quan ja havia deixat la primera línia política."
+ },
+ {
+  "q": "Qui va ser Joan Pujol García, conegut amb el nom en clau 'Garbo'?",
+  "options": [
+   "Un agent doble que va enganyar els nazis sobre Normandia",
+   "Un pilot de caça de la Guerra Civil",
+   "Un diplomàtic de l'exili a Londres",
+   "Un periodista de propaganda"
+  ],
+  "answer": 0,
+  "fact": "Tant els Aliats com els alemanys li van concedir una condecoració."
+ },
+ {
+  "q": "En quina ciutat va viure gairebé tres dècades Joan Pujol 'Garbo' retirat de la intel·ligència?",
+  "options": [
+   "Santiago de Xile",
+   "Manila",
+   "Luanda",
+   "Madrid"
+  ],
+  "answer": 2,
+  "fact": "Va ser redescobert pels serveis secrets britànics als anys vuitanta."
+ },
+ {
+  "q": "Qui era Francesc Boix, les fotos del qual van servir de prova als judicis de Nuremberg?",
+  "options": [
+   "Un metge dels camps nazis",
+   "Un fotògraf català supervivent de Mauthausen",
+   "Un polític de l'exili a Mèxic",
+   "Un pilot de la Resistència francesa"
+  ],
+  "answer": 1,
+  "fact": "Va arriscar la vida amagant els negatius de les fotos preses al camp, segons la seva pròpia declaració."
+ },
+ {
+  "q": "Qui va escriure 'La sombra del viento' (2004), èxit mundial de vendes?",
+  "options": [
+   "Ildefonso Falcones",
+   "Carlos Ruiz Zafón",
+   "Arturo Pérez-Reverte",
+   "Juan Marsé"
+  ],
+  "answer": 1,
+  "fact": "Va néixer a Barcelona el 1964 i va morir el 2020."
+ },
+ {
+  "q": "De qui és la novel·la històrica 'La catedral del mar' (2006)?",
+  "options": [
+   "Carlos Ruiz Zafón",
+   "Ken Follett",
+   "Eduardo Mendoza",
+   "Ildefonso Falcones"
+  ],
+  "answer": 3,
+  "fact": "Està ambientada a la Barcelona medieval al voltant de Santa Maria del Mar. És advocat de professió."
+ },
+ {
+  "q": "Qui va ser Josep Maria de Sagarra?",
+  "options": [
+   "Un metge traumatòleg",
+   "Un alcalde de Barcelona",
+   "Un pilot de proves",
+   "Un dramaturg i poeta barceloní"
+  ],
+  "answer": 3,
+  "fact": "Va debutar al teatre amb 'La calandra' el 1931, segons la crítica de l'època."
+ },
+ {
+  "q": "Terenci Moix (1948-2002) va ser conegut com a...",
+  "options": [
+   "Pintor abstracte",
+   "Xef de cuina",
+   "Novel·lista i columnista barceloní",
+   "Arquitecte"
+  ],
+  "answer": 2,
+  "fact": "Va néixer al barri de Gràcia i escrivia en català i en castellà."
+ },
+ {
+  "q": "Qui va escriure la novel·la 'En família' (2008), guardonada amb el Premi Nacional de Narrativa?",
+  "options": [
+   "Joaquim Carbó",
+   "Rafel Nadal",
+   "Albert Sánchez Piñol",
+   "Màrius Serra"
+  ],
+  "answer": 3,
+  "fact": "És fill de l'escriptora Maria Aurèlia Capmany."
+ },
+ {
+  "q": "A quin grup artístic fundat el 1948 va pertànyer el pintor Modest Cuixart?",
+  "options": [
+   "Dau al Set",
+   "Grupo El Paso",
+   "Equipo Crónica",
+   "Estampa Popular"
+  ],
+  "answer": 0,
+  "fact": "Va néixer a Barcelona el 1925 i va exposar arreu del món."
+ },
+ {
+  "q": "Qui va ser Joaquim Maria Puyal?",
+  "options": [
+   "Un reputat narrador esportiu de futbol",
+   "Un entrenador de bàsquet",
+   "Un ciclista professional",
+   "Un àrbitre de bàsquet"
+  ],
+  "answer": 0,
+  "fact": "Va néixer a Tarragona el 1949 i es va retirar el 2015. Va morir el 2023."
+ },
+ {
+  "q": "Pere Quart és el nom de ploma de quin escriptor?",
+  "options": [
+   "Josep Carner",
+   "Salvador Espriu",
+   "Miquel Martí i Pol",
+   "Joan Oliver"
+  ],
+  "answer": 3,
+  "fact": "Va néixer a Sabadell el 1899 i va morir el 1986."
+ },
+ {
+  "q": "Quin presentador ha batut rècords d'actuacions consecutives al concurs 'Saber y Ganar'?",
+  "options": [
+   "Jordi Hurtado",
+   "Jordi Évole",
+   "Ramón García",
+   "Andreu Buenafuente"
+  ],
+  "answer": 0,
+  "fact": "El programa, emès des del 1996, és un dels més llargs de la televisió espanyola."
+ },
+ {
+  "q": "Jordi Évole és conegut per presentar...",
+  "options": [
+   "Un concurs de cuina",
+   "Un magazine esportiu nocturn",
+   "El programa de periodisme 'Salvados'",
+   "Un concurs musical"
+  ],
+  "answer": 2,
+  "fact": "Va començar a la televisió pública com a reporter d'informatius."
+ },
+ {
+  "q": "Qui va representar Espanya al Festival d'Eurovisió 2019 amb 'La venda'?",
+  "options": [
+   "Rosa López",
+   "Miki Núñez",
+   "David Bisbal",
+   "Manu Tenorio"
+  ],
+  "answer": 1,
+  "fact": "Va guanyar el concurs 'Operación Triunfo' 2018. Va néixer a Terrassa."
+ },
+ {
+  "q": "Quina invenció de Narcís Monturiol es va provar al port de Barcelona?",
+  "options": [
+   "Un automòbil elèctric",
+   "Un vaixell de vapor transatlàntic",
+   "Un submarí anomenat Ictíneo",
+   "Un globus direccional"
+  ],
+  "answer": 2,
+  "fact": "Era natural de Cambrils i va combinar la ciència amb la política a Barcelona."
+ },
+ {
+  "q": "A qui se'l considera el pare de la meteorologia catalana?",
+  "options": [
+   "Eduard Fontserè",
+   "Esteve Terradas",
+   "Ildefons Cerdà",
+   "Pere Bosch i Gimpera"
+  ],
+  "answer": 0,
+  "fact": "Va crear el Servei Meteorològic de Catalunya el 1921, depenent de la Mancomunitat."
+ },
+ {
+  "q": "Pere Bosch i Gimpera va ser un prehistoriador que, en acabar la Guerra Civil, es va exiliar a...",
+  "options": [
+   "l'Argentina",
+   "el Regne Unit",
+   "Suïssa",
+   "Mèxic"
+  ],
+  "answer": 3,
+  "fact": "Va ser president de la Generalitat de Catalunya a l'exili."
+ },
+ {
+  "q": "Qui era Joan Solà?",
+  "options": [
+   "Un filòleg i gramàtic",
+   "Un cantautor",
+   "Un arquitecte",
+   "Un alpinista"
+  ],
+  "answer": 0,
+  "fact": "Va néixer a l'Hostalric el 1938 i va morir el 2010."
+ },
+ {
+  "q": "Qui va ser Josep Benet, autor de 'Maragall i la Setmana Tràgica'?",
+  "options": [
+   "Un metge esportiu",
+   "Un historiador i senador",
+   "Un enginyer naval",
+   "Un actor de teatre"
+  ],
+  "answer": 1,
+  "fact": "Va ser senador des de 1979."
+ },
+ {
+  "q": "Qui era Salvador Puig Antich?",
+  "options": [
+   "Un jove anarquista executat pel franquisme el 1974",
+   "Un polític de la transició",
+   "Un sindicalista de CCOO",
+   "Un futbolista barceloní"
+  ],
+  "answer": 0,
+  "fact": "La seva execució va generar protestes internacionals. Va ser l'última persona executada amb el garrot vil a Catalunya."
+ },
+ {
+  "q": "Salvador Seguí, líder sindicalista barceloní assassinat el 1923, era conegut com...",
+  "options": [
+   "el Noi de la Fare",
+   "l'Avi de la Revolució",
+   "el Noi del Sucre",
+   "el Lleó de Barcelona"
+  ],
+  "answer": 2,
+  "fact": "Va ser un dels líders anarcosindicalistes més influents de la Barcelona de principis de segle."
+ },
+ {
+  "q": "Qui era Francesc Layret?",
+  "options": [
+   "Un metge de Mauthausen",
+   "Un compositor d'himnes",
+   "Un alcalde de Sabadell",
+   "Un advocat laboralista barceloní assassinat el 1921"
+  ],
+  "answer": 3,
+  "fact": "Defensava els treballadors organitzats a la CNT i va morir per trets de pistolers contractats per patrons."
+ },
+ {
+  "q": "Com era Cobi, la mascota oficial dels Jocs Olímpics de Barcelona 92?",
+  "options": [
+   "Un drac",
+   "Un goset d'estil cubista",
+   "Un casteller",
+   "Una pilota"
+  ],
+  "answer": 1,
+  "fact": "El va dissenyar el grafista valencià Javier Mariscal."
+ },
+ {
+  "q": "Qui va ser l'arquitecte i urbanista clau de la transformació de Barcelona per als Jocs del 92?",
+  "options": [
+   "Oriol Bohigas",
+   "Ricard Bofill",
+   "Santiago Calatrava",
+   "Norman Foster"
+  ],
+  "answer": 0,
+  "fact": "Va ser tinent d'alcalde d'Urbanisme de Barcelona."
+ },
+ {
+  "q": "En quin any van les Corts espanyoles el primer Estatut d'autonomia de Catalunya?",
+  "options": [
+   "1921",
+   "1932",
+   "1940",
+   "1956"
+  ],
+  "answer": 1,
+  "fact": "Havia estat aprovat prèviament en referèndum pels catalans."
+ },
+ {
+  "q": "El segon Estatut d'autonomia de Catalunya va ser aprovat en referèndum l'any...",
+  "options": [
+   "1977",
+   "1982",
+   "1979",
+   "1975"
+  ],
+  "answer": 2,
+  "fact": "Aquell mateix any es va restaurar la Generalitat."
+ },
+ {
+  "q": "Quin lema va encapçalar la massiva manifestació de la Diada de l'11 de setembre de 1977 a Barcelona?",
+  "options": [
+   "Pa, terra i teulat",
+   "Llibertat, amnistia, Estatut d'autonomia",
+   "Catalunya lliure dels nazis",
+   "Ordre i progrés per a tothom"
+  ],
+  "answer": 1,
+  "fact": "Va ser una de les manifestacions més nombroses de la Transició a Catalunya."
+ },
+ {
+  "q": "Què era l'Assemblea de Catalunya, constituïda el 1971?",
+  "options": [
+   "Un sindicat vertical del règim",
+   "Un partit polític d'àmbit estatal",
+   "Una plataforma unitària d'oposició al franquisme",
+   "Una associació cultural autoritzada"
+  ],
+  "answer": 2,
+  "fact": "La seva primera reunió es va fer a l'església de Sant Agustí de Barcelona."
+ },
+ {
+  "q": "Què va patir el Gran Teatre del Liceu de Barcelona la nit del 31 de gener de 1994?",
+  "options": [
+   "Una inundació de la sala",
+   "Un enfonsament de l'escenari",
+   "Un incendi que en va cremar la sala",
+   "Un terratrèmol"
+  ],
+  "answer": 2,
+  "fact": "Va ser reconstruït i reobert el 1999."
+ },
+ {
+  "q": "El Camp Nou, inaugurat el 1957, va ser en la seva estrena...",
+  "options": [
+   "El primer estadi cobert del món",
+   "L'estadi de futbol més gran d'Europa",
+   "El primer amb gespa artificial",
+   "El més petit de la Primera Divisió"
+  ],
+  "answer": 1,
+  "fact": "Va ser l'estadi amb més aforament del continent."
+ },
+ {
+  "q": "Com es coneix popularment la talla romànica de la Mare de Déu de Montserrat?",
+  "options": [
+   "la Verge de Núria",
+   "la Verge de Meritxell",
+   "la Verge del Camí",
+   "la Moreneta"
+  ],
+  "answer": 3
+ },
+ {
+  "q": "Quin instrument de vent és la veu solista habitual d'una cobla?",
+  "options": [
+   "La trompeta",
+   "El clarinet",
+   "La tenora",
+   "El saxòfon"
+  ],
+  "answer": 2,
+  "fact": "La tible n’és l’altre instrument solista."
+ },
+ {
+  "q": "Com es diu el que puja primer de tot dalt de tot del castell i alça el braç?",
+  "options": [
+   "L'acotxador",
+   "L'enxaneta",
+   "El crossa",
+   "El pom de dalt"
+  ],
+  "answer": 1,
+  "fact": "Saluda amb la mà abans de baixar pel costat contrari."
+ },
+ {
+  "q": "Quina tradició catalana va ser declarada Patrimoni Cultural Immaterial de la Humanitat per la UNESCO el 2010?",
+  "options": [
+   "La sardana",
+   "Els capgrossos",
+   "Els pastorets",
+   "Els castells"
+  ],
+  "answer": 3,
+  "fact": "La candidatura la van encapçalar les colles castelleres."
+ },
+ {
+  "q": "On es troba el parc temàtic PortAventura?",
+  "options": [
+   "A Salou i Vila-seca",
+   "A Lloret de Mar",
+   "A Roses",
+   "A Cambrils"
+  ],
+  "answer": 0,
+  "fact": "És un dels complexos de lleure més visitats del sud d'Europa."
+ },
+ {
+  "q": "Quin riu desemboca al Mediterrani al sud de l'àrea metropolitana de Barcelona?",
+  "options": [
+   "El Ter",
+   "El Fluvià",
+   "El Llobregat",
+   "La Muga"
+  ],
+  "answer": 2,
+  "fact": "Neix al Ripollès i desemboca entre el Prat de Llobregat i Cubelles."
+ },
+ {
+  "q": "Com es diu la muntanya més alta de Catalunya?",
+  "options": [
+   "La Pica d'Estats",
+   "El Puigmal",
+   "El Canigó",
+   "El Comaloforno"
+  ],
+  "answer": 0,
+  "fact": "Fa 3.143 metres i marca la frontera amb França."
+ }
+]
