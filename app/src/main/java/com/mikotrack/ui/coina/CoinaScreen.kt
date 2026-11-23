@@ -157,6 +157,7 @@ fun CoinaDetailScreen(
     val all by viewModel.recipes.collectAsStateWithLifecycle()
     val recipe = all?.firstOrNull { it.id == recipeId }
     val context = LocalContext.current
+    LaunchedEffect(Unit) { viewModel.load(java.util.Locale.getDefault().language) }
 
     Scaffold(
         topBar = {
@@ -186,7 +187,9 @@ fun CoinaDetailScreen(
             ) {
                 Spacer(Modifier.height(48.dp))
                 Text(
-                    text = stringResource(R.string.coina_loading),
+                    text = stringResource(
+                        if (all == null) R.string.coina_loading else R.string.coina_empty,
+                    ),
                     style = MaterialTheme.typography.bodyMedium,
                 )
             }
