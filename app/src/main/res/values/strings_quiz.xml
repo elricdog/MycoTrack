@@ -68,7 +68,7 @@
 
     <!-- voice play -->
     <string name="quiz_auto_next">Automatic next question</string>
-    <string name="quiz_auto_next_hint">After each answer, the "next" button is pressed by itself five seconds later.</string>
+    <string name="quiz_auto_next_hint">After each answer — hit or miss — the "next" button shows a shrinking bar and presses itself five seconds later, also in voice mode.</string>
     <string name="quiz_correct_answer">The correct answer was: %1$s</string>
     <string name="quiz_voice_mode">Play by voice</string>
     <string name="quiz_voice_hint">The app reads the questions aloud and listens to your answers: you can play without touching the phone. Say the option number or the answer name, "repeat" to hear the question again, or "stop" to leave the game.</string>

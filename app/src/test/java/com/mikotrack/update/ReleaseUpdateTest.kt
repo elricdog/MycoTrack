@@ -97,6 +97,41 @@ class ReleaseUpdateTest {
         )
     }
 
+    @Test
+    fun `the Atom feed of releases yields the newest tag`() {
+        val feed = """
+            <?xml version="1.0" encoding="UTF-8"?>
+            <feed xmlns="http://www.w3.org/2005/Atom">
+              <entry>
+                <id>tag:github.com,2008:https://github.com/elricdog/MycoTrack/releases/tag/v1.9.9</id>
+                <link type="text/html" rel="edit" href="https://github.com/elricdog/MycoTrack/releases/tag/v1.9.9"/>
+                <title>MycoTrack v1.9.9 — test</title>
+                <updated>2026-11-21T17:31:31Z</updated>
+              </entry>
+              <entry>
+                <id>tag:github.com,2008:https://github.com/elricdog/MycoTrack/releases/tag/v1.0.0</id>
+                <title>older</title>
+              </entry>
+            </feed>
+        """.trimIndent()
+        assertEquals("v1.9.9", parseLatestTagFromFeed(feed))
+        assertNull(parseLatestTagFromFeed("<feed>no releases</feed>"))
+    }
+
+    @Test
+    fun `a synthetic release from a tag offers the standard apks`() {
+        val release = syntheticReleaseFromTag("v1.9.9")
+        assertEquals("1.9.9", releaseVersion(release.tagName))
+        val arm = pickApkAsset(release.assets, listOf("arm64-v8a"))
+        assertEquals("app-arm64-v8a-release.apk", arm?.name)
+        assertEquals(
+            "https://github.com/elricdog/MycoTrack/releases/download/v1.9.9/app-arm64-v8a-release.apk",
+            arm?.downloadUrl,
+        )
+        val universal = pickApkAsset(release.assets, listOf("riscv64"))
+        assertEquals("app-universal-release.apk", universal?.name)
+    }
+
     private fun apkAssets() = listOf(
         "arm64-v8a",
         "armeabi-v7a",

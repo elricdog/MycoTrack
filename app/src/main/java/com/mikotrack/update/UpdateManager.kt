@@ -91,7 +91,7 @@ class UpdateManager(
             }
             _state.value = State.Checking
             try {
-                val release = fetchLatestRelease()
+                val release = fetchLatestReleaseResilient()
                 val checkedAt = System.currentTimeMillis()
                 // Only a silent check records the daily slot: a manual check from the
                 // settings must not silence the offers on the following starts.
@@ -200,6 +200,20 @@ class UpdateManager(
     /** GETs the latest release from the GitHub API. */
     private fun fetchLatestRelease(): GitHubRelease =
         json.decodeFromString(GitHubRelease.serializer(), httpGet(LATEST_RELEASE_URL))
+
+    /**
+     * The latest release, preferring the GitHub API (full notes and sizes) and falling
+     * back to the Atom feed of releases when the API fails. The unauthenticated API is
+     * rate limited per IP, and mobile networks share IPs, so a check on start often
+     * hits a quota exhausted by strangers; the feed has no such quota.
+     */
+    private fun fetchLatestReleaseResilient(): GitHubRelease = try {
+        fetchLatestRelease()
+    } catch (e: Exception) {
+        val tag = parseLatestTagFromFeed(httpGet(LATEST_RELEASE_FEED_URL))
+            ?: throw NoAssetException()
+        syntheticReleaseFromTag(tag)
+    }
 
     /**
      * GETs every published release, newest first, for the changelog. Drafts are dropped;

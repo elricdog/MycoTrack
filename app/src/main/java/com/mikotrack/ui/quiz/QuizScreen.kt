@@ -7,10 +7,14 @@ import android.speech.RecognizerIntent
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -27,6 +31,7 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
@@ -40,6 +45,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
@@ -55,6 +61,9 @@ import com.mikotrack.data.prefs.QuizScore
 import java.text.DateFormat
 import java.util.Date
 import java.util.Locale
+
+/** Milliseconds the feedback stays on screen before the auto "next" fires. */
+private const val AUTO_ADVANCE_MILLIS = 5_000
 
 /** The four-option trivia game about mushrooms and the mushroom world. */
 @Composable
@@ -106,18 +115,10 @@ fun QuizScreen(viewModel: QuizViewModel) {
         }
     }
 
-    // Auto-advance: press "next" five seconds after each feedback, unless the
-    // run is played by voice (the speech itself drives the pace then).
-    LaunchedEffect(state.phase, state.questionNumber, autoAdvance, voiceMode) {
-        if (
-            autoAdvance &&
-            !(voiceMode && voiceAvailable) &&
-            state.phase == QuizPhase.FEEDBACK
-        ) {
-            kotlinx.coroutines.delay(5_000)
-            viewModel.next()
-        }
-    }
+    // Auto-advance is driven inside the play content, where the "next" button
+    // shows the shrinking countdown bar. It runs in voice play as well: the five
+    // seconds give time to read the revealed correct answer, and the next
+    // question's speech simply starts as soon as "next" fires.
 
     Column(
         modifier = Modifier
@@ -147,6 +148,7 @@ fun QuizScreen(viewModel: QuizViewModel) {
             QuizPhase.PLAYING, QuizPhase.FEEDBACK -> QuizPlayContent(
                 state = state,
                 listening = listenRequest?.kind == QuizListenKind.ANSWER,
+                autoAdvance = autoAdvance,
                 onAnswer = viewModel::answer,
                 onNext = {
                     // Tapping while the recognizer is open ends that listening.
@@ -331,12 +333,25 @@ private fun QuizRankingRow(index: Int, entry: QuizScore) {
 private fun QuizPlayContent(
     state: QuizUiState,
     listening: Boolean,
+    autoAdvance: Boolean,
     onAnswer: (Int) -> Unit,
     onNext: () -> Unit,
     onQuit: () -> Unit,
 ) {
     val question = state.question ?: return
     val feedback = state.phase == QuizPhase.FEEDBACK
+
+    // Auto-advance countdown: the bar shrinks over five seconds of feedback and
+    // the button presses itself at zero. It runs in voice play as well.
+    val countdown = remember { Animatable(1f) }
+    LaunchedEffect(state.phase, state.questionNumber, autoAdvance) {
+        if (autoAdvance && state.phase == QuizPhase.FEEDBACK) {
+            countdown.snapTo(1f)
+            countdown.animateTo(0f, tween(AUTO_ADVANCE_MILLIS))
+            onNext()
+        }
+    }
+    val showCountdown = autoAdvance && feedback
 
     Row(
         modifier = Modifier.fillMaxWidth(),
@@ -460,21 +475,45 @@ private fun QuizPlayContent(
             }
         }
         Spacer(Modifier.height(8.dp))
-        Button(
-            onClick = onNext,
-            shape = RoundedCornerShape(14.dp),
+        Box(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(52.dp),
         ) {
-            Text(
-                text = if (state.lives <= 0) {
-                    stringResource(R.string.quiz_game_over)
-                } else {
-                    stringResource(R.string.quiz_next) + " ➡"
-                },
-                style = MaterialTheme.typography.titleMedium,
-            )
+            Button(
+                onClick = onNext,
+                shape = RoundedCornerShape(14.dp),
+                colors = ButtonDefaults.buttonColors(
+                    // Keep the bar legible on the button's own container.
+                    containerColor = MaterialTheme.colorScheme.primary,
+                ),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .fillMaxHeight(),
+            ) {
+                Text(
+                    text = if (state.lives <= 0) {
+                        stringResource(R.string.quiz_game_over)
+                    } else {
+                        stringResource(R.string.quiz_next) + " ➡"
+                    },
+                    style = MaterialTheme.typography.titleMedium,
+                )
+            }
+            if (showCountdown) {
+                // The shrinking bar rides the bottom edge of the button itself.
+                LinearProgressIndicator(
+                    progress = { countdown.value },
+                    modifier = Modifier
+                        .align(Alignment.BottomCenter)
+                        .fillMaxWidth(),
+                    color = MaterialTheme.colorScheme.tertiary,
+                    trackColor = MaterialTheme.colorScheme.primary.copy(alpha = 0.35f),
+                    strokeCap = StrokeCap.Round,
+                    gapSize = 2.dp,
+                    drawStopIndicator = {},
+                )
+            }
         }
     }
 }

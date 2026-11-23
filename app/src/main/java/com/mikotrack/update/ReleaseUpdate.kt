@@ -23,6 +23,41 @@ const val LATEST_RELEASE_URL = "https://api.github.com/repos/$UPDATE_REPO/releas
 /** The GitHub API endpoint listing the published releases, newest first. */
 const val RELEASES_URL = "https://api.github.com/repos/$UPDATE_REPO/releases?per_page=30"
 
+/**
+ * The Atom feed of published releases, newest first. It lives outside the GitHub API,
+ * so it is not subject to the API quota, which shared mobile IPs exhaust often.
+ */
+const val LATEST_RELEASE_FEED_URL = "https://github.com/$UPDATE_REPO/releases.atom"
+
+/** The tag of the newest release in an Atom feed (the first entry), null when absent. */
+fun parseLatestTagFromFeed(feed: String): String? =
+    Regex("releases/tag/([^\"<>\\s]+)").find(feed)?.groupValues?.get(1)?.takeIf { it.isNotBlank() }
+
+/** The APK file names every release publishes, used to rebuild the download links. */
+private val RELEASE_APK_NAMES = listOf(
+    "app-arm64-v8a-release.apk",
+    "app-armeabi-v7a-release.apk",
+    "app-x86-release.apk",
+    "app-x86_64-release.apk",
+    "app-universal-release.apk",
+)
+
+/**
+ * A release built from a tag alone, for the Atom feed fallback: the notes and the file
+ * sizes are unknown, but the tag and the standard download links are enough to offer
+ * the update.
+ */
+fun syntheticReleaseFromTag(tag: String): GitHubRelease = GitHubRelease(
+    tagName = tag,
+    name = tag,
+    assets = RELEASE_APK_NAMES.map {
+        ReleaseAsset(
+            name = it,
+            downloadUrl = "https://github.com/$UPDATE_REPO/releases/download/$tag/$it",
+        )
+    },
+)
+
 /** One downloadable file attached to a GitHub release. */
 @Serializable
 data class ReleaseAsset(

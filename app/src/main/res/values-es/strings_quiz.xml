@@ -67,7 +67,7 @@
     <string name="quiz_cat_figures">🎭 Personajes catalanes</string>
 
     <string name="quiz_auto_next">Siguiente pregunta automática</string>
-    <string name="quiz_auto_next_hint">Tras cada respuesta, el botón "siguiente" se pulsa solo cinco segundos después.</string>
+    <string name="quiz_auto_next_hint">Tras cada respuesta —acierto o fallo— el botón "siguiente" muestra una barra decreciente y se pulsa solo cinco segundos después, también en modo de voz.</string>
     <string name="quiz_correct_answer">La respuesta correcta era: %1$s</string>
 
     <!-- juego por voz -->
