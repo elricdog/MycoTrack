@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_coina">Cocina</string>
+    <string name="coina_title">Cocina micológica</string>
+    <string name="coina_tagline">Platos típicos para cocinar lo que da el bosque</string>
+    <string name="coina_search_hint">Busca un plato o un ingrediente…</string>
+    <string name="coina_loading">Abriendo el libro de recetas…</string>
+    <string name="coina_empty">Ningún plato coincide con la búsqueda.</string>
+    <string name="coina_back">Volver a las recetas</string>
+    <string name="coina_card_meta">%1$d min · para %2$d</string>
+    <string name="coina_history">Historia</string>
+    <string name="coina_ingredients">Ingredientes</string>
+    <string name="coina_steps">Pasos</string>
+    <string name="coina_links">Aprende a hacerlo, en internet</string>
+    <string name="coina_credit">Foto: %1$s · %2$s (Wikimedia Commons)</string>
+    <string name="coina_source">Fuente de la fotografía: %1$s</string>
+    <string name="coina_note">Las recetas están escritas en catalán.</string>
+    <plurals name="coina_minutes">
+        <item quantity="one">%d minuto</item>
+        <item quantity="other">%d minutos</item>
+    </plurals>
+    <plurals name="coina_servings">
+        <item quantity="one">%d persona</item>
+        <item quantity="other">%d personas</item>
+    </plurals>
+</resources>

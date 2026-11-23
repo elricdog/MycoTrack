@@ -1,0 +1,12 @@
+Add Cuina recipe section and scrollable bottom bar (v1.6.0)
+
+- New bottom-bar tab Cuina (between Bolets and Settings) with a searchable
+  list of 10 typical Catalan mushroom dishes and a full recipe detail view:
+  photo with Wikimedia Commons credit, history, ingredients, numbered steps,
+  time and servings, and external links (YouTube searches, articles).
+- Recipe bank curated in Catalan in app/src/main/assets/coina with 10 photos.
+- Bottom navigation bar now scrolls horizontally to fit all sections.
+- Strings in English, Catalan and Spanish; CoinaTest validates the bank.
+- Bump versionCode 28 / versionName 1.6.0; README feature rows updated.
+
+Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>

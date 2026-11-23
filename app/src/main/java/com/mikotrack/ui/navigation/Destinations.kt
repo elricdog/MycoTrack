@@ -7,6 +7,7 @@ import androidx.compose.material.icons.filled.PhotoLibrary
 import androidx.compose.material.icons.filled.Quiz
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Spa
+import androidx.compose.material.icons.filled.Restaurant
 import androidx.annotation.StringRes
 import androidx.compose.ui.graphics.vector.ImageVector
 import com.mikotrack.R
@@ -22,6 +23,7 @@ enum class TopLevelDestination(
     GALLERY("gallery", R.string.nav_gallery, Icons.Filled.PhotoLibrary),
     QUIZ("quiz", R.string.nav_quiz, Icons.Filled.Quiz),
     MUSHROOMS("mushrooms", R.string.nav_mushrooms, Icons.Filled.Spa),
+    COINA("coina", R.string.nav_coina, Icons.Filled.Restaurant),
     SETTINGS("settings", R.string.nav_settings, Icons.Filled.Settings),
 }
 
@@ -43,6 +45,12 @@ object Routes {
 
     /** Builds the route that opens the detail of a species of the mushroom guide. */
     fun mushroomDetail(id: String): String = "mushroom/$id"
+
+    /** The detail of one recipe of the kitchen section. */
+    const val RECIPE_DETAIL = "recipe/{id}"
+
+    /** Builds the route that opens one recipe of the kitchen section. */
+    fun recipeDetail(id: String): String = "recipe/$id"
 
     /** The easter egg games hub, unlocked from the About section of the settings. */
     const val GAMES = "games"

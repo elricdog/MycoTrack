@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_coina">Cuina</string>
+    <string name="coina_title">Cuina boletaire</string>
+    <string name="coina_tagline">Plats típics per cuinar el que dona el bosc</string>
+    <string name="coina_search_hint">Cerca un plat o un ingredient…</string>
+    <string name="coina_loading">Obrint el llibre de receptes…</string>
+    <string name="coina_empty">Cap plat no coincideix amb la cerca.</string>
+    <string name="coina_back">Torna a les receptes</string>
+    <string name="coina_card_meta">%1$d min · en menja %2$d</string>
+    <string name="coina_history">Història</string>
+    <string name="coina_ingredients">Ingredients</string>
+    <string name="coina_steps">Passos</string>
+    <string name="coina_links">Aprèn a fer-lo, a internet</string>
+    <string name="coina_credit">Foto: %1$s · %2$s (Wikimedia Commons)</string>
+    <string name="coina_source">Font de la fotografia: %1$s</string>
+    <string name="coina_note">Les receptes estan escrites en català.</string>
+    <plurals name="coina_minutes">
+        <item quantity="one">%d minut</item>
+        <item quantity="other">%d minuts</item>
+    </plurals>
+    <plurals name="coina_servings">
+        <item quantity="one">%d persona</item>
+        <item quantity="other">%d persones</item>
+    </plurals>
+</resources>

@@ -1,8 +1,11 @@
 package com.mikotrack.ui.navigation
 
 import androidx.compose.ui.res.stringResource
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
@@ -26,6 +29,9 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import androidx.navigation.NavType
 import com.mikotrack.core.AppContainer
+import com.mikotrack.ui.coina.CoinaDetailScreen
+import com.mikotrack.ui.coina.CoinaScreen
+import com.mikotrack.ui.coina.CoinaViewModel
 import com.mikotrack.ui.diagnostics.DiagnosticsScreen
 import com.mikotrack.ui.diagnostics.DiagnosticsViewModel
 import com.mikotrack.ui.games.ArkanoidScreen
@@ -82,6 +88,7 @@ fun MycoTrackNavHost(
         Routes.TRIP_DETAIL -> TopLevelDestination.HISTORY
         Routes.DIAGNOSTICS -> TopLevelDestination.MAP
         Routes.MUSHROOM_DETAIL -> TopLevelDestination.MUSHROOMS
+        Routes.RECIPE_DETAIL -> TopLevelDestination.COINA
         Routes.GAMES, Routes.GAME -> TopLevelDestination.SETTINGS
         else -> TopLevelDestination.entries.firstOrNull { it.route == currentRoute }
     }
@@ -112,34 +119,38 @@ fun MycoTrackNavHost(
         contentWindowInsets = WindowInsets(0, 0, 0, 0),
         bottomBar = {
             NavigationBar {
-                TopLevelDestination.entries.forEach { destination ->
-                    NavigationBarItem(
-                        selected = selectedTab == destination,
-                        onClick = {
-                            if (selectedTab == destination) {
-                                // Tapping the current section goes back to its first
-                                // screen, e.g. from a trip to the list of trips.
-                                navController.popBackStack(destination.route, inclusive = false)
-                                return@NavigationBarItem
-                            }
-                            navController.navigate(destination.route) {
-                                popUpTo(navController.graph.findStartDestination().id) {
-                                    saveState = true
+                // The bar holds many sections, so it scrolls horizontally when they
+                // no longer fit across the width of the screen.
+                Row(modifier = Modifier.horizontalScroll(rememberScrollState())) {
+                    TopLevelDestination.entries.forEach { destination ->
+                        NavigationBarItem(
+                            selected = selectedTab == destination,
+                            onClick = {
+                                if (selectedTab == destination) {
+                                    // Tapping the current section goes back to its first
+                                    // screen, e.g. from a trip to the list of trips.
+                                    navController.popBackStack(destination.route, inclusive = false)
+                                    return@NavigationBarItem
                                 }
-                                launchSingleTop = true
-                                restoreState = true
-                            }
-                        },
-                        icon = { Icon(destination.icon, contentDescription = stringResource(destination.labelRes)) },
-                        // Six sections share the bar, so a long label is cut instead of wrapping.
-                        label = {
-                            Text(
-                                text = stringResource(destination.labelRes),
-                                maxLines = 1,
-                                overflow = TextOverflow.Ellipsis,
-                            )
-                        },
-                    )
+                                navController.navigate(destination.route) {
+                                    popUpTo(navController.graph.findStartDestination().id) {
+                                        saveState = true
+                                    }
+                                    launchSingleTop = true
+                                    restoreState = true
+                                }
+                            },
+                            icon = { Icon(destination.icon, contentDescription = stringResource(destination.labelRes)) },
+                            // Long labels are cut instead of wrapping, so each item stays compact.
+                            label = {
+                                Text(
+                                    text = stringResource(destination.labelRes),
+                                    maxLines = 1,
+                                    overflow = TextOverflow.Ellipsis,
+                                )
+                            },
+                        )
+                    }
                 }
             }
         },
@@ -253,6 +264,36 @@ fun MycoTrackNavHost(
                     onBack = {
                         if (!navController.popBackStack(TopLevelDestination.MUSHROOMS.route, inclusive = false)) {
                             navController.navigate(TopLevelDestination.MUSHROOMS.route)
+                        }
+                    },
+                )
+            }
+
+            composable(TopLevelDestination.COINA.route) {
+                val appContext = LocalContext.current.applicationContext
+                val viewModel: CoinaViewModel = containerViewModel(container) {
+                    CoinaViewModel(appContext as android.app.Application)
+                }
+                CoinaScreen(
+                    viewModel = viewModel,
+                    onOpenRecipe = { id -> navController.navigate(Routes.recipeDetail(id)) },
+                )
+            }
+
+            composable(
+                route = Routes.RECIPE_DETAIL,
+                arguments = listOf(navArgument("id") { type = NavType.StringType }),
+            ) { entry ->
+                val appContext = LocalContext.current.applicationContext
+                val viewModel: CoinaViewModel = containerViewModel(container) {
+                    CoinaViewModel(appContext as android.app.Application)
+                }
+                CoinaDetailScreen(
+                    viewModel = viewModel,
+                    recipeId = entry.arguments?.getString("id").orEmpty(),
+                    onBack = {
+                        if (!navController.popBackStack(TopLevelDestination.COINA.route, inclusive = false)) {
+                            navController.navigate(TopLevelDestination.COINA.route)
                         }
                     },
                 )

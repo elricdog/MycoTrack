@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_coina">Kitchen</string>
+    <string name="coina_title">Mushroom kitchen</string>
+    <string name="coina_tagline">Typical dishes to cook with what the forest gives you</string>
+    <string name="coina_search_hint">Search a dish or an ingredient…</string>
+    <string name="coina_loading">Opening the recipe book…</string>
+    <string name="coina_empty">No dish matches this search.</string>
+    <string name="coina_back">Back to the recipes</string>
+    <string name="coina_card_meta">%1$d min · serves %2$d</string>
+    <string name="coina_history">History</string>
+    <string name="coina_ingredients">Ingredients</string>
+    <string name="coina_steps">Steps</string>
+    <string name="coina_links">Learn how, online</string>
+    <string name="coina_credit">Photo: %1$s · %2$s (Wikimedia Commons)</string>
+    <string name="coina_source">Photograph source: %1$s</string>
+    <string name="coina_note">The recipes are written in Catalan.</string>
+    <plurals name="coina_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="coina_servings">
+        <item quantity="one">%d person</item>
+        <item quantity="other">%d people</item>
+    </plurals>
+</resources>
