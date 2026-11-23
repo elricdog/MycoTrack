@@ -218,7 +218,7 @@
   "image": "sopa.jpg",
   "timeMin": 40,
   "servings": 6,
-  "history": "La sopa de bolets escalfa les tardors humides de l'interior. És el plat del aprofitament: les peus de rata, els ceps trencats i les puntes dels camagrocs, tot el que no llueix al plat, dona la més profunda brou de bosc.",
+  "history": "La sopa de bolets escalfa les tardors humides de l'interior. Es el plat del aprofitament: les peus de rata, els ceps trencats i les puntes dels camagrocs, tot el que no llueix al plat, dona la més profunda brou de bosc.",
   "ingredients": [
    "600 g de bolets variats",
    "1 porro",
@@ -261,7 +261,7 @@
   "image": "bolets.jpg",
   "timeMin": 15,
   "servings": 2,
-  "history": "La forma més pura de menjar bolet: el cep gran, tallat a llesques de dit, passa per la planxa calenta i res més. És el plat de referència dels restaurants de muntanya a la tardor i la manera més honesta d'homenatjar un bolet bo.",
+  "history": "La forma més pura de menjar bolet: el cep gran, tallat a llesques de dit, passa per la planxa calenta i res mes. Es el plat de referència dels restaurants de muntanya a la tardor i la manera més honesta d'homenatjar un bolet bo.",
   "ingredients": [
    "2 ceps grossos o 4 rovellons",
    "Oli d'oliva verge extra",
@@ -316,7 +316,7 @@
    "Posa les carns a olla amb aigua freda, escuma bé quan arrenca el bull i baixa el foc.",
    "Deixa bullir fluix una hora i mitja; afegeix la verdura sencera.",
    "Hidrata els bolets secs en aigua tèbia mitja hora i afegeix-los amb la seva aigua colada.",
-   "Mitja hora més, treu les carns i cuela el brou.",
+   "Mitja hora mes, treu les carns i cuela el brou.",
    "Fes els galets al brou (reserva'n part per a l'olla).",
    "Serviu la sopa d'entrada i la carn a part, la clàssica escudella de dos passos."
   ],
@@ -359,7 +359,7 @@
    "Sofregiu la ceba i els bolets picats fins que quedin secs; reserveu.",
    "Fongueu la mantega: escalfa la mantega, afegeix la farina i cou dos minuts.",
    "Tireu la llet bullent sense parar de remenar fins que espesseeixi.",
-   "Afegiu els bolets sofregits, sal i nou moscada; cou 5 minuts més.",
+   "Afegiu els bolets sofregits, sal i nou moscada; cou 5 minuts mes.",
    "Esteneu la pasta en una safata amb film i refredeu-la tota la nit.",
    "Forma les croquetes, passa-les per ou batut i pa ratllat.",
    "Fregiu-les en oli abundant ben calent i escorre-les sobre paper."
@@ -421,6 +421,433 @@
    "licence": "CC BY-SA 4.0",
    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Canelones.jpg"
+  }
+ },
+ {
+  "id": "risotto_cep",
+  "name": "Risotto de cep",
+  "emoji": "🍚",
+  "image": "risotto.jpg",
+  "timeMin": 40,
+  "servings": 4,
+  "history": "El risotto és d'origen italià, però el cep (Boletus edulis) abunda als boscos de Catalunya i el plat s'hi ha arrelat com a gran festa de tardor. El gra d'arròs cremós, mantegat al final, recull com cap altre l'aroma de bosc del cep, el bolet més preuat de la llista.",
+  "ingredients": [
+   "320 g d'arròs arborio o carnaroli",
+   "400 g de ceps nets a dausos",
+   "1 ceba picada fina",
+   "1 got de vi blanc",
+   "1,5 l de brou de verdura calent",
+   "50 g de mantega",
+   "50 g de formatge parmesà ratllat",
+   "Oli d'oliva, sal i pebre"
+  ],
+  "steps": [
+   "Fongueu mitja mantega en una cassola ampla i sofregiu la ceba a foc suau fins que sigui transparent.",
+   "Pugeu el foc, afegiu els ceps i salteja'ls uns minuts fins que daurin; saleu-los.",
+   "Abocau-hi l'arròs i torreu-lo dos minuts, remenant, fins que els grans es tornin translúcids pels cantons.",
+   "Mulliu amb el vi blanc i deixeu-lo evaporar remenant sense parar.",
+   "Afegiu el brou calent cullerada a cullerada, esperant que s'absorbeixi abans de la següent, durant uns 18 minuts.",
+   "Quan l'arròs sigui al dente i cremós, retireu del foc, afegiu la mantega restant i el parmesà, i remeneu bé.",
+   "Deixeu-lo reposar dos minuts tapat i serviu-lo ben calent, amb un cep laminat cru a sobre si escau."
+  ],
+  "links": [
+   {
+    "label": "Videos de risotto de cep",
+    "url": "https://www.youtube.com/results?search_query=risotto+de+cep+boletus"
+   },
+   {
+    "label": "El risotto a la Viquipedia",
+    "url": "https://ca.wikipedia.org/wiki/Risotto"
+   },
+   {
+    "label": "El cep a la Viquipedia",
+    "url": "https://ca.wikipedia.org/wiki/Boletus_edulis"
+   }
+  ],
+  "credit": {
+   "author": "Rainer Zenz assumed",
+   "licence": "CC BY-SA 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Steinpilzrisotto.jpg"
+  }
+ },
+ {
+  "id": "fideua_bolets",
+  "name": "Fideuà amb bolets",
+  "emoji": "🥘",
+  "image": "fideua.jpg",
+  "timeMin": 60,
+  "servings": 4,
+  "history": "La fideuà va néixer a Gandia com a germana marinera de la paella, amb fideus secs en lloc d'arròs. Portada a l'interior, la variant de bosc substitueix el marisc per bolets de temporada i es fa, a les comarques de muntanya, un arrossegament de llar de foc tan apreciat com l'arròs.",
+  "ingredients": [
+   "400 g de fideus del número 4",
+   "500 g de barreja de bolets de temporada",
+   "1 ceba i 1 bitjo vermell",
+   "2 tomàquets madurs ratllats",
+   "1,2 l de brou de pollastre calent",
+   "1 nyora remullada",
+   "Oli d'oliva, sal i all i julivert"
+  ],
+  "steps": [
+   "Sofregiu la ceba i el bitjo picats a la paella amb bon oli, a foc lent.",
+   "Afegiu els bolets a dausos mitjans i saltegeu-los a foc viu fins que deixin l'aigua i comencin a daurar.",
+   "Inclopou el tomàquet ratllat i la nyora picada, i deixeu el sofregit reduir deu minuts.",
+   "Talleu els fideus per la meitat amb les mans i torreu-los dos minuts amb el sofregit.",
+   "Abocau el brou bullint, repartiu els fideus i coueu a foc mitjà uns 8 minuts.",
+   "Acabeu dos minuts a foc fort, deixeu reposar i serviu amb all i julivert picat."
+  ],
+  "links": [
+   {
+    "label": "Videos de fideuà amb bolets",
+    "url": "https://www.youtube.com/results?search_query=fideu%C3%A0+amb+bolets"
+   },
+   {
+    "label": "La fideuà a la Viquipedia",
+    "url": "https://ca.wikipedia.org/wiki/Fideu%C3%A0"
+   }
+  ],
+  "credit": {
+   "author": "Aidafuste",
+   "licence": "CC BY-SA 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fideu%C3%A0.jpg"
+  }
+ },
+ {
+  "id": "conill_bolets",
+  "name": "Conill amb bolets",
+  "emoji": "🐇",
+  "image": "conill.jpg",
+  "timeMin": 90,
+  "servings": 4,
+  "history": "El conill és la carn de caça domèstica de la pagesia catalana, present en grans dinars de festa major. Guissat amb bolets de tardor — barreja de rovellons, ceps i camagrocs — esdevé el plat que uneix el conillar i el bosc en una sola cassola, especialment a les comarques de l'interior.",
+  "ingredients": [
+   "1 conill partit a dausos",
+   "500 g de barreja de bolets",
+   "1 ceba gran",
+   "2 tomàquets madurs",
+   "1 got de vi blanc",
+   "Brou de carn o aigua",
+   "Farina per arrossegar el conill",
+   "Oli, sal, pebre i llorer"
+  ],
+  "steps": [
+   "Enfarina lleugerament els trossos de conill i daure'ls a foc fort en una cassola ampla, per tandades.",
+   "Reserva el conill i sofregiu la ceba picada amb el mateix oli, a foc lent, fins que sigui daurada.",
+   "Afegiu el tomàquet ratllat i deixeu el sofregit reduir deu minuts.",
+   "Torneu el conill a la cassola, mulliu amb el vi i deixeu-lo evaporar.",
+   "Afegiu els bolets, el llorer i el brou calent fins a cobrir la carn.",
+   "Guiteu-ho tapat a foc lent una hora, fins que el conill sigui tendre, i serveu amb la pròpia salsa."
+  ],
+  "links": [
+   {
+    "label": "Videos de conill amb bolets",
+    "url": "https://www.youtube.com/results?search_query=conill+amb+bolets+receita"
+   },
+   {
+    "label": "El conill a la gastronomia a la Viquipedia",
+    "url": "https://ca.wikipedia.org/wiki/Conill_(gastronomia)"
+   }
+  ],
+  "credit": {
+   "author": "Mike Czyzewski from Oakland, CA, USA",
+   "licence": "CC BY-SA 2.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rabbit_stew_in_a_bowl.jpg"
+  }
+ },
+ {
+  "id": "truita_bolets",
+  "name": "Truita amb bolets",
+  "emoji": "🍳",
+  "image": "truita.jpg",
+  "timeMin": 25,
+  "servings": 4,
+  "history": "La truita és el plat de supervivència de qualsevol cuina, i la versió de bolets n'es la versió boletaire: la que es fa a la barraca amb el que s'ha recollit al matí. Amb rovellons, ceps o camagrocs saltats, es converteix en un dinar complet de bosc en deu minuts.",
+  "ingredients": [
+   "6 ous",
+   "300 g de bolets variats nets",
+   "2 grans d'all",
+   "Un grapat de julivert",
+   "Oli d'oliva verge extra",
+   "Sal"
+  ],
+  "steps": [
+   "Neteja els bolets amb un drap i talla'ls a laminetes fines.",
+   "Daureu l'all laminat a foc suau i afegiu-hi els bolets; saltegeu-los a foc viu fins que daurin i saleu-los.",
+   "Bateu els ous amb una mica de sal i el julivert picat.",
+   "Afegiu els bolets als ous batuts i remeneu.",
+   "Escalfa oli en una paella antiadherent, aboca la barreja i qualla a foc mitjà dos minuts per cara.",
+   "Gira la truita amb un plat, qualla l'altra cara i servie-la melosa."
+  ],
+  "links": [
+   {
+    "label": "Videos de truita amb bolets",
+    "url": "https://www.youtube.com/results?search_query=truita+amb+bolets"
+   },
+   {
+    "label": "La truita a la Viquipedia",
+    "url": "https://ca.wikipedia.org/wiki/Truita"
+   }
+  ],
+  "credit": {
+   "author": "Daniel Capilla",
+   "licence": "CC BY-SA 4.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tortilla_espa%C3%B1ola.jpg"
+  }
+ },
+ {
+  "id": "pasta_bolets",
+  "name": "Pasta amb bolets i crema",
+  "emoji": "🍝",
+  "image": "pasta.jpg",
+  "timeMin": 30,
+  "servings": 4,
+  "history": "La pasta amb bolets és el gran classic de tardor de la cuina d'interior italiana, adoptat a les cuines de muntanya catalanes per la seva rapidesa. Fet amb tagliatelle o fettuccine fresques, ceps o rovellons i una mica de crema, es fa en el temps que bull l'aigua i omple la casa d'aroma de bosc.",
+  "ingredients": [
+   "400 g de tagliatelle fresca",
+   "400 g de bolets variats a laminetes",
+   "1 gra d'all",
+   "1 got de crema de llet",
+   "50 g de mantega",
+   "Formatge parmesà o velló de Prats",
+   "Oli d'oliva, sal, pebre i julivert"
+  ],
+  "steps": [
+   "Poseu a escalfar la pasta en abundant aigua amb sal, seguint el temps del paquet.",
+   "Fongueu la mantega amb un raig d'oli i daureu l'all laminat a foc suau.",
+   "Pugeu el foc i saltegeu els bolets per tandades fins que daurin; saleu-los i pebreu-los.",
+   "Abocau la crema sobre els bolets, baixeu el foc i deixeu-la reduir uns minuts.",
+   "Escorreu la pasta al dente (reserveu una mica d'aigua de cocció) i lligueu-la a la paella amb la salsa.",
+   "Serviu ben calenta amb el formatge ratllat i el julivert picat a sobre."
+  ],
+  "links": [
+   {
+    "label": "Videos de pasta amb bolets",
+    "url": "https://www.youtube.com/results?search_query=pasta+amb+bolets+crema"
+   },
+   {
+    "label": "La pasta all funghi a la Viquipedia",
+    "url": "https://ca.wikipedia.org/wiki/Pasta_all%27funghi"
+   }
+  ],
+  "credit": {
+   "author": "Nicholas Gemini",
+   "licence": "CC BY-SA 4.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fettuccine_ai_funghi_porcini.jpg"
+  }
+ },
+ {
+  "id": "bolets_farcits",
+  "name": "Bolets farcits",
+  "emoji": "🍄",
+  "image": "farcits.jpg",
+  "timeMin": 45,
+  "servings": 4,
+  "history": "Farceix els barrets grans de cep o de camperol amb la propia carn picada és un truc de cuina d'aprofitament que la cuina burgesa del segle XIX va enlustrar amb beixamel i forn. Avui es fa senzill, amb pernil i formatge, i esdevé el plat estrella de qualsevol dinar de tardor al llindar de la masia.",
+  "ingredients": [
+   "12 barrets grans de ceps o camperols sans",
+   "200 g de la carn dels bolets picada",
+   "100 g de pernil dolç a dausos",
+   "1 ceba petita picada",
+   "2 ous",
+   "4 cullerades de pa ratllat",
+   "Oli, sal, pebre i julivert"
+  ],
+  "steps": [
+   "Neteja els bolets, treu-ne els peus i reserva'ls; escalda els barrets dos minuts i escorreu-los cap per avall.",
+   "Piqueu els peus i la carn dels bolets i sofregiu-los amb la ceba fins que no quedi aigua.",
+   "Barregeu el sofregit amb el pernil, els ous batuts i el pa ratllat, i saleu lleugerament.",
+   "Ompliu els barrets amb la farsa per sobre i poseu-los en una safata amb un raig d'oli.",
+   "Enfornau-los a 190 graus uns 25 minuts, fins que daurin.",
+   "Deixeu-los reposar cinc minuts i serviu-los calents, amb julivert picat."
+  ],
+  "links": [
+   {
+    "label": "Videos de bolets farcits",
+    "url": "https://www.youtube.com/results?search_query=bolets+farcits+forn"
+   },
+   {
+    "label": "El bolet com a aliment a la Viquipedia",
+    "url": "https://ca.wikipedia.org/wiki/Bolet"
+   }
+  ],
+  "credit": {
+   "author": "Palak 0622",
+   "licence": "CC BY-SA 4.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Stuffed_mushrooms.jpg"
+  }
+ },
+ {
+  "id": "arros_muntanya",
+  "name": "Arròs de muntanya",
+  "emoji": "🏔",
+  "image": "arros_muntanya.jpg",
+  "timeMin": 55,
+  "servings": 4,
+  "history": "L'arròs de muntanya és la resposta de l'interior de Catalunya a la paella marinera: un arròs eixut de cassola amb la carn, l'ou dur i els bolets que hi hagi a la masia. Cada vall en té la seva versió — amb conill, amb costella, amb botifarra negra — i tots comparteixen el socarrat i l'aroma dels bolets de secà.",
+  "ingredients": [
+   "320 g d'arròs sec",
+   "400 g de costella de porc a trossos",
+   "300 g de barreja de bolets",
+   "1 ceba, 1 tomàquet",
+   "100 g de mongeta del ganxet cocida",
+   "4 ous durs",
+   "Brou de carn bullint (2,5 vegades el volum d'arròs)",
+   "Oli, sal, safrà i romaní"
+  ],
+  "steps": [
+   "Daurau la costella a la cassola amb oli, reserveu-la i sofregiu-hi la ceba i el tomàquet.",
+   "Afegiu els bolets a dausos i saltegeu-los a foc viu fins que daurin.",
+   "Torneu la carn, incorporeu l'arròs i torreu-lo un minut amb el sofregit.",
+   "Abocau el brou bullint, amb una mica de safrà i romaní, i coueu a foc mitjà 10 minuts.",
+   "Afegiu les mongetes cocides i segueiu 8 minuts mes, fins que gairebé no quedi liquid.",
+   "Acabeu dos minuts a foc fort per fer el socarrat, reposeu cinc minuts i serviu amb l'ou dur partit."
+  ],
+  "links": [
+   {
+    "label": "Videos d'arròs de muntanya",
+    "url": "https://www.youtube.com/results?search_query=arr%C3%B2s+de+muntanya+bolets"
+   },
+   {
+    "label": "L'arròs a la cuina catalana a la Viquipedia",
+    "url": "https://ca.wikipedia.org/wiki/Arr%C3%B2s_(arr%C3%B2s)"
+   }
+  ],
+  "credit": {
+   "author": "Francesc Fort",
+   "licence": "CC BY-SA 4.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arr%C3%B2s_a_Banda_-_Casa_Diego.jpg"
+  }
+ },
+ {
+  "id": "bolets_fregs",
+  "name": "Bolets fregits arrebossats",
+  "emoji": "🍄",
+  "image": "bolets_fregs.jpg",
+  "timeMin": 35,
+  "servings": 4,
+  "history": "Arrebossar i fregir bolets de carn ferma — ceps, camarics o moixernons grossos — és el snack de bosc més antic de la cuina catalana: el que es feia a la barraca del bosc amb la paella penjada del foc. Cruixent per fora i melós per dins, es menja amb les mans i es acaba abans que la safata de la segona tanda.",
+  "ingredients": [
+   "500 g de bolets de carn ferma (ceps, camarics o moixernons grossos)",
+   "2 ous batuts",
+   "Pa ratllat per arrebossar",
+   "Oli de gira-sol per fregir",
+   "Sal en escates",
+   "Opcional: farina per passar-hi primer"
+  ],
+  "steps": [
+   "Neteja els bolets amb un drap i talla'ls a laminetes d'un centimetre gruixut.",
+   "Escalfa l'oli a 170 graus en una cassola fonda.",
+   "Passa cada lamina per farina, després per l'ou batut i finalment pel pa ratllat, prement suaument.",
+   "Fregiu-les per tandades, sense amuntegar-les, dos minuts per cara fins que daurin.",
+   "Escorreu-les sobre paper de cuina i saleu-les amb sal en escates.",
+   "Serviu-les ben cruixents, amb llimona o allioli si escau."
+  ],
+  "links": [
+   {
+    "label": "Videos de bolets fregits",
+    "url": "https://www.youtube.com/results?search_query=bolets+arrebossats+fregits"
+   },
+   {
+    "label": "Els bolets comestibles a la Viquipedia",
+    "url": "https://ca.wikipedia.org/wiki/Bolet_comestible"
+   }
+  ],
+  "credit": {
+   "author": "D.L.",
+   "licence": "CC BY-SA 2.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fried_mushrooms.jpg"
+  }
+ },
+ {
+  "id": "cargols_bolets",
+  "name": "Cargols guisats amb bolets",
+  "emoji": "🐌",
+  "image": "cargols.jpg",
+  "timeMin": 80,
+  "servings": 4,
+  "history": "La cargolada és el ritual tardorenc de les comarques de Ponent i de l'Alt Pirineu: cargols de vinya guisats la nit abans de la sortida de bolets. A la Seu d'Urgell i al Pallars, el guisat de cargol s'enriquí amb bolets de temporada, i el bosc i el camp es troben en una sola cassola de foc lent.",
+  "ingredients": [
+   "24 cargols de vinya nets",
+   "400 g de barreja de bolets",
+   "1 ceba gran",
+   "2 tomàquets madurs",
+   "1 got de vi blanc",
+   "Brou de carn",
+   "1 branca de farigola",
+   "Oli, sal i pebre"
+  ],
+  "steps": [
+   "Purga, renta i escalfa els cargols vint minuts amb aigua i sal, i escorre'ls.",
+   "En una cassola ampla, sofregiu la ceba picada a foc lent fins que sigui daurada.",
+   "Afegiu el tomàquet ratllat i deixeu el sofregit reduir deu minuts.",
+   "Inclopou els cargols i els bolets, mulliu amb el vi i deixeu-lo evaporar.",
+   "Cobreix amb el brou calent amb la farigola i guiseu-ho tapat a foc lent una hora llarga.",
+   "Deixa'l reposar i escalfa'l de nou abans de servir: guisat de vint-i-quatre hores, més bo."
+  ],
+  "links": [
+   {
+    "label": "Videos de cargols amb bolets",
+    "url": "https://www.youtube.com/results?search_query=cargols+guisats+amb+bolets"
+   },
+   {
+    "label": "Els cargols a la gastronomia a la Viquipedia",
+    "url": "https://ca.wikipedia.org/wiki/Cargol"
+   }
+  ],
+  "credit": {
+   "author": "Chixoy assumed",
+   "licence": "CC BY-SA 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cargols_a_la_llauna.JPG"
+  }
+ },
+ {
+  "id": "coca_bolets",
+  "name": "Coca de recapte amb bolets",
+  "emoji": "🥧",
+  "image": "coca.jpg",
+  "timeMin": 70,
+  "servings": 6,
+  "history": "La coca de recapte lleidatana és la coca de full farcida d'escalivada i arengada, el plat que aprofitava el recapte del foc de llenya. La versió boletaire hi afegeix bolets saltats a l'escalivada de carbassó, ceba i tomàquet, i esdevé el pastís de tarda de les sortides de bolets a Ponent i a l'Alt Urgell.",
+  "ingredients": [
+   "1 làmina de massa de full (o pasta de full fina)",
+   "1 carbassó escalivat",
+   "2 cebes escalivades",
+   "2 tomàquets escalivats",
+   "400 g de bolets saltats a la planxa",
+   "1 arengada de bona qualitat (opcional)",
+   "Oli d'oliva, sal i pebre"
+  ],
+  "steps": [
+   "Escaliva la carbassó, la ceba i el tomàquet al forn a 200 graus uns 40 minuts i escorre'ls bé.",
+   "Saltea els bolets a la planxa ben calenta amb oli i saleu-los.",
+   "Estira la massa sobre una safata de forn amb paper sulfuritzat.",
+   "Cobreix-la amb capes d'escalivada tallada a tires i els bolets, salpebrant cada capa.",
+   "Corona amb l'arengada si l'uses i rega amb un bon raig d'oli.",
+   "Enfornau a 210 graus uns 20 minuts, fins que la massa sigui daurada i crocant, i serviu la coca freda o tèbia."
+  ],
+  "links": [
+   {
+    "label": "Videos de coca de recapte amb bolets",
+    "url": "https://www.youtube.com/results?search_query=coca+de+recapte+bolets"
+   },
+   {
+    "label": "La coca de recapte a la Viquipedia",
+    "url": "https://ca.wikipedia.org/wiki/Coca_de_recapte"
+   }
+  ],
+  "credit": {
+   "author": "Slastic",
+   "licence": "Public domain",
+   "licenceUrl": "https://commons.wikimedia.org/wiki/File:Coca_de_recapte.jpg",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Coca_de_recapte.jpg"
   }
  }
 ]

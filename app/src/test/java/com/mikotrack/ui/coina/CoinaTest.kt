@@ -18,9 +18,9 @@ class CoinaTest {
         val text = File(assetRoot, "recipes_ca.json").readText(Charsets.UTF_8)
         val recipes = json.decodeFromString<List<Recipe>>(text)
 
-        assertEquals(10, recipes.size)
-        assertEquals(10, recipes.map { it.id }.distinct().size)
-        assertEquals(10, recipes.map { it.name }.distinct().size)
+        assertEquals(20, recipes.size)
+        assertEquals(20, recipes.map { it.id }.distinct().size)
+        assertEquals(20, recipes.map { it.name }.distinct().size)
 
         recipes.forEach { recipe ->
             assertTrue("recipe ${recipe.id} needs a name", recipe.name.isNotBlank())
