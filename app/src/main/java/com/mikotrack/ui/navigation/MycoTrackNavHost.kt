@@ -1,22 +1,36 @@
 package com.mikotrack.ui.navigation
 
 import androidx.compose.ui.res.stringResource
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
-import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
-import androidx.compose.material3.NavigationBar
-import androidx.compose.material3.NavigationBarItem
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.NavigationBarDefaults
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
@@ -118,38 +132,81 @@ fun MycoTrackNavHost(
         // applies the bottom inset on its own.
         contentWindowInsets = WindowInsets(0, 0, 0, 0),
         bottomBar = {
-            NavigationBar {
-                // The bar holds many sections, so it scrolls horizontally when they
-                // no longer fit across the width of the screen.
-                Row(modifier = Modifier.horizontalScroll(rememberScrollState())) {
-                    TopLevelDestination.entries.forEach { destination ->
-                        NavigationBarItem(
-                            selected = selectedTab == destination,
-                            onClick = {
-                                if (selectedTab == destination) {
-                                    // Tapping the current section goes back to its first
-                                    // screen, e.g. from a trip to the list of trips.
-                                    navController.popBackStack(destination.route, inclusive = false)
-                                    return@NavigationBarItem
-                                }
-                                navController.navigate(destination.route) {
-                                    popUpTo(navController.graph.findStartDestination().id) {
-                                        saveState = true
+            // The bar holds many sections, so it scrolls horizontally when they no
+            // longer fit across the width of the screen. The items are plain columns:
+            // NavigationBarItem inside a scrollable row does not get measured, and
+            // the bar renders empty.
+            Surface(
+                color = NavigationBarDefaults.containerColor,
+                tonalElevation = 3.dp,
+            ) {
+                Column(modifier = Modifier.windowInsetsPadding(WindowInsets.navigationBars)) {
+                    Row(
+                        modifier = Modifier
+                            .horizontalScroll(rememberScrollState())
+                            .height(64.dp)
+                            .padding(horizontal = 8.dp),
+                        horizontalArrangement = Arrangement.spacedBy(2.dp),
+                    ) {
+                        TopLevelDestination.entries.forEach { destination ->
+                            val selected = selectedTab == destination
+                            val label = stringResource(destination.labelRes)
+                            Column(
+                                modifier = Modifier
+                                    .clip(RoundedCornerShape(16.dp))
+                                    .clickable {
+                                        if (selectedTab == destination) {
+                                            // Tapping the current section goes back to its first
+                                            // screen, e.g. from a trip to the list of trips.
+                                            navController.popBackStack(destination.route, inclusive = false)
+                                        } else {
+                                            navController.navigate(destination.route) {
+                                                popUpTo(navController.graph.findStartDestination().id) {
+                                                    saveState = true
+                                                }
+                                                launchSingleTop = true
+                                                restoreState = true
+                                            }
+                                        }
                                     }
-                                    launchSingleTop = true
-                                    restoreState = true
+                                    .padding(horizontal = 12.dp, vertical = 6.dp),
+                                horizontalAlignment = Alignment.CenterHorizontally,
+                            ) {
+                                Box(contentAlignment = Alignment.Center) {
+                                    if (selected) {
+                                        Box(
+                                            modifier = Modifier
+                                                .size(width = 64.dp, height = 30.dp)
+                                                .background(
+                                                    MaterialTheme.colorScheme.secondaryContainer,
+                                                    RoundedCornerShape(16.dp),
+                                                ),
+                                        )
+                                    }
+                                    Icon(
+                                        destination.icon,
+                                        contentDescription = label,
+                                        tint = if (selected) {
+                                            MaterialTheme.colorScheme.onSurface
+                                        } else {
+                                            MaterialTheme.colorScheme.onSurfaceVariant
+                                        },
+                                    )
                                 }
-                            },
-                            icon = { Icon(destination.icon, contentDescription = stringResource(destination.labelRes)) },
-                            // Long labels are cut instead of wrapping, so each item stays compact.
-                            label = {
                                 Text(
-                                    text = stringResource(destination.labelRes),
+                                    text = label,
                                     maxLines = 1,
                                     overflow = TextOverflow.Ellipsis,
+                                    style = MaterialTheme.typography.labelMedium,
+                                    color = if (selected) {
+                                        MaterialTheme.colorScheme.onSurface
+                                    } else {
+                                        MaterialTheme.colorScheme.onSurfaceVariant
+                                    },
+                                    modifier = Modifier.padding(top = 3.dp),
                                 )
-                            },
-                        )
+                            }
+                        }
                     }
                 }
             }

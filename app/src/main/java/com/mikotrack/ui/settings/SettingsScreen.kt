@@ -907,11 +907,11 @@ private fun DownloadDialog(
 
 /** The label resource of a parking icon style. */
 private fun parkingIconLabel(style: String): Int = when (style) {
+    ParkingIconStyles.HOME -> R.string.parking_icon_home
     ParkingIconStyles.CAR -> R.string.parking_icon_car
-    ParkingIconStyles.MOTORCYCLE -> R.string.parking_icon_motorcycle
     ParkingIconStyles.BICYCLE -> R.string.parking_icon_bicycle
-    ParkingIconStyles.CAMPERVAN -> R.string.parking_icon_campervan
-    ParkingIconStyles.GARAGE -> R.string.parking_icon_garage
+    ParkingIconStyles.PICKUP -> R.string.parking_icon_pickup
+    ParkingIconStyles.FLAG -> R.string.parking_icon_flag
     else -> R.string.parking_icon_car
 }
 

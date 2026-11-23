@@ -49,10 +49,10 @@
     <string name="field_settings_checkin_hint">Mientras se graba, una notificación sonora pregunta cada cierto tiempo si estás bien. Toca \"Estoy bien\" para posponerla; se silencia al cerrar la salida.</string>
     <string name="field_settings_parking_icon">Icono del punto de coche</string>
     <string name="field_settings_parking_color">Color del icono del coche</string>
+    <string name="parking_icon_home">Casa</string>
     <string name="parking_icon_car">Coche</string>
-    <string name="parking_icon_motorcycle">Motocicleta</string>
     <string name="parking_icon_bicycle">Bicicleta</string>
-    <string name="parking_icon_campervan">Autocaravana</string>
-    <string name="parking_icon_garage">Garaje</string>
+    <string name="parking_icon_pickup">Camioneta</string>
+    <string name="parking_icon_flag">Bandera</string>
 </resources>
 

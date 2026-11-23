@@ -48,10 +48,10 @@
     <string name="field_settings_checkin_minutes">%1$d min</string>
     <string name="field_settings_parking_icon">Parking icon</string>
     <string name="field_settings_parking_color">Parking icon colour</string>
+    <string name="parking_icon_home">Home</string>
     <string name="parking_icon_car">Car</string>
-    <string name="parking_icon_motorcycle">Motorcycle</string>
     <string name="parking_icon_bicycle">Bicycle</string>
-    <string name="parking_icon_campervan">Campervan</string>
-    <string name="parking_icon_garage">Garage</string>
+    <string name="parking_icon_pickup">Pickup truck</string>
+    <string name="parking_icon_flag">Flag</string>
 </resources>
 

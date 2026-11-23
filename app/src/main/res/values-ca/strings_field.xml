@@ -49,10 +49,10 @@
     <string name="field_settings_checkin_hint">Mentre s\'enregistra, una notificació sonora pregunta cada estona si estàs bé. Toca \"Estic bé\" per ajornar-la; se n\'apaga el so en tancar la sortida.</string>
     <string name="field_settings_parking_icon">Icona del punt de cotxe</string>
     <string name="field_settings_parking_color">Color de la icona del cotxe</string>
+    <string name="parking_icon_home">Casa</string>
     <string name="parking_icon_car">Cotxe</string>
-    <string name="parking_icon_motorcycle">Motocicleta</string>
     <string name="parking_icon_bicycle">Bicicleta</string>
-    <string name="parking_icon_campervan">Autocaravana</string>
-    <string name="parking_icon_garage">Garatge</string>
+    <string name="parking_icon_pickup">Camioneta</string>
+    <string name="parking_icon_flag">Banderola</string>
 </resources>
 

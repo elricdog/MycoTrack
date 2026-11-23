@@ -9,14 +9,14 @@ import com.mikotrack.data.repository.DefaultCategory
  */
 object ParkingIconStyles {
 
+    const val HOME = "home"
     const val CAR = "car"
-    const val MOTORCYCLE = "motorcycle"
     const val BICYCLE = "bicycle"
-    const val CAMPERVAN = "campervan"
-    const val GARAGE = "garage"
+    const val PICKUP = "pickup"
+    const val FLAG = "flag"
 
     /** Every style key, in the order they are shown in the settings. */
-    val ALL = listOf(CAR, MOTORCYCLE, BICYCLE, CAMPERVAN, GARAGE)
+    val ALL = listOf(HOME, CAR, BICYCLE, PICKUP, FLAG)
 
     const val DEFAULT = CAR
 
@@ -27,11 +27,11 @@ object ParkingIconStyles {
 
     /** The vector drawable of a style, or `null` for unknown styles. */
     fun drawableRes(style: String): Int? = when (style) {
+        HOME -> R.drawable.ic_parking_home
         CAR -> R.drawable.ic_parking_car
-        MOTORCYCLE -> R.drawable.ic_parking_motorcycle
         BICYCLE -> R.drawable.ic_parking_bicycle
-        CAMPERVAN -> R.drawable.ic_parking_campervan
-        GARAGE -> R.drawable.ic_parking_garage
+        PICKUP -> R.drawable.ic_parking_pickup
+        FLAG -> R.drawable.ic_parking_flag
         else -> null
     }
 }
