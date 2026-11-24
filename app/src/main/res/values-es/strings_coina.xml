@@ -13,6 +13,7 @@
     <string name="coina_steps">Pasos</string>
     <string name="coina_links">Aprende a hacerlo, en internet</string>
     <string name="coina_credit">Foto: %1$s · %2$s (Wikimedia Commons)</string>
+    <string name="coina_credit_generated">Foto: %1$s · %2$s</string>
     <string name="coina_source">Fuente de la fotografía: %1$s</string>
     <string name="coina_note">Las recetas están escritas en catalán.</string>
     <plurals name="coina_minutes">

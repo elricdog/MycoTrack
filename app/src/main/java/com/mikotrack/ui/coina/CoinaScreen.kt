@@ -213,11 +213,18 @@ fun CoinaDetailScreen(
                         .aspectRatio(4f / 3f),
                 )
                 Text(
-                    text = stringResource(
-                        R.string.coina_credit,
-                        recipe.credit.author,
-                        recipe.credit.licence,
-                    ),
+                    text = if (recipe.credit.sourceUrl.isNotBlank())
+                        stringResource(
+                            R.string.coina_credit,
+                            recipe.credit.author,
+                            recipe.credit.licence,
+                        )
+                    else
+                        stringResource(
+                            R.string.coina_credit_generated,
+                            recipe.credit.author,
+                            recipe.credit.licence,
+                        ),
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
@@ -308,14 +315,18 @@ fun CoinaDetailScreen(
                     }
                 }
             }
-            item {
-                HorizontalDivider(modifier = Modifier.padding(top = 8.dp))
-                Text(
-                    text = stringResource(R.string.coina_source, recipe.credit.sourceUrl),
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.padding(bottom = 24.dp),
-                )
+            if (recipe.credit.sourceUrl.isNotBlank()) {
+                item {
+                    HorizontalDivider(modifier = Modifier.padding(top = 8.dp))
+                    Text(
+                        text = stringResource(R.string.coina_source, recipe.credit.sourceUrl),
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.padding(bottom = 24.dp),
+                    )
+                }
+            } else {
+                item { Spacer(Modifier.height(24.dp)) }
             }
         }
     }

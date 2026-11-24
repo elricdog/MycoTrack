@@ -40,10 +40,13 @@ class CoinaTest {
                 File(assetRoot, "images/${recipe.image}").isFile,
             )
             assertTrue("credit of ${recipe.id} needs an author", recipe.credit.author.isNotBlank())
-            assertTrue(
-                "credit of ${recipe.id} needs a licence url",
-                recipe.credit.licenceUrl.startsWith("https://"),
-            )
+            assertTrue("credit of ${recipe.id} needs a licence", recipe.credit.licence.isNotBlank())
+            if (recipe.credit.sourceUrl.isNotBlank()) {
+                assertTrue(
+                    "credit of ${recipe.id} needs a licence url",
+                    recipe.credit.licenceUrl.startsWith("https://"),
+                )
+            }
         }
     }
 }
